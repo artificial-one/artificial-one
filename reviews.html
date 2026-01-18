@@ -32,11 +32,12 @@
             background: #2563eb;
             color: white;
         }
-            .dropdown { position: relative; display: inline-block; }
-        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; z-index: 100; margin-top: 8px; }
+    .dropdown { position: relative; display: inline-block; }
+        .dropdown .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; z-index: 100; margin-top: 8px; padding: 8px 0; }
         .dropdown:hover .dropdown-content { display: block; }
         .dropdown-content a { color: #4b5563; padding: 12px 16px; text-decoration: none; display: block; transition: background 0.2s; }
         .dropdown-content a:hover { background-color: #f3f4f6; color: #6366f1; }
+        .cursor-pointer { cursor: pointer; }
     </style>
 </head>
 <body class="bg-white">
@@ -48,20 +49,20 @@
                 </a>
                 <div class="flex gap-3 sm:gap-6 items-center text-sm sm:text-base">
                     <a href="reviews.html" class="text-gray-900 hover:text-purple-600 font-medium transition-colors">Reviews</a>
-                                        <div class="dropdown" style="position: relative; display: inline-block;">
-                        <a href="#" class="text-gray-600 hover:text-purple-600 transition-colors" style="cursor: pointer;">
+                    <div class="dropdown">
+                        <span class="text-gray-600 hover:text-indigo-600 font-medium transition-colors cursor-pointer">
                             Categories ▾
-                        </a>
-                        <div class="dropdown-content" style="display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; z-index: 100; margin-top: 8px;">
-                            <a href="category/writing-content.html" style="color: #4b5563; padding: 12px 16px; text-decoration: none; display: block;">✍️ Writing & Content</a>
-                            <a href="category/design-images.html" style="color: #4b5563; padding: 12px 16px; text-decoration: none; display: block;">🎨 Design & Images</a>
-                            <a href="category/video-animation.html" style="color: #4b5563; padding: 12px 16px; text-decoration: none; display: block;">🎬 Video & Animation</a>
-                            <a href="category/coding-development.html" style="color: #4b5563; padding: 12px 16px; text-decoration: none; display: block;">💻 Coding & Development</a>
-                            <a href="category/productivity-business.html" style="color: #4b5563; padding: 12px 16px; text-decoration: none; display: block;">📊 Productivity & Business</a>
-                            <a href="category/voice-audio.html" style="color: #4b5563; padding: 12px 16px; text-decoration: none; display: block;">🎙️ Voice & Audio</a>
-                            <a href="category/research-data.html" style="color: #4b5563; padding: 12px 16px; text-decoration: none; display: block;">🔬 Research & Data</a>
-                            <a href="category/marketing-social.html" style="color: #4b5563; padding: 12px 16px; text-decoration: none; display: block;">📱 Marketing & Social</a>
-                            <a href="category/data-analytics.html" style="color: #4b5563; padding: 12px 16px; text-decoration: none; display: block;">📈 Data & Analytics</a>
+                        </span>
+                        <div class="dropdown-content">
+                            <a href="category/writing-content.html">✍️ Writing & Content</a>
+                            <a href="category/design-images.html">🎨 Design & Images</a>
+                            <a href="category/video-animation.html">🎬 Video & Animation</a>
+                            <a href="category/coding-development.html">💻 Coding & Development</a>
+                            <a href="category/productivity-business.html">📊 Productivity & Business</a>
+                            <a href="category/voice-audio.html">🎙️ Voice & Audio</a>
+                            <a href="category/research-data.html">🔬 Research & Data</a>
+                            <a href="category/marketing-social.html">📱 Marketing & Social</a>
+                            <a href="category/data-analytics.html">📈 Data & Analytics</a>
                         </div>
                     </div>
                     <a href="blog.html" class="text-gray-600 hover:text-purple-600 transition-colors">Blog</a>
@@ -166,8 +167,8 @@
                 </div>
                 <div>
                     <h4 class="font-semibold text-gray-900 mb-4">Contact</h4>
-                    <a href="/cdn-cgi/l/email-protection#59313c35353619382b2d303f303a3038357736373c" class="text-gray-600 hover:text-purple-600 transition-colors">
-                        <span class="__cf_email__" data-cfemail="ee868b828281ae8f9c9a8788878d878f82c081808b">[email&#160;protected]</span>
+                    <a href="/cdn-cgi/l/email-protection#4c24292020230c2d3e38252a252f252d2062232229" class="text-gray-600 hover:text-purple-600 transition-colors">
+                        <span class="__cf_email__" data-cfemail="1179747d7d7e517063657877787278707d3f7e7f74">[email&#160;protected]</span>
                     </a>
                 </div>
             </div>
