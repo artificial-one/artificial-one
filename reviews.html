@@ -409,26 +409,26 @@ function filterByCategory(category) {
 }
 
 function updateCounts() {
-    // Count ALL tools (not just visible ones) for accurate filter counts
+    // TYPE BUTTONS: Show counts filtered by CURRENT category selection
     const typeCounts = { all: 0, free: 0, deal: 0, subscription: 0 };
-    const categoryCounts = { all: 0, writing: 0, design: 0, video: 0, coding: 0, productivity: 0, voice: 0, research: 0, marketing: 0, data: 0 };
-    
-    // Go through ALL tools in the data
     tools.forEach(tool => {
         const catSlug = getCategorySlug(tool.cat);
-        const typeClass = tool.type;
-        
-        // Count for TYPE buttons (filtered by current category)
         const matchesCategory = currentCategoryFilter === 'all' || catSlug === currentCategoryFilter;
+        
         if (matchesCategory) {
             typeCounts.all++;
-            if (typeClass === 'free') typeCounts.free++;
-            if (typeClass === 'deal') typeCounts.deal++;
-            if (typeClass === 'subscription') typeCounts.subscription++;
+            if (tool.type === 'free') typeCounts.free++;
+            if (tool.type === 'deal') typeCounts.deal++;
+            if (tool.type === 'subscription') typeCounts.subscription++;
         }
+    });
+    
+    // CATEGORY BUTTONS: Show counts filtered by CURRENT type selection
+    const categoryCounts = { all: 0, writing: 0, design: 0, video: 0, coding: 0, productivity: 0, voice: 0, research: 0, marketing: 0, data: 0 };
+    tools.forEach(tool => {
+        const catSlug = getCategorySlug(tool.cat);
+        const matchesType = currentTypeFilter === 'all' || tool.type === currentTypeFilter;
         
-        // Count for CATEGORY buttons (filtered by current type)
-        const matchesType = currentTypeFilter === 'all' || typeClass === currentTypeFilter;
         if (matchesType) {
             categoryCounts.all++;
             if (catSlug === 'writing') categoryCounts.writing++;
@@ -443,6 +443,7 @@ function updateCounts() {
         }
     });
     
+    // Update TYPE button labels
     document.querySelectorAll('.filter-btn').forEach(btn => {
         const text = btn.textContent.split('(')[0].trim();
         const onclick = btn.getAttribute('onclick');
@@ -452,6 +453,7 @@ function updateCounts() {
         else if (onclick.includes("'subscription'")) btn.textContent = `${text} (${typeCounts.subscription})`;
     });
     
+    // Update CATEGORY button labels
     document.querySelectorAll('.cat-btn').forEach(btn => {
         const text = btn.textContent.split('(')[0].trim();
         const onclick = btn.getAttribute('onclick');
