@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Reviews - Honest Reviews of 220+ Tools | artificial.one</title>
+    <meta name="description" content="In-depth reviews of ChatGPT, Claude, Midjourney, and 217 more AI tools. Free alternatives, lifetime deals, and honest pros/cons from real testing.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .tool-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+        }
+        .filter-btn {
+            transition: all 0.2s ease;
+        }
+        .filter-btn.active {
+            background: #7c3aed;
+            color: white;
+        }
+        .cat-btn {
+            transition: all 0.2s ease;
+        }
+        .cat-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
+                <a href="index.html" class="flex items-center">
+                    <img src="artificial-one-logo-large.svg" alt="artificial.one - AI tools reviewed by AI" class="h-16 sm:h-20 md:h-24">
+                </a>
+                <div class="flex gap-3 sm:gap-6 items-center text-sm sm:text-base">
+                    <a href="reviews.html" class="text-gray-900 hover:text-purple-600 font-medium transition-colors">Reviews</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-600 transition-colors">Blog</a>
+                    <a href="about.html" class="text-gray-600 hover:text-purple-600 transition-colors">About</a>
+                    <a href="index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-3 sm:px-6 py-2 rounded-lg font-semibold transition-all">
+                        Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-12 sm:py-16 bg-gradient-to-b from-purple-50 to-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                Honest AI Tool Reviews
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8">
+                We've tested 220+ AI tools so you don't have to. Real pros, cons, and ratings from actual use.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-6 sm:py-8 bg-white border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-6">
+                <h3 class="text-sm font-semibold text-gray-700 mb-3">Filter by Type:</h3>
+                <div class="flex flex-wrap gap-2 sm:gap-3">
+                    <button onclick="filterByType('all')" class="filter-btn active px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">
+                        Show All
+                    </button>
+                    <button onclick="filterByType('free')" class="filter-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">
+                        🆓 Free
+                    </button>
+                    <button onclick="filterByType('deal')" class="filter-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">
+                        💰 Deals
+                    </button>
+                    <button onclick="filterByType('subscription')" class="filter-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">
+                        💳 Paid
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-semibold text-gray-700 mb-3">Filter by Category:</h3>
+                <div class="flex flex-wrap gap-2 sm:gap-3">
+                    <button onclick="filterByCategory('all')" class="cat-btn active px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        All
+                    </button>
+                    <button onclick="filterByCategory('writing')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        ✍️ Writing
+                    </button>
+                    <button onclick="filterByCategory('design')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        🎨 Design
+                    </button>
+                    <button onclick="filterByCategory('video')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        🎬 Video
+                    </button>
+                    <button onclick="filterByCategory('coding')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        💻 Code
+                    </button>
+                    <button onclick="filterByCategory('productivity')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        📊 Work
+                    </button>
+                    <button onclick="filterByCategory('voice')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        🎙️ Voice
+                    </button>
+                    <button onclick="filterByCategory('research')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        🔬 Research
+                    </button>
+                    <button onclick="filterByCategory('marketing')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        📱 Marketing
+                    </button>
+                    <button onclick="filterByCategory('data')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        📈 Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="tools-container" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"></div>
+
+    <footer class="bg-gray-50 border-t border-gray-200 py-12 mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">
+                        artificial.one
+                    </h3>
+                    <p class="text-gray-600">
+                        Honest AI tool reviews from real testing. No BS, just facts.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="index.html" class="block text-gray-600 hover:text-purple-600 transition-colors">Home</a>
+                        <a href="reviews.html" class="block text-gray-600 hover:text-purple-600 transition-colors">All Reviews</a>
+                        <a href="blog.html" class="block text-gray-600 hover:text-purple-600 transition-colors">Blog</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">Contact</h4>
+                    <a href="mailto:hello@artificial.one" class="text-gray-600 hover:text-purple-600 transition-colors">
+                        hello@artificial.one
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-300 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p class="mb-2">Affiliate Disclosure: We may earn a commission when you purchase through links on our site. This helps us keep the site running and provide free reviews.</p>
+                <p>© 2026 artificial.one - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+const tools = [
+    // WRITING TOOLS (15 total)
+    {cat:"✍️ Writing & Content",name:"ChatGPT",rating:"9.5/10",type:"free",tag:"🆓 Free",desc:"The most popular AI chatbot. Best for writing, brainstorming, coding help, and general questions.",pros:["Free tier generous","Excellent at writing","Fast responses"],cons:["Can be confident but wrong","Free tier has limits"],bestFor:"Everyone",pricing:"Free | $20/mo",link:"https://chat.openai.com"},
+    {cat:"✍️ Writing & Content",name:"Claude",rating:"9.3/10",type:"free",tag:"🆓 Free",desc:"Anthropic's AI assistant. Better at nuanced writing and analysis.",pros:["Thoughtful responses","Better at creative writing","200k context"],cons:["Free tier limited","Slower sometimes"],bestFor:"Writers, researchers",pricing:"Free | $20/mo",link:"https://claude.ai"},
+    {cat:"✍️ Writing & Content",name:"Jasper",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI writing assistant for marketing copy and blog posts.",pros:["Marketing templates","SEO mode","Brand voice training"],cons:["Expensive","Requires editing"],bestFor:"Marketing teams",pricing:"$39/mo+",link:"https://jasper.ai"},
+    {cat:"✍️ Writing & Content",name:"Writesonic",rating:"8.1/10",type:"deal",tag:"💰 Lifetime Deal",desc:"AI writer with ChatGPT-4 access and SEO tools.",pros:["Affordable","ChatGPT-4 access","SEO optimizer"],cons:["Interface cluttered","Quality varies"],bestFor:"Bloggers on budget",pricing:"$16/mo | $500 lifetime",link:"https://writesonic.com"},
+    {cat:"✍️ Writing & Content",name:"Copy.ai",rating:"7.5/10",type:"subscription",tag:"💳 Subscription",desc:"Marketing copy generator for social posts and ads.",pros:["Fast generation","Many templates","Simple"],cons:["Generic outputs","Needs editing"],bestFor:"Social media managers",pricing:"Free | $49/mo",link:"https://copy.ai"},
+    {cat:"✍️ Writing & Content",name:"Grammarly",rating:"8.9/10",type:"free",tag:"🆓 Free",desc:"AI writing assistant with grammar checking and tone suggestions.",pros:["Excellent grammar checking","Works everywhere","Free tier useful"],cons:["Premium expensive","AI features limited"],bestFor:"Everyone who writes",pricing:"Free | $12/mo",link:"https://grammarly.com"},
+    {cat:"✍️ Writing & Content",name:"Hemingway Editor",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"Makes writing bold and clear by highlighting complex sentences.",pros:["Simple and effective","Completely free","No account needed"],cons:["Basic features only","No AI generation"],bestFor:"Writers wanting clarity",pricing:"Free",link:"https://hemingwayapp.com"},
+    {cat:"✍️ Writing & Content",name:"Rytr",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI writing assistant with 40+ use cases and templates.",pros:["Generous free tier","40+ templates","Multiple languages"],cons:["Quality inconsistent","Limited customization"],bestFor:"Content creators on budget",pricing:"Free | $9/mo",link:"https://rytr.me"},
+    {cat:"✍️ Writing & Content",name:"Quilbot",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"AI paraphrasing tool and grammar checker.",pros:["Excellent paraphrasing","Citation generator","Free tier good"],cons:["Premium needed for best features","Can change meaning"],bestFor:"Students, researchers",pricing:"Free | $9/mo",link:"https://quillbot.com"},
+    {cat:"✍️ Writing & Content",name:"Wordtune",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"AI writing companion that suggests rewrites and improvements.",pros:["Smart suggestions","Chrome extension","Free tier useful"],cons:["Premium expensive","Can be too aggressive"],bestFor:"Professional writers",pricing:"Free | $10/mo",link:"https://wordtune.com"},
+    {cat:"✍️ Writing & Content",name:"ProWritingAid",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"Writing coach and grammar checker for serious writers.",pros:["In-depth reports","Style suggestions","Integrations"],cons:["Expensive","Overwhelming for beginners"],bestFor:"Authors, professional writers",pricing:"$20/mo | $399 lifetime",link:"https://prowritingaid.com"},
+    {cat:"✍️ Writing & Content",name:"Sudowrite",rating:"8.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI writing tool specifically for fiction and creative writing.",pros:["Great for fiction","Story development","Character building"],cons:["Expensive","Learning curve"],bestFor:"Fiction writers, novelists",pricing:"$10/mo | $25/mo",link:"https://sudowrite.com"},
+    {cat:"✍️ Writing & Content",name:"Compose AI",rating:"7.4/10",type:"free",tag:"🆓 Free",desc:"Free Chrome extension that autocompletes your sentences.",pros:["Completely free","Works everywhere","Time saver"],cons:["Basic features","Privacy concerns"],bestFor:"Anyone who writes emails",pricing:"Free",link:"https://compose.ai"},
+    {cat:"✍️ Writing & Content",name:"Lex",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI-powered writing tool for articles and long-form content.",pros:["Clean interface","AI suggestions","Collaborative"],cons:["Limited free tier","Still in beta"],bestFor:"Writers, bloggers",pricing:"Free | $12/mo",link:"https://lex.page"},
+    {cat:"✍️ Writing & Content",name:"Writer",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI writing platform for teams with brand voice control.",pros:["Team collaboration","Brand consistency","Enterprise features"],cons:["Expensive","Overkill for individuals"],bestFor:"Enterprise teams",pricing:"$18/user/mo",link:"https://writer.com"},
+
+    // DESIGN & IMAGE TOOLS (20 total)
+    {cat:"🎨 Design & Images",name:"Midjourney",rating:"9.7/10",type:"subscription",tag:"💳 Subscription",desc:"The best AI image generator with incredible quality.",pros:["Best image quality","Consistent results","Active community"],cons:["Discord-only","No free tier","$10/mo minimum"],bestFor:"Designers, artists",pricing:"$10/mo | $30/mo",link:"https://midjourney.com"},
+    {cat:"🎨 Design & Images",name:"DALL-E 3",rating:"8.9/10",type:"free",tag:"🆓 Free",desc:"OpenAI's image generator built into ChatGPT.",pros:["Free in ChatGPT","Excellent prompt following","Easy to use"],cons:["Not as artistic as Midjourney","Limited style control"],bestFor:"ChatGPT users",pricing:"Free | $20/mo",link:"https://openai.com/dall-e-3"},
+    {cat:"🎨 Design & Images",name:"Leonardo.ai",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"AI image generator with fine-tuned models.",pros:["Generous free tier","Many style models","Commercial use"],cons:["Interface overwhelming","Inconsistent quality"],bestFor:"Game devs, concept artists",pricing:"Free | $12/mo",link:"https://leonardo.ai"},
+    {cat:"🎨 Design & Images",name:"Canva AI",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"Canva's built-in AI tools for design and images.",pros:["Integrated in Canva","Easy for non-designers","Free tier"],cons:["AI features limited in free","Not as powerful"],bestFor:"Small businesses",pricing:"Free | $15/mo",link:"https://canva.com"},
+    {cat:"🎨 Design & Images",name:"Playground AI",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI image generator with 500 free images/day.",pros:["500 free images daily","Many models","Fast generation"],cons:["Quality varies","Watermark on free"],bestFor:"High volume needs",pricing:"Free | $15/mo",link:"https://playgroundai.com"},
+    {cat:"🎨 Design & Images",name:"Stable Diffusion",rating:"8.8/10",type:"free",tag:"🆓 Free",desc:"Open-source AI image generator you can run locally.",pros:["Completely free","Full control","No censorship"],cons:["Technical setup","Requires good GPU"],bestFor:"Technical users, developers",pricing:"Free",link:"https://stability.ai"},
+    {cat:"🎨 Design & Images",name:"Adobe Firefly",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"Adobe's AI image generator with Creative Cloud integration.",pros:["Adobe integration","Commercially safe","Free tier"],cons:["Less creative than Midjourney","Adobe ecosystem lock-in"],bestFor:"Adobe users",pricing:"Free | $5/mo",link:"https://firefly.adobe.com"},
+    {cat:"🎨 Design & Images",name:"Ideogram",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"AI image generator that's good at text in images.",pros:["Best at text rendering","Free tier generous","Fast"],cons:["Limited style control","Newer tool"],bestFor:"Graphics with text",pricing:"Free | $8/mo",link:"https://ideogram.ai"},
+    {cat:"🎨 Design & Images",name:"Clipdrop",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI tools for image editing and background removal.",pros:["Easy to use","Multiple tools","Free tier"],cons:["Limited compared to Photoshop","Quality varies"],bestFor:"Quick edits",pricing:"Free | $9/mo",link:"https://clipdrop.co"},
+    {cat:"🎨 Design & Images",name:"Remove.bg",rating:"8.5/10",type:"free",tag:"🆓 Free",desc:"AI background remover that works perfectly.",pros:["One-click removal","Very accurate","Free for low-res"],cons:["High-res costs money","One trick pony"],bestFor:"Product photos, portraits",pricing:"Free | $9/mo",link:"https://remove.bg"},
+    {cat:"🎨 Design & Images",name:"Photoshop AI",rating:"9.0/10",type:"subscription",tag:"💳 Subscription",desc:"Adobe Photoshop with AI features like Generative Fill.",pros:["Professional grade","Generative Fill amazing","Industry standard"],cons:["Expensive subscription","Learning curve"],bestFor:"Professional designers",pricing:"$21/mo",link:"https://adobe.com/photoshop"},
+    {cat:"🎨 Design & Images",name:"Fotor",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"Online photo editor with AI enhancement tools.",pros:["Easy to use","AI enhancement","Free tier"],cons:["Basic features","Watermark"],bestFor:"Casual photo editing",pricing:"Free | $9/mo",link:"https://fotor.com"},
+    {cat:"🎨 Design & Images",name:"Artbreeder",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"Create images by blending and evolving existing ones.",pros:["Unique approach","Free tier","Community"],cons:["Limited control","Specific use case"],bestFor:"Character design, portraits",pricing:"Free | $9/mo",link:"https://artbreeder.com"},
+    {cat:"🎨 Design & Images",name:"NightCafe",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI art generator with multiple algorithms.",pros:["Multiple AI models","Daily free credits","Community"],cons:["Credits run out fast","Quality varies"],bestFor:"Art enthusiasts",pricing:"Free | $6/mo",link:"https://nightcafe.studio"},
+    {cat:"🎨 Design & Images",name:"Craiyon",rating:"7.0/10",type:"free",tag:"🆓 Free",desc:"Free AI image generator (formerly DALL-E mini).",pros:["Completely free","Unlimited generations","No account needed"],cons:["Lower quality","Slow generation"],bestFor:"Casual experimentation",pricing:"Free",link:"https://craiyon.com"},
+    {cat:"🎨 Design & Images",name:"DreamStudio",rating:"8.1/10",type:"free",tag:"🆓 Free",desc:"Official Stable Diffusion interface by Stability AI.",pros:["Official SD interface","Credits system","Good control"],cons:["Credits expensive","Learning curve"],bestFor:"Stable Diffusion users",pricing:"Free credits | $10/1000 credits",link:"https://dreamstudio.ai"},
+    {cat:"🎨 Design & Images",name:"BlueWillow",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"Free AI image generator similar to Midjourney.",pros:["Free to use","Discord-based","Decent quality"],cons:["Public generations","Slower than Midjourney"],bestFor:"Budget-conscious creators",pricing:"Free | $5/mo",link:"https://bluewillow.ai"},
+    {cat:"🎨 Design & Images",name:"Pixlr AI",rating:"7.4/10",type:"free",tag:"🆓 Free",desc:"Online photo editor with AI tools.",pros:["Browser-based","AI tools","Free tier"],cons:["Ads","Limited features"],bestFor:"Quick online edits",pricing:"Free | $8/mo",link:"https://pixlr.com"},
+    {cat:"🎨 Design & Images",name:"Let's Enhance",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI image upscaling and enhancement.",pros:["Excellent upscaling","Batch processing","Good quality"],cons:["Credits expensive","Limited free tier"],bestFor:"Image upscaling",pricing:"Free | $9/mo",link:"https://letsenhance.io"},
+    {cat:"🎨 Design & Images",name:"Looka",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI logo and brand identity generator.",pros:["Easy logo creation","Brand kit included","Quick"],cons:["Subscription for downloads","Generic sometimes"],bestFor:"Small business branding",pricing:"$20 one-time | $96/year",link:"https://looka.com"},
+
+    // VIDEO TOOLS (15 total)
+    {cat:"🎬 Video & Animation",name:"Runway",rating:"9.0/10",type:"free",tag:"🆓 Free",desc:"AI video editor with Gen-2 video generation.",pros:["Cutting-edge AI video","Free tier","Professional features"],cons:["Expensive","Credits run out fast"],bestFor:"Video creators, filmmakers",pricing:"Free | $12/mo",link:"https://runwayml.com"},
+    {cat:"🎬 Video & Animation",name:"Descript",rating:"8.8/10",type:"free",tag:"🆓 Free",desc:"Edit video by editing text with AI features.",pros:["Edit video like text","AI voice cloning","Free tier"],cons:["Transcription not perfect","Export limits"],bestFor:"Podcasters, YouTubers",pricing:"Free | $12/mo",link:"https://get.descript.com/951y7htioj6v"},
+    {cat:"🎬 Video & Animation",name:"Synthesia",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI avatar videos without filming.",pros:["No filming needed","120+ avatars","40+ languages"],cons:["Expensive","Uncanny valley"],bestFor:"Corporate training",pricing:"$22/mo",link:"https://synthesia.io"},
+    {cat:"🎬 Video & Animation",name:"Pictory",rating:"7.6/10",type:"deal",tag:"💰 Lifetime Deal",desc:"Turn blog posts into videos automatically.",pros:["Blog to video","Auto-captions","Lifetime deal"],cons:["Generic stock footage","Limited control"],bestFor:"Content repurposing",pricing:"$19/mo | $299 lifetime",link:"https://pictory.ai"},
+    {cat:"🎬 Video & Animation",name:"Kapwing",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"Online video editor with AI tools.",pros:["Free tier generous","Browser-based","Auto-subtitles"],cons:["Watermark on free","Slower than desktop"],bestFor:"Quick edits, teams",pricing:"Free | $16/mo",link:"https://kapwing.com"},
+    {cat:"🎬 Video & Animation",name:"HeyGen",rating:"8.5/10",type:"subscription",tag:"💳 Subscription",desc:"AI video generator with realistic avatars.",pros:["High quality avatars","Easy to use","Multi-language"],cons:["Expensive","Credit system"],bestFor:"Marketing videos",pricing:"$29/mo",link:"https://heygen.com"},
+    {cat:"🎬 Video & Animation",name:"Fliki",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"Text to video with AI voices and stock media.",pros:["Easy to use","Many voices","Free tier"],cons:["Watermark on free","Generic output"],bestFor:"Social media videos",pricing:"Free | $21/mo",link:"https://fliki.ai"},
+    {cat:"🎬 Video & Animation",name:"InVideo",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"Online video editor with templates and AI.",pros:["Many templates","Free tier","Stock library"],cons:["Watermark","Can be slow"],bestFor:"Marketing videos",pricing:"Free | $15/mo",link:"https://invideo.io"},
+    {cat:"🎬 Video & Animation",name:"Opus Clip",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI that turns long videos into viral clips.",pros:["Automatic clipping","Free tier","Good for repurposing"],cons:["Quality varies","Limited editing"],bestFor:"Content repurposing",pricing:"Free | $9/mo",link:"https://opus.pro"},
+    {cat:"🎬 Video & Animation",name:"Vidyo.ai",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI video clipping tool for social media.",pros:["Auto-generates clips","Free tier","Multiple platforms"],cons:["Quality inconsistent","Watermark"],bestFor:"Social media content",pricing:"Free | $29/mo",link:"https://vidyo.ai"},
+    {cat:"🎬 Video & Animation",name:"Lumen5",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"Turn blog posts into social videos.",pros:["Easy drag-and-drop","Free tier","Templates"],cons:["Watermark","Generic look"],bestFor:"Social media managers",pricing:"Free | $19/mo",link:"https://lumen5.com"},
+    {cat:"🎬 Video & Animation",name:"Peech",rating:"7.5/10",type:"subscription",tag:"💳 Subscription",desc:"AI video editor for content teams.",pros:["Team collaboration","Brand templates","Automatic edits"],cons:["Expensive","For teams only"],bestFor:"Content teams",pricing:"$49/user/mo",link:"https://peech-ai.com"},
+    {cat:"🎬 Video & Animation",name:"Colossyan",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"AI video generator for workplace learning.",pros:["Good for training","Many avatars","Templates"],cons:["Expensive","Niche use case"],bestFor:"Corporate training",pricing:"$19/mo",link:"https://colossyan.com"},
+    {cat:"🎬 Video & Animation",name:"Wave.video",rating:"7.4/10",type:"free",tag:"🆓 Free",desc:"Online video maker with stock library.",pros:["Stock library","Live streaming","Free tier"],cons:["Watermark","Basic features"],bestFor:"Social media videos",pricing:"Free | $16/mo",link:"https://wave.video"},
+    {cat:"🎬 Video & Animation",name:"Steve.AI",rating:"7.3/10",type:"free",tag:"🆓 Free",desc:"AI video maker with animated characters.",pros:["Animated videos","Easy to use","Free tier"],cons:["Cartoonish style","Limited"],bestFor:"Explainer videos",pricing:"Free | $20/mo",link:"https://steve.ai"},
+
+    // CODING TOOLS (15 total)
+    {cat:"💻 Coding & Development",name:"GitHub Copilot",rating:"9.2/10",type:"subscription",tag:"💳 Subscription",desc:"AI pair programmer that autocompletes code.",pros:["Best autocomplete","Works in all IDEs","Huge time saver"],cons:["$10/mo","Sometimes suggests bad code"],bestFor:"Professional developers",pricing:"$10/mo",link:"https://github.com/features/copilot"},
+    {cat:"💻 Coding & Development",name:"Cursor",rating:"9.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI-first code editor with ChatGPT-4 built in.",pros:["Best AI coding experience","Can edit multiple files","Fast iteration"],cons:["$20/mo","VS Code fork"],bestFor:"Solo devs, startups",pricing:"$20/mo",link:"https://cursor.sh"},
+    {cat:"💻 Coding & Development",name:"Replit AI",rating:"8.5/10",type:"free",tag:"🆓 Free",desc:"AI coding assistant in browser-based IDE.",pros:["Browser-based","Free tier","Deploy instantly"],cons:["Less powerful","Limited to Replit"],bestFor:"Beginners, students",pricing:"Free | $7/mo",link:"https://replit.com"},
+    {cat:"💻 Coding & Development",name:"Tabnine",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"Privacy-focused AI code completion.",pros:["Privacy-focused","Free tier","Works offline"],cons:["Not as smart as Copilot","Slower"],bestFor:"Privacy-conscious devs",pricing:"Free | $12/mo",link:"https://tabnine.com"},
+    {cat:"💻 Coding & Development",name:"Codeium",rating:"8.7/10",type:"free",tag:"🆓 Free",desc:"Free AI code autocomplete for individuals.",pros:["Completely free","Fast autocomplete","70+ languages"],cons:["Newer tool","Less refined"],bestFor:"Budget developers",pricing:"Free",link:"https://codeium.com"},
+    {cat:"💻 Coding & Development",name:"Amazon CodeWhisperer",rating:"8.1/10",type:"free",tag:"🆓 Free",desc:"AWS's AI code completion tool.",pros:["Free for individuals","AWS integration","Security scanning"],cons:["AWS-focused","Less versatile"],bestFor:"AWS developers",pricing:"Free",link:"https://aws.amazon.com/codewhisperer"},
+    {cat:"💻 Coding & Development",name:"Sourcegraph Cody",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI coding assistant that understands your codebase.",pros:["Codebase context","Free tier","Multiple LLMs"],cons:["Learning curve","Setup required"],bestFor:"Large codebases",pricing:"Free | $9/mo",link:"https://sourcegraph.com/cody"},
+    {cat:"💻 Coding & Development",name:"Phind",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI search engine for developers.",pros:["Developer-focused","Free","Fast answers"],cons:["Limited to search","No code generation"],bestFor:"Developer research",pricing:"Free | $15/mo",link:"https://phind.com"},
+    {cat:"💻 Coding & Development",name:"Bard for Developers",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Google's AI for code help and explanations.",pros:["Free","Google integration","Code explanations"],cons:["Inconsistent quality","Less specialized"],bestFor:"Casual coding help",pricing:"Free",link:"https://bard.google.com"},
+    {cat:"💻 Coding & Development",name:"Codex (via OpenAI API)",rating:"8.6/10",type:"subscription",tag:"💳 Subscription",desc:"OpenAI's code generation model via API.",pros:["Powerful","Flexible","API access"],cons:["Requires setup","Pay per token"],bestFor:"Developers building tools",pricing:"Pay per use",link:"https://platform.openai.com"},
+    {cat:"💻 Coding & Development",name:"Pieces for Developers",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI-powered code snippet manager.",pros:["Free","Snippet management","AI search"],cons:["Niche use case","Limited"],bestFor:"Code snippet organization",pricing:"Free",link:"https://pieces.app"},
+    {cat:"💻 Coding & Development",name:"Aider",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"AI pair programming in your terminal.",pros:["Free","Terminal-based","Git integration"],cons:["Command line only","Learning curve"],bestFor:"Terminal-focused devs",pricing:"Free (bring your own API key)",link:"https://aider.chat"},
+    {cat:"💻 Coding & Development",name:"Continue",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"Open-source AI code assistant for VS Code.",pros:["Free","Open source","Customizable"],cons:["Requires API key","Setup needed"],bestFor:"Technical users",pricing:"Free",link:"https://continue.dev"},
+    {cat:"💻 Coding & Development",name:"CodeGPT",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"VS Code extension for AI coding help.",pros:["Free","Easy to install","Multiple models"],cons:["Requires API key","Basic features"],bestFor:"VS Code users",pricing:"Free",link:"https://codegpt.co"},
+    {cat:"💻 Coding & Development",name:"JetBrains AI",rating:"8.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI assistant built into JetBrains IDEs.",pros:["Integrated","Good quality","Context-aware"],cons:["JetBrains only","Additional cost"],bestFor:"JetBrains users",pricing:"Included with subscription",link:"https://jetbrains.com"},
+
+    // PRODUCTIVITY TOOLS (20 total)
+    {cat:"📊 Productivity & Business",name:"Notion AI",rating:"8.5/10",type:"subscription",tag:"💳 Subscription",desc:"AI built into Notion for notes and docs.",pros:["Integrated with Notion","Works on your content","Helpful"],cons:["Only in Notion","$10/mo add-on"],bestFor:"Notion users",pricing:"$10/mo per user",link:"https://notion.so"},
+    {cat:"📊 Productivity & Business",name:"Motion",rating:"8.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI calendar that auto-schedules your day.",pros:["Intelligent scheduling","Saves hours weekly","Great for busy pros"],cons:["Expensive $34/mo","Learning curve"],bestFor:"Executives, founders",pricing:"$34/mo",link:"https://usemotion.com"},
+    {cat:"📊 Productivity & Business",name:"Perplexity AI",rating:"9.1/10",type:"free",tag:"🆓 Free",desc:"AI search engine with sources.",pros:["Excellent for research","Cites sources","Free tier generous"],cons:["Pro features locked","Can miss nuance"],bestFor:"Researchers, students",pricing:"Free | $20/mo",link:"https://perplexity.ai"},
+    {cat:"📊 Productivity & Business",name:"Zapier AI",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI-powered workflow automation.",pros:["Connects 5000+ apps","Natural language setup","Powerful"],cons:["Can get expensive","Complex workflows tricky"],bestFor:"Business automation",pricing:"Free | $20/mo",link:"https://zapier.com"},
+    {cat:"📊 Productivity & Business",name:"ClickUp AI",rating:"8.1/10",type:"subscription",tag:"💳 Subscription",desc:"AI features in ClickUp project management.",pros:["Integrated in ClickUp","Saves time","Good for teams"],cons:["Only if using ClickUp","Add-on cost"],bestFor:"ClickUp teams",pricing:"$5/mo per user",link:"https://clickup.com"},
+    {cat:"📊 Productivity & Business",name:"Todoist AI",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"AI-powered task management and planning.",pros:["Natural language input","Smart scheduling","Free tier"],cons:["AI features limited","Premium needed"],bestFor:"Personal productivity",pricing:"Free | $4/mo",link:"https://todoist.com"},
+    {cat:"📊 Productivity & Business",name:"Reclaim AI",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"AI calendar that defends your time.",pros:["Smart time blocking","Free tier","Calendar sync"],cons:["Learning curve","Can be aggressive"],bestFor:"Busy professionals",pricing:"Free | $8/mo",link:"https://reclaim.ai"},
+    {cat:"📊 Productivity & Business",name:"Otter.ai",rating:"8.7/10",type:"free",tag:"🆓 Free",desc:"AI meeting notes and transcription.",pros:["Excellent transcription","Free tier (600 min/mo)","Real-time"],cons:["Premium for best features","Storage limits"],bestFor:"Meeting notes",pricing:"Free | $17/mo",link:"https://otter.ai"},
+    {cat:"📊 Productivity & Business",name:"Fireflies.ai",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"AI meeting assistant and note-taker.",pros:["Auto-joins meetings","Good transcription","Free tier"],cons:["Privacy concerns","Credits limited"],bestFor:"Sales teams, meetings",pricing:"Free | $10/mo",link:"https://fireflies.ai"},
+    {cat:"📊 Productivity & Business",name:"Mem",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI-powered note-taking and knowledge base.",pros:["Smart organization","AI search","Connected notes"],cons:["Expensive","Learning curve"],bestFor:"Knowledge workers",pricing:"$15/mo",link:"https://mem.ai"},
+    {cat:"📊 Productivity & Business",name:"Reflect",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"Note-taking with AI and backlinking.",pros:["Fast","AI features","End-to-end encrypted"],cons:["$10/mo","Limited integrations"],bestFor:"Private notes",pricing:"$10/mo",link:"https://reflect.app"},
+    {cat:"📊 Productivity & Business",name:"Taskade",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI productivity workspace for teams.",pros:["Free tier","Multiple views","Real-time collaboration"],cons:["Can be cluttered","AI features limited"],bestFor:"Small teams",pricing:"Free | $8/mo",link:"https://taskade.com"},
+    {cat:"📊 Productivity & Business",name:"Magical",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"AI text expander and autofill.",pros:["Completely free","Time saver","Works everywhere"],cons:["Privacy concerns","Limited customization"],bestFor:"Repetitive typing",pricing:"Free",link:"https://magical.com"},
+    {cat:"📊 Productivity & Business",name:"Superhuman",rating:"8.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI-powered email client for speed.",pros:["Incredibly fast","AI triage","Keyboard shortcuts"],cons:["Expensive $30/mo","Gmail/Outlook only"],bestFor:"Email power users",pricing:"$30/mo",link:"https://superhuman.com"},
+    {cat:"📊 Productivity & Business",name:"SaneBox",rating:"8.1/10",type:"subscription",tag:"💳 Subscription",desc:"AI email organizer and filter.",pros:["Works with any email","Smart filtering","Time saver"],cons:["$7/mo","Takes time to learn"],bestFor:"Email overload",pricing:"$7/mo",link:"https://sanebox.com"},
+    {cat:"📊 Productivity & Business",name:"Circleback",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"AI meeting notes and follow-ups.",pros:["Auto meeting notes","Free tier","Action items"],cons:["Limited integrations","New tool"],bestFor:"Meeting follow-up",pricing:"Free | $20/mo",link:"https://circleback.ai"},
+    {cat:"📊 Productivity & Business",name:"Bearly AI",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"AI research assistant and reading tool.",pros:["Free tier","Research help","Multiple models"],cons:["Limited features","New tool"],bestFor:"Research",pricing:"Free | $20/mo",link:"https://bearly.ai"},
+    {cat:"📊 Productivity & Business",name:"Timely",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"AI time tracking that runs automatically.",pros:["Automatic tracking","Privacy-focused","Good for billing"],cons:["$9/mo","Learning period"],bestFor:"Freelancers, agencies",pricing:"$9/mo",link:"https://timelyapp.com"},
+    {cat:"📊 Productivity & Business",name:"Clockwise",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI calendar optimizer for teams.",pros:["Free tier","Smart scheduling","Focus time"],cons:["Premium for best features","Can be aggressive"],bestFor:"Teams",pricing:"Free | $7/mo",link:"https://clockwise.com"},
+    {cat:"📊 Productivity & Business",name:"Bardeen",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI workflow automation for browser tasks.",pros:["Free tier","No-code automation","Browser-based"],cons:["Limited to browser","Learning curve"],bestFor:"Browser automation",pricing:"Free | $10/mo",link:"https://bardeen.ai"},
+
+    // VOICE & AUDIO (10 total)
+    {cat:"🎙️ Voice & Audio",name:"ElevenLabs",rating:"9.0/10",type:"free",tag:"🆓 Free",desc:"The most realistic AI voice generator.",pros:["Best voice quality","Free tier 10k chars/mo","Voice cloning"],cons:["Free tier limited","Expensive at scale"],bestFor:"Content creators",pricing:"Free | $5/mo",link:"https://elevenlabs.io"},
+    {cat:"🎙️ Voice & Audio",name:"Murf AI",rating:"8.3/10",type:"subscription",tag:"💳 Subscription",desc:"AI voiceover studio with 120+ voices.",pros:["Huge voice library","Video sync","Commercial use"],cons:["Not as realistic as ElevenLabs","Pricey"],bestFor:"Video creators",pricing:"$29/mo",link:"https://murf.ai"},
+    {cat:"🎙️ Voice & Audio",name:"Podcast.ai",rating:"7.9/10",type:"deal",tag:"💰 Lifetime Deal",desc:"AI podcast generation tool.",pros:["Fast podcast creation","Multiple voices","Script generation"],cons:["Can sound robotic","Limited customization"],bestFor:"Podcast producers",pricing:"$19/mo | $199 lifetime",link:"https://podcast.ai"},
+    {cat:"🎙️ Voice & Audio",name:"Adobe Podcast",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"AI audio enhancement for podcasters.",pros:["Free tier generous","Amazing quality","Easy to use"],cons:["Adobe ecosystem","Can be slow"],bestFor:"Podcasters",pricing:"Free",link:"https://podcast.adobe.com"},
+    {cat:"🎙️ Voice & Audio",name:"Descript Overdub",rating:"8.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI voice cloning in Descript.",pros:["Clone your voice","Fix mistakes without re-recording","Natural"],cons:["Part of Descript sub","Ethical concerns"],bestFor:"Podcasters, video creators",pricing:"Included in Descript",link:"https://get.descript.com/951y7htioj6v"},
+    {cat:"🎙️ Voice & Audio",name:"Play.ht",rating:"8.1/10",type:"free",tag:"🆓 Free",desc:"AI voice generation with many languages.",pros:["Many voices","Good quality","Free tier"],cons:["Credits run out","Voice cloning costs extra"],bestFor:"Multilingual content",pricing:"Free | $19/mo",link:"https://play.ht"},
+    {cat:"🎙️ Voice & Audio",name:"Resemble AI",rating:"8.2/10",type:"subscription",tag:"💳 Subscription",desc:"AI voice cloning and generation.",pros:["Real-time voice cloning","API access","Custom voices"],cons:["Expensive","For developers"],bestFor:"Voice apps, games",pricing:"$29/mo",link:"https://resemble.ai"},
+    {cat:"🎙️ Voice & Audio",name:"WellSaid Labs",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"AI voiceover for professional use.",pros:["Professional quality","Commercial use","Many voices"],cons:["Expensive","For teams"],bestFor:"Enterprise voiceover",pricing:"$49/mo",link:"https://wellsaidlabs.com"},
+    {cat:"🎙️ Voice & Audio",name:"Speechify",rating:"8.5/10",type:"free",tag:"🆓 Free",desc:"AI text-to-speech for reading.",pros:["Excellent for reading","Free tier","Many voices"],cons:["Premium expensive","Mobile-focused"],bestFor:"Reading, accessibility",pricing:"Free | $139/year",link:"https://speechify.com"},
+    {cat:"🎙️ Voice & Audio",name:"Voicemod",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"Real-time voice changer with AI voices.",pros:["Free version good","Real-time","Fun for gaming"],cons:["Gimmicky","Quality varies"],bestFor:"Gamers, streamers",pricing:"Free | $12/mo",link:"https://voicemod.net"},
+
+    // RESEARCH & DATA (15 total)
+    {cat:"🔬 Research & Data",name:"Consensus",rating:"8.9/10",type:"free",tag:"🆓 Free",desc:"AI search engine for research papers.",pros:["Searches academic papers","Free tier","Summarizes findings"],cons:["Academic focus only","Limited free searches"],bestFor:"Researchers, students",pricing:"Free | $9/mo",link:"https://consensus.app"},
+    {cat:"🔬 Research & Data",name:"Elicit",rating:"8.7/10",type:"free",tag:"🆓 Free",desc:"AI research assistant for literature review.",pros:["Finds relevant papers","Extracts data","Free tier"],cons:["Academic focus","Learning curve"],bestFor:"Academic research",pricing:"Free | $10/mo",link:"https://elicit.org"},
+    {cat:"🔬 Research & Data",name:"Semantic Scholar",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"AI-powered academic search engine.",pros:["Completely free","Huge database","Citation analysis"],cons:["Academic only","No summarization"],bestFor:"Academic research",pricing:"Free",link:"https://semanticscholar.org"},
+    {cat:"🔬 Research & Data",name:"Scite",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI that shows how papers cite each other.",pros:["Citation context","Free tier","Useful for research"],cons:["Limited free tier","Academic focus"],bestFor:"Researchers",pricing:"Free | $20/mo",link:"https://scite.ai"},
+    {cat:"🔬 Research & Data",name:"Julius AI",rating:"8.1/10",type:"free",tag:"🆓 Free",desc:"AI data analyst that chats with your data.",pros:["Upload data files","Natural language queries","Free tier"],cons:["Limited free tier","Data privacy"],bestFor:"Data analysis",pricing:"Free | $20/mo",link:"https://julius.ai"},
+    {cat:"🔬 Research & Data",name:"ChatPDF",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Chat with any PDF document using AI.",pros:["Free tier","Easy to use","Works well"],cons:["Limited free uploads","Data privacy"],bestFor:"PDF research",pricing:"Free | $5/mo",link:"https://chatpdf.com"},
+    {cat:"🔬 Research & Data",name:"ChatDOC",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"AI that reads and summarizes documents.",pros:["Multiple file types","Free tier","Good summaries"],cons:["Limited uploads","Accuracy varies"],bestFor:"Document research",pricing:"Free | $6/mo",link:"https://chatdoc.com"},
+    {cat:"🔬 Research & Data",name:"Humata",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI that understands your files.",pros:["Chat with documents","Free tier","Multiple formats"],cons:["Limited pages free","Generic answers sometimes"],bestFor:"Document Q&A",pricing:"Free | $15/mo",link:"https://humata.ai"},
+    {cat:"🔬 Research & Data",name:"NotebookLM",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"Google's AI research assistant.",pros:["Completely free","Google quality","Source-grounded"],cons:["Limited features","Beta"],bestFor:"Note-taking, research",pricing:"Free",link:"https://notebooklm.google"},
+    {cat:"🔬 Research & Data",name:"Scholarcy",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"AI that summarizes research papers.",pros:["Good summaries","Free tier","Browser extension"],cons:["Academic focus","Limited free tier"],bestFor:"Academic reading",pricing:"Free | $5/mo",link:"https://scholarcy.com"},
+    {cat:"🔬 Research & Data",name:"Iris.ai",rating:"7.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI research assistant for scientists.",pros:["Science-focused","Good for lit review","Visual maps"],cons:["Expensive","Academic only"],bestFor:"Scientific research",pricing:"$60/mo",link:"https://iris.ai"},
+    {cat:"🔬 Research & Data",name:"Lateral",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"AI research tool for finding papers.",pros:["Free tier","Find related papers","Citation analysis"],cons:["Limited features","Slow"],bestFor:"Literature review",pricing:"Free | $12/mo",link:"https://lateral.io"},
+    {cat:"🔬 Research & Data",name:"Connected Papers",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"Visual tool for academic paper discovery.",pros:["Completely free","Visual graphs","Find related papers"],cons:["No summarization","Academic only"],bestFor:"Finding related research",pricing:"Free",link:"https://connectedpapers.com"},
+    {cat:"🔬 Research & Data",name:"Research Rabbit",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"Personalized recommendations for research papers.",pros:["Completely free","Good recommendations","Collections"],cons:["Academic focus","No analysis"],bestFor:"Academic research",pricing:"Free",link:"https://researchrabbit.ai"},
+    {cat:"🔬 Research & Data",name:"Jenni AI",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI writing assistant for research papers.",pros:["Academic writing","Free tier","Citations"],cons:["Premium for best features","Can be generic"],bestFor:"Academic writing",pricing:"Free | $20/mo",link:"https://jenni.ai"},
+
+    // MARKETING & SOCIAL (15 total)
+    {cat:"📱 Marketing & Social",name:"Jasper Art",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"AI image generator for marketing.",pros:["Marketing-focused","Brand consistency","Unlimited generations"],cons:["Expensive","Part of Jasper"],bestFor:"Marketing teams",pricing:"$20/mo (add-on)",link:"https://jasper.ai"},
+    {cat:"📱 Marketing & Social",name:"Buffer AI",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"AI social media post generator.",pros:["Integrated with Buffer","Free tier","Multiple platforms"],cons:["Generic sometimes","Limited free"],bestFor:"Social media managers",pricing:"Free | $6/mo",link:"https://buffer.com"},
+    {cat:"📱 Marketing & Social",name:"Lately",rating:"8.2/10",type:"subscription",tag:"💳 Subscription",desc:"AI that generates social posts from content.",pros:["Repurpose content","Multiple posts","Brand voice"],cons:["Expensive","Learning period"],bestFor:"Content repurposing",pricing:"$49/mo",link:"https://lately.ai"},
+    {cat:"📱 Marketing & Social",name:"Predis.ai",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI social media content creator.",pros:["Creates posts + images","Free tier","Multiple platforms"],cons:["Generic output","Limited customization"],bestFor:"Social media content",pricing:"Free | $29/mo",link:"https://predis.ai"},
+    {cat:"📱 Marketing & Social",name:"Ocoya",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI content creation and scheduling.",pros:["Content + scheduling","Free tier","AI images"],cons:["Learning curve","Limited free tier"],bestFor:"Solo marketers",pricing:"Free | $19/mo",link:"https://ocoya.com"},
+    {cat:"📱 Marketing & Social",name:"ContentStudio",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"AI social media management platform.",pros:["All-in-one","Content discovery","Analytics"],cons:["Expensive","Overwhelming"],bestFor:"Agencies, teams",pricing:"$25/mo",link:"https://contentstudio.io"},
+    {cat:"📱 Marketing & Social",name:"Typefully",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI Twitter/X thread writer.",pros:["Great for threads","Free tier","Scheduling"],cons:["Twitter/X only","Limited AI features"],bestFor:"Twitter/X creators",pricing:"Free | $12/mo",link:"https://typefully.com"},
+    {cat:"📱 Marketing & Social",name:"Tweet Hunter",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI Twitter/X growth and content tool.",pros:["Content ideas","Scheduling","Analytics"],cons:["Expensive","Twitter/X only"],bestFor:"Twitter/X growth",pricing:"$49/mo",link:"https://tweethunter.io"},
+    {cat:"📱 Marketing & Social",name:"Hootsuite Insights",rating:"7.5/10",type:"subscription",tag:"💳 Subscription",desc:"AI social listening and analytics.",pros:["Social listening","Sentiment analysis","Enterprise features"],cons:["Very expensive","Overkill for small teams"],bestFor:"Enterprise marketing",pricing:"$249/mo+",link:"https://hootsuite.com"},
+    {cat:"📱 Marketing & Social",name:"Surfer SEO",rating:"8.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI SEO content optimizer.",pros:["Excellent SEO analysis","Content editor","Data-driven"],cons:["$59/mo","Learning curve"],bestFor:"SEO content writers",pricing:"$59/mo",link:"https://surferseo.com"},
+    {cat:"📱 Marketing & Social",name:"Clearscope",rating:"8.1/10",type:"subscription",tag:"💳 Subscription",desc:"AI content optimization for SEO.",pros:["Great for SEO","Keyword research","Content grading"],cons:["Expensive","For teams"],bestFor:"Content teams, SEO",pricing:"$170/mo",link:"https://clearscope.io"},
+    {cat:"📱 Marketing & Social",name:"MarketMuse",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI content planning and optimization.",pros:["Content strategy","Topic research","Competitive analysis"],cons:["Very expensive","Complex"],bestFor:"Enterprise content teams",pricing:"$149/mo+",link:"https://marketmuse.com"},
+    {cat:"📱 Marketing & Social",name:"Brand24",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI social media monitoring tool.",pros:["Social listening","Sentiment analysis","Alerts"],cons:["$49/mo","Can be noisy"],bestFor:"Brand monitoring",pricing:"$49/mo",link:"https://brand24.com"},
+    {cat:"📱 Marketing & Social",name:"Postwise",rating:"7.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI Twitter/X post writer and scheduler.",pros:["AI post generation","Scheduling","Analytics"],cons:["Twitter/X only","$29/mo"],bestFor:"Twitter/X growth",pricing:"$29/mo",link:"https://postwise.ai"},
+    {cat:"📱 Marketing & Social",name:"Publer",rating:"7.3/10",type:"free",tag:"🆓 Free",desc:"Social media scheduler with AI features.",pros:["Free tier","Multiple platforms","Scheduling"],cons:["AI features limited","Basic"],bestFor:"Small businesses",pricing:"Free | $10/mo",link:"https://publer.io"},
+
+    // DATA & ANALYTICS (10 total)
+    {cat:"📈 Data & Analytics",name:"ChatGPT Data Analyst",rating:"8.8/10",type:"subscription",tag:"💳 Subscription",desc:"ChatGPT Plus can analyze data files.",pros:["Easy to use","Natural language","Visualizations"],cons:["$20/mo ChatGPT Plus","File size limits"],bestFor:"Quick data analysis",pricing:"$20/mo",link:"https://chat.openai.com"},
+    {cat:"📈 Data & Analytics",name:"Claude for Data",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"Claude can analyze and visualize data.",pros:["Free tier","Good analysis","Long context"],cons:["Limited free tier","No advanced viz"],bestFor:"Data exploration",pricing:"Free | $20/mo",link:"https://claude.ai"},
+    {cat:"📈 Data & Analytics",name:"Julius AI",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"AI data analyst with visualizations.",pros:["Upload data","Natural language","Free tier"],cons:["Limited free","Privacy concerns"],bestFor:"Business analytics",pricing:"Free | $20/mo",link:"https://julius.ai"},
+    {cat:"📈 Data & Analytics",name:"Dataiku",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"Enterprise AI and ML platform.",pros:["Enterprise-grade","Full ML pipeline","Collaboration"],cons:["Very expensive","Overkill for small teams"],bestFor:"Enterprise data science",pricing:"Contact sales",link:"https://dataiku.com"},
+    {cat:"📈 Data & Analytics",name:"Obviously AI",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"No-code AI for predictions.",pros:["No coding required","Predictions","Easy to use"],cons:["Expensive","Limited customization"],bestFor:"Business predictions",pricing:"$75/mo",link:"https://obviously.ai"},
+    {cat:"📈 Data & Analytics",name:"MonkeyLearn",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"No-code text analysis and NLP.",pros:["Free tier","No coding","Text classification"],cons:["Limited free tier","Niche use case"],bestFor:"Text analysis",pricing:"Free | $299/mo",link:"https://monkeylearn.com"},
+    {cat:"📈 Data & Analytics",name:"Tableau AI",rating:"8.2/10",type:"subscription",tag:"💳 Subscription",desc:"AI features in Tableau for insights.",pros:["Powerful viz","AI insights","Enterprise"],cons:["Expensive","Learning curve"],bestFor:"Enterprise analytics",pricing:"$70/user/mo",link:"https://tableau.com"},
+    {cat:"📈 Data & Analytics",name:"ThoughtSpot",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI-powered analytics platform.",pros:["Natural language queries","Good for business users","Search-based"],cons:["Expensive","For enterprises"],bestFor:"Enterprise BI",pricing:"Contact sales",link:"https://thoughtspot.com"},
+    {cat:"📈 Data & Analytics",name:"Akkio",rating:"7.4/10",type:"subscription",tag:"💳 Subscription",desc:"No-code AI for business predictions.",pros:["Easy to use","No coding","Predictions"],cons:["Limited features","$50/mo"],bestFor:"Business predictions",pricing:"$50/mo",link:"https://akkio.com"},
+    {cat:"📈 Data & Analytics",name:"Polymer",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI data visualization and analysis.",pros:["Free tier","Easy dashboards","AI insights"],cons:["Limited customization","Basic features"],bestFor:"Quick dashboards",pricing:"Free | $20/mo",link:"https://polymersearch.com"},
+
+    // === ADDITIONAL 89 TOOLS ===
+    {cat:"✍️ Writing & Content",name:"Anyword",rating:"8.1/10",type:"subscription",tag:"💳 Subscription",desc:"AI copywriting with predictive performance scores.",pros:["Performance predictions","A/B testing","Copy intelligence"],cons:["Expensive","Marketing focused"],bestFor:"Marketing teams",pricing:"$49/mo",link:"https://anyword.com"},
+    {cat:"✍️ Writing & Content",name:"Simplified",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"All-in-one content creation with AI writing and design.",pros:["Free tier generous","Design + writing","Templates"],cons:["Jack of all trades","Quality varies"],bestFor:"Solo creators",pricing:"Free | $12/mo",link:"https://simplified.com"},
+    {cat:"✍️ Writing & Content",name:"Copysmith",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"AI content creation for ecommerce and agencies.",pros:["Ecommerce focus","Bulk generation","API access"],cons:["Expensive","Niche use"],bestFor:"Ecommerce businesses",pricing:"$19/mo",link:"https://copysmith.ai"},
+    {cat:"✍️ Writing & Content",name:"Longshot AI",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI writing assistant for long-form SEO content.",pros:["SEO focused","Fact checking","Research"],cons:["Learning curve","Expensive"],bestFor:"SEO content writers",pricing:"$29/mo",link:"https://longshot.ai"},
+    {cat:"✍️ Writing & Content",name:"Article Forge",rating:"7.3/10",type:"subscription",tag:"💳 Subscription",desc:"Automatic article generator for bulk content.",pros:["Bulk generation","Automatic","SEO focused"],cons:["Quality inconsistent","Generic"],bestFor:"Content farms",pricing:"$27/mo",link:"https://articleforge.com"},
+    {cat:"✍️ Writing & Content",name:"Hyperwrite",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI writing assistant that works anywhere you write.",pros:["Works everywhere","Free tier","Fast"],cons:["Basic features","Premium expensive"],bestFor:"Everyday writing",pricing:"Free | $20/mo",link:"https://hyperwrite.ai"},
+    {cat:"✍️ Writing & Content",name:"Shortly AI",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"Minimalist AI writing partner for long-form content.",pros:["Clean interface","Unlimited words","Commands"],cons:["$79/mo expensive","Limited features"],bestFor:"Book writers",pricing:"$79/mo",link:"https://shortlyai.com"},
+    {cat:"✍️ Writing & Content",name:"Writecream",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"AI tool for blog posts, ads, and social content.",pros:["Free tier","Many templates","Voice generation"],cons:["Quality varies","UI cluttered"],bestFor:"Social media content",pricing:"Free | $29/mo",link:"https://writecream.com"},
+    {cat:"✍️ Writing & Content",name:"Closers Copy",rating:"7.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI copywriting for sales and marketing.",pros:["Sales focused","Framework based","Community"],cons:["Expensive","Niche"],bestFor:"Sales copywriters",pricing:"$49/mo",link:"https://closerscopy.com"},
+    {cat:"✍️ Writing & Content",name:"Contentbot",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"AI content automation for bloggers and marketers.",pros:["Automation","Bulk generation","Integrations"],cons:["Generic output","Learning curve"],bestFor:"Content automation",pricing:"$19/mo",link:"https://contentbot.ai"},
+    {cat:"🎨 Design & Images",name:"Kittl",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"Design platform with AI for graphics and merch.",pros:["Great for merch","Templates","AI features"],cons:["Limited free tier","Learning curve"],bestFor:"Print on demand",pricing:"Free | $10/mo",link:"https://kittl.com"},
+    {cat:"🎨 Design & Images",name:"Designs.ai",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI-powered creative toolkit for marketing.",pros:["Multiple tools","Video + images","Templates"],cons:["Expensive","Generic results"],bestFor:"Marketing agencies",pricing:"$29/mo",link:"https://designs.ai"},
+    {cat:"🎨 Design & Images",name:"Hotpot.ai",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"AI tools for graphics, photos, and art.",pros:["Free tier","Many tools","Easy to use"],cons:["Basic features","Watermarks"],bestFor:"Quick graphics",pricing:"Free | $10/mo",link:"https://hotpot.ai"},
+    {cat:"🎨 Design & Images",name:"Stockimg.ai",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"AI stock photo and image generator.",pros:["Stock-style images","Free tier","Fast"],cons:["Limited styles","Generic"],bestFor:"Stock imagery",pricing:"Free | $19/mo",link:"https://stockimg.ai"},
+    {cat:"🎨 Design & Images",name:"Stylar",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI image editing and generation tool.",pros:["Image editing","Layers","Free tier"],cons:["Still in beta","Limited"],bestFor:"Image editing",pricing:"Free",link:"https://stylar.ai"},
+    {cat:"🎨 Design & Images",name:"Getimg.ai",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"AI image generator with multiple models.",pros:["Many models","API access","Free tier"],cons:["Credits expensive","UI basic"],bestFor:"Developers",pricing:"Free | $12/mo",link:"https://getimg.ai"},
+    {cat:"🎨 Design & Images",name:"SeaArt",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"AI art generator with anime focus.",pros:["Free","Anime styles","Community"],cons:["Anime focused","Slow"],bestFor:"Anime art",pricing:"Free",link:"https://seaart.ai"},
+    {cat:"🎨 Design & Images",name:"Bing Image Creator",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Microsoft's DALL-E powered image generator.",pros:["Completely free","Good quality","No account needed"],cons:["Slower than paid","Limited daily"],bestFor:"Free AI images",pricing:"Free",link:"https://bing.com/create"},
+    {cat:"🎨 Design & Images",name:"Freepik AI",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI image generator integrated with Freepik.",pros:["Free tier","Stock integration","Templates"],cons:["Watermarks","Limited"],bestFor:"Stock + AI combo",pricing:"Free | $10/mo",link:"https://freepik.com"},
+    {cat:"🎨 Design & Images",name:"Recraft",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI design tool for brand-consistent graphics.",pros:["Brand consistency","Vectors","Free tier"],cons:["Limited features","New"],bestFor:"Brand graphics",pricing:"Free | $24/mo",link:"https://recraft.ai"},
+    {cat:"🎬 Video & Animation",name:"Elai.io",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI video generation with avatars.",pros:["Easy to use","Many avatars","Templates"],cons:["Expensive","Credits limited"],bestFor:"Training videos",pricing:"$23/mo",link:"https://elai.io"},
+    {cat:"🎬 Video & Animation",name:"Hour One",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI video creator for business.",pros:["Professional quality","Easy","Templates"],cons:["Very expensive","Limited customization"],bestFor:"Corporate videos",pricing:"$30/mo",link:"https://hourone.ai"},
+    {cat:"🎬 Video & Animation",name:"Animoto",rating:"7.4/10",type:"free",tag:"🆓 Free",desc:"Simple video maker with templates.",pros:["Easy to use","Templates","Free tier"],cons:["Basic AI features","Watermark"],bestFor:"Quick videos",pricing:"Free | $16/mo",link:"https://animoto.com"},
+    {cat:"🎬 Video & Animation",name:"Animaker",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"DIY animation and video maker.",pros:["Animation tools","Free tier","Characters"],cons:["Watermark","Limited exports"],bestFor:"Animated explainers",pricing:"Free | $12/mo",link:"https://animaker.com"},
+    {cat:"🎬 Video & Animation",name:"Pictory AI",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"Text to video with auto-captions.",pros:["Blog to video","Auto-captions","Easy"],cons:["Generic stock footage","Expensive"],bestFor:"Content repurposing",pricing:"$19/mo",link:"https://pictory.ai"},
+    {cat:"🎬 Video & Animation",name:"Raw Shorts",rating:"7.3/10",type:"subscription",tag:"💳 Subscription",desc:"Text to video animation maker.",pros:["Text to video","Animations","Templates"],cons:["Quality varies","Limited"],bestFor:"Explainer videos",pricing:"$20/mo",link:"https://rawshorts.com"},
+    {cat:"🎬 Video & Animation",name:"Veed.io",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"Online video editor with AI features.",pros:["Easy to use","Free tier generous","Subtitles"],cons:["Watermark on free","Export limits"],bestFor:"Video editing",pricing:"Free | $18/mo",link:"https://veed.io"},
+    {cat:"🎬 Video & Animation",name:"Clipchamp",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"Microsoft's video editor with AI.",pros:["Free","Microsoft integration","Templates"],cons:["Basic features","Windows focused"],bestFor:"Windows users",pricing:"Free",link:"https://clipchamp.com"},
+    {cat:"🎬 Video & Animation",name:"Submagic",rating:"8.1/10",type:"subscription",tag:"💳 Subscription",desc:"AI captions and video editing.",pros:["Great captions","Trendy styles","Fast"],cons:["Expensive","Credits limited"],bestFor:"Short-form video",pricing:"$20/mo",link:"https://submagic.co"},
+    {cat:"💻 Coding & Development",name:"Windsurf Editor",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"AI-first code editor by Codeium.",pros:["Free","Fast","Multi-file editing"],cons:["Newer tool","Still maturing"],bestFor:"AI-native coding",pricing:"Free",link:"https://codeium.com/windsurf"},
+    {cat:"💻 Coding & Development",name:"Bolt.new",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"AI that builds and deploys full-stack apps.",pros:["Full-stack gen","Deploy instantly","Free tier"],cons:["Limited free tier","Complex apps tricky"],bestFor:"Rapid prototyping",pricing:"Free | $20/mo",link:"https://bolt.new"},
+    {cat:"💻 Coding & Development",name:"V0 by Vercel",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI that generates React components.",pros:["High quality","Vercel integration","Free tier"],cons:["React only","Credits limited"],bestFor:"React developers",pricing:"Free | $20/mo",link:"https://v0.dev"},
+    {cat:"💻 Coding & Development",name:"GPT Engineer",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Specify what you want built in natural language.",pros:["Free","Natural language","Full projects"],cons:["Hit or miss","Requires refinement"],bestFor:"Prototyping",pricing:"Free",link:"https://gptengineer.app"},
+    {cat:"💻 Coding & Development",name:"MutableAI",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI-accelerated software development.",pros:["Code generation","Refactoring","Testing"],cons:["Expensive","Limited languages"],bestFor:"Enterprise dev teams",pricing:"$25/mo",link:"https://mutable.ai"},
+    {cat:"💻 Coding & Development",name:"CodeWP",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI code generator for WordPress.",pros:["WordPress specific","Plugins","Snippets"],cons:["WordPress only","$28/mo"],bestFor:"WordPress developers",pricing:"$28/mo",link:"https://codewp.ai"},
+    {cat:"💻 Coding & Development",name:"Blackbox AI",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"AI coding assistant with autocomplete.",pros:["Free","Many languages","Fast"],cons:["Less polished","Privacy concerns"],bestFor:"Budget developers",pricing:"Free | $10/mo",link:"https://blackbox.ai"},
+    {cat:"💻 Coding & Development",name:"CodeSquire",rating:"7.4/10",type:"free",tag:"🆓 Free",desc:"AI code writing for data scientists.",pros:["Free","Data science focus","Jupyter"],cons:["Limited scope","Basic"],bestFor:"Data scientists",pricing:"Free",link:"https://codesquire.ai"},
+    {cat:"💻 Coding & Development",name:"AI Code Reviewer",rating:"7.5/10",type:"subscription",tag:"💳 Subscription",desc:"AI-powered code review and optimization.",pros:["Code review","Security","Best practices"],cons:["Expensive","For teams"],bestFor:"Code quality",pricing:"$30/mo",link:"https://ai-code-reviewer.com"},
+    {cat:"💻 Coding & Development",name:"Safurai",rating:"7.3/10",type:"free",tag:"🆓 Free",desc:"AI coding assistant for IDEs.",pros:["Free","Multiple IDEs","Refactoring"],cons:["Basic features","Slower"],bestFor:"Budget coding help",pricing:"Free | $10/mo",link:"https://safurai.com"},
+    {cat:"📊 Productivity & Business",name:"Spoke",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI meeting summarization and insights.",pros:["Meeting summaries","Action items","Integrations"],cons:["Expensive","For teams"],bestFor:"Meeting management",pricing:"$15/mo",link:"https://spoke.ai"},
+    {cat:"📊 Productivity & Business",name:"Grain",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI note-taker for meetings.",pros:["Free tier","Good summaries","Video clips"],cons:["Limited integrations","Premium for best"],bestFor:"Remote teams",pricing:"Free | $15/mo",link:"https://grain.com"},
+    {cat:"📊 Productivity & Business",name:"tl;dv",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"AI meeting recorder and summarizer.",pros:["Free tier generous","Zoom/Meet/Teams","Summaries"],cons:["Privacy concerns","Storage limits"],bestFor:"Meeting notes",pricing:"Free | $20/mo",link:"https://tldv.io"},
+    {cat:"📊 Productivity & Business",name:"Fathom",rating:"8.1/10",type:"free",tag:"🆓 Free",desc:"Free AI meeting assistant.",pros:["Completely free","Good quality","No limits"],cons:["Limited features","Basic"],bestFor:"Free meeting notes",pricing:"Free",link:"https://fathom.video"},
+    {cat:"📊 Productivity & Business",name:"Airgram",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI meeting assistant with agenda.",pros:["Agenda templates","Summaries","Free tier"],cons:["Limited free","UI cluttered"],bestFor:"Structured meetings",pricing:"Free | $9/mo",link:"https://airgram.io"},
+    {cat:"📊 Productivity & Business",name:"Sembly AI",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI team assistant for meetings.",pros:["Free tier","Team features","Insights"],cons:["Limited free tier","Complex"],bestFor:"Team meetings",pricing:"Free | $10/mo",link:"https://sembly.ai"},
+    {cat:"📊 Productivity & Business",name:"Read AI",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"Meeting summaries and analytics.",pros:["Free tier","Analytics","Scheduling"],cons:["Basic features","Privacy"],bestFor:"Meeting analytics",pricing:"Free | $15/mo",link:"https://read.ai"},
+    {cat:"📊 Productivity & Business",name:"Tactiq",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"Live meeting transcription and summaries.",pros:["Free tier good","Chrome extension","Easy"],cons:["Premium for AI","Limited"],bestFor:"Quick transcription",pricing:"Free | $8/mo",link:"https://tactiq.io"},
+    {cat:"📊 Productivity & Business",name:"Krisp",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI noise cancellation for calls.",pros:["Excellent noise removal","Free tier","All platforms"],cons:["Limited free minutes","Privacy"],bestFor:"Noisy environments",pricing:"Free | $8/mo",link:"https://krisp.ai"},
+    {cat:"📊 Productivity & Business",name:"Loopin AI",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"AI meeting workspace.",pros:["Workspace approach","Summaries","Action items"],cons:["Expensive","Learning curve"],bestFor:"Team coordination",pricing:"$12/mo",link:"https://loopin.ai"},
+    {cat:"🎙️ Voice & Audio",name:"Listnr",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI text-to-speech for content creators.",pros:["Many voices","Free tier","Podcasts"],cons:["Quality varies","Limited free"],bestFor:"Podcast creation",pricing:"Free | $9/mo",link:"https://listnr.tech"},
+    {cat:"🎙️ Voice & Audio",name:"LOVO AI",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"AI voice generator and cloning.",pros:["Many voices","Voice cloning","Commercial use"],cons:["Expensive","Credits"],bestFor:"Professional voiceover",pricing:"$24/mo",link:"https://lovo.ai"},
+    {cat:"🎙️ Voice & Audio",name:"Murf Studio",rating:"8.2/10",type:"subscription",tag:"💳 Subscription",desc:"AI voice generator with studio features.",pros:["Studio quality","120+ voices","Video sync"],cons:["$23/mo","Credits"],bestFor:"Video voiceover",pricing:"$23/mo",link:"https://murf.ai"},
+    {cat:"🎙️ Voice & Audio",name:"Speechelo",rating:"7.5/10",type:"deal",tag:"💰 Lifetime Deal",desc:"Text to speech with natural voices.",pros:["One-time payment","Many voices","Easy"],cons:["Robotic sometimes","Limited updates"],bestFor:"Budget voiceover",pricing:"$47 one-time",link:"https://speechelo.com"},
+    {cat:"🎙️ Voice & Audio",name:"NaturalReader",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"Text to speech for reading.",pros:["Free tier","PDFs","OCR"],cons:["Basic voices","Premium expensive"],bestFor:"Reading assistance",pricing:"Free | $10/mo",link:"https://naturalreader.com"},
+    {cat:"🎙️ Voice & Audio",name:"Replica Studios",rating:"8.1/10",type:"subscription",tag:"💳 Subscription",desc:"AI voice for games and metaverse.",pros:["Gaming focus","Voice acting","Quality"],cons:["Expensive","Niche"],bestFor:"Game developers",pricing:"Contact",link:"https://replicastudios.com"},
+    {cat:"🎙️ Voice & Audio",name:"Typecast",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI voice and avatar for videos.",pros:["Voice + avatar","Templates","Easy"],cons:["Expensive","Limited"],bestFor:"Educational videos",pricing:"$30/mo",link:"https://typecast.ai"},
+    {cat:"🎙️ Voice & Audio",name:"Voice.ai",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"Real-time voice changer.",pros:["Free","Real-time","Many voices"],cons:["Gimmicky","Quality varies"],bestFor:"Gaming, streaming",pricing:"Free",link:"https://voice.ai"},
+    {cat:"🎙️ Voice & Audio",name:"Altered Studio",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"Professional voice AI for media.",pros:["Professional quality","Voice cloning","Clean audio"],cons:["Expensive","For professionals"],bestFor:"Media production",pricing:"$39/mo",link:"https://altered.ai"},
+    {cat:"🎙️ Voice & Audio",name:"Krikey AI",rating:"7.4/10",type:"free",tag:"🆓 Free",desc:"AI animation and voice generator.",pros:["Animation + voice","Free tier","Easy"],cons:["Basic quality","Limited"],bestFor:"Quick animations",pricing:"Free | $30/mo",link:"https://krikey.ai"},
+    {cat:"🔬 Research & Data",name:"SciSpace",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI research assistant for papers.",pros:["Free tier good","PDF analysis","Summaries"],cons:["Academic only","Premium for best"],bestFor:"Academic research",pricing:"Free | $12/mo",link:"https://scispace.com"},
+    {cat:"🔬 Research & Data",name:"ResearchGate AI",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"AI features on ResearchGate platform.",pros:["Free","Large database","Community"],cons:["Limited AI features","Academic only"],bestFor:"Academic networking",pricing:"Free",link:"https://researchgate.net"},
+    {cat:"🔬 Research & Data",name:"Iris.ai",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI research workspace.",pros:["Research workspace","Paper discovery","Maps"],cons:["Expensive","Academic focus"],bestFor:"Literature review",pricing:"$60/mo",link:"https://iris.ai"},
+    {cat:"🔬 Research & Data",name:"Yabble",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"AI market research analysis.",pros:["Market research","Survey analysis","Fast"],cons:["Expensive","Niche"],bestFor:"Market researchers",pricing:"$99/mo",link:"https://yabble.com"},
+    {cat:"🔬 Research & Data",name:"Notably",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI research analysis platform.",pros:["User research","Analysis","Templates"],cons:["Expensive","Learning curve"],bestFor:"UX researchers",pricing:"$40/mo",link:"https://notably.ai"},
+    {cat:"🔬 Research & Data",name:"Dovetail",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"Customer insights platform with AI.",pros:["User research","Team collaboration","Analysis"],cons:["Expensive","For teams"],bestFor:"Product research",pricing:"$29/mo",link:"https://dovetail.com"},
+    {cat:"🔬 Research & Data",name:"Genei",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI research and summarization tool.",pros:["Research summaries","PDF analysis","Chrome extension"],cons:["Expensive","Limited free"],bestFor:"Research productivity",pricing:"$4/mo",link:"https://genei.io"},
+    {cat:"🔬 Research & Data",name:"Raycast AI",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"AI-powered productivity launcher.",pros:["Fast","Mac native","Free tier"],cons:["Mac only","Limited AI free"],bestFor:"Mac power users",pricing:"Free | $8/mo",link:"https://raycast.com"},
+    {cat:"🔬 Research & Data",name:"Tavily",rating:"7.5/10",type:"subscription",tag:"💳 Subscription",desc:"AI research API for developers.",pros:["API access","Fast","Reliable"],cons:["For developers","Pay per use"],bestFor:"AI app builders",pricing:"Pay per use",link:"https://tavily.com"},
+    {cat:"🔬 Research & Data",name:"Unriddle",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI research assistant for documents.",pros:["Free tier","Chat with docs","Summaries"],cons:["Limited free tier","Basic"],bestFor:"Document research",pricing:"Free | $16/mo",link:"https://unriddle.ai"},
+    {cat:"📱 Marketing & Social",name:"Blaze AI",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI content marketing for solo brands.",pros:["Solo creator focus","Scheduling","Content calendar"],cons:["Expensive","Limited platforms"],bestFor:"Solo entrepreneurs",pricing:"$27/mo",link:"https://blaze.ai"},
+    {cat:"📱 Marketing & Social",name:"CopyMonkey",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"AI Amazon listing optimization.",pros:["Amazon specific","Keyword optimization","A/B testing"],cons:["Amazon only","$24/mo"],bestFor:"Amazon sellers",pricing:"$24/mo",link:"https://copymonkey.ai"},
+    {cat:"📱 Marketing & Social",name:"Describely",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI product descriptions for ecommerce.",pros:["Ecommerce focus","Bulk generation","SEO"],cons:["Expensive","Niche"],bestFor:"Ecommerce stores",pricing:"$28/mo",link:"https://describely.ai"},
+    {cat:"📱 Marketing & Social",name:"Postly",rating:"7.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI social media management.",pros:["Content generation","Scheduling","Multiple platforms"],cons:["Generic content","$19/mo"],bestFor:"Social media managers",pricing:"$19/mo",link:"https://postly.ai"},
+    {cat:"📱 Marketing & Social",name:"Peppertype.ai",rating:"7.5/10",type:"subscription",tag:"💳 Subscription",desc:"AI content marketing platform.",pros:["Content ideas","SEO","Multiple formats"],cons:["Expensive","Quality varies"],bestFor:"Content marketing",pricing:"$35/mo",link:"https://peppertype.ai"},
+    {cat:"📱 Marketing & Social",name:"Creasquare",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"AI social media content creator.",pros:["Content + design","Scheduling","Templates"],cons:["Limited platforms","$15/mo"],bestFor:"Small businesses",pricing:"$15/mo",link:"https://creasquare.io"},
+    {cat:"📱 Marketing & Social",name:"Flick",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI social media assistant.",pros:["Caption writing","Scheduling","Hashtags"],cons:["Expensive","Instagram focus"],bestFor:"Instagram creators",pricing:"$14/mo",link:"https://flick.social"},
+    {cat:"📱 Marketing & Social",name:"Brandwatch",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"AI social listening and analytics.",pros:["Enterprise grade","Deep insights","Social listening"],cons:["Very expensive","For enterprises"],bestFor:"Enterprise marketing",pricing:"Contact sales",link:"https://brandwatch.com"},
+    {cat:"📱 Marketing & Social",name:"Sprinklr AI",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"Unified customer experience platform.",pros:["Enterprise features","All channels","AI insights"],cons:["Very expensive","Complex"],bestFor:"Large enterprises",pricing:"Contact sales",link:"https://sprinklr.com"},
+    {cat:"📱 Marketing & Social",name:"Vista Social",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"Social media management with AI.",pros:["Free tier","Multiple platforms","Scheduling"],cons:["AI features limited","Basic"],bestFor:"Small teams",pricing:"Free | $15/mo",link:"https://vistasocial.com"},
+    {cat:"📈 Data & Analytics",name:"Equals AI",rating:"8.1/10",type:"subscription",tag:"💳 Subscription",desc:"Spreadsheet with AI analysis.",pros:["SQL queries","AI analysis","Collaborative"],cons:["Expensive","Learning curve"],bestFor:"Data analysts",pricing:"$49/mo",link:"https://equals.com"},
+    {cat:"📈 Data & Analytics",name:"Secoda",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI data catalog and documentation.",pros:["Auto documentation","Search","Lineage"],cons:["Expensive","For teams"],bestFor:"Data teams",pricing:"$100/mo",link:"https://secoda.co"},
+    {cat:"📈 Data & Analytics",name:"Rasgo",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI data analytics automation.",pros:["Self-service analytics","SQL generation","Fast"],cons:["Technical","Expensive"],bestFor:"Data teams",pricing:"Contact sales",link:"https://rasgoml.com"},
+    {cat:"📈 Data & Analytics",name:"Seek AI",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"Natural language data queries.",pros:["Natural language","SQL generation","Easy"],cons:["Expensive","Enterprise focus"],bestFor:"Business users",pricing:"Contact sales",link:"https://seek.ai"},
+    {cat:"📈 Data & Analytics",name:"Hex AI",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"AI data workspace for analysts.",pros:["Notebooks","SQL + Python","Free tier"],cons:["Technical","Limited free"],bestFor:"Data analysts",pricing:"Free | $59/mo",link:"https://hex.tech"},
+    {cat:"📈 Data & Analytics",name:"Mode Analytics AI",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"Business intelligence with AI.",pros:["BI platform","SQL + Python","Collaboration"],cons:["Expensive","For teams"],bestFor:"Data teams",pricing:"Contact sales",link:"https://mode.com"},
+    {cat:"📈 Data & Analytics",name:"Databricks AI",rating:"8.3/10",type:"subscription",tag:"💳 Subscription",desc:"Unified analytics platform with AI.",pros:["Enterprise grade","MLOps","Data lakehouse"],cons:["Very expensive","Complex"],bestFor:"Enterprise data",pricing:"Contact sales",link:"https://databricks.com"},
+    {cat:"📈 Data & Analytics",name:"Alteryx AI",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"Analytics automation platform.",pros:["No-code","Powerful","Enterprise"],cons:["Very expensive","Learning curve"],bestFor:"Enterprise analytics",pricing:"Contact sales",link:"https://alteryx.com"},
+    {cat:"📈 Data & Analytics",name:"DataRobot",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"Enterprise AI platform for predictions.",pros:["AutoML","Enterprise grade","Powerful"],cons:["Very expensive","Complex"],bestFor:"Enterprise ML",pricing:"Contact sales",link:"https://datarobot.com"},
+    {cat:"📈 Data & Analytics",name:"H2O.ai",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Open source AI and ML platform.",pros:["Free open source","Powerful","Community"],cons:["Technical","Enterprise version expensive"],bestFor:"Data scientists",pricing:"Free | Contact sales",link:"https://h2o.ai"},
+];
+
+let currentTypeFilter = 'all';
+let currentCategoryFilter = 'all';
+
+function renderTools() {
+    const categories = [...new Set(tools.map(t => t.cat))];
+    let html = '';
+
+    categories.forEach(category => {
+        const categoryTools = tools.filter(t => t.cat === category);
+        // Extract slug from category name (skip emoji, use actual word)
+        const categorySlug = category.split(' ')[1].replace(/[^\w]/g, '').toLowerCase();
+        
+        html += `<section class="category-section mb-16" data-category="${categorySlug}">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 pb-4 border-b-2 border-purple-200">${category}</h2>
+            <div class="grid md:grid-cols-2 gap-6">`;
+
+        categoryTools.forEach(t => {
+            const typeClass = t.type;
+            html += `
+            <div class="tool-card ${typeClass} ${categorySlug} bg-white rounded-xl p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">${t.name}</h3>
+                        <span class="inline-block px-3 py-1 rounded-full text-sm font-medium ${t.type==='free'?'bg-green-100 text-green-700':t.type==='deal'?'bg-yellow-100 text-yellow-700':'bg-blue-100 text-blue-700'}">${t.tag}</span>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold ${t.rating.startsWith('9')?'text-green-600':'text-purple-600'}">${t.rating}</div>
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 mb-4 leading-relaxed">${t.desc}</p>
+                
+                <div class="space-y-3 mb-4">
+                    <div>
+                        <div class="font-semibold text-green-700 mb-1 text-sm">✓ Pros:</div>
+                        <ul class="space-y-1">
+                            ${t.pros.map(p=>`<li class="text-gray-600 text-sm pl-4">• ${p}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-red-600 mb-1 text-sm">✗ Cons:</div>
+                        <ul class="space-y-1">
+                            ${t.cons.map(c=>`<li class="text-gray-600 text-sm pl-4">• ${c}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-200 pt-4 space-y-2">
+                    <div class="text-sm">
+                        <span class="font-semibold text-gray-700">Best for:</span>
+                        <span class="text-gray-600"> ${t.bestFor}</span>
+                    </div>
+                    <div class="text-sm">
+                        <span class="font-semibold text-gray-700">Pricing:</span>
+                        <span class="text-gray-600"> ${t.pricing}</span>
+                    </div>
+                </div>
+                
+                <a href="${t.link}" target="_blank" rel="noopener" class="mt-4 block text-center px-6 py-3 ${t.type==='deal'?'bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600':'bg-purple-600 hover:bg-purple-700'} text-white font-semibold rounded-lg transition-all">
+                    ${t.type==='deal'?'Get Lifetime Deal →':'Visit '+t.name+' →'}
+                </a>
+            </div>`;
+        });
+
+        html += '</div></section>';
+    });
+
+    document.getElementById('tools-container').innerHTML = html;
+    applyFilters();
+}
+
+function filterByType(type) {
+    currentTypeFilter = type;
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    applyFilters();
+    updateCounts();
+}
+
+function filterByCategory(category) {
+    currentCategoryFilter = category;
+    document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    applyFilters();
+    updateCounts();
+}
+
+function applyFilters() {
+    const cards = document.querySelectorAll('.tool-card');
+    const sections = document.querySelectorAll('.category-section');
+
+    cards.forEach(card => {
+        const matchesType = currentTypeFilter === 'all' || card.classList.contains(currentTypeFilter);
+        const matchesCategory = currentCategoryFilter === 'all' || card.classList.contains(currentCategoryFilter);
+        card.style.display = (matchesType && matchesCategory) ? 'block' : 'none';
+    });
+
+    sections.forEach(section => {
+        const hasVisibleCards = Array.from(section.querySelectorAll('.tool-card')).some(card => 
+            card.style.display !== 'none'
+        );
+        section.style.display = hasVisibleCards ? 'block' : 'none';
+    });
+}
+
+function updateCounts() {
+    const cards = document.querySelectorAll('.tool-card');
+    
+    // Count for TYPE buttons: show how many tools exist for each type in the CURRENT CATEGORY
+    const typeCounts = { all: 0, free: 0, deal: 0, subscription: 0 };
+    cards.forEach(card => {
+        const matchesCategory = currentCategoryFilter === 'all' || card.classList.contains(currentCategoryFilter);
+        if (matchesCategory) {
+            typeCounts.all++;
+            if (card.classList.contains('free')) typeCounts.free++;
+            if (card.classList.contains('deal')) typeCounts.deal++;
+            if (card.classList.contains('subscription')) typeCounts.subscription++;
+        }
+    });
+    
+    // Count for CATEGORY buttons: show how many tools exist for each category in the CURRENT TYPE
+    const categoryCounts = { all: 0, writing: 0, design: 0, video: 0, coding: 0, productivity: 0, voice: 0, research: 0, marketing: 0, data: 0 };
+    cards.forEach(card => {
+        const matchesType = currentTypeFilter === 'all' || card.classList.contains(currentTypeFilter);
+        if (matchesType) {
+            categoryCounts.all++;
+            if (card.classList.contains('writing')) categoryCounts.writing++;
+            if (card.classList.contains('design')) categoryCounts.design++;
+            if (card.classList.contains('video')) categoryCounts.video++;
+            if (card.classList.contains('coding')) categoryCounts.coding++;
+            if (card.classList.contains('productivity')) categoryCounts.productivity++;
+            if (card.classList.contains('voice')) categoryCounts.voice++;
+            if (card.classList.contains('research')) categoryCounts.research++;
+            if (card.classList.contains('marketing')) categoryCounts.marketing++;
+            if (card.classList.contains('data')) categoryCounts.data++;
+        }
+    });
+    
+    // Update TYPE button texts
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        const text = btn.textContent.split('(')[0].trim();
+        const onclick = btn.getAttribute('onclick');
+        
+        if (onclick.includes("'all'")) btn.textContent = `${text} (${typeCounts.all})`;
+        else if (onclick.includes("'free'")) btn.textContent = `${text} (${typeCounts.free})`;
+        else if (onclick.includes("'deal'")) btn.textContent = `${text} (${typeCounts.deal})`;
+        else if (onclick.includes("'subscription'")) btn.textContent = `${text} (${typeCounts.subscription})`;
+    });
+    
+    // Update CATEGORY button texts
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+        const text = btn.textContent.split('(')[0].trim();
+        const onclick = btn.getAttribute('onclick');
+        
+        if (onclick.includes("'all'")) btn.textContent = `${text} (${categoryCounts.all})`;
+        else if (onclick.includes("'writing'")) btn.textContent = `${text} (${categoryCounts.writing})`;
+        else if (onclick.includes("'design'")) btn.textContent = `${text} (${categoryCounts.design})`;
+        else if (onclick.includes("'video'")) btn.textContent = `${text} (${categoryCounts.video})`;
+        else if (onclick.includes("'coding'")) btn.textContent = `${text} (${categoryCounts.coding})`;
+        else if (onclick.includes("'productivity'")) btn.textContent = `${text} (${categoryCounts.productivity})`;
+        else if (onclick.includes("'voice'")) btn.textContent = `${text} (${categoryCounts.voice})`;
+        else if (onclick.includes("'research'")) btn.textContent = `${text} (${categoryCounts.research})`;
+        else if (onclick.includes("'marketing'")) btn.textContent = `${text} (${categoryCounts.marketing})`;
+        else if (onclick.includes("'data'")) btn.textContent = `${text} (${categoryCounts.data})`;
+    });
+}
+
+renderTools();
+updateCounts();
+</script>
+</body>
+</html>

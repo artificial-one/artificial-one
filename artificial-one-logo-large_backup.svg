@@ -1,0 +1,71 @@
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 3D Bubble gradient -->
+    <radialGradient id="bubbleGrad" cx="35%" cy="35%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Highlight for 3D effect -->
+    <radialGradient id="bubbleHighlight" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.2" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Gradient for text - same as you use on the site -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="bubbleShadow">
+      <feDropShadow dx="6" dy="8" stdDeviation="8" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  
+  <!-- Big 3D Bubble "A" - doubled size -->
+  <circle cx="140" cy="140" r="120" fill="url(#bubbleGrad)" filter="url(#bubbleShadow)"/>
+  
+  <!-- Highlight overlay for 3D bubble effect -->
+  <circle cx="140" cy="140" r="120" fill="url(#bubbleHighlight)"/>
+  
+  <!-- Letter A inside bubble - doubled size -->
+  <g transform="translate(140, 140)">
+    <path d="M -40 50 L 0 -50 L 40 50 L 20 50 L 10 20 L -10 20 L -20 50 Z M -6 0 L 6 0 L 0 -24 Z" 
+          fill="white" 
+          stroke="white" 
+          stroke-width="4"
+          opacity="0.95"/>
+  </g>
+  
+  <!-- Main text: "artificial.one" with gradient - doubled size -->
+  <text x="300" y="140" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="96" 
+        font-weight="bold" 
+        fill="url(#textGrad)">
+    artificial.one
+  </text>
+  
+  <!-- Horizontal line - doubled -->
+  <line x1="300" y1="180" x2="1100" y2="180" 
+        stroke="url(#textGrad)" 
+        stroke-width="4" 
+        opacity="0.6"/>
+  
+  <!-- Tagline: "AI tools reviewed by AI" with gradient color - doubled size -->
+  <text x="300" y="230" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="40" 
+        font-weight="normal" 
+        fill="url(#textGrad)"
+        letter-spacing="11">
+    AI tools reviewed by AI
+  </text>
+</svg>
