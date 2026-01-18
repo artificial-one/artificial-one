@@ -44,6 +44,34 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            z-index: 100;
+            margin-top: 8px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: #4b5563;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background 0.2s;
+        }
+        .dropdown-content a:hover {
+            background-color: #f3f4f6;
+            color: #6366f1;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -63,6 +91,22 @@ function ArtificialOne() {
               <img src="artificial-one-logo-large.svg" alt="artificial.one - AI tools reviewed by AI" className="h-16 sm:h-20 md:h-24" />
             </a>
             <div className="flex gap-4 sm:gap-6 items-center text-sm sm:text-base">
+              <div className="dropdown">
+                <a href="#" className="text-gray-600 hover:text-indigo-600 font-medium transition-colors">
+                  Categories ▾
+                </a>
+                <div className="dropdown-content">
+                  <a href="category/writing-content.html">✍️ Writing & Content</a>
+                  <a href="category/design-images.html">🎨 Design & Images</a>
+                  <a href="category/video-animation.html">🎬 Video & Animation</a>
+                  <a href="category/coding-development.html">💻 Coding & Development</a>
+                  <a href="category/productivity-business.html">📊 Productivity & Business</a>
+                  <a href="category/voice-audio.html">🎙️ Voice & Audio</a>
+                  <a href="category/research-data.html">🔬 Research & Data</a>
+                  <a href="category/marketing-social.html">📱 Marketing & Social</a>
+                  <a href="category/data-analytics.html">📈 Data & Analytics</a>
+                </div>
+              </div>
               <a href="blog.html" className="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Blog</a>
               <a href="about.html" className="text-gray-600 hover:text-indigo-600 font-medium transition-colors">About</a>
               <a href="reviews.html" className="px-4 sm:px-6 py-2 btn-primary text-white rounded-lg font-semibold">Browse Tools</a>
