@@ -409,33 +409,37 @@ function filterByCategory(category) {
 }
 
 function updateCounts() {
-    const cards = document.querySelectorAll('.tool-card');
-    
+    // Count ALL tools (not just visible ones) for accurate filter counts
     const typeCounts = { all: 0, free: 0, deal: 0, subscription: 0 };
-    cards.forEach(card => {
-        const matchesCategory = currentCategoryFilter === 'all' || card.classList.contains(currentCategoryFilter);
+    const categoryCounts = { all: 0, writing: 0, design: 0, video: 0, coding: 0, productivity: 0, voice: 0, research: 0, marketing: 0, data: 0 };
+    
+    // Go through ALL tools in the data
+    tools.forEach(tool => {
+        const catSlug = getCategorySlug(tool.cat);
+        const typeClass = tool.type;
+        
+        // Count for TYPE buttons (filtered by current category)
+        const matchesCategory = currentCategoryFilter === 'all' || catSlug === currentCategoryFilter;
         if (matchesCategory) {
             typeCounts.all++;
-            if (card.classList.contains('free')) typeCounts.free++;
-            if (card.classList.contains('deal')) typeCounts.deal++;
-            if (card.classList.contains('subscription')) typeCounts.subscription++;
+            if (typeClass === 'free') typeCounts.free++;
+            if (typeClass === 'deal') typeCounts.deal++;
+            if (typeClass === 'subscription') typeCounts.subscription++;
         }
-    });
-    
-    const categoryCounts = { all: 0, writing: 0, design: 0, video: 0, coding: 0, productivity: 0, voice: 0, research: 0, marketing: 0, data: 0 };
-    cards.forEach(card => {
-        const matchesType = currentTypeFilter === 'all' || card.classList.contains(currentTypeFilter);
+        
+        // Count for CATEGORY buttons (filtered by current type)
+        const matchesType = currentTypeFilter === 'all' || typeClass === currentTypeFilter;
         if (matchesType) {
             categoryCounts.all++;
-            if (card.classList.contains('writing')) categoryCounts.writing++;
-            if (card.classList.contains('design')) categoryCounts.design++;
-            if (card.classList.contains('video')) categoryCounts.video++;
-            if (card.classList.contains('coding')) categoryCounts.coding++;
-            if (card.classList.contains('productivity')) categoryCounts.productivity++;
-            if (card.classList.contains('voice')) categoryCounts.voice++;
-            if (card.classList.contains('research')) categoryCounts.research++;
-            if (card.classList.contains('marketing')) categoryCounts.marketing++;
-            if (card.classList.contains('data')) categoryCounts.data++;
+            if (catSlug === 'writing') categoryCounts.writing++;
+            if (catSlug === 'design') categoryCounts.design++;
+            if (catSlug === 'video') categoryCounts.video++;
+            if (catSlug === 'coding') categoryCounts.coding++;
+            if (catSlug === 'productivity') categoryCounts.productivity++;
+            if (catSlug === 'voice') categoryCounts.voice++;
+            if (catSlug === 'research') categoryCounts.research++;
+            if (catSlug === 'marketing') categoryCounts.marketing++;
+            if (catSlug === 'data') categoryCounts.data++;
         }
     });
     
