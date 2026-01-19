@@ -4,185 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tool Reviews - Honest Reviews of 220+ Tools | artificial.one</title>
-    <meta name="description" content="In-depth reviews of ChatGPT, Claude, Midjourney, and 217 more AI tools.">
+    <meta name="description" content="In-depth reviews of ChatGPT, Claude, Midjourney, and 217 more AI tools. Free alternatives, lifetime deals, and honest pros/cons from real testing.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-                body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
-        .tool-card { transition: all 0.3s ease; border: 1px solid #e5e7eb; }
-        .tool-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
-        .filter-btn { transition: all 0.2s ease; }
-        .filter-btn.active { background: #7c3aed; color: white; }
-        .cat-btn { transition: all 0.2s ease; }
-        .cat-btn.active { background: #2563eb; color: white; }
-        .dropdown { position: relative; display: inline-block; }
-        .dropdown .dropdown-content { 
-            display: none; 
-            position: absolute; 
-            background-color: white; 
-            min-width: 240px; 
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
-            border-radius: 8px; 
-            z-index: 100;
-            top: calc(100% + 5px);
-            left: -15px;
-            padding: 12px 0;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
-        .dropdown:hover .dropdown-content,
-        .dropdown .dropdown-content:hover { 
-            display: block; 
-            animation: fadeIn 0.2s ease-in;
+        .tool-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
         }
-        .dropdown::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: -15px;
-            right: -15px;
-            height: 15px;
-            display: none;
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
         }
-        .dropdown:hover::after {
-            display: block;
+        .filter-btn {
+            transition: all 0.2s ease;
         }
-        .dropdown-content a { 
-            color: #4b5563; 
-            padding: 14px 20px; 
-            text-decoration: none; 
-            display: block; 
-            transition: all 0.2s; 
-            font-size: 15px;
+        .filter-btn.active {
+            background: #7c3aed;
+            color: white;
         }
-        .dropdown-content a:hover { 
-            background-color: #f3f4f6; 
-            color: #6366f1;
-            padding-left: 24px;
+        .cat-btn {
+            transition: all 0.2s ease;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
-        .mobile-dropdown-content { overflow: hidden; transition: max-height 0.3s ease; }
-        .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
-        .mobile-dropdown-btn.active svg { transform: rotate(180deg); }
-            to { opacity: 1; transform: translateY(0); }
+        .cat-btn.active {
+            background: #2563eb;
+            color: white;
         }
     </style>
 </head>
 <body class="bg-white">
-            <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
-                <a href="index.html"><img src="artificial-one-logo-large.svg" alt="artificial.one" class="h-16 sm:h-20 md:h-24"></a>
-                
-                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-purple-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-                
-                <div class="hidden md:flex gap-3 lg:gap-6 items-center text-sm lg:text-base">
-                    <a href="reviews.html" class="text-gray-600 hover:text-purple-600 font-medium">Reviews</a>
-                    <div class="dropdown">
-                        <span class="text-gray-600 hover:text-purple-600 font-medium cursor-pointer">Categories ▾</span>
-                        <div class="dropdown-content">
-                            <a href="category/writing-content.html">✍️ Writing & Content</a>
-                            <a href="category/design-images.html">🎨 Design & Images</a>
-                            <a href="category/video-animation.html">🎬 Video & Animation</a>
-                            <a href="category/coding-development.html">💻 Coding & Development</a>
-                            <a href="category/productivity-business.html">📊 Productivity & Business</a>
-                            <a href="category/voice-audio.html">🎙️ Voice & Audio</a>
-                            <a href="category/research-data.html">🔬 Research & Data</a>
-                            <a href="category/marketing-social.html">📱 Marketing & Social</a>
-                            <a href="category/data-analytics.html">📈 Data & Analytics</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <span class="text-gray-600 hover:text-purple-600 font-medium cursor-pointer">Explore ▾</span>
-                        <div class="dropdown-content">
-                            <a href="compare/index.html">🔍 Compare Tools</a>
-                            <a href="best/index.html">🏆 Best Of Lists</a>
-                            <a href="tutorials/index.html">📚 Tutorials</a>
-                            <a href="guides/index.html">📖 Guides</a>
-                        </div>
-                    </div>
-                    <a href="blog.html" class="text-gray-600 hover:text-purple-600">Blog</a>
-                    <a href="about.html" class="text-gray-600 hover:text-purple-600">About</a>
-                    <a href="index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-3 sm:px-6 py-2 rounded-lg font-semibold">Home</a>
-                </div>
-            </div>
-            
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <div class="flex flex-col space-y-3">
-                    <a href="reviews.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-indigo-700 hover:to-purple-700 transition-all">Browse Tools</a>
-                    
-                    <a href="reviews.html" class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-violet-700 hover:to-purple-700 transition-all">Reviews</a>
-                    
-                    <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-blue-700 hover:to-indigo-700 transition-all">
-                            📂 Categories <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
-                            <a href="category/writing-content.html" class="block text-sm py-1">✍️ Writing & Content</a>
-                            <a href="category/design-images.html" class="block text-sm py-1">🎨 Design & Images</a>
-                            <a href="category/video-animation.html" class="block text-sm py-1">🎬 Video & Animation</a>
-                            <a href="category/coding-development.html" class="block text-sm py-1">💻 Coding & Development</a>
-                            <a href="category/productivity-business.html" class="block text-sm py-1">📊 Productivity & Business</a>
-                            <a href="category/voice-audio.html" class="block text-sm py-1">🎙️ Voice & Audio</a>
-                            <a href="category/research-data.html" class="block text-sm py-1">🔬 Research & Data</a>
-                            <a href="category/marketing-social.html" class="block text-sm py-1">📱 Marketing & Social</a>
-                            <a href="category/data-analytics.html" class="block text-sm py-1">📈 Data & Analytics</a>
-                        </div>
-                    </div>
-                    
-                    <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
-                            🔍 Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
-                            <a href="compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
-                            <a href="best/index.html" class="block text-sm py-1">🏆 Best Of Lists</a>
-                            <a href="tutorials/index.html" class="block text-sm py-1">📚 Tutorials</a>
-                            <a href="guides/index.html" class="block text-sm py-1">📖 Guides</a>
-                        </div>
-                    </div>
-                    
-                    <a href="blog.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-700 hover:to-teal-700 transition-all">Blog</a>
-                    <a href="about.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-orange-700 hover:to-red-700 transition-all">About</a>
-                </div>
-            </div>
-                    
-                    <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
-                            🔍 Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
-                            <a href="compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
-                            <a href="best/index.html" class="block text-sm py-1">🏆 Best Of Lists</a>
-                            <a href="tutorials/index.html" class="block text-sm py-1">📚 Tutorials</a>
-                            <a href="guides/index.html" class="block text-sm py-1">📖 Guides</a>
-                        </div>
-                    </div>
-                    
-                    <a href="blog.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-700 hover:to-teal-700 transition-all">Blog</a>
-                    <a href="about.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-orange-700 hover:to-red-700 transition-all">About</a>
-                </div>
-            </div>
-        </div>
-                    <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
-                            🔍 Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
-                            <a href="compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
-                            <a href="best/index.html" class="block text-sm py-1">🏆 Best Of Lists</a>
-                            <a href="tutorials/index.html" class="block text-sm py-1">📚 Tutorials</a>
-                            <a href="guides/index.html" class="block text-sm py-1">📖 Guides</a>
-                        </div>
-                    </div>
-                    <a href="blog.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">Blog</a>
-                    <a href="about.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">About</a>
-                    <a href="index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold text-center">Home</a>
+                <a href="index.html" class="flex items-center">
+                    <img src="artificial-one-logo-large.svg" alt="artificial.one - AI tools reviewed by AI" class="h-16 sm:h-20 md:h-24">
+                </a>
+                <div class="flex gap-3 sm:gap-6 items-center text-sm sm:text-base">
+                    <a href="reviews.html" class="text-gray-900 hover:text-purple-600 font-medium transition-colors">Reviews</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-600 transition-colors">Blog</a>
+                    <a href="about.html" class="text-gray-600 hover:text-purple-600 transition-colors">About</a>
+                    <a href="index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-3 sm:px-6 py-2 rounded-lg font-semibold transition-all">
+                        Home
+                    </a>
                 </div>
             </div>
         </div>
@@ -190,8 +55,12 @@
 
     <section class="py-12 sm:py-16 bg-gradient-to-b from-purple-50 to-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Honest AI Tool Reviews</h1>
-            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8">We've tested 220+ AI tools so you don't have to. Real pros, cons, and ratings from actual use.</p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                Honest AI Tool Reviews
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8">
+                We've tested 220+ AI tools so you don't have to. Real pros, cons, and ratings from actual use.
+            </p>
         </div>
     </section>
 
@@ -200,25 +69,54 @@
             <div class="mb-6">
                 <h3 class="text-sm font-semibold text-gray-700 mb-3">Filter by Type:</h3>
                 <div class="flex flex-wrap gap-2 sm:gap-3">
-                    <button onclick="filterByType('all')" class="filter-btn active px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">Show All</button>
-                    <button onclick="filterByType('free')" class="filter-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">🆓 Free</button>
-                    <button onclick="filterByType('deal')" class="filter-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">💰 Deals</button>
-                    <button onclick="filterByType('subscription')" class="filter-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">💳 Paid</button>
+                    <button onclick="filterByType('all')" class="filter-btn active px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">
+                        Show All
+                    </button>
+                    <button onclick="filterByType('free')" class="filter-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">
+                        🆓 Free
+                    </button>
+                    <button onclick="filterByType('deal')" class="filter-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">
+                        💰 Deals
+                    </button>
+                    <button onclick="filterByType('subscription')" class="filter-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-purple-600 text-sm sm:text-base whitespace-nowrap">
+                        💳 Paid
+                    </button>
                 </div>
             </div>
+
             <div>
                 <h3 class="text-sm font-semibold text-gray-700 mb-3">Filter by Category:</h3>
                 <div class="flex flex-wrap gap-2 sm:gap-3">
-                    <button onclick="filterByCategory('all')" class="cat-btn active px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">All</button>
-                    <button onclick="filterByCategory('writing')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">✍️ Writing</button>
-                    <button onclick="filterByCategory('design')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">🎨 Design</button>
-                    <button onclick="filterByCategory('video')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">🎬 Video</button>
-                    <button onclick="filterByCategory('coding')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">💻 Code</button>
-                    <button onclick="filterByCategory('productivity')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">📊 Work</button>
-                    <button onclick="filterByCategory('voice')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">🎙️ Voice</button>
-                    <button onclick="filterByCategory('research')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">🔬 Research</button>
-                    <button onclick="filterByCategory('marketing')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">📱 Marketing</button>
-                    <button onclick="filterByCategory('data')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">📈 Data</button>
+                    <button onclick="filterByCategory('all')" class="cat-btn active px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        All
+                    </button>
+                    <button onclick="filterByCategory('writing')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        ✍️ Writing
+                    </button>
+                    <button onclick="filterByCategory('design')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        🎨 Design
+                    </button>
+                    <button onclick="filterByCategory('video')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        🎬 Video
+                    </button>
+                    <button onclick="filterByCategory('coding')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        💻 Code
+                    </button>
+                    <button onclick="filterByCategory('productivity')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        📊 Work
+                    </button>
+                    <button onclick="filterByCategory('voice')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        🎙️ Voice
+                    </button>
+                    <button onclick="filterByCategory('research')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        🔬 Research
+                    </button>
+                    <button onclick="filterByCategory('marketing')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        📱 Marketing
+                    </button>
+                    <button onclick="filterByCategory('data')" class="cat-btn px-3 sm:px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 text-sm sm:text-base whitespace-nowrap">
+                        📈 Data
+                    </button>
                 </div>
             </div>
         </div>
@@ -226,16 +124,44 @@
 
     <div id="tools-container" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"></div>
 
-    <footer class="bg-gray-50 border-t border-gray-200 py-8 mt-16">
-        <div class="max-w-4xl mx-auto px-4 text-center text-gray-600">
-            <p>© 2026 artificial.one - AI tools reviewed by AI</p>
+    <footer class="bg-gray-50 border-t border-gray-200 py-12 mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">
+                        artificial.one
+                    </h3>
+                    <p class="text-gray-600">
+                        Honest AI tool reviews from real testing. No BS, just facts.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="index.html" class="block text-gray-600 hover:text-purple-600 transition-colors">Home</a>
+                        <a href="reviews.html" class="block text-gray-600 hover:text-purple-600 transition-colors">All Reviews</a>
+                        <a href="blog.html" class="block text-gray-600 hover:text-purple-600 transition-colors">Blog</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">Contact</h4>
+                    <a href="/cdn-cgi/l/email-protection#6008050c0c0f200112140906090309010c4e0f0e05" class="text-gray-600 hover:text-purple-600 transition-colors">
+                        <span class="__cf_email__" data-cfemail="bcd4d9d0d0d3fcddcec8d5dad5dfd5ddd092d3d2d9">[email&#160;protected]</span>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-300 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p class="mb-2">Affiliate Disclosure: We may earn a commission when you purchase through links on our site. This helps us keep the site running and provide free reviews.</p>
+                <p>© 2026 artificial.one - All rights reserved</p>
+            </div>
         </div>
     </footer>
 
-    <script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const tools = [
+    // WRITING TOOLS (15 total)
     {cat:"✍️ Writing & Content",name:"ChatGPT",rating:"9.5/10",type:"free",tag:"🆓 Free",desc:"The most popular AI chatbot. Best for writing, brainstorming, coding help, and general questions.",pros:["Free tier generous","Excellent at writing","Fast responses"],cons:["Can be confident but wrong","Free tier has limits"],bestFor:"Everyone",pricing:"Free | $20/mo",link:"https://chat.openai.com"},
-    {cat:"✍️ Writing & Content",name:"Claude",rating:"9.3/10",type:"free",tag:"🆓 Free",desc:"Anthropic\'s AI assistant. Better at nuanced writing and analysis.",pros:["Thoughtful responses","Better at creative writing","200k context"],cons:["Free tier limited","Slower sometimes"],bestFor:"Writers, researchers",pricing:"Free | $20/mo",link:"https://claude.ai"},
+    {cat:"✍️ Writing & Content",name:"Claude",rating:"9.3/10",type:"free",tag:"🆓 Free",desc:"Anthropic's AI assistant. Better at nuanced writing and analysis.",pros:["Thoughtful responses","Better at creative writing","200k context"],cons:["Free tier limited","Slower sometimes"],bestFor:"Writers, researchers",pricing:"Free | $20/mo",link:"https://claude.ai"},
     {cat:"✍️ Writing & Content",name:"Jasper",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI writing assistant for marketing copy and blog posts.",pros:["Marketing templates","SEO mode","Brand voice training"],cons:["Expensive","Requires editing"],bestFor:"Marketing teams",pricing:"$39/mo+",link:"https://jasper.ai"},
     {cat:"✍️ Writing & Content",name:"Writesonic",rating:"8.1/10",type:"deal",tag:"💰 Lifetime Deal",desc:"AI writer with ChatGPT-4 access and SEO tools.",pros:["Affordable","ChatGPT-4 access","SEO optimizer"],cons:["Interface cluttered","Quality varies"],bestFor:"Bloggers on budget",pricing:"$16/mo | $500 lifetime",link:"https://writesonic.com"},
     {cat:"✍️ Writing & Content",name:"Copy.ai",rating:"7.5/10",type:"subscription",tag:"💳 Subscription",desc:"Marketing copy generator for social posts and ads.",pros:["Fast generation","Many templates","Simple"],cons:["Generic outputs","Needs editing"],bestFor:"Social media managers",pricing:"Free | $49/mo",link:"https://copy.ai"},
@@ -249,14 +175,16 @@ const tools = [
     {cat:"✍️ Writing & Content",name:"Compose AI",rating:"7.4/10",type:"free",tag:"🆓 Free",desc:"Free Chrome extension that autocompletes your sentences.",pros:["Completely free","Works everywhere","Time saver"],cons:["Basic features","Privacy concerns"],bestFor:"Anyone who writes emails",pricing:"Free",link:"https://compose.ai"},
     {cat:"✍️ Writing & Content",name:"Lex",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI-powered writing tool for articles and long-form content.",pros:["Clean interface","AI suggestions","Collaborative"],cons:["Limited free tier","Still in beta"],bestFor:"Writers, bloggers",pricing:"Free | $12/mo",link:"https://lex.page"},
     {cat:"✍️ Writing & Content",name:"Writer",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI writing platform for teams with brand voice control.",pros:["Team collaboration","Brand consistency","Enterprise features"],cons:["Expensive","Overkill for individuals"],bestFor:"Enterprise teams",pricing:"$18/user/mo",link:"https://writer.com"},
+
+    // DESIGN & IMAGE TOOLS (20 total)
     {cat:"🎨 Design & Images",name:"Midjourney",rating:"9.7/10",type:"subscription",tag:"💳 Subscription",desc:"The best AI image generator with incredible quality.",pros:["Best image quality","Consistent results","Active community"],cons:["Discord-only","No free tier","$10/mo minimum"],bestFor:"Designers, artists",pricing:"$10/mo | $30/mo",link:"https://midjourney.com"},
-    {cat:"🎨 Design & Images",name:"DALL-E 3",rating:"8.9/10",type:"free",tag:"🆓 Free",desc:"OpenAI\'s image generator built into ChatGPT.",pros:["Free in ChatGPT","Excellent prompt following","Easy to use"],cons:["Not as artistic as Midjourney","Limited style control"],bestFor:"ChatGPT users",pricing:"Free | $20/mo",link:"https://openai.com/dall-e-3"},
+    {cat:"🎨 Design & Images",name:"DALL-E 3",rating:"8.9/10",type:"free",tag:"🆓 Free",desc:"OpenAI's image generator built into ChatGPT.",pros:["Free in ChatGPT","Excellent prompt following","Easy to use"],cons:["Not as artistic as Midjourney","Limited style control"],bestFor:"ChatGPT users",pricing:"Free | $20/mo",link:"https://openai.com/dall-e-3"},
     {cat:"🎨 Design & Images",name:"Leonardo.ai",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"AI image generator with fine-tuned models.",pros:["Generous free tier","Many style models","Commercial use"],cons:["Interface overwhelming","Inconsistent quality"],bestFor:"Game devs, concept artists",pricing:"Free | $12/mo",link:"https://leonardo.ai"},
-    {cat:"🎨 Design & Images",name:"Canva AI",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"Canva\'s built-in AI tools for design and images.",pros:["Integrated in Canva","Easy for non-designers","Free tier"],cons:["AI features limited in free","Not as powerful"],bestFor:"Small businesses",pricing:"Free | $15/mo",link:"https://canva.com"},
+    {cat:"🎨 Design & Images",name:"Canva AI",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"Canva's built-in AI tools for design and images.",pros:["Integrated in Canva","Easy for non-designers","Free tier"],cons:["AI features limited in free","Not as powerful"],bestFor:"Small businesses",pricing:"Free | $15/mo",link:"https://canva.com"},
     {cat:"🎨 Design & Images",name:"Playground AI",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI image generator with 500 free images/day.",pros:["500 free images daily","Many models","Fast generation"],cons:["Quality varies","Watermark on free"],bestFor:"High volume needs",pricing:"Free | $15/mo",link:"https://playgroundai.com"},
     {cat:"🎨 Design & Images",name:"Stable Diffusion",rating:"8.8/10",type:"free",tag:"🆓 Free",desc:"Open-source AI image generator you can run locally.",pros:["Completely free","Full control","No censorship"],cons:["Technical setup","Requires good GPU"],bestFor:"Technical users, developers",pricing:"Free",link:"https://stability.ai"},
-    {cat:"🎨 Design & Images",name:"Adobe Firefly",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"Adobe\'s AI image generator with Creative Cloud integration.",pros:["Adobe integration","Commercially safe","Free tier"],cons:["Less creative than Midjourney","Adobe ecosystem lock-in"],bestFor:"Adobe users",pricing:"Free | $5/mo",link:"https://firefly.adobe.com"},
-    {cat:"🎨 Design & Images",name:"Ideogram",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"AI image generator that\'s good at text in images.",pros:["Best at text rendering","Free tier generous","Fast"],cons:["Limited style control","Newer tool"],bestFor:"Graphics with text",pricing:"Free | $8/mo",link:"https://ideogram.ai"},
+    {cat:"🎨 Design & Images",name:"Adobe Firefly",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"Adobe's AI image generator with Creative Cloud integration.",pros:["Adobe integration","Commercially safe","Free tier"],cons:["Less creative than Midjourney","Adobe ecosystem lock-in"],bestFor:"Adobe users",pricing:"Free | $5/mo",link:"https://firefly.adobe.com"},
+    {cat:"🎨 Design & Images",name:"Ideogram",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"AI image generator that's good at text in images.",pros:["Best at text rendering","Free tier generous","Fast"],cons:["Limited style control","Newer tool"],bestFor:"Graphics with text",pricing:"Free | $8/mo",link:"https://ideogram.ai"},
     {cat:"🎨 Design & Images",name:"Clipdrop",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI tools for image editing and background removal.",pros:["Easy to use","Multiple tools","Free tier"],cons:["Limited compared to Photoshop","Quality varies"],bestFor:"Quick edits",pricing:"Free | $9/mo",link:"https://clipdrop.co"},
     {cat:"🎨 Design & Images",name:"Remove.bg",rating:"8.5/10",type:"free",tag:"🆓 Free",desc:"AI background remover that works perfectly.",pros:["One-click removal","Very accurate","Free for low-res"],cons:["High-res costs money","One trick pony"],bestFor:"Product photos, portraits",pricing:"Free | $9/mo",link:"https://remove.bg"},
     {cat:"🎨 Design & Images",name:"Photoshop AI",rating:"9.0/10",type:"subscription",tag:"💳 Subscription",desc:"Adobe Photoshop with AI features like Generative Fill.",pros:["Professional grade","Generative Fill amazing","Industry standard"],cons:["Expensive subscription","Learning curve"],bestFor:"Professional designers",pricing:"$21/mo",link:"https://adobe.com/photoshop"},
@@ -267,8 +195,10 @@ const tools = [
     {cat:"🎨 Design & Images",name:"DreamStudio",rating:"8.1/10",type:"free",tag:"🆓 Free",desc:"Official Stable Diffusion interface by Stability AI.",pros:["Official SD interface","Credits system","Good control"],cons:["Credits expensive","Learning curve"],bestFor:"Stable Diffusion users",pricing:"Free credits | $10/1000 credits",link:"https://dreamstudio.ai"},
     {cat:"🎨 Design & Images",name:"BlueWillow",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"Free AI image generator similar to Midjourney.",pros:["Free to use","Discord-based","Decent quality"],cons:["Public generations","Slower than Midjourney"],bestFor:"Budget-conscious creators",pricing:"Free | $5/mo",link:"https://bluewillow.ai"},
     {cat:"🎨 Design & Images",name:"Pixlr AI",rating:"7.4/10",type:"free",tag:"🆓 Free",desc:"Online photo editor with AI tools.",pros:["Browser-based","AI tools","Free tier"],cons:["Ads","Limited features"],bestFor:"Quick online edits",pricing:"Free | $8/mo",link:"https://pixlr.com"},
-    {cat:"🎨 Design & Images",name:"Let\'s Enhance",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI image upscaling and enhancement.",pros:["Excellent upscaling","Batch processing","Good quality"],cons:["Credits expensive","Limited free tier"],bestFor:"Image upscaling",pricing:"Free | $9/mo",link:"https://letsenhance.io"},
+    {cat:"🎨 Design & Images",name:"Let's Enhance",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI image upscaling and enhancement.",pros:["Excellent upscaling","Batch processing","Good quality"],cons:["Credits expensive","Limited free tier"],bestFor:"Image upscaling",pricing:"Free | $9/mo",link:"https://letsenhance.io"},
     {cat:"🎨 Design & Images",name:"Looka",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI logo and brand identity generator.",pros:["Easy logo creation","Brand kit included","Quick"],cons:["Subscription for downloads","Generic sometimes"],bestFor:"Small business branding",pricing:"$20 one-time | $96/year",link:"https://looka.com"},
+
+    // VIDEO TOOLS (15 total)
     {cat:"🎬 Video & Animation",name:"Runway",rating:"9.0/10",type:"free",tag:"🆓 Free",desc:"AI video editor with Gen-2 video generation.",pros:["Cutting-edge AI video","Free tier","Professional features"],cons:["Expensive","Credits run out fast"],bestFor:"Video creators, filmmakers",pricing:"Free | $12/mo",link:"https://runwayml.com"},
     {cat:"🎬 Video & Animation",name:"Descript",rating:"8.8/10",type:"free",tag:"🆓 Free",desc:"Edit video by editing text with AI features.",pros:["Edit video like text","AI voice cloning","Free tier"],cons:["Transcription not perfect","Export limits"],bestFor:"Podcasters, YouTubers",pricing:"Free | $12/mo",link:"https://get.descript.com/951y7htioj6v"},
     {cat:"🎬 Video & Animation",name:"Synthesia",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI avatar videos without filming.",pros:["No filming needed","120+ avatars","40+ languages"],cons:["Expensive","Uncanny valley"],bestFor:"Corporate training",pricing:"$22/mo",link:"https://synthesia.io"},
@@ -284,21 +214,25 @@ const tools = [
     {cat:"🎬 Video & Animation",name:"Colossyan",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"AI video generator for workplace learning.",pros:["Good for training","Many avatars","Templates"],cons:["Expensive","Niche use case"],bestFor:"Corporate training",pricing:"$19/mo",link:"https://colossyan.com"},
     {cat:"🎬 Video & Animation",name:"Wave.video",rating:"7.4/10",type:"free",tag:"🆓 Free",desc:"Online video maker with stock library.",pros:["Stock library","Live streaming","Free tier"],cons:["Watermark","Basic features"],bestFor:"Social media videos",pricing:"Free | $16/mo",link:"https://wave.video"},
     {cat:"🎬 Video & Animation",name:"Steve.AI",rating:"7.3/10",type:"free",tag:"🆓 Free",desc:"AI video maker with animated characters.",pros:["Animated videos","Easy to use","Free tier"],cons:["Cartoonish style","Limited"],bestFor:"Explainer videos",pricing:"Free | $20/mo",link:"https://steve.ai"},
+
+    // CODING TOOLS (15 total)
     {cat:"💻 Coding & Development",name:"GitHub Copilot",rating:"9.2/10",type:"subscription",tag:"💳 Subscription",desc:"AI pair programmer that autocompletes code.",pros:["Best autocomplete","Works in all IDEs","Huge time saver"],cons:["$10/mo","Sometimes suggests bad code"],bestFor:"Professional developers",pricing:"$10/mo",link:"https://github.com/features/copilot"},
     {cat:"💻 Coding & Development",name:"Cursor",rating:"9.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI-first code editor with ChatGPT-4 built in.",pros:["Best AI coding experience","Can edit multiple files","Fast iteration"],cons:["$20/mo","VS Code fork"],bestFor:"Solo devs, startups",pricing:"$20/mo",link:"https://cursor.sh"},
     {cat:"💻 Coding & Development",name:"Replit AI",rating:"8.5/10",type:"free",tag:"🆓 Free",desc:"AI coding assistant in browser-based IDE.",pros:["Browser-based","Free tier","Deploy instantly"],cons:["Less powerful","Limited to Replit"],bestFor:"Beginners, students",pricing:"Free | $7/mo",link:"https://replit.com"},
     {cat:"💻 Coding & Development",name:"Tabnine",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"Privacy-focused AI code completion.",pros:["Privacy-focused","Free tier","Works offline"],cons:["Not as smart as Copilot","Slower"],bestFor:"Privacy-conscious devs",pricing:"Free | $12/mo",link:"https://tabnine.com"},
     {cat:"💻 Coding & Development",name:"Codeium",rating:"8.7/10",type:"free",tag:"🆓 Free",desc:"Free AI code autocomplete for individuals.",pros:["Completely free","Fast autocomplete","70+ languages"],cons:["Newer tool","Less refined"],bestFor:"Budget developers",pricing:"Free",link:"https://codeium.com"},
-    {cat:"💻 Coding & Development",name:"Amazon CodeWhisperer",rating:"8.1/10",type:"free",tag:"🆓 Free",desc:"AWS\'s AI code completion tool.",pros:["Free for individuals","AWS integration","Security scanning"],cons:["AWS-focused","Less versatile"],bestFor:"AWS developers",pricing:"Free",link:"https://aws.amazon.com/codewhisperer"},
+    {cat:"💻 Coding & Development",name:"Amazon CodeWhisperer",rating:"8.1/10",type:"free",tag:"🆓 Free",desc:"AWS's AI code completion tool.",pros:["Free for individuals","AWS integration","Security scanning"],cons:["AWS-focused","Less versatile"],bestFor:"AWS developers",pricing:"Free",link:"https://aws.amazon.com/codewhisperer"},
     {cat:"💻 Coding & Development",name:"Sourcegraph Cody",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI coding assistant that understands your codebase.",pros:["Codebase context","Free tier","Multiple LLMs"],cons:["Learning curve","Setup required"],bestFor:"Large codebases",pricing:"Free | $9/mo",link:"https://sourcegraph.com/cody"},
     {cat:"💻 Coding & Development",name:"Phind",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI search engine for developers.",pros:["Developer-focused","Free","Fast answers"],cons:["Limited to search","No code generation"],bestFor:"Developer research",pricing:"Free | $15/mo",link:"https://phind.com"},
-    {cat:"💻 Coding & Development",name:"Bard for Developers",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Google\'s AI for code help and explanations.",pros:["Free","Google integration","Code explanations"],cons:["Inconsistent quality","Less specialized"],bestFor:"Casual coding help",pricing:"Free",link:"https://bard.google.com"},
-    {cat:"💻 Coding & Development",name:"Codex (via OpenAI API)",rating:"8.6/10",type:"subscription",tag:"💳 Subscription",desc:"OpenAI\'s code generation model via API.",pros:["Powerful","Flexible","API access"],cons:["Requires setup","Pay per token"],bestFor:"Developers building tools",pricing:"Pay per use",link:"https://platform.openai.com"},
+    {cat:"💻 Coding & Development",name:"Bard for Developers",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Google's AI for code help and explanations.",pros:["Free","Google integration","Code explanations"],cons:["Inconsistent quality","Less specialized"],bestFor:"Casual coding help",pricing:"Free",link:"https://bard.google.com"},
+    {cat:"💻 Coding & Development",name:"Codex (via OpenAI API)",rating:"8.6/10",type:"subscription",tag:"💳 Subscription",desc:"OpenAI's code generation model via API.",pros:["Powerful","Flexible","API access"],cons:["Requires setup","Pay per token"],bestFor:"Developers building tools",pricing:"Pay per use",link:"https://platform.openai.com"},
     {cat:"💻 Coding & Development",name:"Pieces for Developers",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI-powered code snippet manager.",pros:["Free","Snippet management","AI search"],cons:["Niche use case","Limited"],bestFor:"Code snippet organization",pricing:"Free",link:"https://pieces.app"},
     {cat:"💻 Coding & Development",name:"Aider",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"AI pair programming in your terminal.",pros:["Free","Terminal-based","Git integration"],cons:["Command line only","Learning curve"],bestFor:"Terminal-focused devs",pricing:"Free (bring your own API key)",link:"https://aider.chat"},
     {cat:"💻 Coding & Development",name:"Continue",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"Open-source AI code assistant for VS Code.",pros:["Free","Open source","Customizable"],cons:["Requires API key","Setup needed"],bestFor:"Technical users",pricing:"Free",link:"https://continue.dev"},
     {cat:"💻 Coding & Development",name:"CodeGPT",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"VS Code extension for AI coding help.",pros:["Free","Easy to install","Multiple models"],cons:["Requires API key","Basic features"],bestFor:"VS Code users",pricing:"Free",link:"https://codegpt.co"},
     {cat:"💻 Coding & Development",name:"JetBrains AI",rating:"8.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI assistant built into JetBrains IDEs.",pros:["Integrated","Good quality","Context-aware"],cons:["JetBrains only","Additional cost"],bestFor:"JetBrains users",pricing:"Included with subscription",link:"https://jetbrains.com"},
+
+    // PRODUCTIVITY TOOLS (20 total)
     {cat:"📊 Productivity & Business",name:"Notion AI",rating:"8.5/10",type:"subscription",tag:"💳 Subscription",desc:"AI built into Notion for notes and docs.",pros:["Integrated with Notion","Works on your content","Helpful"],cons:["Only in Notion","$10/mo add-on"],bestFor:"Notion users",pricing:"$10/mo per user",link:"https://notion.so"},
     {cat:"📊 Productivity & Business",name:"Motion",rating:"8.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI calendar that auto-schedules your day.",pros:["Intelligent scheduling","Saves hours weekly","Great for busy pros"],cons:["Expensive $34/mo","Learning curve"],bestFor:"Executives, founders",pricing:"$34/mo",link:"https://usemotion.com"},
     {cat:"📊 Productivity & Business",name:"Perplexity AI",rating:"9.1/10",type:"free",tag:"🆓 Free",desc:"AI search engine with sources.",pros:["Excellent for research","Cites sources","Free tier generous"],cons:["Pro features locked","Can miss nuance"],bestFor:"Researchers, students",pricing:"Free | $20/mo",link:"https://perplexity.ai"},
@@ -319,6 +253,8 @@ const tools = [
     {cat:"📊 Productivity & Business",name:"Timely",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"AI time tracking that runs automatically.",pros:["Automatic tracking","Privacy-focused","Good for billing"],cons:["$9/mo","Learning period"],bestFor:"Freelancers, agencies",pricing:"$9/mo",link:"https://timelyapp.com"},
     {cat:"📊 Productivity & Business",name:"Clockwise",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI calendar optimizer for teams.",pros:["Free tier","Smart scheduling","Focus time"],cons:["Premium for best features","Can be aggressive"],bestFor:"Teams",pricing:"Free | $7/mo",link:"https://clockwise.com"},
     {cat:"📊 Productivity & Business",name:"Bardeen",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI workflow automation for browser tasks.",pros:["Free tier","No-code automation","Browser-based"],cons:["Limited to browser","Learning curve"],bestFor:"Browser automation",pricing:"Free | $10/mo",link:"https://bardeen.ai"},
+
+    // VOICE & AUDIO (10 total)
     {cat:"🎙️ Voice & Audio",name:"ElevenLabs",rating:"9.0/10",type:"free",tag:"🆓 Free",desc:"The most realistic AI voice generator.",pros:["Best voice quality","Free tier 10k chars/mo","Voice cloning"],cons:["Free tier limited","Expensive at scale"],bestFor:"Content creators",pricing:"Free | $5/mo",link:"https://elevenlabs.io"},
     {cat:"🎙️ Voice & Audio",name:"Murf AI",rating:"8.3/10",type:"subscription",tag:"💳 Subscription",desc:"AI voiceover studio with 120+ voices.",pros:["Huge voice library","Video sync","Commercial use"],cons:["Not as realistic as ElevenLabs","Pricey"],bestFor:"Video creators",pricing:"$29/mo",link:"https://murf.ai"},
     {cat:"🎙️ Voice & Audio",name:"Podcast.ai",rating:"7.9/10",type:"deal",tag:"💰 Lifetime Deal",desc:"AI podcast generation tool.",pros:["Fast podcast creation","Multiple voices","Script generation"],cons:["Can sound robotic","Limited customization"],bestFor:"Podcast producers",pricing:"$19/mo | $199 lifetime",link:"https://podcast.ai"},
@@ -329,6 +265,8 @@ const tools = [
     {cat:"🎙️ Voice & Audio",name:"WellSaid Labs",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"AI voiceover for professional use.",pros:["Professional quality","Commercial use","Many voices"],cons:["Expensive","For teams"],bestFor:"Enterprise voiceover",pricing:"$49/mo",link:"https://wellsaidlabs.com"},
     {cat:"🎙️ Voice & Audio",name:"Speechify",rating:"8.5/10",type:"free",tag:"🆓 Free",desc:"AI text-to-speech for reading.",pros:["Excellent for reading","Free tier","Many voices"],cons:["Premium expensive","Mobile-focused"],bestFor:"Reading, accessibility",pricing:"Free | $139/year",link:"https://speechify.com"},
     {cat:"🎙️ Voice & Audio",name:"Voicemod",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"Real-time voice changer with AI voices.",pros:["Free version good","Real-time","Fun for gaming"],cons:["Gimmicky","Quality varies"],bestFor:"Gamers, streamers",pricing:"Free | $12/mo",link:"https://voicemod.net"},
+
+    // RESEARCH & DATA (15 total)
     {cat:"🔬 Research & Data",name:"Consensus",rating:"8.9/10",type:"free",tag:"🆓 Free",desc:"AI search engine for research papers.",pros:["Searches academic papers","Free tier","Summarizes findings"],cons:["Academic focus only","Limited free searches"],bestFor:"Researchers, students",pricing:"Free | $9/mo",link:"https://consensus.app"},
     {cat:"🔬 Research & Data",name:"Elicit",rating:"8.7/10",type:"free",tag:"🆓 Free",desc:"AI research assistant for literature review.",pros:["Finds relevant papers","Extracts data","Free tier"],cons:["Academic focus","Learning curve"],bestFor:"Academic research",pricing:"Free | $10/mo",link:"https://elicit.org"},
     {cat:"🔬 Research & Data",name:"Semantic Scholar",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"AI-powered academic search engine.",pros:["Completely free","Huge database","Citation analysis"],cons:["Academic only","No summarization"],bestFor:"Academic research",pricing:"Free",link:"https://semanticscholar.org"},
@@ -337,13 +275,15 @@ const tools = [
     {cat:"🔬 Research & Data",name:"ChatPDF",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Chat with any PDF document using AI.",pros:["Free tier","Easy to use","Works well"],cons:["Limited free uploads","Data privacy"],bestFor:"PDF research",pricing:"Free | $5/mo",link:"https://chatpdf.com"},
     {cat:"🔬 Research & Data",name:"ChatDOC",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"AI that reads and summarizes documents.",pros:["Multiple file types","Free tier","Good summaries"],cons:["Limited uploads","Accuracy varies"],bestFor:"Document research",pricing:"Free | $6/mo",link:"https://chatdoc.com"},
     {cat:"🔬 Research & Data",name:"Humata",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI that understands your files.",pros:["Chat with documents","Free tier","Multiple formats"],cons:["Limited pages free","Generic answers sometimes"],bestFor:"Document Q&A",pricing:"Free | $15/mo",link:"https://humata.ai"},
-    {cat:"🔬 Research & Data",name:"NotebookLM",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"Google\'s AI research assistant.",pros:["Completely free","Google quality","Source-grounded"],cons:["Limited features","Beta"],bestFor:"Note-taking, research",pricing:"Free",link:"https://notebooklm.google"},
+    {cat:"🔬 Research & Data",name:"NotebookLM",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"Google's AI research assistant.",pros:["Completely free","Google quality","Source-grounded"],cons:["Limited features","Beta"],bestFor:"Note-taking, research",pricing:"Free",link:"https://notebooklm.google"},
     {cat:"🔬 Research & Data",name:"Scholarcy",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"AI that summarizes research papers.",pros:["Good summaries","Free tier","Browser extension"],cons:["Academic focus","Limited free tier"],bestFor:"Academic reading",pricing:"Free | $5/mo",link:"https://scholarcy.com"},
     {cat:"🔬 Research & Data",name:"Iris.ai",rating:"7.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI research assistant for scientists.",pros:["Science-focused","Good for lit review","Visual maps"],cons:["Expensive","Academic only"],bestFor:"Scientific research",pricing:"$60/mo",link:"https://iris.ai"},
     {cat:"🔬 Research & Data",name:"Lateral",rating:"7.6/10",type:"free",tag:"🆓 Free",desc:"AI research tool for finding papers.",pros:["Free tier","Find related papers","Citation analysis"],cons:["Limited features","Slow"],bestFor:"Literature review",pricing:"Free | $12/mo",link:"https://lateral.io"},
     {cat:"🔬 Research & Data",name:"Connected Papers",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"Visual tool for academic paper discovery.",pros:["Completely free","Visual graphs","Find related papers"],cons:["No summarization","Academic only"],bestFor:"Finding related research",pricing:"Free",link:"https://connectedpapers.com"},
     {cat:"🔬 Research & Data",name:"Research Rabbit",rating:"8.2/10",type:"free",tag:"🆓 Free",desc:"Personalized recommendations for research papers.",pros:["Completely free","Good recommendations","Collections"],cons:["Academic focus","No analysis"],bestFor:"Academic research",pricing:"Free",link:"https://researchrabbit.ai"},
     {cat:"🔬 Research & Data",name:"Jenni AI",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI writing assistant for research papers.",pros:["Academic writing","Free tier","Citations"],cons:["Premium for best features","Can be generic"],bestFor:"Academic writing",pricing:"Free | $20/mo",link:"https://jenni.ai"},
+
+    // MARKETING & SOCIAL (15 total)
     {cat:"📱 Marketing & Social",name:"Jasper Art",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"AI image generator for marketing.",pros:["Marketing-focused","Brand consistency","Unlimited generations"],cons:["Expensive","Part of Jasper"],bestFor:"Marketing teams",pricing:"$20/mo (add-on)",link:"https://jasper.ai"},
     {cat:"📱 Marketing & Social",name:"Buffer AI",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"AI social media post generator.",pros:["Integrated with Buffer","Free tier","Multiple platforms"],cons:["Generic sometimes","Limited free"],bestFor:"Social media managers",pricing:"Free | $6/mo",link:"https://buffer.com"},
     {cat:"📱 Marketing & Social",name:"Lately",rating:"8.2/10",type:"subscription",tag:"💳 Subscription",desc:"AI that generates social posts from content.",pros:["Repurpose content","Multiple posts","Brand voice"],cons:["Expensive","Learning period"],bestFor:"Content repurposing",pricing:"$49/mo",link:"https://lately.ai"},
@@ -359,6 +299,8 @@ const tools = [
     {cat:"📱 Marketing & Social",name:"Brand24",rating:"7.7/10",type:"subscription",tag:"💳 Subscription",desc:"AI social media monitoring tool.",pros:["Social listening","Sentiment analysis","Alerts"],cons:["$49/mo","Can be noisy"],bestFor:"Brand monitoring",pricing:"$49/mo",link:"https://brand24.com"},
     {cat:"📱 Marketing & Social",name:"Postwise",rating:"7.4/10",type:"subscription",tag:"💳 Subscription",desc:"AI Twitter/X post writer and scheduler.",pros:["AI post generation","Scheduling","Analytics"],cons:["Twitter/X only","$29/mo"],bestFor:"Twitter/X growth",pricing:"$29/mo",link:"https://postwise.ai"},
     {cat:"📱 Marketing & Social",name:"Publer",rating:"7.3/10",type:"free",tag:"🆓 Free",desc:"Social media scheduler with AI features.",pros:["Free tier","Multiple platforms","Scheduling"],cons:["AI features limited","Basic"],bestFor:"Small businesses",pricing:"Free | $10/mo",link:"https://publer.io"},
+
+    // DATA & ANALYTICS (10 total)
     {cat:"📈 Data & Analytics",name:"ChatGPT Data Analyst",rating:"8.8/10",type:"subscription",tag:"💳 Subscription",desc:"ChatGPT Plus can analyze data files.",pros:["Easy to use","Natural language","Visualizations"],cons:["$20/mo ChatGPT Plus","File size limits"],bestFor:"Quick data analysis",pricing:"$20/mo",link:"https://chat.openai.com"},
     {cat:"📈 Data & Analytics",name:"Claude for Data",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"Claude can analyze and visualize data.",pros:["Free tier","Good analysis","Long context"],cons:["Limited free tier","No advanced viz"],bestFor:"Data exploration",pricing:"Free | $20/mo",link:"https://claude.ai"},
     {cat:"📈 Data & Analytics",name:"Julius AI",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"AI data analyst with visualizations.",pros:["Upload data","Natural language","Free tier"],cons:["Limited free","Privacy concerns"],bestFor:"Business analytics",pricing:"Free | $20/mo",link:"https://julius.ai"},
@@ -369,6 +311,8 @@ const tools = [
     {cat:"📈 Data & Analytics",name:"ThoughtSpot",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"AI-powered analytics platform.",pros:["Natural language queries","Good for business users","Search-based"],cons:["Expensive","For enterprises"],bestFor:"Enterprise BI",pricing:"Contact sales",link:"https://thoughtspot.com"},
     {cat:"📈 Data & Analytics",name:"Akkio",rating:"7.4/10",type:"subscription",tag:"💳 Subscription",desc:"No-code AI for business predictions.",pros:["Easy to use","No coding","Predictions"],cons:["Limited features","$50/mo"],bestFor:"Business predictions",pricing:"$50/mo",link:"https://akkio.com"},
     {cat:"📈 Data & Analytics",name:"Polymer",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI data visualization and analysis.",pros:["Free tier","Easy dashboards","AI insights"],cons:["Limited customization","Basic features"],bestFor:"Quick dashboards",pricing:"Free | $20/mo",link:"https://polymersearch.com"},
+
+    // === ADDITIONAL 89 TOOLS ===
     {cat:"✍️ Writing & Content",name:"Anyword",rating:"8.1/10",type:"subscription",tag:"💳 Subscription",desc:"AI copywriting with predictive performance scores.",pros:["Performance predictions","A/B testing","Copy intelligence"],cons:["Expensive","Marketing focused"],bestFor:"Marketing teams",pricing:"$49/mo",link:"https://anyword.com"},
     {cat:"✍️ Writing & Content",name:"Simplified",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"All-in-one content creation with AI writing and design.",pros:["Free tier generous","Design + writing","Templates"],cons:["Jack of all trades","Quality varies"],bestFor:"Solo creators",pricing:"Free | $12/mo",link:"https://simplified.com"},
     {cat:"✍️ Writing & Content",name:"Copysmith",rating:"7.6/10",type:"subscription",tag:"💳 Subscription",desc:"AI content creation for ecommerce and agencies.",pros:["Ecommerce focus","Bulk generation","API access"],cons:["Expensive","Niche use"],bestFor:"Ecommerce businesses",pricing:"$19/mo",link:"https://copysmith.ai"},
@@ -386,7 +330,7 @@ const tools = [
     {cat:"🎨 Design & Images",name:"Stylar",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"AI image editing and generation tool.",pros:["Image editing","Layers","Free tier"],cons:["Still in beta","Limited"],bestFor:"Image editing",pricing:"Free",link:"https://stylar.ai"},
     {cat:"🎨 Design & Images",name:"Getimg.ai",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"AI image generator with multiple models.",pros:["Many models","API access","Free tier"],cons:["Credits expensive","UI basic"],bestFor:"Developers",pricing:"Free | $12/mo",link:"https://getimg.ai"},
     {cat:"🎨 Design & Images",name:"SeaArt",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"AI art generator with anime focus.",pros:["Free","Anime styles","Community"],cons:["Anime focused","Slow"],bestFor:"Anime art",pricing:"Free",link:"https://seaart.ai"},
-    {cat:"🎨 Design & Images",name:"Bing Image Creator",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Microsoft\'s DALL-E powered image generator.",pros:["Completely free","Good quality","No account needed"],cons:["Slower than paid","Limited daily"],bestFor:"Free AI images",pricing:"Free",link:"https://bing.com/create"},
+    {cat:"🎨 Design & Images",name:"Bing Image Creator",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Microsoft's DALL-E powered image generator.",pros:["Completely free","Good quality","No account needed"],cons:["Slower than paid","Limited daily"],bestFor:"Free AI images",pricing:"Free",link:"https://bing.com/create"},
     {cat:"🎨 Design & Images",name:"Freepik AI",rating:"7.7/10",type:"free",tag:"🆓 Free",desc:"AI image generator integrated with Freepik.",pros:["Free tier","Stock integration","Templates"],cons:["Watermarks","Limited"],bestFor:"Stock + AI combo",pricing:"Free | $10/mo",link:"https://freepik.com"},
     {cat:"🎨 Design & Images",name:"Recraft",rating:"8.0/10",type:"free",tag:"🆓 Free",desc:"AI design tool for brand-consistent graphics.",pros:["Brand consistency","Vectors","Free tier"],cons:["Limited features","New"],bestFor:"Brand graphics",pricing:"Free | $24/mo",link:"https://recraft.ai"},
     {cat:"🎬 Video & Animation",name:"Elai.io",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"AI video generation with avatars.",pros:["Easy to use","Many avatars","Templates"],cons:["Expensive","Credits limited"],bestFor:"Training videos",pricing:"$23/mo",link:"https://elai.io"},
@@ -396,7 +340,7 @@ const tools = [
     {cat:"🎬 Video & Animation",name:"Pictory AI",rating:"7.9/10",type:"subscription",tag:"💳 Subscription",desc:"Text to video with auto-captions.",pros:["Blog to video","Auto-captions","Easy"],cons:["Generic stock footage","Expensive"],bestFor:"Content repurposing",pricing:"$19/mo",link:"https://pictory.ai"},
     {cat:"🎬 Video & Animation",name:"Raw Shorts",rating:"7.3/10",type:"subscription",tag:"💳 Subscription",desc:"Text to video animation maker.",pros:["Text to video","Animations","Templates"],cons:["Quality varies","Limited"],bestFor:"Explainer videos",pricing:"$20/mo",link:"https://rawshorts.com"},
     {cat:"🎬 Video & Animation",name:"Veed.io",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"Online video editor with AI features.",pros:["Easy to use","Free tier generous","Subtitles"],cons:["Watermark on free","Export limits"],bestFor:"Video editing",pricing:"Free | $18/mo",link:"https://veed.io"},
-    {cat:"🎬 Video & Animation",name:"Clipchamp",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"Microsoft\'s video editor with AI.",pros:["Free","Microsoft integration","Templates"],cons:["Basic features","Windows focused"],bestFor:"Windows users",pricing:"Free",link:"https://clipchamp.com"},
+    {cat:"🎬 Video & Animation",name:"Clipchamp",rating:"7.8/10",type:"free",tag:"🆓 Free",desc:"Microsoft's video editor with AI.",pros:["Free","Microsoft integration","Templates"],cons:["Basic features","Windows focused"],bestFor:"Windows users",pricing:"Free",link:"https://clipchamp.com"},
     {cat:"🎬 Video & Animation",name:"Submagic",rating:"8.1/10",type:"subscription",tag:"💳 Subscription",desc:"AI captions and video editing.",pros:["Great captions","Trendy styles","Fast"],cons:["Expensive","Credits limited"],bestFor:"Short-form video",pricing:"$20/mo",link:"https://submagic.co"},
     {cat:"💻 Coding & Development",name:"Windsurf Editor",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"AI-first code editor by Codeium.",pros:["Free","Fast","Multi-file editing"],cons:["Newer tool","Still maturing"],bestFor:"AI-native coding",pricing:"Free",link:"https://codeium.com/windsurf"},
     {cat:"💻 Coding & Development",name:"Bolt.new",rating:"8.4/10",type:"free",tag:"🆓 Free",desc:"AI that builds and deploys full-stack apps.",pros:["Full-stack gen","Deploy instantly","Free tier"],cons:["Limited free tier","Complex apps tricky"],bestFor:"Rapid prototyping",pricing:"Free | $20/mo",link:"https://bolt.new"},
@@ -457,144 +401,163 @@ const tools = [
     {cat:"📈 Data & Analytics",name:"Databricks AI",rating:"8.3/10",type:"subscription",tag:"💳 Subscription",desc:"Unified analytics platform with AI.",pros:["Enterprise grade","MLOps","Data lakehouse"],cons:["Very expensive","Complex"],bestFor:"Enterprise data",pricing:"Contact sales",link:"https://databricks.com"},
     {cat:"📈 Data & Analytics",name:"Alteryx AI",rating:"7.8/10",type:"subscription",tag:"💳 Subscription",desc:"Analytics automation platform.",pros:["No-code","Powerful","Enterprise"],cons:["Very expensive","Learning curve"],bestFor:"Enterprise analytics",pricing:"Contact sales",link:"https://alteryx.com"},
     {cat:"📈 Data & Analytics",name:"DataRobot",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"Enterprise AI platform for predictions.",pros:["AutoML","Enterprise grade","Powerful"],cons:["Very expensive","Complex"],bestFor:"Enterprise ML",pricing:"Contact sales",link:"https://datarobot.com"},
-    {cat:"📈 Data & Analytics",name:"H2O.ai",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Open source AI and ML platform.",pros:["Free open source","Powerful","Community"],cons:["Technical","Enterprise version expensive"],bestFor:"Data scientists",pricing:"Free | Contact sales",link:"https://h2o.ai"}
+    {cat:"📈 Data & Analytics",name:"H2O.ai",rating:"7.9/10",type:"free",tag:"🆓 Free",desc:"Open source AI and ML platform.",pros:["Free open source","Powerful","Community"],cons:["Technical","Enterprise version expensive"],bestFor:"Data scientists",pricing:"Free | Contact sales",link:"https://h2o.ai"},
 ];
-function getCategorySlug(cat) {
-    const map = {
-        'Writing & Content': 'writing',
-        'Design & Images': 'design',
-        'Video & Animation': 'video',
-        'Coding & Development': 'coding',
-        'Productivity & Business': 'productivity',
-        'Voice & Audio': 'voice',
-        'Research & Data': 'research',
-        'Marketing & Social': 'marketing',
-        'Data & Analytics': 'data'
-    };
-    const clean = cat.replace(/[^\w\s&]/g, '').trim();
-    return map[clean] || 'other';
-}
 
 let currentTypeFilter = 'all';
 let currentCategoryFilter = 'all';
 
 function renderTools() {
-    const container = document.getElementById('tools-container');
-    if (!container) {
-        console.error('Container not found!');
-        return;
-    }
-    
-    let html = '<div class="grid md:grid-cols-2 gap-6">';
-    
-    tools.forEach(tool => {
-        const catSlug = getCategorySlug(tool.cat);
-        const typeClass = tool.type;
-        const shouldShow = (currentTypeFilter === 'all' || typeClass === currentTypeFilter) &&
-                          (currentCategoryFilter === 'all' || catSlug === currentCategoryFilter);
+    const categories = [...new Set(tools.map(t => t.cat))];
+    let html = '';
+
+    categories.forEach(category => {
+        const categoryTools = tools.filter(t => t.cat === category);
+        // Extract slug from category name (skip emoji, use actual word)
+        const categorySlug = category.split(' ')[1].replace(/[^\w]/g, '').toLowerCase();
         
-        if (!shouldShow) return;
-        
-        html += `
-            <div class="tool-card bg-white rounded-xl p-6 ${typeClass} ${catSlug}">
-                <div class="flex justify-between items-start mb-3">
+        html += `<section class="category-section mb-16" data-category="${categorySlug}">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 pb-4 border-b-2 border-purple-200">${category}</h2>
+            <div class="grid md:grid-cols-2 gap-6">`;
+
+        categoryTools.forEach(t => {
+            const typeClass = t.type;
+            html += `
+            <div class="tool-card ${typeClass} ${categorySlug} bg-white rounded-xl p-6">
+                <div class="flex justify-between items-start mb-4">
                     <div>
-                        <h3 class="text-xl font-bold text-gray-900">${tool.name}</h3>
-                        <p class="text-sm text-gray-600">${tool.cat}</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">${t.name}</h3>
+                        <span class="inline-block px-3 py-1 rounded-full text-sm font-medium ${t.type==='free'?'bg-green-100 text-green-700':t.type==='deal'?'bg-yellow-100 text-yellow-700':'bg-blue-100 text-blue-700'}">${t.tag}</span>
                     </div>
-                    <div class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-bold">${tool.rating}</div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold ${t.rating.startsWith('9')?'text-green-600':'text-purple-600'}">${t.rating}</div>
+                    </div>
                 </div>
-                <p class="text-gray-700 mb-4">${tool.desc}</p>
-                <div class="mb-3">
-                    <div class="text-sm font-semibold text-gray-700 mb-1">✅ Pros:</div>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                        ${tool.pros.map(p => `<li>• ${p}</li>`).join('')}
-                    </ul>
+                
+                <p class="text-gray-700 mb-4 leading-relaxed">${t.desc}</p>
+                
+                <div class="space-y-3 mb-4">
+                    <div>
+                        <div class="font-semibold text-green-700 mb-1 text-sm">✓ Pros:</div>
+                        <ul class="space-y-1">
+                            ${t.pros.map(p=>`<li class="text-gray-600 text-sm pl-4">• ${p}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-red-600 mb-1 text-sm">✗ Cons:</div>
+                        <ul class="space-y-1">
+                            ${t.cons.map(c=>`<li class="text-gray-600 text-sm pl-4">• ${c}</li>`).join('')}
+                        </ul>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <div class="text-sm font-semibold text-gray-700 mb-1">❌ Cons:</div>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                        ${tool.cons.map(c => `<li>• ${c}</li>`).join('')}
-                    </ul>
+                
+                <div class="border-t border-gray-200 pt-4 space-y-2">
+                    <div class="text-sm">
+                        <span class="font-semibold text-gray-700">Best for:</span>
+                        <span class="text-gray-600"> ${t.bestFor}</span>
+                    </div>
+                    <div class="text-sm">
+                        <span class="font-semibold text-gray-700">Pricing:</span>
+                        <span class="text-gray-600"> ${t.pricing}</span>
+                    </div>
                 </div>
-                <div class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> ${tool.bestFor}</div>
-                <div class="text-sm text-gray-700 mb-4"><strong>Pricing:</strong> ${tool.pricing}</div>
-                <a href="${tool.link}" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700">
-                    Visit ${tool.name} →
+                
+                <a href="${t.link}" target="_blank" rel="noopener" class="mt-4 block text-center px-6 py-3 ${t.type==='deal'?'bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600':'bg-purple-600 hover:bg-purple-700'} text-white font-semibold rounded-lg transition-all">
+                    ${t.type==='deal'?'Get Lifetime Deal →':'Visit '+t.name+' →'}
                 </a>
-            </div>
-        `;
+            </div>`;
+        });
+
+        html += '</div></section>';
     });
-    
-    html += '</div>';
-    container.innerHTML = html;
-    console.log(`Rendered ${tools.length} tools`);
-    updateCounts();
+
+    document.getElementById('tools-container').innerHTML = html;
+    applyFilters();
 }
 
 function filterByType(type) {
     currentTypeFilter = type;
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
-    renderTools();
+    applyFilters();
+    updateCounts();
 }
 
 function filterByCategory(category) {
     currentCategoryFilter = category;
     document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
-    renderTools();
+    applyFilters();
+    updateCounts();
+}
+
+function applyFilters() {
+    const cards = document.querySelectorAll('.tool-card');
+    const sections = document.querySelectorAll('.category-section');
+
+    cards.forEach(card => {
+        const matchesType = currentTypeFilter === 'all' || card.classList.contains(currentTypeFilter);
+        const matchesCategory = currentCategoryFilter === 'all' || card.classList.contains(currentCategoryFilter);
+        card.style.display = (matchesType && matchesCategory) ? 'block' : 'none';
+    });
+
+    sections.forEach(section => {
+        const hasVisibleCards = Array.from(section.querySelectorAll('.tool-card')).some(card => 
+            card.style.display !== 'none'
+        );
+        section.style.display = hasVisibleCards ? 'block' : 'none';
+    });
 }
 
 function updateCounts() {
-    // TYPE BUTTONS: Show counts filtered by CURRENT category selection
+    const cards = document.querySelectorAll('.tool-card');
+    
+    // Count for TYPE buttons: show how many tools exist for each type in the CURRENT CATEGORY
     const typeCounts = { all: 0, free: 0, deal: 0, subscription: 0 };
-    tools.forEach(tool => {
-        const catSlug = getCategorySlug(tool.cat);
-        const matchesCategory = currentCategoryFilter === 'all' || catSlug === currentCategoryFilter;
-        
+    cards.forEach(card => {
+        const matchesCategory = currentCategoryFilter === 'all' || card.classList.contains(currentCategoryFilter);
         if (matchesCategory) {
             typeCounts.all++;
-            if (tool.type === 'free') typeCounts.free++;
-            if (tool.type === 'deal') typeCounts.deal++;
-            if (tool.type === 'subscription') typeCounts.subscription++;
+            if (card.classList.contains('free')) typeCounts.free++;
+            if (card.classList.contains('deal')) typeCounts.deal++;
+            if (card.classList.contains('subscription')) typeCounts.subscription++;
         }
     });
     
-    // CATEGORY BUTTONS: Show counts filtered by CURRENT type selection
+    // Count for CATEGORY buttons: show how many tools exist for each category in the CURRENT TYPE
     const categoryCounts = { all: 0, writing: 0, design: 0, video: 0, coding: 0, productivity: 0, voice: 0, research: 0, marketing: 0, data: 0 };
-    tools.forEach(tool => {
-        const catSlug = getCategorySlug(tool.cat);
-        const matchesType = currentTypeFilter === 'all' || tool.type === currentTypeFilter;
-        
+    cards.forEach(card => {
+        const matchesType = currentTypeFilter === 'all' || card.classList.contains(currentTypeFilter);
         if (matchesType) {
             categoryCounts.all++;
-            if (catSlug === 'writing') categoryCounts.writing++;
-            if (catSlug === 'design') categoryCounts.design++;
-            if (catSlug === 'video') categoryCounts.video++;
-            if (catSlug === 'coding') categoryCounts.coding++;
-            if (catSlug === 'productivity') categoryCounts.productivity++;
-            if (catSlug === 'voice') categoryCounts.voice++;
-            if (catSlug === 'research') categoryCounts.research++;
-            if (catSlug === 'marketing') categoryCounts.marketing++;
-            if (catSlug === 'data') categoryCounts.data++;
+            if (card.classList.contains('writing')) categoryCounts.writing++;
+            if (card.classList.contains('design')) categoryCounts.design++;
+            if (card.classList.contains('video')) categoryCounts.video++;
+            if (card.classList.contains('coding')) categoryCounts.coding++;
+            if (card.classList.contains('productivity')) categoryCounts.productivity++;
+            if (card.classList.contains('voice')) categoryCounts.voice++;
+            if (card.classList.contains('research')) categoryCounts.research++;
+            if (card.classList.contains('marketing')) categoryCounts.marketing++;
+            if (card.classList.contains('data')) categoryCounts.data++;
         }
     });
     
-    // Update TYPE button labels
+    // Update TYPE button texts
     document.querySelectorAll('.filter-btn').forEach(btn => {
         const text = btn.textContent.split('(')[0].trim();
         const onclick = btn.getAttribute('onclick');
+        
         if (onclick.includes("'all'")) btn.textContent = `${text} (${typeCounts.all})`;
         else if (onclick.includes("'free'")) btn.textContent = `${text} (${typeCounts.free})`;
         else if (onclick.includes("'deal'")) btn.textContent = `${text} (${typeCounts.deal})`;
         else if (onclick.includes("'subscription'")) btn.textContent = `${text} (${typeCounts.subscription})`;
     });
     
-    // Update CATEGORY button labels
+    // Update CATEGORY button texts
     document.querySelectorAll('.cat-btn').forEach(btn => {
         const text = btn.textContent.split('(')[0].trim();
         const onclick = btn.getAttribute('onclick');
+        
         if (onclick.includes("'all'")) btn.textContent = `${text} (${categoryCounts.all})`;
         else if (onclick.includes("'writing'")) btn.textContent = `${text} (${categoryCounts.writing})`;
         else if (onclick.includes("'design'")) btn.textContent = `${text} (${categoryCounts.design})`;
@@ -603,34 +566,4 @@ function updateCounts() {
         else if (onclick.includes("'productivity'")) btn.textContent = `${text} (${categoryCounts.productivity})`;
         else if (onclick.includes("'voice'")) btn.textContent = `${text} (${categoryCounts.voice})`;
         else if (onclick.includes("'research'")) btn.textContent = `${text} (${categoryCounts.research})`;
-        else if (onclick.includes("'marketing'")) btn.textContent = `${text} (${categoryCounts.marketing})`;
-        else if (onclick.includes("'data'")) btn.textContent = `${text} (${categoryCounts.data})`;
-    });
-}
-
-window.addEventListener('DOMContentLoaded', function() {
-    console.log('Page loaded, rendering...');
-    renderTools();
-});
-</script>
-
-
-<script>
-// Mobile menu toggle
-document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-});
-
-// Mobile dropdown toggles
-document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        const content = this.nextElementSibling;
-        content.classList.toggle('hidden');
-    });
-});
-</script>
-
-</body>
-</html>
+        else if (onclick.includ
