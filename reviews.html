@@ -7,7 +7,7 @@
     <meta name="description" content="In-depth reviews of ChatGPT, Claude, Midjourney, and 217 more AI tools.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
+                body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
         .tool-card { transition: all 0.3s ease; border: 1px solid #e5e7eb; }
         .tool-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
         .filter-btn { transition: all 0.2s ease; }
@@ -23,18 +23,15 @@
             box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
             border-radius: 8px; 
             z-index: 100;
-            /* Create bigger hover area - dropdown appears BELOW the trigger with gap */
             top: calc(100% + 5px);
             left: -15px;
             padding: 12px 0;
         }
-        /* Show dropdown when hovering parent OR dropdown itself */
         .dropdown:hover .dropdown-content,
         .dropdown .dropdown-content:hover { 
             display: block; 
             animation: fadeIn 0.2s ease-in;
         }
-        /* Create invisible bridge between trigger and dropdown */
         .dropdown::after {
             content: '';
             position: absolute;
@@ -64,14 +61,27 @@
             from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
+        .mobile-dropdown-content { overflow: hidden; transition: max-height 0.3s ease; }
+        .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
+        .mobile-dropdown-btn.active svg { transform: rotate(180deg); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="bg-white">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
                 <a href="index.html"><img src="artificial-one-logo-large.svg" alt="artificial.one" class="h-16 sm:h-20 md:h-24"></a>
-                <div class="flex gap-3 sm:gap-6 items-center text-sm sm:text-base">
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-purple-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <div class="hidden md:flex gap-3 lg:gap-6 items-center text-sm lg:text-base">
                     <a href="reviews.html" class="text-gray-900 hover:text-purple-600 font-medium">Reviews</a>
                     <div class="dropdown">
                         <span class="text-gray-600 hover:text-purple-600 font-medium cursor-pointer">Categories ▾</span>
@@ -87,9 +97,54 @@
                             <a href="category/data-analytics.html">📈 Data & Analytics</a>
                         </div>
                     </div>
+                    <div class="dropdown">
+                        <span class="text-gray-600 hover:text-purple-600 font-medium cursor-pointer">Explore ▾</span>
+                        <div class="dropdown-content">
+                            <a href="compare/chatgpt-vs-jasper.html">🔍 Compare Tools</a>
+                            <a href="best/best-free-ai-tools.html">🏆 Best Of Lists</a>
+                            <a href="tutorials/how-to-use-chatgpt-for-marketing.html">📚 Tutorials</a>
+                            <a href="guides/ai-tools-for-real-estate-agents.html">📖 Guides</a>
+                        </div>
+                    </div>
                     <a href="blog.html" class="text-gray-600 hover:text-purple-600">Blog</a>
                     <a href="about.html" class="text-gray-600 hover:text-purple-600">About</a>
                     <a href="index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-3 sm:px-6 py-2 rounded-lg font-semibold">Home</a>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="reviews.html" class="text-gray-900 hover:text-purple-600 font-medium py-2">Reviews</a>
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn text-gray-600 hover:text-purple-600 font-medium py-2 w-full text-left flex justify-between items-center">
+                            Categories <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                            <a href="category/writing-content.html" class="block text-sm py-1">✍️ Writing & Content</a>
+                            <a href="category/design-images.html" class="block text-sm py-1">🎨 Design & Images</a>
+                            <a href="category/video-animation.html" class="block text-sm py-1">🎬 Video & Animation</a>
+                            <a href="category/coding-development.html" class="block text-sm py-1">💻 Coding & Development</a>
+                            <a href="category/productivity-business.html" class="block text-sm py-1">📊 Productivity & Business</a>
+                            <a href="category/voice-audio.html" class="block text-sm py-1">🎙️ Voice & Audio</a>
+                            <a href="category/research-data.html" class="block text-sm py-1">🔬 Research & Data</a>
+                            <a href="category/marketing-social.html" class="block text-sm py-1">📱 Marketing & Social</a>
+                            <a href="category/data-analytics.html" class="block text-sm py-1">📈 Data & Analytics</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn text-gray-600 hover:text-purple-600 font-medium py-2 w-full text-left flex justify-between items-center">
+                            Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                            <a href="compare/chatgpt-vs-jasper.html" class="block text-sm py-1">🔍 Compare Tools</a>
+                            <a href="best/best-free-ai-tools.html" class="block text-sm py-1">🏆 Best Of Lists</a>
+                            <a href="tutorials/how-to-use-chatgpt-for-marketing.html" class="block text-sm py-1">📚 Tutorials</a>
+                            <a href="guides/ai-tools-for-real-estate-agents.html" class="block text-sm py-1">📖 Guides</a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">Blog</a>
+                    <a href="about.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">About</a>
+                    <a href="index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold text-center">Home</a>
                 </div>
             </div>
         </div>
@@ -518,6 +573,24 @@ function updateCounts() {
 window.addEventListener('DOMContentLoaded', function() {
     console.log('Page loaded, rendering...');
     renderTools();
+});
+</script>
+
+
+<script>
+// Mobile menu toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+});
+
+// Mobile dropdown toggles
+document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        content.classList.toggle('hidden');
+    });
 });
 </script>
 
