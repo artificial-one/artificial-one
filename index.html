@@ -115,7 +115,13 @@ function ArtificialOne() {
             <a href="index.html" className="flex items-center">
               <img src="artificial-one-logo-large.svg" alt="artificial.one - AI tools reviewed by AI" className="h-16 sm:h-20 md:h-24" />
             </a>
-            <div className="flex gap-4 sm:gap-6 items-center text-sm sm:text-base">
+            <button id="mobile-menu-btn" className="md:hidden text-gray-600 hover:text-purple-600">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+            
+            <div className="hidden md:flex gap-4 sm:gap-6 items-center text-sm sm:text-base">
               <div className="dropdown">
                         <span className="text-gray-600 hover:text-indigo-600 font-medium transition-colors cursor-pointer">
                             Categories ▾
@@ -148,6 +154,46 @@ function ArtificialOne() {
               <a href="blog.html" className="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Blog</a>
               <a href="about.html" className="text-gray-600 hover:text-indigo-600 font-medium transition-colors">About</a>
               <a href="reviews.html" className="px-4 sm:px-6 py-2 btn-primary text-white rounded-lg font-semibold">Browse Tools</a>
+            </div>
+                    </div>
+          
+          {/* Mobile Menu */}
+          <div id="mobile-menu" className="hidden md:hidden pb-4">
+            <div className="flex flex-col space-y-3">
+              <a href="reviews.html" className="text-gray-600 hover:text-purple-600 font-medium py-2">Reviews</a>
+              
+              <div className="mobile-dropdown">
+                <button className="mobile-dropdown-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-blue-700 hover:to-indigo-700 transition-all">
+                  📂 Categories <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div className="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
+                  <a href="category/writing-content.html" className="block text-sm py-1">✍️ Writing & Content</a>
+                  <a href="category/design-images.html" className="block text-sm py-1">🎨 Design & Images</a>
+                  <a href="category/video-animation.html" className="block text-sm py-1">🎬 Video & Animation</a>
+                  <a href="category/coding-development.html" className="block text-sm py-1">💻 Coding & Development</a>
+                  <a href="category/productivity-business.html" className="block text-sm py-1">📊 Productivity & Business</a>
+                  <a href="category/voice-audio.html" className="block text-sm py-1">🎙️ Voice & Audio</a>
+                  <a href="category/research-data.html" className="block text-sm py-1">🔬 Research & Data</a>
+                  <a href="category/marketing-social.html" className="block text-sm py-1">📱 Marketing & Social</a>
+                  <a href="category/data-analytics.html" className="block text-sm py-1">📈 Data & Analytics</a>
+                </div>
+              </div>
+              
+              <div className="mobile-dropdown">
+                <button className="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
+                  🔍 Explore <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div className="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
+                  <a href="compare/index.html" className="block text-sm py-1">🔍 Compare Tools</a>
+                  <a href="best/index.html" className="block text-sm py-1">🏆 Best Of Lists</a>
+                  <a href="tutorials/index.html" className="block text-sm py-1">📚 Tutorials</a>
+                  <a href="guides/index.html" className="block text-sm py-1">📖 Guides</a>
+                </div>
+              </div>
+              
+              <a href="blog.html" className="text-gray-600 hover:text-purple-600 font-medium py-2">Blog</a>
+              <a href="about.html" className="text-gray-600 hover:text-purple-600 font-medium py-2">About</a>
+              <a href="reviews.html" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold text-center">Browse Tools</a>
             </div>
           </div>
         </div>
