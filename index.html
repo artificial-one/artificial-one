@@ -428,15 +428,30 @@ root.render(<ArtificialOne />);
     </script>
 
 <script>
-document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-});
-document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        this.nextElementSibling.classList.toggle('hidden');
+// Wait for React to render, then attach mobile menu handlers
+setTimeout(function() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        console.log('✅ Mobile menu button attached');
+    } else {
+        console.log('❌ Mobile menu elements not found');
+    }
+    
+    document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content) {
+                content.classList.toggle('hidden');
+            }
+        });
     });
-});
+}, 100); // Small delay to let React render first
 </script>
 
 </body>
