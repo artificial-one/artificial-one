@@ -16,59 +16,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-            .dropdown { position: relative; display: inline-block; }
-        .dropdown .dropdown-content { 
-            display: none; 
-            position: absolute; 
-            background-color: white; 
-            min-width: 240px; 
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
-            border-radius: 8px; 
-            z-index: 100;
-            top: calc(100% + 5px);
-            left: -15px;
-            padding: 12px 0;
-        }
-        .dropdown:hover .dropdown-content,
-        .dropdown .dropdown-content:hover { 
-            display: block; 
-            animation: fadeIn 0.2s ease-in;
-        }
-        .dropdown::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: -15px;
-            right: -15px;
-            height: 15px;
-            display: none;
-        }
-        .dropdown:hover::after {
-            display: block;
-        }
-        .dropdown-content a { 
-            color: #4b5563; 
-            padding: 14px 20px; 
-            text-decoration: none; 
-            display: block; 
-            transition: all 0.2s; 
-            font-size: 15px;
-        }
-        .dropdown-content a:hover { 
-            background-color: #f3f4f6; 
-            color: #6366f1;
-            padding-left: 24px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .cursor-pointer { cursor: pointer; }
-            #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
-        .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
-        .mobile-dropdown-btn.active svg { transform: rotate(180deg); }
     </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -118,7 +65,10 @@
             
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="reviews.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">Reviews</a>
+                    <a href="reviews.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-indigo-700 hover:to-purple-700 transition-all">Browse Tools</a>
+                    
+                    <a href="reviews.html" class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-violet-700 hover:to-purple-700 transition-all">Reviews</a>
+                    
                     <div class="mobile-dropdown">
                         <button class="mobile-dropdown-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-blue-700 hover:to-indigo-700 transition-all">
                             📂 Categories <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -135,6 +85,24 @@
                             <a href="category/data-analytics.html" class="block text-sm py-1">📈 Data & Analytics</a>
                         </div>
                     </div>
+                    
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
+                            🔍 Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
+                            <a href="compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
+                            <a href="best/index.html" class="block text-sm py-1">🏆 Best Of Lists</a>
+                            <a href="tutorials/index.html" class="block text-sm py-1">📚 Tutorials</a>
+                            <a href="guides/index.html" class="block text-sm py-1">📖 Guides</a>
+                        </div>
+                    </div>
+                    
+                    <a href="blog.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-700 hover:to-teal-700 transition-all">Blog</a>
+                    <a href="about.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-orange-700 hover:to-red-700 transition-all">About</a>
+                </div>
+            </div>
+        </div>
                     <div class="mobile-dropdown">
                         <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
                             🔍 Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -313,9 +281,36 @@
                 </div>
                 <div class="sm:col-span-2 lg:col-span-1">
                     <h4 class="font-semibold text-gray-900 mb-4">Contact</h4>
-                    <a href="/cdn-cgi/l/email-protection#721a171e1e1d321300061b141b111b131e5c1d1c17" class="text-sm sm:text-base text-gray-600 hover:text-purple-600 transition-colors break-all">
-                        <span class="__cf_email__" data-cfemail="d1b9b4bdbdbe91b0a3a5b8b7b8b2b8b0bdffbebfb4">[email&#160;protected]</span>
+                    <a href="/cdn-cgi/l/email-protection#7d15181111123d1c0f09141b141e141c1153121318" class="text-sm sm:text-base text-gray-600 hover:text-purple-600 transition-colors break-all">
+                        <span class="__cf_email__" data-cfemail="f098959c9c9fb09182849996999399919cde9f9e95">[email&#160;protected]</span>
                     </a>
                 </div>
             </div>
             <div class="border-t border-gray-300 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-500 text-xs sm
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+    
+    document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content) {
+                content.classList.toggle('hidden');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
