@@ -44,6 +44,59 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
+            .dropdown { position: relative; display: inline-block; }
+        .dropdown .dropdown-content { 
+            display: none; 
+            position: absolute; 
+            background-color: white; 
+            min-width: 240px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
+            border-radius: 8px; 
+            z-index: 100;
+            top: calc(100% + 5px);
+            left: -15px;
+            padding: 12px 0;
+        }
+        .dropdown:hover .dropdown-content,
+        .dropdown .dropdown-content:hover { 
+            display: block; 
+            animation: fadeIn 0.2s ease-in;
+        }
+        .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: -15px;
+            right: -15px;
+            height: 15px;
+            display: none;
+        }
+        .dropdown:hover::after {
+            display: block;
+        }
+        .dropdown-content a { 
+            color: #4b5563; 
+            padding: 14px 20px; 
+            text-decoration: none; 
+            display: block; 
+            transition: all 0.2s; 
+            font-size: 15px;
+        }
+        .dropdown-content a:hover { 
+            background-color: #f3f4f6; 
+            color: #6366f1;
+            padding-left: 24px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .cursor-pointer { cursor: pointer; }
+            #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
+        .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
+        .mobile-dropdown-btn.active svg { transform: rotate(180deg); }
     </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -62,10 +115,122 @@ function ArtificialOne() {
             <a href="index.html" className="flex items-center">
               <img src="artificial-one-logo-large.svg" alt="artificial.one - AI tools reviewed by AI" className="h-16 sm:h-20 md:h-24" />
             </a>
-            <div className="flex gap-4 sm:gap-6 items-center text-sm sm:text-base">
+            <button id="mobile-menu-btn" className="md:hidden text-gray-600 hover:text-purple-600">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+            
+            <div className="hidden md:flex gap-4 sm:gap-6 items-center text-sm sm:text-base">
+              <div className="dropdown">
+                        <span className="text-gray-600 hover:text-indigo-600 font-medium transition-colors cursor-pointer">
+                            Categories ▾
+                        </span>
+                        <div className="dropdown-content">
+                            <a href="category/writing-content.html">✍️ Writing & Content</a>
+                            <a href="category/design-images.html">🎨 Design & Images</a>
+                            <a href="category/video-animation.html">🎬 Video & Animation</a>
+                            <a href="category/coding-development.html">💻 Coding & Development</a>
+                            <a href="category/productivity-business.html">📊 Productivity & Business</a>
+                            <a href="category/voice-audio.html">🎙️ Voice & Audio</a>
+                            <a href="category/research-data.html">🔬 Research & Data</a>
+                            <a href="category/marketing-social.html">📱 Marketing & Social</a>
+                            <a href="category/data-analytics.html">📈 Data & Analytics</a>
+                        </div>
+                    </div>
+                    
+                    <div className="dropdown">
+                        <span className="text-gray-600 hover:text-indigo-600 font-medium transition-colors cursor-pointer">
+                            Explore ▾
+                        </span>
+                        <div className="dropdown-content">
+                            <a href="compare/index.html">🔍 Compare Tools</a>
+                            <a href="best/index.html">🏆 Best Of Lists</a>
+                            <a href="tutorials/index.html">📚 Tutorials</a>
+                            <a href="guides/index.html">📖 Guides</a>
+                        </div>
+                    </div>
+                    
               <a href="blog.html" className="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Blog</a>
               <a href="about.html" className="text-gray-600 hover:text-indigo-600 font-medium transition-colors">About</a>
               <a href="reviews.html" className="px-4 sm:px-6 py-2 btn-primary text-white rounded-lg font-semibold">Browse Tools</a>
+            </div>
+                    </div>
+          
+          {/* Mobile Menu */}
+                      <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="reviews.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-indigo-700 hover:to-purple-700 transition-all">Browse Tools</a>
+                    
+                    <a href="reviews.html" class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-violet-700 hover:to-purple-700 transition-all">Reviews</a>
+                    
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-blue-700 hover:to-indigo-700 transition-all">
+                            📂 Categories <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
+                            <a href="category/writing-content.html" class="block text-sm py-1">✍️ Writing & Content</a>
+                            <a href="category/design-images.html" class="block text-sm py-1">🎨 Design & Images</a>
+                            <a href="category/video-animation.html" class="block text-sm py-1">🎬 Video & Animation</a>
+                            <a href="category/coding-development.html" class="block text-sm py-1">💻 Coding & Development</a>
+                            <a href="category/productivity-business.html" class="block text-sm py-1">📊 Productivity & Business</a>
+                            <a href="category/voice-audio.html" class="block text-sm py-1">🎙️ Voice & Audio</a>
+                            <a href="category/research-data.html" class="block text-sm py-1">🔬 Research & Data</a>
+                            <a href="category/marketing-social.html" class="block text-sm py-1">📱 Marketing & Social</a>
+                            <a href="category/data-analytics.html" class="block text-sm py-1">📈 Data & Analytics</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
+                            🔍 Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
+                            <a href="compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
+                            <a href="best/index.html" class="block text-sm py-1">🏆 Best Of Lists</a>
+                            <a href="tutorials/index.html" class="block text-sm py-1">📚 Tutorials</a>
+                            <a href="guides/index.html" class="block text-sm py-1">📖 Guides</a>
+                        </div>
+                    </div>
+                    
+                    <a href="blog.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-700 hover:to-teal-700 transition-all">Blog</a>
+                    <a href="about.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-orange-700 hover:to-red-700 transition-all">About</a>
+                </div>
+            </div>
+                    
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
+                            🔍 Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
+                            <a href="compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
+                            <a href="best/index.html" class="block text-sm py-1">🏆 Best Of Lists</a>
+                            <a href="tutorials/index.html" class="block text-sm py-1">📚 Tutorials</a>
+                            <a href="guides/index.html" class="block text-sm py-1">📖 Guides</a>
+                        </div>
+                    </div>
+                    
+                    <a href="blog.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-700 hover:to-teal-700 transition-all">Blog</a>
+                    <a href="about.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-orange-700 hover:to-red-700 transition-all">About</a>
+                </div>
+            </div>
+        </div>
+              
+              <div className="mobile-dropdown">
+                <button className="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
+                  🔍 Explore <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div className="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
+                  <a href="compare/index.html" className="block text-sm py-1">🔍 Compare Tools</a>
+                  <a href="best/index.html" className="block text-sm py-1">🏆 Best Of Lists</a>
+                  <a href="tutorials/index.html" className="block text-sm py-1">📚 Tutorials</a>
+                  <a href="guides/index.html" className="block text-sm py-1">📖 Guides</a>
+                </div>
+              </div>
+              
+              <a href="blog.html" className="text-gray-600 hover:text-purple-600 font-medium py-2">Blog</a>
+              <a href="about.html" className="text-gray-600 hover:text-purple-600 font-medium py-2">About</a>
+              <a href="reviews.html" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold text-center">Browse Tools</a>
             </div>
           </div>
         </div>
@@ -279,9 +444,9 @@ function ArtificialOne() {
                 scrolling="no" 
                 style={{width: '560px', maxWidth: '100%', height: '291px', margin: 0, borderRadius: '0px', backgroundColor: 'transparent', border: 'none'}}>
               </iframe>
-            </div>
-          </div>
-        </div>
+            
+          
+        
       </section>
 
       {/* Footer */}
@@ -289,14 +454,42 @@ function ArtificialOne() {
         <div className="container mx-auto px-4 text-center text-gray-600">
           <p className="mb-2">© 2026 artificial.one - Made with ❤️ for the AI community</p>
           <p className="text-sm">Follow us on X/Twitter for daily AI tool discoveries</p>
-        </div>
+        
       </footer>
-    </div>
+    
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<ArtificialOne />);
     </script>
+
+<script>
+// Wait for React to render, then attach mobile menu handlers
+setTimeout(function() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        console.log('✅ Mobile menu button attached');
+    } else {
+        console.log('❌ Mobile menu elements not found');
+    }
+    
+    document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content) {
+                content.classList.toggle('hidden');
+            }
+        });
+    });
+}, 100); // Small delay to let React render first
+</script>
+
 </body>
 </html>
