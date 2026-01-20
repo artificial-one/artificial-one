@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Reviews - TEST PAGE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; z-index: 100; margin-top: 8px; padding: 8px 0; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a { color: #4b5563; padding: 12px 16px; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #f3f4f6; color: #6366f1; }
+    </style>
+</head>
+<body class="bg-white">
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html">
+                    <img src="artificial-one-logo-large.svg" alt="artificial.one" class="h-20">
+                </a>
+                <div class="flex gap-6 items-center">
+                    <a href="reviews.html" class="text-gray-900 hover:text-purple-600 font-medium">Reviews</a>
+                    <div class="dropdown">
+                        <span class="text-gray-600 hover:text-purple-600 font-medium cursor-pointer">
+                            Categories ▾
+                        </span>
+                        <div class="dropdown-content">
+                            <a href="category/writing-content.html">✍️ Writing & Content</a>
+                            <a href="category/design-images.html">🎨 Design & Images</a>
+                            <a href="category/video-animation.html">🎬 Video & Animation</a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-600">Blog</a>
+                    <a href="about.html" class="text-gray-600 hover:text-purple-600">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-16 bg-gradient-to-b from-purple-50 to-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold text-gray-900 mb-6">TEST PAGE - 5 Tools</h1>
+            <p class="text-xl text-gray-600">Testing basic functionality</p>
+        </div>
+    </section>
+
+    <section class="py-8 bg-white border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-sm font-semibold text-gray-700 mb-3">Filter by Type:</h3>
+            <div class="flex gap-3">
+                <button onclick="filterByType('all')" class="px-4 py-2 rounded-lg border border-gray-300 bg-purple-600 text-white">
+                    Show All
+                </button>
+                <button onclick="filterByType('free')" class="px-4 py-2 rounded-lg border border-gray-300">
+                    🆓 Free
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="tools-container" class="max-w-6xl mx-auto px-4 py-12"></div>
+
+    <script>
+        const tools = [
+            {cat:"✍️ Writing & Content",name:"ChatGPT",rating:"9.5/10",type:"free",tag:"🆓 Free",desc:"The most popular AI chatbot.",pros:["Free tier generous","Excellent at writing"],cons:["Can be wrong sometimes"],bestFor:"Everyone",pricing:"Free | $20/mo",link:"https://chat.openai.com"},
+            {cat:"✍️ Writing & Content",name:"Claude",rating:"9.3/10",type:"free",tag:"🆓 Free",desc:"Anthropic's AI assistant.",pros:["Thoughtful responses","Great at writing"],cons:["Free tier limited"],bestFor:"Writers",pricing:"Free | $20/mo",link:"https://claude.ai"},
+            {cat:"🎨 Design & Images",name:"Midjourney",rating:"9.7/10",type:"subscription",tag:"💳 Subscription",desc:"Best AI image generator.",pros:["Stunning images","Easy to use"],cons:["Expensive","Discord only"],bestFor:"Designers",pricing:"$10/mo",link:"https://midjourney.com"},
+            {cat:"🎨 Design & Images",name:"DALL-E",rating:"8.5/10",type:"free",tag:"🆓 Free",desc:"OpenAI's image generator.",pros:["Good quality","Easy prompts"],cons:["Limited free credits"],bestFor:"Quick images",pricing:"Pay per image",link:"https://labs.openai.com"},
+            {cat:"💻 Coding & Development",name:"GitHub Copilot",rating:"9.0/10",type:"subscription",tag:"💳 Subscription",desc:"AI code completion.",pros:["Great suggestions","Works everywhere"],cons:["Subscription required"],bestFor:"Developers",pricing:"$10/mo",link:"https://github.com/features/copilot"}
+        ];
+
+        function renderTools() {
+            const container = document.getElementById('tools-container');
+            if (!container) {
+                console.error("Container not found!");
+                return;
+            }
+            
+            let html = '<div class="grid md:grid-cols-2 gap-6">';
+            
+            tools.forEach(tool => {
+                html += `
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <div class="flex justify-between mb-3">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">${tool.name}</h3>
+                                <p class="text-sm text-gray-600">${tool.cat}</p>
+                            </div>
+                            <div class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-bold">
+                                ${tool.rating}
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">${tool.desc}</p>
+                        <div class="text-sm">
+                            <div class="mb-2"><strong>Pros:</strong> ${tool.pros.join(', ')}</div>
+                            <div class="mb-2"><strong>Cons:</strong> ${tool.cons.join(', ')}</div>
+                            <div class="mb-2"><strong>Pricing:</strong> ${tool.pricing}</div>
+                        </div>
+                        <a href="${tool.link}" target="_blank" class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
+                            Visit Site →
+                        </a>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            container.innerHTML = html;
+            
+            console.log(`✅ Rendered ${tools.length} tools`);
+        }
+
+        function filterByType(type) {
+            console.log(`Filter clicked: ${type}`);
+            alert(`Filter works! Selected: ${type}`);
+        }
+
+        // Run on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            console.log("Page loaded, rendering tools...");
+            renderTools();
+        });
+    </script>
+</body>
+</html>
