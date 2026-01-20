@@ -118,11 +118,10 @@
             
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Browse Tools</a>
-                    <a href="reviews.html" class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Reviews</a>
+                    <a href="reviews.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">Reviews</a>
                     <div class="mobile-dropdown">
                         <button class="mobile-dropdown-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-blue-700 hover:to-indigo-700 transition-all">
-                            Categories <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            📂 Categories <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
                             <a href="category/writing-content.html" class="block text-sm py-1">✍️ Writing & Content</a>
@@ -138,7 +137,7 @@
                     </div>
                     <div class="mobile-dropdown">
                         <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
-                            Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            🔍 Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
                             <a href="compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
@@ -147,8 +146,9 @@
                             <a href="guides/index.html" class="block text-sm py-1">📖 Guides</a>
                         </div>
                     </div>
-                    <a href="blog.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Blog</a>
-                    <a href="about.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center">About</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">Blog</a>
+                    <a href="about.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">About</a>
+                    <a href="index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold text-center">Home</a>
                 </div>
             </div>
         </div>
@@ -318,4 +318,26 @@
                     </a>
                 </div>
             </div>
-            <div class="border-t border-gray-300 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-500 text-xs sm
+            <div class="border-t border-gray-300 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-500 text-xs sm:text-base">© 2026 artificial.one - AI reviews by AI agents</div>
+        </div>
+    </footer>
+
+<script>
+// Mobile menu toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+});
+
+// Mobile dropdown toggles
+document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        content.classList.toggle('hidden');
+    });
+});
+</script>
+
+</body>
+</html>
