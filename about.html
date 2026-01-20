@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - How We Review AI Tools | artificial.one</title>
+    <meta name="description" content="Learn how artificial.one uses best-in-class AI agents to test and review 220+ AI tools. Automated testing with human oversight for unbiased reviews.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+            .dropdown { position: relative; display: inline-block; }
+        .dropdown .dropdown-content { 
+            display: none; 
+            position: absolute; 
+            background-color: white; 
+            min-width: 240px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
+            border-radius: 8px; 
+            z-index: 100;
+            top: calc(100% + 5px);
+            left: -15px;
+            padding: 12px 0;
+        }
+        .dropdown:hover .dropdown-content,
+        .dropdown .dropdown-content:hover { 
+            display: block; 
+            animation: fadeIn 0.2s ease-in;
+        }
+        .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: -15px;
+            right: -15px;
+            height: 15px;
+            display: none;
+        }
+        .dropdown:hover::after {
+            display: block;
+        }
+        .dropdown-content a { 
+            color: #4b5563; 
+            padding: 14px 20px; 
+            text-decoration: none; 
+            display: block; 
+            transition: all 0.2s; 
+            font-size: 15px;
+        }
+        .dropdown-content a:hover { 
+            background-color: #f3f4f6; 
+            color: #6366f1;
+            padding-left: 24px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .cursor-pointer { cursor: pointer; }
+            #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
+        .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
+        .mobile-dropdown-btn.active svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    
+    <!-- Header -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
+                <a href="index.html"><img src="artificial-one-logo-large.svg" alt="artificial.one" class="h-16 sm:h-20 md:h-24"></a>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-purple-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <div class="hidden md:flex gap-3 lg:gap-6 items-center text-sm lg:text-base">
+                    <a href="reviews.html" class="text-gray-600 hover:text-purple-600 font-medium">Reviews</a>
+                    <div class="dropdown">
+                        <span class="text-gray-600 hover:text-purple-600 font-medium cursor-pointer">Categories ▾</span>
+                        <div class="dropdown-content">
+                            <a href="category/writing-content.html">✍️ Writing & Content</a>
+                            <a href="category/design-images.html">🎨 Design & Images</a>
+                            <a href="category/video-animation.html">🎬 Video & Animation</a>
+                            <a href="category/coding-development.html">💻 Coding & Development</a>
+                            <a href="category/productivity-business.html">📊 Productivity & Business</a>
+                            <a href="category/voice-audio.html">🎙️ Voice & Audio</a>
+                            <a href="category/research-data.html">🔬 Research & Data</a>
+                            <a href="category/marketing-social.html">📱 Marketing & Social</a>
+                            <a href="category/data-analytics.html">📈 Data & Analytics</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <span class="text-gray-600 hover:text-purple-600 font-medium cursor-pointer">Explore ▾</span>
+                        <div class="dropdown-content">
+                            <a href="compare/index.html">🔍 Compare Tools</a>
+                            <a href="best/index.html">🏆 Best Of Lists</a>
+                            <a href="tutorials/index.html">📚 Tutorials</a>
+                            <a href="guides/index.html">📖 Guides</a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-600">Blog</a>
+                    <a href="about.html" class="text-gray-600 hover:text-purple-600">About</a>
+                    <a href="index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-3 sm:px-6 py-2 rounded-lg font-semibold">Home</a>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="reviews.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">Reviews</a>
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-blue-700 hover:to-indigo-700 transition-all">
+                            📂 Categories <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
+                            <a href="category/writing-content.html" class="block text-sm py-1">✍️ Writing & Content</a>
+                            <a href="category/design-images.html" class="block text-sm py-1">🎨 Design & Images</a>
+                            <a href="category/video-animation.html" class="block text-sm py-1">🎬 Video & Animation</a>
+                            <a href="category/coding-development.html" class="block text-sm py-1">💻 Coding & Development</a>
+                            <a href="category/productivity-business.html" class="block text-sm py-1">📊 Productivity & Business</a>
+                            <a href="category/voice-audio.html" class="block text-sm py-1">🎙️ Voice & Audio</a>
+                            <a href="category/research-data.html" class="block text-sm py-1">🔬 Research & Data</a>
+                            <a href="category/marketing-social.html" class="block text-sm py-1">📱 Marketing & Social</a>
+                            <a href="category/data-analytics.html" class="block text-sm py-1">📈 Data & Analytics</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center hover:from-purple-700 hover:to-pink-700 transition-all">
+                            🔍 Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
+                            <a href="compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
+                            <a href="best/index.html" class="block text-sm py-1">🏆 Best Of Lists</a>
+                            <a href="tutorials/index.html" class="block text-sm py-1">📚 Tutorials</a>
+                            <a href="guides/index.html" class="block text-sm py-1">📖 Guides</a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">Blog</a>
+                    <a href="about.html" class="text-gray-600 hover:text-purple-600 font-medium py-2">About</a>
+                    <a href="index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold text-center">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-12 sm:py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                    About <span class="gradient-text">artificial.one</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-600 leading-relaxed">
+                    AI tools, reviewed by AI. With human oversight.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-12 sm:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto">
+                
+                <!-- The Vision -->
+                <div class="mb-12 sm:mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Approach</h2>
+                    <div class="prose prose-lg text-gray-700 space-y-4">
+                        <p class="text-lg sm:text-xl leading-relaxed">
+                            The artificial.one project runs <strong>best-in-class AI agents</strong> to automatically test and review AI tools at scale. Our autonomous systems work 24/7 to evaluate 220+ tools across writing, design, video, coding, and more.
+                        </p>
+                        <p class="text-lg sm:text-xl leading-relaxed">
+                            We believe AI can review AI more thoroughly, consistently, and objectively than humanly possible. Our agents perform hundreds of tests, analyze outputs, measure performance, and write detailed reviews—all automatically.
+                        </p>
+                        <p class="text-lg sm:text-xl leading-relaxed">
+                            Humans don't write the reviews. We <strong>guide, adjust, and validate</strong> along the way to ensure quality and accuracy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- How It Works -->
+                <div class="mb-12 sm:mb-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">How We Review AI Tools</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg">1</div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Automated Testing</h3>
+                                <p class="text-gray-700">Our AI agents test each tool with real-world scenarios, measuring quality, speed, accuracy, and usability.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-lg">2</div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Analysis & Scoring</h3>
+                                <p class="text-gray-700">AI agents analyze outputs, compare against benchmarks, and generate ratings based on performance data.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-pink-600 text-white flex items-center justify-center font-bold text-lg">3</div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Review Generation</h3>
+                                <p class="text-gray-700">Detailed reviews are written automatically, highlighting pros, cons, pricing, and best use cases.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg">4</div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Human Oversight</h3>
+                                <p class="text-gray-700">Our team validates findings, adjusts for edge cases, and ensures reviews meet quality standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why This Matters -->
+                <div class="mb-12 sm:mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Why AI-Powered Reviews?</h2>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="bg-white border border-gray-200 rounded-xl p-6">
+                            <div class="text-3xl mb-3">⚡</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Scale</h3>
+                            <p class="text-gray-700">Test 220+ tools continuously—something impossible for human reviewers.</p>
+                        </div>
+
+                        <div class="bg-white border border-gray-200 rounded-xl p-6">
+                            <div class="text-3xl mb-3">🎯</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Consistency</h3>
+                            <p class="text-gray-700">Same testing methodology applied to every tool, every time.</p>
+                        </div>
+
+                        <div class="bg-white border border-gray-200 rounded-xl p-6">
+                            <div class="text-3xl mb-3">🔄</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Always Updated</h3>
+                            <p class="text-gray-700">Reviews automatically updated as tools evolve and improve.</p>
+                        </div>
+
+                        <div class="bg-white border border-gray-200 rounded-xl p-6">
+                            <div class="text-3xl mb-3">💡</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Unbiased</h3>
+                            <p class="text-gray-700">AI agents have no affiliations, sponsorships, or conflicts of interest.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission -->
+                <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 text-center">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+                    <p class="text-lg sm:text-xl text-gray-700 leading-relaxed">
+                        Help people find the right AI tool in <strong>5 minutes, not 5 hours</strong>—powered by the same technology we review.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 sm:py-20 bg-gradient-to-br from-indigo-600 to-purple-600">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to Find Your Perfect AI Tool?</h2>
+                <p class="text-lg sm:text-xl text-white/90 mb-8">Browse 220+ AI tools, all tested and reviewed by our AI agents.</p>
+                <a href="reviews.html" class="inline-block px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all">
+                    Browse All Reviews →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 py-8 sm:py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">
+                        artificial.one
+                    </h3>
+                    <p class="text-sm sm:text-base text-gray-600">
+                        AI tools reviewed by AI. With human oversight.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">Quick Links</h4>
+                    <div class="space-y-2 text-sm sm:text-base">
+                        <a href="index.html" class="block text-gray-600 hover:text-purple-600 transition-colors">Home</a>
+                        <a href="reviews.html" class="block text-gray-600 hover:text-purple-600 transition-colors">All Reviews</a>
+                        <a href="blog.html" class="block text-gray-600 hover:text-purple-600 transition-colors">Blog</a>
+                        <a href="about.html" class="block text-gray-600 hover:text-purple-600 transition-colors">About</a>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <h4 class="font-semibold text-gray-900 mb-4">Contact</h4>
+                    <a href="/cdn-cgi/l/email-protection#721a171e1e1d321300061b141b111b131e5c1d1c17" class="text-sm sm:text-base text-gray-600 hover:text-purple-600 transition-colors break-all">
+                        <span class="__cf_email__" data-cfemail="d1b9b4bdbdbe91b0a3a5b8b7b8b2b8b0bdffbebfb4">[email&#160;protected]</span>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-300 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-500 text-xs sm
