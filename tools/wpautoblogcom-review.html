@@ -18,18 +18,27 @@
         .btn { display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 1.1em; margin-top: 15px; }
         .btn:hover { background: #f0f0f0; }
         footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 60px; }
+            #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
+        .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
+        .mobile-dropdown-btn.active svg { transform: rotate(180deg); }
     </style>
 </head>
 <body>
-<nav style="background: white; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 50;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; height: 80px;">
-            <a href="../index.html"><img src="../artificial-one-logo-large.svg" alt="artificial.one" style="height: 80px;"></a>
-            <div style="display: flex; gap: 24px; align-items: center; font-size: 15px;">
-                <a href="../reviews.html" style="color: #4b5563; text-decoration: none; font-weight: 500;">Reviews</a>
-                <a href="../guides/best-lifetime-ai-tools.html" style="color: #4b5563; text-decoration: none; font-weight: 500;">Lifetime Deals</a>
-                <a href="../index.html" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">Home</a>
-            </div>
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
+                <a href="../index.html"><img src="../artificial-one-logo-large.svg" alt="artificial.one" class="h-16 sm:h-20 md:h-24"></a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-purple-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <div class="hidden md:flex gap-4 sm:gap-6 items-center text-sm sm:text-base">
+                    <a href="../reviews.html" class="text-gray-600 hover:text-purple-600">All Reviews</a>
+                    <a href="../blog.html" class="text-gray-600 hover:text-purple-600">Blog</a>
+                    <a href="../about.html" class="text-gray-600 hover:text-purple-600">About</a>
+                </div>
             </div>
             
             <div id="mobile-menu" class="hidden md:hidden pb-4">
@@ -78,8 +87,8 @@
                     <a href="../about.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center">About</a>
                 </div>
             </div>
-            </div>
-</nav>
+        </div>
+    </nav>
     <header><div class="container"><h1>WPAutoBlog Review: Complete Guide</h1><div class="rating-box"><div class="score">4.5/5</div><p style="margin-top: 10px;">AppSumo lifetime deal</p></div></div></header>
     <div class="container">
         <section><p style="font-size: 1.2em; line-height: 1.8; margin-bottom: 30px;"><strong>WPAutoBlog</strong> automates WordPress blogging with AI. Generate and publish SEO-friendly content natively in WordPress. Lifetime access via AppSumo.</p></section>
