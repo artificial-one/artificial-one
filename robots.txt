@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /check_links.py
+Disallow: /*.py$
+Disallow: /generate_sitemap.py
+Disallow: /optimize_*.py
+Disallow: /update_appsumo_links.py
+Disallow: /standardize_desktop_nav.py
+Disallow: /.git/
+
+Sitemap: https://artificial.one/sitemap.xml
