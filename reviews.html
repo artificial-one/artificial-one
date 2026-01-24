@@ -938,6 +938,12 @@ function renderTools() {
         
         if (!shouldShow) return;
         
+        // Generate review URL slug from tool name
+        const reviewSlug = tool.name.toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+        const reviewUrl = `tools/${reviewSlug}-review.html`;
+        
         html += `
             <div class="tool-card bg-white rounded-xl p-6 ${typeClass} ${catSlug}">
                 <div class="flex justify-between items-start mb-3">
@@ -962,9 +968,14 @@ function renderTools() {
                 </div>
                 <div class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> ${tool.bestFor}</div>
                 <div class="text-sm text-gray-700 mb-4"><strong>Pricing:</strong> ${tool.pricing}</div>
-                <a href="${tool.link}" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700">
-                    Visit ${tool.name} →
-                </a>
+                <div class="flex gap-3 flex-wrap">
+                    <a href="${tool.link}" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700">
+                        Visit ${tool.name} →
+                    </a>
+                    <a href="${reviewUrl}" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700">
+                        Full ${tool.name} Review
+                    </a>
+                </div>
             </div>
         `;
     });
