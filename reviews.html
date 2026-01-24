@@ -1070,24 +1070,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
-// Mobile menu toggle
-document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-});
-
-// Mobile dropdown toggles
-document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        const content = this.nextElementSibling;
-        content.classList.toggle('hidden');
-    });
-});
-</script>
-
-
-<script>
 document.getElementById('mobile-menu-btn').addEventListener('click', function() {
     document.getElementById('mobile-menu').classList.toggle('hidden');
 });
