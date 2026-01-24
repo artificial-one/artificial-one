@@ -68,8 +68,8 @@
                     <a href="../reviews.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-4 sm:px-6 py-2 rounded-lg font-semibold">Browse Tools</a>
                 </div>
             </div>
-
-                                    <div id="mobile-menu" class="hidden md:hidden pb-4">
+            
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-3">
                     <a href="../reviews.html" class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Reviews</a>
                     <div class="mobile-dropdown">
@@ -342,6 +342,12 @@
 <script>
 document.getElementById('mobile-menu-btn').addEventListener('click', function() {
     document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        this.nextElementSibling.classList.toggle('hidden');
+    });
 });
 </script>
 
