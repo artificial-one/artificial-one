@@ -1,104 +1,123 @@
 #!/usr/bin/env python3
 """
-Sitemap Generator for artificial.one
-Run this in your repo: python generate_sitemap.py
+Generate a complete sitemap.xml with all HTML pages on the site.
+Updates lastmod to today's date (2026-01-24).
 """
+from pathlib import Path
+from datetime import date
 
-import os
-from datetime import datetime
+def get_priority(path):
+    """Determine priority based on page location."""
+    path_str = str(path)
+    
+    # Root pages
+    if path.name == 'index.html':
+        return 1.0
+    if path.name in ['reviews.html', 'blog.html']:
+        return 0.9
+    
+    # Important guide pages
+    if 'best-lifetime-deal-software-2026' in path_str:
+        return 0.9
+    
+    # Category pages
+    if '/category/' in path_str:
+        return 0.8
+    
+    # Guide pages
+    if '/guides/' in path_str:
+        return 0.7
+    
+    # Tool review pages
+    if '/tools/' in path_str:
+        return 0.7
+    
+    # Blog posts
+    if 'blog-' in path.name:
+        return 0.6
+    
+    # Compare, best, tutorials
+    if any(x in path_str for x in ['/compare/', '/best/', '/tutorials/']):
+        return 0.6
+    
+    # About and other pages
+    return 0.5
 
-def generate_sitemap(base_url="https://artificial.one"):
-    """Generate sitemap.xml from all HTML files in current directory"""
+def get_changefreq(path):
+    """Determine change frequency based on page type."""
+    path_str = str(path)
     
-    sitemap_entries = []
+    # Homepage and reviews page update frequently
+    if path.name in ['index.html', 'reviews.html']:
+        return 'daily'
     
-    # Priority and changefreq rules
-    def get_priority_and_freq(filepath):
-        if filepath == 'index.html':
-            return ('1.0', 'daily')
-        elif filepath == 'reviews.html':
-            return ('0.9', 'daily')
-        elif filepath.startswith('guides/best-lifetime-deal-software'):
-            return ('0.9', 'weekly')
-        elif filepath.startswith('guides/use-case'):
-            return ('0.8', 'weekly')
-        elif filepath.startswith('guides/best-') or filepath.startswith('guides/appsumo'):
-            return ('0.8', 'weekly')
-        elif filepath.startswith('tools/') and filepath.endswith('-review.html'):
-            return ('0.7', 'monthly')
-        elif filepath.startswith('compare/'):
-            return ('0.7', 'monthly')
-        elif filepath.startswith('category/'):
-            return ('0.8', 'weekly')
-        elif filepath.startswith('best/'):
-            return ('0.7', 'weekly')
-        elif filepath.startswith('tutorials/'):
-            return ('0.6', 'monthly')
-        elif filepath.startswith('blog'):
-            return ('0.6', 'monthly')
-        else:
-            return ('0.6', 'monthly')
+    # Blog and tool reviews update weekly
+    if '/tools/' in path_str or 'blog-' in path.name or '/blog/' in path_str:
+        return 'weekly'
     
-    # Walk through all directories
-    for root, dirs, files in os.walk('.'):
-        # Skip hidden and git directories
-        dirs[:] = [d for d in dirs if not d.startswith('.')]
+    # Category and guide pages update less frequently
+    if any(x in path_str for x in ['/category/', '/guides/']):
+        return 'weekly'
+    
+    # Everything else is monthly
+    return 'monthly'
+
+def generate_sitemap():
+    """Generate sitemap.xml with all HTML pages."""
+    root = Path('.')
+    base_url = 'https://artificial.one'
+    today = '2026-01-24'
+    
+    # Find all HTML files
+    html_files = []
+    for html_file in root.rglob('*.html'):
+        # Skip hidden directories and node_modules
+        if any(part.startswith('.') for part in html_file.parts):
+            continue
+        if 'node_modules' in html_file.parts:
+            continue
         
-        for file in files:
-            if file.endswith('.html'):
-                # Get relative path
-                filepath = os.path.join(root, file)
-                filepath = filepath.replace('.\\', '').replace('./', '')
-                filepath = filepath.replace('\\', '/')
-                
-                # Get priority and frequency
-                priority, changefreq = get_priority_and_freq(filepath)
-                
-                # Create URL
-                if filepath == 'index.html':
-                    url = base_url + '/'
-                else:
-                    url = base_url + '/' + filepath
-                
-                sitemap_entries.append({
-                    'url': url,
-                    'priority': priority,
-                    'changefreq': changefreq
-                })
+        html_files.append(html_file)
     
-    # Sort by priority (highest first)
-    sitemap_entries.sort(key=lambda x: float(x['priority']), reverse=True)
+    # Sort files for consistent ordering
+    html_files.sort()
     
-    # Generate XML
-    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    # Generate sitemap XML
+    sitemap = ['<?xml version="1.0" encoding="UTF-8"?>']
+    sitemap.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
     
-    for entry in sitemap_entries:
-        xml += '  <url>\n'
-        xml += f'    <loc>{entry["url"]}</loc>\n'
-        xml += f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>\n'
-        xml += f'    <changefreq>{entry["changefreq"]}</changefreq>\n'
-        xml += f'    <priority>{entry["priority"]}</priority>\n'
-        xml += '  </url>\n'
+    for html_file in html_files:
+        # Convert path to URL
+        url_path = str(html_file).replace('\\', '/')
+        
+        # Remove leading './' if present
+        if url_path.startswith('./'):
+            url_path = url_path[2:]
+        
+        # Handle index.html at root
+        if url_path == 'index.html':
+            url = f'{base_url}/'
+        else:
+            url = f'{base_url}/{url_path}'
+        
+        priority = get_priority(html_file)
+        changefreq = get_changefreq(html_file)
+        
+        sitemap.append('  <url>')
+        sitemap.append(f'    <loc>{url}</loc>')
+        sitemap.append(f'    <lastmod>{today}</lastmod>')
+        sitemap.append(f'    <changefreq>{changefreq}</changefreq>')
+        sitemap.append(f'    <priority>{priority}</priority>')
+        sitemap.append('  </url>')
     
-    xml += '</urlset>\n'
+    sitemap.append('</urlset>')
     
-    # Write to file
-    with open('sitemap.xml', 'w', encoding='utf-8') as f:
-        f.write(xml)
+    # Write sitemap
+    sitemap_content = '\n'.join(sitemap)
+    Path('sitemap.xml').write_text(sitemap_content, encoding='utf-8')
     
-    print(f"✅ Generated sitemap.xml with {len(sitemap_entries)} pages")
-    print(f"📍 Saved to: sitemap.xml")
-    
-    # Show summary
-    by_folder = {}
-    for entry in sitemap_entries:
-        folder = entry['url'].split('/')[3] if len(entry['url'].split('/')) > 3 else 'root'
-        by_folder[folder] = by_folder.get(folder, 0) + 1
-    
-    print("\n📊 Pages by folder:")
-    for folder, count in sorted(by_folder.items(), key=lambda x: x[1], reverse=True):
-        print(f"  {folder}: {count} pages")
+    print(f'Generated sitemap.xml with {len(html_files)} URLs')
+    print(f'Last modified date: {today}')
 
 if __name__ == '__main__':
     generate_sitemap()
