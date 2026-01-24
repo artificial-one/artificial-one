@@ -85,16 +85,53 @@
                 </div>
         </div>
         
-        <div id="mobile-menu" class="hidden" style="padding-bottom: 16px; border-top: 1px solid #e5e7eb; margin-top: 16px;">
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-                <a href="../index.html" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center;">Home</a>
-                <a href="../reviews.html" style="background: linear-gradient(135deg, #8b5cf6, #a855f7); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center;">Reviews</a>
-                <a href="../guides/best-lifetime-deal-software-2026.html" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center;">💰 Lifetime Deals</a>
-                <a href="../blog.html" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center;">Blog</a>
-                <a href="../about.html" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center;">About</a>
+                                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="../reviews.html" class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Reviews</a>
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold w-full text-center flex justify-between items-center">
+                            Categories <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                            <a href="../category/writing-content.html" class="block text-sm py-1">✍️ Writing & Content</a>
+                            <a href="../category/design-images.html" class="block text-sm py-1">🎨 Design & Images</a>
+                            <a href="../category/video-animation.html" class="block text-sm py-1">🎬 Video & Animation</a>
+                            <a href="../category/coding-development.html" class="block text-sm py-1">💻 Coding & Development</a>
+                            <a href="../category/productivity-business.html" class="block text-sm py-1">📊 Productivity & Business</a>
+                            <a href="../category/voice-audio.html" class="block text-sm py-1">🎙️ Voice & Audio</a>
+                            <a href="../category/research-data.html" class="block text-sm py-1">🔬 Research & Data</a>
+                            <a href="../category/marketing-social.html" class="block text-sm py-1">📱 Marketing & Social</a>
+                            <a href="../category/data-analytics.html" class="block text-sm py-1">📈 Data & Analytics</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold w-full text-center flex justify-between items-center">
+                            Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                            <a href="../compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
+                            <a href="../best/index.html" class="block text-sm py-1">🏆 Best Of Lists</a>
+                            <a href="../tutorials/index.html" class="block text-sm py-1">📚 Tutorials</a>
+                            <a href="../guides/index.html" class="block text-sm py-1">📖 Guides</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold w-full text-center flex justify-between items-center">
+                            💰 Lifetime Deals <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                            <a href="../guides/best-lifetime-deal-software-2026.html" class="block text-sm py-1">🎯 Browse All Deals</a>
+                            <a href="../compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
+                            <a href="../guides/use-case-startups.html" class="block text-sm py-1">🚀 Best for Startups</a>
+                            <a href="../guides/use-case-freelancers.html" class="block text-sm py-1">💼 Best for Freelancers</a>
+                            <a href="../guides/best-lifetime-ai-tools.html" class="block text-sm py-1">🤖 AI Tools</a>
+                        </div>
+                    </div>
+                    <a href="../blog.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Blog</a>
+                    <a href="../about.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center">About</a>
+                </div>
             </div>
-        </div>
-    </div>
+            </div>
 </nav>
 
 <style>
@@ -360,5 +397,17 @@
     <footer>
         <p>© 2026 artificial.one - ResearchGate AI Review</p>
     </footer>
+
+<script>
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        this.nextElementSibling.classList.toggle('hidden');
+    });
+});
+</script>
 </body>
 </html>
