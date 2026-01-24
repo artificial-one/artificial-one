@@ -20,9 +20,14 @@
 <body class="bg-white">
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="../index.html"><img src="../artificial-one-logo-large.svg" alt="artificial.one" class="h-20"></a>
-                <div class="flex gap-6 items-center">
+            <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
+                <a href="../index.html"><img src="../artificial-one-logo-large.svg" alt="artificial.one" class="h-16 sm:h-20 md:h-24"></a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-purple-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div class="hidden md:flex gap-6 items-center">
                     <a href="../reviews.html" class="text-gray-600 hover:text-purple-600">Reviews</a>
                     <div class="dropdown">
                         <span class="text-gray-600 hover:text-purple-600 cursor-pointer">Categories ▾</span>
@@ -40,6 +45,14 @@
                     </div>
                     <a href="../blog.html" class="text-gray-600 hover:text-purple-600">Blog</a>
                     <a href="../about.html" class="text-gray-600 hover:text-purple-600">About</a>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4" style="border-top: 1px solid #e5e7eb; margin-top: 1rem;">
+                <div class="flex flex-col space-y-3">
+                    <a href="../reviews.html" class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center block">Reviews</a>
+                    <a href="../blog.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center block">Blog</a>
+                    <a href="../about.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center block">About</a>
+                    <a href="../index.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center block">Home</a>
                 </div>
             </div>
         </div>
@@ -139,5 +152,11 @@
             <p>© 2026 artificial.one</p>
         </div>
     </footer>
+<script>
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+</script>
+
 </body>
 </html>
