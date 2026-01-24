@@ -15,7 +15,7 @@ def get_og_image_url(filepath):
     
     if filepath.name == 'index.html':
         return f'{base_url}/images/og-homepage.jpg'
-    elif '/tools/' in path_str:
+    elif '/tools/' in path_str or filepath.parent.name == 'tools':
         # Tool review pages
         tool_name = filepath.stem.replace('-review', '').replace('-', '-')
         return f'{base_url}/images/og-tools/{tool_name}.jpg'
