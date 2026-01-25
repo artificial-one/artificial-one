@@ -4814,9 +4814,7 @@
                             <a href="blog-writeseed-ai-content-writer.html" class="text-green-600 hover:text-green-700 font-medium">Read More →</a>
                         </div>
                     </div>
-                </article>                </article>
-
-
+                </article>
 
             </div>
 
@@ -4869,45 +4867,61 @@ let currentCategoryFilter = 'all';
 
 function filterByCategory(category) {
     currentCategoryFilter = category;
+    
+    // Update active button
     document.querySelectorAll('.cat-btn').forEach(btn => {
         btn.classList.remove('active');
-        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${category}'`)) {
+        const onclick = btn.getAttribute('onclick');
+        if (onclick && onclick.includes(`'${category}'`)) {
             btn.classList.add('active');
         }
     });
     
-    const articles = document.querySelectorAll('.article-card');
+    // Filter articles - only select articles with data-category attribute
+    const articles = document.querySelectorAll('.article-card[data-category]');
     let visibleCount = 0;
     
     articles.forEach(article => {
         const articleCategory = article.getAttribute('data-category');
+        if (!articleCategory) {
+            // Skip articles without data-category
+            article.style.display = 'none';
+            return;
+        }
+        
         if (category === 'all' || articleCategory === category) {
             article.style.display = '';
+            article.style.visibility = 'visible';
             visibleCount++;
         } else {
             article.style.display = 'none';
         }
     });
-    
-    updateCounts();
 }
 
 function updateCounts() {
-    const articles = document.querySelectorAll('.article-card');
+    // Count only articles that have data-category and are in the grid
+    const articles = Array.from(document.querySelectorAll('.article-card[data-category]'));
     const categoryCounts = {};
     
+    // Count by actual data-category values
     articles.forEach(article => {
-        const cat = article.getAttribute('data-category') || 'other';
-        categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+        const cat = article.getAttribute('data-category');
+        if (cat && cat.trim()) {
+            categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+        }
     });
     
-    // Update button labels with counts
+    // Update button labels with accurate counts
     document.querySelectorAll('.cat-btn').forEach(btn => {
         const onclick = btn.getAttribute('onclick');
         const match = onclick.match(/filterByCategory\('([^']+)'\)/);
         if (match) {
             const cat = match[1];
-            const text = btn.textContent.split('(')[0].trim();
+            // Get the button text without the count
+            const textMatch = btn.textContent.match(/^([^(]+)/);
+            const text = textMatch ? textMatch[1].trim() : btn.textContent.split('(')[0].trim();
+            
             if (cat === 'all') {
                 btn.textContent = `${text} (${articles.length})`;
             } else {
@@ -4919,6 +4933,13 @@ function updateCounts() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
+    // Ensure all articles are visible initially
+    document.querySelectorAll('.article-card[data-category]').forEach(article => {
+        article.style.display = '';
+        article.style.visibility = 'visible';
+    });
+    
+    // Initialize counts
     updateCounts();
 });
 </script>
