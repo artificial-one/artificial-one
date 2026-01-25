@@ -301,7 +301,7 @@
     </section>
 
     <!-- Filter Section -->
-    <section class="py-6 sm:py-8 bg-white border-b border-gray-200">
+    <section id="blog-filters" class="py-6 sm:py-8 bg-white border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
             <div>
                 <h3 class="text-sm font-semibold text-gray-700 mb-3">Filter by Category:</h3>
@@ -326,7 +326,7 @@
     </section>
 
     <!-- Blog Grid -->
-    <section class="py-16 bg-white">
+    <section id="blog-grid" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
 
@@ -4855,12 +4855,10 @@ function filterByCategory(category) {
         }
     });
     
-    // Filter articles - select ALL articles with article-card class, then check data-category
-    // This ensures we get all articles, even if some don't have the attribute selector working
-    const allArticles = document.querySelectorAll('.article-card');
-    const articles = Array.from(allArticles).filter(article => {
-        return article.hasAttribute('data-category');
-    });
+    // Filter articles - only those inside the blog grid (avoids any other .article-card on page)
+    const gridEl = document.getElementById('blog-grid');
+    const allArticles = gridEl ? gridEl.querySelectorAll('.article-card[data-category]') : document.querySelectorAll('.article-card[data-category]');
+    const articles = Array.from(allArticles);
     
     let visibleCount = 0;
     
@@ -4887,17 +4885,19 @@ function filterByCategory(category) {
         }
     });
     
-    // Debug log
-    if (category === 'education') {
-        console.log(`Education filter: Found ${articles.length} articles with data-category, showing ${visibleCount}`);
-        const educationArticles = articles.filter(a => a.getAttribute('data-category') === 'education');
-        console.log(`Education articles in DOM:`, educationArticles.length);
+    // Scroll to filter + grid so user sees active filter and all results (fixes "only see N" on mobile)
+    const filterEl = document.getElementById('blog-filters');
+    if (filterEl) {
+        requestAnimationFrame(function() {
+            filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
     }
 }
 
 function updateCounts() {
-    // Count only articles that have data-category and are in the grid
-    const articles = Array.from(document.querySelectorAll('.article-card[data-category]'));
+    // Count only articles inside the blog grid
+    const gridEl = document.getElementById('blog-grid');
+    const articles = gridEl ? Array.from(gridEl.querySelectorAll('.article-card[data-category]')) : Array.from(document.querySelectorAll('.article-card[data-category]'));
     const categoryCounts = {};
     
     // Count by actual data-category values
@@ -4929,24 +4929,15 @@ function updateCounts() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-    // Wait a bit for DOM to fully render
     setTimeout(function() {
-        // Ensure all articles are visible initially
-        const articles = document.querySelectorAll('.article-card[data-category]');
+        const gridEl = document.getElementById('blog-grid');
+        const articles = gridEl ? gridEl.querySelectorAll('.article-card[data-category]') : document.querySelectorAll('.article-card[data-category]');
         articles.forEach(article => {
             article.style.display = '';
             article.style.visibility = 'visible';
             article.style.opacity = '1';
         });
-        
-        // Initialize counts after ensuring visibility
         updateCounts();
-        
-        // Debug: Log actual counts
-        console.log('Filter initialization complete');
-        console.log('Total articles with data-category:', articles.length);
-        const educationArticles = Array.from(articles).filter(a => a.getAttribute('data-category') === 'education');
-        console.log('Education articles found:', educationArticles.length);
     }, 100);
 });
 </script>
