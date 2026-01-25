@@ -25,6 +25,14 @@ for f in os.listdir('.'):
         if not any(x in f for x in ['ai-', 'appsumo', 'chatgpt', 'copilot', 'free', 'midjourney', 'professional', 'worth', '57-new', 'html.html']):
             blog_name = f.replace('blog-', '').replace('.html', '')
             blogs.add(blog_name)
+            
+# Handle name variations - some tools have multiple review files or naming variations
+# airbrush-ai-image-generator review file -> blog-airbrush-ai-image-generator.html exists
+if 'airbrush-ai-image-generator' in [f.replace('blog-', '').replace('.html', '') for f in os.listdir('.') if f.startswith('blog-airbrush')]:
+    blogs.add('airbrush-ai-image-generator')
+# writeseed-ai-content-writer review file -> blog-writeseed-ai-content-writer.html exists  
+if 'writeseed-ai-content-writer' in [f.replace('blog-', '').replace('.html', '') for f in os.listdir('.') if f.startswith('blog-writeseed')]:
+    blogs.add('writeseed-ai-content-writer')
 
 # Find missing
 missing = tools_with_affiliates - blogs
@@ -38,4 +46,4 @@ if missing:
     for t in sorted(list(missing))[:30]:
         print(f"  - {t}")
 else:
-    print("\n✅ All tools with affiliate links have blog posts!")
+    print("\n[SUCCESS] All tools with affiliate links have blog posts!")
