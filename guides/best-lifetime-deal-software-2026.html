@@ -189,7 +189,7 @@
         <div style="display: flex; justify-content: space-between; align-items: center; height: 80px;">
             <a href="../index.html"><img src="../artificial-one-logo-large.svg" alt="artificial.one" style="height: 80px;"></a>
             
-            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-purple-600">
+            <button type="button" id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-purple-600">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -240,10 +240,10 @@
                 <div class="flex flex-col space-y-3">
                     <a href="../reviews.html" class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Reviews</a>
                     <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold w-full text-center flex justify-between items-center">
+                        <button type="button" class="mobile-dropdown-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center text-center">
                             Categories <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
                             <a href="../category/writing-content.html" class="block text-sm py-1">✍️ Writing & Content</a>
                             <a href="../category/design-images.html" class="block text-sm py-1">🎨 Design & Images</a>
                             <a href="../category/video-animation.html" class="block text-sm py-1">🎬 Video & Animation</a>
@@ -256,10 +256,10 @@
                         </div>
                     </div>
                     <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold w-full text-center flex justify-between items-center">
+                        <button type="button" class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center text-center">
                             Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
                             <a href="../compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
                             <a href="../best/index.html" class="block text-sm py-1">🏆 Best Of Lists</a>
                             <a href="../tutorials/index.html" class="block text-sm py-1">📚 Tutorials</a>
@@ -267,15 +267,16 @@
                         </div>
                     </div>
                     <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold w-full text-center flex justify-between items-center">
+                        <button type="button" class="mobile-dropdown-btn bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex justify-between items-center text-center">
                             💰 Lifetime Deals <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                        <div class="mobile-dropdown-content hidden bg-gray-50 rounded-lg p-4 space-y-2 mt-2">
                             <a href="../guides/best-lifetime-deal-software-2026.html" class="block text-sm py-1">🎯 Browse All Deals</a>
                             <a href="../compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
                             <a href="../guides/use-case-startups.html" class="block text-sm py-1">🚀 Best for Startups</a>
                             <a href="../guides/use-case-freelancers.html" class="block text-sm py-1">💼 Best for Freelancers</a>
                             <a href="../guides/best-lifetime-ai-tools.html" class="block text-sm py-1">🤖 AI Tools</a>
+                            <a href="../guides/best-lifetime-productivity-under-50.html" class="block text-sm py-1">⚡ Under $50</a>
                         </div>
                     </div>
                     <a href="../blog.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Blog</a>
@@ -286,12 +287,20 @@
 </nav>
 
 <style>
-.dropdown:hover .dropdown-content { display: block !important; }
+.dropdown { position: relative; display: inline-block; }
+.dropdown .dropdown-content { display: none; position: absolute; background-color: white; min-width: 240px; box-shadow: 0 8px 16px rgba(0,0,0,0.15); border-radius: 8px; z-index: 100; top: calc(100% + 5px); left: -15px; padding: 12px 0; }
+.dropdown:hover .dropdown-content, .dropdown .dropdown-content:hover { display: block; animation: navFadeIn 0.2s ease-in; }
+.dropdown::after { content: ''; position: absolute; top: 100%; left: -15px; right: -15px; height: 15px; display: none; }
+.dropdown:hover::after { display: block; }
+.dropdown-content a { color: #4b5563; padding: 14px 20px; text-decoration: none; display: block; transition: all 0.2s; font-size: 15px; }
+.dropdown-content a:hover { background-color: #f3f4f6; color: #6366f1; padding-left: 24px; }
+@keyframes navFadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+.cursor-pointer { cursor: pointer; }
+#mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
+.mobile-dropdown-btn svg { transition: transform 0.3s ease; }
+.mobile-dropdown-btn.active svg { transform: rotate(180deg); }
 .hidden { display: none !important; }
-@media (max-width: 768px) {
-    #desktop-nav { display: none !important; }
-    #mobile-menu-btn { display: block !important; }
-}
+@media (max-width: 768px) { #mobile-menu-btn { display: block !important; } }
 </style>
 
     <header>
