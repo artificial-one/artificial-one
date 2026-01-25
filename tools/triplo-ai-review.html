@@ -45,6 +45,12 @@
             #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
         .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
         .mobile-dropdown-btn.active svg { transform: rotate(180deg); }
+        #sticky-cta-bar { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 20px; display: none; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; z-index: 9999; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); }
+        #sticky-cta-bar.visible { display: flex; }
+        #sticky-cta-bar .sticky-cta-text { font-size: 1rem; font-weight: 600; }
+        #sticky-cta-bar .sticky-cta-btn { background: white; color: #667eea; padding: 10px 24px; border-radius: 6px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+        #sticky-cta-bar .sticky-cta-btn:hover { background: #f0f0f0; }
+        @media (max-width: 640px) { #sticky-cta-bar { flex-direction: column; gap: 10px; padding: 12px; } #sticky-cta-bar .sticky-cta-text { text-align: center; font-size: 0.95rem; } }
     </style>
 <script src="https://cdn.tailwindcss.com"></script>
     <script type="application/ld+json">
@@ -423,12 +429,14 @@
             </div>
         </section>
 
-        <div class="cta-box">
-            <h2>Get Triplo AI super deal</h2>
+        <div class="cta-box" id="main-cta-box">
+            <h2>Get Triplo AI for $69 — lifetime access</h2>
             <p style="font-size: 1.2em; margin: 15px 0;">Pay once, use forever. GPT-4, Claude, and Gemini included.</p>
             <p style="font-size: 1.5em; font-weight: 700; margin: 15px 0;">$69 (normally $102/year)</p>
-            <a href="https://appsumo.8odi.net/9L4b7e" class="btn" target="_blank" rel="noopener nofollow sponsored nofollow sponsored">Get Super Access →</a>
-            <p style="font-size: 0.9em; margin-top: 15px; opacity: 0.9;">60-day money-back guarantee</p>
+            <p style="font-size: 0.95em; margin-top: 8px; opacity: 0.95;">★ 4.9/5 from 132+ verified reviews</p>
+            <a href="https://appsumo.8odi.net/9L4b7e" class="btn" target="_blank" rel="noopener nofollow sponsored">Claim Triplo AI deal →</a>
+            <p style="font-size: 0.9em; margin-top: 12px; opacity: 0.9;">60-day money-back guarantee</p>
+            <p style="font-size: 0.85em; margin-top: 10px; opacity: 0.85;">We may earn a commission if you purchase through our link.</p>
         </div>
 
         <section style="margin-top: 60px;">
@@ -440,12 +448,12 @@
                 The ability to summon AI assistance in any app—without copy-pasting or switching tabs—is genuinely transformative for productivity. Having GPT-4, Claude, and Gemini all in one tool is just icing on the cake.
             </p>
             <p style="font-size: 1.1em; line-height: 1.8; margin-top: 15px;">
-                At $69 super vs $102/year subscription, it pays for itself in 8 months. The 4.91/5 rating from 132 real users speaks volumes. If you use AI tools daily, this is a no-brainer purchase.
+                At $69 one-time vs $102/year subscription, it pays for itself in 8 months. The 4.91/5 rating from 132 real users speaks volumes. If you use AI tools daily, this is a no-brainer purchase.
             </p>
             <div style="background: #f0f7ff; padding: 30px; border-radius: 10px; margin: 30px 0; text-align: center;">
                 <h3 style="color: #667eea; margin-bottom: 15px;">Our Rating: 4.9/5</h3>
                 <p style="font-size: 1.1em;">Highly Recommended for daily AI users</p>
-                <a href="https://appsumo.8odi.net/9L4b7e" style="display: inline-block; background: #667eea; color: white; padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: 700; margin-top: 20px;" target="_blank" rel="noopener nofollow sponsored nofollow sponsored">Get Triplo AI super deal →</a>
+                <a href="https://appsumo.8odi.net/9L4b7e" style="display: inline-block; background: #667eea; color: white; padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: 700; margin-top: 20px;" target="_blank" rel="noopener nofollow sponsored">Claim Triplo AI $69 deal →</a>
             </div>
         </section>
 
@@ -454,8 +462,8 @@
             <h3>What is Triplo AI?</h3>
             <p>Triplo AI is a desktop AI assistant that works on any app or website on your computer. Press a keyboard shortcut and it appears instantly, giving you access to GPT-4, Claude, and Gemini without leaving your current application.</p>
 
-            <h3>Is Triplo AI really super access?</h3>
-            <p>Yes. Pay $69 once and use it forever. No hidden fees, no expiration. Includes all future updates. <a href="https://appsumo.8odi.net/9L4b7e" target="_blank" rel="noopener nofollow sponsored nofollow sponsored" style="color: #667eea; font-weight: 600;">Get the super deal here →</a></p>
+            <h3>Is Triplo AI really lifetime access?</h3>
+            <p>Yes. Pay $69 once and use it forever. No hidden fees, no expiration. Includes all future updates. <a href="https://appsumo.8odi.net/9L4b7e" target="_blank" rel="noopener nofollow sponsored" style="color: #667eea; font-weight: 600;">Claim the deal here →</a></p>
 
             <h3>Does it work on mobile?</h3>
             <p>No, Triplo AI is currently desktop-only (Mac and Windows). Mobile version is not available yet.</p>
@@ -470,22 +478,41 @@
             <p>There's no free trial, but you get a 60-day money-back guarantee. Test it risk-free for 2 months.</p>
 
             <h3>How many prompts can I use?</h3>
-            <p>Unlimited. There are no usage caps or monthly limits with the super deal.</p>
+            <p>Unlimited. There are no usage caps or monthly limits with the lifetime deal.</p>
 
-            <h3>How does the super deal work?</h3>
-            <p>The super deal gives you one-time access to Triplo AI AI for $69, compared to the regular $8.50/month subscription ($102/year). You pay once and get super access with all future updates included.</p>
+            <h3>How does the lifetime deal work?</h3>
+            <p>The lifetime deal gives you one-time access to Triplo AI for $69, compared to the regular $8.50/month subscription ($102/year). You pay once and get lifetime access with all future updates included.</p>
 
             <h3>Is Triplo AI worth the money?</h3>
-            <p>Absolutely. If you write emails, documents, or content regularly, Triplo AI pays for itself in 8 months. The ability to use AI in any app without switching tabs is a game-changer for productivity. At $69 super, it's one of the best AI tool investments you can make.</p>
+            <p>Absolutely. If you write emails, documents, or content regularly, Triplo AI pays for itself in 8 months. The ability to use AI in any app without switching tabs is a game-changer for productivity. At $69 one-time, it's one of the best AI tool investments you can make.</p>
+        </section>
+
+        <section style="margin-top: 60px;">
+            <h2>Related Tools &amp; Alternatives</h2>
+            <p style="margin-bottom: 20px; color: #555;">Compare Triplo AI with similar AI assistants and lifetime deals:</p>
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="margin-bottom: 10px;"><a href="neuronwriter-review.html" style="color: #667eea; font-weight: 600;">NeuronWriter</a> — SEO writing with lifetime deal</li>
+                <li style="margin-bottom: 10px;"><a href="tidycal-review.html" style="color: #667eea; font-weight: 600;">TidyCal</a> — Scheduling &amp; calendars, one-time price</li>
+                <li style="margin-bottom: 10px;"><a href="cursor-review.html" style="color: #667eea; font-weight: 600;">Cursor</a> — AI-powered code editor</li>
+                <li style="margin-bottom: 10px;"><a href="writesonic-review.html" style="color: #667eea; font-weight: 600;">Writesonic</a> — AI writer with lifetime option</li>
+                <li style="margin-bottom: 10px;"><a href="../guides/best-lifetime-ai-tools.html" style="color: #667eea; font-weight: 600;">Best AI Lifetime Deals</a> — Browse all 75+ deals</li>
+                <li style="margin-bottom: 10px;"><a href="../compare/triplo-ai-vs-cursor.html" style="color: #667eea; font-weight: 600;">Compare Triplo AI vs Cursor</a> — Lifetime vs subscription</li>
+            </ul>
         </section>
 
         <div style="text-align: center; margin: 60px 0;">
-            <a href="guides/best-lifetime-ai-tools.html" style="display: inline-block; background: #667eea; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600;">← See More AI Tools with Super Access</a>
+            <a href="../guides/best-lifetime-ai-tools.html" style="display: inline-block; background: #667eea; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600;">← Browse All 75+ Lifetime Deals</a>
         </div>
+    </div>
+
+    <div id="sticky-cta-bar" data-tool="Triplo AI" data-price="$69" data-url="https://appsumo.8odi.net/9L4b7e">
+        <span class="sticky-cta-text">Get Triplo AI — $69 one-time · 60-day guarantee</span>
+        <a href="https://appsumo.8odi.net/9L4b7e" class="sticky-cta-btn" target="_blank" rel="noopener nofollow sponsored">Claim deal →</a>
     </div>
 
     <footer>
         <p>© 2026 artificial.one - Triplo AI Review</p>
+        <p class="text-sm opacity-90 mt-2">We use affiliate links. We may earn a commission if you buy through our links (no extra cost to you).</p>
     </footer>
 
 <script>
@@ -498,6 +525,18 @@ document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
         this.nextElementSibling.classList.toggle('hidden');
     });
 });
+(function() {
+    var bar = document.getElementById('sticky-cta-bar');
+    var cta = document.getElementById('main-cta-box');
+    if (!bar || !cta) return;
+    var ctaTop = cta.getBoundingClientRect().top + window.pageYOffset;
+    function check() {
+        if (window.pageYOffset > Math.min(400, ctaTop - 100)) bar.classList.add('visible');
+        else bar.classList.remove('visible');
+    }
+    window.addEventListener('scroll', check);
+    window.addEventListener('resize', function() { ctaTop = cta.getBoundingClientRect().top + window.pageYOffset; });
+})();
 </script>
 </body>
 </html>
