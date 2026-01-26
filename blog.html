@@ -4873,22 +4873,67 @@ function filterByCategory(category) {
         console.error('blog-grid element not found!');
         return;
     }
-    const allArticles = gridEl.querySelectorAll('.article-card[data-category]');
+    const gridContainer = gridEl.querySelector('div.grid');
+    if (!gridContainer) {
+        console.error('Grid container not found!');
+        return;
+    }
+    
+    // Get all articles currently in the grid
+    const allArticles = gridContainer.querySelectorAll('.article-card[data-category]');
     const articles = Array.from(allArticles);
     
-    console.log(`Filter '${category}': Found ${articles.length} articles in grid`);
+    // Restore any previously hidden articles from storage
+    if (window._hiddenBlogArticles && window._hiddenBlogArticles[category]) {
+        const hiddenArticles = window._hiddenBlogArticles[category];
+        hiddenArticles.forEach(article => {
+            if (article.parentNode !== gridContainer) {
+                gridContainer.appendChild(article);
+            }
+        });
+        delete window._hiddenBlogArticles[category];
+    }
+    
+    // If showing all, restore all hidden articles
+    if (category === 'all') {
+        if (window._hiddenBlogArticles) {
+            Object.values(window._hiddenBlogArticles).forEach(articlesArray => {
+                articlesArray.forEach(article => {
+                    if (article.parentNode !== gridContainer) {
+                        gridContainer.appendChild(article);
+                    }
+                });
+            });
+            window._hiddenBlogArticles = {};
+        }
+    }
+    
+    // Get updated list after restoration
+    const currentArticles = Array.from(gridContainer.querySelectorAll('.article-card[data-category]'));
+    
+    console.log(`Filter '${category}': Found ${currentArticles.length} articles in grid`);
     
     let visibleCount = 0;
-    
-    articles.forEach(article => {
+    const hiddenFragment = document.createDocumentFragment();
+    const hiddenArticles = [];
+
+    currentArticles.forEach(article => {
         const articleCategory = article.getAttribute('data-category');
         if (!articleCategory) {
-            article.classList.add('hidden');
+            // Remove from grid and store
+            if (article.parentNode === gridContainer) {
+                gridContainer.removeChild(article);
+                hiddenFragment.appendChild(article);
+            }
             return;
         }
         
         if (category === 'all' || articleCategory === category) {
-            // Show article - remove all hiding classes and styles
+            // Show article - ensure it's in the grid
+            if (article.parentNode !== gridContainer) {
+                gridContainer.appendChild(article);
+            }
+            // Remove all hiding classes and styles
             article.classList.remove('hidden');
             article.classList.remove('filtered-out');
             article.style.removeProperty('display');
@@ -4900,17 +4945,26 @@ function filterByCategory(category) {
             article.removeAttribute('hidden');
             visibleCount++;
         } else {
-            // Hide article - try filtered-out first (keeps in grid flow), fallback to hidden
-            article.classList.add('filtered-out');
-            // Also add hidden as backup
-            article.classList.add('hidden');
+            // Hide article - remove from grid DOM entirely
+            if (article.parentNode === gridContainer) {
+                gridContainer.removeChild(article);
+                hiddenFragment.appendChild(article);
+                hiddenArticles.push(article);
+            }
         }
     });
     
+    // Store hidden articles globally for later restoration
+    if (hiddenArticles.length > 0) {
+        window._hiddenBlogArticles = window._hiddenBlogArticles || {};
+        window._hiddenBlogArticles[category] = hiddenArticles;
+    }
+    
     // Debug logging
-    console.log(`Filter '${category}': Found ${articles.length} total articles, showing ${visibleCount}`);
+    const finalArticles = Array.from(gridContainer.querySelectorAll('.article-card[data-category]'));
+    console.log(`Filter '${category}': Found ${finalArticles.length} total articles, showing ${visibleCount}`);
     if (category !== 'all') {
-        const matching = articles.filter(a => a.getAttribute('data-category') === category);
+        const matching = finalArticles.filter(a => a.getAttribute('data-category') === category);
         console.log(`  Articles with data-category='${category}': ${matching.length}`);
         console.log(`  Visible count: ${visibleCount}`);
     }
