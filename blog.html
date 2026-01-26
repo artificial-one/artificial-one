@@ -4883,11 +4883,11 @@ function filterByCategory(category) {
         article.removeAttribute('hidden');
         
         if (category === 'all' || articleCategory === category) {
-            // Show article - use explicit values
-            article.style.display = 'block';
+            // Show article - remove inline display to let CSS Grid handle it
+            article.style.removeProperty('display');
             article.style.visibility = 'visible';
             article.style.opacity = '1';
-            article.style.height = 'auto';
+            article.removeAttribute('hidden');
             visibleCount++;
         } else {
             // Hide article
@@ -4963,9 +4963,10 @@ window.addEventListener('DOMContentLoaded', function() {
         const gridEl = document.getElementById('blog-grid');
         const articles = gridEl ? gridEl.querySelectorAll('.article-card[data-category]') : document.querySelectorAll('.article-card[data-category]');
         articles.forEach(article => {
-            article.style.display = '';
+            article.style.removeProperty('display');
             article.style.visibility = 'visible';
             article.style.opacity = '1';
+            article.removeAttribute('hidden');
         });
         updateCounts();
     }, 100);
