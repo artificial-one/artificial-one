@@ -95,10 +95,16 @@
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
         .article-card.hidden { 
-            display: none !important; 
-            visibility: hidden !important;
-            position: absolute !important;
-            opacity: 0 !important;
+            display: none !important;
+        }
+        /* Alternative: Keep in grid flow but make invisible - might work better */
+        .article-card.filtered-out {
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
         }
         .cursor-pointer { cursor: pointer; }
             #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
@@ -4882,16 +4888,21 @@ function filterByCategory(category) {
         }
         
         if (category === 'all' || articleCategory === category) {
-            // Show article - remove hidden class and all inline display styles
+            // Show article - remove all hiding classes and styles
             article.classList.remove('hidden');
+            article.classList.remove('filtered-out');
             article.style.removeProperty('display');
             article.style.removeProperty('visibility');
             article.style.removeProperty('opacity');
             article.style.removeProperty('height');
+            article.style.removeProperty('margin');
+            article.style.removeProperty('padding');
             article.removeAttribute('hidden');
             visibleCount++;
         } else {
-            // Hide article using class (more reliable than inline style)
+            // Hide article - try filtered-out first (keeps in grid flow), fallback to hidden
+            article.classList.add('filtered-out');
+            // Also add hidden as backup
             article.classList.add('hidden');
         }
     });
@@ -4907,8 +4918,8 @@ function filterByCategory(category) {
     // Force grid to recalculate - critical for fixing zero-dimension articles
     const gridContainer = gridEl.querySelector('div.grid');
     if (gridContainer) {
-        // Get all visible articles
-        const visibleArticles = Array.from(articles).filter(a => !a.classList.contains('hidden'));
+        // Get all visible articles (not hidden and not filtered-out)
+        const visibleArticles = Array.from(articles).filter(a => !a.classList.contains('hidden') && !a.classList.contains('filtered-out'));
         
         // CRITICAL FIX: Force grid recalculation using multiple methods
         // Method 1: Toggle grid display (most reliable)
@@ -4953,7 +4964,7 @@ function filterByCategory(category) {
         requestAnimationFrame(function() {
             // Final check - verify all visible articles have dimensions and fix if needed
             if (category !== 'all') {
-                const visibleArticles = Array.from(articles).filter(a => !a.classList.contains('hidden') && a.getAttribute('data-category') === category);
+                const visibleArticles = Array.from(articles).filter(a => !a.classList.contains('hidden') && !a.classList.contains('filtered-out') && a.getAttribute('data-category') === category);
                 let fixedCount = 0;
                 visibleArticles.forEach((article, idx) => {
                     const rect = article.getBoundingClientRect();
@@ -5063,9 +5074,14 @@ window.addEventListener('DOMContentLoaded', function() {
         const gridEl = document.getElementById('blog-grid');
         const articles = gridEl ? gridEl.querySelectorAll('.article-card[data-category]') : document.querySelectorAll('.article-card[data-category]');
         articles.forEach(article => {
+            article.classList.remove('hidden');
+            article.classList.remove('filtered-out');
             article.style.removeProperty('display');
-            article.style.visibility = 'visible';
-            article.style.opacity = '1';
+            article.style.removeProperty('visibility');
+            article.style.removeProperty('opacity');
+            article.style.removeProperty('height');
+            article.style.removeProperty('margin');
+            article.style.removeProperty('padding');
             article.removeAttribute('hidden');
         });
         updateCounts();
