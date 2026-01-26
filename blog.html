@@ -4903,13 +4903,25 @@ function filterByCategory(category) {
         console.log(`  Visible count: ${visibleCount}`);
     }
     
-    // Scroll to filter + grid so user sees active filter and all results (fixes "only see N" on mobile)
-    const filterEl = document.getElementById('blog-filters');
-    if (filterEl) {
+    // Wait for DOM to update, then scroll to show results
+    // Use double RAF to ensure layout is complete
+    requestAnimationFrame(function() {
         requestAnimationFrame(function() {
-            filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const filterEl = document.getElementById('blog-filters');
+            if (filterEl) {
+                filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            
+            // Also verify visible count matches expected
+            if (category !== 'all') {
+                const expectedCount = articles.filter(a => a.getAttribute('data-category') === category).length;
+                console.log(`Expected ${expectedCount} articles, actually showing ${visibleCount}`);
+                if (expectedCount !== visibleCount) {
+                    console.warn(`MISMATCH: Expected ${expectedCount} but showing ${visibleCount}`);
+                }
+            }
         });
-    }
+    });
 }
 
 function updateCounts() {
