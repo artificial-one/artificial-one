@@ -4900,53 +4900,47 @@ function filterByCategory(category) {
         console.log(`  Visible count: ${visibleCount}`);
     }
     
-    // Force grid recalculation by triggering a reflow
-    // Find the grid div (it's a child of the section)
+    // Force grid recalculation - articles have zero dimensions because grid isn't recalculating
     const gridContainer = gridEl.querySelector('div.grid');
     if (gridContainer) {
-        // Force browser to recalculate grid layout
-        const originalDisplay = gridContainer.style.display;
+        // Force grid to recalculate by toggling display
+        const originalDisplay = window.getComputedStyle(gridContainer).display;
         gridContainer.style.display = 'none';
-        void gridContainer.offsetHeight; // Trigger reflow
-        gridContainer.style.display = originalDisplay || '';
+        void gridContainer.offsetHeight; // Force reflow
+        gridContainer.style.display = 'grid'; // Explicitly set to grid
+        void gridContainer.offsetHeight; // Force another reflow
         
-        // Also ensure grid container has no height constraints
+        // Remove any constraints
         gridContainer.style.removeProperty('max-height');
         gridContainer.style.removeProperty('height');
         gridContainer.style.removeProperty('overflow');
-    } else {
-        console.warn('Grid container not found!');
     }
     
-    // Wait for DOM to update, then scroll to show results
+    // Wait for layout to complete, then verify and scroll
     requestAnimationFrame(function() {
         requestAnimationFrame(function() {
+            // Force another layout pass to ensure grid recalculates
+            if (gridContainer) {
+                void gridContainer.offsetHeight;
+            }
+            
+            // Verify articles now have dimensions
+            if (category !== 'all') {
+                const matchingArticles = articles.filter(a => a.getAttribute('data-category') === category);
+                matchingArticles.forEach((article, idx) => {
+                    const rect = article.getBoundingClientRect();
+                    if (rect.width === 0 || rect.height === 0) {
+                        console.warn(`Article ${idx + 1} still has zero dimensions! Forcing layout...`);
+                        // Force layout by accessing offset properties
+                        void article.offsetWidth;
+                        void article.offsetHeight;
+                    }
+                });
+            }
+            
             const filterEl = document.getElementById('blog-filters');
             if (filterEl) {
                 filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            
-            // Verify visible articles and check their computed styles
-            if (category !== 'all') {
-                const expectedCount = articles.filter(a => a.getAttribute('data-category') === category).length;
-                const matchingArticles = articles.filter(a => a.getAttribute('data-category') === category);
-                const actuallyVisible = matchingArticles.filter(a => {
-                    const computed = window.getComputedStyle(a);
-                    return computed.display !== 'none' && computed.visibility !== 'hidden' && computed.opacity !== '0';
-                });
-                console.log(`Expected ${expectedCount} articles, visible count: ${visibleCount}, actually visible in DOM: ${actuallyVisible.length}`);
-                
-                // Log each article's computed style and position
-                matchingArticles.forEach((article, idx) => {
-                    const computed = window.getComputedStyle(article);
-                    const rect = article.getBoundingClientRect();
-                    console.log(`  Article ${idx + 1}: display=${computed.display}, visibility=${computed.visibility}, opacity=${computed.opacity}`);
-                    console.log(`    Position: top=${rect.top}, left=${rect.left}, width=${rect.width}, height=${rect.height}, visible=${rect.width > 0 && rect.height > 0}`);
-                });
-                
-                if (expectedCount !== actuallyVisible.length) {
-                    console.warn(`MISMATCH: Expected ${expectedCount} but only ${actuallyVisible.length} are visible in DOM`);
-                }
             }
         });
     });
