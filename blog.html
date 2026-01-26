@@ -4901,7 +4901,8 @@ function filterByCategory(category) {
     }
     
     // Force grid recalculation by triggering a reflow
-    const gridContainer = gridEl.querySelector('.grid');
+    // Find the grid div (it's a child of the section)
+    const gridContainer = gridEl.querySelector('div.grid');
     if (gridContainer) {
         // Force browser to recalculate grid layout
         const originalDisplay = gridContainer.style.display;
@@ -4913,6 +4914,8 @@ function filterByCategory(category) {
         gridContainer.style.removeProperty('max-height');
         gridContainer.style.removeProperty('height');
         gridContainer.style.removeProperty('overflow');
+    } else {
+        console.warn('Grid container not found!');
     }
     
     // Wait for DOM to update, then scroll to show results
@@ -4933,10 +4936,12 @@ function filterByCategory(category) {
                 });
                 console.log(`Expected ${expectedCount} articles, visible count: ${visibleCount}, actually visible in DOM: ${actuallyVisible.length}`);
                 
-                // Log each article's computed style
+                // Log each article's computed style and position
                 matchingArticles.forEach((article, idx) => {
                     const computed = window.getComputedStyle(article);
-                    console.log(`  Article ${idx + 1}: display=${computed.display}, visibility=${computed.visibility}, opacity=${computed.opacity}, position=${computed.position}`);
+                    const rect = article.getBoundingClientRect();
+                    console.log(`  Article ${idx + 1}: display=${computed.display}, visibility=${computed.visibility}, opacity=${computed.opacity}`);
+                    console.log(`    Position: top=${rect.top}, left=${rect.left}, width=${rect.width}, height=${rect.height}, visible=${rect.width > 0 && rect.height > 0}`);
                 });
                 
                 if (expectedCount !== actuallyVisible.length) {
