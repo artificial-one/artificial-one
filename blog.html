@@ -94,7 +94,12 @@
         }
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
-        .article-card.hidden { display: none !important; }
+        .article-card.hidden { 
+            display: none !important; 
+            visibility: hidden !important;
+            position: absolute !important;
+            opacity: 0 !important;
+        }
         .cursor-pointer { cursor: pointer; }
             #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
         .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
@@ -4899,34 +4904,74 @@ function filterByCategory(category) {
         console.log(`  Visible count: ${visibleCount}`);
     }
     
-    // Force grid to recalculate layout after showing/hiding items
+    // Force grid to recalculate - critical for fixing zero-dimension articles
     const gridContainer = gridEl.querySelector('div.grid');
     if (gridContainer) {
-        // Force a complete layout recalculation
-        // Method 1: Trigger reflow by reading layout properties
-        void gridContainer.offsetHeight;
-        void gridContainer.offsetWidth;
+        // Get all visible articles
+        const visibleArticles = Array.from(articles).filter(a => !a.classList.contains('hidden'));
         
-        // Method 2: Force grid recalculation by temporarily changing grid-template-columns
-        const computed = window.getComputedStyle(gridContainer);
-        const originalColumns = computed.gridTemplateColumns;
-        gridContainer.style.gridTemplateColumns = '1fr';
+        // Method 1: Force grid recalculation by toggling grid display
+        const originalDisplay = window.getComputedStyle(gridContainer).display;
+        gridContainer.style.display = 'none';
         void gridContainer.offsetHeight; // Force reflow
-        gridContainer.style.gridTemplateColumns = originalColumns;
+        gridContainer.style.display = 'grid';
         void gridContainer.offsetHeight; // Force another reflow
         
-        // Method 3: Access all visible articles' dimensions to force layout
-        const visibleArticles = Array.from(articles).filter(a => !a.classList.contains('hidden'));
-        visibleArticles.forEach(article => {
+        // Method 2: Force each visible article to recalculate by accessing its layout
+        visibleArticles.forEach((article, idx) => {
+            // Force layout calculation
+            article.style.gridColumn = '';
+            article.style.gridRow = '';
             void article.offsetWidth;
             void article.offsetHeight;
-            void article.getBoundingClientRect();
+            
+            // If still zero, try forcing with explicit grid placement
+            const rect = article.getBoundingClientRect();
+            if (rect.width === 0 || rect.height === 0) {
+                // Force browser to recalculate by temporarily changing a property
+                const originalOrder = article.style.order;
+                article.style.order = '0';
+                void article.offsetWidth;
+                article.style.order = originalOrder;
+                void article.offsetWidth;
+            }
         });
+        
+        // Method 3: Force grid container to recalculate by reading its computed grid properties
+        const gridStyle = window.getComputedStyle(gridContainer);
+        void gridContainer.offsetHeight;
+        void gridContainer.scrollHeight;
     }
     
-    // Wait for layout, then scroll
+    // Wait for layout, verify dimensions, then scroll
     requestAnimationFrame(function() {
         requestAnimationFrame(function() {
+            // Final check - verify all visible articles have dimensions
+            if (category !== 'all') {
+                const visibleArticles = Array.from(articles).filter(a => !a.classList.contains('hidden') && a.getAttribute('data-category') === category);
+                let fixedCount = 0;
+                visibleArticles.forEach((article, idx) => {
+                    const rect = article.getBoundingClientRect();
+                    if (rect.width === 0 || rect.height === 0) {
+                        // Last resort: remove from DOM and re-add to force grid recalculation
+                        const parent = article.parentNode;
+                        const nextSibling = article.nextSibling;
+                        parent.removeChild(article);
+                        void parent.offsetHeight; // Force reflow
+                        if (nextSibling) {
+                            parent.insertBefore(article, nextSibling);
+                        } else {
+                            parent.appendChild(article);
+                        }
+                        void article.offsetWidth; // Force layout
+                        fixedCount++;
+                    }
+                });
+                if (fixedCount > 0) {
+                    console.log(`Fixed ${fixedCount} articles with zero dimensions by DOM reinsertion`);
+                }
+            }
+            
             const filterEl = document.getElementById('blog-filters');
             if (filterEl) {
                 filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
