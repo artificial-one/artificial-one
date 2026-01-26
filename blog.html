@@ -4857,33 +4857,51 @@ function filterByCategory(category) {
     
     // Filter articles - only those inside the blog grid (avoids any other .article-card on page)
     const gridEl = document.getElementById('blog-grid');
-    const allArticles = gridEl ? gridEl.querySelectorAll('.article-card[data-category]') : document.querySelectorAll('.article-card[data-category]');
+    if (!gridEl) {
+        console.error('blog-grid element not found!');
+        return;
+    }
+    const allArticles = gridEl.querySelectorAll('.article-card[data-category]');
     const articles = Array.from(allArticles);
+    
+    console.log(`Filter '${category}': Found ${articles.length} articles in grid`);
     
     let visibleCount = 0;
     
     articles.forEach(article => {
         const articleCategory = article.getAttribute('data-category');
         if (!articleCategory) {
-            // Hide articles without data-category
             article.style.display = 'none';
             return;
         }
         
-        // Remove any inline styles that might hide the article
+        // Clear all inline styles that might hide the article
         article.style.removeProperty('display');
         article.style.removeProperty('visibility');
         article.style.removeProperty('opacity');
+        article.style.removeProperty('height');
+        article.removeAttribute('hidden');
         
         if (category === 'all' || articleCategory === category) {
-            article.style.display = '';
+            // Show article - use explicit values
+            article.style.display = 'block';
             article.style.visibility = 'visible';
             article.style.opacity = '1';
+            article.style.height = 'auto';
             visibleCount++;
         } else {
+            // Hide article
             article.style.display = 'none';
         }
     });
+    
+    // Debug logging
+    console.log(`Filter '${category}': Found ${articles.length} total articles, showing ${visibleCount}`);
+    if (category !== 'all') {
+        const matching = articles.filter(a => a.getAttribute('data-category') === category);
+        console.log(`  Articles with data-category='${category}': ${matching.length}`);
+        console.log(`  Visible count: ${visibleCount}`);
+    }
     
     // Scroll to filter + grid so user sees active filter and all results (fixes "only see N" on mobile)
     const filterEl = document.getElementById('blog-filters');
