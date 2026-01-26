@@ -4879,36 +4879,21 @@ function filterByCategory(category) {
         return;
     }
     
-    // Get all articles currently in the grid
-    const allArticles = gridContainer.querySelectorAll('.article-card[data-category]');
-    const articles = Array.from(allArticles);
-    
-    // Restore any previously hidden articles from storage
-    if (window._hiddenBlogArticles && window._hiddenBlogArticles[category]) {
-        const hiddenArticles = window._hiddenBlogArticles[category];
-        hiddenArticles.forEach(article => {
-            if (article.parentNode !== gridContainer) {
-                gridContainer.appendChild(article);
-            }
-        });
-        delete window._hiddenBlogArticles[category];
-    }
-    
-    // If showing all, restore all hidden articles
-    if (category === 'all') {
-        if (window._hiddenBlogArticles) {
-            Object.values(window._hiddenBlogArticles).forEach(articlesArray => {
-                articlesArray.forEach(article => {
-                    if (article.parentNode !== gridContainer) {
-                        gridContainer.appendChild(article);
-                    }
-                });
+    // CRITICAL: First, restore ALL previously hidden articles from any filter
+    // This ensures we have the full set before filtering again
+    if (window._hiddenBlogArticles) {
+        Object.values(window._hiddenBlogArticles).forEach(articlesArray => {
+            articlesArray.forEach(article => {
+                if (article.parentNode !== gridContainer) {
+                    gridContainer.appendChild(article);
+                }
             });
-            window._hiddenBlogArticles = {};
-        }
+        });
+        // Clear the storage after restoring
+        window._hiddenBlogArticles = {};
     }
     
-    // Get updated list after restoration
+    // Get all articles currently in the grid (after restoration)
     const currentArticles = Array.from(gridContainer.querySelectorAll('.article-card[data-category]'));
     
     console.log(`Filter '${category}': Found ${currentArticles.length} articles in grid`);
@@ -4955,9 +4940,20 @@ function filterByCategory(category) {
     });
     
     // Store hidden articles globally for later restoration
+    // Store by the article's actual category, not the filter category
+    // This way we can restore them properly when switching filters
     if (hiddenArticles.length > 0) {
         window._hiddenBlogArticles = window._hiddenBlogArticles || {};
-        window._hiddenBlogArticles[category] = hiddenArticles;
+        // Group articles by their actual data-category for easier restoration
+        hiddenArticles.forEach(article => {
+            const articleCat = article.getAttribute('data-category');
+            if (articleCat) {
+                if (!window._hiddenBlogArticles[articleCat]) {
+                    window._hiddenBlogArticles[articleCat] = [];
+                }
+                window._hiddenBlogArticles[articleCat].push(article);
+            }
+        });
     }
     
     // Debug logging
