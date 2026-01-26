@@ -94,6 +94,7 @@
         }
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+        .article-card.hidden { display: none !important; }
         .cursor-pointer { cursor: pointer; }
             #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
         .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
@@ -4871,24 +4872,22 @@ function filterByCategory(category) {
     articles.forEach(article => {
         const articleCategory = article.getAttribute('data-category');
         if (!articleCategory) {
-            article.style.display = 'none';
+            article.classList.add('hidden');
             return;
         }
         
         if (category === 'all' || articleCategory === category) {
-            // Show article - completely remove display style to let CSS Grid handle it
+            // Show article - remove hidden class and all inline display styles
+            article.classList.remove('hidden');
             article.style.removeProperty('display');
             article.style.removeProperty('visibility');
             article.style.removeProperty('opacity');
             article.style.removeProperty('height');
             article.removeAttribute('hidden');
-            // Ensure it's visible
-            article.style.visibility = 'visible';
-            article.style.opacity = '1';
             visibleCount++;
         } else {
-            // Hide article
-            article.style.display = 'none';
+            // Hide article using class (more reliable than inline style)
+            article.classList.add('hidden');
         }
     });
     
@@ -4900,44 +4899,34 @@ function filterByCategory(category) {
         console.log(`  Visible count: ${visibleCount}`);
     }
     
-    // Force grid recalculation - articles have zero dimensions because grid isn't recalculating
+    // Force grid to recalculate layout after showing/hiding items
     const gridContainer = gridEl.querySelector('div.grid');
     if (gridContainer) {
-        // Force grid to recalculate by toggling display
-        const originalDisplay = window.getComputedStyle(gridContainer).display;
-        gridContainer.style.display = 'none';
+        // Force a complete layout recalculation
+        // Method 1: Trigger reflow by reading layout properties
+        void gridContainer.offsetHeight;
+        void gridContainer.offsetWidth;
+        
+        // Method 2: Force grid recalculation by temporarily changing grid-template-columns
+        const computed = window.getComputedStyle(gridContainer);
+        const originalColumns = computed.gridTemplateColumns;
+        gridContainer.style.gridTemplateColumns = '1fr';
         void gridContainer.offsetHeight; // Force reflow
-        gridContainer.style.display = 'grid'; // Explicitly set to grid
+        gridContainer.style.gridTemplateColumns = originalColumns;
         void gridContainer.offsetHeight; // Force another reflow
         
-        // Remove any constraints
-        gridContainer.style.removeProperty('max-height');
-        gridContainer.style.removeProperty('height');
-        gridContainer.style.removeProperty('overflow');
+        // Method 3: Access all visible articles' dimensions to force layout
+        const visibleArticles = Array.from(articles).filter(a => !a.classList.contains('hidden'));
+        visibleArticles.forEach(article => {
+            void article.offsetWidth;
+            void article.offsetHeight;
+            void article.getBoundingClientRect();
+        });
     }
     
-    // Wait for layout to complete, then verify and scroll
+    // Wait for layout, then scroll
     requestAnimationFrame(function() {
         requestAnimationFrame(function() {
-            // Force another layout pass to ensure grid recalculates
-            if (gridContainer) {
-                void gridContainer.offsetHeight;
-            }
-            
-            // Verify articles now have dimensions
-            if (category !== 'all') {
-                const matchingArticles = articles.filter(a => a.getAttribute('data-category') === category);
-                matchingArticles.forEach((article, idx) => {
-                    const rect = article.getBoundingClientRect();
-                    if (rect.width === 0 || rect.height === 0) {
-                        console.warn(`Article ${idx + 1} still has zero dimensions! Forcing layout...`);
-                        // Force layout by accessing offset properties
-                        void article.offsetWidth;
-                        void article.offsetHeight;
-                    }
-                });
-            }
-            
             const filterEl = document.getElementById('blog-filters');
             if (filterEl) {
                 filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
