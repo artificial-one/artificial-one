@@ -4904,9 +4904,15 @@ function filterByCategory(category) {
     const gridContainer = gridEl.querySelector('.grid');
     if (gridContainer) {
         // Force browser to recalculate grid layout
+        const originalDisplay = gridContainer.style.display;
         gridContainer.style.display = 'none';
-        gridContainer.offsetHeight; // Trigger reflow
-        gridContainer.style.display = '';
+        void gridContainer.offsetHeight; // Trigger reflow
+        gridContainer.style.display = originalDisplay || '';
+        
+        // Also ensure grid container has no height constraints
+        gridContainer.style.removeProperty('max-height');
+        gridContainer.style.removeProperty('height');
+        gridContainer.style.removeProperty('overflow');
     }
     
     // Wait for DOM to update, then scroll to show results
@@ -4917,16 +4923,24 @@ function filterByCategory(category) {
                 filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
             
-            // Verify visible articles are actually in the DOM
+            // Verify visible articles and check their computed styles
             if (category !== 'all') {
                 const expectedCount = articles.filter(a => a.getAttribute('data-category') === category).length;
-                const actuallyVisible = Array.from(articles).filter(a => {
-                    const cat = a.getAttribute('data-category');
-                    return cat === category && a.style.display !== 'none' && window.getComputedStyle(a).display !== 'none';
-                }).length;
-                console.log(`Expected ${expectedCount} articles, visible count: ${visibleCount}, actually visible in DOM: ${actuallyVisible}`);
-                if (expectedCount !== actuallyVisible) {
-                    console.warn(`MISMATCH: Expected ${expectedCount} but only ${actuallyVisible} are visible in DOM`);
+                const matchingArticles = articles.filter(a => a.getAttribute('data-category') === category);
+                const actuallyVisible = matchingArticles.filter(a => {
+                    const computed = window.getComputedStyle(a);
+                    return computed.display !== 'none' && computed.visibility !== 'hidden' && computed.opacity !== '0';
+                });
+                console.log(`Expected ${expectedCount} articles, visible count: ${visibleCount}, actually visible in DOM: ${actuallyVisible.length}`);
+                
+                // Log each article's computed style
+                matchingArticles.forEach((article, idx) => {
+                    const computed = window.getComputedStyle(article);
+                    console.log(`  Article ${idx + 1}: display=${computed.display}, visibility=${computed.visibility}, opacity=${computed.opacity}, position=${computed.position}`);
+                });
+                
+                if (expectedCount !== actuallyVisible.length) {
+                    console.warn(`MISMATCH: Expected ${expectedCount} but only ${actuallyVisible.length} are visible in DOM`);
                 }
             }
         });
