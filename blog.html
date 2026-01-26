@@ -4875,19 +4875,16 @@ function filterByCategory(category) {
             return;
         }
         
-        // Clear all inline styles that might hide the article
-        article.style.removeProperty('display');
-        article.style.removeProperty('visibility');
-        article.style.removeProperty('opacity');
-        article.style.removeProperty('height');
-        article.removeAttribute('hidden');
-        
         if (category === 'all' || articleCategory === category) {
-            // Show article - remove inline display to let CSS Grid handle it
+            // Show article - completely remove display style to let CSS Grid handle it
             article.style.removeProperty('display');
+            article.style.removeProperty('visibility');
+            article.style.removeProperty('opacity');
+            article.style.removeProperty('height');
+            article.removeAttribute('hidden');
+            // Ensure it's visible
             article.style.visibility = 'visible';
             article.style.opacity = '1';
-            article.removeAttribute('hidden');
             visibleCount++;
         } else {
             // Hide article
@@ -4903,8 +4900,16 @@ function filterByCategory(category) {
         console.log(`  Visible count: ${visibleCount}`);
     }
     
+    // Force grid recalculation by triggering a reflow
+    const gridContainer = gridEl.querySelector('.grid');
+    if (gridContainer) {
+        // Force browser to recalculate grid layout
+        gridContainer.style.display = 'none';
+        gridContainer.offsetHeight; // Trigger reflow
+        gridContainer.style.display = '';
+    }
+    
     // Wait for DOM to update, then scroll to show results
-    // Use double RAF to ensure layout is complete
     requestAnimationFrame(function() {
         requestAnimationFrame(function() {
             const filterEl = document.getElementById('blog-filters');
@@ -4912,12 +4917,16 @@ function filterByCategory(category) {
                 filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
             
-            // Also verify visible count matches expected
+            // Verify visible articles are actually in the DOM
             if (category !== 'all') {
                 const expectedCount = articles.filter(a => a.getAttribute('data-category') === category).length;
-                console.log(`Expected ${expectedCount} articles, actually showing ${visibleCount}`);
-                if (expectedCount !== visibleCount) {
-                    console.warn(`MISMATCH: Expected ${expectedCount} but showing ${visibleCount}`);
+                const actuallyVisible = Array.from(articles).filter(a => {
+                    const cat = a.getAttribute('data-category');
+                    return cat === category && a.style.display !== 'none' && window.getComputedStyle(a).display !== 'none';
+                }).length;
+                console.log(`Expected ${expectedCount} articles, visible count: ${visibleCount}, actually visible in DOM: ${actuallyVisible}`);
+                if (expectedCount !== actuallyVisible) {
+                    console.warn(`MISMATCH: Expected ${expectedCount} but only ${actuallyVisible} are visible in DOM`);
                 }
             }
         });
