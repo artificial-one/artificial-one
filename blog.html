@@ -4969,49 +4969,25 @@ function filterByCategory(category) {
         console.log(`  Visible count: ${visibleCount}`);
     }
     
-    // Force grid to recalculate - critical for fixing zero-dimension articles
-    const gridContainer = gridEl.querySelector('div.grid');
-    if (gridContainer) {
-        // Get all visible articles (not hidden and not filtered-out)
-        const visibleArticles = Array.from(articles).filter(a => !a.classList.contains('hidden') && !a.classList.contains('filtered-out'));
+    // Force grid to recalculate after DOM changes
+    // Simple but effective: force reflow by accessing layout properties
+    void gridContainer.offsetHeight;
+    
+    // Force each visible article to recalculate
+    const visibleArticles = finalArticles;
         
-        // CRITICAL FIX: Force grid recalculation using multiple methods
-        // Method 1: Toggle grid display (most reliable)
-        const originalDisplay = window.getComputedStyle(gridContainer).display;
-        gridContainer.style.display = 'none';
-        void gridContainer.offsetHeight; // Force reflow
-        gridContainer.style.display = 'grid';
-        void gridContainer.offsetHeight; // Force another reflow
-        
-        // Method 2: Force grid-auto-flow recalculation
-        const computed = window.getComputedStyle(gridContainer);
-        const originalFlow = computed.gridAutoFlow;
-        gridContainer.style.gridAutoFlow = 'row dense';
-        void gridContainer.offsetHeight;
-        gridContainer.style.gridAutoFlow = originalFlow || 'row';
-        void gridContainer.offsetHeight;
-        
-        // Method 3: Force each visible article to recalculate
-        visibleArticles.forEach((article) => {
-            // Clear any interfering styles
-            article.style.gridColumn = '';
-            article.style.gridRow = '';
-            article.style.order = '';
-            article.style.width = '';
-            article.style.height = '';
-            // Force layout calculation
-            void article.offsetWidth;
-            void article.offsetHeight;
-            void article.getBoundingClientRect();
-        });
-        
-        // Method 4: Force grid container to recalculate by accessing all grid properties
-        const gridStyle = window.getComputedStyle(gridContainer);
-        void gridStyle.gridTemplateColumns;
-        void gridStyle.gridTemplateRows;
-        void gridStyle.gap;
-        void gridContainer.offsetHeight;
-    }
+    visibleArticles.forEach((article) => {
+        // Clear any interfering styles
+        article.style.gridColumn = '';
+        article.style.gridRow = '';
+        article.style.order = '';
+        // Force layout calculation
+        void article.offsetWidth;
+        void article.offsetHeight;
+    });
+    
+    // Final grid recalculation
+    void gridContainer.offsetHeight;
     
     // Wait for layout, then scroll
     requestAnimationFrame(function() {
