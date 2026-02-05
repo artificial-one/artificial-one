@@ -90,21 +90,23 @@
             from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Pure CSS Grid - no Tailwind, nothing can override */
-        #pure-blog-grid {
-            display: grid;
+        /* Blog grid: pure CSS Grid, locked so nothing (Tailwind/scroll) can override */
+        section#blog-grid #pure-blog-grid {
+            display: grid !important;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
             width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
         }
         @media (min-width: 768px) {
-            #pure-blog-grid { grid-template-columns: repeat(2, 1fr); }
+            section#blog-grid #pure-blog-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
         @media (min-width: 1024px) {
-            #pure-blog-grid { grid-template-columns: repeat(3, 1fr); }
+            section#blog-grid #pure-blog-grid { grid-template-columns: repeat(3, 1fr) !important; }
         }
         @media (min-width: 1280px) {
-            #pure-blog-grid { grid-template-columns: repeat(4, 1fr); }
+            section#blog-grid #pure-blog-grid { grid-template-columns: repeat(4, 1fr) !important; }
         }
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
@@ -4955,5 +4957,25 @@ window.addEventListener('DOMContentLoaded', function() {
     updateCounts();
 });
 </script>
+<!-- Last-in-document grid CSS: wins over Tailwind and any injected styles so grid never collapses on scroll -->
+<style id="blog-grid-lock">
+section#blog-grid #pure-blog-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+@media (min-width: 768px) {
+    section#blog-grid #pure-blog-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (min-width: 1024px) {
+    section#blog-grid #pure-blog-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (min-width: 1280px) {
+    section#blog-grid #pure-blog-grid { grid-template-columns: repeat(4, 1fr) !important; }
+}
+</style>
 </body>
 </html>
