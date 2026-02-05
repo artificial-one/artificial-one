@@ -90,7 +90,11 @@
             from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
         }
-            to { opacity: 1; transform: translateY(0); }
+        /* Ensure blog cards stay in a responsive multi-column grid on desktop */
+        #blog-grid .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
         }
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
