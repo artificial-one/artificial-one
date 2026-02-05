@@ -90,6 +90,22 @@
             from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        /* Force blog grid to stay multi-column on desktop (no single-column collapse) */
+        #blog-grid .grid {
+            display: grid !important;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            #blog-grid .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1024px) {
+            #blog-grid .grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (min-width: 1280px) {
+            #blog-grid .grid { grid-template-columns: repeat(4, 1fr); }
+        }
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
         .article-card.hidden { 
@@ -4803,8 +4819,6 @@
                         </div>
                     </div>
                 </article>
-
-            </div>
 
             </div>
         </div>
