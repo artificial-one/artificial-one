@@ -90,25 +90,6 @@
             from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Masonry-style layout so posts stay visually balanced across screen */
-        #blog-grid .grid {
-            column-count: 1;
-            column-gap: 1.75rem;
-        }
-        @media (min-width: 768px) {
-            #blog-grid .grid { column-count: 2; }
-        }
-        @media (min-width: 1024px) {
-            #blog-grid .grid { column-count: 3; }
-        }
-        @media (min-width: 1280px) {
-            #blog-grid .grid { column-count: 4; }
-        }
-        #blog-grid .article-card {
-            break-inside: avoid;
-            margin-bottom: 1.75rem;
-            width: 100%;
-        }
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
         .article-card.hidden { 
@@ -4874,7 +4855,7 @@ let currentCategoryFilter = 'all';
 
 function filterByCategory(category) {
     currentCategoryFilter = category;
-    
+
     // Update active button
     document.querySelectorAll('.cat-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -4883,157 +4864,33 @@ function filterByCategory(category) {
             btn.classList.add('active');
         }
     });
-    
-    // Filter articles - only those inside the blog grid (avoids any other .article-card on page)
+
+    // Show/hide articles without changing DOM structure
     const gridEl = document.getElementById('blog-grid');
     if (!gridEl) {
         console.error('blog-grid element not found!');
         return;
     }
-    const gridContainer = gridEl.querySelector('div.grid');
-    if (!gridContainer) {
-        console.error('Grid container not found!');
-        return;
-    }
-    
-    // CRITICAL: First, restore ALL previously hidden articles from any filter
-    // This ensures we have the full set before filtering again
-    if (window._hiddenBlogArticles) {
-        Object.values(window._hiddenBlogArticles).forEach(articlesArray => {
-            articlesArray.forEach(article => {
-                if (article.parentNode !== gridContainer) {
-                    gridContainer.appendChild(article);
-                }
-            });
-        });
-        // Clear the storage after restoring
-        window._hiddenBlogArticles = {};
-    }
-    
-    // Get all articles currently in the grid (after restoration)
-    const currentArticles = Array.from(gridContainer.querySelectorAll('.article-card[data-category]'));
-    
-    console.log(`Filter '${category}': Found ${currentArticles.length} articles in grid`);
-    
-    let visibleCount = 0;
-    const hiddenFragment = document.createDocumentFragment();
-    const hiddenArticles = [];
+    const articles = gridEl.querySelectorAll('.article-card[data-category]');
 
-    currentArticles.forEach(article => {
+    articles.forEach(article => {
         const articleCategory = article.getAttribute('data-category');
-        if (!articleCategory) {
-            // Remove from grid and store
-            if (article.parentNode === gridContainer) {
-                gridContainer.removeChild(article);
-                hiddenFragment.appendChild(article);
-            }
-            return;
-        }
-        
         if (category === 'all' || articleCategory === category) {
-            // Show article - ensure it's in the grid
-            if (article.parentNode !== gridContainer) {
-                gridContainer.appendChild(article);
-            }
-            // Remove all hiding classes and styles
             article.classList.remove('hidden');
             article.classList.remove('filtered-out');
             article.style.removeProperty('display');
-            article.style.removeProperty('visibility');
-            article.style.removeProperty('opacity');
-            article.style.removeProperty('height');
-            article.style.removeProperty('margin');
-            article.style.removeProperty('padding');
             article.removeAttribute('hidden');
-            visibleCount++;
         } else {
-            // Hide article - remove from grid DOM entirely
-            if (article.parentNode === gridContainer) {
-                gridContainer.removeChild(article);
-                hiddenFragment.appendChild(article);
-                hiddenArticles.push(article);
-            }
+            article.classList.add('hidden');
         }
     });
-    
-    // Store hidden articles globally for later restoration
-    // Store by the article's actual category, not the filter category
-    // This way we can restore them properly when switching filters
-    if (hiddenArticles.length > 0) {
-        window._hiddenBlogArticles = window._hiddenBlogArticles || {};
-        // Group articles by their actual data-category for easier restoration
-        hiddenArticles.forEach(article => {
-            const articleCat = article.getAttribute('data-category');
-            if (articleCat) {
-                if (!window._hiddenBlogArticles[articleCat]) {
-                    window._hiddenBlogArticles[articleCat] = [];
-                }
-                window._hiddenBlogArticles[articleCat].push(article);
-            }
-        });
+
+    updateCounts();
+
+    const filterEl = document.getElementById('blog-filters');
+    if (filterEl) {
+        filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-    
-    // Debug logging
-    const finalArticles = Array.from(gridContainer.querySelectorAll('.article-card[data-category]'));
-    console.log(`Filter '${category}': Found ${finalArticles.length} total articles, showing ${visibleCount}`);
-    if (category !== 'all') {
-        const matching = finalArticles.filter(a => a.getAttribute('data-category') === category);
-        console.log(`  Articles with data-category='${category}': ${matching.length}`);
-        console.log(`  Visible count: ${visibleCount}`);
-    }
-    
-    // Force grid to recalculate after DOM changes
-    // Simple but effective: force reflow by accessing layout properties
-    void gridContainer.offsetHeight;
-    
-    // Force each visible article to recalculate
-    const visibleArticles = finalArticles;
-        
-    visibleArticles.forEach((article) => {
-        // Clear any interfering styles
-        article.style.gridColumn = '';
-        article.style.gridRow = '';
-        article.style.order = '';
-        // Force layout calculation
-        void article.offsetWidth;
-        void article.offsetHeight;
-    });
-    
-    // Final grid recalculation
-    void gridContainer.offsetHeight;
-    
-    // Wait for layout, then scroll
-    requestAnimationFrame(function() {
-        requestAnimationFrame(function() {
-            // Verify all visible articles have proper dimensions
-            const visibleArticles = gridContainer.querySelectorAll('.article-card[data-category]');
-            let hasZeroDimensions = false;
-            visibleArticles.forEach((article) => {
-                const rect = article.getBoundingClientRect();
-                if (rect.width === 0 || rect.height === 0) {
-                    hasZeroDimensions = true;
-                    // Force layout by accessing properties
-                    void article.offsetWidth;
-                    void article.offsetHeight;
-                    void article.getBoundingClientRect();
-                }
-            });
-            
-            if (hasZeroDimensions && gridContainer) {
-                // Force grid recalculation one more time
-                const originalDisplay = gridContainer.style.display;
-                gridContainer.style.display = 'none';
-                void gridContainer.offsetHeight;
-                gridContainer.style.display = 'grid';
-                void gridContainer.offsetHeight;
-            }
-            
-            const filterEl = document.getElementById('blog-filters');
-            if (filterEl) {
-                filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
 }
 
 function updateCounts() {
@@ -5071,39 +4928,17 @@ function updateCounts() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-        const gridEl = document.getElementById('blog-grid');
-        // Restore all articles to the grid on page load
-        const gridContainer = gridEl ? gridEl.querySelector('div.grid') : null;
-        if (gridContainer) {
-            // If we have stored hidden articles, restore them
-            if (window._hiddenBlogArticles) {
-                Object.values(window._hiddenBlogArticles).forEach(articles => {
-                    articles.forEach(article => {
-                        if (article.parentNode !== gridContainer) {
-                            gridContainer.appendChild(article);
-                        }
-                    });
-                });
-                window._hiddenBlogArticles = {};
-            }
-            
-            // Ensure all articles are visible
-            const articles = gridContainer.querySelectorAll('.article-card[data-category]');
-            articles.forEach(article => {
-                article.classList.remove('hidden');
-                article.classList.remove('filtered-out');
-                article.style.removeProperty('display');
-                article.style.removeProperty('visibility');
-                article.style.removeProperty('opacity');
-                article.style.removeProperty('height');
-                article.style.removeProperty('margin');
-                article.style.removeProperty('padding');
-                article.removeAttribute('hidden');
-            });
-        }
-        updateCounts();
-    }, 100);
+    const gridEl = document.getElementById('blog-grid');
+    if (gridEl) {
+        const articles = gridEl.querySelectorAll('.article-card[data-category]');
+        articles.forEach(article => {
+            article.classList.remove('hidden');
+            article.classList.remove('filtered-out');
+            article.style.removeProperty('display');
+            article.removeAttribute('hidden');
+        });
+    }
+    updateCounts();
 });
 </script>
 </body>
