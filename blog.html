@@ -4876,10 +4876,16 @@ function filterByCategory(category) {
         return;
     }
     const articles = gridEl.querySelectorAll('.article-card[data-category]');
+    const categoryNorm = (category || '').trim().toLowerCase();
 
     articles.forEach(article => {
-        const articleCategory = article.getAttribute('data-category');
-        if (category === 'all' || articleCategory === category) {
+        const raw = article.getAttribute('data-category');
+        const articleCategoryNorm = (raw || '').trim().toLowerCase();
+        const match = category === 'all' || articleCategoryNorm === categoryNorm;
+        if (categoryNorm === 'ecommerce') {
+            console.log('E-commerce filter: article category raw="' + (raw || '') + '" normalized="' + articleCategoryNorm + '" match=' + match);
+        }
+        if (match) {
             article.classList.remove('hidden');
             article.classList.remove('filtered-out');
             article.style.removeProperty('display');
@@ -4903,24 +4909,24 @@ function updateCounts() {
     const articles = gridEl ? Array.from(gridEl.querySelectorAll('.article-card[data-category]')) : Array.from(document.querySelectorAll('.article-card[data-category]'));
     const categoryCounts = {};
     
-    // Count by actual data-category values
+    // Count by normalized data-category (trim + lowercase) so filter and counts match
     articles.forEach(article => {
         const cat = article.getAttribute('data-category');
         if (cat && cat.trim()) {
-            categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+            const key = cat.trim().toLowerCase();
+            categoryCounts[key] = (categoryCounts[key] || 0) + 1;
         }
     });
-    
-    // Update button labels with accurate counts
+
+    // Update button labels with accurate counts (match filterByCategory normalization)
     document.querySelectorAll('.cat-btn').forEach(btn => {
         const onclick = btn.getAttribute('onclick');
         const match = onclick.match(/filterByCategory\('([^']+)'\)/);
         if (match) {
-            const cat = match[1];
-            // Get the button text without the count
+            const cat = (match[1] || '').trim().toLowerCase();
             const textMatch = btn.textContent.match(/^([^(]+)/);
             const text = textMatch ? textMatch[1].trim() : btn.textContent.split('(')[0].trim();
-            
+
             if (cat === 'all') {
                 btn.textContent = `${text} (${articles.length})`;
             } else {
