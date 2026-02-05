@@ -90,23 +90,14 @@
             from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Blog grid: pure CSS Grid, locked so nothing (Tailwind/scroll) can override */
-        section#blog-grid #pure-blog-grid {
-            display: grid !important;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-            width: 100%;
-            min-width: 0;
-            box-sizing: border-box;
-        }
         @media (min-width: 768px) {
-            section#blog-grid #pure-blog-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            #blogs-container { grid-template-columns: repeat(2, 1fr); }
         }
         @media (min-width: 1024px) {
-            section#blog-grid #pure-blog-grid { grid-template-columns: repeat(3, 1fr) !important; }
+            #blogs-container { grid-template-columns: repeat(3, 1fr); }
         }
         @media (min-width: 1280px) {
-            section#blog-grid #pure-blog-grid { grid-template-columns: repeat(4, 1fr) !important; }
+            #blogs-container { grid-template-columns: repeat(4, 1fr); }
         }
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
@@ -353,10 +344,8 @@
         </div>
     </section>
 
-    <!-- Blog Grid -->
-    <section id="blog-grid" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-            <div id="pure-blog-grid">
+    <section id="blog-grid" style="padding: 4rem 2rem; max-width: 1400px; margin: 0 auto;">
+      <div id="blogs-container" style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 2rem;">
 
                 <!-- Article 1: SEO Tools -->
                 <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="seo-content">
@@ -4822,8 +4811,7 @@
                     </div>
                 </article>
 
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- Newsletter CTA -->
@@ -4957,25 +4945,5 @@ window.addEventListener('DOMContentLoaded', function() {
     updateCounts();
 });
 </script>
-<!-- Last-in-document grid CSS: wins over Tailwind and any injected styles so grid never collapses on scroll -->
-<style id="blog-grid-lock">
-section#blog-grid #pure-blog-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-}
-@media (min-width: 768px) {
-    section#blog-grid #pure-blog-grid { grid-template-columns: repeat(2, 1fr) !important; }
-}
-@media (min-width: 1024px) {
-    section#blog-grid #pure-blog-grid { grid-template-columns: repeat(3, 1fr) !important; }
-}
-@media (min-width: 1280px) {
-    section#blog-grid #pure-blog-grid { grid-template-columns: repeat(4, 1fr) !important; }
-}
-</style>
 </body>
 </html>
