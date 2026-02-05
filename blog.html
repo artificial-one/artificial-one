@@ -90,22 +90,21 @@
             from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Force blog grid to stay multi-column on desktop (no single-column collapse on scroll) */
-        #blog-grid .grid {
-            display: grid !important;
-            grid-template-columns: 1fr;
+        /* Pure CSS Grid - no Tailwind, nothing can override */
+        #pure-blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
             width: 100%;
-            min-width: 0; /* prevent overflow from forcing reflow */
         }
         @media (min-width: 768px) {
-            #blog-grid .grid { grid-template-columns: repeat(2, 1fr) !important; }
+            #pure-blog-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (min-width: 1024px) {
-            #blog-grid .grid { grid-template-columns: repeat(3, 1fr) !important; }
+            #pure-blog-grid { grid-template-columns: repeat(3, 1fr); }
         }
         @media (min-width: 1280px) {
-            #blog-grid .grid { grid-template-columns: repeat(4, 1fr) !important; }
+            #pure-blog-grid { grid-template-columns: repeat(4, 1fr); }
         }
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
@@ -355,10 +354,10 @@
     <!-- Blog Grid -->
     <section id="blog-grid" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div id="pure-blog-grid">
 
                 <!-- Article 1: SEO Tools -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="seo-content">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="seo-content">
                     <div class="bg-gradient-to-br from-blue-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -380,7 +379,7 @@
                 </article>
 
                 <!-- Article 2: Productivity -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -402,7 +401,7 @@
                 </article>
 
                 <!-- Article 3: ChatGPT Business -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="business">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="business">
                     <div class="bg-gradient-to-br from-purple-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">💼</span>
                     </div>
@@ -424,7 +423,7 @@
                 </article>
 
                 <!-- Article 4: ChatGPT vs Claude -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="comparison">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="comparison">
                     <div class="bg-gradient-to-br from-purple-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🤖</span>
                     </div>
@@ -446,7 +445,7 @@
                 </article>
 
                 <!-- Article 5: AI Image Comparison -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-rose-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -468,7 +467,7 @@
                 </article>
 
                 <!-- Article 6: Voice Generators -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="voice">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="voice">
                     <div class="bg-gradient-to-br from-indigo-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎙️</span>
                     </div>
@@ -490,7 +489,7 @@
                 </article>
 
                 <!-- Article 7: Free AI Tools -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="free-tools">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="free-tools">
                     <div class="bg-gradient-to-br from-green-500 to-teal-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🆓</span>
                     </div>
@@ -512,7 +511,7 @@
                 </article>
 
                 <!-- Article 8: Professional AI Video -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="video">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="video">
                     <div class="bg-gradient-to-br from-red-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎬</span>
                     </div>
@@ -534,7 +533,7 @@
                 </article>
 
                 <!-- Article 9: Worth Paying For -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="worth-it">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="worth-it">
                     <div class="bg-gradient-to-br from-yellow-500 to-orange-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">💰</span>
                     </div>
@@ -556,7 +555,7 @@
                 </article>
 
                 <!-- Article 10: Copilot Tips -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="coding">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="coding">
                     <div class="bg-gradient-to-br from-cyan-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">💻</span>
                     </div>
@@ -578,7 +577,7 @@
                 </article>
 
                 <!-- Article 11: AppSumo Deals -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="deals">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="deals">
                     <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🔥</span>
                     </div>
@@ -600,7 +599,7 @@
                 </article>
 
                 <!-- Article: 57 New AppSumo Deals 2026 -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="deals">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="deals">
                     <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🆕</span>
                     </div>
@@ -622,7 +621,7 @@
                 </article>
 
                 <!-- Article: Writers & Designers AppSumo Deals -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="deals">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="deals">
                     <div class="bg-gradient-to-br from-indigo-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -644,7 +643,7 @@
                 </article>
 
                 <!-- Article 12: Data Analysis -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-violet-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📈</span>
                     </div>
@@ -666,7 +665,7 @@
                 </article>
 
                 <!-- Article 13: Midjourney vs DALL-E -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="comparison">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="comparison">
                     <div class="bg-gradient-to-br from-pink-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🖼️</span>
                     </div>
@@ -688,7 +687,7 @@
                 </article>
 
                 <!-- Article 14: Marketing Stack -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🚀</span>
                     </div>
@@ -710,7 +709,7 @@
                 </article>
 
                 <!-- Article 15: Copilot vs Cursor -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="coding">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="coding">
                     <div class="bg-gradient-to-br from-blue-500 to-cyan-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚙️</span>
                     </div>
@@ -732,7 +731,7 @@
                 </article>
 
                 <!-- Article 16: Save Money -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="savings">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="savings">
                     <div class="bg-gradient-to-br from-green-500 to-teal-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">💵</span>
                     </div>
@@ -754,7 +753,7 @@
                 </article>
 
                 <!-- Article 17: Triplo AI -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -776,7 +775,7 @@
                 </article>
 
                 <!-- Article 18: Snoooz -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -798,7 +797,7 @@
                 </article>
 
                 <!-- Article 19: Beehiiv -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📰</span>
                     </div>
@@ -820,7 +819,7 @@
                 </article>
 
                 <!-- Article 20: Pixelied -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-rose-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -842,7 +841,7 @@
                 </article>
 
                 <!-- Article 21: Systeme.io -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-emerald-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🚀</span>
                     </div>
@@ -864,7 +863,7 @@
                 </article>
 
                 <!-- Article 22: Frase -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="seo-content">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="seo-content">
                     <div class="bg-gradient-to-br from-indigo-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🔍</span>
                     </div>
@@ -886,7 +885,7 @@
                 </article>
 
                 <!-- Article 23: TidyCal -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-teal-500 to-cyan-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📅</span>
                     </div>
@@ -908,7 +907,7 @@
                 </article>
 
                 <!-- Article 24: NeuronWriter -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="seo-content">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="seo-content">
                     <div class="bg-gradient-to-br from-blue-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -930,7 +929,7 @@
                 </article>
 
                 <!-- Article 25: Bramework -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📝</span>
                     </div>
@@ -952,7 +951,7 @@
                 </article>
 
                 <!-- Article 26: Descript -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="video">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="video">
                     <div class="bg-gradient-to-br from-red-500 to-orange-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎬</span>
                     </div>
@@ -974,7 +973,7 @@
                 </article>
 
                 <!-- Article 27: SendFox -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-orange-500 to-amber-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -996,7 +995,7 @@
                 </article>
 
                 <!-- Article 28: Slidebean -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-cyan-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -1018,7 +1017,7 @@
                 </article>
 
                 <!-- Article 29: SuperCopy.ai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-pink-500 to-rose-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">💬</span>
                     </div>
@@ -1040,7 +1039,7 @@
                 </article>
 
                 <!-- Article 30: Unbounce -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎯</span>
                     </div>
@@ -1062,7 +1061,7 @@
                 </article>
 
                 <!-- Article 31: VisualSitemaps -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="seo-research">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="seo-research">
                     <div class="bg-gradient-to-br from-indigo-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🗺️</span>
                     </div>
@@ -1084,7 +1083,7 @@
                 </article>
 
                 <!-- Article 32: VanChat -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="ecommerce">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="ecommerce">
                     <div class="bg-gradient-to-br from-blue-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">💬</span>
                     </div>
@@ -1106,7 +1105,7 @@
                 </article>
 
                 <!-- Article 33: KingSumo -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1128,7 +1127,7 @@
                 </article>
 
                 <!-- Article 34: Woodpecker -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -1150,7 +1149,7 @@
                 </article>
 
                 <!-- Article 35: FlexiFunnels -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🚀</span>
                     </div>
@@ -1172,7 +1171,7 @@
                 </article>
 
                 <!-- Article 36: Akiflow -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-indigo-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📅</span>
                     </div>
@@ -1194,7 +1193,7 @@
                 </article>
 
                 <!-- Article 37: BizReply -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-pink-500 to-rose-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">💬</span>
                     </div>
@@ -1216,7 +1215,7 @@
                 </article>
 
                 <!-- Article 38: FormRobin -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-cyan-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📋</span>
                     </div>
@@ -1238,7 +1237,7 @@
                 </article>
 
                 <!-- Article 39: Glorify -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -1260,7 +1259,7 @@
                 </article>
 
                 <!-- Article 40: JotURL -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-indigo-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🔗</span>
                     </div>
@@ -1282,7 +1281,7 @@
                 </article>
 
                 <!-- Article 41: LeadRocks -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-orange-500 to-amber-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">💎</span>
                     </div>
@@ -1304,7 +1303,7 @@
                 </article>
 
                 <!-- Article 42: Trustbucket -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-amber-500 to-yellow-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⭐</span>
                     </div>
@@ -1326,7 +1325,7 @@
                 </article>
 
                 <!-- Article 43: WordHero -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -1348,7 +1347,7 @@
                 </article>
 
                 <!-- Article 44: MailerLite -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -1370,7 +1369,7 @@
                 </article>
 
                 <!-- Article 45: Zenler -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="education">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="education">
                     <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎓</span>
                     </div>
@@ -1392,7 +1391,7 @@
                 </article>
 
                 <!-- Article 46: ACE Meetings -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📅</span>
                     </div>
@@ -1414,7 +1413,7 @@
                 </article>
 
                 <!-- Article 47: Airbrush -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-rose-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -1436,7 +1435,7 @@
                 </article>
 
                 <!-- Article 48: Better Sheets -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-blue-500 to-cyan-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -1458,7 +1457,7 @@
                 </article>
 
                 <!-- Article 49: Columns AI -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📈</span>
                     </div>
@@ -1480,7 +1479,7 @@
                 </article>
 
                 <!-- Article 50: Creative Score -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-purple-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⭐</span>
                     </div>
@@ -1500,7 +1499,7 @@
                         </div>
                     </div>
                                 <!-- Article 51: Ace Meetings -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1522,7 +1521,7 @@
                 </article>
 
                 <!-- Article 52: Airbrush -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -1544,7 +1543,7 @@
                 </article>
 
                 <!-- Article 53: Airfive -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="video">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="video">
                     <div class="bg-gradient-to-br from-red-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎬</span>
                     </div>
@@ -1566,7 +1565,7 @@
                 </article>
 
                 <!-- Article 54: Akiflow -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1588,7 +1587,7 @@
                 </article>
 
                 <!-- Article 55: Anychat -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -1610,7 +1609,7 @@
                 </article>
 
                 <!-- Article 56: Approvethis -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1632,7 +1631,7 @@
                 </article>
 
                 <!-- Article 57: Arvow -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1654,7 +1653,7 @@
                 </article>
 
                 <!-- Article 58: Awaz -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1676,7 +1675,7 @@
                 </article>
 
                 <!-- Article 59: Beehiiv -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -1698,7 +1697,7 @@
                 </article>
 
                 <!-- Article 60: Better Sheets -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -1720,7 +1719,7 @@
                 </article>
 
                 <!-- Article 61: Bizreply -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -1742,7 +1741,7 @@
                 </article>
 
                 <!-- Article 62: Bramework -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -1764,7 +1763,7 @@
                 </article>
 
                 <!-- Article 63: Browseract -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1786,7 +1785,7 @@
                 </article>
 
                 <!-- Article 64: Bugsmash -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1808,7 +1807,7 @@
                 </article>
 
                 <!-- Article 65: Capitalconnectorai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -1830,7 +1829,7 @@
                 </article>
 
                 <!-- Article 66: Clawdia -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1852,7 +1851,7 @@
                 </article>
 
                 <!-- Article 67: Clickmoat -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -1874,7 +1873,7 @@
                 </article>
 
                 <!-- Article 68: Clickrank -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1896,7 +1895,7 @@
                 </article>
 
                 <!-- Article 69: Cmaps -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -1918,7 +1917,7 @@
                 </article>
 
                 <!-- Article 70: Codesmash -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -1940,7 +1939,7 @@
                 </article>
 
                 <!-- Article 71: Columns Ai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -1962,7 +1961,7 @@
                 </article>
 
                 <!-- Article 72: Creative Score -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -1984,7 +1983,7 @@
                 </article>
 
                 <!-- Article 73: Cutme Short -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="video">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="video">
                     <div class="bg-gradient-to-br from-red-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎬</span>
                     </div>
@@ -2006,7 +2005,7 @@
                 </article>
 
                 <!-- Article 74: Deftform -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2028,7 +2027,7 @@
                 </article>
 
                 <!-- Article 75: Descript -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="video">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="video">
                     <div class="bg-gradient-to-br from-red-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎬</span>
                     </div>
@@ -2050,7 +2049,7 @@
                 </article>
 
                 <!-- Article 76: Dijibot -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2072,7 +2071,7 @@
                 </article>
 
                 <!-- Article 77: Dodge Print -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -2094,7 +2093,7 @@
                 </article>
 
                 <!-- Article 78: Dreamlit Ai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2116,7 +2115,7 @@
                 </article>
 
                 <!-- Article 79: Dreamlit -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -2138,7 +2137,7 @@
                 </article>
 
                 <!-- Article 80: Easyspeak -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="video">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="video">
                     <div class="bg-gradient-to-br from-red-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎬</span>
                     </div>
@@ -2160,7 +2159,7 @@
                 </article>
 
                 <!-- Article 81: Editordo -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -2182,7 +2181,7 @@
                 </article>
 
                 <!-- Article 82: Equitest -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2204,7 +2203,7 @@
                 </article>
 
                 <!-- Article 83: Ethos -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2226,7 +2225,7 @@
                 </article>
 
                 <!-- Article 84: Eventin -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2248,7 +2247,7 @@
                 </article>
 
                 <!-- Article 85: Feedbeo -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -2270,7 +2269,7 @@
                 </article>
 
                 <!-- Article 86: Findniche -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2292,7 +2291,7 @@
                 </article>
 
                 <!-- Article 87: Flexifunnels -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -2314,7 +2313,7 @@
                 </article>
 
                 <!-- Article 88: Flymsg -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -2336,7 +2335,7 @@
                 </article>
 
                 <!-- Article 89: Formrobin -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -2358,7 +2357,7 @@
                 </article>
 
                 <!-- Article 90: Fox Signals -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2380,7 +2379,7 @@
                 </article>
 
                 <!-- Article 91: Frase -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="seo-content">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="seo-content">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🔍</span>
                     </div>
@@ -2402,7 +2401,7 @@
                 </article>
 
                 <!-- Article 92: Fynlo -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2424,7 +2423,7 @@
                 </article>
 
                 <!-- Article 93: Glorify -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -2446,7 +2445,7 @@
                 </article>
 
                 <!-- Article 94: Goemailtracker -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -2468,7 +2467,7 @@
                 </article>
 
                 <!-- Article 95: Graficto -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -2490,7 +2489,7 @@
                 </article>
 
                 <!-- Article 96: Grain -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2512,7 +2511,7 @@
                 </article>
 
                 <!-- Article 97: Grammarly Alternative -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2534,7 +2533,7 @@
                 </article>
 
                 <!-- Article 98: Headshotly Ai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2556,7 +2555,7 @@
                 </article>
 
                 <!-- Article 99: Imagecolorizer -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2578,7 +2577,7 @@
                 </article>
 
                 <!-- Article 100: Imgupscaler -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -2600,7 +2599,7 @@
                 </article>
 
                 <!-- Article 101: Interactive Shell -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2622,7 +2621,7 @@
                 </article>
 
                 <!-- Article 102: Jasper Alternative -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2644,7 +2643,7 @@
                 </article>
 
                 <!-- Article 103: Joturl -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -2666,7 +2665,7 @@
                 </article>
 
                 <!-- Article 104: Kavout -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2688,7 +2687,7 @@
                 </article>
 
                 <!-- Article 105: Kingsmo -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2710,7 +2709,7 @@
                 </article>
 
                 <!-- Article 106: Kingsumo -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2732,7 +2731,7 @@
                 </article>
 
                 <!-- Article 107: Kingumo -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2754,7 +2753,7 @@
                 </article>
 
                 <!-- Article 108: Kiwilaunch -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -2776,7 +2775,7 @@
                 </article>
 
                 <!-- Article 109: Kvitly -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2798,7 +2797,7 @@
                 </article>
 
                 <!-- Article 110: Labrika -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2820,7 +2819,7 @@
                 </article>
 
                 <!-- Article 111: Lapsula -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2842,7 +2841,7 @@
                 </article>
 
                 <!-- Article 112: Laxis Ai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2864,7 +2863,7 @@
                 </article>
 
                 <!-- Article 113: Leadrocks -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -2886,7 +2885,7 @@
                 </article>
 
                 <!-- Article 114: Learniverse -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="education">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="education">
                     <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎓</span>
                     </div>
@@ -2908,7 +2907,7 @@
                 </article>
 
                 <!-- Article 115: Local Rank Tracker -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -2930,7 +2929,7 @@
                 </article>
 
                 <!-- Article 116: Mailerlite -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -2952,7 +2951,7 @@
                 </article>
 
                 <!-- Article 117: Marketplace Flowyteam -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2974,7 +2973,7 @@
                 </article>
 
                 <!-- Article 118: Marketplace Ideabuddy -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -2996,7 +2995,7 @@
                 </article>
 
                 <!-- Article 119: Marketplace Nichesss -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -3018,7 +3017,7 @@
                 </article>
 
                 <!-- Article 120: Marketplace Rtila -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -3040,7 +3039,7 @@
                 </article>
 
                 <!-- Article 121: Marketplace Vocal -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -3062,7 +3061,7 @@
                 </article>
 
                 <!-- Article 122: Marketplace Whatsapp Widget -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3084,7 +3083,7 @@
                 </article>
 
                 <!-- Article 123: Marketplace Writecream -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -3106,7 +3105,7 @@
                 </article>
 
                 <!-- Article 124: Measuremate -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -3128,7 +3127,7 @@
                 </article>
 
                 <!-- Article 125: Meet Oscar -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -3150,7 +3149,7 @@
                 </article>
 
                 <!-- Article 126: Metasurvey -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -3172,7 +3171,7 @@
                 </article>
 
                 <!-- Article 127: Missinglettr -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -3194,7 +3193,7 @@
                 </article>
 
                 <!-- Article 128: More Goods -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -3216,7 +3215,7 @@
                 </article>
 
                 <!-- Article 129: Myclone -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3238,7 +3237,7 @@
                 </article>
 
                 <!-- Article 130: Mystrika -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -3260,7 +3259,7 @@
                 </article>
 
                 <!-- Article 131: Nativerest -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3282,7 +3281,7 @@
                 </article>
 
                 <!-- Article 132: Neuronwriter -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="seo-content">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="seo-content">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🔍</span>
                     </div>
@@ -3304,7 +3303,7 @@
                 </article>
 
                 <!-- Article 133: No Code Mba Deal -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="education">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="education">
                     <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎓</span>
                     </div>
@@ -3326,7 +3325,7 @@
                 </article>
 
                 <!-- Article 134: Nocodebackend -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3348,7 +3347,7 @@
                 </article>
 
                 <!-- Article 135: Onlinecoursehost -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="education">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="education">
                     <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎓</span>
                     </div>
@@ -3370,7 +3369,7 @@
                 </article>
 
                 <!-- Article 136: Open Elms -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3392,7 +3391,7 @@
                 </article>
 
                 <!-- Article 137: Personeoai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3414,7 +3413,7 @@
                 </article>
 
                 <!-- Article 138: Picbolt -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -3436,7 +3435,7 @@
                 </article>
 
                 <!-- Article 139: Pin Generator -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3458,7 +3457,7 @@
                 </article>
 
                 <!-- Article 140: Pismo Alt -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3480,7 +3479,7 @@
                 </article>
 
                 <!-- Article 141: Pismo -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="video">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="video">
                     <div class="bg-gradient-to-br from-red-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎬</span>
                     </div>
@@ -3502,7 +3501,7 @@
                 </article>
 
                 <!-- Article 142: Pixelied -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -3524,7 +3523,7 @@
                 </article>
 
                 <!-- Article 143: Plai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3546,7 +3545,7 @@
                 </article>
 
                 <!-- Article 144: Power Formulas -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -3568,7 +3567,7 @@
                 </article>
 
                 <!-- Article 145: Powr -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3590,7 +3589,7 @@
                 </article>
 
                 <!-- Article 146: Produktly -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -3612,7 +3611,7 @@
                 </article>
 
                 <!-- Article 147: Proxiedmail -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -3634,7 +3633,7 @@
                 </article>
 
                 <!-- Article 148: Quizify -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3656,7 +3655,7 @@
                 </article>
 
                 <!-- Article 149: Rendercut -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="video">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="video">
                     <div class="bg-gradient-to-br from-red-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎬</span>
                     </div>
@@ -3678,7 +3677,7 @@
                 </article>
 
                 <!-- Article 150: Reoon -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -3700,7 +3699,7 @@
                 </article>
 
                 <!-- Article 151: Rumble Studio -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3722,7 +3721,7 @@
                 </article>
 
                 <!-- Article 152: Screpy -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3744,7 +3743,7 @@
                 </article>
 
                 <!-- Article 153: Sendfox -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -3766,7 +3765,7 @@
                 </article>
 
                 <!-- Article 154: Seopital -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3788,7 +3787,7 @@
                 </article>
 
                 <!-- Article 155: Sheetany -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -3810,7 +3809,7 @@
                 </article>
 
                 <!-- Article 156: Sheetgpt -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -3832,7 +3831,7 @@
                 </article>
 
                 <!-- Article 157: Sheetxai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -3854,7 +3853,7 @@
                 </article>
 
                 <!-- Article 158: Slidebean -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-cyan-500 to-cyan-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -3876,7 +3875,7 @@
                 </article>
 
                 <!-- Article 159: Slidefill -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -3898,7 +3897,7 @@
                 </article>
 
                 <!-- Article 160: Smart Spreadsheets -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -3920,7 +3919,7 @@
                 </article>
 
                 <!-- Article 161: Snoooz -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3942,7 +3941,7 @@
                 </article>
 
                 <!-- Article 162: Social Media Canva -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3964,7 +3963,7 @@
                 </article>
 
                 <!-- Article 163: Speechactors -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -3986,7 +3985,7 @@
                 </article>
 
                 <!-- Article 164: Spokk -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -4008,7 +4007,7 @@
                 </article>
 
                 <!-- Article 165: Stackby -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -4030,7 +4029,7 @@
                 </article>
 
                 <!-- Article 166: Sterling Stock Picker -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -4052,7 +4051,7 @@
                 </article>
 
                 <!-- Article 167: Strell -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -4074,7 +4073,7 @@
                 </article>
 
                 <!-- Article 168: Subpage Deal -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4096,7 +4095,7 @@
                 </article>
 
                 <!-- Article 169: Supercopy Ai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -4118,7 +4117,7 @@
                 </article>
 
                 <!-- Article 170: Supercopyai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -4140,7 +4139,7 @@
                 </article>
 
                 <!-- Article 171: Support Board -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4162,7 +4161,7 @@
                 </article>
 
                 <!-- Article 172: Systeme Io -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-emerald-500 to-emerald-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -4184,7 +4183,7 @@
                 </article>
 
                 <!-- Article 173: Tabby -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4206,7 +4205,7 @@
                 </article>
 
                 <!-- Article 174: Tidycal -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-teal-500 to-teal-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4228,7 +4227,7 @@
                 </article>
 
                 <!-- Article 175: Tiny Talk -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4250,7 +4249,7 @@
                 </article>
 
                 <!-- Article 176: Trainwel -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4272,7 +4271,7 @@
                 </article>
 
                 <!-- Article 177: Trebble Online Audio Editor -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="video">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="video">
                     <div class="bg-gradient-to-br from-red-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎬</span>
                     </div>
@@ -4294,7 +4293,7 @@
                 </article>
 
                 <!-- Article 178: Triplo Ai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4316,7 +4315,7 @@
                 </article>
 
                 <!-- Article 179: Trustbucket -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-amber-500 to-amber-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -4338,7 +4337,7 @@
                 </article>
 
                 <!-- Article 180: Unbounce -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -4360,7 +4359,7 @@
                 </article>
 
                 <!-- Article 181: Unmixr Ai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4382,7 +4381,7 @@
                 </article>
 
                 <!-- Article 182: Updf -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -4404,7 +4403,7 @@
                 </article>
 
                 <!-- Article 183: Vanchat -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="ecommerce">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="ecommerce">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🛒</span>
                     </div>
@@ -4426,7 +4425,7 @@
                 </article>
 
                 <!-- Article 184: Vibeo -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="video">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="video">
                     <div class="bg-gradient-to-br from-red-500 to-red-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎬</span>
                     </div>
@@ -4448,7 +4447,7 @@
                 </article>
 
                 <!-- Article 185: Viinyx -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4470,7 +4469,7 @@
                 </article>
 
                 <!-- Article 186: Visualsitemaps -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="seo-research">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="seo-research">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🔍</span>
                     </div>
@@ -4492,7 +4491,7 @@
                 </article>
 
                 <!-- Article 187: Vizologi Plus Exclusive -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="data">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="data">
                     <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📊</span>
                     </div>
@@ -4514,7 +4513,7 @@
                 </article>
 
                 <!-- Article 188: Webabilityio -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4536,7 +4535,7 @@
                 </article>
 
                 <!-- Article 189: Wiz Write -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -4558,7 +4557,7 @@
                 </article>
 
                 <!-- Article 190: Woodpecker -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -4580,7 +4579,7 @@
                 </article>
 
                 <!-- Article 191: Wordhero -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -4602,7 +4601,7 @@
                 </article>
 
                 <!-- Article 192: Wordplay -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -4624,7 +4623,7 @@
                 </article>
 
                 <!-- Article 193: Wp Login Lockdown -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4646,7 +4645,7 @@
                 </article>
 
                 <!-- Article 194: Wpautoblog -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -4668,7 +4667,7 @@
                 </article>
 
                 <!-- Article 195: Wpautoblogcom -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
@@ -4690,7 +4689,7 @@
                 </article>
 
                 <!-- Article 196: Xinterview Ai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4712,7 +4711,7 @@
                 </article>
 
                 <!-- Article 197: Xinterview -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4734,7 +4733,7 @@
                 </article>
 
                 <!-- Article 198: Yazo Ai -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="marketing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="marketing">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">📧</span>
                     </div>
@@ -4756,7 +4755,7 @@
                 </article>
 
                 <!-- Article 199: Zapier Alternative -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="productivity">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="productivity">
                     <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">⚡</span>
                     </div>
@@ -4778,7 +4777,7 @@
                 </article>
 
                                 <!-- Article 201: Airbrush AI Image Generator -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="design">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="design">
                     <div class="bg-gradient-to-br from-pink-500 to-rose-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">🎨</span>
                     </div>
@@ -4800,7 +4799,7 @@
                 </article>
 
                 <!-- Article 202: Writeseed AI Content Writer -->
-                <article class="article-card bg-white rounded-xl overflow-hidden h-full" data-category="writing">
+                <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="writing">
                     <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
                         <span class="text-white text-6xl">✍️</span>
                     </div>
