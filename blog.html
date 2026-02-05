@@ -91,21 +91,21 @@
             to { opacity: 1; transform: translateY(0); }
         }
         /* Force blog grid to stay multi-column on desktop (no single-column collapse on scroll) */
-        #blog-grid .blog-grid-inner {
+        #blog-grid .grid {
             display: grid !important;
             grid-template-columns: 1fr;
-            gap: 1.5rem;
+            gap: 2rem;
             width: 100%;
             min-width: 0; /* prevent overflow from forcing reflow */
         }
         @media (min-width: 768px) {
-            #blog-grid .blog-grid-inner { grid-template-columns: repeat(2, 1fr) !important; }
+            #blog-grid .grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
         @media (min-width: 1024px) {
-            #blog-grid .blog-grid-inner { grid-template-columns: repeat(3, 1fr) !important; }
+            #blog-grid .grid { grid-template-columns: repeat(3, 1fr) !important; }
         }
         @media (min-width: 1280px) {
-            #blog-grid .blog-grid-inner { grid-template-columns: repeat(4, 1fr) !important; }
+            #blog-grid .grid { grid-template-columns: repeat(4, 1fr) !important; }
         }
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
@@ -355,7 +355,7 @@
     <!-- Blog Grid -->
     <section id="blog-grid" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-            <div class="blog-grid-inner grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 
                 <!-- Article 1: SEO Tools -->
                 <article class="article-card bg-white rounded-xl overflow-hidden h-full flex flex-col" data-category="seo-content">
