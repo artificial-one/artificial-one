@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="{{PAGE_TITLE}} | artificial.one" />
+    <meta property="og:description" content="{{META_DESCRIPTION}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{CANONICAL_URL}}" />
+    <meta property="og:image" content="{{OG_IMAGE}}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="{{PAGE_TITLE}} | artificial.one" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{PAGE_TITLE}} | artificial.one">
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+    <meta name="twitter:image" content="{{OG_IMAGE}}">
+    <link rel="canonical" href="{{CANONICAL_URL}}" />
+    <title>{{PAGE_TITLE}} | artificial.one</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <meta name="keywords" content="{{KEYWORDS}}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
+        #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
+        .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
+        .mobile-dropdown-btn.active svg { transform: rotate(180deg); }
+    </style>
+    {{BREADCRUMB_SCHEMA}}
+    {{FAQ_SCHEMA}}
+</head>
+<body class="bg-white">
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
+                <a href="../index.html"><img src="../artificial-one-logo-large.svg" alt="artificial.one" class="h-16 sm:h-20 md:h-24"></a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-purple-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div class="hidden md:flex gap-4 sm:gap-6 items-center text-sm sm:text-base">
+                    <a href="../reviews.html" class="text-gray-600 hover:text-purple-600">All Reviews</a>
+                    <a href="../blog.html" class="text-gray-600 hover:text-purple-600">Blog</a>
+                    <a href="../about.html" class="text-gray-600 hover:text-purple-600">About</a>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="../reviews.html" class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Reviews</a>
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold w-full text-center flex justify-between items-center">
+                            Categories <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                            <a href="../category/writing-content.html" class="block text-sm py-1">✍️ Writing & Content</a>
+                            <a href="../category/design-images.html" class="block text-sm py-1">🎨 Design & Images</a>
+                            <a href="../category/video-animation.html" class="block text-sm py-1">🎬 Video & Animation</a>
+                            <a href="../category/coding-development.html" class="block text-sm py-1">💻 Coding & Development</a>
+                            <a href="../category/productivity-business.html" class="block text-sm py-1">📊 Productivity & Business</a>
+                            <a href="../category/voice-audio.html" class="block text-sm py-1">🎙️ Voice & Audio</a>
+                            <a href="../category/research-data.html" class="block text-sm py-1">🔬 Research & Data</a>
+                            <a href="../category/marketing-social.html" class="block text-sm py-1">📱 Marketing & Social</a>
+                            <a href="../category/data-analytics.html" class="block text-sm py-1">📈 Data & Analytics</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold w-full text-center flex justify-between items-center">
+                            Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                            <a href="../compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
+                            <a href="../best/index.html" class="block text-sm py-1">🏆 Best Of Lists</a>
+                            <a href="../tutorials/index.html" class="block text-sm py-1">📚 Tutorials</a>
+                            <a href="../guides/index.html" class="block text-sm py-1">📖 Guides</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold w-full text-center flex justify-between items-center">
+                            💰 Super Deals <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                            <a href="../guides/best-lifetime-deal-software-2026.html" class="block text-sm py-1">🎯 Browse All Deals</a>
+                            <a href="../compare/index.html" class="block text-sm py-1">🔍 Compare Tools</a>
+                            <a href="../guides/use-case-startups.html" class="block text-sm py-1">🚀 Best for Startups</a>
+                            <a href="../guides/use-case-freelancers.html" class="block text-sm py-1">💼 Best for Freelancers</a>
+                            <a href="../guides/best-lifetime-ai-tools.html" class="block text-sm py-1">🤖 AI Tools</a>
+                        </div>
+                    </div>
+                    <a href="../blog.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Blog</a>
+                    <a href="../about.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <nav aria-label="Breadcrumb" style="margin: 20px 0; padding: 10px 0; border-bottom: 1px solid #e5e7eb;">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; color: #6b7280;">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="https://artificial.one/" itemprop="item"><span itemprop="name">Home</span></a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Tools</span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </nav>
+        <div class="mb-4">
+            <a href="../reviews.html" class="text-purple-600 hover:text-purple-700">← Back to All Reviews</a>
+        </div>
+
+        <!-- AI transparency badge -->
+        <div class="mb-6 px-4 py-2 bg-gray-100 rounded-lg text-sm text-gray-600">
+            <strong>AI Tools Reviewed BY AI.</strong> Our AI systems analyzed this tool; we do not mention specific AI product names in reviews.
+        </div>
+
+        <!-- Optional email capture (same block added to existing tool pages) -->
+        <div class="my-6 p-4 bg-gray-50 rounded-xl border border-gray-200" data-beehiiv-form="newsletter">
+            <p class="text-sm font-medium text-gray-700 mb-2">Get weekly AI tool deals delivered free.</p>
+            <form class="flex flex-wrap gap-2" action="#" method="post" data-beehiiv-subscribe>
+                <input type="email" name="email" placeholder="you@example.com" class="flex-1 min-w-[200px] px-3 py-2 border border-gray-300 rounded-lg text-sm" required />
+                <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded-lg font-semibold text-sm hover:bg-purple-700">Subscribe</button>
+            </form>
+        </div>
+
+        <header class="mb-8">
+            <div class="text-purple-600 font-semibold mb-2">{{CATEGORY_LABEL}}</div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{{TOOL_NAME}} Review</h1>
+            <div class="flex flex-wrap gap-4 items-center mb-6">
+                <div class="px-4 py-2 bg-green-100 text-green-800 rounded-lg font-bold text-lg">⭐ {{SCORE}}/10</div>
+                <div class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-semibold">{{FREE_OR_PAID_BADGE}}</div>
+                <div class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg font-semibold">{{PRICE}}</div>
+            </div>
+            <p class="text-xl text-gray-700">{{SHORT_DESCRIPTION}}</p>
+        </header>
+
+        <div class="prose prose-lg max-w-none">
+            {{CONTENT_BODY}}
+
+            <div class="bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl p-8 my-12 text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Try {{TOOL_NAME}}</h3>
+                <p class="text-gray-700 mb-6">Ready to get started? Visit the official site or get the deal below.</p>
+                <a href="{{AFFILIATE_OR_OFFICIAL_URL}}" target="_blank" rel="noopener nofollow sponsored" class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700">
+                    {{CTA_LABEL}}
+                </a>
+                <p class="text-sm text-gray-600 mt-4">This is an affiliate link. We may earn a commission at no extra cost to you.</p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-8 my-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Explore More AI Tools</h3>
+                <p class="text-gray-700 mb-6">We've reviewed 220+ AI tools across all categories.</p>
+                <a href="../reviews.html" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800">Browse All Reviews →</a>
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-gray-50 border-t border-gray-200 py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-4 text-center text-gray-600">
+            <p>© 2026 artificial.one - AI tools reviewed by AI</p>
+        </div>
+    </footer>
+
+<script>
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        this.nextElementSibling.classList.toggle('hidden');
+    });
+});
+</script>
+</body>
+</html>

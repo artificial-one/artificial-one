@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PAGE_TITLE}} | artificial.one</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+    <meta property="og:title" content="{{PAGE_TITLE}} | artificial.one">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://artificial.one/images/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{PAGE_TITLE}} | artificial.one">
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        article p { margin-bottom: 1.25rem; line-height: 1.75; }
+        article h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        article h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        article ul { margin-bottom: 1rem; margin-left: 1.25rem; }
+        .deal-card { border: 1px solid #e5e7eb; border-radius: 10px; padding: 20px; margin-bottom: 20px; background: #fafafa; }
+        .deal-card h3 { margin-top: 0; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown .dropdown-content { display: none; position: absolute; background: white; min-width: 240px; box-shadow: 0 8px 16px rgba(0,0,0,0.15); border-radius: 8px; z-index: 100; top: calc(100% + 5px); left: -15px; padding: 12px 0; }
+        .dropdown:hover .dropdown-content, .dropdown .dropdown-content:hover { display: block; }
+        .dropdown-content a { color: #4b5563; padding: 14px 20px; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background: #f3f4f6; color: #6366f1; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+<nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 md:h-20">
+            <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">artificial.one</a>
+            <div class="hidden md:flex gap-6 items-center">
+                <a href="guides/best-lifetime-deal-software-2026.html" class="text-gray-600 hover:text-indigo-600 font-medium">Lifetime Deals</a>
+                <a href="blog.html" class="text-gray-600 hover:text-indigo-600 font-medium">Blog</a>
+                <a href="reviews.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2 rounded-lg font-semibold">Browse Tools</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-6 px-4 py-2 bg-gray-100 rounded-lg text-sm text-gray-600">
+        <strong>AI Tools Reviewed BY AI.</strong> Our AI systems produced this roundup; we do not mention specific AI product names in content.
+    </div>
+
+    <!-- Optional email capture -->
+    {{EMAIL_CAPTURE_BLOCK}}
+
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">{{PAGE_TITLE}}</h1>
+    <p class="text-gray-600 mb-8">{{LEAD_PARAGRAPH}}</p>
+
+    {{CONTENT_BODY}}
+
+    <p class="mt-8 text-sm text-gray-500">All affiliate links use the appsumo.8odi.net tracking domain. We may earn a commission at no extra cost to you.</p>
+</article>
+<footer class="border-t border-gray-200 py-8 mt-16 text-center text-gray-600 text-sm">
+    <p>© 2026 artificial.one - AI tools reviewed by AI</p>
+</footer>
+</body>
+</html>
