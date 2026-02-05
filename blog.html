@@ -4876,15 +4876,12 @@ function filterByCategory(category) {
         return;
     }
     const articles = gridEl.querySelectorAll('.article-card[data-category]');
-    const categoryNorm = (category || '').trim().toLowerCase();
+    const categoryNorm = (category || '').trim().toLowerCase().replace(/-/g, '');
 
     articles.forEach(article => {
         const raw = article.getAttribute('data-category');
-        const articleCategoryNorm = (raw || '').trim().toLowerCase();
+        const articleCategoryNorm = (raw || '').trim().toLowerCase().replace(/-/g, '');
         const match = category === 'all' || articleCategoryNorm === categoryNorm;
-        if (categoryNorm === 'ecommerce') {
-            console.log('E-commerce filter: article category raw="' + (raw || '') + '" normalized="' + articleCategoryNorm + '" match=' + match);
-        }
         if (match) {
             article.classList.remove('hidden');
             article.classList.remove('filtered-out');
@@ -4909,11 +4906,12 @@ function updateCounts() {
     const articles = gridEl ? Array.from(gridEl.querySelectorAll('.article-card[data-category]')) : Array.from(document.querySelectorAll('.article-card[data-category]'));
     const categoryCounts = {};
     
-    // Count by normalized data-category (trim + lowercase) so filter and counts match
+    // Count by normalized data-category (trim + lowercase + no hyphens) so filter and counts match
+    function normCat(s) { return (s || '').trim().toLowerCase().replace(/-/g, ''); }
     articles.forEach(article => {
         const cat = article.getAttribute('data-category');
         if (cat && cat.trim()) {
-            const key = cat.trim().toLowerCase();
+            const key = normCat(cat);
             categoryCounts[key] = (categoryCounts[key] || 0) + 1;
         }
     });
@@ -4923,7 +4921,7 @@ function updateCounts() {
         const onclick = btn.getAttribute('onclick');
         const match = onclick.match(/filterByCategory\('([^']+)'\)/);
         if (match) {
-            const cat = (match[1] || '').trim().toLowerCase();
+            const cat = normCat(match[1] || '');
             const textMatch = btn.textContent.match(/^([^(]+)/);
             const text = textMatch ? textMatch[1].trim() : btn.textContent.split('(')[0].trim();
 
