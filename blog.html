@@ -90,11 +90,24 @@
             from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Ensure blog cards stay in a responsive multi-column grid on desktop */
+        /* Masonry-style layout so posts stay visually balanced across screen */
         #blog-grid .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
+            column-count: 1;
+            column-gap: 1.75rem;
+        }
+        @media (min-width: 768px) {
+            #blog-grid .grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            #blog-grid .grid { column-count: 3; }
+        }
+        @media (min-width: 1280px) {
+            #blog-grid .grid { column-count: 4; }
+        }
+        #blog-grid .article-card {
+            break-inside: avoid;
+            margin-bottom: 1.75rem;
+            width: 100%;
         }
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
