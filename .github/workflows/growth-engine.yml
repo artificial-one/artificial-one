@@ -21,7 +21,7 @@ jobs:
       GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Authenticate to Google Cloud without a stored key
         uses: google-github-actions/auth@v3
@@ -30,7 +30,7 @@ jobs:
           workload_identity_provider: projects/932498409311/locations/global/workloadIdentityPools/github-actions/providers/github
           service_account: artificial-one-search-growth@artificial-one-growth.iam.gserviceaccount.com
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
