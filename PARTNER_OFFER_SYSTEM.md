@@ -73,6 +73,6 @@ The latest sanitized aggregate baseline is kept in the GitHub Actions cache at `
 
 The API monitor detects attributed customers, paid customers, transactions, revenue, rewards, commission totals, reward/payment status totals and partnership additions or status changes. PartnerStack's documented Partner API does not expose dashboard clicks, content resources, terms-gated notices or every invitation state, so those remain manual review items. PartnerStack Postbacks can later add immediate customer, transaction and reward notifications without polling.
 
-The old laptop-dependent heartbeat should remain active only until the cloud workflow completes a successful manual test. After that it should be paused to avoid duplicate checks.
+The cloud workflow completed its first successful manual test on September 14, 2026, initializing the private aggregate baseline. The old laptop-dependent Codex heartbeat is now paused to avoid duplicate checks.
 
 Monitoring is read-only. It must not accept invitations or terms, create referral links, download resources, send messages or change account settings. Any newly interesting program is reviewed for audience fit, economics and promotion restrictions before it is added to the public registry.
