@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "placements": [
+    {
+      "id": "descript-video-audio-intent",
+      "offer_id": "descript",
+      "headline": "A practical option for this workflow: Descript",
+      "copy": "Edit recorded video and audio through a transcript-led workspace, with transcription, screen recording and clip creation in one product.",
+      "cta_label": "Try Descript",
+      "path_patterns": [
+        "tutorials/*video*.html",
+        "tutorials/*podcast*.html",
+        "best/*video*.html",
+        "best/*podcast*.html",
+        "best/*content-creators*.html",
+        "blog-professional-ai-video.html",
+        "category/video-animation.html",
+        "tools/descript*.html"
+      ]
+    },
+    {
+      "id": "volza-commercial-research-intent",
+      "offer_id": "volza",
+      "headline": "Research real cross-border demand with Volza",
+      "copy": "Use shipment and trade data to investigate products, markets, buyers and suppliers before making sourcing or market-entry decisions.",
+      "cta_label": "Explore Volza",
+      "path_patterns": [
+        "best/*business-intelligence*.html",
+        "tutorials/*sales*.html",
+        "tutorials/*business*.html",
+        "category/research-data.html"
+      ]
+    },
+    {
+      "id": "elevenlabs-voice-intent",
+      "offer_id": "elevenlabs",
+      "headline": "Create voiceovers and spoken audio with ElevenLabs",
+      "copy": "Generate narration, voices and multilingual dubbing through a focused AI audio platform.",
+      "cta_label": "Try ElevenLabs",
+      "path_patterns": ["best/*voice*.html", "compare/elevenlabs*.html", "tools/elevenlabs*.html", "tutorials/*voiceover*.html", "guides/*voice-actors*.html", "blog-ai-voice-generators.html", "category/voice-audio.html"]
+    },
+    {
+      "id": "kit-email-marketing-intent",
+      "offer_id": "kit",
+      "headline": "Build an owned audience with Kit",
+      "copy": "Create forms, landing pages, newsletters and automated email sequences in a platform designed for creators.",
+      "cta_label": "Explore Kit",
+      "path_patterns": ["tutorials/*email-marketing*.html", "tutorials/*newsletter*.html", "guides/*email-marketing*.html", "guides/*newsletter*.html", "guides/lifetime-email-marketing-tools.html"]
+    },
+    {
+      "id": "adcreative-paid-marketing-intent",
+      "offer_id": "adcreative",
+      "headline": "Generate more ad variations with AdCreative.ai",
+      "copy": "Produce advertising creative and copy variants for campaign testing while keeping human review in the loop.",
+      "cta_label": "Try AdCreative.ai",
+      "path_patterns": ["guides/*ad-creation*.html", "blog-creative-score.html", "best/*marketing*.html", "tutorials/*marketing*.html", "category/marketing-social.html"]
+    },
+    {
+      "id": "unbounce-landing-page-intent",
+      "offer_id": "unbounce",
+      "headline": "Build and test campaign pages with Unbounce",
+      "copy": "Create dedicated landing pages and run conversion experiments without waiting on a full website release cycle.",
+      "cta_label": "Explore Unbounce",
+      "path_patterns": ["best/*landing-page*.html", "guides/*landing-page*.html", "guides/*funnel*.html", "tutorials/*landing-pages*.html"]
+    },
+    {
+      "id": "pinecone-intent",
+      "offer_id": "pinecone",
+      "headline": "Add production vector search with Pinecone",
+      "copy": "Use managed vector infrastructure for semantic search, AI application memory and retrieval-augmented generation.",
+      "cta_label": "Explore Pinecone",
+      "path_patterns": ["best/*coding*.html", "guides/*developers*.html", "category/coding-development.html"]
+    },
+    {
+      "id": "beautiful-ai-presentation-intent",
+      "offer_id": "beautiful-ai",
+      "headline": "Draft polished decks with Beautiful.ai",
+      "copy": "Turn an outline into adaptive slide layouts and keep recurring presentations visually consistent.",
+      "cta_label": "Explore Beautiful.ai",
+      "path_patterns": ["best/*presentation*.html", "guides/*pitch-deck*.html", "tutorials/*presentation*.html", "blog-slide*.html", "tools/slide*.html"]
+    },
+    {
+      "id": "wegic-website-building-intent",
+      "offer_id": "wegic",
+      "headline": "Build a website by chatting with Wegic",
+      "copy": "Generate, edit and publish a responsive website through an AI-guided workflow without writing code.",
+      "cta_label": "Try Wegic",
+      "path_patterns": ["best/*website-builder*.html", "guides/*website-builder*.html", "guides/*no-code*.html", "tutorials/*website*.html"]
+    },
+    {
+      "id": "rank-prompt-ai-search-intent",
+      "offer_id": "rank-prompt",
+      "headline": "Measure your brand's visibility in AI answers",
+      "copy": "Track whether your brand appears across AI search and assistant products, then compare visibility over time.",
+      "cta_label": "Try Rank Prompt",
+      "path_patterns": ["blog-ai-seo-tools.html", "tutorials/*seo*.html", "guides/*seo*.html"]
+    },
+    {
+      "id": "seamless-sales-intent",
+      "offer_id": "seamless",
+      "headline": "Build targeted B2B prospect lists with Seamless.AI",
+      "copy": "Find and enrich business contacts for outbound sales workflows, subject to applicable privacy and outreach rules.",
+      "cta_label": "Explore Seamless.AI",
+      "path_patterns": ["guides/*sales*.html", "tutorials/*sales*.html", "tutorials/*lead-generation*.html", "tutorials/*cold-emails*.html"]
+    },
+    {
+      "id": "whatconverts-attribution-intent",
+      "offer_id": "whatconverts",
+      "headline": "Connect leads to the campaigns that generated them",
+      "copy": "Track calls, forms and other lead types so optimization can focus on qualified outcomes rather than clicks alone.",
+      "cta_label": "Explore WhatConverts",
+      "path_patterns": ["best/*analytics*.html", "guides/*analytics*.html", "category/data-analytics.html"]
+    },
+    {
+      "id": "learnworlds-course-intent",
+      "offer_id": "learnworlds",
+      "headline": "Create and sell courses with LearnWorlds",
+      "copy": "Build branded learning experiences, manage learners and sell online courses from one hosted platform.",
+      "cta_label": "Explore LearnWorlds",
+      "path_patterns": ["guides/*course-platform*.html", "blog-onlinecoursehost.html", "tools/onlinecoursehost*.html"]
+    },
+    {
+      "id": "foxit-document-intent",
+      "offer_id": "foxit",
+      "headline": "Handle complete PDF workflows with Foxit",
+      "copy": "Edit, convert, organize and sign PDF documents with tools for individuals and business teams.",
+      "cta_label": "Explore Foxit",
+      "path_patterns": ["best/*document*.html", "blog-updf.html", "tools/updf*.html", "tools/chatpdf*.html"]
+    },
+    {
+      "id": "hubstaff-time-intent",
+      "offer_id": "hubstaff",
+      "headline": "Track distributed work with Hubstaff",
+      "copy": "Combine time records, scheduling and workforce reporting for remote or field-based teams.",
+      "cta_label": "Explore Hubstaff",
+      "path_patterns": ["tools/timely*.html", "guides/*productivity*.html"]
+    },
+    {
+      "id": "carepatron-healthcare-intent",
+      "offer_id": "carepatron",
+      "headline": "Explore an integrated practice workspace with Carepatron",
+      "copy": "Bring scheduling, client records, documentation and related practice operations into one platform.",
+      "cta_label": "Explore Carepatron",
+      "path_patterns": ["guides/*doctors*.html"]
+    },
+    {
+      "id": "trainual-team-operations-intent",
+      "offer_id": "trainual",
+      "headline": "Standardize onboarding and processes with Trainual",
+      "copy": "Document recurring work, create role-based training and give growing teams one operational source of truth.",
+      "cta_label": "Explore Trainual",
+      "path_patterns": ["tutorials/*business*.html", "best/*small-business*.html", "guides/lifetime-business-software.html"]
+    },
+    {
+      "id": "turbotic-automation-intent",
+      "offer_id": "turbotic",
+      "headline": "Coordinate enterprise automation with Turbotic",
+      "copy": "Manage automation opportunities and outcomes across a broader operational transformation program.",
+      "cta_label": "Explore Turbotic",
+      "path_patterns": ["best/*workflow-automation*.html", "guides/*automation*.html", "category/productivity-business.html"]
+    },
+    {
+      "id": "kartra-funnel-intent",
+      "offer_id": "kartra",
+      "headline": "Run an integrated online-business funnel with Kartra",
+      "copy": "Combine pages, email, funnels and digital-product workflows in one marketing platform.",
+      "cta_label": "Explore Kartra",
+      "path_patterns": ["guides/*funnel*.html", "guides/*creator-monetization*.html"]
+    }
+  ]
+}

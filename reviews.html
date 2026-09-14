@@ -28,21 +28,21 @@
         .cat-btn { transition: all 0.2s ease; }
         .cat-btn.active { background: #2563eb; color: white; }
         .dropdown { position: relative; display: inline-block; }
-        .dropdown .dropdown-content { 
-            display: none; 
-            position: absolute; 
-            background-color: white; 
-            min-width: 240px; 
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
-            border-radius: 8px; 
+        .dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 240px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border-radius: 8px;
             z-index: 100;
             top: calc(100% + 5px);
             left: -15px;
             padding: 12px 0;
         }
         .dropdown:hover .dropdown-content,
-        .dropdown .dropdown-content:hover { 
-            display: block; 
+        .dropdown .dropdown-content:hover {
+            display: block;
             animation: fadeIn 0.2s ease-in;
         }
         .dropdown::after {
@@ -57,16 +57,16 @@
         .dropdown:hover::after {
             display: block;
         }
-        .dropdown-content a { 
-            color: #4b5563; 
-            padding: 14px 20px; 
-            text-decoration: none; 
-            display: block; 
-            transition: all 0.2s; 
+        .dropdown-content a {
+            color: #4b5563;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s;
             font-size: 15px;
         }
-        .dropdown-content a:hover { 
-            background-color: #f3f4f6; 
+        .dropdown-content a:hover {
+            background-color: #f3f4f6;
             color: #6366f1;
             padding-left: 24px;
         }
@@ -108,13 +108,13 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
                 <a href="index.html"><img src="artificial-one-logo-large.svg" alt="artificial.one" class="h-16 sm:h-20 md:h-24"></a>
-                
+
                 <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-purple-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-                
+
                 <div class="hidden md:flex gap-4 sm:gap-6 items-center text-sm sm:text-base">
                     <div class="dropdown">
                         <span class="text-gray-600 hover:text-indigo-600 font-medium cursor-pointer">Categories ▾</span>
@@ -155,7 +155,7 @@
                     <a href="reviews.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-4 sm:px-6 py-2 rounded-lg font-semibold">Browse Tools</a>
                 </div>
             </div>
-            
+
                                                 <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-3">
                     <a href="../reviews.html" class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Reviews</a>
@@ -335,7 +335,7 @@ const tools = [
     {cat:"📊 Productivity & Business",name:"Bearly AI",rating:"7.5/10",type:"free",tag:"🆓 Free",desc:"AI research assistant and reading tool.",pros:["Free tier","Research help","Multiple models"],cons:["Limited features","New tool"],bestFor:"Research",pricing:"Free | $20/mo",link:"https://bearly.ai"},
     {cat:"📊 Productivity & Business",name:"Timely",rating:"8.0/10",type:"subscription",tag:"💳 Subscription",desc:"AI time tracking that runs automatically.",pros:["Automatic tracking","Privacy-focused","Good for billing"],cons:["$9/mo","Learning period"],bestFor:"Freelancers, agencies",pricing:"$9/mo",link:"https://timelyapp.com"},
     {cat:"📊 Productivity & Business",name:"Clockwise",rating:"8.3/10",type:"free",tag:"🆓 Free",desc:"AI calendar optimizer for teams.",pros:["Free tier","Smart scheduling","Focus time"],cons:["Premium for best features","Can be aggressive"],bestFor:"Teams",pricing:"Free | $7/mo",link:"https://clockwise.com"},
-    {cat:"🎙️ Voice & Audio",name:"ElevenLabs",rating:"9.0/10",type:"free",tag:"🆓 Free",desc:"The most realistic AI voice generator.",pros:["Best voice quality","Free tier 10k chars/mo","Voice cloning"],cons:["Free tier limited","Expensive at scale"],bestFor:"Content creators",pricing:"Free | $5/mo",link:"https://elevenlabs.io"},
+    {cat:"🎙️ Voice & Audio",name:"ElevenLabs",rating:"9.0/10",type:"free",tag:"🆓 Free",desc:"The most realistic AI voice generator.",pros:["Best voice quality","Free tier 10k chars/mo","Voice cloning"],cons:["Free tier limited","Expensive at scale"],bestFor:"Content creators",pricing:"Free | $5/mo",link:"https://try.elevenlabs.io/v5gy7s0nd0ty"},
     {cat:"🎙️ Voice & Audio",name:"Murf AI",rating:"8.3/10",type:"subscription",tag:"💳 Subscription",desc:"AI voiceover studio with 120+ voices.",pros:["Huge voice library","Video sync","Commercial use"],cons:["Not as realistic as ElevenLabs","Pricey"],bestFor:"Video creators",pricing:"$29/mo",link:"https://murf.ai"},
     {cat:"🎙️ Voice & Audio",name:"Podcast.ai",rating:"7.9/10",type:"deal",tag:"💰 Lifetime Deal",desc:"AI podcast generation tool.",pros:["Fast podcast creation","Multiple voices","Script generation"],cons:["Can sound robotic","Limited customization"],bestFor:"Podcast producers",pricing:"$19/mo | $199 lifetime",link:"https://podcast.ai"},
     {cat:"🎙️ Voice & Audio",name:"Adobe Podcast",rating:"8.6/10",type:"free",tag:"🆓 Free",desc:"AI audio enhancement for podcasters.",pros:["Free tier generous","Amazing quality","Easy to use"],cons:["Adobe ecosystem","Can be slow"],bestFor:"Podcasters",pricing:"Free",link:"https://podcast.adobe.com"},
@@ -1030,23 +1030,31 @@ function renderTools() {
         console.error('Container not found!');
         return;
     }
-    
+
     let html = '<div class="grid md:grid-cols-2 gap-6">';
-    
+
     tools.forEach(tool => {
         const catSlug = getCategorySlug(tool.cat);
         const typeClass = tool.type;
         const shouldShow = (currentTypeFilter === 'all' || typeClass === currentTypeFilter) &&
                           (currentCategoryFilter === 'all' || catSlug === currentCategoryFilter);
-        
+
         if (!shouldShow) return;
-        
+
         // Generate review URL slug from tool name
         const reviewSlug = tool.name.toLowerCase()
             .replace(/[^a-z0-9]+/g, '-')
             .replace(/^-+|-+$/g, '');
         const reviewUrl = `tools/${reviewSlug}-review.html`;
-        
+        const affiliateOfferByUrl = {
+            "https://get.descript.com/951y7htioj6v": "descript",
+            "https://try.elevenlabs.io/v5gy7s0nd0ty": "elevenlabs"
+        };
+        const affiliateOfferId = affiliateOfferByUrl[tool.link] || "";
+        const affiliateAttrs = affiliateOfferId
+            ? `rel="nofollow sponsored noopener" data-affiliate-offer="" data-offer-id="${affiliateOfferId}" data-placement="reviews-directory"`
+            : 'rel="noopener"';
+
         html += `
             <div class="tool-card bg-white rounded-xl p-6 ${typeClass} ${catSlug}">
                 <div class="flex justify-between items-start mb-3">
@@ -1081,7 +1089,7 @@ function renderTools() {
                     </a>
                     <p class="text-xs text-gray-500 text-center mt-1">✅ 60-day guarantee • We may earn a commission</p>
                     ` : `
-                    <a href="${tool.link}" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 text-center">
+                    <a href="${tool.link}" target="_blank" ${affiliateAttrs} class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 text-center">
                         Visit ${tool.name} →
                     </a>
                     <a href="${reviewUrl}" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 text-center">
@@ -1092,7 +1100,7 @@ function renderTools() {
             </div>
         `;
     });
-    
+
     html += '</div>';
     container.innerHTML = html;
     console.log(`Rendered ${tools.length} tools`);
@@ -1120,7 +1128,7 @@ function updateCounts() {
     tools.forEach(tool => {
         const catSlug = getCategorySlug(tool.cat);
         const matchesCategory = currentCategoryFilter === 'all' || catSlug === currentCategoryFilter;
-        
+
         if (matchesCategory) {
             typeCounts.all++;
             if (tool.type === 'free') typeCounts.free++;
@@ -1128,13 +1136,13 @@ function updateCounts() {
             if (tool.type === 'subscription') typeCounts.subscription++;
         }
     });
-    
+
     // CATEGORY BUTTONS: Show counts filtered by CURRENT type selection
     const categoryCounts = { all: 0, writing: 0, design: 0, video: 0, coding: 0, productivity: 0, voice: 0, research: 0, marketing: 0, data: 0 };
     tools.forEach(tool => {
         const catSlug = getCategorySlug(tool.cat);
         const matchesType = currentTypeFilter === 'all' || tool.type === currentTypeFilter;
-        
+
         if (matchesType) {
             categoryCounts.all++;
             if (catSlug === 'writing') categoryCounts.writing++;
@@ -1148,7 +1156,7 @@ function updateCounts() {
             if (catSlug === 'data') categoryCounts.data++;
         }
     });
-    
+
     // Update TYPE button labels
     document.querySelectorAll('.filter-btn').forEach(btn => {
         const text = btn.textContent.split('(')[0].trim();
@@ -1158,7 +1166,7 @@ function updateCounts() {
         else if (onclick.includes("'deal'")) btn.textContent = `${text} (${typeCounts.deal})`;
         else if (onclick.includes("'subscription'")) btn.textContent = `${text} (${typeCounts.subscription})`;
     });
-    
+
     // Update CATEGORY button labels
     document.querySelectorAll('.cat-btn').forEach(btn => {
         const text = btn.textContent.split('(')[0].trim();
@@ -1196,5 +1204,6 @@ document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
     });
 });
 </script>
+<script src="assets/affiliate-tracking.js" defer></script>
 </body>
 </html>

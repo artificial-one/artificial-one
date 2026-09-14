@@ -8,15 +8,25 @@ on:
     branches: [main]
     paths:
       - data/partner_offers.json
+      - data/affiliate_placements.json
+      - data/partnerstack_program_audit.json
       - scripts/build_partner_offers.py
+      - scripts/monetize_affiliate_links.py
       - assets/affiliate-tracking.js
       - tests/test_partner_offer_pipeline.py
+      - tests/test_affiliate_monetization.py
+      - tests/test_affiliate_site_output.py
   pull_request:
     paths:
       - data/partner_offers.json
+      - data/affiliate_placements.json
+      - data/partnerstack_program_audit.json
       - scripts/build_partner_offers.py
+      - scripts/monetize_affiliate_links.py
       - assets/affiliate-tracking.js
       - tests/test_partner_offer_pipeline.py
+      - tests/test_affiliate_monetization.py
+      - tests/test_affiliate_site_output.py
 
 permissions:
   contents: write
@@ -39,8 +49,13 @@ jobs:
       - name: Build approved offers
         run: python scripts/build_partner_offers.py
 
+      - name: Add approved contextual placements
+        run: python scripts/monetize_affiliate_links.py
+
       - name: Check generated output
-        run: python scripts/build_partner_offers.py --check
+        run: |
+          python scripts/build_partner_offers.py --check
+          python scripts/monetize_affiliate_links.py --check
 
       - name: Ensure secrets are not tracked
         shell: bash
@@ -56,8 +71,9 @@ jobs:
         if: github.event_name != 'pull_request'
         shell: bash
         run: |
-          git add -A -- partner-offers.html sitemap.xml
+          git add -A -- partner-offers.html sitemap.xml assets/affiliate-tracking.js
           if [ -d partner-offers ]; then git add -A -- partner-offers; fi
+          git add -A -- '*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -67,4 +83,4 @@ jobs:
       - name: Require generated files in pull requests
         if: github.event_name == 'pull_request'
         shell: bash
-        run: git diff --exit-code -- partner-offers.html partner-offers sitemap.xml
+        run: git diff --exit-code -- '*.html' partner-offers sitemap.xml

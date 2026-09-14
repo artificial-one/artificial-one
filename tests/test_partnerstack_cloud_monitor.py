@@ -1,11 +1,13 @@
 import tempfile
 import unittest
+import json
 from pathlib import Path
 
 from scripts.partnerstack_cloud_monitor import (
     _items_from_payload,
     build_snapshot,
     compare_snapshots,
+    load_website_coverage,
     render_email_dashboard,
     write_report,
 )
@@ -125,6 +127,34 @@ class PartnerStackCloudMonitorTests(unittest.TestCase):
             previous,
         )
         self.assertIn("Interest increased without a new paying customer", text)
+
+    def test_website_coverage_is_included_in_email(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            audit = root / "audit.json"
+            offers = root / "offers.json"
+            placements = root / "placements.json"
+            audit.write_text(json.dumps({
+                "summary": {"active_programs": 25, "terms_action_required": 0},
+                "programs": [
+                    {"name": "QuillBot", "website_status": "blocked"},
+                    {"name": "Runpod", "website_status": "draft"},
+                ],
+            }), encoding="utf-8")
+            offers.write_text(json.dumps({"offers": [
+                {"status": "published"}, {"status": "published"}, {"status": "draft"}
+            ]}), encoding="utf-8")
+            placements.write_text(json.dumps({"placements": [{"id": "one"}]}), encoding="utf-8")
+
+            coverage = load_website_coverage(audit, offers, placements)
+            current = build_snapshot({"partnerships": [], "customers": [], "transactions": [], "rewards": []})
+            _, text, html = render_email_dashboard(current, [], None, website_coverage=coverage)
+
+            self.assertIn("Active PartnerStack programs: 25", text)
+            self.assertIn("Published partner offers: 2", text)
+            self.assertIn("Draft programs: Runpod", text)
+            self.assertIn("Blocked programs", html)
+            self.assertIn("QuillBot", html)
 
 
 if __name__ == "__main__":

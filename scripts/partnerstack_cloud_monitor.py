@@ -224,6 +224,33 @@ def _status_summary(values: dict[str, Any]) -> str:
     return ", ".join(f"{name}: {_integer(count)}" for name, count in sorted(values.items()))
 
 
+def load_website_coverage(
+    audit_path: Path = Path("data/partnerstack_program_audit.json"),
+    offers_path: Path = Path("data/partner_offers.json"),
+    placements_path: Path = Path("data/affiliate_placements.json"),
+) -> dict[str, Any]:
+    """Load public, non-secret publishing coverage for the private dashboard."""
+    try:
+        audit = json.loads(audit_path.read_text(encoding="utf-8"))
+        offers = json.loads(offers_path.read_text(encoding="utf-8"))
+        placements = json.loads(placements_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise PartnerStackError(f"Could not load website monetization coverage: {exc}") from exc
+
+    programs = audit.get("programs", [])
+    published = [offer for offer in offers.get("offers", []) if offer.get("status") == "published"]
+    blocked = [program for program in programs if program.get("website_status") == "blocked"]
+    drafts = [program for program in programs if program.get("website_status") == "draft"]
+    return {
+        "active_programs": _integer(audit.get("summary", {}).get("active_programs")),
+        "terms_action_required": _integer(audit.get("summary", {}).get("terms_action_required")),
+        "published_offers": len(published),
+        "contextual_campaigns": len(placements.get("placements", [])),
+        "blocked_programs": [str(program.get("name", "Unknown")) for program in blocked],
+        "draft_programs": [str(program.get("name", "Unknown")) for program in drafts],
+    }
+
+
 def _recommendation(
     previous: dict[str, Any] | None,
     current: dict[str, Any],
@@ -258,6 +285,7 @@ def render_email_dashboard(
     changes: list[str],
     previous: dict[str, Any] | None,
     run_url: str = "",
+    website_coverage: dict[str, Any] | None = None,
 ) -> tuple[str, str, str]:
     """Return subject, plain text and HTML using aggregate, non-PII data only."""
     audited_at = str(current.get("audited_at") or "")
@@ -274,6 +302,7 @@ def render_email_dashboard(
     ] or ["None"]
     change_lines = changes or (["Baseline initialized; future emails will show daily changes."] if previous is None else ["No meaningful change."])
     recommendation = _recommendation(previous, current, changes)
+    coverage = website_coverage or {}
 
     metric_lines = [
         f"Partnerships: {_integer(partnerships.get('count'))}",
@@ -286,12 +315,23 @@ def render_email_dashboard(
         f"Reward statuses: {_status_summary(rewards.get('statuses', {}))}",
         f"Payment statuses: {_status_summary(rewards.get('payment_statuses', {}))}",
     ]
+    coverage_lines = [
+        f"Active PartnerStack programs: {_integer(coverage.get('active_programs'))}",
+        f"Terms awaiting acceptance: {_integer(coverage.get('terms_action_required'))}",
+        f"Published partner offers: {_integer(coverage.get('published_offers'))}",
+        f"Contextual campaigns: {_integer(coverage.get('contextual_campaigns'))}",
+        "Draft programs: " + (", ".join(coverage.get("draft_programs", [])) or "None"),
+        "Blocked programs: " + (", ".join(coverage.get("blocked_programs", [])) or "None"),
+    ]
     text_lines = [
         "Artificial.One PartnerStack dashboard",
         f"Audited: {audited_at}",
         "",
         "CURRENT TOTALS",
         *metric_lines,
+        "",
+        "WEBSITE MONETIZATION COVERAGE",
+        *coverage_lines,
         "",
         "PARTNERSHIPS",
         *(f"- {line}" for line in partnership_lines),
@@ -311,6 +351,11 @@ def render_email_dashboard(
         f"<td style='padding:6px 0;font-weight:600'>{escape(line.split(':', 1)[1].strip())}</td></tr>"
         for line in metric_lines
     )
+    coverage_rows = "".join(
+        f"<tr><td style='padding:6px 12px 6px 0;color:#667085'>{escape(line.split(':', 1)[0])}</td>"
+        f"<td style='padding:6px 0;font-weight:600'>{escape(line.split(':', 1)[1].strip())}</td></tr>"
+        for line in coverage_lines
+    )
     partnership_items = "".join(f"<li>{escape(line)}</li>" for line in partnership_lines)
     change_items = "".join(f"<li>{escape(line)}</li>" for line in change_lines)
     run_link = f"<p><a href='{escape(run_url)}'>Open cloud audit</a></p>" if run_url else ""
@@ -319,6 +364,7 @@ def render_email_dashboard(
 <h1 style="font-size:24px;margin-bottom:4px">PartnerStack daily dashboard</h1>
 <p style="color:#667085;margin-top:0">Artificial.One · {escape(audited_at)}</p>
 <h2 style="font-size:18px">Current totals</h2><table>{metric_rows}</table>
+<h2 style="font-size:18px">Website monetization coverage</h2><table>{coverage_rows}</table>
 <h2 style="font-size:18px">Partnerships</h2><ul>{partnership_items}</ul>
 <h2 style="font-size:18px">Changes since previous audit</h2><ul>{change_items}</ul>
 <h2 style="font-size:18px">Analysis / next action</h2><p>{escape(recommendation)}</p>
@@ -413,7 +459,10 @@ def main(argv: list[str] | None = None) -> int:
             raise PartnerStackError("RESEND_API_KEY is not configured")
         if not args.email_from:
             raise PartnerStackError("--email-from is required when --email-to is used")
-        subject, text_body, html_body = render_email_dashboard(current, changes, previous, run_url)
+        website_coverage = load_website_coverage()
+        subject, text_body, html_body = render_email_dashboard(
+            current, changes, previous, run_url, website_coverage
+        )
         send_resend_email(
             resend_api_key,
             args.email_from,

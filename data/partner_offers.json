@@ -49,7 +49,10 @@
       "offer_label": "Try Descript's AI video workflow",
       "pricing_note": "Affiliate eligibility applies to qualifying new subscriptions; verify current plans and features on Descript.",
       "tracking_url": "https://get.descript.com/artificial-one-video-editing",
-      "review_url": "",
+      "legacy_urls": [
+        "https://get.descript.com/951y7htioj6v"
+      ],
+      "review_url": "tools/descript.html",
       "cta_label": "Explore Descript",
       "featured": true,
       "sponsored": true,
@@ -73,6 +76,166 @@
           "url": "https://www.descript.com/affiliate-terms"
         }
       ]
+    },
+    {
+      "id": "trainual", "slug": "trainual-team-training", "name": "Trainual", "status": "published", "category": "Productivity & Business",
+      "summary": "A platform for documenting processes, onboarding employees and delivering role-based team training.", "best_for": "Growing teams that need repeatable onboarding, policies and operating procedures.",
+      "offer_label": "Explore Trainual for team training", "pricing_note": "Plans and limits can change; verify current options before subscribing.", "tracking_url": "https://start.trainual.com/3cc4gv1ru6kq", "cta_label": "Explore Trainual", "featured": false, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Trainual brings process documentation and structured employee training into one operational workspace.", "watch_out": "Evaluate authoring effort, seat pricing and reporting needs against the size of your team.",
+      "use_cases": ["Standardize employee onboarding", "Document recurring processes and policies"], "evidence": [{"label": "Trainual product website", "url": "https://trainual.com/"}]
+    },
+    {
+      "id": "turbotic", "slug": "turbotic-enterprise-automation", "name": "Turbotic", "status": "published", "category": "Automation",
+      "summary": "An enterprise automation platform for managing and improving automation initiatives across an organization.", "best_for": "Larger organizations coordinating automation programs and operational transformation.",
+      "offer_label": "Explore Turbotic automation", "pricing_note": "Enterprise availability and pricing can change; verify current terms with Turbotic.", "tracking_url": "https://try.turbotic.com/0nmmght6lhbv", "cta_label": "Explore Turbotic", "featured": false, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Turbotic is aimed at teams that need a portfolio-level view of automation rather than a single task tool.", "watch_out": "This is enterprise-oriented software; confirm implementation scope, integrations and procurement requirements.",
+      "use_cases": ["Coordinate an enterprise automation portfolio", "Track automation opportunities and outcomes"], "evidence": [{"label": "Turbotic product website", "url": "https://turbotic.com/"}]
+    },
+    {
+      "id": "wegic", "slug": "wegic-ai-website-builder", "name": "Wegic", "status": "published", "category": "Website Building",
+      "summary": "A conversational AI website builder for creating, editing and publishing websites without coding.", "best_for": "Freelancers, creators and small businesses that want to launch a site through an AI-guided workflow.",
+      "offer_label": "Build a website with Wegic", "pricing_note": "Free and paid capabilities can change; verify hosting, export and domain options before committing.", "tracking_url": "https://try.wegic.ai/gp5cnif98onj", "cta_label": "Try Wegic", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Wegic turns a conversational brief into a responsive website and supports further edits through chat.", "watch_out": "Confirm that design control, portability and integrations meet your longer-term website requirements.",
+      "use_cases": ["Launch a small-business website", "Create a portfolio or campaign landing site"], "evidence": [{"label": "Wegic product website", "url": "https://wegic.ai/"}]
+    },
+    {
+      "id": "pinecone", "slug": "pinecone-vector-database", "name": "Pinecone", "status": "published", "category": "Developer Infrastructure",
+      "summary": "A managed vector database for semantic search, retrieval-augmented generation and AI application memory.", "best_for": "Developers building production AI search, recommendation or retrieval systems.",
+      "offer_label": "Build with Pinecone", "pricing_note": "Usage, regions and pricing can change; estimate costs against your workload before production use.", "tracking_url": "https://try.pinecone.io/wcznms2xsvbs", "cta_label": "Explore Pinecone", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Pinecone provides managed indexing and vector search infrastructure designed for AI applications.", "watch_out": "Test retrieval quality, latency, data residency and cost at your expected scale.",
+      "use_cases": ["Build retrieval-augmented generation", "Add semantic search to an application"], "evidence": [{"label": "Pinecone product website", "url": "https://www.pinecone.io/"}]
+    },
+    {
+      "id": "kit", "slug": "kit-creator-email-marketing", "name": "Kit", "status": "published", "category": "Email Marketing",
+      "summary": "An email marketing platform for creators, with forms, landing pages, broadcasts, automations and commerce tools.", "best_for": "Newsletter writers, podcasters, course creators and independent businesses growing an owned audience.",
+      "offer_label": "Grow an audience with Kit", "pricing_note": "Plans scale with subscriber count; verify current free and paid plan limits.", "tracking_url": "https://partners.kit.com/llw5vjvedvle", "cta_label": "Explore Kit", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Kit combines audience capture, email publishing, automations and creator monetization in one platform.", "watch_out": "Compare automation depth, migration support and total cost at your projected subscriber count.",
+      "use_cases": ["Launch and grow a newsletter", "Automate email sequences for creator products"], "evidence": [{"label": "Kit product website", "url": "https://kit.com/"}]
+    },
+    {
+      "id": "beautiful-ai", "slug": "beautiful-ai-presentations", "name": "Beautiful.ai", "status": "published", "category": "Presentations",
+      "summary": "Presentation software with AI-assisted drafting and adaptive slide layouts.", "best_for": "Teams and professionals producing polished presentations on a recurring basis.",
+      "offer_label": "Create presentations with Beautiful.ai", "pricing_note": "Features and plan limits can change; verify the current presentation and collaboration options.", "tracking_url": "https://beautifulai.partnerlinks.io/maqaao71cuuy", "cta_label": "Explore Beautiful.ai", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Beautiful.ai automates much of the layout work involved in turning an outline into a consistent deck.", "watch_out": "Check template flexibility, export formats and brand-control requirements before standardizing on it.",
+      "use_cases": ["Draft sales and investor presentations", "Keep recurring team decks visually consistent"], "evidence": [{"label": "Beautiful.ai product website", "url": "https://www.beautiful.ai/"}]
+    },
+    {
+      "id": "rank-prompt", "slug": "rank-prompt-ai-visibility", "name": "Rank Prompt", "status": "published", "category": "SEO & Visibility",
+      "summary": "A visibility platform for tracking how brands appear in answers from AI search and assistant products.", "best_for": "Marketing and SEO teams measuring brand visibility across AI-generated answers.",
+      "offer_label": "Track AI visibility with Rank Prompt", "pricing_note": "Coverage, credits and pricing can change; verify the engines and reporting included in each plan.", "tracking_url": "https://join.rankprompt.com/r2w17ej365l5-xj5vs", "cta_label": "Try Rank Prompt", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Rank Prompt focuses on whether and where a brand appears in AI responses, complementing traditional search analytics.", "watch_out": "Treat visibility scores as directional and confirm that monitored engines and prompts match your real audience.",
+      "use_cases": ["Monitor brand mentions in AI answers", "Compare AI-search visibility with competitors"], "evidence": [{"label": "Rank Prompt help center", "url": "https://help.rankprompt.com/"}]
+    },
+    {
+      "id": "seamless", "slug": "seamless-ai-sales-intelligence", "name": "Seamless.AI", "status": "published", "category": "Sales Intelligence",
+      "summary": "A B2B sales intelligence platform for finding business contacts and supporting prospecting workflows.", "best_for": "Sales and business-development teams building and enriching prospect lists.",
+      "offer_label": "Explore Seamless.AI", "pricing_note": "Data access, credits and pricing can change; validate coverage and compliance for your market.", "tracking_url": "https://get.seamless.ai/wpepwkb948w3", "cta_label": "Explore Seamless.AI", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Seamless.AI combines contact discovery and prospecting data for outbound sales teams.", "watch_out": "Verify data accuracy, permitted outreach practices and privacy obligations in every target jurisdiction.",
+      "use_cases": ["Build targeted B2B prospect lists", "Enrich sales-contact records"], "evidence": [{"label": "Seamless.AI product website", "url": "https://seamless.ai/"}]
+    },
+    {
+      "id": "mrpeasy", "slug": "mrpeasy-manufacturing-erp", "name": "MRPeasy", "status": "published", "category": "Manufacturing",
+      "summary": "Cloud manufacturing software covering production planning, inventory, purchasing and related ERP workflows.", "best_for": "Small and midsize manufacturers moving planning and inventory out of spreadsheets.",
+      "offer_label": "Explore MRPeasy", "pricing_note": "Modules and pricing can change; verify fit against your production and accounting workflow.", "tracking_url": "https://try.mrpeasy.com/5uzzn1nj6by6", "cta_label": "Explore MRPeasy", "featured": false, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "MRPeasy brings common manufacturing planning and inventory tasks into a cloud-based system aimed at smaller firms.", "watch_out": "Confirm bill-of-materials complexity, integrations, localization and implementation effort before adopting it.",
+      "use_cases": ["Plan production and material needs", "Track manufacturing inventory and purchasing"], "evidence": [{"label": "MRPeasy product website", "url": "https://www.mrpeasy.com/"}]
+    },
+    {
+      "id": "adcreative", "slug": "adcreative-ai-ad-design", "name": "AdCreative.ai", "status": "published", "category": "Marketing & Creative",
+      "summary": "An AI platform for generating and iterating advertising creatives, copy and related campaign assets.", "best_for": "Performance marketers, ecommerce teams and agencies producing many ad variations.",
+      "offer_label": "Create ads with AdCreative.ai", "pricing_note": "Creative credits, integrations and pricing can change; verify the current plan before subscribing.", "tracking_url": "https://free-trial.adcreative.ai/havjqc5l6jho", "cta_label": "Try AdCreative.ai", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "AdCreative.ai is designed to speed up production of multiple ad concepts for campaign testing.", "watch_out": "Review every output for brand accuracy, platform policy compliance and real campaign performance.",
+      "use_cases": ["Generate ad creative variations", "Adapt campaign assets across formats"], "evidence": [{"label": "AdCreative.ai product website", "url": "https://www.adcreative.ai/"}]
+    },
+    {
+      "id": "unbounce", "slug": "unbounce-landing-pages", "name": "Unbounce", "status": "published", "category": "Conversion Optimization",
+      "summary": "A landing-page and conversion platform for building, testing and optimizing campaign pages.", "best_for": "Marketing teams and agencies that run paid campaigns and need dedicated landing-page workflows.",
+      "offer_label": "Build landing pages with Unbounce", "pricing_note": "Traffic limits, features and pricing can change; verify the current plan for your campaign volume.", "tracking_url": "https://unbounce.partnerlinks.io/1gj85v1qf2gz", "cta_label": "Explore Unbounce", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Unbounce separates campaign landing pages and testing workflows from a main website deployment cycle.", "watch_out": "Compare total cost, integration needs and experimentation volume with simpler page builders.",
+      "use_cases": ["Build campaign landing pages", "Test page variants for conversion improvement"], "evidence": [{"label": "Unbounce product website", "url": "https://unbounce.com/"}]
+    },
+    {
+      "id": "omniseo", "slug": "omniseo-search-optimization", "name": "OmniSEO", "status": "published", "category": "SEO & Visibility",
+      "summary": "SEO software for analyzing and improving a site's search visibility and content opportunities.", "best_for": "Site owners and marketing teams organizing ongoing SEO improvement work.",
+      "offer_label": "Explore OmniSEO", "pricing_note": "Features, data sources and pricing can change; verify current plan coverage.", "tracking_url": "https://get.omniseo.com/kqhu29kt3iy4", "cta_label": "Explore OmniSEO", "featured": false, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "OmniSEO packages search optimization work into a dedicated workflow for sites that need repeatable analysis.", "watch_out": "Validate recommendations against Search Console data and avoid treating automated suggestions as guarantees.",
+      "use_cases": ["Find SEO improvement opportunities", "Organize content optimization work"], "evidence": [{"label": "OmniSEO product website", "url": "https://omniseo.com/"}]
+    },
+    {
+      "id": "learnworlds", "slug": "learnworlds-course-platform", "name": "LearnWorlds", "status": "published", "category": "Online Learning",
+      "summary": "A platform for creating, selling and managing online courses and branded learning experiences.", "best_for": "Educators, coaches and businesses launching customer or employee learning programs.",
+      "offer_label": "Build courses with LearnWorlds", "pricing_note": "Commerce, learner and feature limits can change; verify the current plan matrix.", "tracking_url": "https://get.learnworlds.com/5nkgupm98stb", "cta_label": "Explore LearnWorlds", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "LearnWorlds combines course authoring, learner delivery and sales tools in one hosted platform.", "watch_out": "Check transaction fees, integrations, learner experience and migration options before launch.",
+      "use_cases": ["Launch a paid online course", "Deliver branded customer or employee training"], "evidence": [{"label": "LearnWorlds product website", "url": "https://www.learnworlds.com/"}]
+    },
+    {
+      "id": "foxit", "slug": "foxit-pdf-software", "name": "Foxit", "status": "published", "category": "Documents & PDF",
+      "summary": "PDF software for viewing, editing, converting, organizing and signing documents.", "best_for": "Individuals and organizations that need a full PDF workflow beyond basic viewing.",
+      "offer_label": "Explore Foxit PDF tools", "pricing_note": "Products, licensing and AI features can change; verify the current edition before purchase.", "tracking_url": "https://partnerstack.foxit.com/gqwu6d3ybowk", "cta_label": "Explore Foxit", "featured": false, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Foxit covers common document editing, conversion and signing tasks in an established PDF product family.", "watch_out": "Compare desktop, cloud and AI entitlements carefully because they can differ by product and license.",
+      "use_cases": ["Edit and convert PDF documents", "Organize and sign business documents"], "evidence": [{"label": "Foxit product website", "url": "https://www.foxit.com/"}]
+    },
+    {
+      "id": "whatconverts", "slug": "whatconverts-lead-attribution", "name": "WhatConverts", "status": "published", "category": "Marketing Analytics",
+      "summary": "Lead-tracking and marketing-attribution software that connects calls, forms and other leads with their traffic sources.", "best_for": "Agencies and performance marketers measuring which campaigns generate qualified leads.",
+      "offer_label": "Track leads with WhatConverts", "pricing_note": "Channels, usage and pricing can change; verify the current plan for your lead volume.", "tracking_url": "https://partners.whatconverts.com/okjqmcuqqjf3", "cta_label": "Explore WhatConverts", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "WhatConverts links multiple lead types to marketing sources so teams can optimize for lead quality rather than clicks alone.", "watch_out": "Plan the tracking setup and CRM handoff carefully so attribution remains consistent across channels.",
+      "use_cases": ["Attribute calls and forms to campaigns", "Report lead quality by traffic source"], "evidence": [{"label": "WhatConverts product website", "url": "https://www.whatconverts.com/"}]
+    },
+    {
+      "id": "quicksigner", "slug": "quicksigner-electronic-signatures", "name": "QuickSigner", "status": "published", "category": "Documents & PDF",
+      "summary": "Electronic-signature software for preparing, sending and signing documents online.", "best_for": "Freelancers and small teams that need a straightforward digital document-signing workflow.",
+      "offer_label": "Sign documents with QuickSigner", "pricing_note": "Envelope, signer and feature limits can change; verify current plan details.", "tracking_url": "https://get.quicksigner.com/xcvf3ts5q20c", "cta_label": "Explore QuickSigner", "featured": false, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "QuickSigner focuses on moving agreement workflows from manual exchange to online signing.", "watch_out": "Confirm audit-trail, identity verification and legal requirements for the documents and countries involved.",
+      "use_cases": ["Send contracts for electronic signature", "Track document signing status"], "evidence": [{"label": "QuickSigner product website", "url": "https://www.quicksigner.com/"}]
+    },
+    {
+      "id": "hubstaff", "slug": "hubstaff-time-tracking", "name": "Hubstaff", "status": "published", "category": "Productivity & Business",
+      "summary": "Time-tracking and workforce-management software with reporting, scheduling and productivity features.", "best_for": "Remote teams, agencies and field-service businesses that need time and activity records.",
+      "offer_label": "Explore Hubstaff time tracking", "pricing_note": "Seat minimums, monitoring features and pricing can change; verify the current plan and employee-consent requirements.", "tracking_url": "https://affiliate.hubstaff.com/1zy1p373xc04", "cta_label": "Explore Hubstaff", "featured": false, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Hubstaff combines time records with team scheduling and operational reporting for distributed work.", "watch_out": "Use monitoring features transparently and comply with employment and privacy law in every jurisdiction.",
+      "use_cases": ["Track billable time for distributed teams", "Schedule and report on workforce activity"], "evidence": [{"label": "Hubstaff product website", "url": "https://hubstaff.com/"}]
+    },
+    {
+      "id": "carepatron", "slug": "carepatron-practice-management", "name": "Carepatron", "status": "published", "category": "Healthcare Software",
+      "summary": "Practice-management software for scheduling, client records, documentation, billing and telehealth workflows.", "best_for": "Independent healthcare and wellness practitioners evaluating an integrated practice workspace.",
+      "offer_label": "Explore Carepatron", "pricing_note": "Clinical, billing and regional capabilities can change; verify current compliance and plan coverage.", "tracking_url": "https://get.carepatron.com/5czvsttw99e5", "cta_label": "Explore Carepatron", "featured": false, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Carepatron brings common administrative and client-management tasks into one practice platform.", "watch_out": "Healthcare buyers must independently verify security, data residency, integrations and regulatory suitability.",
+      "use_cases": ["Manage appointments and client records", "Coordinate practice documentation and billing"], "evidence": [{"label": "Carepatron product website", "url": "https://www.carepatron.com/"}]
+    },
+    {
+      "id": "elevenlabs", "slug": "elevenlabs-ai-voice", "name": "ElevenLabs", "status": "published", "category": "Audio & Voice",
+      "summary": "An AI audio platform for text-to-speech, voice generation, dubbing and related spoken-audio workflows.", "best_for": "Creators, developers and media teams producing narration, localized audio or voice-enabled products.",
+      "offer_label": "Create AI audio with ElevenLabs", "pricing_note": "Voice, usage and commercial-rights limits can change; verify the current plan before publishing output.", "tracking_url": "https://try.elevenlabs.io/v5gy7s0nd0ty", "cta_label": "Try ElevenLabs", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "ElevenLabs offers a focused toolkit for generating and localizing spoken audio through models and APIs.", "watch_out": "Obtain consent for cloned voices and review commercial rights, moderation rules and usage costs.",
+      "use_cases": ["Generate narration and voiceovers", "Dub spoken content into other languages"], "evidence": [{"label": "ElevenLabs product website", "url": "https://elevenlabs.io/"}]
+    },
+    {
+      "id": "kartra", "slug": "kartra-marketing-platform", "name": "Kartra", "status": "published", "category": "Marketing Automation",
+      "summary": "An online-business platform combining funnels, email marketing, pages, memberships and related sales tools.", "best_for": "Course creators, consultants and small online businesses seeking an integrated marketing stack.",
+      "offer_label": "Explore Kartra", "pricing_note": "Product bundles, usage limits and pricing can change; verify the current Kartra offer before subscribing.", "tracking_url": "https://try.kartra.com/plwu3nhb4eaf", "cta_label": "Explore Kartra", "featured": true, "sponsored": true,
+      "approved_at": "2026-09-14", "terms_verified_at": "2026-09-14", "expires_at": null,
+      "why_consider": "Kartra consolidates several page, funnel, email and digital-product workflows into one platform.", "watch_out": "Compare its bundled approach with best-of-breed tools and confirm migration and integration requirements.",
+      "use_cases": ["Build a marketing funnel", "Sell memberships or digital products"], "evidence": [{"label": "Kartra product website", "url": "https://kartra.com/"}]
     },
     {
       "id": "runpod",
