@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 from collections import Counter
 from datetime import datetime, timezone
+from html import escape
 import json
 import os
 from pathlib import Path
@@ -21,6 +22,7 @@ from urllib.request import Request, urlopen
 
 
 API_BASE = "https://api.partnerstack.com/api/v2"
+RESEND_EMAILS_URL = "https://api.resend.com/emails"
 API_RESOURCES = {
     "partnerships": {"include_offers": "true", "include_archived": "true"},
     "customers": {},
@@ -216,6 +218,154 @@ def write_report(path: Path, changes: Iterable[str], run_url: str = "") -> None:
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def _status_summary(values: dict[str, Any]) -> str:
+    if not values:
+        return "None"
+    return ", ".join(f"{name}: {_integer(count)}" for name, count in sorted(values.items()))
+
+
+def _recommendation(
+    previous: dict[str, Any] | None,
+    current: dict[str, Any],
+    changes: list[str],
+) -> str:
+    if previous is None:
+        return "Baseline initialized. Confirm that the priority offers and their public tracking links match the current publishing plan."
+
+    before_customers = previous.get("customers", {})
+    after_customers = current.get("customers", {})
+    signup_delta = _integer(after_customers.get("count")) - _integer(before_customers.get("count"))
+    paid_delta = _integer(after_customers.get("paid_count")) - _integer(before_customers.get("paid_count"))
+    commission_delta = _integer(current.get("rewards", {}).get("amount_usd_cents")) - _integer(
+        previous.get("rewards", {}).get("amount_usd_cents")
+    )
+
+    if paid_delta > 0 or commission_delta > 0:
+        return "Conversions improved. Identify the converting offer and expand the content or call-to-action that generated it."
+    if signup_delta > 0 and paid_delta <= 0:
+        return "Interest increased without a new paying customer. Review offer-to-landing-page alignment and the next-step call to action."
+    if any(change.startswith("New partnership:") for change in changes):
+        return "Review the new program's audience fit, economics and promotion restrictions before adding it to public content."
+    if any("Payment status" in change or "Reward status" in change for change in changes):
+        return "Review the changed reward or payment state in PartnerStack and act only if the dashboard requires account action."
+    if changes:
+        return "Review the affected metric or partnership in PartnerStack before changing public content."
+    return "No action is needed today. Keep the current offer and publishing plan unchanged."
+
+
+def render_email_dashboard(
+    current: dict[str, Any],
+    changes: list[str],
+    previous: dict[str, Any] | None,
+    run_url: str = "",
+) -> tuple[str, str, str]:
+    """Return subject, plain text and HTML using aggregate, non-PII data only."""
+    audited_at = str(current.get("audited_at") or "")
+    report_date = audited_at[:10] or datetime.now(timezone.utc).date().isoformat()
+    subject = f"Artificial.One PartnerStack dashboard — {report_date}"
+    partnerships = current.get("partnerships", {})
+    customers = current.get("customers", {})
+    transactions = current.get("transactions", {})
+    rewards = current.get("rewards", {})
+    partnership_states = partnerships.get("states", [])
+    partnership_lines = [
+        f"{item.get('program', 'Unknown program')}: {item.get('status', 'unknown')}"
+        for item in partnership_states
+    ] or ["None"]
+    change_lines = changes or (["Baseline initialized; future emails will show daily changes."] if previous is None else ["No meaningful change."])
+    recommendation = _recommendation(previous, current, changes)
+
+    metric_lines = [
+        f"Partnerships: {_integer(partnerships.get('count'))}",
+        f"Attributed signups: {_integer(customers.get('count'))}",
+        f"Paying customers: {_integer(customers.get('paid_count'))}",
+        f"Transactions: {_integer(transactions.get('count'))}",
+        f"Attributed revenue: {_money(_integer(transactions.get('amount_usd_cents')))}",
+        f"Rewards: {_integer(rewards.get('count'))}",
+        f"Commissions: {_money(_integer(rewards.get('amount_usd_cents')))}",
+        f"Reward statuses: {_status_summary(rewards.get('statuses', {}))}",
+        f"Payment statuses: {_status_summary(rewards.get('payment_statuses', {}))}",
+    ]
+    text_lines = [
+        "Artificial.One PartnerStack dashboard",
+        f"Audited: {audited_at}",
+        "",
+        "CURRENT TOTALS",
+        *metric_lines,
+        "",
+        "PARTNERSHIPS",
+        *(f"- {line}" for line in partnership_lines),
+        "",
+        "CHANGES SINCE PREVIOUS AUDIT",
+        *(f"- {line}" for line in change_lines),
+        "",
+        "ANALYSIS / NEXT ACTION",
+        recommendation,
+    ]
+    if run_url:
+        text_lines.extend(["", f"Cloud audit: {run_url}"])
+    text_body = "\n".join(text_lines) + "\n"
+
+    metric_rows = "".join(
+        f"<tr><td style='padding:6px 12px 6px 0;color:#667085'>{escape(line.split(':', 1)[0])}</td>"
+        f"<td style='padding:6px 0;font-weight:600'>{escape(line.split(':', 1)[1].strip())}</td></tr>"
+        for line in metric_lines
+    )
+    partnership_items = "".join(f"<li>{escape(line)}</li>" for line in partnership_lines)
+    change_items = "".join(f"<li>{escape(line)}</li>" for line in change_lines)
+    run_link = f"<p><a href='{escape(run_url)}'>Open cloud audit</a></p>" if run_url else ""
+    html_body = f"""<!doctype html>
+<html><body style="font-family:Arial,sans-serif;color:#101828;line-height:1.5;max-width:680px;margin:auto;padding:24px">
+<h1 style="font-size:24px;margin-bottom:4px">PartnerStack daily dashboard</h1>
+<p style="color:#667085;margin-top:0">Artificial.One · {escape(audited_at)}</p>
+<h2 style="font-size:18px">Current totals</h2><table>{metric_rows}</table>
+<h2 style="font-size:18px">Partnerships</h2><ul>{partnership_items}</ul>
+<h2 style="font-size:18px">Changes since previous audit</h2><ul>{change_items}</ul>
+<h2 style="font-size:18px">Analysis / next action</h2><p>{escape(recommendation)}</p>
+{run_link}<p style="color:#667085;font-size:12px">This automated email contains aggregate data only. No customer identities are stored or sent.</p>
+</body></html>"""
+    return subject, text_body, html_body
+
+
+def send_resend_email(
+    api_key: str,
+    sender: str,
+    recipient: str,
+    subject: str,
+    text_body: str,
+    html_body: str,
+) -> None:
+    payload = json.dumps(
+        {
+            "from": sender,
+            "to": [recipient],
+            "subject": subject,
+            "text": text_body,
+            "html": html_body,
+        }
+    ).encode("utf-8")
+    request = Request(
+        RESEND_EMAILS_URL,
+        data=payload,
+        headers={
+            "Accept": "application/json",
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "User-Agent": "artificial.one-partner-monitor/1.0",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(request, timeout=30) as response:
+            if not 200 <= response.status < 300:
+                raise PartnerStackError(f"Resend rejected the dashboard email with HTTP {response.status}")
+            json.load(response)
+    except PartnerStackError:
+        raise
+    except Exception as exc:
+        raise PartnerStackError(f"Private dashboard email delivery failed: {exc}") from exc
+
+
 def _set_output(name: str, value: str) -> None:
     output_path = os.environ.get("GITHUB_OUTPUT")
     if output_path:
@@ -227,6 +377,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--baseline", type=Path, default=Path(".partner-metrics/cloud-baseline.json"))
     parser.add_argument("--report", type=Path, default=Path(".partner-metrics/cloud-report.md"))
+    parser.add_argument("--email-to", default="")
+    parser.add_argument("--email-from", default="")
     return parser.parse_args(argv)
 
 
@@ -254,6 +406,22 @@ def main(argv: list[str] | None = None) -> int:
             f"/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}"
         )
     write_report(args.report, changes, run_url)
+
+    if args.email_to:
+        resend_api_key = os.environ.get("RESEND_API_KEY", "").strip()
+        if not resend_api_key:
+            raise PartnerStackError("RESEND_API_KEY is not configured")
+        if not args.email_from:
+            raise PartnerStackError("--email-from is required when --email-to is used")
+        subject, text_body, html_body = render_email_dashboard(current, changes, previous, run_url)
+        send_resend_email(
+            resend_api_key,
+            args.email_from,
+            args.email_to,
+            subject,
+            text_body,
+            html_body,
+        )
 
     args.baseline.parent.mkdir(parents=True, exist_ok=True)
     args.baseline.write_text(json.dumps(current, indent=2, sort_keys=True) + "\n", encoding="utf-8")

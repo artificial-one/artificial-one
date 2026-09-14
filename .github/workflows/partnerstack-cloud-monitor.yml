@@ -36,15 +36,24 @@ jobs:
         id: monitor
         env:
           PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: >-
           python scripts/partnerstack_cloud_monitor.py
           --baseline .partner-metrics/cloud-baseline.json
           --report .partner-metrics/cloud-report.md
+          --email-to hello@artificial.one
+          --email-from "Artificial.One Partner Monitor <onboarding@resend.dev>"
 
-      - name: Add sanitized result to the workflow summary
+      - name: Add public-safe result to the workflow summary
         if: always() && steps.monitor.outcome == 'success'
         shell: bash
-        run: cat .partner-metrics/cloud-report.md >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## PartnerStack cloud monitor
+
+          The read-only audit completed and the consolidated private dashboard was emailed to the configured recipient.
+          Financial and customer metrics are intentionally omitted from this public repository's Actions summary.
+          EOF
 
       - name: Save private aggregate baseline
         if: steps.monitor.outcome == 'success'

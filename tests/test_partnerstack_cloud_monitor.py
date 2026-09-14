@@ -6,6 +6,7 @@ from scripts.partnerstack_cloud_monitor import (
     _items_from_payload,
     build_snapshot,
     compare_snapshots,
+    render_email_dashboard,
     write_report,
 )
 
@@ -88,6 +89,42 @@ class PartnerStackCloudMonitorTests(unittest.TestCase):
             text = report.read_text(encoding="utf-8")
             self.assertIn("Rewards: 0 -> 1", text)
             self.assertIn("review the affected program", text)
+
+    def test_email_dashboard_contains_aggregate_metrics_and_analysis(self):
+        current = build_snapshot(
+            {
+                "partnerships": [{"company": {"name": "Volza"}, "approved_status": "approved"}],
+                "customers": [{"key": "cus_private", "email": "private@example.com", "has_paid": True}],
+                "transactions": [{"amount_usd": 1250}],
+                "rewards": [{"amount": 250, "reward_status": "approved", "payment_status": "available"}],
+            },
+            audited_at="2026-09-14T09:00:00+00:00",
+        )
+        subject, text, html = render_email_dashboard(current, [], None, "https://example.test/run")
+        combined = subject + text + html
+        self.assertIn("Attributed revenue: $12.50", text)
+        self.assertIn("Commissions: $2.50", text)
+        self.assertIn("Payment statuses: available: 1", text)
+        self.assertIn("Baseline initialized", combined)
+        self.assertNotIn("private@example.com", combined)
+        self.assertNotIn("cus_private", combined)
+
+    def test_email_dashboard_recommends_conversion_follow_up(self):
+        previous = build_snapshot({"partnerships": [], "customers": [], "transactions": [], "rewards": []})
+        current = build_snapshot(
+            {
+                "partnerships": [],
+                "customers": [{"has_paid": False}],
+                "transactions": [],
+                "rewards": [],
+            }
+        )
+        _, text, _ = render_email_dashboard(
+            current,
+            compare_snapshots(previous, current),
+            previous,
+        )
+        self.assertIn("Interest increased without a new paying customer", text)
 
 
 if __name__ == "__main__":
