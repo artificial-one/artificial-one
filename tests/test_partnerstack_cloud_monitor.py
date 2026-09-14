@@ -126,6 +126,16 @@ class PartnerStackCloudMonitorTests(unittest.TestCase):
         self.assertNotIn("private@example.com", combined)
         self.assertNotIn("cus_private", combined)
 
+    def test_email_dashboard_reports_affiliate_clickthrough_rate(self):
+        current = build_snapshot(
+            {"partnerships": [], "customers": [], "transactions": [], "rewards": []},
+            affiliate_clicks={"window_days": 28, "total": 5, "unique_daily_sessions": 4, "by_offer": {}, "by_placement": {}, "by_page": {}},
+            affiliate_impressions={"window_days": 28, "total": 100, "unique_daily_sessions": 20, "by_offer": {}, "by_placement": {}, "by_page": {}},
+        )
+        _, text, _ = render_email_dashboard(current, [], None)
+        self.assertIn("Affiliate CTA impressions (28d): 100", text)
+        self.assertIn("Affiliate CTA click-through rate: 5.00%", text)
+
     def test_email_dashboard_recommends_conversion_follow_up(self):
         previous = build_snapshot({"partnerships": [], "customers": [], "transactions": [], "rewards": []})
         current = build_snapshot(

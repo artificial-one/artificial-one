@@ -24,6 +24,7 @@ INDEX_PATH = ROOT / "index.html"
 NEWS_PATH = ROOT / "news.html"
 SITEMAP_PATH = ROOT / "sitemap.xml"
 PARTNER_OFFERS_PATH = ROOT / "data" / "partner_offers.json"
+REVENUE_STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 DATA_START = "// AI_NEWS_DATA_START"
 DATA_END = "// AI_NEWS_DATA_END"
 SPACE_RE = re.compile(r"\s+")
@@ -194,7 +195,17 @@ def partner_picks(limit: int = 3) -> list[dict[str, str]]:
         for offer in registry.get("offers", [])
         if isinstance(offer, dict) and offer.get("status") == "published"
     ]
-    published.sort(key=lambda offer: (not bool(offer.get("featured")), str(offer.get("name", "")).casefold()))
+    try:
+        strategy = load_json(REVENUE_STRATEGY_PATH)
+        ranking = strategy.get("ranking", [])
+    except NewsBuildError:
+        ranking = []
+    positions = {str(offer_id): index for index, offer_id in enumerate(ranking)}
+    published.sort(key=lambda offer: (
+        positions.get(str(offer.get("id", "")), len(positions)),
+        not bool(offer.get("featured")),
+        str(offer.get("name", "")).casefold(),
+    ))
     return [
         {
             "name": clean_text(str(offer.get("name", "")), 80),
@@ -320,11 +331,12 @@ def update_sitemap(source: str) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--cached", action="store_true", help="Rebuild pages from the saved feed without network access")
     args = parser.parse_args()
     try:
         config = load_json(SOURCES_PATH)
         now = datetime.now(timezone.utc)
-        if args.check:
+        if args.check or args.cached:
             existing = load_json(DATA_PATH)
             items = existing.get("items", [])
             updated_at = str(existing.get("updated_at", ""))

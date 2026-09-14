@@ -9,11 +9,14 @@ on:
     paths:
       - data/partner_offers.json
       - data/affiliate_placements.json
+      - data/revenue_strategy.json
       - data/partnerstack_program_audit.json
       - scripts/build_partner_offers.py
       - scripts/monetize_affiliate_links.py
+      - scripts/optimize_revenue.py
       - assets/affiliate-tracking.js
       - api/affiliate-event.js
+      - ai-tool-finder.html
       - tests/test_partner_offer_pipeline.py
       - tests/test_affiliate_monetization.py
       - tests/test_affiliate_site_output.py
@@ -21,11 +24,14 @@ on:
     paths:
       - data/partner_offers.json
       - data/affiliate_placements.json
+      - data/revenue_strategy.json
       - data/partnerstack_program_audit.json
       - scripts/build_partner_offers.py
       - scripts/monetize_affiliate_links.py
+      - scripts/optimize_revenue.py
       - assets/affiliate-tracking.js
       - api/affiliate-event.js
+      - ai-tool-finder.html
       - tests/test_partner_offer_pipeline.py
       - tests/test_affiliate_monetization.py
       - tests/test_affiliate_site_output.py
@@ -75,7 +81,7 @@ jobs:
         if: github.event_name != 'pull_request'
         shell: bash
         run: |
-          git add -A -- partner-offers.html sitemap.xml assets/affiliate-tracking.js
+          git add -A -- partner-offers.html ai-tool-finder.html sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js
           if [ -d partner-offers ]; then git add -A -- partner-offers; fi
           git add -A -- '*.html'
           if git diff --cached --quiet; then exit 0; fi

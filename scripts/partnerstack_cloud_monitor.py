@@ -108,6 +108,7 @@ def build_snapshot(
     collections: dict[str, list[dict[str, Any]]],
     audited_at: str | None = None,
     affiliate_clicks: dict[str, Any] | None = None,
+    affiliate_impressions: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Reduce API data to non-PII aggregates suitable for a cloud cache."""
     partnerships = collections.get("partnerships", [])
@@ -131,7 +132,7 @@ def build_snapshot(
     payment_statuses = Counter(str(item.get("payment_status") or "unknown") for item in rewards)
 
     return {
-        "schema_version": 2,
+        "schema_version": 3,
         "audited_at": audited_at or datetime.now(timezone.utc).isoformat(),
         "partnerships": {
             "count": len(partnerships),
@@ -152,6 +153,14 @@ def build_snapshot(
             "payment_statuses": dict(sorted(payment_statuses.items())),
         },
         "affiliate_clicks": affiliate_clicks or {
+            "window_days": CLICK_WINDOW_DAYS,
+            "total": 0,
+            "unique_daily_sessions": 0,
+            "by_offer": {},
+            "by_placement": {},
+            "by_page": {},
+        },
+        "affiliate_impressions": affiliate_impressions or {
             "window_days": CLICK_WINDOW_DAYS,
             "total": 0,
             "unique_daily_sessions": 0,
@@ -198,11 +207,22 @@ def reduce_affiliate_click_results(
 
 
 def fetch_affiliate_clicks(rest_url: str, token: str, days: int = CLICK_WINDOW_DAYS) -> dict[str, Any]:
+    return fetch_affiliate_events(rest_url, token, "clicks", days)
+
+
+def fetch_affiliate_events(
+    rest_url: str,
+    token: str,
+    stream: str,
+    days: int = CLICK_WINDOW_DAYS,
+) -> dict[str, Any]:
+    if stream not in {"clicks", "impressions"}:
+        raise PartnerStackError(f"Unsupported affiliate event stream: {stream}")
     end = datetime.now(timezone.utc).date()
     date_keys = [(end - timedelta(days=offset)).isoformat() for offset in range(days)]
     commands: list[list[Any]] = []
     for day in date_keys:
-        key = f"affiliate:clicks:{day}"
+        key = f"affiliate:{stream}:{day}"
         commands.extend([["HGETALL", key], ["PFCOUNT", f"{key}:sessions"]])
     request = Request(
         rest_url.rstrip("/") + "/pipeline",
@@ -218,9 +238,9 @@ def fetch_affiliate_clicks(rest_url: str, token: str, days: int = CLICK_WINDOW_D
         with urlopen(request, timeout=30) as response:
             payload = json.load(response)
     except Exception as exc:
-        raise PartnerStackError(f"Affiliate click aggregate request failed: {exc}") from exc
+        raise PartnerStackError(f"Affiliate {stream} aggregate request failed: {exc}") from exc
     if not isinstance(payload, list):
-        raise PartnerStackError("Affiliate click store returned an unexpected response")
+        raise PartnerStackError(f"Affiliate {stream} store returned an unexpected response")
     return reduce_affiliate_click_results(date_keys, payload)
 
 
@@ -377,6 +397,10 @@ def render_email_dashboard(
     transactions = current.get("transactions", {})
     rewards = current.get("rewards", {})
     clicks = current.get("affiliate_clicks", {})
+    impressions = current.get("affiliate_impressions", {})
+    impression_total = _integer(impressions.get("total"))
+    click_total = _integer(clicks.get("total"))
+    clickthrough_rate = (click_total / impression_total * 100.0) if impression_total else 0.0
     partnership_states = partnerships.get("states", [])
     partnership_lines = [
         f"{item.get('program', 'Unknown program')}: {item.get('status', 'unknown')}"
@@ -389,6 +413,8 @@ def render_email_dashboard(
     metric_lines = [
         f"Partnerships: {_integer(partnerships.get('count'))}",
         f"Site affiliate clicks ({_integer(clicks.get('window_days'))}d): {_integer(clicks.get('total'))}",
+        f"Affiliate CTA impressions ({_integer(impressions.get('window_days'))}d): {impression_total}",
+        f"Affiliate CTA click-through rate: {clickthrough_rate:.2f}%",
         f"Unique click sessions (daily sum): {_integer(clicks.get('unique_daily_sessions'))}",
         f"Attributed signups: {_integer(customers.get('count'))}",
         f"Paying customers: {_integer(customers.get('paid_count'))}",
@@ -546,7 +572,16 @@ def main(argv: list[str] | None = None) -> int:
         if redis_url and redis_token
         else None
     )
-    current = build_snapshot(collections, affiliate_clicks=click_totals)
+    impression_totals = (
+        fetch_affiliate_events(redis_url, redis_token, "impressions")
+        if redis_url and redis_token
+        else None
+    )
+    current = build_snapshot(
+        collections,
+        affiliate_clicks=click_totals,
+        affiliate_impressions=impression_totals,
+    )
     previous = None
     if args.baseline.exists():
         previous = json.loads(args.baseline.read_text(encoding="utf-8"))

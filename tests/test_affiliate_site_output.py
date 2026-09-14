@@ -84,6 +84,22 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         self.assertIn('data-placement="reviews-directory"', text)
         self.assertIn('src="assets/affiliate-tracking.js"', text)
 
+    def test_ai_tool_finder_is_generated_and_tracked(self):
+        text = (ROOT / "ai-tool-finder.html").read_text(encoding="utf-8")
+        self.assertIn("Find the right AI tool for your job", text)
+        self.assertIn('data-placement="tool-finder"', text)
+        self.assertIn("affiliate-tracking.js", text)
+        for offer in self.registry["offers"]:
+            if offer["status"] == "published":
+                self.assertIn(f'data-offer-id="{offer["id"]}"', text)
+
+    def test_tracking_adds_subids_and_impression_measurement(self):
+        text = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
+        self.assertIn('url.searchParams.set("sid1"', text)
+        self.assertIn('url.searchParams.set("sid2"', text)
+        self.assertIn('url.searchParams.set("sid3"', text)
+        self.assertIn("affiliate_impression", text)
+
 
 if __name__ == "__main__":
     unittest.main()

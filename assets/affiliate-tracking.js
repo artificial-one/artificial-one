@@ -19,15 +19,62 @@
 
   var sessionId = safeSessionId();
 
-  function eventPayload(link) {
+  function eventPayload(link, eventName) {
     return {
-      event: "affiliate_click",
+      event: eventName || "affiliate_click",
       offer_id: link.dataset.offerId || "unknown",
       placement: link.dataset.placement || "unknown",
       page_path: window.location.pathname,
       session_id: sessionId,
       occurred_at: new Date().toISOString()
     };
+  }
+
+  function compactSubId(value, fallback) {
+    var cleaned = String(value || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9_-]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 80);
+    return cleaned || fallback;
+  }
+
+  function addPartnerStackAttribution(link) {
+    try {
+      var url = new URL(link.href, window.location.href);
+      if (!url.searchParams.has("sid1")) {
+        url.searchParams.set("sid1", compactSubId(link.dataset.offerId, "offer"));
+      }
+      if (!url.searchParams.has("sid2")) {
+        url.searchParams.set("sid2", compactSubId(link.dataset.placement, "placement"));
+      }
+      if (!url.searchParams.has("sid3")) {
+        url.searchParams.set("sid3", compactSubId(window.location.pathname, "home"));
+      }
+      link.href = url.toString();
+    } catch (_) {
+      // The original verified destination remains usable if URL parsing fails.
+    }
+  }
+
+  function trackVisibleRecommendations() {
+    if (!("IntersectionObserver" in window)) return;
+    var seen = Object.create(null);
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting || entry.intersectionRatio < 0.5) return;
+        var link = entry.target;
+        var key = [link.dataset.offerId, link.dataset.placement, window.location.pathname].join(":");
+        if (!seen[key]) {
+          seen[key] = true;
+          sendToConfiguredEndpoint(eventPayload(link, "affiliate_impression"));
+        }
+        observer.unobserve(link);
+      });
+    }, { threshold: [0.5] });
+    document.querySelectorAll("a[data-affiliate-offer]").forEach(function (link) {
+      observer.observe(link);
+    });
   }
 
   function sendToConfiguredEndpoint(payload) {
@@ -110,7 +157,8 @@
     var link = event.target.closest("a[data-affiliate-offer]");
     if (!link) return;
 
-    var payload = eventPayload(link);
+    addPartnerStackAttribution(link);
+    var payload = eventPayload(link, "affiliate_click");
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(payload);
@@ -137,8 +185,12 @@
   });
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", installStickyRecommendation);
+    document.addEventListener("DOMContentLoaded", function () {
+      installStickyRecommendation();
+      trackVisibleRecommendations();
+    });
   } else {
     installStickyRecommendation();
+    trackVisibleRecommendations();
   }
 })();

@@ -16,12 +16,17 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REGISTRY = ROOT / "data" / "partner_offers.json"
+STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 HUB_PATH = ROOT / "partner-offers.html"
+FINDER_PATH = ROOT / "ai-tool-finder.html"
+HOME_PATH = ROOT / "index.html"
 OFFER_DIRECTORY = ROOT / "partner-offers"
 SITEMAP_PATH = ROOT / "sitemap.xml"
 GENERATED_MARKER = "<!-- GENERATED: partner-offer-pipeline -->"
 SITEMAP_START = "  <!-- partner-offers:start -->"
 SITEMAP_END = "  <!-- partner-offers:end -->"
+HOME_PICKS_START = "{/* revenue-picks:start */}"
+HOME_PICKS_END = "{/* revenue-picks:end */}"
 ALLOWED_STATUSES = {"draft", "approved", "published", "paused", "expired"}
 SLUG_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
@@ -175,6 +180,26 @@ def public_offers(offers: list[dict[str, Any]], today: date) -> list[dict[str, A
     return sorted(active, key=lambda item: (not bool(item.get("featured")), item["name"].lower()))
 
 
+def apply_revenue_strategy(offers: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Apply the public, privacy-safe ordering emitted by the revenue optimizer."""
+    try:
+        strategy = json.loads(STRATEGY_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return offers
+    ranking = strategy.get("ranking", [])
+    if not isinstance(ranking, list):
+        return offers
+    positions = {str(offer_id): index for index, offer_id in enumerate(ranking)}
+    return sorted(
+        offers,
+        key=lambda item: (
+            positions.get(str(item["id"]), len(positions)),
+            not bool(item.get("featured")),
+            str(item["name"]).casefold(),
+        ),
+    )
+
+
 def esc(value: Any) -> str:
     return html.escape(str(value), quote=True)
 
@@ -225,6 +250,7 @@ def shell(
       <a href="{prefix}index.html"><img src="{prefix}artificial-one-logo-large.svg" alt="artificial.one" class="h-14"></a>
       <nav class="flex items-center gap-5 text-sm font-semibold">
         <a href="{prefix}reviews.html" class="text-slate-600 hover:text-indigo-600">Reviews</a>
+        <a href="{prefix}ai-tool-finder.html" class="text-indigo-700">Tool finder</a>
         <a href="{prefix}partner-offers.html" class="text-indigo-700">Partner offers</a>
         <a href="{prefix}partners.html" class="rounded-lg border border-indigo-200 px-4 py-2 text-indigo-700 hover:bg-indigo-50">For partners</a>
       </nav>
@@ -302,6 +328,69 @@ def render_hub(offers: list[dict[str, Any]]) -> str:
             ],
         },
     )
+
+
+def render_finder(offers: list[dict[str, Any]]) -> str:
+    categories = sorted({str(offer["category"]) for offer in offers})
+    category_buttons = "".join(
+        f'<button type="button" data-filter="{esc(category)}">{esc(category)}</button>'
+        for category in categories
+    )
+    cards = "".join(
+        f'''<article class="tool" data-category="{esc(offer['category'])}" data-search="{esc(' '.join([str(offer['name']), str(offer['category']), str(offer['best_for']), *offer['use_cases']]).casefold())}" data-rank="{index}">
+          <p class="eyebrow">{esc(offer['category'])}</p><h2>{esc(offer['name'])}</h2>
+          <p>{esc(offer['summary'])}</p><p class="best"><strong>Best for:</strong> {esc(offer['best_for'])}</p>
+          <div class="actions"><a class="details" href="partner-offers/{esc(offer['slug'])}.html">Check fit</a><a class="cta" href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer="" data-offer-id="{esc(offer['id'])}" data-placement="tool-finder">{esc(offer['cta_label'])} →</a></div>
+        </article>'''
+        for index, offer in enumerate(offers)
+    )
+    structured = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "AI tool finder",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": index,
+                "name": offer["name"],
+                "url": f"https://artificial.one/partner-offers/{offer['slug']}.html",
+            }
+            for index, offer in enumerate(offers, 1)
+        ],
+    }
+    content = f'''
+    <section class="finder-hero"><div><p class="eyebrow">Performance-ranked recommendations</p><h1>Find the right AI tool for your job</h1><p>Choose a category or describe what you need. Recommendations are automatically reordered using anonymous impressions, affiliate clicks and attributed conversion signals.</p></div></section>
+    <section class="finder"><div class="controls"><label for="tool-search">What do you want to accomplish?</label><input id="tool-search" type="search" placeholder="For example: edit a podcast, build a website, find sales leads"><div class="filters"><button type="button" class="active" data-filter="all">All tools</button>{category_buttons}</div><p id="finder-count" aria-live="polite"></p></div><div id="tool-grid" class="tool-grid">{cards}</div><div id="no-tools" class="empty" hidden>No exact match yet. Try a broader phrase or browse all tools.</div></section>
+    <style>.finder-hero{{background:linear-gradient(135deg,#eef2ff,#faf5ff);padding:72px 22px;text-align:center}}.finder-hero>div,.finder{{max-width:1120px;margin:auto}}.finder-hero h1{{font-size:clamp(2.5rem,7vw,4.8rem);line-height:1.02;margin:14px 0}}.finder-hero p{{max-width:780px;margin:0 auto;color:#475569;font-size:1.1rem;line-height:1.7}}.eyebrow{{color:#4f46e5;font-size:.78rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}}.finder{{padding:44px 22px 80px}}.controls{{background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:24px;margin-bottom:26px}}.controls label{{display:block;font-weight:800;margin-bottom:9px}}.controls input{{width:100%;padding:14px 16px;border:1px solid #cbd5e1;border-radius:11px;font:inherit}}.filters{{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}}.filters button{{border:1px solid #cbd5e1;background:#fff;border-radius:999px;padding:8px 13px;cursor:pointer}}.filters button.active{{background:#4338ca;color:#fff;border-color:#4338ca}}#finder-count{{color:#64748b;margin:14px 0 0}}.tool-grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}.tool{{display:flex;flex-direction:column;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:23px;box-shadow:0 4px 14px rgba(15,23,42,.05)}}.tool h2{{font-size:1.35rem;margin:6px 0 12px}}.tool>p:not(.eyebrow){{color:#64748b;line-height:1.55}}.tool .best{{font-size:.9rem;margin-top:auto;padding-top:15px}}.actions{{display:flex;gap:10px;margin-top:18px}}.actions a{{flex:1;text-align:center;padding:11px;border-radius:9px;text-decoration:none;font-weight:750}}.details{{border:1px solid #c7d2fe;color:#4338ca}}.cta{{background:#4338ca;color:#fff}}.empty{{text-align:center;padding:40px;color:#64748b}}@media(max-width:900px){{.tool-grid{{grid-template-columns:repeat(2,minmax(0,1fr))}}}}@media(max-width:620px){{.tool-grid{{grid-template-columns:1fr}}.actions{{flex-direction:column}}}}</style>
+    <script>(function(){{var search=document.getElementById('tool-search'),buttons=[].slice.call(document.querySelectorAll('[data-filter]')),cards=[].slice.call(document.querySelectorAll('.tool')),count=document.getElementById('finder-count'),empty=document.getElementById('no-tools'),filter='all',stop={{a:1,an:1,and:1,build:1,create:1,find:1,for:1,my:1,need:1,the:1,tool:1,use:1,want:1,with:1}};function update(){{var query=search.value.trim().toLowerCase(),tokens=query.split(/\\s+/).filter(function(word){{return word.length>2&&!stop[word];}}),shown=0;cards.forEach(function(card){{var matchCategory=filter==='all'||card.dataset.category===filter;var matchText=!tokens.length||tokens.every(function(word){{return card.dataset.search.indexOf(word)>-1;}});card.hidden=!(matchCategory&&matchText);if(!card.hidden)shown++;}});count.textContent=shown+' matching verified partner tool'+(shown===1?'':'s');empty.hidden=shown!==0;}}buttons.forEach(function(button){{button.addEventListener('click',function(){{filter=button.dataset.filter;buttons.forEach(function(item){{item.classList.toggle('active',item===button);}});update();}});}});search.addEventListener('input',update);update();}})();</script>'''
+    return shell(
+        title="AI Tool Finder: Match Your Goal to the Right Tool | artificial.one",
+        description="Find an AI or business tool matched to your use case, with transparent, performance-ranked partner recommendations.",
+        canonical_path="ai-tool-finder.html",
+        content=content,
+        structured_data=structured,
+    )
+
+
+def render_homepage_picks(offers: list[dict[str, Any]], limit: int = 4) -> str:
+    cards = "\n".join(
+        f'''              <article className="rounded-2xl border border-slate-700 bg-slate-900 p-7">
+                <p className="text-xs font-bold uppercase tracking-widest text-emerald-300">{esc(offer['category'])}</p>
+                <h3 className="text-2xl font-bold mt-3">{esc(offer['name'])}</h3>
+                <p className="text-slate-300 mt-3">{esc(offer['summary'])}</p>
+                <p className="text-sm text-slate-400 mt-5">Best for {esc(offer['best_for'])}</p>
+                <a href="partner-offers/{esc(offer['slug'])}.html" className="inline-block mt-6 rounded-lg bg-indigo-600 px-5 py-3 font-semibold hover:bg-indigo-500">Check fit &amp; current offer →</a>
+              </article>'''
+        for offer in offers[:limit]
+    )
+    return f"{HOME_PICKS_START}\n{cards}\n              {HOME_PICKS_END}"
+
+
+def update_homepage_picks(source: str, offers: list[dict[str, Any]]) -> str:
+    pattern = re.compile(re.escape(HOME_PICKS_START) + r".*?" + re.escape(HOME_PICKS_END), re.S)
+    if not pattern.search(source):
+        raise OfferValidationError("Homepage revenue pick markers are missing")
+    return pattern.sub(render_homepage_picks(offers), source, count=1)
 
 
 def related_offers_for(
@@ -440,6 +529,7 @@ def sitemap_block(offers: list[dict[str, Any]], lastmod: str) -> str:
     pages = [
         ("https://artificial.one/partners.html", "0.7"),
         ("https://artificial.one/partner-offers.html", "0.8"),
+        ("https://artificial.one/ai-tool-finder.html", "0.9"),
     ]
     pages.extend(
         (f"https://artificial.one/partner-offers/{offer['slug']}.html", "0.8")
@@ -472,7 +562,7 @@ def expected_sitemap(current: str, block: str) -> str:
     # Remove any such entries before inserting the single block owned by this builder.
     managed_url = re.compile(
         r"\s*<url>\s*<loc>https://artificial\.one/"
-        r"(?:partners\.html|partner-offers\.html|partner-offers/[^<]+)"
+        r"(?:partners\.html|partner-offers\.html|ai-tool-finder\.html|partner-offers/[^<]+)"
         r"</loc>.*?</url>",
         re.DOTALL,
     )
@@ -486,9 +576,13 @@ def expected_sitemap(current: str, block: str) -> str:
 
 def build(registry_path: Path, check: bool = False) -> int:
     registry = load_registry(registry_path)
-    offers = public_offers(validate_registry(registry), date.today())
+    offers = apply_revenue_strategy(public_offers(validate_registry(registry), date.today()))
     lastmod = registry["updated_at"]
-    expected: dict[Path, str] = {HUB_PATH: render_hub(offers)}
+    expected: dict[Path, str] = {
+        HUB_PATH: render_hub(offers),
+        FINDER_PATH: render_finder(offers),
+        HOME_PATH: update_homepage_picks(HOME_PATH.read_text(encoding="utf-8"), offers),
+    }
     expected.update(
         {
             OFFER_DIRECTORY / f"{offer['slug']}.html": render_offer(

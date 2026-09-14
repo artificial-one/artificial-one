@@ -35,7 +35,8 @@ async function persistAggregate(event) {
     .update(`${day}:${event.session_id}`)
     .digest("hex")
     .slice(0, 24);
-  const key = `affiliate:clicks:${day}`;
+  const stream = event.event === "affiliate_impression" ? "impressions" : "clicks";
+  const key = `affiliate:${stream}:${day}`;
   const commands = [
     ["HINCRBY", key, "total", 1],
     ["HINCRBY", key, `offer:${event.offer_id}`, 1],
@@ -72,7 +73,7 @@ async function forwardToGa4(event) {
       client_id: event.session_id,
       consent: { ad_user_data: "DENIED", ad_personalization: "DENIED" },
       events: [{
-        name: "affiliate_click",
+        name: event.event,
         params: {
           offer_id: event.offer_id,
           placement: event.placement,
@@ -105,6 +106,7 @@ module.exports = async function handler(req, res) {
   }
 
   const event = {
+    event: body.event === "affiliate_impression" ? "affiliate_impression" : "affiliate_click",
     offer_id: clean(body.offer_id, SAFE_ID, "unknown"),
     placement: clean(body.placement, SAFE_PLACEMENT, "unknown"),
     page_path: clean(body.page_path, SAFE_PATH, "/"),
@@ -119,7 +121,7 @@ module.exports = async function handler(req, res) {
     (result) => result.status === "fulfilled" && result.value === true
   );
   if (!persisted) {
-    console.log("affiliate_click", {
+    console.log(event.event, {
       offer_id: event.offer_id,
       placement: event.placement,
       page_path: event.page_path,

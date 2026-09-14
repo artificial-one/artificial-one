@@ -65,6 +65,27 @@ class PartnerOfferPipelineTests(unittest.TestCase):
         related = pipeline.related_offers_for(primary, [primary, other, same])
         self.assertEqual([item["id"] for item in related], ["same", "other"])
 
+    def test_revenue_strategy_controls_offer_order(self):
+        first = published_offer(id="first", slug="first", name="First")
+        second = published_offer(id="second", slug="second", name="Second")
+        original = pipeline.STRATEGY_PATH
+        with tempfile.TemporaryDirectory() as folder:
+            strategy = Path(folder) / "strategy.json"
+            strategy.write_text('{"version":1,"ranking":["second","first"]}', encoding="utf-8")
+            pipeline.STRATEGY_PATH = strategy
+            try:
+                ordered = pipeline.apply_revenue_strategy([first, second])
+            finally:
+                pipeline.STRATEGY_PATH = original
+        self.assertEqual([item["id"] for item in ordered], ["second", "first"])
+
+    def test_finder_contains_direct_tracked_cta(self):
+        page = pipeline.render_finder([published_offer()])
+        self.assertIn("What do you want to accomplish?", page)
+        self.assertIn('data-placement="tool-finder"', page)
+        self.assertIn('data-offer-id="useful-ai"', page)
+        self.assertIn("affiliate-tracking.js", page)
+
     def test_published_offer_requires_approval(self):
         data = {"version": 1, "updated_at": "2026-09-14", "offers": [published_offer(approved_at=None)]}
         with self.assertRaises(pipeline.OfferValidationError):

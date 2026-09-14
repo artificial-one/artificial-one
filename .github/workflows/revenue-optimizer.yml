@@ -1,0 +1,75 @@
+name: Optimize affiliate revenue
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs after the daily PartnerStack audit so fresh conversion data is available.
+    - cron: "13 8 * * *"
+  push:
+    branches: [main]
+    paths:
+      - data/partner_offers.json
+      - data/affiliate_placements.json
+      - scripts/optimize_revenue.py
+      - scripts/build_partner_offers.py
+      - scripts/monetize_affiliate_links.py
+      - assets/affiliate-tracking.js
+      - api/affiliate-event.js
+      - tests/test_revenue_optimizer.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: affiliate-revenue-site-generation
+  cancel-in-progress: false
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Rank offers from private performance signals
+        env:
+          PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+        run: python scripts/optimize_revenue.py
+
+      - name: Build the tool finder and performance-ranked offer pages
+        run: |
+          python scripts/build_partner_offers.py
+          python scripts/monetize_affiliate_links.py
+          python scripts/build_ai_news.py --cached
+
+      - name: Verify the complete revenue pipeline
+        run: |
+          python -m unittest discover -s tests -v
+          node --check assets/affiliate-tracking.js
+          node --check api/affiliate-event.js
+          python scripts/build_partner_offers.py --check
+          python scripts/monetize_affiliate_links.py --check
+          python scripts/build_ai_news.py --check
+
+      - name: Commit only public, privacy-safe optimization output
+        shell: bash
+        run: |
+          git add -- data/revenue_strategy.json ai-tool-finder.html index.html news.html partner-offers.html partner-offers sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Optimize affiliate revenue [skip ci]"
+          git push
+
+      - name: Publish a privacy-safe run summary
+        run: |
+          echo "## Affiliate revenue optimizer" >> "$GITHUB_STEP_SUMMARY"
+          echo "Offers were ranked using anonymous site interactions and PartnerStack conversion signals." >> "$GITHUB_STEP_SUMMARY"
+          echo "Only the resulting offer order was committed; traffic counts and customer data remain private." >> "$GITHUB_STEP_SUMMARY"
