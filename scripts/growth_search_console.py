@@ -227,7 +227,10 @@ def send_email(api_key: str, sender: str, recipient: str, subject: str, text: st
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--site", default=os.environ.get("GSC_SITE_URL", "sc-domain:artificial.one"))
+    parser.add_argument(
+        "--site",
+        default=os.environ.get("GSC_SITE_URL") or "sc-domain:artificial.one",
+    )
     parser.add_argument("--sitemap", default="https://artificial.one/sitemap.xml")
     parser.add_argument("--email-to", default="hello@artificial.one")
     parser.add_argument("--email-from", default="Artificial.One Growth <onboarding@resend.dev>")
