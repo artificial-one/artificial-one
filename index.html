@@ -162,10 +162,90 @@ const { useState } = React;
 // AI_NEWS_DATA_START
 const aiNewsItems = [
   {
+    "title": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] happen’",
+    "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
+    "source": "TechCrunch AI",
+    "published_at": "2026-09-14T21:51:02+00:00",
+    "display_date": "Sep 14, 2026",
+    "category": "AI Tools & Products"
+  },
+  {
+    "title": "What execs and politicians are saying about slowing down AI development",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/995141/ai-executives-politicians-safety-regulation-anthropic-dario-amodei",
+    "source": "The Verge AI",
+    "published_at": "2026-09-14T21:21:42+00:00",
+    "display_date": "Sep 14, 2026",
+    "category": "Policy & Safety"
+  },
+  {
+    "title": "AI bots \"Timmy,\" \"Ren,\" and \"Jackie\" are flooding social media with slop",
+    "url": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/",
+    "source": "Ars Technica AI",
+    "published_at": "2026-09-14T21:04:32+00:00",
+    "display_date": "Sep 14, 2026",
+    "category": "AI Tools & Products"
+  },
+  {
+    "title": "OpenAI buys smartphone camera maker Glass Imaging for $300 million, report says",
+    "url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
+    "source": "TechCrunch AI",
+    "published_at": "2026-09-14T20:44:14+00:00",
+    "display_date": "Sep 14, 2026",
+    "category": "AI Tools & Products"
+  },
+  {
+    "title": "OpenAI has hundreds of contract workers reading your ChatGPT conversations",
+    "url": "https://the-decoder.com/openai-has-hundreds-of-contract-workers-reading-your-chatgpt-conversations/",
+    "source": "The Decoder",
+    "published_at": "2026-09-14T17:15:28+00:00",
+    "display_date": "Sep 14, 2026",
+    "category": "Models & LLMs"
+  },
+  {
+    "title": "Microsoft’s new AI ‘code of conduct’ tells models not to hack systems or trick humans",
+    "url": "https://techcrunch.com/2026/09/14/microsofts-new-ai-code-of-conduct-tells-models-not-to-hack-systems-or-trick-humans/",
+    "source": "TechCrunch AI",
+    "published_at": "2026-09-14T16:27:53+00:00",
+    "display_date": "Sep 14, 2026",
+    "category": "Models & LLMs"
+  },
+  {
+    "title": "Microsoft's AI rulebook: readable thinking, no inner life, and definitely no rights",
+    "url": "https://the-decoder.com/microsofts-ai-rulebook-readable-thinking-no-inner-life-and-definitely-no-rights/",
+    "source": "The Decoder",
+    "published_at": "2026-09-14T15:52:51+00:00",
+    "display_date": "Sep 14, 2026",
+    "category": "Models & LLMs"
+  },
+  {
+    "title": "Anthropic eyes Nasdaq listing as a second profitable quarter aims to win over investors ahead of a mega-IPO",
+    "url": "https://the-decoder.com/anthropic-eyes-nasdaq-listing-as-a-second-profitable-quarter-aims-to-win-over-investors-ahead-of-a-mega-ipo/",
+    "source": "The Decoder",
+    "published_at": "2026-09-14T15:46:45+00:00",
+    "display_date": "Sep 14, 2026",
+    "category": "AI Tools & Products"
+  },
+  {
+    "title": "Only at TechCrunch Disrupt 2026: What happens when OpenAI ships your roadmap?",
+    "url": "https://techcrunch.com/2026/09/14/only-at-techcrunch-disrupt-2026-what-happens-when-openai-ships-your-roadmap/",
+    "source": "TechCrunch AI",
+    "published_at": "2026-09-14T15:00:00+00:00",
+    "display_date": "Sep 14, 2026",
+    "category": "Models & LLMs"
+  },
+  {
+    "title": "Hear how AI can engineer nature’s comeback at TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/09/14/hear-how-ai-can-engineer-natures-comeback-at-techcrunch-disrupt-2026/",
+    "source": "TechCrunch AI",
+    "published_at": "2026-09-14T14:30:00+00:00",
+    "display_date": "Sep 14, 2026",
+    "category": "AI Business"
+  },
+  {
     "title": "Microsoft says ‘people matter more than AI’ following safety concerns",
     "url": "https://www.theverge.com/news/994566/microsoft-humanist-ai-code-of-conduct",
     "source": "The Verge AI",
-    "published_at": "2026-09-14T13:07:11+00:00",
+    "published_at": "2026-09-14T13:35:55+00:00",
     "display_date": "Sep 14, 2026",
     "category": "Models & LLMs"
   },
@@ -176,86 +256,6 @@ const aiNewsItems = [
     "published_at": "2026-09-14T12:20:22+00:00",
     "display_date": "Sep 14, 2026",
     "category": "Policy & Safety"
-  },
-  {
-    "title": "Sam Altman calls for pacing AI development but promises rapid progress will continue",
-    "url": "https://the-decoder.com/sam-altman-calls-for-pacing-ai-development-but-promises-rapid-progress-will-continue/",
-    "source": "The Decoder",
-    "published_at": "2026-09-14T09:39:59+00:00",
-    "display_date": "Sep 14, 2026",
-    "category": "Policy & Safety"
-  },
-  {
-    "title": "OpenAI’s rogue AI tried to hack another company in May",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
-    "source": "The Verge AI",
-    "published_at": "2026-09-13T20:54:00+00:00",
-    "display_date": "Sep 13, 2026",
-    "category": "Research"
-  },
-  {
-    "title": "Trump and Mike Johnson think the AI industry is overreacting",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/994441/trump-mike-johnson-ai-industry-overreacting",
-    "source": "The Verge AI",
-    "published_at": "2026-09-13T19:41:48+00:00",
-    "display_date": "Sep 13, 2026",
-    "category": "AI Tools & Products"
-  },
-  {
-    "title": "What’s behind the AI industry’s latest warnings of doom?",
-    "url": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/",
-    "source": "TechCrunch AI",
-    "published_at": "2026-09-13T19:40:15+00:00",
-    "display_date": "Sep 13, 2026",
-    "category": "AI Tools & Products"
-  },
-  {
-    "title": "Obama urges Democrats to have a ‘clear plan’ for AI safeguards",
-    "url": "https://techcrunch.com/2026/09/13/obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards/",
-    "source": "TechCrunch AI",
-    "published_at": "2026-09-13T16:30:00+00:00",
-    "display_date": "Sep 13, 2026",
-    "category": "Policy & Safety"
-  },
-  {
-    "title": "Elevenlabs makes Music v2.5 available via app and API with free and pro tier options",
-    "url": "https://the-decoder.com/elevenlabs-makes-music-v2-5-available-via-app-and-api-with-free-and-pro-tier-options/",
-    "source": "The Decoder",
-    "published_at": "2026-09-13T13:40:36+00:00",
-    "display_date": "Sep 13, 2026",
-    "category": "Models & LLMs"
-  },
-  {
-    "title": "Iris-mini and Iris-pro are the strongest open-weight search agents in their class",
-    "url": "https://the-decoder.com/iris-mini-and-iris-pro-are-the-strongest-open-weight-search-agents-in-their-class/",
-    "source": "The Decoder",
-    "published_at": "2026-09-13T12:58:18+00:00",
-    "display_date": "Sep 13, 2026",
-    "category": "Models & LLMs"
-  },
-  {
-    "title": "Two-year university study finds banning AI from classrooms leaves students worse off",
-    "url": "https://the-decoder.com/two-year-university-study-finds-banning-ai-from-classrooms-leaves-students-worse-off/",
-    "source": "The Decoder",
-    "published_at": "2026-09-13T09:27:01+00:00",
-    "display_date": "Sep 13, 2026",
-    "category": "Research"
-  },
-  {
-    "title": "Sam Altman says OpenAI going public in 2026 would be ‘ill-advised’",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/994384/sam-altman-no-openai-ipo-ill-advised",
-    "source": "The Verge AI",
-    "published_at": "2026-09-12T21:16:28+00:00",
-    "display_date": "Sep 12, 2026",
-    "category": "AI Tools & Products"
-  },
-  {
-    "title": "OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026",
-    "url": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
-    "source": "TechCrunch AI",
-    "published_at": "2026-09-12T20:19:16+00:00",
-    "display_date": "Sep 12, 2026",
-    "category": "AI Tools & Products"
   }
 ];
 // AI_NEWS_DATA_END
