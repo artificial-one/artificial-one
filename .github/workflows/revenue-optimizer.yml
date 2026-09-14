@@ -21,7 +21,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: affiliate-revenue-site-generation
+  group: artificial-one-site-publisher
   cancel-in-progress: false
 
 jobs:
@@ -31,6 +31,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          ref: main
 
       - uses: actions/setup-python@v7
         with:
