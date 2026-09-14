@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-14T03:52:45.508379+00:00",
+  "updated_at": "2026-09-14T03:57:59.570665+00:00",
   "items": [
     {
       "title": "OpenAI’s rogue AI tried to hack another company in May",
@@ -17,6 +17,22 @@
       "published_at": "2026-09-13T19:41:48+00:00",
       "display_date": "Sep 13, 2026",
       "category": "AI Tools & Products"
+    },
+    {
+      "title": "What’s behind the AI industry’s latest warnings of doom?",
+      "url": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-13T19:40:15+00:00",
+      "display_date": "Sep 13, 2026",
+      "category": "AI Tools & Products"
+    },
+    {
+      "title": "Obama urges Democrats to have a ‘clear plan’ for AI safeguards",
+      "url": "https://techcrunch.com/2026/09/13/obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-13T16:30:00+00:00",
+      "display_date": "Sep 13, 2026",
+      "category": "Policy & Safety"
     },
     {
       "title": "Elevenlabs makes Music v2.5 available via app and API with free and pro tier options",
@@ -51,6 +67,22 @@
       "category": "AI Tools & Products"
     },
     {
+      "title": "OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026",
+      "url": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-12T20:19:16+00:00",
+      "display_date": "Sep 12, 2026",
+      "category": "AI Tools & Products"
+    },
+    {
+      "title": "Anthropic CEO outlines plan to slow AI development",
+      "url": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-12T19:34:44+00:00",
+      "display_date": "Sep 12, 2026",
+      "category": "AI Tools & Products"
+    },
+    {
       "title": "Anthropic CEO says it’s time to pump the brakes on AI",
       "url": "https://www.theverge.com/ai-artificial-intelligence/994337/anthropic-ceo-slow-down-ai-development",
       "source": "The Verge AI",
@@ -64,7 +96,7 @@
       "source": "The Decoder",
       "published_at": "2026-09-12T15:03:21+00:00",
       "display_date": "Sep 12, 2026",
-      "category": "Policy & Safety"
+      "category": "Models & LLMs"
     },
     {
       "title": "Nvidia wants to pour up to $10 billion into Anthropic's record-breaking IPO",
@@ -91,11 +123,83 @@
       "category": "AI Tools & Products"
     },
     {
+      "title": "Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data",
+      "url": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-11T22:58:17+00:00",
+      "display_date": "Sep 11, 2026",
+      "category": "AI Business"
+    },
+    {
+      "title": "Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too",
+      "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-11T20:59:47+00:00",
+      "display_date": "Sep 11, 2026",
+      "category": "Models & LLMs"
+    },
+    {
+      "title": "OpenAI’s feud with mathematicians is only escalating",
+      "url": "https://techcrunch.com/2026/09/11/openais-feud-with-mathematicians-is-only-escalating/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-11T20:57:36+00:00",
+      "display_date": "Sep 11, 2026",
+      "category": "AI Tools & Products"
+    },
+    {
       "title": "Lawyer fined $5K over AI-hallucinated witnesses in a murder case",
       "url": "https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal",
       "source": "The Verge AI",
       "published_at": "2026-09-11T20:44:25+00:00",
       "display_date": "Sep 11, 2026",
+      "category": "AI Tools & Products"
+    },
+    {
+      "title": "Kimi-maker Moonshot AI targets $2B in annual revenue",
+      "url": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-11T19:35:54+00:00",
+      "display_date": "Sep 11, 2026",
+      "category": "Models & LLMs"
+    },
+    {
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+      "source": "OpenAI",
+      "published_at": "2026-09-11T10:00:00+00:00",
+      "display_date": "Sep 11, 2026",
+      "category": "Models & LLMs"
+    },
+    {
+      "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+      "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+      "source": "OpenAI",
+      "published_at": "2026-09-10T16:00:00+00:00",
+      "display_date": "Sep 10, 2026",
+      "category": "Models & LLMs"
+    },
+    {
+      "title": "Introducing ChatGPT for Financial Services",
+      "url": "https://openai.com/index/introducing-chatgpt-financial-services",
+      "source": "OpenAI",
+      "published_at": "2026-09-10T07:00:00+00:00",
+      "display_date": "Sep 10, 2026",
+      "category": "Models & LLMs"
+    },
+    {
+      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+      "url": "https://openai.com/index/expanding-ai-access-us-government",
+      "source": "OpenAI",
+      "published_at": "2026-09-10T07:00:00+00:00",
+      "display_date": "Sep 10, 2026",
+      "category": "AI Tools & Products"
+    },
+    {
+      "title": "Introducing the Agents API",
+      "url": "https://openai.com/index/introducing-the-agents-api",
+      "source": "OpenAI",
+      "published_at": "2026-09-10T00:00:00+00:00",
+      "display_date": "Sep 10, 2026",
       "category": "AI Tools & Products"
     },
     {
@@ -105,6 +209,14 @@
       "published_at": "2026-09-10T00:00:00+00:00",
       "display_date": "Sep 10, 2026",
       "category": "AI Tools & Products"
+    },
+    {
+      "title": "Paul Christiano joins OpenAI Foundation Board",
+      "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+      "source": "OpenAI",
+      "published_at": "2026-09-09T17:00:00+00:00",
+      "display_date": "Sep 09, 2026",
+      "category": "Policy & Safety"
     },
     {
       "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
@@ -167,6 +279,14 @@
       "url": "https://huggingface.co/blog/allenai/benchmirt",
       "source": "Hugging Face",
       "published_at": "2026-09-01T21:39:07+00:00",
+      "display_date": "Sep 01, 2026",
+      "category": "Models & LLMs"
+    },
+    {
+      "title": "The latest AI news we announced in August 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+      "source": "Google AI",
+      "published_at": "2026-09-01T20:45:00+00:00",
       "display_date": "Sep 01, 2026",
       "category": "Models & LLMs"
     }
