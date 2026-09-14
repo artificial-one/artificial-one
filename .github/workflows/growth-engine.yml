@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write
 
 concurrency:
   group: search-growth-engine
@@ -17,32 +18,29 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     env:
-      GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
       GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud without a stored key
+        uses: google-github-actions/auth@v3
+        with:
+          project_id: artificial-one-growth
+          workload_identity_provider: projects/932498409311/locations/global/workloadIdentityPools/github-actions/providers/github
+          service_account: artificial-one-search-growth@artificial-one-growth.iam.gserviceaccount.com
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install Google authentication library
-        if: env.GSC_SERVICE_ACCOUNT_JSON != ''
         run: python -m pip install --disable-pip-version-check google-auth requests
 
       - name: Analyze rankings, resubmit sitemap, and email private dashboard
-        if: env.GSC_SERVICE_ACCOUNT_JSON != ''
         run: python scripts/growth_search_console.py --email-to hello@artificial.one
 
-      - name: Explain missing one-time connection
-        if: env.GSC_SERVICE_ACCOUNT_JSON == ''
-        run: |
-          echo "## Search growth engine" >> "$GITHUB_STEP_SUMMARY"
-          echo "The workflow is ready, but GSC_SERVICE_ACCOUNT_JSON has not been connected yet." >> "$GITHUB_STEP_SUMMARY"
-
       - name: Add public-safe completion summary
-        if: env.GSC_SERVICE_ACCOUNT_JSON != ''
         run: |
           echo "## Search growth engine" >> "$GITHUB_STEP_SUMMARY"
           echo "Search Console was analyzed, the sitemap was resubmitted, and the private growth dashboard was emailed." >> "$GITHUB_STEP_SUMMARY"

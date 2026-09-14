@@ -1,6 +1,7 @@
 # Environment and secrets (never commit)
 .env
 env
+.secrets/
 
 # Private partner terms and local commercial metrics
 data/partner_offers.private.json

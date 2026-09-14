@@ -40,16 +40,21 @@ def load_service_account(raw: str) -> dict[str, Any]:
     return value
 
 
-def authorized_session(service_account_info: dict[str, Any]):
+def authorized_session(service_account_info: dict[str, Any] | None = None):
     try:
+        import google.auth
         from google.auth.transport.requests import AuthorizedSession
         from google.oauth2 import service_account
     except ImportError as exc:
         raise GrowthError("Install google-auth before running the growth monitor") from exc
-    credentials = service_account.Credentials.from_service_account_info(
-        service_account_info,
-        scopes=["https://www.googleapis.com/auth/webmasters"],
-    )
+    scopes = ["https://www.googleapis.com/auth/webmasters"]
+    if service_account_info:
+        credentials = service_account.Credentials.from_service_account_info(
+            service_account_info,
+            scopes=scopes,
+        )
+    else:
+        credentials, _ = google.auth.default(scopes=scopes)
     return AuthorizedSession(credentials)
 
 
@@ -238,7 +243,8 @@ def main() -> int:
     args = parser.parse_args()
 
     try:
-        info = load_service_account(os.environ.get("GSC_SERVICE_ACCOUNT_JSON", ""))
+        raw_credentials = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "").strip()
+        info = load_service_account(raw_credentials) if raw_credentials else None
         session = authorized_session(info)
         end = date.today() - timedelta(days=3)
         start = end - timedelta(days=max(1, args.days) - 1)
