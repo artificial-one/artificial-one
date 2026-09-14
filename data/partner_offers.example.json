@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-14",
+  "offers": [
+    {
+      "id": "example-ai",
+      "slug": "example-ai",
+      "name": "Example AI",
+      "status": "draft",
+      "category": "Productivity",
+      "summary": "A short, factual description of the product and its primary use case.",
+      "best_for": "The audience that receives the clearest benefit",
+      "offer_label": "20% off the first year",
+      "pricing_note": "From $19 per month; verify on the partner site",
+      "tracking_url": "https://example.com/?ref=artificial-one",
+      "review_url": "tools/example-ai-review.html",
+      "cta_label": "View the current offer",
+      "featured": false,
+      "sponsored": true,
+      "approved_at": null,
+      "terms_verified_at": null,
+      "expires_at": null,
+      "why_consider": "A concise, evidence-based reason this product may be useful.",
+      "watch_out": "A material limitation, fit constraint or verification note readers should consider.",
+      "use_cases": [
+        "A concrete task the product can support",
+        "A second concrete task for the intended audience"
+      ],
+      "evidence": []
+    }
+  ]
+}

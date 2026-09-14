@@ -84,6 +84,14 @@ deploy_batch() {
     # Update sitemap
     echo "Updating sitemap..."
     python3 /scripts/update_sitemap.py
+
+    # Validate and publish only explicitly approved partner offers. This runs after
+    # the general sitemap updater because the offer builder owns its sitemap block.
+    if [ -f "$REPO_DIR/scripts/build_partner_offers.py" ]; then
+        echo "Building approved partner offers..."
+        python3 "$REPO_DIR/scripts/build_partner_offers.py"
+        python3 "$REPO_DIR/scripts/build_partner_offers.py" --check
+    fi
     
     # Git add all changes
     git add .

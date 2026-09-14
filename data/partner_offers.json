@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-14",
+  "offers": [
+    {
+      "id": "volza",
+      "slug": "volza-trade-intelligence",
+      "name": "Volza",
+      "status": "published",
+      "category": "Research & Data",
+      "summary": "A global trade intelligence platform for researching shipment data, buyers, suppliers, products and markets.",
+      "best_for": "Import-export businesses, sourcing teams, market researchers and B2B sales teams validating international demand.",
+      "offer_label": "Explore Volza trade intelligence",
+      "pricing_note": "Plans and pricing can change; verify the current options on Volza before subscribing.",
+      "tracking_url": "https://partner.volza.com/artificial-one-trade-data",
+      "review_url": "",
+      "cta_label": "Explore Volza",
+      "featured": true,
+      "sponsored": true,
+      "approved_at": "2026-09-14",
+      "terms_verified_at": "2026-09-14",
+      "expires_at": null,
+      "why_consider": "Volza is most useful when a team needs evidence about real cross-border trade activity rather than another general-purpose AI assistant.",
+      "watch_out": "This is a specialist business-data product. Confirm that its country, product and shipment coverage matches your research workflow before choosing a plan.",
+      "use_cases": [
+        "Find and compare potential international buyers or suppliers",
+        "Research shipment activity for a product or market",
+        "Support sourcing, market-entry and B2B prospecting decisions"
+      ],
+      "evidence": [
+        {
+          "label": "Volza product website",
+          "url": "https://www.volza.com/"
+        },
+        {
+          "label": "Volza affiliate terms",
+          "url": "https://www.volza.com/affiliate-terms-conditions/"
+        }
+      ]
+    },
+    {
+      "id": "descript",
+      "slug": "descript-ai-video-editing",
+      "name": "Descript",
+      "status": "published",
+      "category": "Audio & Video",
+      "summary": "An AI-assisted workspace for editing video and audio, transcribing recordings, capturing screens and producing reusable clips.",
+      "best_for": "Creators, podcasters, educators and marketing teams that prefer editing recorded media through a text-led workflow.",
+      "offer_label": "Try Descript's AI video workflow",
+      "pricing_note": "Affiliate eligibility applies to qualifying new subscriptions; verify current plans and features on Descript.",
+      "tracking_url": "https://get.descript.com/artificial-one-video-editing",
+      "review_url": "",
+      "cta_label": "Explore Descript",
+      "featured": true,
+      "sponsored": true,
+      "approved_at": "2026-09-14",
+      "terms_verified_at": "2026-09-14",
+      "expires_at": null,
+      "why_consider": "Descript combines transcription and media editing in one workflow, which can reduce context switching for teams producing spoken-word and video content.",
+      "watch_out": "Check export, collaboration and AI-usage limits for the plan you are considering. Product capabilities and eligible affiliate plans can change.",
+      "use_cases": [
+        "Edit podcasts and interviews from their transcripts",
+        "Turn long recordings into shorter social clips",
+        "Record screens and refine narration in one workspace"
+      ],
+      "evidence": [
+        {
+          "label": "Descript product website",
+          "url": "https://www.descript.com/"
+        },
+        {
+          "label": "Descript affiliate terms",
+          "url": "https://www.descript.com/affiliate-terms"
+        }
+      ]
+    },
+    {
+      "id": "runpod",
+      "slug": "runpod-gpu-cloud",
+      "name": "Runpod",
+      "status": "draft",
+      "category": "Developer Infrastructure",
+      "summary": "Cloud GPU infrastructure for teams running AI workloads through on-demand pods and serverless endpoints.",
+      "best_for": "Developers and technical teams deploying inference, training or other GPU-intensive AI workloads.",
+      "offer_label": "Explore Runpod GPU cloud",
+      "pricing_note": "Usage-based pricing varies by compute choice; verify current availability and rates on Runpod.",
+      "tracking_url": "https://get.runpod.io/6eq0a628tkb2",
+      "review_url": "",
+      "cta_label": "Explore Runpod",
+      "featured": false,
+      "sponsored": true,
+      "approved_at": null,
+      "terms_verified_at": "2026-09-14",
+      "expires_at": null,
+      "why_consider": "Runpod is relevant when a project needs configurable GPU capacity without owning or maintaining the underlying hardware.",
+      "watch_out": "Publication is paused until the separate Runpod account requirement is verified. Workload cost, regional availability and operational requirements should also be tested first.",
+      "use_cases": [
+        "Run GPU-backed model inference",
+        "Provision temporary compute for experiments or training",
+        "Deploy serverless endpoints for production AI workloads"
+      ],
+      "evidence": [
+        {
+          "label": "Runpod product website",
+          "url": "https://www.runpod.io/"
+        },
+        {
+          "label": "Runpod partner terms",
+          "url": "https://drive.google.com/file/d/1nBHmxWk5ujvynWHFGWUi3PuoACUE4NTz/view"
+        }
+      ]
+    }
+  ]
+}

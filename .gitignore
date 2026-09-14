@@ -1,0 +1,35 @@
+# Environment and secrets (never commit)
+.env
+env
+
+# Private partner terms and local commercial metrics
+data/partner_offers.private.json
+.partner-metrics/
+
+# Optional: keep backup env filename if you ever rename it to .env
+# env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.so
+.venv/
+venv/
+env.bak/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local / temp (if any)
+*.log
+.cache/

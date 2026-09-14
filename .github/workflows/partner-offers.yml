@@ -1,0 +1,70 @@
+name: Build partner offers
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * *"
+  push:
+    branches: [main]
+    paths:
+      - data/partner_offers.json
+      - scripts/build_partner_offers.py
+      - assets/affiliate-tracking.js
+      - tests/test_partner_offer_pipeline.py
+  pull_request:
+    paths:
+      - data/partner_offers.json
+      - scripts/build_partner_offers.py
+      - assets/affiliate-tracking.js
+      - tests/test_partner_offer_pipeline.py
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Test offer safety rules
+        run: python -m unittest discover -s tests -v
+
+      - name: Build approved offers
+        run: python scripts/build_partner_offers.py
+
+      - name: Check generated output
+        run: python scripts/build_partner_offers.py --check
+
+      - name: Ensure secrets are not tracked
+        shell: bash
+        run: |
+          tracked="$(git ls-files -- .env env data/partner_offers.private.json)"
+          if [ -n "$tracked" ]; then
+            echo "A private environment or partner file is tracked."
+            echo "$tracked"
+            exit 1
+          fi
+
+      - name: Commit generated pages
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          git add -A -- partner-offers.html sitemap.xml
+          if [ -d partner-offers ]; then git add -A -- partner-offers; fi
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Build approved partner offers [skip ci]"
+          git push
+
+      - name: Require generated files in pull requests
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: git diff --exit-code -- partner-offers.html partner-offers sitemap.xml
