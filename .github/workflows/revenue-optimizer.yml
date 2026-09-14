@@ -47,6 +47,7 @@ jobs:
       - name: Build the tool finder and performance-ranked offer pages
         run: |
           python scripts/build_partner_offers.py
+          python scripts/build_search_revenue_pages.py
           python scripts/monetize_affiliate_links.py
           python scripts/build_ai_news.py --cached
 
@@ -56,13 +57,14 @@ jobs:
           node --check assets/affiliate-tracking.js
           node --check api/affiliate-event.js
           python scripts/build_partner_offers.py --check
+          python scripts/build_search_revenue_pages.py --check
           python scripts/monetize_affiliate_links.py --check
           python scripts/build_ai_news.py --check
 
       - name: Commit only public, privacy-safe optimization output
         shell: bash
         run: |
-          git add -- data/revenue_strategy.json ai-tool-finder.html index.html news.html partner-offers.html partner-offers sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js
+          git add -- data/revenue_strategy.json ai-tool-finder.html index.html news.html partner-offers.html partner-offers search-intent sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

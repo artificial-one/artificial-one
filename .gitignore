@@ -6,6 +6,7 @@ env
 # Private partner terms and local commercial metrics
 data/partner_offers.private.json
 .partner-metrics/
+.search-growth/
 
 # Optional: keep backup env filename if you ever rename it to .env
 # env

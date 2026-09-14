@@ -17,6 +17,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REGISTRY = ROOT / "data" / "partner_offers.json"
 STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
+SEARCH_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
 HUB_PATH = ROOT / "partner-offers.html"
 FINDER_PATH = ROOT / "ai-tool-finder.html"
 HOME_PATH = ROOT / "index.html"
@@ -197,6 +198,25 @@ def apply_revenue_strategy(offers: list[dict[str, Any]]) -> list[dict[str, Any]]
             not bool(item.get("featured")),
             str(item["name"]).casefold(),
         ),
+    )
+
+
+def search_snippet(offer: dict[str, Any]) -> tuple[str, str]:
+    """Return deterministic copy selected by the guarded Search Console loop."""
+    path = f"/partner-offers/{offer['slug']}.html"
+    try:
+        strategy = json.loads(SEARCH_STRATEGY_PATH.read_text(encoding="utf-8"))
+        experiment = strategy.get("experiments", {}).get(path, {})
+    except (OSError, json.JSONDecodeError, AttributeError):
+        experiment = {}
+    if isinstance(experiment, dict) and experiment.get("variant") == "commercial":
+        return (
+            f"{offer['name']} Review: Pricing, Use Cases & Alternatives | artificial.one",
+            f"Review {offer['name']} pricing notes, best use cases, limitations and alternatives. Check the current verified partner offer and decide if it fits.",
+        )
+    return (
+        f"{offer['name']}: Use Cases, Fit & Partner Offer | artificial.one",
+        f"Evaluate {offer['name']}, who it suits, practical use cases, limitations and the current verified partner offer. Terms checked {offer['terms_verified_at']}.",
     )
 
 
@@ -407,9 +427,30 @@ def related_offers_for(
     )[:limit]
 
 
+def _search_slug(value: str) -> str:
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", value.casefold())).strip("-")
+
+
+def search_links_for(offer: dict[str, Any], offers: list[dict[str, Any]]) -> list[tuple[str, str]]:
+    """Link review pages into the deterministic commercial-intent cluster."""
+    links: list[tuple[str, str]] = []
+    if offer in offers[:8]:
+        links.append((f"../search-intent/{offer['slug']}-alternatives.html", f"Best {offer['name']} alternatives"))
+    members = [item for item in offers if item.get("category") == offer.get("category")]
+    if len(members) >= 2:
+        category_slug = _search_slug(str(offer["category"]))
+        links.append((f"../search-intent/best-{category_slug}-tools.html", f"Best {offer['category']} tools"))
+        left, right = members[:2]
+        if offer in (left, right):
+            links.append((f"../search-intent/{left['slug']}-vs-{right['slug']}.html", f"{left['name']} vs {right['name']}"))
+    return links
+
+
 def render_offer(
-    offer: dict[str, Any], related_offers: list[dict[str, Any]] | None = None
+    offer: dict[str, Any], related_offers: list[dict[str, Any]] | None = None,
+    search_links: list[tuple[str, str]] | None = None,
 ) -> str:
+    title, description = search_snippet(offer)
     review_link = ""
     if offer.get("review_url"):
         review_link = f'<a href="../{esc(offer["review_url"])}" class="font-semibold text-indigo-700 hover:underline">Read the full independent review →</a>'
@@ -439,6 +480,16 @@ def render_offer(
       <h2 class="text-2xl font-bold">Compare other tools before deciding</h2>
       <div class="mt-5 grid gap-4 md:grid-cols-3">{related_cards}</div>
     </section>'''
+    intent_section = ""
+    if search_links:
+        intent_links = "".join(
+            f'<a class="rounded-full border border-indigo-200 bg-white px-4 py-2 font-semibold text-indigo-700 hover:bg-indigo-50" href="{esc(url)}">{esc(label)} →</a>'
+            for url, label in search_links
+        )
+        intent_section = f'''<section class="mx-auto max-w-4xl px-5 pb-10">
+      <h2 class="text-2xl font-bold">Compare before you choose</h2>
+      <div class="mt-4 flex flex-wrap gap-3">{intent_links}</div>
+    </section>'''
     content = f'''
     <section class="bg-white">
       <div class="mx-auto max-w-4xl px-5 py-16">
@@ -446,7 +497,7 @@ def render_offer(
         <h1 class="mt-4 text-4xl font-black md:text-5xl">{esc(offer["name"])} partner offer</h1>
         <p class="mt-6 text-xl text-slate-600">{esc(offer["summary"])}</p>
         <div class="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-6">
-          <p class="text-sm font-bold uppercase tracking-wide text-emerald-800">Current offer</p>
+          <h2 class="text-sm font-bold uppercase tracking-wide text-emerald-800">Pricing and current offer</h2>
           <p class="mt-2 text-2xl font-bold text-emerald-950">{esc(offer["offer_label"])}</p>
           <p class="mt-2 text-emerald-900">{esc(offer["pricing_note"])}</p>
           <a href="{esc(offer["tracking_url"])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer["id"])}" data-placement="offer-page-primary" class="btn-primary mt-6 inline-block rounded-xl px-7 py-4 font-bold text-white">{esc(offer["cta_label"])} →</a>
@@ -486,10 +537,10 @@ def render_offer(
         <p class="mt-3 text-xs text-slate-600">Affiliate link. We may earn a commission; your price does not increase.</p>
       </div>
     </section>
-    {related_section}'''
+{intent_section}{related_section}'''
     return shell(
-        title=f"{offer['name']}: Use Cases, Fit & Partner Offer | artificial.one",
-        description=f"Evaluate {offer['name']}, who it suits, practical use cases, limitations and the current verified partner offer. Terms checked {offer['terms_verified_at']}.",
+        title=title,
+        description=description,
         canonical_path=f"partner-offers/{offer['slug']}.html",
         content=content,
         prefix="../",
@@ -570,6 +621,12 @@ def expected_sitemap(current: str, block: str) -> str:
     closing = "</urlset>"
     if closing not in current:
         raise OfferValidationError("sitemap.xml has no closing urlset element")
+    # Keep the publisher-owned blocks in a stable order. The search revenue
+    # builder appends its block after this one.
+    search_marker = "  <!-- search-revenue:start -->"
+    if search_marker in current:
+        before, after = current.split(search_marker, 1)
+        return f"{before.rstrip()}\n{block}\n{search_marker}{after}"
     before_close = current.rsplit(closing, 1)[0].rstrip()
     return f"{before_close}\n{block}\n{closing}\n"
 
@@ -586,7 +643,7 @@ def build(registry_path: Path, check: bool = False) -> int:
     expected.update(
         {
             OFFER_DIRECTORY / f"{offer['slug']}.html": render_offer(
-                offer, related_offers_for(offer, offers)
+                offer, related_offers_for(offer, offers), search_links_for(offer, offers)
             )
             for offer in offers
         }

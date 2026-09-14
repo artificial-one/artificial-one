@@ -86,6 +86,15 @@ class PartnerOfferPipelineTests(unittest.TestCase):
         self.assertIn('data-offer-id="useful-ai"', page)
         self.assertIn("affiliate-tracking.js", page)
 
+    def test_review_page_links_to_search_intent_cluster(self):
+        first = published_offer(id="first", slug="first", name="First")
+        second = published_offer(id="second", slug="second", name="Second")
+        links = pipeline.search_links_for(first, [first, second])
+        page = pipeline.render_offer(first, [], links)
+        self.assertIn("../search-intent/first-alternatives.html", page)
+        self.assertIn("../search-intent/best-productivity-tools.html", page)
+        self.assertIn("../search-intent/first-vs-second.html", page)
+
     def test_published_offer_requires_approval(self):
         data = {"version": 1, "updated_at": "2026-09-14", "offers": [published_offer(approved_at=None)]}
         with self.assertRaises(pipeline.OfferValidationError):
