@@ -45,11 +45,19 @@ class AffiliateMonetizationTests(unittest.TestCase):
 
     def test_contextual_block_has_disclosure_and_tracking(self):
         rule = {"id": "video", "headline": "Try it", "copy": "Useful copy", "cta_label": "Open"}
-        offer = {"id": "descript", "tracking_url": "https://get.descript.com/new"}
+        offer = {"id": "descript", "slug": "descript", "tracking_url": "https://get.descript.com/new"}
         result = monetize.render_placement(rule, offer)
         self.assertIn('data-placement="video"', result)
         self.assertIn("We may earn a commission", result)
         self.assertIn('rel="nofollow sponsored noopener"', result)
+        self.assertIn("partner-offers/descript.html", result)
+
+    def test_tracking_endpoint_is_added_or_replaced(self):
+        page = monetize.ROOT / "reviews.html"
+        source = '<html><head><meta name="affiliate-event-endpoint" content=""></head><body></body></html>'
+        result = monetize.ensure_tracking_endpoint(source, page)
+        self.assertEqual(result.count("affiliate-event-endpoint"), 1)
+        self.assertIn('content="/api/affiliate-event"', result)
 
 
 if __name__ == "__main__":

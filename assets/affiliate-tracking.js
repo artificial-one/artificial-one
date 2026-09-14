@@ -1,12 +1,31 @@
 (function () {
   "use strict";
 
+  var SESSION_KEY = "artificial_one_affiliate_session";
+
+  function safeSessionId() {
+    try {
+      var existing = window.sessionStorage.getItem(SESSION_KEY);
+      if (existing) return existing;
+      var value = window.crypto && window.crypto.randomUUID
+        ? window.crypto.randomUUID()
+        : "s-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2);
+      window.sessionStorage.setItem(SESSION_KEY, value);
+      return value;
+    } catch (_) {
+      return "anonymous";
+    }
+  }
+
+  var sessionId = safeSessionId();
+
   function eventPayload(link) {
     return {
       event: "affiliate_click",
       offer_id: link.dataset.offerId || "unknown",
       placement: link.dataset.placement || "unknown",
       page_path: window.location.pathname,
+      session_id: sessionId,
       occurred_at: new Date().toISOString()
     };
   }
@@ -14,14 +33,77 @@
   function sendToConfiguredEndpoint(payload) {
     var meta = document.querySelector('meta[name="affiliate-event-endpoint"]');
     var endpoint = meta && meta.content ? meta.content.trim() : "";
-    if (!endpoint || !window.navigator.sendBeacon) return;
+    if (!endpoint) return;
 
     try {
-      var body = new Blob([JSON.stringify(payload)], { type: "application/json" });
-      window.navigator.sendBeacon(endpoint, body);
+      var body = JSON.stringify(payload);
+      if (window.navigator.sendBeacon) {
+        var accepted = window.navigator.sendBeacon(
+          endpoint,
+          new Blob([body], { type: "application/json" })
+        );
+        if (accepted) return;
+      }
+      window.fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: body,
+        keepalive: true,
+        credentials: "same-origin"
+      }).catch(function () {});
     } catch (_) {
       // Tracking must never prevent the visitor from reaching the partner.
     }
+  }
+
+  function installStickyRecommendation() {
+    var source = document.querySelector("a[data-affiliate-offer]");
+    if (!source || document.getElementById("affiliate-sticky-recommendation")) return;
+
+    var dismissalKey = "affiliate_sticky_dismissed:" + window.location.pathname;
+    try {
+      if (window.sessionStorage.getItem(dismissalKey)) return;
+    } catch (_) {}
+
+    var bar = document.createElement("aside");
+    bar.id = "affiliate-sticky-recommendation";
+    bar.setAttribute("aria-label", "Partner recommendation");
+    bar.style.cssText = "position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;display:none;align-items:center;justify-content:center;gap:14px;padding:12px 46px 12px 16px;border:1px solid #c7d2fe;border-radius:14px;background:rgba(255,255,255,.97);box-shadow:0 14px 40px rgba(15,23,42,.2);backdrop-filter:blur(10px);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif";
+
+    var label = document.createElement("span");
+    label.textContent = "Considering this tool? Check the current partner offer.";
+    label.style.cssText = "color:#334155;font-size:14px;font-weight:600";
+
+    var link = source.cloneNode(true);
+    link.textContent = source.textContent.trim() || "View partner offer";
+    link.dataset.placement = (source.dataset.placement || "affiliate") + "-sticky";
+    link.style.cssText = "display:inline-block;flex:0 0 auto;padding:10px 16px;border-radius:9px;background:#4f46e5;color:#fff;font-size:14px;font-weight:700;text-decoration:none";
+
+    var close = document.createElement("button");
+    close.type = "button";
+    close.setAttribute("aria-label", "Dismiss partner recommendation");
+    close.textContent = "×";
+    close.style.cssText = "position:absolute;right:12px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:#64748b;font-size:26px;line-height:1;cursor:pointer";
+    close.addEventListener("click", function () {
+      bar.remove();
+      try { window.sessionStorage.setItem(dismissalKey, "1"); } catch (_) {}
+    });
+
+    bar.appendChild(label);
+    bar.appendChild(link);
+    bar.appendChild(close);
+    document.body.appendChild(bar);
+
+    function maybeShow() {
+      var scrollable = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      if (window.scrollY / scrollable >= 0.35) {
+        bar.style.display = "flex";
+        window.removeEventListener("scroll", maybeShow);
+      }
+    }
+
+    window.addEventListener("scroll", maybeShow, { passive: true });
+    maybeShow();
   }
 
   document.addEventListener("click", function (event) {
@@ -53,4 +135,10 @@
 
     sendToConfiguredEndpoint(payload);
   });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", installStickyRecommendation);
+  } else {
+    installStickyRecommendation();
+  }
 })();

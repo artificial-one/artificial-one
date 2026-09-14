@@ -52,6 +52,18 @@ class PartnerOfferPipelineTests(unittest.TestCase):
         page = pipeline.render_offer(offers[0])
         self.assertIn('rel="nofollow sponsored noopener"', page)
         self.assertIn('data-offer-id="useful-ai"', page)
+        self.assertIn('data-placement="offer-page-bottom"', page)
+        self.assertIn("Use Cases, Fit &amp; Partner Offer", page)
+        self.assertIn('type="application/ld+json"', page)
+
+    def test_related_offers_prioritize_same_category(self):
+        primary = published_offer()
+        same = published_offer(id="same", slug="same", name="Same", featured=False)
+        other = published_offer(
+            id="other", slug="other", name="Other", category="Audio", featured=True
+        )
+        related = pipeline.related_offers_for(primary, [primary, other, same])
+        self.assertEqual([item["id"] for item in related], ["same", "other"])
 
     def test_published_offer_requires_approval(self):
         data = {"version": 1, "updated_at": "2026-09-14", "offers": [published_offer(approved_at=None)]}

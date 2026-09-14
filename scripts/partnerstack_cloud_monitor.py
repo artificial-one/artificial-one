@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from html import escape
 import json
 import os
@@ -29,6 +29,7 @@ API_RESOURCES = {
     "transactions": {},
     "rewards": {},
 }
+CLICK_WINDOW_DAYS = 28
 
 
 class PartnerStackError(RuntimeError):
@@ -103,7 +104,11 @@ def _partnership_status(item: dict[str, Any]) -> str:
     return str(item.get("approved_status") or item.get("status") or "unknown")
 
 
-def build_snapshot(collections: dict[str, list[dict[str, Any]]], audited_at: str | None = None) -> dict[str, Any]:
+def build_snapshot(
+    collections: dict[str, list[dict[str, Any]]],
+    audited_at: str | None = None,
+    affiliate_clicks: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Reduce API data to non-PII aggregates suitable for a cloud cache."""
     partnerships = collections.get("partnerships", [])
     customers = collections.get("customers", [])
@@ -126,7 +131,7 @@ def build_snapshot(collections: dict[str, list[dict[str, Any]]], audited_at: str
     payment_statuses = Counter(str(item.get("payment_status") or "unknown") for item in rewards)
 
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "audited_at": audited_at or datetime.now(timezone.utc).isoformat(),
         "partnerships": {
             "count": len(partnerships),
@@ -146,7 +151,77 @@ def build_snapshot(collections: dict[str, list[dict[str, Any]]], audited_at: str
             "statuses": dict(sorted(reward_statuses.items())),
             "payment_statuses": dict(sorted(payment_statuses.items())),
         },
+        "affiliate_clicks": affiliate_clicks or {
+            "window_days": CLICK_WINDOW_DAYS,
+            "total": 0,
+            "unique_daily_sessions": 0,
+            "by_offer": {},
+            "by_placement": {},
+            "by_page": {},
+        },
     }
+
+
+def reduce_affiliate_click_results(
+    days: list[str], payload: list[dict[str, Any]]
+) -> dict[str, Any]:
+    totals: Counter[str] = Counter()
+    offers: Counter[str] = Counter()
+    placements: Counter[str] = Counter()
+    pages: Counter[str] = Counter()
+    unique_daily_sessions = 0
+    for index, _day in enumerate(days):
+        hash_result = payload[index * 2].get("result", []) if index * 2 < len(payload) else []
+        session_result = payload[index * 2 + 1].get("result", 0) if index * 2 + 1 < len(payload) else 0
+        if isinstance(hash_result, list):
+            fields = iter(hash_result)
+            for field, value in zip(fields, fields):
+                name = str(field)
+                count = _integer(value)
+                if name == "total":
+                    totals["total"] += count
+                elif name.startswith("offer:"):
+                    offers[name[6:]] += count
+                elif name.startswith("placement:"):
+                    placements[name[10:]] += count
+                elif name.startswith("page:"):
+                    pages[name[5:]] += count
+        unique_daily_sessions += _integer(session_result)
+    return {
+        "window_days": len(days),
+        "total": totals["total"],
+        "unique_daily_sessions": unique_daily_sessions,
+        "by_offer": dict(offers.most_common()),
+        "by_placement": dict(placements.most_common()),
+        "by_page": dict(pages.most_common(20)),
+    }
+
+
+def fetch_affiliate_clicks(rest_url: str, token: str, days: int = CLICK_WINDOW_DAYS) -> dict[str, Any]:
+    end = datetime.now(timezone.utc).date()
+    date_keys = [(end - timedelta(days=offset)).isoformat() for offset in range(days)]
+    commands: list[list[Any]] = []
+    for day in date_keys:
+        key = f"affiliate:clicks:{day}"
+        commands.extend([["HGETALL", key], ["PFCOUNT", f"{key}:sessions"]])
+    request = Request(
+        rest_url.rstrip("/") + "/pipeline",
+        data=json.dumps(commands).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "User-Agent": "artificial.one-partner-monitor/1.0",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(request, timeout=30) as response:
+            payload = json.load(response)
+    except Exception as exc:
+        raise PartnerStackError(f"Affiliate click aggregate request failed: {exc}") from exc
+    if not isinstance(payload, list):
+        raise PartnerStackError("Affiliate click store returned an unexpected response")
+    return reduce_affiliate_click_results(date_keys, payload)
 
 
 def _money(cents: int) -> str:
@@ -157,6 +232,7 @@ def compare_snapshots(previous: dict[str, Any], current: dict[str, Any]) -> list
     """Return user-readable material changes without customer-level data."""
     changes: list[str] = []
     fields = (
+        ("affiliate_clicks", "total", "Site affiliate clicks (28d)", str),
         ("customers", "count", "Attributed signups", str),
         ("customers", "paid_count", "Paying customers", str),
         ("transactions", "count", "Transactions", str),
@@ -261,6 +337,9 @@ def _recommendation(
 
     before_customers = previous.get("customers", {})
     after_customers = current.get("customers", {})
+    click_delta = _integer(current.get("affiliate_clicks", {}).get("total")) - _integer(
+        previous.get("affiliate_clicks", {}).get("total")
+    )
     signup_delta = _integer(after_customers.get("count")) - _integer(before_customers.get("count"))
     paid_delta = _integer(after_customers.get("paid_count")) - _integer(before_customers.get("paid_count"))
     commission_delta = _integer(current.get("rewards", {}).get("amount_usd_cents")) - _integer(
@@ -271,6 +350,8 @@ def _recommendation(
         return "Conversions improved. Identify the converting offer and expand the content or call-to-action that generated it."
     if signup_delta > 0 and paid_delta <= 0:
         return "Interest increased without a new paying customer. Review offer-to-landing-page alignment and the next-step call to action."
+    if click_delta > 0 and signup_delta <= 0:
+        return "Affiliate clicks increased without a new attributed signup. Prioritize the highest-clicked offer and test a closer match between page intent and partner landing page."
     if any(change.startswith("New partnership:") for change in changes):
         return "Review the new program's audience fit, economics and promotion restrictions before adding it to public content."
     if any("Payment status" in change or "Reward status" in change for change in changes):
@@ -295,6 +376,7 @@ def render_email_dashboard(
     customers = current.get("customers", {})
     transactions = current.get("transactions", {})
     rewards = current.get("rewards", {})
+    clicks = current.get("affiliate_clicks", {})
     partnership_states = partnerships.get("states", [])
     partnership_lines = [
         f"{item.get('program', 'Unknown program')}: {item.get('status', 'unknown')}"
@@ -306,6 +388,8 @@ def render_email_dashboard(
 
     metric_lines = [
         f"Partnerships: {_integer(partnerships.get('count'))}",
+        f"Site affiliate clicks ({_integer(clicks.get('window_days'))}d): {_integer(clicks.get('total'))}",
+        f"Unique click sessions (daily sum): {_integer(clicks.get('unique_daily_sessions'))}",
         f"Attributed signups: {_integer(customers.get('count'))}",
         f"Paying customers: {_integer(customers.get('paid_count'))}",
         f"Transactions: {_integer(transactions.get('count'))}",
@@ -315,6 +399,9 @@ def render_email_dashboard(
         f"Reward statuses: {_status_summary(rewards.get('statuses', {}))}",
         f"Payment statuses: {_status_summary(rewards.get('payment_statuses', {}))}",
     ]
+    click_offer_lines = [
+        f"{name}: {_integer(count)}" for name, count in clicks.get("by_offer", {}).items()
+    ] or ["No captured clicks yet"]
     coverage_lines = [
         f"Active PartnerStack programs: {_integer(coverage.get('active_programs'))}",
         f"Terms awaiting acceptance: {_integer(coverage.get('terms_action_required'))}",
@@ -329,6 +416,9 @@ def render_email_dashboard(
         "",
         "CURRENT TOTALS",
         *metric_lines,
+        "",
+        "AFFILIATE CLICKS BY OFFER (LAST 28 DAYS)",
+        *(f"- {line}" for line in click_offer_lines),
         "",
         "WEBSITE MONETIZATION COVERAGE",
         *coverage_lines,
@@ -357,6 +447,7 @@ def render_email_dashboard(
         for line in coverage_lines
     )
     partnership_items = "".join(f"<li>{escape(line)}</li>" for line in partnership_lines)
+    click_offer_items = "".join(f"<li>{escape(line)}</li>" for line in click_offer_lines)
     change_items = "".join(f"<li>{escape(line)}</li>" for line in change_lines)
     run_link = f"<p><a href='{escape(run_url)}'>Open cloud audit</a></p>" if run_url else ""
     html_body = f"""<!doctype html>
@@ -364,6 +455,7 @@ def render_email_dashboard(
 <h1 style="font-size:24px;margin-bottom:4px">PartnerStack daily dashboard</h1>
 <p style="color:#667085;margin-top:0">Artificial.One · {escape(audited_at)}</p>
 <h2 style="font-size:18px">Current totals</h2><table>{metric_rows}</table>
+<h2 style="font-size:18px">Affiliate clicks by offer (last 28 days)</h2><ul>{click_offer_items}</ul>
 <h2 style="font-size:18px">Website monetization coverage</h2><table>{coverage_rows}</table>
 <h2 style="font-size:18px">Partnerships</h2><ul>{partnership_items}</ul>
 <h2 style="font-size:18px">Changes since previous audit</h2><ul>{change_items}</ul>
@@ -439,7 +531,22 @@ def main(argv: list[str] | None = None) -> int:
         resource: fetch_all(resource, api_key, params)
         for resource, params in API_RESOURCES.items()
     }
-    current = build_snapshot(collections)
+    redis_url = (
+        os.environ.get("UPSTASH_REDIS_REST_URL")
+        or os.environ.get("KV_REST_API_URL")
+        or ""
+    ).strip()
+    redis_token = (
+        os.environ.get("UPSTASH_REDIS_REST_TOKEN")
+        or os.environ.get("KV_REST_API_TOKEN")
+        or ""
+    ).strip()
+    click_totals = (
+        fetch_affiliate_clicks(redis_url, redis_token)
+        if redis_url and redis_token
+        else None
+    )
+    current = build_snapshot(collections, affiliate_clicks=click_totals)
     previous = None
     if args.baseline.exists():
         previous = json.loads(args.baseline.read_text(encoding="utf-8"))

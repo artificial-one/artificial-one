@@ -179,8 +179,19 @@ def esc(value: Any) -> str:
     return html.escape(str(value), quote=True)
 
 
+def json_ld(value: dict[str, Any]) -> str:
+    payload = json.dumps(value, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
+    return f'<script type="application/ld+json">{payload}</script>'
+
+
 def shell(
-    *, title: str, description: str, canonical_path: str, content: str, prefix: str = ""
+    *,
+    title: str,
+    description: str,
+    canonical_path: str,
+    content: str,
+    prefix: str = "",
+    structured_data: dict[str, Any] | None = None,
 ) -> str:
     canonical = f"https://artificial.one/{canonical_path}"
     return f'''<!DOCTYPE html>
@@ -197,7 +208,8 @@ def shell(
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="https://artificial.one/images/og-homepage.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="affiliate-event-endpoint" content="">
+  <meta name="affiliate-event-endpoint" content="/api/affiliate-event">
+  {json_ld(structured_data) if structured_data else ""}
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }}
@@ -275,10 +287,40 @@ def render_hub(offers: list[dict[str, Any]]) -> str:
         description="Curated and independently evaluated offers from AI software partners, with transparent affiliate disclosures and verified terms.",
         canonical_path="partner-offers.html",
         content=content,
+        structured_data={
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Verified AI partner offers",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": index,
+                    "name": offer["name"],
+                    "url": f"https://artificial.one/partner-offers/{offer['slug']}.html",
+                }
+                for index, offer in enumerate(offers, start=1)
+            ],
+        },
     )
 
 
-def render_offer(offer: dict[str, Any]) -> str:
+def related_offers_for(
+    offer: dict[str, Any], offers: list[dict[str, Any]], limit: int = 3
+) -> list[dict[str, Any]]:
+    candidates = [item for item in offers if item["id"] != offer["id"]]
+    return sorted(
+        candidates,
+        key=lambda item: (
+            item.get("category") != offer.get("category"),
+            not bool(item.get("featured")),
+            item["name"].lower(),
+        ),
+    )[:limit]
+
+
+def render_offer(
+    offer: dict[str, Any], related_offers: list[dict[str, Any]] | None = None
+) -> str:
     review_link = ""
     if offer.get("review_url"):
         review_link = f'<a href="../{esc(offer["review_url"])}" class="font-semibold text-indigo-700 hover:underline">Read the full independent review →</a>'
@@ -293,6 +335,21 @@ def render_offer(offer: dict[str, Any]) -> str:
     )
     sponsored = "Sponsored commercial relationship" if offer.get("sponsored") else "Affiliate relationship"
     expiry = esc(offer.get("expires_at") or "No fixed end date supplied")
+    related_cards = "".join(
+        f'''<a href="{esc(item['slug'])}.html" class="block rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-md">
+          <p class="text-xs font-bold uppercase tracking-wide text-indigo-600">{esc(item['category'])}</p>
+          <h3 class="mt-2 text-lg font-bold">{esc(item['name'])}</h3>
+          <p class="mt-2 text-sm text-slate-600">{esc(item['best_for'])}</p>
+          <span class="mt-4 inline-block text-sm font-semibold text-indigo-700">Compare fit →</span>
+        </a>'''
+        for item in (related_offers or [])
+    )
+    related_section = ""
+    if related_cards:
+        related_section = f'''<section class="mx-auto max-w-4xl px-5 pb-6">
+      <h2 class="text-2xl font-bold">Compare other tools before deciding</h2>
+      <div class="mt-5 grid gap-4 md:grid-cols-3">{related_cards}</div>
+    </section>'''
     content = f'''
     <section class="bg-white">
       <div class="mx-auto max-w-4xl px-5 py-16">
@@ -331,13 +388,51 @@ def render_offer(offer: dict[str, Any]) -> str:
         <h3 class="mt-6 font-bold">Sources</h3><ul class="mt-2 list-inside list-disc space-y-2 text-sm">{evidence}</ul>
       </article>
       <div class="md:col-span-2">{review_link}</div>
-    </section>'''
+    </section>
+    <section class="mx-auto max-w-4xl px-5 pb-12">
+      <div class="rounded-2xl border border-indigo-200 bg-indigo-50 p-7 text-center">
+        <h2 class="text-2xl font-bold">Ready to evaluate {esc(offer['name'])}?</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-slate-600">Open the verified partner destination to confirm today’s plans, limits and terms before subscribing.</p>
+        <a href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer['id'])}" data-placement="offer-page-bottom" class="btn-primary mt-6 inline-block rounded-xl px-7 py-4 font-bold text-white">{esc(offer['cta_label'])} →</a>
+        <p class="mt-3 text-xs text-slate-600">Affiliate link. We may earn a commission; your price does not increase.</p>
+      </div>
+    </section>
+    {related_section}'''
     return shell(
-        title=f"{offer['name']} Partner Offer | artificial.one",
-        description=f"Our verified partner offer for {offer['name']}: {offer['offer_label']}. Terms checked {offer['terms_verified_at']}.",
+        title=f"{offer['name']}: Use Cases, Fit & Partner Offer | artificial.one",
+        description=f"Evaluate {offer['name']}, who it suits, practical use cases, limitations and the current verified partner offer. Terms checked {offer['terms_verified_at']}.",
         canonical_path=f"partner-offers/{offer['slug']}.html",
         content=content,
         prefix="../",
+        structured_data={
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "SoftwareApplication",
+                    "name": offer["name"],
+                    "applicationCategory": offer["category"],
+                    "description": offer["summary"],
+                    "url": f"https://artificial.one/partner-offers/{offer['slug']}.html",
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Partner offers",
+                            "item": "https://artificial.one/partner-offers.html",
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": offer["name"],
+                            "item": f"https://artificial.one/partner-offers/{offer['slug']}.html",
+                        },
+                    ],
+                },
+            ],
+        },
     )
 
 
@@ -395,7 +490,12 @@ def build(registry_path: Path, check: bool = False) -> int:
     lastmod = registry["updated_at"]
     expected: dict[Path, str] = {HUB_PATH: render_hub(offers)}
     expected.update(
-        {OFFER_DIRECTORY / f"{offer['slug']}.html": render_offer(offer) for offer in offers}
+        {
+            OFFER_DIRECTORY / f"{offer['slug']}.html": render_offer(
+                offer, related_offers_for(offer, offers)
+            )
+            for offer in offers
+        }
     )
 
     sitemap_current = SITEMAP_PATH.read_text(encoding="utf-8")

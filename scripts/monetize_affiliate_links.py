@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "data" / "partner_offers.json"
 PLACEMENTS_PATH = ROOT / "data" / "affiliate_placements.json"
 TRACKING_ASSET = "assets/affiliate-tracking.js"
+TRACKING_ENDPOINT = "/api/affiliate-event"
 ANCHOR_RE = re.compile(r"<a\b[^>]*\bhref=(?P<quote>['\"])(?P<url>[^'\"]+)(?P=quote)[^>]*>", re.I)
 MANAGED_RE = re.compile(
     r"<!-- affiliate-placement:(?P<id>[a-z0-9-]+):start -->.*?"
@@ -112,6 +113,20 @@ def ensure_tracking_script(text: str, page: Path) -> str:
     return text[: close.start()] + script + text[close.start() :]
 
 
+def ensure_tracking_endpoint(text: str, page: Path) -> str:
+    pattern = re.compile(
+        r'<meta\s+name=([\'\"])affiliate-event-endpoint\1\s+content=([\'\"])(.*?)\2\s*/?>',
+        re.I | re.S,
+    )
+    tag = f'<meta name="affiliate-event-endpoint" content="{TRACKING_ENDPOINT}">'
+    if pattern.search(text):
+        return pattern.sub(tag, text, count=1)
+    close = re.search(r"</head\s*>", text, re.I)
+    if not close:
+        raise MonetizationError(f"{page.relative_to(ROOT)} has no </head> tag")
+    return text[: close.start()] + f"  {tag}\n" + text[close.start() :]
+
+
 def strip_trailing_whitespace(text: str) -> str:
     """Keep generated diffs clean without changing the document's final newline."""
     had_final_newline = text.endswith("\n")
@@ -128,6 +143,7 @@ def render_placement(rule: dict[str, Any], offer: dict[str, Any]) -> str:
       <h2 class="mt-2 text-2xl font-bold text-gray-900">{html.escape(str(rule["headline"]))}</h2>
       <p class="mt-3 text-gray-700">{html.escape(str(rule["copy"]))}</p>
       <a href="{html.escape(str(offer["tracking_url"]), quote=True)}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer="" data-offer-id="{html.escape(offer_id)}" data-placement="{html.escape(placement_id)}" class="mt-5 inline-block rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700">{html.escape(str(rule["cta_label"]))} →</a>
+      <a href="https://artificial.one/partner-offers/{html.escape(str(offer["slug"]))}.html" class="ml-0 mt-4 inline-block font-semibold text-indigo-700 hover:underline sm:ml-4">Read our decision guide →</a>
       <p class="mt-3 text-xs text-gray-600">We may earn a commission if you subscribe through this link, at no extra cost to you.</p>
     </aside>
     <!-- affiliate-placement:{html.escape(placement_id)}:end -->\n'''
@@ -243,7 +259,8 @@ def apply(root: Path = ROOT, check: bool = False) -> list[Path]:
             index = insertion_index(text, page)
             text = text[:index] + "\n" + block + "\n" + text[index:]
             found.add(offer_id)
-        if found:
+        if found or "data-affiliate-offer" in text:
+            text = ensure_tracking_endpoint(text, page)
             text = ensure_tracking_script(text, page)
         text = strip_trailing_whitespace(text)
         if text != original:

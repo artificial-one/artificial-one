@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "max_items": 36,
+  "max_age_days": 45,
+  "per_source_limit": 8,
+  "sources": [
+    {
+      "name": "OpenAI",
+      "feed_url": "https://openai.com/news/rss.xml",
+      "homepage": "https://openai.com/news/",
+      "allowed_domains": ["openai.com"]
+    },
+    {
+      "name": "Google AI",
+      "feed_url": "https://blog.google/technology/ai/rss/",
+      "homepage": "https://blog.google/technology/ai/",
+      "allowed_domains": ["blog.google"]
+    },
+    {
+      "name": "Hugging Face",
+      "feed_url": "https://huggingface.co/blog/feed.xml",
+      "homepage": "https://huggingface.co/blog",
+      "allowed_domains": ["huggingface.co"]
+    },
+    {
+      "name": "TechCrunch AI",
+      "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "homepage": "https://techcrunch.com/category/artificial-intelligence/",
+      "allowed_domains": ["techcrunch.com"]
+    },
+    {
+      "name": "The Verge AI",
+      "feed_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "homepage": "https://www.theverge.com/ai-artificial-intelligence",
+      "allowed_domains": ["theverge.com"]
+    },
+    {
+      "name": "The Decoder",
+      "feed_url": "https://the-decoder.com/feed/",
+      "homepage": "https://the-decoder.com/",
+      "allowed_domains": ["the-decoder.com"]
+    },
+    {
+      "name": "Ars Technica AI",
+      "feed_url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+      "homepage": "https://arstechnica.com/ai/",
+      "allowed_domains": ["arstechnica.com"]
+    }
+  ]
+}

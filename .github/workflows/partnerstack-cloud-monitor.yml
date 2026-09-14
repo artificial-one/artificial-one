@@ -37,6 +37,8 @@ jobs:
         env:
           PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
         run: >-
           python scripts/partnerstack_cloud_monitor.py
           --baseline .partner-metrics/cloud-baseline.json

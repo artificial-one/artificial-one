@@ -8,12 +8,27 @@ from scripts.partnerstack_cloud_monitor import (
     build_snapshot,
     compare_snapshots,
     load_website_coverage,
+    reduce_affiliate_click_results,
     render_email_dashboard,
     write_report,
 )
 
 
 class PartnerStackCloudMonitorTests(unittest.TestCase):
+    def test_click_store_results_are_reduced_to_aggregates(self):
+        result = reduce_affiliate_click_results(
+            ["2026-09-14", "2026-09-13"],
+            [
+                {"result": ["total", "3", "offer:descript", "2", "page:/reviews.html", "3"]},
+                {"result": 2},
+                {"result": ["total", "4", "offer:descript", "1", "offer:volza", "3"]},
+                {"result": 3},
+            ],
+        )
+        self.assertEqual(result["total"], 7)
+        self.assertEqual(result["unique_daily_sessions"], 5)
+        self.assertEqual(result["by_offer"], {"descript": 3, "volza": 3})
+
     def test_unwraps_paginated_partner_response(self):
         items, has_more = _items_from_payload(
             {"data": {"items": [{"key": "part_1"}], "has_more": True}}

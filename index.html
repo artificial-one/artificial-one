@@ -159,6 +159,107 @@
     <script type="text/babel">
 const { useState } = React;
 
+// AI_NEWS_DATA_START
+const aiNewsItems = [
+  {
+    "title": "OpenAI’s rogue AI tried to hack another company in May",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
+    "source": "The Verge AI",
+    "published_at": "2026-09-13T20:54:00+00:00",
+    "display_date": "Sep 13, 2026",
+    "category": "Research"
+  },
+  {
+    "title": "Trump and Mike Johnson think the AI industry is overreacting",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/994441/trump-mike-johnson-ai-industry-overreacting",
+    "source": "The Verge AI",
+    "published_at": "2026-09-13T19:41:48+00:00",
+    "display_date": "Sep 13, 2026",
+    "category": "AI Tools & Products"
+  },
+  {
+    "title": "Elevenlabs makes Music v2.5 available via app and API with free and pro tier options",
+    "url": "https://the-decoder.com/elevenlabs-makes-music-v2-5-available-via-app-and-api-with-free-and-pro-tier-options/",
+    "source": "The Decoder",
+    "published_at": "2026-09-13T13:40:36+00:00",
+    "display_date": "Sep 13, 2026",
+    "category": "Models & LLMs"
+  },
+  {
+    "title": "Iris-mini and Iris-pro are the strongest open-weight search agents in their class",
+    "url": "https://the-decoder.com/iris-mini-and-iris-pro-are-the-strongest-open-weight-search-agents-in-their-class/",
+    "source": "The Decoder",
+    "published_at": "2026-09-13T12:58:18+00:00",
+    "display_date": "Sep 13, 2026",
+    "category": "Models & LLMs"
+  },
+  {
+    "title": "Two-year university study finds banning AI from classrooms leaves students worse off",
+    "url": "https://the-decoder.com/two-year-university-study-finds-banning-ai-from-classrooms-leaves-students-worse-off/",
+    "source": "The Decoder",
+    "published_at": "2026-09-13T09:27:01+00:00",
+    "display_date": "Sep 13, 2026",
+    "category": "Research"
+  },
+  {
+    "title": "Sam Altman says OpenAI going public in 2026 would be ‘ill-advised’",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/994384/sam-altman-no-openai-ipo-ill-advised",
+    "source": "The Verge AI",
+    "published_at": "2026-09-12T21:16:28+00:00",
+    "display_date": "Sep 12, 2026",
+    "category": "AI Tools & Products"
+  },
+  {
+    "title": "Anthropic CEO says it’s time to pump the brakes on AI",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/994337/anthropic-ceo-slow-down-ai-development",
+    "source": "The Verge AI",
+    "published_at": "2026-09-12T16:23:40+00:00",
+    "display_date": "Sep 12, 2026",
+    "category": "Models & LLMs"
+  },
+  {
+    "title": "Anthropic CEO Amodei wants AI speed limits before self-improvement outpaces human control",
+    "url": "https://the-decoder.com/anthropic-ceo-amodei-wants-ai-speed-limits-before-self-improvement-outpaces-human-control/",
+    "source": "The Decoder",
+    "published_at": "2026-09-12T15:03:21+00:00",
+    "display_date": "Sep 12, 2026",
+    "category": "Policy & Safety"
+  },
+  {
+    "title": "Nvidia wants to pour up to $10 billion into Anthropic's record-breaking IPO",
+    "url": "https://the-decoder.com/nvidia-wants-to-pour-up-to-10-billion-into-anthropics-record-breaking-ipo/",
+    "source": "The Decoder",
+    "published_at": "2026-09-12T14:05:18+00:00",
+    "display_date": "Sep 12, 2026",
+    "category": "AI Tools & Products"
+  },
+  {
+    "title": "Meta says it’s changing AI suggestions after posing invasive personal questions",
+    "url": "https://www.theverge.com/tech/993974/meta-ai-prompt-invasive-suggestions",
+    "source": "The Verge AI",
+    "published_at": "2026-09-11T23:38:19+00:00",
+    "display_date": "Sep 11, 2026",
+    "category": "AI Tools & Products"
+  },
+  {
+    "title": "OpenAI just wants to win",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/994255/openai-millennium-prize-problem-tristan-buckmaster-competition",
+    "source": "The Verge AI",
+    "published_at": "2026-09-11T23:35:48+00:00",
+    "display_date": "Sep 11, 2026",
+    "category": "AI Tools & Products"
+  },
+  {
+    "title": "Lawyer fined $5K over AI-hallucinated witnesses in a murder case",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal",
+    "source": "The Verge AI",
+    "published_at": "2026-09-11T20:44:25+00:00",
+    "display_date": "Sep 11, 2026",
+    "category": "AI Tools & Products"
+  }
+];
+// AI_NEWS_DATA_END
+
 function ArtificialOne() {
   return (
     <div className="min-h-screen bg-white">
@@ -205,6 +306,7 @@ function ArtificialOne() {
                             <a href="guides/index.html">📖 Guides</a>
                         </div>
                     </div>
+                    <a href="news.html" className="text-gray-600 hover:text-indigo-600 font-medium transition-colors">AI News</a>
                     
                     <div className="dropdown">
                         <span className="text-gray-600 hover:text-indigo-600 font-medium transition-colors cursor-pointer">
@@ -275,6 +377,7 @@ function ArtificialOne() {
               </div>
               
               <a href="blog.html" className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Blog</a>
+              <a href="news.html" className="bg-gradient-to-r from-slate-700 to-indigo-700 text-white px-6 py-3 rounded-lg font-semibold text-center">AI News</a>
               <a href="partner-offers.html" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center">Partner Offers</a>
               <a href="partners.html" className="border border-indigo-200 text-indigo-700 px-6 py-3 rounded-lg font-semibold text-center">For Partners</a>
               <a href="about.html" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold text-center">About</a>
@@ -320,6 +423,39 @@ function ArtificialOne() {
             </div>
 
             <p className="text-xs sm:text-sm text-gray-500">Join 1,000+ people finding better AI tools. 100% free.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* AI News */}
+      <section id="ai-news" className="py-14 sm:py-20 bg-slate-50 border-y border-slate-200">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-9">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-widest text-indigo-600 mb-2">Automatically refreshed</p>
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Latest AI, LLM &amp; AI tool news</h2>
+                <p className="mt-3 max-w-2xl text-gray-600">Recent headlines from official labs and established technology publications. Links open the original source.</p>
+              </div>
+              <a href="news.html" className="font-semibold text-indigo-700 hover:text-indigo-900">Browse all AI news →</a>
+            </div>
+            {aiNewsItems.length ? (
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                {aiNewsItems.slice(0, 6).map((item) => (
+                  <article key={item.url} className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-center justify-between gap-3 text-xs font-semibold uppercase tracking-wide">
+                      <span className="text-indigo-700">{item.category}</span>
+                      <time className="text-slate-500" dateTime={item.published_at}>{item.display_date}</time>
+                    </div>
+                    <h3 className="mt-4 text-xl font-bold leading-snug text-slate-900">{item.title}</h3>
+                    <p className="mt-4 text-sm text-slate-500">{item.source}</p>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="mt-5 font-semibold text-indigo-700 hover:underline">Read at the source ↗</a>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <p className="rounded-xl border border-slate-200 bg-white p-6 text-slate-600">The news feed is refreshing. Please check back shortly.</p>
+            )}
           </div>
         </div>
       </section>
