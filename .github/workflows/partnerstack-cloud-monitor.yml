@@ -1,0 +1,74 @@
+name: PartnerStack cloud monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 07:23 UTC is morning in Europe/Prague and avoids peak-hour scheduling.
+    - cron: "23 7 * * *"
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: partnerstack-cloud-monitor
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Restore private aggregate baseline
+        uses: actions/cache/restore@v4
+        with:
+          path: .partner-metrics/cloud-baseline.json
+          key: partnerstack-cloud-baseline-${{ github.run_id }}
+          restore-keys: |
+            partnerstack-cloud-baseline-
+
+      - name: Audit PartnerStack through its Partner API
+        id: monitor
+        env:
+          PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
+        run: >-
+          python scripts/partnerstack_cloud_monitor.py
+          --baseline .partner-metrics/cloud-baseline.json
+          --report .partner-metrics/cloud-report.md
+
+      - name: Add sanitized result to the workflow summary
+        if: always() && steps.monitor.outcome == 'success'
+        shell: bash
+        run: cat .partner-metrics/cloud-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Save private aggregate baseline
+        if: steps.monitor.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: .partner-metrics/cloud-baseline.json
+          key: partnerstack-cloud-baseline-${{ github.run_id }}
+
+      - name: Notify the repository owner about a meaningful change
+        if: steps.monitor.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+        run: |
+          cat > /tmp/partnerstack-notice.md <<EOF
+          The cloud monitor detected a meaningful change in sanitized PartnerStack aggregate data.
+
+          Review the [private PartnerStack dashboard](https://dash.partnerstack.com/home) before changing public content.
+
+          Automated run: ${RUN_URL}
+          EOF
+          gh issue create \
+            --repo "${GITHUB_REPOSITORY}" \
+            --title "PartnerStack monitor: attention needed ($(date -u +%F))" \
+            --body-file /tmp/partnerstack-notice.md \
+            --assignee artificial-one

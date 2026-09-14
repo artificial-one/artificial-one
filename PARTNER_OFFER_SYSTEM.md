@@ -67,6 +67,12 @@ The event intentionally excludes email address, referrer, IP address and browser
 
 ## PartnerStack monitoring
 
-The recurring account monitor keeps its latest private baseline in `.partner-metrics/partnerstack-baseline.json`, which is ignored by Git. It compares account-wide and program-level clicks, signups, revenue, commissions, invitations, terms gates and payout readiness. Routine runs stay quiet when nothing material changes.
+The production monitor runs in GitHub Actions through `.github/workflows/partnerstack-cloud-monitor.yml`, so it does not depend on a laptop. It authenticates with the official Partner API using the encrypted `PARTNERSTACK_API_KEY` repository secret. The workflow calls read-only endpoints for partnerships, customers, transactions and rewards, then reduces the responses to non-PII aggregate counts and totals before comparison.
+
+The latest sanitized aggregate baseline is kept in the GitHub Actions cache at `.partner-metrics/cloud-baseline.json`; it is never committed. Raw API responses, customer keys and customer email addresses are never written or logged. A first run initializes the baseline. Later runs create a generic GitHub issue assigned to the repository owner only when a meaningful aggregate change is detected. The issue deliberately contains no revenue or customer details; the private PartnerStack dashboard remains the source for investigation.
+
+The API monitor detects attributed customers, paid customers, transactions, revenue, rewards, commission totals, reward/payment status totals and partnership additions or status changes. PartnerStack's documented Partner API does not expose dashboard clicks, content resources, terms-gated notices or every invitation state, so those remain manual review items. PartnerStack Postbacks can later add immediate customer, transaction and reward notifications without polling.
+
+The old laptop-dependent heartbeat should remain active only until the cloud workflow completes a successful manual test. After that it should be paused to avoid duplicate checks.
 
 Monitoring is read-only. It must not accept invitations or terms, create referral links, download resources, send messages or change account settings. Any newly interesting program is reviewed for audience fit, economics and promotion restrictions before it is added to the public registry.
