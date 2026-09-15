@@ -78,6 +78,39 @@ class RevenueAccelerationTests(unittest.TestCase):
                 else:
                     os.environ[key] = value
 
+    def test_duplicate_cleanup_marks_item_sent_without_publishing(self):
+        original_delete = distribution.delete_bluesky_post
+        original_ping = distribution.ping_websub
+        keys = (
+            "DISTRIBUTION_SEND_ENABLED", "BLUESKY_HANDLE", "BLUESKY_APP_PASSWORD",
+            "BLUESKY_DELETE_RKEY", "BLUESKY_MARK_SENT_ID",
+        )
+        original = {key: os.environ.get(key) for key in keys}
+        deleted = []
+        try:
+            os.environ["DISTRIBUTION_SEND_ENABLED"] = "false"
+            os.environ["BLUESKY_HANDLE"] = "example.bsky.social"
+            os.environ["BLUESKY_APP_PASSWORD"] = "test-only"
+            os.environ["BLUESKY_DELETE_RKEY"] = "duplicate-rkey"
+            os.environ["BLUESKY_MARK_SENT_ID"] = "ai-stack-builder"
+            distribution.delete_bluesky_post = lambda _handle, _password, rkey: deleted.append(rkey) or "deleted"
+            distribution.ping_websub = lambda: "WebSub notified"
+            with tempfile.TemporaryDirectory() as folder:
+                state_path = Path(folder) / "state.json"
+                status = distribution.run(state_path)
+                state = distribution.load(state_path)
+            self.assertEqual(deleted, ["duplicate-rkey"])
+            self.assertIn("marked ai-stack-builder as distributed", status)
+            self.assertEqual(len(state["sent"]), 1)
+        finally:
+            distribution.delete_bluesky_post = original_delete
+            distribution.ping_websub = original_ping
+            for key, value in original.items():
+                if value is None:
+                    os.environ.pop(key, None)
+                else:
+                    os.environ[key] = value
+
     def test_rss_advertises_websub_discovery(self):
         with tempfile.TemporaryDirectory() as folder:
             original_feed, original_queue = distribution.FEED_PATH, distribution.QUEUE_PATH

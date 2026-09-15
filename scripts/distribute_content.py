@@ -223,6 +223,28 @@ def post_bluesky(handle: str, password: str, item: dict[str, str]) -> str:
     return f"visual card posted ({result.get('uri', 'record created')}); profile branded={str(profile_branded).lower()}"
 
 
+def delete_bluesky_post(handle: str, password: str, rkey: str) -> str:
+    session = request_json(
+        "https://bsky.social/xrpc/com.atproto.server.createSession",
+        data={"identifier": handle, "password": password},
+    )
+    try:
+        request_json(
+            "https://bsky.social/xrpc/com.atproto.repo.deleteRecord",
+            data={
+                "repo": session["did"],
+                "collection": "app.bsky.feed.post",
+                "rkey": rkey,
+            },
+            headers={"Authorization": f"Bearer {session['accessJwt']}"},
+        )
+    except HTTPError as exc:
+        if exc.code not in (400, 404):
+            raise
+        return f"duplicate post {rkey} was already absent"
+    return f"duplicate post {rkey} deleted"
+
+
 def post_webhook(url: str, item: dict[str, str]) -> None:
     request = Request(url, data=json.dumps({"source": "artificial.one", **item}).encode(), headers={"Content-Type": "application/json"}, method="POST")
     with urlopen(request, timeout=30):
@@ -245,14 +267,32 @@ def run(state_path: Path) -> str:
     handle = (os.environ.get("BLUESKY_HANDLE") or "").strip()
     password = (os.environ.get("BLUESKY_APP_PASSWORD") or "").strip()
     webhook = (os.environ.get("DISTRIBUTION_WEBHOOK_URL") or "").strip()
+    delete_rkey = (os.environ.get("BLUESKY_DELETE_RKEY") or "").strip()
+    mark_sent_id = (os.environ.get("BLUESKY_MARK_SENT_ID") or "").strip()
     connected = bool((handle and password) or webhook)
-    if not items or flag == "false" or (flag != "true" and not connected):
-        return f"RSS and distribution queue refreshed; {websub_status}; social posting is waiting for a connected channel"
     try:
         state = load(state_path)
     except (OSError, json.JSONDecodeError):
         state = {"version": 1, "sent": []}
     sent = list(state.get("sent", []))
+    maintenance_notes: list[str] = []
+    state_changed = False
+    if delete_rkey and handle and password:
+        maintenance_notes.append(delete_bluesky_post(handle, password, delete_rkey))
+    if mark_sent_id:
+        marked_item = next((candidate for candidate in items if candidate["id"] == mark_sent_id), None)
+        if marked_item:
+            digest = sha256(marked_item["text"].encode()).hexdigest()
+            if digest not in sent:
+                sent.append(digest)
+                state_changed = True
+                maintenance_notes.append(f"marked {mark_sent_id} as distributed")
+    if state_changed:
+        state_path.parent.mkdir(parents=True, exist_ok=True)
+        state_path.write_text(json.dumps({"version": 1, "sent": sent[-200:]}, indent=2) + "\n", encoding="utf-8")
+    maintenance = f"; {'; '.join(maintenance_notes)}" if maintenance_notes else ""
+    if not items or flag == "false" or (flag != "true" and not connected):
+        return f"RSS and distribution queue refreshed; {websub_status}; social posting is waiting for a connected channel{maintenance}"
     item = next((candidate for candidate in items if sha256(candidate["text"].encode()).hexdigest() not in sent), None)
     if not item:
         return f"RSS refreshed; {websub_status}; every queued guide was already distributed"
@@ -270,7 +310,7 @@ def run(state_path: Path) -> str:
     state_path.parent.mkdir(parents=True, exist_ok=True)
     state_path.write_text(json.dumps({"version": 1, "sent": sent[-200:]}, indent=2) + "\n", encoding="utf-8")
     detail = f"; {'; '.join(delivery_notes)}" if delivery_notes else ""
-    return f"{websub_status}; distributed one guide through {delivered} connected channel(s){detail}"
+    return f"{websub_status}; distributed one guide through {delivered} connected channel(s){detail}{maintenance}"
 
 
 if __name__ == "__main__":
