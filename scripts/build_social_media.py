@@ -4,8 +4,6 @@
 from __future__ import annotations
 
 import argparse
-from html import escape
-import re
 from pathlib import Path
 from textwrap import shorten
 
@@ -139,38 +137,6 @@ def build_card(item: dict[str, str], index: int) -> Path:
     return output
 
 
-def update_page_metadata(item: dict[str, str]) -> bool:
-    page = ROOT / item["page_path"]
-    if not page.exists():
-        return False
-    source = page.read_text(encoding="utf-8")
-    image_url = item["image"]
-    alt = escape(item["image_alt"], quote=True)
-    updated, image_count = re.subn(
-        r'(<meta\s+property=["\']og:image["\']\s+content=["\'])[^"\']*(["\'])',
-        rf"\g<1>{image_url}\g<2>",
-        source,
-        count=1,
-        flags=re.IGNORECASE,
-    )
-    if not image_count:
-        return False
-    updated, alt_count = re.subn(
-        r'(<meta\s+property=["\']og:image:alt["\']\s+content=["\'])[^"\']*(["\'])',
-        rf"\g<1>{alt}\g<2>",
-        updated,
-        count=1,
-        flags=re.IGNORECASE,
-    )
-    if not alt_count:
-        image_tag = f'<meta property="og:image" content="{image_url}">'
-        updated = updated.replace(image_tag, f'{image_tag}\n  <meta property="og:image:alt" content="{alt}">', 1)
-    if updated == source:
-        return False
-    page.write_text(updated, encoding="utf-8")
-    return True
-
-
 def validate(items: list[dict[str, str]]) -> list[str]:
     errors = []
     for item in items:
@@ -197,11 +163,9 @@ def main() -> int:
     items = distribute_content.queue()
     if not args.check:
         build_profile_assets()
-        changed_pages = 0
         for index, item in enumerate(items):
             build_card(item, index)
-            changed_pages += int(update_page_metadata(item))
-        print(f"Built {len(items)} social cards and branded Bluesky profile artwork; updated {changed_pages} page(s).")
+        print(f"Built {len(items)} social cards and branded Bluesky profile artwork.")
     errors = validate(items)
     if errors:
         for error in errors:

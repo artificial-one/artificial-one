@@ -237,8 +237,11 @@ def shell(
     content: str,
     prefix: str = "",
     structured_data: dict[str, Any] | None = None,
+    social_image: str = "https://artificial.one/images/og-homepage.jpg",
+    social_image_alt: str | None = None,
 ) -> str:
     canonical = f"https://artificial.one/{canonical_path}"
+    image_alt = social_image_alt or title
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -251,7 +254,8 @@ def shell(
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{canonical}">
-  <meta property="og:image" content="https://artificial.one/images/og-homepage.jpg">
+  <meta property="og:image" content="{esc(social_image)}">
+  <meta property="og:image:alt" content="{esc(image_alt)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="affiliate-event-endpoint" content="/api/affiliate-event">
   <link rel="alternate" type="application/rss+xml" title="artificial.one AI tool guides" href="{prefix}feed.xml">
@@ -573,6 +577,8 @@ def render_offer(
         canonical_path=f"partner-offers/{offer['slug']}.html",
         content=content,
         prefix="../",
+        social_image=f"https://artificial.one/images/social-cards/{offer['id']}.jpg",
+        social_image_alt=f"Independent {offer['name']} fit, use-case and pricing guide from Artificial.One",
         structured_data={
             "@context": "https://schema.org",
             "@graph": [

@@ -162,6 +162,8 @@ def render_stack_builder(offers: list[dict[str, Any]]) -> str:
         title="AI Stack Builder: Find the Right AI Tools | artificial.one",
         description="Build a personalized three-tool AI software shortlist by workflow, team context and buying priority.",
         canonical_path="ai-stack-builder.html", content=content + script,
+        social_image="https://artificial.one/images/social-cards/ai-stack-builder.jpg",
+        social_image_alt="Build a personalized AI software shortlist — free decision tool from Artificial.One",
         structured_data={"@context": "https://schema.org", "@type": "WebApplication", "name": "artificial.one AI Stack Builder", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
     )
 
@@ -184,6 +186,8 @@ def render_calculator(spec: dict[str, Any], offers: list[dict[str, Any]]) -> str
     return shell(
         title=f"{spec['title']} | Free Tool | artificial.one", description=spec["description"],
         canonical_path=f"calculators/{spec['slug']}.html", content=content, prefix="../",
+        social_image=f"https://artificial.one/images/social-cards/{spec['slug'].replace('-calculator', '')}.jpg",
+        social_image_alt=f"{spec['title']} — free decision tool from Artificial.One",
         structured_data={"@context": "https://schema.org", "@type": "WebApplication", "name": spec["title"], "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
     )
 
