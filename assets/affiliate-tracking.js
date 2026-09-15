@@ -54,23 +54,52 @@
     return cleaned || fallback;
   }
 
-  function addPartnerStackAttribution(link) {
+  function addAffiliateAttribution(link) {
     try {
       var url = new URL(link.href, window.location.href);
-      if (!url.searchParams.has("sid1")) {
-        url.searchParams.set("sid1", compactSubId(link.dataset.offerId, "offer"));
-      }
-      if (!url.searchParams.has("sid2")) {
-        url.searchParams.set("sid2", compactSubId(link.dataset.placement, "placement"));
-      }
-      if (!url.searchParams.has("sid3")) {
-        var context = campaignContext();
-        url.searchParams.set("sid3", context.campaign !== "organic" ? context.campaign : compactSubId(window.location.pathname, "home"));
+      var context = campaignContext();
+      var third = context.campaign !== "organic" ? context.campaign : compactSubId(window.location.pathname, "home");
+      var isImpact = link.dataset.affiliateNetwork === "impact" || /(^|\.)8odi\.net$/i.test(url.hostname);
+      if (isImpact) {
+        if (!url.searchParams.has("subId1")) url.searchParams.set("subId1", compactSubId(window.location.pathname, "home"));
+        if (!url.searchParams.has("subId2")) url.searchParams.set("subId2", compactSubId(link.dataset.placement, "placement"));
+        if (!url.searchParams.has("subId3")) url.searchParams.set("subId3", third);
+        if (!url.searchParams.has("sharedId")) url.searchParams.set("sharedId", "artificial-one");
+      } else {
+        if (!url.searchParams.has("sid1")) url.searchParams.set("sid1", compactSubId(link.dataset.offerId, "offer"));
+        if (!url.searchParams.has("sid2")) url.searchParams.set("sid2", compactSubId(link.dataset.placement, "placement"));
+        if (!url.searchParams.has("sid3")) url.searchParams.set("sid3", third);
       }
       link.href = url.toString();
     } catch (_) {
       // The original verified destination remains usable if URL parsing fails.
     }
+  }
+
+  function applyAppSumoAvailability() {
+    if (!window.fetch) return Promise.resolve();
+    return window.fetch("/data/appsumo_offers.json", { credentials: "same-origin" })
+      .then(function (response) { return response.ok ? response.json() : { offers: [] }; })
+      .then(function (registry) {
+        var statusByDestination = Object.create(null);
+        (registry.offers || []).forEach(function (offer) {
+          try {
+            var parsed = new URL(offer.tracking_url);
+            statusByDestination[parsed.origin + parsed.pathname] = offer;
+          } catch (_) {}
+        });
+        document.querySelectorAll('a[data-affiliate-network="impact"]').forEach(function (link) {
+          try {
+            var parsed = new URL(link.href, window.location.href);
+            var offer = statusByDestination[parsed.origin + parsed.pathname];
+            if (!offer || offer.availability !== "expired") return;
+            link.href = "/appsumo-ai-tools.html?unavailable=" + encodeURIComponent(offer.slug || "offer");
+            link.removeAttribute("target");
+            link.dataset.affiliateUnavailable = "1";
+            link.setAttribute("aria-label", (link.textContent || "Offer") + " — current offer unavailable");
+          } catch (_) {}
+        });
+      }).catch(function () {});
   }
 
   var impressionSeen = Object.create(null);
@@ -214,7 +243,9 @@
     var link = event.target.closest("a[data-affiliate-offer]");
     if (!link) return;
 
-    addPartnerStackAttribution(link);
+    if (link.dataset.affiliateUnavailable === "1") return;
+
+    addAffiliateAttribution(link);
     var payload = eventPayload(link, "affiliate_click");
 
     window.dataLayer = window.dataLayer || [];
@@ -244,6 +275,7 @@
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
       loadConversionStrategy().then(function (strategy) {
+        applyAppSumoAvailability();
         installStickyRecommendation(strategy);
         trackVisibleRecommendations();
         observeDynamicRecommendations();
@@ -251,6 +283,7 @@
     });
   } else {
     loadConversionStrategy().then(function (strategy) {
+      applyAppSumoAvailability();
       installStickyRecommendation(strategy);
       trackVisibleRecommendations();
       observeDynamicRecommendations();

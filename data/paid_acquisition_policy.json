@@ -7,6 +7,8 @@
   "minimum_clicks_before_decision": 30,
   "conversion_action_verified": false,
   "target_country_criteria": [],
+  "prohibited_networks": ["appsumo", "impact-appsumo"],
+  "prohibited_brand_terms": ["appsumo", "appsumo.8odi.net"],
   "program_rules": {},
-  "note": "Each program must explicitly set paid_search_allowed=true after its advertising and brand-bidding terms are verified."
+  "note": "Each program must explicitly set paid_search_allowed=true after its advertising and brand-bidding terms are verified. AppSumo/Impact offers are permanently editorial-only."
 }

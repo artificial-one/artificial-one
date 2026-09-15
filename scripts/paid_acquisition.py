@@ -35,6 +35,16 @@ def generic_keywords(offer: dict[str, Any]) -> list[str]:
     return result[:6]
 
 
+def prohibited_by_network_policy(offer: dict[str, Any], policy: dict[str, Any]) -> bool:
+    """AppSumo/Impact offers are editorial-only and can never enter paid search."""
+    network = str(offer.get("network") or offer.get("affiliate_network") or "").casefold()
+    prohibited_networks = {str(item).casefold() for item in policy.get("prohibited_networks", [])}
+    if network and network in prohibited_networks:
+        return True
+    searchable = " ".join((str(offer.get("name") or ""), str(offer.get("tracking_url") or ""))).casefold()
+    return any(str(term).casefold() in searchable for term in policy.get("prohibited_brand_terms", []))
+
+
 def build_plan() -> dict[str, Any]:
     offers = [item for item in load(OFFERS_PATH).get("offers", []) if item.get("status") == "published"]
     strategy = load(STRATEGY_PATH)
@@ -45,12 +55,13 @@ def build_plan() -> dict[str, Any]:
     campaigns = []
     for offer in sorted(offers, key=lambda item: positions.get(str(item["id"]), len(positions)))[:8]:
         offer_id = str(offer["id"])
-        allowed = bool(isinstance(rules.get(offer_id), dict) and rules[offer_id].get("paid_search_allowed"))
+        prohibited = prohibited_by_network_policy(offer, policy)
+        allowed = bool(not prohibited and isinstance(rules.get(offer_id), dict) and rules[offer_id].get("paid_search_allowed"))
         campaigns.append({
             "offer_id": offer_id,
             "name": f"AO Generic Intent - {offer['name']}",
             "eligible": allowed,
-            "status": "ready" if allowed else "blocked_terms_unverified",
+            "status": "ready" if allowed else "blocked_network_policy" if prohibited else "blocked_terms_unverified",
             "landing_url": f"https://artificial.one/partner-offers/{offer['slug']}.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-{offer_id}",
             "keywords": generic_keywords(offer),
             "negative_keywords": [str(offer["name"])],

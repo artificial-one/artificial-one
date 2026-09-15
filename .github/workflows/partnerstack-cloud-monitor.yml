@@ -1,4 +1,4 @@
-name: PartnerStack cloud monitor
+name: Affiliate network cloud monitor
 
 on:
   workflow_dispatch:
@@ -7,11 +7,11 @@ on:
     - cron: "23 7 * * *"
 
 permissions:
-  contents: read
+  contents: write
   issues: write
 
 concurrency:
-  group: partnerstack-cloud-monitor
+  group: artificial-one-site-publisher
   cancel-in-progress: false
 
 jobs:
@@ -24,45 +24,69 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Restore private aggregate baseline
+      - name: Restore private aggregate and availability baselines
         uses: actions/cache/restore@v4
         with:
-          path: .partner-metrics/cloud-baseline.json
-          key: partnerstack-cloud-baseline-${{ github.run_id }}
+          path: |
+            .affiliate-monitor/baseline.json
+            .appsumo-monitor/availability.json
+          key: affiliate-network-private-${{ github.run_id }}
           restore-keys: |
-            partnerstack-cloud-baseline-
+            affiliate-network-private-
 
-      - name: Audit PartnerStack through its Partner API
+      - name: Refresh AppSumo inventory, availability and page attribution
+        run: python scripts/appsumo_impact.py --live-check --state .appsumo-monitor/availability.json
+
+      - name: Audit PartnerStack and Impact through read-only APIs
         id: monitor
         env:
           PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
+          IMPACT_ACCOUNT_SID: ${{ secrets.IMPACT_ACCOUNT_SID }}
+          IMPACT_AUTH_TOKEN: ${{ secrets.IMPACT_AUTH_TOKEN }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
           UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
         run: >-
-          python scripts/partnerstack_cloud_monitor.py
-          --baseline .partner-metrics/cloud-baseline.json
-          --report .partner-metrics/cloud-report.md
+          python scripts/affiliate_network_monitor.py
+          --baseline .affiliate-monitor/baseline.json
           --email-to hello@artificial.one
           --email-from "Artificial.One Partner Monitor <onboarding@resend.dev>"
+
+      - name: Verify public AppSumo assets and safety rules
+        run: |
+          python -m unittest tests.test_appsumo_impact -v
+          python scripts/appsumo_impact.py --check
+          node --check assets/affiliate-tracking.js
+
+      - name: Commit public availability and generated site changes
+        shell: bash
+        run: |
+          git add -- data/appsumo_offers.json appsumo-ai-tools.html sitemap.xml assets/affiliate-tracking.js ':(glob)**/*.html'
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh AppSumo availability [skip ci]"
+          git push
 
       - name: Add public-safe result to the workflow summary
         if: always() && steps.monitor.outcome == 'success'
         shell: bash
         run: |
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
-          ## PartnerStack cloud monitor
+          ## Affiliate network cloud monitor
 
-          The read-only audit completed and the consolidated private dashboard was emailed to the configured recipient.
+          The read-only PartnerStack/Impact audit and AppSumo availability check completed. The consolidated private dashboard was emailed to the configured recipient.
           Financial and customer metrics are intentionally omitted from this public repository's Actions summary.
           EOF
 
-      - name: Save private aggregate baseline
+      - name: Save private aggregate and availability baselines
         if: steps.monitor.outcome == 'success'
         uses: actions/cache/save@v4
         with:
-          path: .partner-metrics/cloud-baseline.json
-          key: partnerstack-cloud-baseline-${{ github.run_id }}
+          path: |
+            .affiliate-monitor/baseline.json
+            .appsumo-monitor/availability.json
+          key: affiliate-network-private-${{ github.run_id }}
 
       - name: Notify the repository owner about a meaningful change
         if: steps.monitor.outputs.changed == 'true'
@@ -80,6 +104,6 @@ jobs:
           EOF
           gh issue create \
             --repo "${GITHUB_REPOSITORY}" \
-            --title "PartnerStack monitor: attention needed ($(date -u +%F))" \
+            --title "Affiliate network monitor: attention needed ($(date -u +%F))" \
             --body-file /tmp/partnerstack-notice.md \
             --assignee artificial-one
