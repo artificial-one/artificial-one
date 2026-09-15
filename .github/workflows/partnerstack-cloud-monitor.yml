@@ -2,6 +2,13 @@ name: Affiliate network cloud monitor
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/partnerstack-cloud-monitor.yml
+      - scripts/affiliate_network_monitor.py
+      - scripts/appsumo_impact.py
+      - data/impact_connection.json
   schedule:
     # 07:23 UTC is morning in Europe/Prague and avoids peak-hour scheduling.
     - cron: "23 7 * * *"
@@ -96,9 +103,9 @@ jobs:
         shell: bash
         run: |
           cat > /tmp/partnerstack-notice.md <<EOF
-          The cloud monitor detected a meaningful change in sanitized PartnerStack aggregate data.
+          The cloud monitor detected a meaningful change in sanitized PartnerStack or Impact aggregate data.
 
-          Review the [private PartnerStack dashboard](https://dash.partnerstack.com/home) before changing public content.
+          Review the private [PartnerStack](https://dash.partnerstack.com/home) or [Impact](https://app.impact.com/) dashboard before changing public content.
 
           Automated run: ${RUN_URL}
           EOF
