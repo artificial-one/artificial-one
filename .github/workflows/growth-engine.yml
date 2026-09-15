@@ -43,7 +43,9 @@ jobs:
       - name: Restore private experiment baselines
         uses: actions/cache@v5
         with:
-          path: .search-growth/private-state.json
+          path: |
+            .search-growth/private-state.json
+            .indexnow/private-state.json
           key: search-growth-private-${{ github.run_id }}
           restore-keys: |
             search-growth-private-
@@ -58,6 +60,10 @@ jobs:
           python scripts/build_search_revenue_pages.py
           python scripts/monetize_affiliate_links.py
           python scripts/build_ai_news.py --cached
+          python scripts/build_decision_tools.py
+          python scripts/build_sponsorship.py
+          python scripts/monitor_offer_changes.py --cached
+          INDEXNOW_SUBMIT_ENABLED=true python scripts/indexing_recovery.py --submit
 
       - name: Verify the complete publishing loop
         run: |
@@ -68,11 +74,15 @@ jobs:
           python scripts/build_search_revenue_pages.py --check
           python scripts/monetize_affiliate_links.py --check
           python scripts/build_ai_news.py --check
+          python scripts/build_decision_tools.py --check
+          python scripts/build_sponsorship.py --check
+          python scripts/monitor_offer_changes.py --check
+          python scripts/indexing_recovery.py --check
 
       - name: Commit only public, privacy-safe winners and generated pages
         shell: bash
         run: |
-          git add -- data/search_growth_strategy.json partner-offers.html partner-offers ai-tool-finder.html index.html search-intent sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js news.html
+          git add -- data/search_growth_strategy.json data/indexing_recovery.json partner-offers.html partner-offers ai-tool-finder.html index.html search-intent buyers-guides.html sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js news.html
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -83,4 +93,4 @@ jobs:
         run: |
           echo "## Search growth engine" >> "$GITHUB_STEP_SUMMARY"
           echo "Index issues: ${{ steps.search.outputs.issues }}; revenue-weighted opportunities: ${{ steps.search.outputs.opportunities }}; guarded actions: ${{ steps.search.outputs.actions }}." >> "$GITHUB_STEP_SUMMARY"
-          echo "Private metrics stayed in the workflow cache/email; only deterministic pages and snippet choices were eligible for commit." >> "$GITHUB_STEP_SUMMARY"
+          echo "Private metrics stayed in the workflow cache/email; only reviewed demand concepts, deterministic pages, crawl assets and snippet choices were eligible for commit." >> "$GITHUB_STEP_SUMMARY"

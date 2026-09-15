@@ -272,7 +272,9 @@ def shell(
       <nav class="flex items-center gap-5 text-sm font-semibold">
         <a href="{prefix}reviews.html" class="text-slate-600 hover:text-indigo-600">Reviews</a>
         <a href="{prefix}ai-tool-finder.html" class="text-indigo-700">Tool finder</a>
+        <a href="{prefix}decision-tools.html" class="hidden text-indigo-700 md:inline">Free tools</a>
         <a href="{prefix}partner-offers.html" class="text-indigo-700">Partner offers</a>
+        <a href="{prefix}sponsor.html" class="hidden text-indigo-700 lg:inline">Sponsor</a>
         <a href="{prefix}partners.html" class="rounded-lg border border-indigo-200 px-4 py-2 text-indigo-700 hover:bg-indigo-50">For partners</a>
       </nav>
     </div>

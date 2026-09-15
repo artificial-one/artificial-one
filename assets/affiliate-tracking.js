@@ -73,24 +73,35 @@
     }
   }
 
+  var impressionSeen = Object.create(null);
+  var affiliateObserver = null;
+
   function trackVisibleRecommendations() {
     if (!("IntersectionObserver" in window)) return;
-    var seen = Object.create(null);
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting || entry.intersectionRatio < 0.5) return;
-        var link = entry.target;
-        var key = [link.dataset.offerId, link.dataset.placement, window.location.pathname].join(":");
-        if (!seen[key]) {
-          seen[key] = true;
-          sendToConfiguredEndpoint(eventPayload(link, "affiliate_impression"));
-        }
-        observer.unobserve(link);
-      });
-    }, { threshold: [0.5] });
+    if (!affiliateObserver) {
+      affiliateObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting || entry.intersectionRatio < 0.5) return;
+          var link = entry.target;
+          var key = [link.dataset.offerId, link.dataset.placement, window.location.pathname].join(":");
+          if (!impressionSeen[key]) {
+            impressionSeen[key] = true;
+            sendToConfiguredEndpoint(eventPayload(link, "affiliate_impression"));
+          }
+          affiliateObserver.unobserve(link);
+        });
+      }, { threshold: [0.5] });
+    }
     document.querySelectorAll("a[data-affiliate-offer]").forEach(function (link) {
-      observer.observe(link);
+      if (link.dataset.affiliateObserved) return;
+      link.dataset.affiliateObserved = "1";
+      affiliateObserver.observe(link);
     });
+  }
+
+  function observeDynamicRecommendations() {
+    if (!("MutationObserver" in window)) return;
+    new MutationObserver(trackVisibleRecommendations).observe(document.body, { childList: true, subtree: true });
   }
 
   function sendToConfiguredEndpoint(payload) {
@@ -235,12 +246,14 @@
       loadConversionStrategy().then(function (strategy) {
         installStickyRecommendation(strategy);
         trackVisibleRecommendations();
+        observeDynamicRecommendations();
       });
     });
   } else {
     loadConversionStrategy().then(function (strategy) {
       installStickyRecommendation(strategy);
       trackVisibleRecommendations();
+      observeDynamicRecommendations();
     });
   }
 })();

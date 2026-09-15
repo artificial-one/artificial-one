@@ -179,6 +179,41 @@ def render_comparison(left: dict[str, Any], right: dict[str, Any]) -> str:
     )
 
 
+def demand_catalog(offers: list[dict[str, Any]]) -> dict[str, tuple[dict[str, Any], str, int]]:
+    result: dict[str, tuple[dict[str, Any], str, int]] = {}
+    for offer in offers:
+        for index, use_case in enumerate(offer.get("use_cases", [])):
+            result[f"{offer['id']}-use-case-{index + 1}"] = (offer, str(use_case), index + 1)
+    return result
+
+
+def selected_demand_ids() -> list[str]:
+    try:
+        value = json.loads(SEARCH_STRATEGY_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    items = value.get("demand_pages", []) if isinstance(value, dict) else []
+    return [str(item) for item in items] if isinstance(items, list) else []
+
+
+def render_demand_use_case(offer: dict[str, Any], use_case: str, alternatives: list[dict[str, Any]]) -> str:
+    page_slug = f"{offer['slug']}-for-{slugify(use_case)}"
+    alternative_cards = "\n".join(tool_card(item, f"demand-{offer['id']}-alternative") for item in alternatives[:3])
+    content = f'''<section class="bg-white"><div class="mx-auto max-w-5xl px-5 py-16">
+      <p class="text-sm font-bold uppercase tracking-widest text-indigo-600">Workflow decision guide</p>
+      <h1 class="mt-4 text-4xl font-black md:text-6xl">{esc(offer['name'])} for {esc(use_case)}</h1>
+      <p class="mt-6 max-w-3xl text-lg text-slate-600">Assess whether {esc(offer['name'])} fits this specific workflow, what to verify before subscribing, and which alternatives deserve comparison.</p>
+      <div class="mt-8 rounded-2xl border border-indigo-200 bg-indigo-50 p-6"><h2 class="text-2xl font-black">Why consider it</h2><p class="mt-3 text-slate-700">{esc(offer['why_consider'])}</p><h2 class="mt-6 text-xl font-black">What to verify</h2><p class="mt-2 text-slate-700">{esc(offer['watch_out'])}</p><div class="mt-6 flex flex-wrap gap-3"><a class="rounded-xl border border-indigo-200 bg-white px-5 py-3 font-bold text-indigo-700" href="../partner-offers/{esc(offer['slug'])}.html">Read the full review</a>{cta(offer, 'demand-use-case-primary')}</div></div>
+      <p class="mt-4 text-xs text-slate-500">Commercial disclosure: we may earn a commission from the marked partner link, at no extra cost to you.</p>
+    </div></section><section class="mx-auto max-w-5xl px-5 py-10"><h2 class="text-3xl font-black">Alternatives for the same decision</h2><div class="mt-6 grid gap-6 md:grid-cols-3">{alternative_cards}</div></section>'''
+    return shell(
+        title=f"{offer['name']} for {use_case}: Fit, Limits & Alternatives | artificial.one",
+        description=f"Evaluate {offer['name']} for {use_case}. Review workflow fit, limitations, pricing notes and relevant alternatives.",
+        canonical_path=f"search-intent/{page_slug}.html", content=content, prefix="../",
+        structured_data={"@context": "https://schema.org", "@type": "Article", "headline": f"{offer['name']} for {use_case}", "about": {"@type": "SoftwareApplication", "name": offer["name"]}},
+    )
+
+
 def planned_pages(offers: list[dict[str, Any]]) -> dict[Path, str]:
     pages: dict[Path, str] = {}
     by_category: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -204,6 +239,15 @@ def planned_pages(offers: list[dict[str, Any]]) -> dict[Path, str]:
             left, right = members[:2]
             pages[OUTPUT_DIR / f"{left['slug']}-vs-{right['slug']}.html"] = render_comparison(left, right)
             comparisons += 1
+    catalog = demand_catalog(offers)
+    for concept_id in selected_demand_ids():
+        concept = catalog.get(concept_id)
+        if not concept:
+            continue
+        offer, use_case, _index = concept
+        alternatives = [item for item in offers if item["id"] != offer["id"] and intent_cluster(str(item["category"])) == intent_cluster(str(offer["category"]))]
+        path = OUTPUT_DIR / f"{offer['slug']}-for-{slugify(use_case)}.html"
+        pages[path] = render_demand_use_case(offer, use_case, alternatives)
     return pages
 
 
@@ -221,17 +265,18 @@ def apply_search_priority(offers: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def update_sitemap(source: str, paths: list[Path], lastmod: str) -> str:
-    if SITEMAP_START in source and SITEMAP_END in source:
-        source = re.sub(re.escape(SITEMAP_START) + r".*?" + re.escape(SITEMAP_END), "", source, flags=re.S)
-    source = re.sub(r"\s*<url>\s*<loc>https://artificial\.one/search-intent/[^<]+</loc>.*?</url>", "", source, flags=re.S)
     rows = [SITEMAP_START]
     for path in sorted(paths):
         relative = path.relative_to(ROOT).as_posix()
         rows.append(f"  <url><loc>https://artificial.one/{relative}</loc><lastmod>{lastmod}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>")
     rows.append(SITEMAP_END)
+    block = "\n".join(rows)
+    if SITEMAP_START in source and SITEMAP_END in source:
+        return re.sub(re.escape(SITEMAP_START) + r".*?" + re.escape(SITEMAP_END), block, source, flags=re.S)
+    source = re.sub(r"\s*<url>\s*<loc>https://artificial\.one/search-intent/[^<]+</loc>.*?</url>", "", source, flags=re.S)
     if "</urlset>" not in source:
         raise ValueError("sitemap.xml has no closing urlset element")
-    return source.rsplit("</urlset>", 1)[0].rstrip() + "\n" + "\n".join(rows) + "\n</urlset>\n"
+    return source.rsplit("</urlset>", 1)[0].rstrip() + "\n" + block + "\n</urlset>\n"
 
 
 def build(check: bool = False) -> int:

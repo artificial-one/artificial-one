@@ -23,6 +23,8 @@ def offer(offer_id, category="Productivity"):
         "tracking_url": f"https://example.com/{offer_id}?ref=artificial-one",
         "cta_label": f"Explore {offer_id.title()}",
         "why_consider": "It supports a focused workflow.",
+        "watch_out": "Verify the current limits.",
+        "use_cases": ["Automate a recurring team workflow"],
     }
 
 
@@ -60,6 +62,19 @@ class SearchRevenuePageTests(unittest.TestCase):
             finally:
                 pages.SEARCH_STRATEGY_PATH = original
         self.assertEqual([item["id"] for item in ordered], ["beta", "alpha"])
+
+    def test_demand_selected_use_case_uses_reviewed_copy(self):
+        original = pages.SEARCH_STRATEGY_PATH
+        with tempfile.TemporaryDirectory() as folder:
+            strategy = Path(folder) / "search.json"
+            strategy.write_text('{"version":1,"demand_pages":["alpha-use-case-1"]}', encoding="utf-8")
+            pages.SEARCH_STRATEGY_PATH = strategy
+            try:
+                generated = pages.planned_pages([offer("alpha"), offer("beta")])
+            finally:
+                pages.SEARCH_STRATEGY_PATH = original
+        names = {path.name for path in generated}
+        self.assertIn("alpha-for-automate-a-recurring-team-workflow.html", names)
 
 
 if __name__ == "__main__":

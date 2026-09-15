@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 NEWS_PATH = ROOT / "data" / "ai_news.json"
 OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
+ALERTS_PATH = ROOT / "data" / "offer_change_alerts.json"
 OUTPUT_PATH = ROOT / "newsletter" / "latest.html"
 BEEHIIV_API = "https://api.beehiiv.com/v2"
 
@@ -40,6 +41,10 @@ def build_edition(today: date | None = None) -> tuple[str, str, str]:
     today = today or date.today()
     news = [item for item in load(NEWS_PATH).get("items", []) if isinstance(item, dict)][:5]
     offers = ranked_offers(3)
+    try:
+        alerts = [item for item in load(ALERTS_PATH).get("alerts", []) if isinstance(item, dict)][:3]
+    except (OSError, json.JSONDecodeError, ValueError):
+        alerts = []
     title = f"AI tools and developments worth your time — {today.isoformat()}"
     news_html = "".join(
         f'<li style="margin:0 0 12px"><a href="{escape(str(item["url"]), quote=True)}">{escape(str(item["title"]))}</a> <span style="color:#667085">— {escape(str(item.get("source") or "Source"))}</span></li>'
@@ -53,10 +58,16 @@ def build_edition(today: date | None = None) -> tuple[str, str, str]:
         </div>'''
         for offer in offers
     )
+    alert_html = "".join(
+        f'<li style="margin:0 0 10px">{escape(str(item.get("message") or "Vendor information changed."))} <a href="https://artificial.one/offer-updates.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools">See verified update →</a></li>'
+        for item in alerts
+    )
+    alert_section = f"<h2>Confirmed tool changes</h2><ul>{alert_html}</ul>" if alert_html else ""
     body = f'''<p>Here is this week’s compact briefing: important AI developments plus tools that solve concrete work problems.</p>
       <h2>What changed in AI</h2><ul>{news_html}</ul>
       <p><a href="https://artificial.one/news.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools">Browse the continuously updated AI news feed →</a></p>
-      <h2>Three tools to evaluate</h2>{offer_html}
+      <p><a href="https://artificial.one/ai-stack-builder.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools"><strong>Build a personalized three-tool AI shortlist →</strong></a></p>
+      {alert_section}<h2>Three tools to evaluate</h2>{offer_html}
       <p style="font-size:12px;color:#667085">Some tool links are affiliate links. artificial.one may earn a commission at no extra cost to you. Recommendations are not guaranteed endorsements.</p>'''
     digest = sha256((title + body).encode("utf-8")).hexdigest()
     return title, body, digest

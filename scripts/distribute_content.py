@@ -31,7 +31,18 @@ def queue() -> list[dict[str, str]]:
     ranking = [str(item) for item in load(STRATEGY_PATH).get("ranking", [])]
     position = {offer_id: index for index, offer_id in enumerate(ranking)}
     offers.sort(key=lambda item: (position.get(str(item["id"]), len(position)), str(item["name"])))
+    resources = (
+        ("ai-stack-builder", "Build a personalized AI software shortlist", "ai-stack-builder.html", "Answer a few workflow questions and get a three-tool shortlist from the verified artificial.one catalog."),
+        ("ai-software-roi", "Free AI software ROI calculator", "calculators/ai-software-roi-calculator.html", "Estimate monthly time value, net return and break-even before buying another AI subscription."),
+        ("pdf-workflow-cost", "Free PDF workflow cost calculator", "calculators/pdf-workflow-cost-calculator.html", "Estimate what repetitive PDF editing, signing and document handling costs each month."),
+        ("voice-production-cost", "Free AI voice production cost calculator", "calculators/voice-production-cost-calculator.html", "Compare an existing voice-production workflow with an AI-assisted scenario."),
+        ("landing-page-roi", "Free landing page ROI calculator", "calculators/landing-page-roi-calculator.html", "Model how a conversion-rate change could affect monthly value before paying for a landing-page tool."),
+        ("offer-updates", "AI tool pricing and plan change monitor", "offer-updates.html", "Follow confirmed changes from first-party software vendor pages and verify the current details before buying."),
+    )
     result = []
+    for resource_id, title, path, copy in resources:
+        url = f"https://artificial.one/{path}?utm_source=distribution&utm_medium=social&utm_campaign=free-tools"
+        result.append({"id": resource_id, "title": title, "url": url, "text": f"{copy} {url} #AITools"[:295]})
     for offer in offers:
         url = f"https://artificial.one/partner-offers/{offer['slug']}.html?utm_source=distribution&utm_medium=social&utm_campaign=tool-guides"
         text = f"Who is {offer['name']} best for? {offer['best_for']} Compare its use cases, limitations and current pricing notes: {url} #AITools"

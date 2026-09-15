@@ -10,6 +10,7 @@ from html import escape
 import json
 import os
 from pathlib import Path
+import re
 from typing import Any
 from urllib.parse import urlparse
 
@@ -49,6 +50,8 @@ MAX_EXPERIMENT_DAYS = 28
 MAX_NEW_EXPERIMENTS = 3
 MAX_INSPECTIONS = 40
 CONTENT_PRIORITY_DAYS = 7
+MIN_DEMAND_PAGE_IMPRESSIONS = 30
+MAX_DEMAND_PAGES = 12
 CTR_WIN_RATIO = 1.10
 CTR_REVERT_RATIO = 0.80
 POSITION_REVERT_DELTA = 2.0
@@ -132,9 +135,70 @@ def load_public_strategy(path: Path) -> dict[str, Any]:
             "method": "guarded-search-snippet-experiments",
             "experiments": {},
             "content_priority": [],
+            "demand_pages": [],
             "privacy": "No queries, traffic totals, customer data or revenue totals are published.",
         }
     return value
+
+
+def _search_tokens(value: str) -> set[str]:
+    stop = {"and", "best", "for", "from", "how", "software", "the", "tool", "tools", "use", "using", "with"}
+    return {item for item in re.findall(r"[a-z0-9]+", value.casefold()) if len(item) > 2 and item not in stop}
+
+
+def demand_catalog() -> dict[str, dict[str, Any]]:
+    """Return reviewed page concepts; raw Search Console queries never become copy."""
+    registry = load_json(OFFERS_PATH, {"offers": []})
+    result: dict[str, dict[str, Any]] = {}
+    for offer in registry.get("offers", []):
+        if not isinstance(offer, dict) or offer.get("status") != "published":
+            continue
+        for index, use_case in enumerate(offer.get("use_cases", [])):
+            concept_id = f"{offer.get('id')}-use-case-{index + 1}"
+            result[concept_id] = {
+                "offer_id": str(offer.get("id") or ""),
+                "offer_slug": str(offer.get("slug") or ""),
+                "offer_tokens": _search_tokens(str(offer.get("name") or "")),
+                "use_case_tokens": _search_tokens(str(use_case)),
+            }
+    return result
+
+
+def update_demand_pages(
+    rows: list[dict[str, Any]], public: dict[str, Any], private: dict[str, Any], today: date
+) -> list[str]:
+    """Activate only reviewed concepts when aggregate search demand clears a gate."""
+    catalog = demand_catalog()
+    totals: dict[str, int] = defaultdict(int)
+    for row in rows:
+        keys = row.get("keys", [])
+        if not isinstance(keys, list) or len(keys) < 2:
+            continue
+        page = page_path(str(keys[0]))
+        query_tokens = _search_tokens(str(keys[1]))
+        impressions = max(0, int(float(row.get("impressions") or 0)))
+        if not query_tokens or not impressions:
+            continue
+        for concept_id, concept in catalog.items():
+            page_matches = concept["offer_slug"] and concept["offer_slug"] in page
+            offer_matches = bool(concept["offer_tokens"] & query_tokens)
+            use_case_overlap = len(concept["use_case_tokens"] & query_tokens)
+            if (page_matches or offer_matches) and use_case_overlap >= 2:
+                totals[concept_id] += impressions
+    eligible = [item for item, count in sorted(totals.items(), key=lambda pair: (-pair[1], pair[0])) if count >= MIN_DEMAND_PAGE_IMPRESSIONS]
+    current = [str(item) for item in public.get("demand_pages", []) if str(item) in catalog]
+    selected = current[:]
+    for item in eligible:
+        if item not in selected:
+            selected.append(item)
+        if len(selected) >= MAX_DEMAND_PAGES:
+            break
+    private["demand_page_signals"] = {item: {"impressions": totals[item], "observed_on": today.isoformat()} for item in eligible}
+    if selected == current:
+        return []
+    public["demand_pages"] = selected
+    public["updated_at"] = today.isoformat()
+    return [f"Activated {len(selected) - len(current)} reviewed commercial page concept(s) from aggregate demand."]
 
 
 def offer_ids_by_path() -> dict[str, str]:
@@ -402,6 +466,7 @@ def main() -> int:
         private = load_json(args.private_state, {"version": 1, "experiments": {}, "last_index_issues": []})
         actions = update_experiments(rows, opportunities, weights, public, private, date.today())
         actions.extend(update_content_priority(opportunities, public, private, date.today()))
+        actions.extend(update_demand_pages(rows, public, private, date.today()))
         inspections = inspect_urls(session, args.site, inspection_targets(args.site, weights))
         current_issues = inspection_signature(inspections)
         if current_issues != private.get("last_index_issues", []):

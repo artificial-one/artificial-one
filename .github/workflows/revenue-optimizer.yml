@@ -21,6 +21,11 @@ on:
       - scripts/distribute_content.py
       - scripts/paid_acquisition.py
       - data/paid_acquisition_policy.json
+      - data/sponsorship_inventory.json
+      - scripts/build_decision_tools.py
+      - scripts/build_sponsorship.py
+      - scripts/indexing_recovery.py
+      - scripts/monitor_offer_changes.py
 
 permissions:
   contents: write
@@ -45,7 +50,10 @@ jobs:
       - name: Restore private publishing state
         uses: actions/cache@v5
         with:
-          path: .revenue-acceleration
+          path: |
+            .revenue-acceleration
+            .offer-monitor/private-state.json
+            .indexnow/private-state.json
           key: revenue-acceleration-${{ github.run_id }}
           restore-keys: |
             revenue-acceleration-
@@ -69,6 +77,16 @@ jobs:
           python scripts/build_search_revenue_pages.py
           python scripts/monetize_affiliate_links.py
           python scripts/build_ai_news.py --cached
+          python scripts/build_decision_tools.py
+          python scripts/build_sponsorship.py
+
+      - name: Monitor first-party offer changes
+        run: python scripts/monitor_offer_changes.py --state .offer-monitor/private-state.json
+
+      - name: Build crawl discovery and notify participating search engines
+        env:
+          INDEXNOW_SUBMIT_ENABLED: "true"
+        run: python scripts/indexing_recovery.py --submit
 
       - name: Build newsletter, RSS, distribution, and paid-search plans
         env:
@@ -101,11 +119,17 @@ jobs:
           python scripts/build_search_revenue_pages.py --check
           python scripts/monetize_affiliate_links.py --check
           python scripts/build_ai_news.py --check
+          python scripts/build_decision_tools.py --check
+          python scripts/build_sponsorship.py --check
+          python scripts/monitor_offer_changes.py --check
+          python scripts/indexing_recovery.py --check
+          node --check api/sponsor-checkout.js
+          node --check api/sponsor-intake.js
 
       - name: Commit only public, privacy-safe optimization output
         shell: bash
         run: |
-          git add -- data/revenue_strategy.json data/conversion_strategy.json data/distribution_queue.json data/paid_campaign_plan.json ai-tool-finder.html index.html news.html newsletter feed.xml partner-offers.html partner-offers search-intent sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js ':(glob)**/*.html'
+          git add -- data/revenue_strategy.json data/conversion_strategy.json data/distribution_queue.json data/paid_campaign_plan.json data/offer_change_alerts.json data/indexing_recovery.json ai-tool-finder.html index.html news.html newsletter feed.xml partner-offers.html partner-offers search-intent calculators decision-tools.html ai-stack-builder.html buyers-guides.html offer-updates.html sponsor.html sponsor-success.html sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js a10e20260915d74b93c2f18e7a45c901.txt ':(glob)**/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -115,5 +139,5 @@ jobs:
       - name: Publish a privacy-safe run summary
         run: |
           echo "## Affiliate revenue optimizer" >> "$GITHUB_STEP_SUMMARY"
-          echo "Offers were ranked using anonymous site interactions and PartnerStack conversion signals." >> "$GITHUB_STEP_SUMMARY"
+          echo "Offers were ranked using anonymous site interactions and PartnerStack conversion signals; decision tools, change alerts and crawl discovery were refreshed." >> "$GITHUB_STEP_SUMMARY"
           echo "Only the resulting offer order was committed; traffic counts and customer data remain private." >> "$GITHUB_STEP_SUMMARY"

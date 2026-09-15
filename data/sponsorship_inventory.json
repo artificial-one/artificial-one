@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-15",
+  "currency": "usd",
+  "checkout_enabled": false,
+  "packages": [
+    {
+      "id": "newsletter-spotlight",
+      "name": "Newsletter spotlight",
+      "price_cents": 14900,
+      "description": "One clearly labelled sponsor block in a weekly AI tools briefing.",
+      "fulfillment": "One edition; final copy remains subject to disclosure and relevance checks."
+    },
+    {
+      "id": "category-sponsor",
+      "name": "Category sponsor",
+      "price_cents": 24900,
+      "description": "A clearly labelled sponsor placement on one relevant category or decision-tool page.",
+      "fulfillment": "Thirty days; placement does not influence editorial rankings."
+    },
+    {
+      "id": "launch-brief",
+      "name": "Sponsored launch brief",
+      "price_cents": 39900,
+      "description": "A disclosed product-launch brief distributed through the site, feed and newsletter.",
+      "fulfillment": "One factual brief; claims require source evidence and publication is not guaranteed."
+    }
+  ]
+}
