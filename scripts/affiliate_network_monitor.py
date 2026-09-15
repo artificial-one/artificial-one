@@ -149,7 +149,7 @@ def website_coverage(path: Path = Path("data/appsumo_offers.json")) -> dict[str,
         "active": sum(item.get("availability") == "active" for item in offers),
         "checking": sum(item.get("availability") in {"unchecked", "checking"} for item in offers),
         "expired": sum(item.get("availability") == "expired" for item in offers),
-        "promotable": sum(item.get("availability") != "expired" and item.get("ai_relevant") and item.get("editorial_url") for item in offers),
+        "promotable": sum(bool(item.get("availability") != "expired" and item.get("ai_relevant") and item.get("editorial_url")) for item in offers),
     }
 
 

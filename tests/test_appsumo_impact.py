@@ -89,6 +89,18 @@ class AppSumoImpactTests(unittest.TestCase):
         self.assertEqual(snapshot["actions"]["commissions"], {"USD": "25.00"})
         self.assertEqual(snapshot["invoices"]["payment_statuses"], {"OPEN": 1})
 
+    def test_website_coverage_counts_only_boolean_eligible_rows(self):
+        payload = {"offers": [
+            {"availability": "active", "ai_relevant": True, "editorial_url": "blog-one.html"},
+            {"availability": "expired", "ai_relevant": True, "editorial_url": "blog-two.html"},
+            {"availability": "active", "ai_relevant": True, "editorial_url": ""},
+        ]}
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "offers.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            coverage = monitor.website_coverage(path)
+        self.assertEqual(coverage["promotable"], 1)
+
 
 if __name__ == "__main__":
     unittest.main()
