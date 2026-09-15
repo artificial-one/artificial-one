@@ -2,6 +2,12 @@ name: Optimize affiliate revenue
 
 on:
   workflow_dispatch:
+    inputs:
+      publish_social:
+        description: Publish today's Bluesky editorial post
+        required: false
+        default: false
+        type: boolean
   schedule:
     # Runs after the daily PartnerStack audit so fresh conversion data is available.
     - cron: "13 8 * * *"
@@ -102,7 +108,9 @@ jobs:
           BLUESKY_DELETE_RKEY: ${{ vars.BLUESKY_DELETE_RKEY }}
           BLUESKY_MARK_SENT_ID: ${{ vars.BLUESKY_MARK_SENT_ID }}
           DISTRIBUTION_WEBHOOK_URL: ${{ secrets.DISTRIBUTION_WEBHOOK_URL }}
-          DISTRIBUTION_SEND_ENABLED: ${{ vars.DISTRIBUTION_SEND_ENABLED }}
+          # Scheduled runs publish once. Pushes only rebuild content; a manual run
+          # publishes only when its explicit checkbox is enabled.
+          DISTRIBUTION_SEND_ENABLED: ${{ (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.publish_social)) && vars.DISTRIBUTION_SEND_ENABLED || 'false' }}
           PAID_ADS_LIVE: ${{ vars.PAID_ADS_LIVE }}
           GOOGLE_ADS_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_CUSTOMER_ID }}
           GOOGLE_ADS_LOGIN_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}

@@ -20,7 +20,7 @@ This system automates the six revenue-growth loops for artificial.one. It runs i
 
 ## 5. Distribution engine
 
-`scripts/distribute_content.py` refreshes `feed.xml` and `data/distribution_queue.json` with campaign-attributed links. It can publish at most one item per run to Bluesky or to a connected distribution webhook. External posting requires credentials plus `DISTRIBUTION_SEND_ENABLED=true`; deduplication state is retained privately in the workflow cache.
+`scripts/distribute_content.py` refreshes `feed.xml` and `data/distribution_queue.json` with campaign-attributed links. Its self-renewing seven-day editorial calendar creates a fresh post every day from current site data: free tools, monitored AI news, partner use cases, buyer cautions, confirmed offer changes, workflow tips and a weekly roundup. It requires no model API or attended computer. The daily schedule can publish exactly one dated editorial item to Bluesky or a connected webhook; push-triggered builds never publish, and manual runs publish only when the `publish_social` input is selected. Deduplication state is retained privately in the workflow cache.
 
 ## 6. Controlled paid acquisition
 

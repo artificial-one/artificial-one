@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 import argparse
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from hashlib import sha256
 from html import escape
 import json
@@ -20,6 +20,8 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
+NEWS_PATH = ROOT / "data" / "ai_news.json"
+OFFER_ALERTS_PATH = ROOT / "data" / "offer_change_alerts.json"
 FEED_PATH = ROOT / "feed.xml"
 QUEUE_PATH = ROOT / "data" / "distribution_queue.json"
 FEED_URL = "https://artificial.one/feed.xml"
@@ -39,22 +41,126 @@ def load(path: Path) -> dict[str, Any]:
     return value if isinstance(value, dict) else {}
 
 
-def queue() -> list[dict[str, str]]:
+def published_offers() -> list[dict[str, Any]]:
     offers = [item for item in load(OFFERS_PATH).get("offers", []) if item.get("status") == "published"]
     ranking = [str(item) for item in load(STRATEGY_PATH).get("ranking", [])]
     position = {offer_id: index for index, offer_id in enumerate(ranking)}
     offers.sort(key=lambda item: (position.get(str(item["id"]), len(position)), str(item["name"])))
-    resources = (
+    return offers
+
+
+RESOURCES = (
         ("ai-stack-builder", "Build a personalized AI software shortlist", "ai-stack-builder.html", "Answer a few workflow questions and get a three-tool shortlist from the verified artificial.one catalog."),
         ("ai-software-roi", "Free AI software ROI calculator", "calculators/ai-software-roi-calculator.html", "Estimate monthly time value, net return and break-even before buying another AI subscription."),
         ("pdf-workflow-cost", "Free PDF workflow cost calculator", "calculators/pdf-workflow-cost-calculator.html", "Estimate what repetitive PDF editing, signing and document handling costs each month."),
         ("voice-production-cost", "Free AI voice production cost calculator", "calculators/voice-production-cost-calculator.html", "Compare an existing voice-production workflow with an AI-assisted scenario."),
         ("landing-page-roi", "Free landing page ROI calculator", "calculators/landing-page-roi-calculator.html", "Model how a conversion-rate change could affect monthly value before paying for a landing-page tool."),
         ("offer-updates", "AI tool pricing and plan change monitor", "offer-updates.html", "Follow confirmed changes from first-party software vendor pages and verify the current details before buying."),
-    )
+)
+
+
+def attributed_url(path: str, campaign: str) -> str:
+    separator = "&" if "?" in path else "?"
+    return f"https://artificial.one/{path}{separator}utm_source=distribution&utm_medium=social&utm_campaign={campaign}"
+
+
+def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, str]:
+    """Create one deterministic, fresh editorial post for the supplied day.
+
+    The seven-day rotation is deliberately data-driven rather than generative-AI
+    dependent, so it continues in GitHub Actions without a laptop or paid model key.
+    """
+    day = as_of.weekday()
+    week = as_of.toordinal() // 7
+    # Avoid platform-specific strftime flags for removing a leading zero.
+    edition = f"{as_of.strftime('%b')} {as_of.day}"
+    item_id = f"daily-{as_of.isoformat()}"
+
+    if day == 0:
+        resource_id, title, path, description = RESOURCES[week % len(RESOURCES)]
+        text = f"Monday tool pick · {edition}\n\n{description}\n\nTry the free tool ↓\n#AITools #Productivity"
+        campaign, kind = "editorial-free-tools", "free-tool"
+    elif day == 1:
+        news = list(load(NEWS_PATH).get("items", []))
+        story = news[0] if news else {}
+        headline = str(story.get("title") or "This week's important AI developments")
+        source = str(story.get("source") or "our monitored AI sources")
+        category = str(story.get("category") or "AI news")
+        title = "AI news worth watching"
+        description = f"{headline} — a {category.casefold()} report from {source}."
+        path = "news.html"
+        text = f"AI news watch · {edition}\n\n{headline}\n\nSee the source and related guides in today's briefing ↓\n#AI #AITools"
+        campaign, kind = "editorial-ai-news", "ai-news"
+    elif day in (2, 5):
+        offer = offers[(week * 2 + (1 if day == 5 else 0)) % len(offers)]
+        use_cases = list(offer.get("use_cases") or [])
+        use_case = str(use_cases[week % len(use_cases)]) if use_cases else str(offer.get("best_for", "a practical AI workflow"))
+        title = f"One practical way to use {offer['name']}"
+        description = use_case.rstrip(".") + "."
+        path = f"partner-offers/{offer['slug']}.html"
+        label = "Weekend workflow" if day == 5 else "Workflow Wednesday"
+        text = f"{label} · {edition}\n\n{description}\n\nCheck the fit, limitations and current pricing before you buy ↓\n#AITools #Productivity"
+        campaign, kind = "editorial-workflows", "partner-guide"
+    elif day == 3:
+        offer = offers[(week + 5) % len(offers)]
+        title = f"Before you buy {offer['name']}"
+        description = str(offer.get("watch_out") or offer.get("pricing_note") or "Check current limits, pricing and workflow fit before subscribing.")
+        path = f"partner-offers/{offer['slug']}.html"
+        text = f"Buyer checklist · {edition}\n\n{description}\n\nRead the independent fit guide ↓\n#AITools"
+        campaign, kind = "editorial-buyer-guides", "partner-guide"
+    elif day == 4:
+        alerts = list(load(OFFER_ALERTS_PATH).get("alerts", []))
+        if alerts:
+            alert = alerts[week % len(alerts)]
+            name = str(alert.get("name") or alert.get("offer_name") or "an AI tool")
+            detail = str(alert.get("summary") or alert.get("message") or "A monitored vendor page changed. Verify the current details before buying.")
+            title, description, path = f"Offer update: {name}", detail, "offer-updates.html"
+        else:
+            offer = offers[(week + 11) % len(offers)]
+            title = f"Current pricing check: {offer['name']}"
+            description = str(offer.get("pricing_note") or "Verify the current plan and limits before subscribing.")
+            path = f"partner-offers/{offer['slug']}.html"
+        text = f"Friday offer check · {edition}\n\n{description}\n\nVerify the latest details before you buy ↓\n#AITools #SaaS"
+        campaign, kind = "editorial-offer-updates", "offer-update"
+    else:
+        news = list(load(NEWS_PATH).get("items", []))
+        categories = []
+        for story in news:
+            category = str(story.get("category") or "AI news")
+            if category not in categories:
+                categories.append(category)
+            if len(categories) == 3:
+                break
+        topics = ", ".join(categories) if categories else "AI tools, models and industry changes"
+        title = "Your weekly independent AI briefing"
+        description = f"The latest on {topics}, with practical tool guides for the week ahead."
+        path = "news.html"
+        text = f"Sunday AI briefing · {edition}\n\n{description}\n\nCatch up in a few minutes ↓\n#AI #AITools"
+        campaign, kind = "weekly-roundup", "ai-news"
+
+    return {
+        "id": item_id,
+        "image_key": "daily-editorial",
+        "daily": "true",
+        "kind": kind,
+        "title": title,
+        "description": description,
+        "page_path": path,
+        "image": "https://artificial.one/images/social-cards/daily-editorial.jpg",
+        "image_alt": f"{title} — daily editorial from Artificial.One",
+        "url": f"{attributed_url(path, campaign)}&utm_content={as_of.isoformat()}",
+        "text": text[:295],
+    }
+
+
+def queue(as_of: date | None = None) -> list[dict[str, str]]:
+    as_of = as_of or datetime.now(timezone.utc).date()
+    offers = published_offers()
     result = []
-    for index, (resource_id, title, path, copy) in enumerate(resources):
-        url = f"https://artificial.one/{path}?utm_source=distribution&utm_medium=social&utm_campaign=free-tools"
+    if offers:
+        result.append(daily_editorial(as_of, offers))
+    for index, (resource_id, title, path, copy) in enumerate(RESOURCES):
+        url = attributed_url(path, "free-tools")
         hooks = (
             "Stop guessing which AI tools fit your workflow.",
             "Can this free calculator save you from a bad software purchase?",
@@ -73,7 +179,7 @@ def queue() -> list[dict[str, str]]:
             "text": text[:295],
         })
     for index, offer in enumerate(offers):
-        url = f"https://artificial.one/partner-offers/{offer['slug']}.html?utm_source=distribution&utm_medium=social&utm_campaign=tool-guides"
+        url = attributed_url(f"partner-offers/{offer['slug']}.html", "tool-guides")
         intros = (
             f"Is {offer['name']} right for your workflow?",
             f"Before paying for {offer['name']}, check the fit.",
@@ -259,8 +365,8 @@ def channel_item(item: dict[str, str], source: str) -> dict[str, str]:
     }
 
 
-def run(state_path: Path) -> str:
-    items = queue()
+def run(state_path: Path, as_of: date | None = None) -> str:
+    items = queue(as_of)
     write_public_outputs(items)
     websub_status = ping_websub()
     flag = (os.environ.get("DISTRIBUTION_SEND_ENABLED") or "").casefold()
@@ -275,6 +381,7 @@ def run(state_path: Path) -> str:
     except (OSError, json.JSONDecodeError):
         state = {"version": 1, "sent": []}
     sent = list(state.get("sent", []))
+    sent_ids = list(state.get("sent_ids", []))
     maintenance_notes: list[str] = []
     state_changed = False
     if delete_rkey and handle and password:
@@ -289,13 +396,18 @@ def run(state_path: Path) -> str:
                 maintenance_notes.append(f"marked {mark_sent_id} as distributed")
     if state_changed:
         state_path.parent.mkdir(parents=True, exist_ok=True)
-        state_path.write_text(json.dumps({"version": 1, "sent": sent[-200:]}, indent=2) + "\n", encoding="utf-8")
+        state_path.write_text(json.dumps({"version": 2, "sent": sent[-400:], "sent_ids": sent_ids[-400:]}, indent=2) + "\n", encoding="utf-8")
     maintenance = f"; {'; '.join(maintenance_notes)}" if maintenance_notes else ""
     if not items or flag == "false" or (flag != "true" and not connected):
         return f"RSS and distribution queue refreshed; {websub_status}; social posting is waiting for a connected channel{maintenance}"
-    item = next((candidate for candidate in items if sha256(candidate["text"].encode()).hexdigest() not in sent), None)
+    # Only today's editorial item is eligible for automatic publishing. The rest
+    # remain in RSS as discovery inventory, preventing deployment or retries from
+    # draining several posts on the same day.
+    item = next((candidate for candidate in items if candidate.get("daily") == "true"), None)
+    if item and (item["id"] in sent_ids or sha256(item["text"].encode()).hexdigest() in sent):
+        item = None
     if not item:
-        return f"RSS refreshed; {websub_status}; every queued guide was already distributed"
+        return f"RSS refreshed; {websub_status}; today's editorial post was already distributed"
     delivered = 0
     delivery_notes = []
     if handle and password:
@@ -307,8 +419,9 @@ def run(state_path: Path) -> str:
     if not delivered:
         return f"RSS refreshed; {websub_status}; no external distribution account is connected"
     sent.append(sha256(item["text"].encode()).hexdigest())
+    sent_ids.append(item["id"])
     state_path.parent.mkdir(parents=True, exist_ok=True)
-    state_path.write_text(json.dumps({"version": 1, "sent": sent[-200:]}, indent=2) + "\n", encoding="utf-8")
+    state_path.write_text(json.dumps({"version": 2, "sent": sent[-400:], "sent_ids": sent_ids[-400:]}, indent=2) + "\n", encoding="utf-8")
     detail = f"; {'; '.join(delivery_notes)}" if delivery_notes else ""
     return f"{websub_status}; distributed one guide through {delivered} connected channel(s){detail}{maintenance}"
 

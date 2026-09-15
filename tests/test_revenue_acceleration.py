@@ -32,13 +32,29 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertIn("utm_source=newsletter", first[1])
 
     def test_distribution_queue_uses_attributed_site_links(self):
-        items = distribution.queue()
+        items = distribution.queue(date(2026, 9, 15))
         self.assertTrue(items)
         self.assertTrue(all("artificial.one" in item["url"] for item in items))
         self.assertTrue(all("utm_source=distribution" in item["url"] for item in items))
         self.assertTrue(all(item["image"].startswith("https://artificial.one/images/social-cards/") for item in items))
         self.assertTrue(all(item["image_alt"] for item in items))
         self.assertTrue(all("utm_" not in item["text"] for item in items))
+
+    def test_daily_editorial_is_fresh_deterministic_and_rotates(self):
+        first = distribution.queue(date(2026, 9, 14))[0]
+        repeated = distribution.queue(date(2026, 9, 14))[0]
+        next_day = distribution.queue(date(2026, 9, 15))[0]
+        self.assertEqual(first, repeated)
+        self.assertNotEqual(first["id"], next_day["id"])
+        self.assertNotEqual(first["text"], next_day["text"])
+        self.assertIn("utm_content=2026-09-14", first["url"])
+        self.assertIn("utm_content=2026-09-15", next_day["url"])
+        self.assertEqual(first["image_key"], "daily-editorial")
+        self.assertEqual(first["daily"], "true")
+
+    def test_editorial_calendar_covers_all_seven_content_slots(self):
+        kinds = {distribution.queue(date(2026, 9, 14 + offset))[0]["kind"] for offset in range(7)}
+        self.assertTrue({"free-tool", "ai-news", "partner-guide", "offer-update"}.issubset(kinds))
 
     def test_channel_delivery_replaces_generic_source(self):
         item = distribution.queue()[0]
@@ -68,6 +84,32 @@ class RevenueAccelerationTests(unittest.TestCase):
             with tempfile.TemporaryDirectory() as folder:
                 status = distribution.run(Path(folder) / "state.json")
             self.assertIn("distributed one guide", status)
+            self.assertEqual(len(sent), 1)
+        finally:
+            distribution.post_webhook = original_post
+            distribution.ping_websub = original_ping
+            for key, value in original.items():
+                if value is None:
+                    os.environ.pop(key, None)
+                else:
+                    os.environ[key] = value
+
+    def test_daily_editorial_can_publish_only_once_per_date(self):
+        original_post = distribution.post_webhook
+        original_ping = distribution.ping_websub
+        original = {key: os.environ.get(key) for key in ("DISTRIBUTION_SEND_ENABLED", "DISTRIBUTION_WEBHOOK_URL")}
+        sent = []
+        try:
+            os.environ["DISTRIBUTION_SEND_ENABLED"] = "true"
+            os.environ["DISTRIBUTION_WEBHOOK_URL"] = "https://example.test/hook"
+            distribution.post_webhook = lambda _url, item: sent.append(item)
+            distribution.ping_websub = lambda: "WebSub notified"
+            with tempfile.TemporaryDirectory() as folder:
+                state_path = Path(folder) / "state.json"
+                first = distribution.run(state_path, date(2026, 9, 15))
+                second = distribution.run(state_path, date(2026, 9, 15))
+            self.assertIn("distributed one guide", first)
+            self.assertIn("already distributed", second)
             self.assertEqual(len(sent), 1)
         finally:
             distribution.post_webhook = original_post

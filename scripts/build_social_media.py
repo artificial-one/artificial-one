@@ -111,7 +111,13 @@ def build_card(item: dict[str, str], index: int) -> Path:
     draw.rectangle((0, 0, 1200, 630), fill=(4, 8, 30, 55))
     draw.rounded_rectangle((56, 50, 855, 580), radius=38, fill=(7, 12, 38, 214), outline=(167, 139, 250, 115), width=2)
     draw.rounded_rectangle((86, 82, 320, 126), radius=22, fill=(99, 102, 241, 235))
-    label = "FREE DECISION TOOL" if item["kind"] == "free-tool" else "INDEPENDENT TOOL GUIDE"
+    labels = {
+        "free-tool": "FREE DECISION TOOL",
+        "ai-news": "CURATED AI NEWS",
+        "offer-update": "VERIFIED OFFER WATCH",
+        "partner-guide": "INDEPENDENT TOOL GUIDE",
+    }
+    label = labels.get(item["kind"], "ARTIFICIAL.ONE EDITORIAL")
     draw.text((108, 91), label, font=font(18, bold=True), fill="white")
 
     title_face = font(57, bold=True)
@@ -132,7 +138,7 @@ def build_card(item: dict[str, str], index: int) -> Path:
     draw.text((166, 536), "Compare smarter. Buy with confidence.", font=font(17), fill=(196, 181, 253, 255))
 
     card = Image.alpha_composite(card.convert("RGBA"), overlay).convert("RGB")
-    output = CARD_DIR / f"{item['id']}.jpg"
+    output = CARD_DIR / f"{item.get('image_key', item['id'])}.jpg"
     card.save(output, format="JPEG", quality=86, optimize=True, progressive=True)
     return output
 
@@ -140,13 +146,13 @@ def build_card(item: dict[str, str], index: int) -> Path:
 def validate(items: list[dict[str, str]]) -> list[str]:
     errors = []
     for item in items:
-        card = CARD_DIR / f"{item['id']}.jpg"
+        card = CARD_DIR / f"{item.get('image_key', item['id'])}.jpg"
         if not card.exists():
             errors.append(f"missing card: {card.relative_to(ROOT)}")
         elif card.stat().st_size > 1_000_000:
             errors.append(f"card exceeds 1 MB: {card.relative_to(ROOT)}")
         page = ROOT / item["page_path"]
-        if page.exists() and item["image"] not in page.read_text(encoding="utf-8"):
+        if item.get("daily") != "true" and page.exists() and item["image"] not in page.read_text(encoding="utf-8"):
             errors.append(f"page does not reference card: {page.relative_to(ROOT)}")
     for asset in (AVATAR, BANNER):
         if not asset.exists():
