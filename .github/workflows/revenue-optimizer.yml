@@ -93,11 +93,6 @@ jobs:
       - name: Monitor first-party offer changes
         run: python scripts/monitor_offer_changes.py --state .offer-monitor/private-state.json
 
-      - name: Build crawl discovery and notify participating search engines
-        env:
-          INDEXNOW_SUBMIT_ENABLED: "true"
-        run: python scripts/indexing_recovery.py --submit
-
       - name: Build newsletter, RSS, distribution, and paid-search plans
         env:
           BEEHIIV_API_KEY: ${{ secrets.BEEHIIV_API_KEY }}
@@ -123,6 +118,13 @@ jobs:
           python scripts/publish_newsletter.py --state .revenue-acceleration/newsletter.json
           python scripts/distribute_content.py --state .revenue-acceleration/distribution.json
           python scripts/paid_acquisition.py
+
+      # Crawl assets must be calculated after every public content writer above;
+      # otherwise the final indexability audit can correctly detect stale inputs.
+      - name: Build crawl discovery and notify participating search engines
+        env:
+          INDEXNOW_SUBMIT_ENABLED: "true"
+        run: python scripts/indexing_recovery.py --submit
 
       - name: Verify the complete revenue pipeline
         run: |
