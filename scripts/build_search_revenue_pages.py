@@ -47,6 +47,7 @@ SITEMAP_START = "  <!-- search-revenue:start -->"
 SITEMAP_END = "  <!-- search-revenue:end -->"
 MAX_ALTERNATIVE_PAGES = 8
 MAX_COMPARISON_PAGES = 8
+COLD_START_CLUSTER_SIZE = 6
 
 
 def intent_cluster(category: str) -> str:
@@ -179,6 +180,22 @@ def render_comparison(left: dict[str, Any], right: dict[str, Any]) -> str:
     )
 
 
+def render_pricing(offer: dict[str, Any]) -> str:
+    use_cases = "".join(f"<li>{esc(item)}</li>" for item in offer.get("use_cases", []))
+    content = f'''<section class="bg-white"><div class="mx-auto max-w-5xl px-5 py-16">
+      <p class="text-sm font-bold uppercase tracking-widest text-indigo-600">Pricing decision guide</p>
+      <h1 class="mt-4 text-4xl font-black md:text-6xl">{esc(offer['name'])} pricing: what to verify</h1>
+      <p class="mt-6 max-w-3xl text-lg text-slate-600">Plans and limits can change. Use this guide to decide which details matter for your workflow, then confirm the current price at the verified partner destination.</p>
+      <div class="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-6"><h2 class="text-2xl font-black">Current pricing note</h2><p class="mt-3 text-emerald-950">{esc(offer['pricing_note'])}</p><div class="mt-6">{cta(offer, 'pricing-primary')}</div><p class="mt-3 text-xs text-emerald-900">Affiliate link. We may earn a commission at no extra cost to you.</p></div>
+    </div></section><section class="mx-auto grid max-w-5xl gap-6 px-5 py-10 md:grid-cols-2"><article class="rounded-2xl border border-slate-200 bg-white p-6"><h2 class="text-2xl font-black">Who should evaluate it</h2><p class="mt-3 text-slate-600">{esc(offer['best_for'])}</p><h3 class="mt-6 font-bold">Workflows to price</h3><ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">{use_cases}</ul></article><article class="rounded-2xl border border-amber-200 bg-amber-50 p-6"><h2 class="text-2xl font-black">Before subscribing</h2><p class="mt-3 text-amber-950">{esc(offer['watch_out'])}</p><p class="mt-5"><a class="font-bold text-indigo-700" href="../partner-offers/{esc(offer['slug'])}.html">Read the complete {esc(offer['name'])} fit guide →</a></p></article></section>'''
+    return shell(
+        title=f"{offer['name']} Pricing: Plans, Limits & Fit | artificial.one",
+        description=f"Review {offer['name']} pricing considerations, plan limits, use cases and what to verify before subscribing.",
+        canonical_path=f"search-intent/{offer['slug']}-pricing.html", content=content, prefix="../",
+        structured_data={"@context": "https://schema.org", "@type": "Article", "headline": f"{offer['name']} pricing guide", "about": {"@type": "SoftwareApplication", "name": offer["name"]}},
+    )
+
+
 def demand_catalog(offers: list[dict[str, Any]]) -> dict[str, tuple[dict[str, Any], str, int]]:
     result: dict[str, tuple[dict[str, Any], str, int]] = {}
     for offer in offers:
@@ -228,6 +245,22 @@ def planned_pages(offers: list[dict[str, Any]]) -> dict[Path, str]:
         ]
         if alternatives:
             pages[OUTPUT_DIR / f"{primary['slug']}-alternatives.html"] = render_alternatives(primary, alternatives[:4])
+
+    # Cold-start clusters give the highest-priority offers complete commercial
+    # coverage before Search Console has accumulated enough impressions.
+    for primary in offers[:COLD_START_CLUSTER_SIZE]:
+        pages[OUTPUT_DIR / f"{primary['slug']}-pricing.html"] = render_pricing(primary)
+        use_cases = [str(item) for item in primary.get("use_cases", []) if str(item).strip()]
+        alternatives = [
+            item for item in offers
+            if item["id"] != primary["id"] and intent_cluster(str(item["category"])) == intent_cluster(str(primary["category"]))
+        ]
+        if use_cases:
+            use_case = use_cases[0]
+            pages[OUTPUT_DIR / f"{primary['slug']}-for-{slugify(use_case)}.html"] = render_demand_use_case(primary, use_case, alternatives)
+        if alternatives:
+            competitor = alternatives[0]
+            pages[OUTPUT_DIR / f"{primary['slug']}-vs-{competitor['slug']}.html"] = render_comparison(primary, competitor)
 
     comparisons = 0
     for category, members in sorted(by_category.items()):

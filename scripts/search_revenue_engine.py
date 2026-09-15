@@ -52,6 +52,7 @@ MAX_INSPECTIONS = 40
 CONTENT_PRIORITY_DAYS = 7
 MIN_DEMAND_PAGE_IMPRESSIONS = 30
 MAX_DEMAND_PAGES = 12
+MAX_CRAWL_PRIORITY = 40
 CTR_WIN_RATIO = 1.10
 CTR_REVERT_RATIO = 0.80
 POSITION_REVERT_DELTA = 2.0
@@ -136,9 +137,45 @@ def load_public_strategy(path: Path) -> dict[str, Any]:
             "experiments": {},
             "content_priority": [],
             "demand_pages": [],
+            "crawl_priority": [],
             "privacy": "No queries, traffic totals, customer data or revenue totals are published.",
         }
     return value
+
+
+def update_crawl_priority(
+    inspections: list[dict[str, str]], public: dict[str, Any], today: date
+) -> list[str]:
+    """Expose only affected local paths so the site can strengthen discovery safely."""
+    eligible_prefixes = ("/partner-offers/", "/search-intent/", "/calculators/")
+    eligible_exact = {
+        "/",
+        "/ai-tool-finder.html",
+        "/ai-stack-builder.html",
+        "/appsumo-ai-tools.html",
+        "/buyers-guides.html",
+        "/decision-tools.html",
+        "/partner-offers.html",
+    }
+    selected: list[str] = []
+    for item in inspections:
+        if item.get("status") != "ISSUE":
+            continue
+        path = page_path(str(item.get("url") or ""))
+        if path not in eligible_exact and not path.startswith(eligible_prefixes):
+            continue
+        if path not in selected:
+            selected.append(path)
+        if len(selected) >= MAX_CRAWL_PRIORITY:
+            break
+    previous = [str(item) for item in public.get("crawl_priority", [])]
+    if selected == previous:
+        return []
+    public["crawl_priority"] = selected
+    public["updated_at"] = today.isoformat()
+    if selected:
+        return [f"Prioritized {len(selected)} affected commercial URLs for stronger internal discovery."]
+    return ["Cleared the crawl-priority queue after priority URLs passed inspection."]
 
 
 def _search_tokens(value: str) -> set[str]:
@@ -468,6 +505,7 @@ def main() -> int:
         actions.extend(update_content_priority(opportunities, public, private, date.today()))
         actions.extend(update_demand_pages(rows, public, private, date.today()))
         inspections = inspect_urls(session, args.site, inspection_targets(args.site, weights))
+        actions.extend(update_crawl_priority(inspections, public, date.today()))
         current_issues = inspection_signature(inspections)
         if current_issues != private.get("last_index_issues", []):
             actions.append(f"Index audit changed: {len(current_issues)} priority URLs currently need attention.")

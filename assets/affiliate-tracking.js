@@ -2,6 +2,7 @@
   "use strict";
 
   var SESSION_KEY = "artificial_one_affiliate_session";
+  var ACQUISITION_KEY = "artificial_one_acquisition";
 
   function safeSessionId() {
     try {
@@ -22,10 +23,28 @@
   function campaignContext() {
     try {
       var params = new URLSearchParams(window.location.search);
-      return {
-        source: compactSubId(params.get("utm_source"), "direct"),
-        campaign: compactSubId(params.get("utm_campaign"), "organic")
-      };
+      var suppliedSource = params.get("utm_source");
+      var suppliedCampaign = params.get("utm_campaign");
+      if (suppliedSource || suppliedCampaign) {
+        var supplied = {
+          source: compactSubId(suppliedSource, "direct"),
+          campaign: compactSubId(suppliedCampaign, "organic")
+        };
+        window.sessionStorage.setItem(ACQUISITION_KEY, JSON.stringify(supplied));
+        return supplied;
+      }
+      var saved = JSON.parse(window.sessionStorage.getItem(ACQUISITION_KEY) || "null");
+      if (saved && saved.source && saved.campaign) return saved;
+      var referrerSource = "direct";
+      if (document.referrer) {
+        var referrer = new URL(document.referrer);
+        if (referrer.hostname && referrer.hostname !== window.location.hostname) {
+          referrerSource = compactSubId(referrer.hostname.replace(/^www\./, ""), "referral");
+        }
+      }
+      var discovered = { source: referrerSource, campaign: "organic" };
+      window.sessionStorage.setItem(ACQUISITION_KEY, JSON.stringify(discovered));
+      return discovered;
     } catch (_) {
       return { source: "direct", campaign: "organic" };
     }
@@ -35,8 +54,8 @@
     var context = campaignContext();
     return {
       event: eventName || "affiliate_click",
-      offer_id: link.dataset.offerId || "unknown",
-      placement: link.dataset.placement || "unknown",
+      offer_id: (link && (link.dataset.offerId || link.dataset.relatedOfferId)) || "content",
+      placement: (link && link.dataset.placement) || "page",
       page_path: window.location.pathname,
       source: context.source,
       campaign: context.campaign,
@@ -240,6 +259,10 @@
   }
 
   document.addEventListener("click", function (event) {
+    var route = event.target.closest("a[data-content-route]");
+    if (route) {
+      sendToConfiguredEndpoint(eventPayload(route, "content_route_click"));
+    }
     var link = event.target.closest("a[data-affiliate-offer]");
     if (!link) return;
 
@@ -275,6 +298,7 @@
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
       loadConversionStrategy().then(function (strategy) {
+        sendToConfiguredEndpoint(eventPayload(null, "site_visit"));
         applyAppSumoAvailability();
         installStickyRecommendation(strategy);
         trackVisibleRecommendations();
@@ -283,6 +307,7 @@
     });
   } else {
     loadConversionStrategy().then(function (strategy) {
+      sendToConfiguredEndpoint(eventPayload(null, "site_visit"));
       applyAppSumoAvailability();
       installStickyRecommendation(strategy);
       trackVisibleRecommendations();

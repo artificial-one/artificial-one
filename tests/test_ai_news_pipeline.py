@@ -64,6 +64,24 @@ class AiNewsPipelineTests(unittest.TestCase):
         self.assertIn("Safe headline", updated)
         self.assertEqual(updated.count(news.DATA_START), 1)
 
+    def test_news_routes_relevant_story_to_internal_partner_guide(self):
+        route = news.related_route(
+            {"title": "New AI voice model improves narration", "category": "Models & LLMs"},
+            {"elevenlabs": {"name": "ElevenLabs", "slug": "elevenlabs-ai-voice"}},
+        )
+        self.assertEqual(route["offer_id"], "elevenlabs")
+        self.assertEqual(route["url"], "partner-offers/elevenlabs-ai-voice.html")
+
+    def test_news_page_places_internal_decision_link_before_source(self):
+        item = {
+            "title": "AI voice update", "url": "https://example.com/news", "source": "Example AI",
+            "published_at": "2026-09-13T09:00:00+00:00", "display_date": "Sep 13, 2026",
+            "category": "Models & LLMs", "related": {"title": "Evaluate ElevenLabs", "url": "partner-offers/elevenlabs.html", "offer_id": "elevenlabs"},
+        }
+        rendered = news.render_news_page([item], "2026-09-15", [])
+        self.assertIn("data-content-route", rendered)
+        self.assertLess(rendered.index('class="route"'), rendered.index('class="source"'))
+
 
 if __name__ == "__main__":
     unittest.main()

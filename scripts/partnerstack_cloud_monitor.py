@@ -222,7 +222,7 @@ def fetch_affiliate_events(
     stream: str,
     days: int = CLICK_WINDOW_DAYS,
 ) -> dict[str, Any]:
-    if stream not in {"clicks", "impressions"}:
+    if stream not in {"clicks", "impressions", "visits", "route_clicks"}:
         raise PartnerStackError(f"Unsupported affiliate event stream: {stream}")
     end = datetime.now(timezone.utc).date()
     date_keys = [(end - timedelta(days=offset)).isoformat() for offset in range(days)]

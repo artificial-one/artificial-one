@@ -33,8 +33,17 @@ class SearchRevenuePageTests(unittest.TestCase):
         generated = pages.planned_pages([offer("alpha"), offer("beta")])
         names = {path.name for path in generated}
         self.assertIn("alpha-alternatives.html", names)
+        self.assertIn("alpha-pricing.html", names)
+        self.assertIn("alpha-for-automate-a-recurring-team-workflow.html", names)
         self.assertIn("best-productivity-tools.html", names)
         self.assertIn("alpha-vs-beta.html", names)
+
+    def test_priority_pricing_page_uses_reviewed_notes_and_tracked_cta(self):
+        html = pages.render_pricing(offer("alpha"))
+        self.assertIn("Check current pricing", html)
+        self.assertIn("data-affiliate-offer", html)
+        self.assertIn('data-placement="pricing-primary"', html)
+        self.assertNotIn("$", html)
 
     def test_pages_have_schema_review_links_and_tracked_ctas(self):
         html = pages.render_comparison(offer("alpha"), offer("beta"))

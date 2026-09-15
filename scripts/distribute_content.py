@@ -11,6 +11,7 @@ import json
 import os
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 
@@ -19,6 +20,8 @@ OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 FEED_PATH = ROOT / "feed.xml"
 QUEUE_PATH = ROOT / "data" / "distribution_queue.json"
+FEED_URL = "https://artificial.one/feed.xml"
+WEBSUB_HUB = "https://pubsubhubbub.appspot.com/"
 
 
 def load(path: Path) -> dict[str, Any]:
@@ -57,7 +60,17 @@ def write_public_outputs(items: list[dict[str, str]]) -> None:
         f"<item><title>{escape(item['title'])}</title><link>{escape(item['url'])}</link><guid>{escape(item['url'])}</guid><description>{escape(item['text'])}</description><pubDate>{now}</pubDate></item>"
         for item in items
     )
-    FEED_PATH.write_text(f'''<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>artificial.one AI tool guides</title><link>https://artificial.one/</link><description>Independent AI tool comparisons, use cases and current partner offers.</description>{rows}</channel></rss>\n''', encoding="utf-8")
+    FEED_PATH.write_text(f'''<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>artificial.one AI tool guides</title><link>https://artificial.one/</link><atom:link href="{FEED_URL}" rel="self" type="application/rss+xml"/><atom:link href="{WEBSUB_HUB}" rel="hub"/><description>Independent AI tool comparisons, use cases and current partner offers.</description>{rows}</channel></rss>\n''', encoding="utf-8")
+
+
+def ping_websub() -> str:
+    payload = urlencode({"hub.mode": "publish", "hub.url": FEED_URL}).encode("utf-8")
+    request = Request(WEBSUB_HUB, data=payload, headers={"Content-Type": "application/x-www-form-urlencoded"}, method="POST")
+    try:
+        with urlopen(request, timeout=20) as response:
+            return f"WebSub notified (HTTP {response.status})"
+    except Exception as exc:
+        return f"WebSub notification deferred ({type(exc).__name__})"
 
 
 def post_bluesky(handle: str, password: str, text: str) -> None:
@@ -76,11 +89,26 @@ def post_webhook(url: str, item: dict[str, str]) -> None:
         pass
 
 
+def channel_item(item: dict[str, str], source: str) -> dict[str, str]:
+    attributed_url = item["url"].replace("utm_source=distribution", f"utm_source={source}")
+    return {
+        **item,
+        "url": attributed_url,
+        "text": item["text"].replace(item["url"], attributed_url),
+    }
+
+
 def run(state_path: Path) -> str:
     items = queue()
     write_public_outputs(items)
-    if not items or (os.environ.get("DISTRIBUTION_SEND_ENABLED") or "").casefold() != "true":
-        return "RSS and distribution queue refreshed; external posting is disabled"
+    websub_status = ping_websub()
+    flag = (os.environ.get("DISTRIBUTION_SEND_ENABLED") or "").casefold()
+    handle = (os.environ.get("BLUESKY_HANDLE") or "").strip()
+    password = (os.environ.get("BLUESKY_APP_PASSWORD") or "").strip()
+    webhook = (os.environ.get("DISTRIBUTION_WEBHOOK_URL") or "").strip()
+    connected = bool((handle and password) or webhook)
+    if not items or flag == "false" or (flag != "true" and not connected):
+        return f"RSS and distribution queue refreshed; {websub_status}; social posting is waiting for a connected channel"
     try:
         state = load(state_path)
     except (OSError, json.JSONDecodeError):
@@ -88,23 +116,20 @@ def run(state_path: Path) -> str:
     sent = list(state.get("sent", []))
     item = next((candidate for candidate in items if sha256(candidate["text"].encode()).hexdigest() not in sent), None)
     if not item:
-        return "RSS refreshed; every queued guide was already distributed"
-    handle = (os.environ.get("BLUESKY_HANDLE") or "").strip()
-    password = (os.environ.get("BLUESKY_APP_PASSWORD") or "").strip()
-    webhook = (os.environ.get("DISTRIBUTION_WEBHOOK_URL") or "").strip()
+        return f"RSS refreshed; {websub_status}; every queued guide was already distributed"
     delivered = 0
     if handle and password:
-        post_bluesky(handle, password, item["text"])
+        post_bluesky(handle, password, channel_item(item, "bluesky")["text"])
         delivered += 1
     if webhook:
-        post_webhook(webhook, item)
+        post_webhook(webhook, channel_item(item, "syndication"))
         delivered += 1
     if not delivered:
-        return "RSS refreshed; no external distribution account is connected"
+        return f"RSS refreshed; {websub_status}; no external distribution account is connected"
     sent.append(sha256(item["text"].encode()).hexdigest())
     state_path.parent.mkdir(parents=True, exist_ok=True)
     state_path.write_text(json.dumps({"version": 1, "sent": sent[-200:]}, indent=2) + "\n", encoding="utf-8")
-    return f"distributed one guide through {delivered} connected channel(s)"
+    return f"{websub_status}; distributed one guide through {delivered} connected channel(s)"
 
 
 if __name__ == "__main__":

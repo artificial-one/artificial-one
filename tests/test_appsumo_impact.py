@@ -58,6 +58,9 @@ class AppSumoImpactTests(unittest.TestCase):
         self.assertNotIn("Expired AI", page)
         self.assertNotIn("No Guide AI", page)
         self.assertIn("We do not list every promotion", page)
+        self.assertIn("AppSumo AI deals available today", page)
+        self.assertIn("data-deal-card", page)
+        self.assertIn('id="deal-search"', page)
 
     def test_impact_subids_and_runtime_expiry_guard_are_installed(self):
         script = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
@@ -66,6 +69,11 @@ class AppSumoImpactTests(unittest.TestCase):
         self.assertIn('url.searchParams.set("subId3"', script)
         self.assertIn('url.searchParams.set("sharedId", "artificial-one")', script)
         self.assertIn("affiliateUnavailable", script)
+        self.assertIn('"site_visit"', script)
+        self.assertIn('"content_route_click"', script)
+        endpoint = (ROOT / "api" / "affiliate-event.js").read_text(encoding="utf-8")
+        self.assertIn('site_visit: "visits"', endpoint)
+        self.assertIn('content_route_click: "route_clicks"', endpoint)
 
     def test_appsumo_is_permanently_blocked_from_paid_search(self):
         policy = {"prohibited_networks": ["impact-appsumo"], "prohibited_brand_terms": ["appsumo"]}

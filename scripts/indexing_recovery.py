@@ -25,6 +25,7 @@ except ModuleNotFoundError:
 ROOT = Path(__file__).resolve().parents[1]
 SITEMAP_PATH = ROOT / "sitemap.xml"
 REPORT_PATH = ROOT / "data" / "indexing_recovery.json"
+SEARCH_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
 HUB_PATH = ROOT / "buyers-guides.html"
 SITE = "https://artificial.one"
 INDEXNOW_KEY = "a10e20260915d74b93c2f18e7a45c901"
@@ -48,7 +49,20 @@ def page_title(path: Path) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
-def render_hub(paths: list[Path]) -> str:
+def crawl_priority_paths(paths: list[Path]) -> list[Path]:
+    strategy = load_public_json(SEARCH_STRATEGY_PATH)
+    by_relative = {"/" + path.relative_to(ROOT).as_posix(): path for path in paths}
+    result: list[Path] = []
+    for value in strategy.get("crawl_priority", []):
+        candidate = by_relative.get(str(value))
+        if candidate and candidate not in result:
+            result.append(candidate)
+    return result
+
+
+def render_hub(paths: list[Path], crawl_priority: list[Path] | None = None) -> str:
+    priority = list(crawl_priority or [])
+    priority_position = {path: index for index, path in enumerate(priority)}
     groups: dict[str, list[Path]] = {"Decision tools": [], "Partner reviews": [], "Comparisons and buying guides": []}
     for path in paths:
         relative = path.relative_to(ROOT).as_posix()
@@ -60,9 +74,19 @@ def render_hub(paths: list[Path]) -> str:
             groups["Decision tools"].append(path)
     sections: list[str] = []
     for label, members in groups.items():
+        members.sort(key=lambda item: (priority_position.get(item, len(priority_position)), page_title(item).casefold()))
         links = "".join(f'<li><a class="font-semibold text-indigo-700 hover:underline" href="{esc(item.relative_to(ROOT).as_posix())}">{esc(page_title(item))}</a></li>' for item in members)
         sections.append(f'<section class="rounded-2xl border border-slate-200 bg-white p-6"><h2 class="text-2xl font-black">{esc(label)}</h2><ul class="mt-4 space-y-3">{links}</ul></section>')
-    content = f'''<section class="bg-white"><div class="mx-auto max-w-6xl px-5 py-16"><p class="text-sm font-bold uppercase tracking-widest text-indigo-600">Buyer resource library</p><h1 class="mt-4 text-4xl font-black md:text-6xl">AI software decision guides</h1><p class="mt-5 max-w-3xl text-lg text-slate-600">Browse free calculators, structured comparisons and reviewed partner offers by the decision you need to make.</p></div></section><section class="mx-auto grid max-w-6xl gap-6 px-5 py-10 lg:grid-cols-3">{''.join(sections)}</section>'''
+    priority_cards = "".join(
+        f'<a class="rounded-xl border border-indigo-200 bg-white p-4 font-semibold text-indigo-800 shadow-sm hover:border-indigo-400" href="{esc(item.relative_to(ROOT).as_posix())}">{esc(page_title(item))} →</a>'
+        for item in priority[:40]
+    )
+    priority_section = (
+        f'''<section class="mx-auto max-w-6xl px-5 pt-10"><div class="rounded-2xl border border-indigo-200 bg-indigo-50 p-6"><p class="text-xs font-bold uppercase tracking-widest text-indigo-600">Priority guides</p><h2 class="mt-2 text-2xl font-black">Useful pages being surfaced now</h2><div class="mt-5 grid gap-3 md:grid-cols-2">{priority_cards}</div></div></section>'''
+        if priority_cards
+        else ""
+    )
+    content = f'''<section class="bg-white"><div class="mx-auto max-w-6xl px-5 py-16"><p class="text-sm font-bold uppercase tracking-widest text-indigo-600">Buyer resource library</p><h1 class="mt-4 text-4xl font-black md:text-6xl">AI software decision guides</h1><p class="mt-5 max-w-3xl text-lg text-slate-600">Browse free calculators, structured comparisons and reviewed partner offers by the decision you need to make.</p></div></section>{priority_section}<section class="mx-auto grid max-w-6xl gap-6 px-5 py-10 lg:grid-cols-3">{''.join(sections)}</section>'''
     return shell(title="AI Software Buying Guides and Calculators | artificial.one", description="Browse artificial.one AI software calculators, comparisons and partner decision guides.", canonical_path="buyers-guides.html", content=content, structured_data={"@context": "https://schema.org", "@type": "CollectionPage", "name": "AI software decision guides"})
 
 
@@ -198,7 +222,8 @@ def write_if_changed(path: Path, text: str) -> bool:
 
 def build(check: bool = False, submit: bool = False, state_path: Path = ROOT / ".indexnow" / "private-state.json") -> int:
     pages = priority_pages()
-    hub = render_hub(pages)
+    priority = crawl_priority_paths(pages)
+    hub = render_hub(pages, priority)
     virtual = {HUB_PATH: hub}
     pages_with_hub = [*pages, HUB_PATH]
     sitemap = SITEMAP_PATH.read_text(encoding="utf-8")

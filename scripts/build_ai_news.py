@@ -36,6 +36,19 @@ AI_RELEVANCE_RE = re.compile(
     r"fine-tun(?:e|ed|ing)|open-weight|automatic1111)\b",
     re.I,
 )
+NEWS_ROUTE_RULES = (
+    (("voice", "audio", "speech", "narration"), ("elevenlabs", "descript")),
+    (("video", "podcast", "transcript", "recording"), ("descript", "elevenlabs")),
+    (("image", "creative", "advertising", "ad campaign"), ("adcreative", "beautiful-ai")),
+    (("presentation", "slides", "deck"), ("beautiful-ai",)),
+    (("pdf", "document", "signature", "signing"), ("foxit", "quicksigner")),
+    (("website", "landing page", "conversion"), ("unbounce", "wegic")),
+    (("newsletter", "email marketing", "creator"), ("kit", "kartra")),
+    (("search", "seo", "visibility"), ("rank-prompt", "omniseo")),
+    (("vector", "database", "agent", "developer", "model"), ("pinecone",)),
+    (("course", "learning", "training", "education"), ("learnworlds", "trainual")),
+    (("healthcare", "clinic", "patient"), ("carepatron",)),
+)
 
 
 class NewsBuildError(RuntimeError):
@@ -218,6 +231,47 @@ def partner_picks(limit: int = 3) -> list[dict[str, str]]:
     ]
 
 
+def related_route(item: dict[str, str], offers: dict[str, dict[str, Any]]) -> dict[str, str]:
+    text = f"{item.get('title', '')} {item.get('category', '')}".casefold()
+    for terms, offer_ids in NEWS_ROUTE_RULES:
+        if not any(term in text for term in terms):
+            continue
+        for offer_id in offer_ids:
+            offer = offers.get(offer_id)
+            if offer:
+                return {
+                    "title": f"Evaluate {clean_text(str(offer['name']), 80)} for this workflow",
+                    "url": f"partner-offers/{clean_text(str(offer['slug']), 100)}.html",
+                    "offer_id": offer_id,
+                }
+    fallback = {
+        "AI Business": ("Model the value of an AI subscription", "calculators/ai-software-roi-calculator.html"),
+        "Policy & Safety": ("Browse independent AI software buying guides", "buyers-guides.html"),
+        "Research": ("Find an AI tool for a specific workflow", "ai-tool-finder.html"),
+        "Models & LLMs": ("Compare infrastructure and AI workflow tools", "ai-tool-finder.html"),
+        "AI Tools & Products": ("Find the right AI tool for the job", "ai-tool-finder.html"),
+    }
+    title, url = fallback.get(item.get("category", ""), fallback["AI Tools & Products"])
+    return {"title": title, "url": url, "offer_id": ""}
+
+
+def add_related_routes(items: list[dict[str, str]]) -> list[dict[str, Any]]:
+    try:
+        registry = load_json(PARTNER_OFFERS_PATH)
+    except NewsBuildError:
+        registry = {"offers": []}
+    offers = {
+        str(offer.get("id")): offer
+        for offer in registry.get("offers", [])
+        if isinstance(offer, dict) and offer.get("status") == "published" and offer.get("id") and offer.get("slug")
+    }
+    return [{**item, "related": related_route(item, offers)} for item in items]
+
+
+def news_identity(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [{key: value for key, value in item.items() if key != "related"} for item in items]
+
+
 def aggregate_news(config: dict[str, Any], now: datetime) -> tuple[list[dict[str, str]], list[str]]:
     previous = cached_items()
     cached_by_source: dict[str, list[dict[str, str]]] = {}
@@ -279,7 +333,8 @@ def render_news_page(
         <div class="meta"><span>{html.escape(item["category"])}</span><time datetime="{html.escape(item["published_at"], quote=True)}">{html.escape(item["display_date"])}</time></div>
         <h2>{html.escape(item["title"])}</h2>
         <p>{html.escape(item["source"])}</p>
-        <a href="{html.escape(item["url"], quote=True)}" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
+        <div class="route"><small>RELATED DECISION GUIDE</small><a href="{html.escape(str(item.get('related', {}).get('url', 'ai-tool-finder.html')), quote=True)}" data-content-route data-related-offer-id="{html.escape(str(item.get('related', {}).get('offer_id', '')), quote=True)}" data-placement="news-card-related">{html.escape(str(item.get('related', {}).get('title', 'Find the right AI tool')))} →</a></div>
+        <a class="source" href="{html.escape(item["url"], quote=True)}" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>'''
         for item in items
     )
@@ -308,7 +363,7 @@ def render_news_page(
   <meta property="og:type" content="website"><meta property="og:url" content="https://artificial.one/news.html">
   <script type="application/ld+json">{structured}</script>
   <style>
-    *{{box-sizing:border-box}} body{{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#0f172a;background:#f8fafc}} a{{color:inherit}} header{{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid #e2e8f0;z-index:5}} nav{{max-width:1120px;margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}} nav img{{height:54px}} nav div{{display:flex;gap:22px;font-weight:650}} .hero{{background:white;text-align:center;padding:72px 22px}} .hero small{{font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#4f46e5}} .hero h1{{font-size:clamp(2.4rem,7vw,4.8rem);line-height:1.02;margin:18px auto;max-width:940px}} .hero p{{max-width:720px;margin:auto;color:#475569;font-size:1.1rem;line-height:1.7}} main{{max-width:1120px;margin:auto;padding:42px 22px 80px}} .notice{{padding:16px 18px;border:1px solid #c7d2fe;background:#eef2ff;border-radius:14px;color:#3730a3;margin-bottom:28px}} .picks{{margin:0 0 40px;padding:28px;border-radius:20px;background:linear-gradient(135deg,#eef2ff,#faf5ff);border:1px solid #c7d2fe}} .picks>div:first-child>small,.pick small{{font-weight:800;letter-spacing:.1em;color:#4f46e5}} .picks h2{{margin:8px 0 4px}} .picks p{{color:#475569}} .pick-grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px}} .pick{{display:flex;flex-direction:column;padding:18px;border-radius:14px;background:white;border:1px solid #e2e8f0;text-decoration:none}} .pick strong{{font-size:1.15rem;margin:8px 0}} .pick span{{color:#64748b;font-size:.9rem;line-height:1.5}} .pick b{{color:#4338ca;margin-top:auto;padding-top:15px;font-size:.9rem}} .picks .disclosure{{font-size:.75rem;margin-bottom:0}} .grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}} .card{{display:flex;flex-direction:column;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:24px;box-shadow:0 3px 12px rgba(15,23,42,.04)}} .meta{{display:flex;justify-content:space-between;gap:12px;color:#64748b;font-size:.75rem;text-transform:uppercase;font-weight:750;letter-spacing:.04em}} .meta span{{color:#4f46e5}} .card h2{{font-size:1.25rem;line-height:1.35;margin:17px 0}} .card p{{color:#64748b;margin:auto 0 18px}} .card>a{{color:#4338ca;font-weight:750;text-decoration:none}} footer{{border-top:1px solid #e2e8f0;background:#fff;padding:34px 22px;text-align:center;color:#64748b}} @media(max-width:900px){{.grid,.pick-grid{{grid-template-columns:repeat(2,minmax(0,1fr))}}}} @media(max-width:620px){{nav div{{gap:12px;font-size:.85rem}} .grid,.pick-grid{{grid-template-columns:1fr}}}}
+    *{{box-sizing:border-box}} body{{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#0f172a;background:#f8fafc}} a{{color:inherit}} header{{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid #e2e8f0;z-index:5}} nav{{max-width:1120px;margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}} nav img{{height:54px}} nav div{{display:flex;gap:22px;font-weight:650}} .hero{{background:white;text-align:center;padding:72px 22px}} .hero small{{font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#4f46e5}} .hero h1{{font-size:clamp(2.4rem,7vw,4.8rem);line-height:1.02;margin:18px auto;max-width:940px}} .hero p{{max-width:720px;margin:auto;color:#475569;font-size:1.1rem;line-height:1.7}} main{{max-width:1120px;margin:auto;padding:42px 22px 80px}} .notice{{padding:16px 18px;border:1px solid #c7d2fe;background:#eef2ff;border-radius:14px;color:#3730a3;margin-bottom:28px}} .picks{{margin:0 0 40px;padding:28px;border-radius:20px;background:linear-gradient(135deg,#eef2ff,#faf5ff);border:1px solid #c7d2fe}} .picks>div:first-child>small,.pick small{{font-weight:800;letter-spacing:.1em;color:#4f46e5}} .picks h2{{margin:8px 0 4px}} .picks p{{color:#475569}} .pick-grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px}} .pick{{display:flex;flex-direction:column;padding:18px;border-radius:14px;background:white;border:1px solid #e2e8f0;text-decoration:none}} .pick strong{{font-size:1.15rem;margin:8px 0}} .pick span{{color:#64748b;font-size:.9rem;line-height:1.5}} .pick b{{color:#4338ca;margin-top:auto;padding-top:15px;font-size:.9rem}} .picks .disclosure{{font-size:.75rem;margin-bottom:0}} .grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}} .card{{display:flex;flex-direction:column;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:24px;box-shadow:0 3px 12px rgba(15,23,42,.04)}} .meta{{display:flex;justify-content:space-between;gap:12px;color:#64748b;font-size:.75rem;text-transform:uppercase;font-weight:750;letter-spacing:.04em}} .meta span{{color:#4f46e5}} .card h2{{font-size:1.25rem;line-height:1.35;margin:17px 0}} .card p{{color:#64748b;margin:0 0 18px}} .route{{margin-top:auto;padding:14px;border-radius:12px;background:#eef2ff}} .route small{{display:block;color:#6366f1;font-weight:800;letter-spacing:.08em}} .route a,.card>a.source{{display:block;margin-top:7px;color:#4338ca;font-weight:750;text-decoration:none}} .card>a.source{{margin-top:16px}} footer{{border-top:1px solid #e2e8f0;background:#fff;padding:34px 22px;text-align:center;color:#64748b}} @media(max-width:900px){{.grid,.pick-grid{{grid-template-columns:repeat(2,minmax(0,1fr))}}}} @media(max-width:620px){{nav div{{gap:12px;font-size:.85rem}} .grid,.pick-grid{{grid-template-columns:1fr}}}}
   </style>
 </head><body>
 <header><nav><a href="index.html"><img src="artificial-one-logo-large.svg" alt="artificial.one"></a><div><a href="reviews.html">Reviews</a><a href="partner-offers.html">Partner offers</a></div></nav></header>
@@ -346,8 +401,9 @@ def main() -> int:
             if len(items) < 6:
                 raise NewsBuildError(f"Only {len(items)} valid news items were available")
             previous = load_json(DATA_PATH) if DATA_PATH.exists() else {"items": []}
-            updated_at = str(previous.get("updated_at", "")) if items == previous.get("items") else now.isoformat()
+            updated_at = str(previous.get("updated_at", "")) if news_identity(items) == news_identity(previous.get("items", [])) else now.isoformat()
 
+        items = add_related_routes(items)
         data = {"version": 1, "updated_at": updated_at, "items": items}
         desired = {
             DATA_PATH: json.dumps(data, ensure_ascii=False, indent=2) + "\n",

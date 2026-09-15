@@ -37,13 +37,20 @@ jobs:
       - name: Refresh allowlisted news feeds
         run: python scripts/build_ai_news.py
 
+      - name: Refresh crawl discovery and notify participating search engines
+        env:
+          INDEXNOW_SUBMIT_ENABLED: "true"
+        run: python scripts/indexing_recovery.py --submit --state /tmp/indexnow-news.json
+
       - name: Verify generated output
-        run: python scripts/build_ai_news.py --check
+        run: |
+          python scripts/build_ai_news.py --check
+          python scripts/indexing_recovery.py --check
 
       - name: Commit material news changes
         shell: bash
         run: |
-          git add -- data/ai_news.json index.html news.html sitemap.xml
+          git add -- data/ai_news.json data/indexing_recovery.json index.html news.html buyers-guides.html sitemap.xml
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

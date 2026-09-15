@@ -153,15 +153,25 @@ def website_coverage(path: Path = Path("data/appsumo_offers.json")) -> dict[str,
     }
 
 
-def render_dashboard(partnerstack: dict[str, Any], impact: dict[str, Any], clicks: dict[str, Any], impressions: dict[str, Any], coverage: dict[str, int], changes: list[str], run_url: str) -> tuple[str, str, str]:
+def render_dashboard(
+    partnerstack: dict[str, Any], impact: dict[str, Any], clicks: dict[str, Any],
+    impressions: dict[str, Any], visits: dict[str, Any], route_clicks: dict[str, Any],
+    coverage: dict[str, int], changes: list[str], run_url: str,
+) -> tuple[str, str, str]:
     today = date.today().isoformat()
     ctr = (int(clicks.get("total") or 0) / int(impressions.get("total") or 1) * 100) if int(impressions.get("total") or 0) else 0
+    visit_click_rate = (int(clicks.get("total") or 0) / int(visits.get("total") or 1) * 100) if int(visits.get("total") or 0) else 0
     ps_rewards = partnerstack.get("rewards", {})
     ps_transactions = partnerstack.get("transactions", {})
     rows = [
+        ("Site visits (28d)", str(visits.get("total", 0))),
+        ("Internal news/guide route clicks (28d)", str(route_clicks.get("total", 0))),
         ("Site affiliate clicks (28d)", str(clicks.get("total", 0))),
         ("Affiliate CTA impressions (28d)", str(impressions.get("total", 0))),
         ("Site CTA click-through rate", f"{ctr:.2f}%"),
+        ("Visit-to-affiliate-click rate", f"{visit_click_rate:.2f}%"),
+        ("Top visit sources", _counts(visits.get("by_source", {}))),
+        ("Top affiliate-click sources", _counts(clicks.get("by_source", {}))),
         ("PartnerStack programs", str(partnerstack.get("partnerships", {}).get("count", 0))),
         ("PartnerStack signups", str(partnerstack.get("customers", {}).get("count", 0))),
         ("PartnerStack paying customers", str(partnerstack.get("customers", {}).get("paid_count", 0))),
@@ -185,8 +195,10 @@ def render_dashboard(partnerstack: dict[str, Any], impact: dict[str, Any], click
         action = "Complete the one-time Impact API connection; the website inventory and public availability automation can run before that connection is added."
     elif int(impact.get("actions", {}).get("count") or 0) == 0 and int(clicks.get("total") or 0) > 0:
         action = "Clicks are not yet producing Impact actions. Expand the best-matched buyer-intent page and test its primary CTA while keeping AppSumo brand bidding disabled."
+    elif int(visits.get("total") or 0) > 0 and int(clicks.get("total") or 0) == 0:
+        action = "Visitors are arriving but have not clicked an affiliate CTA. Prioritize related-tool routing and above-the-fold comparison links on the pages receiving visits."
     elif int(clicks.get("total") or 0) == 0:
-        action = "No recent tracked affiliate clicks. Prioritize internal links into the AppSumo AI shortlist and the highest-intent product guides."
+        action = "No recent tracked visits or affiliate clicks. Activate a connected distribution channel and continue strengthening discovery of the highest-intent guides."
     else:
         action = "Keep the current automation running; expand only pages whose clicks begin producing attributed actions or commissions."
     text_rows = [f"{label}: {value}" for label, value in rows]
@@ -216,17 +228,19 @@ def main(argv: list[str] | None = None) -> int:
     redis_token = (os.environ.get("UPSTASH_REDIS_REST_TOKEN") or "").strip()
     clicks = ps.fetch_affiliate_events(redis_url, redis_token, "clicks") if redis_url and redis_token else {}
     impressions = ps.fetch_affiliate_events(redis_url, redis_token, "impressions") if redis_url and redis_token else {}
+    visits = ps.fetch_affiliate_events(redis_url, redis_token, "visits") if redis_url and redis_token else {}
+    route_clicks = ps.fetch_affiliate_events(redis_url, redis_token, "route_clicks") if redis_url and redis_token else {}
     partnerstack = ps.build_snapshot(collections, affiliate_clicks=clicks, affiliate_impressions=impressions)
     sid = os.environ.get("IMPACT_ACCOUNT_SID", "").strip()
     token = os.environ.get("IMPACT_AUTH_TOKEN", "").strip()
     impact = fetch_impact_snapshot(sid, token) if sid and token else {"connected": False}
-    current = {"schema_version": 1, "audited_at": datetime.now(timezone.utc).isoformat(), "partnerstack": partnerstack, "impact": impact}
+    current = {"schema_version": 1, "audited_at": datetime.now(timezone.utc).isoformat(), "partnerstack": partnerstack, "impact": impact, "acquisition": {"visits": visits, "route_clicks": route_clicks}}
     previous = json.loads(args.baseline.read_text(encoding="utf-8")) if args.baseline.exists() else {}
     changes = ps.compare_snapshots(previous.get("partnerstack", {}), partnerstack) if previous else []
     if previous and impact.get("connected"):
         changes.extend(_impact_changes(previous.get("impact", {}), impact))
     run_url = f"{os.environ.get('GITHUB_SERVER_URL', '')}/{os.environ.get('GITHUB_REPOSITORY', '')}/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}".strip("/")
-    subject, text_body, html_body = render_dashboard(partnerstack, impact, clicks, impressions, website_coverage(), changes, run_url)
+    subject, text_body, html_body = render_dashboard(partnerstack, impact, clicks, impressions, visits, route_clicks, website_coverage(), changes, run_url)
     if args.email_to:
         resend = os.environ.get("RESEND_API_KEY", "").strip()
         if not resend or not args.email_from:

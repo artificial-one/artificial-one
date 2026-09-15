@@ -6,6 +6,12 @@ const SAFE_ID = /^[a-z0-9][a-z0-9-]{0,63}$/i;
 const SAFE_PLACEMENT = /^[a-z0-9][a-z0-9_-]{0,79}$/i;
 const SAFE_PATH = /^\/[a-z0-9/_\-.]{0,300}$/i;
 const SAFE_CHANNEL = /^[a-z0-9][a-z0-9_-]{0,79}$/i;
+const EVENT_STREAMS = {
+  affiliate_click: "clicks",
+  affiliate_impression: "impressions",
+  site_visit: "visits",
+  content_route_click: "route_clicks",
+};
 
 function clean(value, pattern, fallback) {
   const text = typeof value === "string" ? value.trim() : "";
@@ -36,7 +42,7 @@ async function persistAggregate(event) {
     .update(`${day}:${event.session_id}`)
     .digest("hex")
     .slice(0, 24);
-  const stream = event.event === "affiliate_impression" ? "impressions" : "clicks";
+  const stream = EVENT_STREAMS[event.event] || "clicks";
   const key = `affiliate:${stream}:${day}`;
   const commands = [
     ["HINCRBY", key, "total", 1],
@@ -108,8 +114,11 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: "invalid_json" });
   }
 
+  const eventName = Object.prototype.hasOwnProperty.call(EVENT_STREAMS, body.event)
+    ? body.event
+    : "affiliate_click";
   const event = {
-    event: body.event === "affiliate_impression" ? "affiliate_impression" : "affiliate_click",
+    event: eventName,
     offer_id: clean(body.offer_id, SAFE_ID, "unknown"),
     placement: clean(body.placement, SAFE_PLACEMENT, "unknown"),
     page_path: clean(body.page_path, SAFE_PATH, "/"),

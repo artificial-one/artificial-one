@@ -37,12 +37,18 @@ jobs:
           path: |
             .affiliate-monitor/baseline.json
             .appsumo-monitor/availability.json
+            .indexnow/private-state.json
           key: affiliate-network-private-${{ github.run_id }}
           restore-keys: |
             affiliate-network-private-
 
       - name: Refresh AppSumo inventory, availability and page attribution
         run: python scripts/appsumo_impact.py --live-check --state .appsumo-monitor/availability.json
+
+      - name: Refresh crawl discovery and notify participating search engines
+        env:
+          INDEXNOW_SUBMIT_ENABLED: "true"
+        run: python scripts/indexing_recovery.py --submit --state .indexnow/private-state.json
 
       - name: Audit PartnerStack and Impact through read-only APIs
         id: monitor
@@ -63,12 +69,13 @@ jobs:
         run: |
           python -m unittest tests.test_appsumo_impact -v
           python scripts/appsumo_impact.py --check
+          python scripts/indexing_recovery.py --check
           node --check assets/affiliate-tracking.js
 
       - name: Commit public availability and generated site changes
         shell: bash
         run: |
-          git add -- data/appsumo_offers.json appsumo-ai-tools.html sitemap.xml assets/affiliate-tracking.js ':(glob)**/*.html'
+          git add -- data/appsumo_offers.json data/indexing_recovery.json appsumo-ai-tools.html buyers-guides.html sitemap.xml assets/affiliate-tracking.js ':(glob)**/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -93,6 +100,7 @@ jobs:
           path: |
             .affiliate-monitor/baseline.json
             .appsumo-monitor/availability.json
+            .indexnow/private-state.json
           key: affiliate-network-private-${{ github.run_id }}
 
       - name: Notify the repository owner about a meaningful change

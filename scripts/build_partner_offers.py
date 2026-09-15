@@ -434,11 +434,37 @@ def _search_slug(value: str) -> str:
     return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", value.casefold())).strip("-")
 
 
+def _intent_cluster(category: str) -> str:
+    normalized = category.casefold()
+    groups = (
+        ("growth", ("advert", "conversion", "email", "marketing", "research", "sales", "seo")),
+        ("content", ("audio", "design", "presentation", "video", "voice", "web")),
+        ("documents", ("document", "pdf", "signature")),
+        ("operations", ("automation", "business", "course", "education", "erp", "learning", "practice", "productivity", "tracking", "training")),
+        ("data", ("data", "database", "developer")),
+    )
+    for group, terms in groups:
+        if any(term in normalized for term in terms):
+            return group
+    return normalized
+
+
 def search_links_for(offer: dict[str, Any], offers: list[dict[str, Any]]) -> list[tuple[str, str]]:
     """Link review pages into the deterministic commercial-intent cluster."""
     links: list[tuple[str, str]] = []
     if offer in offers[:8]:
         links.append((f"../search-intent/{offer['slug']}-alternatives.html", f"Best {offer['name']} alternatives"))
+    if offer in offers[:6]:
+        links.append((f"../search-intent/{offer['slug']}-pricing.html", f"{offer['name']} pricing guide"))
+        use_cases = [str(item) for item in offer.get("use_cases", []) if str(item).strip()]
+        if use_cases:
+            links.append((f"../search-intent/{offer['slug']}-for-{_search_slug(use_cases[0])}.html", f"{offer['name']} for {use_cases[0]}"))
+        alternatives = [
+            item for item in offers
+            if item.get("id") != offer.get("id") and _intent_cluster(str(item.get("category", ""))) == _intent_cluster(str(offer.get("category", "")))
+        ]
+        if alternatives:
+            links.append((f"../search-intent/{offer['slug']}-vs-{alternatives[0]['slug']}.html", f"{offer['name']} vs {alternatives[0]['name']}"))
     members = [item for item in offers if item.get("category") == offer.get("category")]
     if len(members) >= 2:
         category_slug = _search_slug(str(offer["category"]))

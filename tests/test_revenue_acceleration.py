@@ -1,4 +1,6 @@
 import importlib.util
+import os
+import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
@@ -34,6 +36,48 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertTrue(items)
         self.assertTrue(all("artificial.one" in item["url"] for item in items))
         self.assertTrue(all("utm_source=distribution" in item["url"] for item in items))
+
+    def test_channel_delivery_replaces_generic_source(self):
+        item = distribution.queue()[0]
+        delivered = distribution.channel_item(item, "bluesky")
+        self.assertIn("utm_source=bluesky", delivered["url"])
+        self.assertIn(delivered["url"], delivered["text"])
+
+    def test_connected_channel_activates_without_manual_flag(self):
+        original_post = distribution.post_webhook
+        original_ping = distribution.ping_websub
+        original = {key: os.environ.get(key) for key in ("DISTRIBUTION_SEND_ENABLED", "DISTRIBUTION_WEBHOOK_URL")}
+        sent = []
+        try:
+            os.environ.pop("DISTRIBUTION_SEND_ENABLED", None)
+            os.environ["DISTRIBUTION_WEBHOOK_URL"] = "https://example.test/hook"
+            distribution.post_webhook = lambda _url, item: sent.append(item)
+            distribution.ping_websub = lambda: "WebSub notified"
+            with tempfile.TemporaryDirectory() as folder:
+                status = distribution.run(Path(folder) / "state.json")
+            self.assertIn("distributed one guide", status)
+            self.assertEqual(len(sent), 1)
+        finally:
+            distribution.post_webhook = original_post
+            distribution.ping_websub = original_ping
+            for key, value in original.items():
+                if value is None:
+                    os.environ.pop(key, None)
+                else:
+                    os.environ[key] = value
+
+    def test_rss_advertises_websub_discovery(self):
+        with tempfile.TemporaryDirectory() as folder:
+            original_feed, original_queue = distribution.FEED_PATH, distribution.QUEUE_PATH
+            try:
+                distribution.FEED_PATH = Path(folder) / "feed.xml"
+                distribution.QUEUE_PATH = Path(folder) / "queue.json"
+                distribution.write_public_outputs(distribution.queue()[:1])
+                feed = distribution.FEED_PATH.read_text(encoding="utf-8")
+            finally:
+                distribution.FEED_PATH, distribution.QUEUE_PATH = original_feed, original_queue
+        self.assertIn('rel="hub"', feed)
+        self.assertIn('rel="self"', feed)
 
     def test_paid_plan_is_blocked_by_default(self):
         plan = paid.build_plan()

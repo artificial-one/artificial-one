@@ -66,6 +66,23 @@ class GrowthExpansionTests(unittest.TestCase):
         self.assertIn("buyers-guides.html", updated)
         self.assertEqual(updated.count("indexing-recovery:start"), 1)
 
+    def test_index_issues_publish_paths_only_to_crawl_priority(self):
+        public = {"version": 1, "experiments": {}, "crawl_priority": []}
+        inspections = [
+            {"url": "https://artificial.one/partner-offers/alpha.html", "status": "ISSUE", "detail": "private reason"},
+            {"url": "https://artificial.one/about.html", "status": "ISSUE", "detail": "ignored"},
+        ]
+        actions = search.update_crawl_priority(inspections, public, date(2026, 9, 15))
+        self.assertEqual(public["crawl_priority"], ["/partner-offers/alpha.html"])
+        self.assertNotIn("private reason", json.dumps(public))
+        self.assertEqual(len(actions), 1)
+
+    def test_buyer_hub_highlights_crawl_priority(self):
+        page = indexing.ROOT / "partner-offers" / "foxit-pdf-software.html"
+        rendered = indexing.render_hub([page], [page])
+        self.assertIn("Priority guides", rendered)
+        self.assertGreaterEqual(rendered.count("partner-offers/foxit-pdf-software.html"), 2)
+
     def test_demand_gate_publishes_only_reviewed_concept_id(self):
         original = search.OFFERS_PATH
         try:
