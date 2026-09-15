@@ -159,6 +159,7 @@ def build_snapshot(
             "by_offer": {},
             "by_placement": {},
             "by_page": {},
+            "by_campaign": {},
         },
         "affiliate_impressions": affiliate_impressions or {
             "window_days": CLICK_WINDOW_DAYS,
@@ -167,6 +168,7 @@ def build_snapshot(
             "by_offer": {},
             "by_placement": {},
             "by_page": {},
+            "by_campaign": {},
         },
     }
 
@@ -178,6 +180,7 @@ def reduce_affiliate_click_results(
     offers: Counter[str] = Counter()
     placements: Counter[str] = Counter()
     pages: Counter[str] = Counter()
+    campaigns: Counter[str] = Counter()
     unique_daily_sessions = 0
     for index, _day in enumerate(days):
         hash_result = payload[index * 2].get("result", []) if index * 2 < len(payload) else []
@@ -195,6 +198,8 @@ def reduce_affiliate_click_results(
                     placements[name[10:]] += count
                 elif name.startswith("page:"):
                     pages[name[5:]] += count
+                elif name.startswith("campaign:"):
+                    campaigns[name[9:]] += count
         unique_daily_sessions += _integer(session_result)
     return {
         "window_days": len(days),
@@ -203,6 +208,7 @@ def reduce_affiliate_click_results(
         "by_offer": dict(offers.most_common()),
         "by_placement": dict(placements.most_common()),
         "by_page": dict(pages.most_common(20)),
+        "by_campaign": dict(campaigns.most_common(20)),
     }
 
 

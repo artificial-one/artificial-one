@@ -11,6 +11,21 @@ SPEC.loader.exec_module(monetize)
 
 
 class AffiliateMonetizationTests(unittest.TestCase):
+    def test_relevance_rewards_specific_product_and_category_terms(self):
+        offer = {
+            "name": "QuickSigner", "category": "Documents & PDF",
+            "use_cases": ["Sign PDF documents"], "best_for": "Electronic signatures",
+        }
+        tokens, compact = monetize.page_signal("guides/sign-pdf.html", "<title>How to sign a PDF document</title>")
+        self.assertGreaterEqual(monetize.offer_relevance(offer, tokens, compact), 8)
+
+    def test_unrelated_page_stays_below_auto_threshold(self):
+        offer = {
+            "name": "MRPeasy", "category": "Manufacturing",
+            "use_cases": ["Plan factory production"], "best_for": "Manufacturers",
+        }
+        tokens, compact = monetize.page_signal("guides/podcast.html", "<title>Edit a podcast</title>")
+        self.assertLess(monetize.offer_relevance(offer, tokens, compact), 8)
     def setUp(self):
         self.offers = {
             "descript": {

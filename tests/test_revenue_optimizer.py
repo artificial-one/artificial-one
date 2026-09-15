@@ -12,6 +12,18 @@ SPEC.loader.exec_module(optimizer)
 
 
 class RevenueOptimizerTests(unittest.TestCase):
+    def test_real_commission_per_visitor_outranks_empty_click_volume(self):
+        offers = [
+            {"id": "clicky", "name": "Clicky", "featured": False},
+            {"id": "payer", "name": "Payer", "featured": False},
+        ]
+        ranking = optimizer.rank_offers(
+            offers,
+            clicks={"by_offer": {"clicky": 40, "payer": 4}},
+            impressions={"by_offer": {"clicky": 500, "payer": 50}},
+            commission_cents=Counter({"payer": 2500}),
+        )
+        self.assertEqual(ranking[0], "payer")
     def test_signup_signal_outranks_clicks(self):
         offers = [
             {"id": "clicky", "name": "Clicky", "featured": False},
@@ -51,6 +63,12 @@ class RevenueOptimizerTests(unittest.TestCase):
             optimizer.offer_program_map(offers, partnerships),
             {"part_1": "seamless"},
         )
+
+    def test_private_program_terms_create_cold_start_prior(self):
+        partnership = {
+            "offers": [{"commission_percent": "30", "cookie_days": 60, "free_trial": True, "deep_link_url": "https://example.com"}]
+        }
+        self.assertGreater(optimizer.economic_prior(partnership), 1.0)
 
 
 if __name__ == "__main__":

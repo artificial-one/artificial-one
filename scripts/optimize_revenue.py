@@ -110,7 +110,7 @@ def offer_program_map(
 
 def partner_signals(
     offers: list[dict[str, Any]], api_key: str
-) -> tuple[Counter[str], Counter[str], Counter[str], Counter[str]]:
+) -> tuple[Counter[str], Counter[str], Counter[str], Counter[str], dict[str, float]]:
     min_created = str(
         int((datetime.now(timezone.utc) - timedelta(days=WINDOW_DAYS)).timestamp() * 1000)
     )
@@ -121,6 +121,7 @@ def partner_signals(
     transactions = fetch_all("transactions", api_key, {"min_created": min_created})
     rewards = fetch_all("rewards", api_key, {"min_created": min_created})
     partnership_to_offer = offer_program_map(offers, partnerships)
+    economics = partner_economics_map(offers, partnerships)
     customer_to_offer: dict[str, str] = {}
     signups: Counter[str] = Counter()
     paid: Counter[str] = Counter()
@@ -142,7 +143,53 @@ def partner_signals(
         offer_id = customer_to_offer.get(_customer_key(reward), "")
         if offer_id:
             commission_cents[offer_id] += int(reward.get("amount") or 0)
-    return signups, paid, revenue_cents, commission_cents
+    return signups, paid, revenue_cents, commission_cents, economics
+
+
+def _economic_scalars(value: Any, prefix: str = "") -> list[tuple[str, Any]]:
+    result: list[tuple[str, Any]] = []
+    if isinstance(value, dict):
+        for key, item in value.items():
+            result.extend(_economic_scalars(item, f"{prefix}.{key}" if prefix else str(key)))
+    elif isinstance(value, list):
+        for item in value:
+            result.extend(_economic_scalars(item, prefix))
+    else:
+        result.append((prefix.casefold(), value))
+    return result
+
+
+def economic_prior(partnership: dict[str, Any]) -> float:
+    """Extract a conservative cold-start prior from private program metadata."""
+    score = 0.0
+    for key, value in _economic_scalars(partnership):
+        text = str(value or "").casefold()
+        number_match = re.search(r"\d+(?:\.\d+)?", text)
+        number = float(number_match.group()) if number_match else 0.0
+        if any(term in key for term in ("commission", "reward", "payout")):
+            score += min(2.0, math.log1p(number) / 2.5) if number else 0.15
+        elif "cookie" in key:
+            score += min(0.75, number / 120.0) if number else 0.1
+        elif "trial" in key and text not in {"", "false", "none", "0"}:
+            score += 0.35
+        elif any(term in key for term in ("deep_link", "deeplink", "landing_page")) and text:
+            score += 0.2
+        elif any(term in key for term in ("conversion", "qualif")) and text:
+            score += 0.1
+    return min(score, 3.0)
+
+
+def partner_economics_map(
+    offers: list[dict[str, Any]], partnerships: list[dict[str, Any]]
+) -> dict[str, float]:
+    partnership_to_offer = offer_program_map(offers, partnerships)
+    result: dict[str, float] = {}
+    for partnership in partnerships:
+        keys = [str(partnership.get(field) or "") for field in ("key", "partnership_key", "partner_key")]
+        offer_id = next((partnership_to_offer[key] for key in keys if key in partnership_to_offer), "")
+        if offer_id:
+            result[offer_id] = max(result.get(offer_id, 0.0), economic_prior(partnership))
+    return result
 
 
 def rank_offers(
@@ -153,6 +200,7 @@ def rank_offers(
     paid: Counter[str] | None = None,
     revenue_cents: Counter[str] | None = None,
     commission_cents: Counter[str] | None = None,
+    commercial_priors: dict[str, float] | None = None,
 ) -> list[str]:
     clicks_by_offer = (clicks or {}).get("by_offer", {})
     impressions_by_offer = (impressions or {}).get("by_offer", {})
@@ -160,6 +208,7 @@ def rank_offers(
     paid = paid or Counter()
     revenue_cents = revenue_cents or Counter()
     commission_cents = commission_cents or Counter()
+    commercial_priors = commercial_priors or {}
 
     def score(offer: dict[str, Any]) -> tuple[float, str]:
         offer_id = str(offer["id"])
@@ -168,6 +217,11 @@ def rank_offers(
         # Bayesian smoothing prevents a single accidental click from dominating.
         ctr = (click_count + 1.0) / (impression_count + 12.0)
         exploration = 1.0 / math.sqrt(impression_count + 1.0)
+        # Expected earnings per visitor/click prevents a high-volume but
+        # worthless offer from outranking an offer that actually pays. Small
+        # priors keep zero-data programs eligible for exploration.
+        commission_per_visitor = (commission_cents[offer_id] + 25.0) / (impression_count + 100.0)
+        commission_per_click = (commission_cents[offer_id] + 25.0) / (click_count + 12.0)
         value = (
             (1.25 if offer.get("featured") else 0.0)
             + math.log1p(click_count) * 1.5
@@ -177,6 +231,9 @@ def rank_offers(
             + paid[offer_id] * 24.0
             + math.log1p(revenue_cents[offer_id] / 100.0) * 4.0
             + math.log1p(commission_cents[offer_id] / 100.0) * 6.0
+            + math.log1p(commission_per_visitor) * 8.0
+            + math.log1p(commission_per_click) * 2.0
+            + float(commercial_priors.get(offer_id, 0.0))
         )
         return (-value, str(offer.get("name", offer_id)).casefold())
 
@@ -186,7 +243,7 @@ def rank_offers(
 def build_strategy(ranking: list[str]) -> dict[str, Any]:
     return {
         "version": 1,
-        "method": "privacy-safe-performance-ranking",
+        "method": "privacy-safe-expected-earnings-ranking",
         "window_days": WINDOW_DAYS,
         "ranking": ranking,
         "featured": ranking[:6],
@@ -202,6 +259,7 @@ def optimize(output: Path = STRATEGY_PATH) -> bool:
     paid: Counter[str] = Counter()
     revenue_cents: Counter[str] = Counter()
     commission_cents: Counter[str] = Counter()
+    commercial_priors: dict[str, float] = {}
 
     redis_url = (os.environ.get("UPSTASH_REDIS_REST_URL") or "").strip()
     redis_token = (os.environ.get("UPSTASH_REDIS_REST_TOKEN") or "").strip()
@@ -215,7 +273,7 @@ def optimize(output: Path = STRATEGY_PATH) -> bool:
     partner_key = (os.environ.get("PARTNERSTACK_API_KEY") or "").strip()
     if partner_key:
         try:
-            signups, paid, revenue_cents, commission_cents = partner_signals(offers, partner_key)
+            signups, paid, revenue_cents, commission_cents, commercial_priors = partner_signals(offers, partner_key)
         except PartnerStackError as exc:
             print(f"warning: PartnerStack conversion data unavailable: {exc}")
 
@@ -228,6 +286,7 @@ def optimize(output: Path = STRATEGY_PATH) -> bool:
             paid,
             revenue_cents,
             commission_cents,
+            commercial_priors,
         )
     )
     desired = json.dumps(strategy, indent=2) + "\n"

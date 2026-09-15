@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "live_enabled": false,
+  "max_daily_budget_cents": 500,
+  "max_cpc_cents": 30,
+  "stop_loss_cents": 1500,
+  "minimum_clicks_before_decision": 30,
+  "conversion_action_verified": false,
+  "target_country_criteria": [],
+  "campaigns": [
+    {
+      "offer_id": "foxit",
+      "name": "AO Generic Intent - Foxit",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/foxit-pdf-software.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-foxit",
+      "keywords": [
+        "documents pdf",
+        "edit and convert pdf documents",
+        "organize and sign business documents"
+      ],
+      "negative_keywords": [
+        "Foxit"
+      ]
+    },
+    {
+      "offer_id": "adcreative",
+      "name": "AO Generic Intent - AdCreative.ai",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/adcreative-ai-ad-design.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-adcreative",
+      "keywords": [
+        "marketing creative",
+        "generate ad creative variations",
+        "adapt campaign assets across formats"
+      ],
+      "negative_keywords": [
+        "AdCreative.ai"
+      ]
+    },
+    {
+      "offer_id": "beautiful-ai",
+      "name": "AO Generic Intent - Beautiful.ai",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/beautiful-ai-presentations.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-beautiful-ai",
+      "keywords": [
+        "draft sales and investor presentations",
+        "keep recurring team decks visually consistent"
+      ],
+      "negative_keywords": [
+        "Beautiful.ai"
+      ]
+    },
+    {
+      "offer_id": "descript",
+      "name": "AO Generic Intent - Descript",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/descript-ai-video-editing.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-descript",
+      "keywords": [
+        "audio video",
+        "edit podcasts and interviews from their transcripts",
+        "turn long recordings into shorter social clips",
+        "record screens and refine narration in one workspace"
+      ],
+      "negative_keywords": [
+        "Descript"
+      ]
+    },
+    {
+      "offer_id": "elevenlabs",
+      "name": "AO Generic Intent - ElevenLabs",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/elevenlabs-ai-voice.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-elevenlabs",
+      "keywords": [
+        "audio voice",
+        "generate narration and voiceovers",
+        "dub spoken content into other languages"
+      ],
+      "negative_keywords": [
+        "ElevenLabs"
+      ]
+    },
+    {
+      "offer_id": "kartra",
+      "name": "AO Generic Intent - Kartra",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/kartra-marketing-platform.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-kartra",
+      "keywords": [
+        "marketing automation",
+        "build a marketing funnel",
+        "sell memberships or digital products"
+      ],
+      "negative_keywords": [
+        "Kartra"
+      ]
+    },
+    {
+      "offer_id": "kit",
+      "name": "AO Generic Intent - Kit",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/kit-creator-email-marketing.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-kit",
+      "keywords": [
+        "email marketing",
+        "launch and grow a newsletter",
+        "automate email sequences for creator products"
+      ],
+      "negative_keywords": [
+        "Kit"
+      ]
+    },
+    {
+      "offer_id": "learnworlds",
+      "name": "AO Generic Intent - LearnWorlds",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/learnworlds-course-platform.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-learnworlds",
+      "keywords": [
+        "online learning",
+        "launch a paid online course",
+        "deliver branded customer or employee training"
+      ],
+      "negative_keywords": [
+        "LearnWorlds"
+      ]
+    }
+  ],
+  "safety": "No campaign can launch unless repository policy and PAID_ADS_LIVE both equal true and Google Ads credentials are present."
+}

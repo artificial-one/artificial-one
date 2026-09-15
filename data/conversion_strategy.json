@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "sticky": {
+    "mode": "experiment",
+    "winner": null,
+    "variants": {
+      "a": {
+        "message": "Considering this tool? Check the current partner offer.",
+        "cta": "View partner offer"
+      },
+      "b": {
+        "message": "See current pricing, limits and partner terms before deciding.",
+        "cta": "Check current offer"
+      }
+    }
+  },
+  "privacy": "Only the selected conversion variant is public; raw interaction totals remain private."
+}

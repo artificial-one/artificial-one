@@ -16,6 +16,11 @@ on:
       - assets/affiliate-tracking.js
       - api/affiliate-event.js
       - tests/test_revenue_optimizer.py
+      - scripts/optimize_conversion.py
+      - scripts/publish_newsletter.py
+      - scripts/distribute_content.py
+      - scripts/paid_acquisition.py
+      - data/paid_acquisition_policy.json
 
 permissions:
   contents: write
@@ -37,6 +42,14 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Restore private publishing state
+        uses: actions/cache@v5
+        with:
+          path: .revenue-acceleration
+          key: revenue-acceleration-${{ github.run_id }}
+          restore-keys: |
+            revenue-acceleration-
+
       - name: Rank offers from private performance signals
         env:
           PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
@@ -44,12 +57,40 @@ jobs:
           UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
         run: python scripts/optimize_revenue.py
 
+      - name: Optimize conversion copy from anonymous events
+        env:
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+        run: python scripts/optimize_conversion.py
+
       - name: Build the tool finder and performance-ranked offer pages
         run: |
           python scripts/build_partner_offers.py
           python scripts/build_search_revenue_pages.py
           python scripts/monetize_affiliate_links.py
           python scripts/build_ai_news.py --cached
+
+      - name: Build newsletter, RSS, distribution, and paid-search plans
+        env:
+          BEEHIIV_API_KEY: ${{ secrets.BEEHIIV_API_KEY }}
+          BEEHIIV_PUBLICATION_ID: ${{ secrets.BEEHIIV_PUBLICATION_ID }}
+          BEEHIIV_SEND_ENABLED: ${{ vars.BEEHIIV_SEND_ENABLED }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          DISTRIBUTION_WEBHOOK_URL: ${{ secrets.DISTRIBUTION_WEBHOOK_URL }}
+          DISTRIBUTION_SEND_ENABLED: ${{ vars.DISTRIBUTION_SEND_ENABLED }}
+          PAID_ADS_LIVE: ${{ vars.PAID_ADS_LIVE }}
+          GOOGLE_ADS_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_CUSTOMER_ID }}
+          GOOGLE_ADS_LOGIN_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}
+          GOOGLE_ADS_DEVELOPER_TOKEN: ${{ secrets.GOOGLE_ADS_DEVELOPER_TOKEN }}
+          GOOGLE_ADS_CLIENT_ID: ${{ secrets.GOOGLE_ADS_CLIENT_ID }}
+          GOOGLE_ADS_CLIENT_SECRET: ${{ secrets.GOOGLE_ADS_CLIENT_SECRET }}
+          GOOGLE_ADS_REFRESH_TOKEN: ${{ secrets.GOOGLE_ADS_REFRESH_TOKEN }}
+          GOOGLE_ADS_API_VERSION: ${{ vars.GOOGLE_ADS_API_VERSION }}
+        run: |
+          python scripts/publish_newsletter.py --state .revenue-acceleration/newsletter.json
+          python scripts/distribute_content.py --state .revenue-acceleration/distribution.json
+          python scripts/paid_acquisition.py
 
       - name: Verify the complete revenue pipeline
         run: |
@@ -64,7 +105,7 @@ jobs:
       - name: Commit only public, privacy-safe optimization output
         shell: bash
         run: |
-          git add -- data/revenue_strategy.json ai-tool-finder.html index.html news.html partner-offers.html partner-offers search-intent sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js
+          git add -- data/revenue_strategy.json data/conversion_strategy.json data/distribution_queue.json data/paid_campaign_plan.json ai-tool-finder.html index.html news.html newsletter feed.xml partner-offers.html partner-offers search-intent sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js ':(glob)**/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

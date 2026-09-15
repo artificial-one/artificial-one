@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+"""Generate a commercial RSS feed and optionally distribute one useful post."""
+
+from __future__ import annotations
+
+import argparse
+from datetime import datetime, timezone
+from hashlib import sha256
+from html import escape
+import json
+import os
+from pathlib import Path
+from typing import Any
+from urllib.request import Request, urlopen
+
+
+ROOT = Path(__file__).resolve().parents[1]
+OFFERS_PATH = ROOT / "data" / "partner_offers.json"
+STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
+FEED_PATH = ROOT / "feed.xml"
+QUEUE_PATH = ROOT / "data" / "distribution_queue.json"
+
+
+def load(path: Path) -> dict[str, Any]:
+    value = json.loads(path.read_text(encoding="utf-8"))
+    return value if isinstance(value, dict) else {}
+
+
+def queue() -> list[dict[str, str]]:
+    offers = [item for item in load(OFFERS_PATH).get("offers", []) if item.get("status") == "published"]
+    ranking = [str(item) for item in load(STRATEGY_PATH).get("ranking", [])]
+    position = {offer_id: index for index, offer_id in enumerate(ranking)}
+    offers.sort(key=lambda item: (position.get(str(item["id"]), len(position)), str(item["name"])))
+    result = []
+    for offer in offers:
+        url = f"https://artificial.one/partner-offers/{offer['slug']}.html?utm_source=distribution&utm_medium=social&utm_campaign=tool-guides"
+        text = f"Who is {offer['name']} best for? {offer['best_for']} Compare its use cases, limitations and current pricing notes: {url} #AITools"
+        result.append({"id": str(offer["id"]), "title": f"{offer['name']} review and pricing guide", "url": url, "text": text[:295]})
+    return result
+
+
+def write_public_outputs(items: list[dict[str, str]]) -> None:
+    QUEUE_PATH.write_text(json.dumps({"version": 1, "items": items}, indent=2) + "\n", encoding="utf-8")
+    now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+    rows = "".join(
+        f"<item><title>{escape(item['title'])}</title><link>{escape(item['url'])}</link><guid>{escape(item['url'])}</guid><description>{escape(item['text'])}</description><pubDate>{now}</pubDate></item>"
+        for item in items
+    )
+    FEED_PATH.write_text(f'''<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>artificial.one AI tool guides</title><link>https://artificial.one/</link><description>Independent AI tool comparisons, use cases and current partner offers.</description>{rows}</channel></rss>\n''', encoding="utf-8")
+
+
+def post_bluesky(handle: str, password: str, text: str) -> None:
+    login = Request("https://bsky.social/xrpc/com.atproto.server.createSession", data=json.dumps({"identifier": handle, "password": password}).encode(), headers={"Content-Type": "application/json"}, method="POST")
+    with urlopen(login, timeout=30) as response:
+        session = json.load(response)
+    payload = {"repo": session["did"], "collection": "app.bsky.feed.post", "record": {"$type": "app.bsky.feed.post", "text": text, "createdAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")}}
+    request = Request("https://bsky.social/xrpc/com.atproto.repo.createRecord", data=json.dumps(payload).encode(), headers={"Authorization": f"Bearer {session['accessJwt']}", "Content-Type": "application/json"}, method="POST")
+    with urlopen(request, timeout=30):
+        pass
+
+
+def post_webhook(url: str, item: dict[str, str]) -> None:
+    request = Request(url, data=json.dumps({"source": "artificial.one", **item}).encode(), headers={"Content-Type": "application/json"}, method="POST")
+    with urlopen(request, timeout=30):
+        pass
+
+
+def run(state_path: Path) -> str:
+    items = queue()
+    write_public_outputs(items)
+    if not items or (os.environ.get("DISTRIBUTION_SEND_ENABLED") or "").casefold() != "true":
+        return "RSS and distribution queue refreshed; external posting is disabled"
+    try:
+        state = load(state_path)
+    except (OSError, json.JSONDecodeError):
+        state = {"version": 1, "sent": []}
+    sent = list(state.get("sent", []))
+    item = next((candidate for candidate in items if sha256(candidate["text"].encode()).hexdigest() not in sent), None)
+    if not item:
+        return "RSS refreshed; every queued guide was already distributed"
+    handle = (os.environ.get("BLUESKY_HANDLE") or "").strip()
+    password = (os.environ.get("BLUESKY_APP_PASSWORD") or "").strip()
+    webhook = (os.environ.get("DISTRIBUTION_WEBHOOK_URL") or "").strip()
+    delivered = 0
+    if handle and password:
+        post_bluesky(handle, password, item["text"])
+        delivered += 1
+    if webhook:
+        post_webhook(webhook, item)
+        delivered += 1
+    if not delivered:
+        return "RSS refreshed; no external distribution account is connected"
+    sent.append(sha256(item["text"].encode()).hexdigest())
+    state_path.parent.mkdir(parents=True, exist_ok=True)
+    state_path.write_text(json.dumps({"version": 1, "sent": sent[-200:]}, indent=2) + "\n", encoding="utf-8")
+    return f"distributed one guide through {delivered} connected channel(s)"
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--state", type=Path, default=ROOT / ".revenue-acceleration" / "distribution.json")
+    args = parser.parse_args()
+    print(run(args.state))

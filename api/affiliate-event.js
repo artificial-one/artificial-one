@@ -5,6 +5,7 @@ const PREVIEW_ORIGIN = /^https:\/\/[a-z0-9-]+\.vercel\.app$/i;
 const SAFE_ID = /^[a-z0-9][a-z0-9-]{0,63}$/i;
 const SAFE_PLACEMENT = /^[a-z0-9][a-z0-9_-]{0,79}$/i;
 const SAFE_PATH = /^\/[a-z0-9/_\-.]{0,300}$/i;
+const SAFE_CHANNEL = /^[a-z0-9][a-z0-9_-]{0,79}$/i;
 
 function clean(value, pattern, fallback) {
   const text = typeof value === "string" ? value.trim() : "";
@@ -42,6 +43,8 @@ async function persistAggregate(event) {
     ["HINCRBY", key, `offer:${event.offer_id}`, 1],
     ["HINCRBY", key, `placement:${event.placement}`, 1],
     ["HINCRBY", key, `page:${event.page_path}`, 1],
+    ["HINCRBY", key, `source:${event.source}`, 1],
+    ["HINCRBY", key, `campaign:${event.campaign}`, 1],
     ["PFADD", `${key}:sessions`, hash],
     ["EXPIRE", key, 63072000],
     ["EXPIRE", `${key}:sessions`, 63072000],
@@ -111,6 +114,8 @@ module.exports = async function handler(req, res) {
     placement: clean(body.placement, SAFE_PLACEMENT, "unknown"),
     page_path: clean(body.page_path, SAFE_PATH, "/"),
     session_id: clean(body.session_id, /^[a-z0-9-]{1,80}$/i, "anonymous"),
+    source: clean(body.source, SAFE_CHANNEL, "direct"),
+    campaign: clean(body.campaign, SAFE_CHANNEL, "organic"),
   };
 
   const results = await Promise.allSettled([

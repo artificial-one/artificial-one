@@ -3,7 +3,7 @@
 
 The script is deterministic so it can run unattended in GitHub Actions. It
 only promotes offers whose registry status is ``published`` and whose target
-files match an explicitly reviewed path rule.
+files either match an explicit rule or pass the configured relevance score.
 """
 
 from __future__ import annotations
@@ -29,6 +29,18 @@ MANAGED_RE = re.compile(
     r"<!-- affiliate-placement:(?P=id):end -->",
     re.I | re.S,
 )
+TOKEN_RE = re.compile(r"[a-z0-9]+")
+AUTO_EXCLUDED = {
+    "about.html", "contact.html", "disclosure.html", "index.html",
+    "news.html", "partner-offers.html", "partners.html", "privacy.html",
+    "terms.html", "ai-tool-finder.html",
+}
+STOP_WORDS = {
+    "about", "after", "against", "and", "artificial", "best", "business",
+    "change", "choose", "current", "for", "from", "into", "more", "one",
+    "platform", "pricing", "software", "teams", "that", "the", "their",
+    "this", "tool", "tools", "use", "using", "verify", "with", "your",
+}
 
 
 class MonetizationError(ValueError):
@@ -182,6 +194,82 @@ def selected_pages(rule: dict[str, Any]) -> list[Path]:
     return sorted(selected)
 
 
+def _tokens(value: str) -> set[str]:
+    return {token for token in TOKEN_RE.findall(value.casefold()) if len(token) > 2 and token not in STOP_WORDS}
+
+
+def page_signal(relative: str, text: str) -> tuple[set[str], str]:
+    title = " ".join(re.findall(r"<(?:title|h1)[^>]*>(.*?)</(?:title|h1)>", text, re.I | re.S))
+    descriptions = " ".join(re.findall(r'<meta[^>]+(?:name=["\']description["\'][^>]+content|content)=["\']([^"\']+)', text, re.I))
+    signal = re.sub(r"<[^>]+>", " ", f"{relative} {title} {descriptions}")
+    return _tokens(signal), re.sub(r"[^a-z0-9]+", "", signal.casefold())
+
+
+def offer_relevance(offer: dict[str, Any], page_tokens: set[str], compact_page: str) -> int:
+    name = str(offer.get("name") or "")
+    name_tokens = _tokens(name)
+    category_tokens = _tokens(str(offer.get("category") or ""))
+    use_case_tokens = _tokens(" ".join(str(item) for item in offer.get("use_cases", [])))
+    audience_tokens = _tokens(str(offer.get("best_for") or ""))
+    score = 8 * len(name_tokens & page_tokens)
+    score += 4 * len(category_tokens & page_tokens)
+    score += 2 * len(use_case_tokens & page_tokens)
+    score += len(audience_tokens & page_tokens)
+    compact_name = re.sub(r"[^a-z0-9]+", "", name.casefold())
+    if len(compact_name) >= 5 and compact_name in compact_page:
+        score += 20
+    return score
+
+
+def automatic_page_rules(
+    config: dict[str, Any], offers: dict[str, dict[str, Any]], already_selected: set[Path]
+) -> dict[Path, dict[str, Any]]:
+    settings = config.get("automatic", {})
+    if not isinstance(settings, dict) or not settings.get("enabled"):
+        return {}
+    roots = tuple(str(item) for item in settings.get("eligible_roots", []))
+    minimum = max(1, int(settings.get("minimum_score") or 8))
+    limit = max(0, min(1000, int(settings.get("max_pages") or 0)))
+    candidates: list[tuple[int, str, Path, dict[str, Any]]] = []
+    tracking_urls = tuple(str(item["tracking_url"]) for item in offers.values())
+    for page in ROOT.rglob("*.html"):
+        relative = page.relative_to(ROOT).as_posix()
+        if (
+            page in already_selected
+            or relative in AUTO_EXCLUDED
+            or relative.startswith(("partner-offers/", "search-intent/", ".git/"))
+            or (roots and not relative.startswith(roots))
+        ):
+            continue
+        text = page.read_text(encoding="utf-8", errors="ignore")
+        # Re-score an existing automatic placement from the page's underlying
+        # content. Otherwise its own CTA would make the next run exclude it,
+        # causing the generator to oscillate between adding and removing it.
+        scoring_text = MANAGED_RE.sub("", text)
+        if "data-affiliate-offer" in scoring_text or any(url in scoring_text for url in tracking_urls):
+            continue
+        tokens, compact = page_signal(relative, scoring_text)
+        if not tokens:
+            continue
+        ranked = sorted(
+            ((offer_relevance(offer, tokens, compact), offer_id, offer) for offer_id, offer in offers.items()),
+            key=lambda item: (-item[0], item[1]),
+        )
+        score, offer_id, offer = ranked[0]
+        if score < minimum:
+            continue
+        rule = {
+            "id": f"auto-context-{offer_id}",
+            "offer_id": offer_id,
+            "headline": f"A relevant option for this workflow: {offer['name']}",
+            "copy": str(offer.get("why_consider") or offer.get("summary") or ""),
+            "cta_label": str(offer.get("cta_label") or f"Explore {offer['name']}"),
+        }
+        candidates.append((score, relative, page, rule))
+    candidates.sort(key=lambda item: (-item[0], item[1]))
+    return {page: rule for _score, _relative, page, rule in candidates[:limit]}
+
+
 def apply(root: Path = ROOT, check: bool = False) -> list[Path]:
     if root != ROOT:
         raise MonetizationError("Alternate roots are not supported")
@@ -205,6 +293,9 @@ def apply(root: Path = ROOT, check: bool = False) -> list[Path]:
             # One contextual commercial block per page keeps recommendations
             # useful and avoids turning high-intent articles into link farms.
             page_rules.setdefault(page, [rule])
+
+    for page, rule in automatic_page_rules(config, offers, set(page_rules)).items():
+        page_rules.setdefault(page, [rule])
 
     candidate_pages = set(page_rules)
     for page in ROOT.rglob("*.html"):

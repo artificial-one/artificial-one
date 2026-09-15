@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "live_enabled": false,
+  "max_daily_budget_cents": 500,
+  "max_cpc_cents": 30,
+  "stop_loss_cents": 1500,
+  "minimum_clicks_before_decision": 30,
+  "conversion_action_verified": false,
+  "target_country_criteria": [],
+  "program_rules": {},
+  "note": "Each program must explicitly set paid_search_allowed=true after its advertising and brand-bidding terms are verified."
+}

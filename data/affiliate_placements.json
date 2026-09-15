@@ -1,5 +1,11 @@
 {
   "version": 1,
+  "automatic": {
+    "enabled": true,
+    "max_pages": 450,
+    "minimum_score": 8,
+    "eligible_roots": ["best/", "blog", "category/", "compare/", "guides/", "tools/", "tutorials/"]
+  },
   "placements": [
     {
       "id": "descript-video-audio-intent",

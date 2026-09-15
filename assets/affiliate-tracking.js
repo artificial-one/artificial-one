@@ -19,12 +19,27 @@
 
   var sessionId = safeSessionId();
 
+  function campaignContext() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      return {
+        source: compactSubId(params.get("utm_source"), "direct"),
+        campaign: compactSubId(params.get("utm_campaign"), "organic")
+      };
+    } catch (_) {
+      return { source: "direct", campaign: "organic" };
+    }
+  }
+
   function eventPayload(link, eventName) {
+    var context = campaignContext();
     return {
       event: eventName || "affiliate_click",
       offer_id: link.dataset.offerId || "unknown",
       placement: link.dataset.placement || "unknown",
       page_path: window.location.pathname,
+      source: context.source,
+      campaign: context.campaign,
       session_id: sessionId,
       occurred_at: new Date().toISOString()
     };
@@ -49,7 +64,8 @@
         url.searchParams.set("sid2", compactSubId(link.dataset.placement, "placement"));
       }
       if (!url.searchParams.has("sid3")) {
-        url.searchParams.set("sid3", compactSubId(window.location.pathname, "home"));
+        var context = campaignContext();
+        url.searchParams.set("sid3", context.campaign !== "organic" ? context.campaign : compactSubId(window.location.pathname, "home"));
       }
       link.href = url.toString();
     } catch (_) {
@@ -103,7 +119,36 @@
     }
   }
 
-  function installStickyRecommendation() {
+  function hashBucket(value) {
+    var hash = 2166136261;
+    for (var index = 0; index < value.length; index += 1) {
+      hash ^= value.charCodeAt(index);
+      hash = Math.imul(hash, 16777619);
+    }
+    return (hash >>> 0) % 100;
+  }
+
+  function selectVariant(strategy) {
+    var sticky = strategy && strategy.sticky ? strategy.sticky : {};
+    var variants = sticky.variants || {};
+    var bucket = hashBucket(sessionId + ":" + window.location.pathname);
+    var winner = sticky.mode === "winner" && (sticky.winner === "a" || sticky.winner === "b") ? sticky.winner : null;
+    var key = winner ? (bucket < 90 ? winner : (winner === "a" ? "b" : "a")) : (bucket < 50 ? "a" : "b");
+    return {
+      key: key,
+      message: variants[key] && variants[key].message ? variants[key].message : "Considering this tool? Check the current partner offer.",
+      cta: variants[key] && variants[key].cta ? variants[key].cta : "View partner offer"
+    };
+  }
+
+  function loadConversionStrategy() {
+    if (!window.fetch) return Promise.resolve({});
+    return window.fetch("/data/conversion_strategy.json", { credentials: "same-origin", cache: "no-cache" })
+      .then(function (response) { return response.ok ? response.json() : {}; })
+      .catch(function () { return {}; });
+  }
+
+  function installStickyRecommendation(strategy) {
     var source = document.querySelector("a[data-affiliate-offer]");
     if (!source || document.getElementById("affiliate-sticky-recommendation")) return;
 
@@ -118,12 +163,13 @@
     bar.style.cssText = "position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;display:none;align-items:center;justify-content:center;gap:14px;padding:12px 46px 12px 16px;border:1px solid #c7d2fe;border-radius:14px;background:rgba(255,255,255,.97);box-shadow:0 14px 40px rgba(15,23,42,.2);backdrop-filter:blur(10px);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif";
 
     var label = document.createElement("span");
-    label.textContent = "Considering this tool? Check the current partner offer.";
+    var variant = selectVariant(strategy);
+    label.textContent = variant.message;
     label.style.cssText = "color:#334155;font-size:14px;font-weight:600";
 
     var link = source.cloneNode(true);
-    link.textContent = source.textContent.trim() || "View partner offer";
-    link.dataset.placement = (source.dataset.placement || "affiliate") + "-sticky";
+    link.textContent = variant.cta;
+    link.dataset.placement = (source.dataset.placement || "affiliate") + "-sticky-cro-" + variant.key;
     link.style.cssText = "display:inline-block;flex:0 0 auto;padding:10px 16px;border-radius:9px;background:#4f46e5;color:#fff;font-size:14px;font-weight:700;text-decoration:none";
 
     var close = document.createElement("button");
@@ -186,11 +232,15 @@
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
-      installStickyRecommendation();
-      trackVisibleRecommendations();
+      loadConversionStrategy().then(function (strategy) {
+        installStickyRecommendation(strategy);
+        trackVisibleRecommendations();
+      });
     });
   } else {
-    installStickyRecommendation();
-    trackVisibleRecommendations();
+    loadConversionStrategy().then(function (strategy) {
+      installStickyRecommendation(strategy);
+      trackVisibleRecommendations();
+    });
   }
 })();

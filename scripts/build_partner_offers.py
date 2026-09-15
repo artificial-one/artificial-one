@@ -254,6 +254,7 @@ def shell(
   <meta property="og:image" content="https://artificial.one/images/og-homepage.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="affiliate-event-endpoint" content="/api/affiliate-event">
+  <link rel="alternate" type="application/rss+xml" title="artificial.one AI tool guides" href="{prefix}feed.xml">
   {json_ld(structured_data) if structured_data else ""}
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
