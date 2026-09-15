@@ -358,6 +358,7 @@ def render_news_page(
   <title>Latest AI, LLM &amp; AI Tools News | artificial.one</title>
   <meta name="description" content="An automatically refreshed feed of AI, LLM and AI tool headlines from official labs and established technology publications.">
   <link rel="canonical" href="https://artificial.one/news.html">
+  <meta name="affiliate-event-endpoint" content="/api/affiliate-event">
   <meta property="og:title" content="Latest AI, LLM &amp; AI Tools News | artificial.one">
   <meta property="og:description" content="Recent AI headlines, linked directly to their original sources.">
   <meta property="og:type" content="website"><meta property="og:url" content="https://artificial.one/news.html">
@@ -370,6 +371,7 @@ def render_news_page(
 <section class="hero"><small>Automatically refreshed</small><h1>Latest AI, LLM &amp; AI tool news</h1><p>Headlines from official research labs and established technology publications. We link to the original reporting and do not republish article bodies.</p></section>
 <main><div class="notice">Last material update: {html.escape(updated_at)} · Sources are allowlisted and feed content is treated as untrusted data.</div>{picks_section}<div class="grid">{cards}</div></main>
 <footer>© {datetime.now(timezone.utc).year} artificial.one · <a href="about.html">About</a> · <a href="partner-offers.html">Partner offers</a></footer>
+<script src="assets/affiliate-tracking.js" defer></script>
 </body></html>
 '''
 

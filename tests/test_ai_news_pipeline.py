@@ -81,6 +81,8 @@ class AiNewsPipelineTests(unittest.TestCase):
         rendered = news.render_news_page([item], "2026-09-15", [])
         self.assertIn("data-content-route", rendered)
         self.assertLess(rendered.index('class="route"'), rendered.index('class="source"'))
+        self.assertIn('meta name="affiliate-event-endpoint" content="/api/affiliate-event"', rendered)
+        self.assertIn('script src="assets/affiliate-tracking.js" defer', rendered)
 
 
 if __name__ == "__main__":
