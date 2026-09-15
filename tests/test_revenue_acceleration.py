@@ -36,12 +36,24 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertTrue(items)
         self.assertTrue(all("artificial.one" in item["url"] for item in items))
         self.assertTrue(all("utm_source=distribution" in item["url"] for item in items))
+        self.assertTrue(all(item["image"].startswith("https://artificial.one/images/social-cards/") for item in items))
+        self.assertTrue(all(item["image_alt"] for item in items))
+        self.assertTrue(all("utm_" not in item["text"] for item in items))
 
     def test_channel_delivery_replaces_generic_source(self):
         item = distribution.queue()[0]
         delivered = distribution.channel_item(item, "bluesky")
         self.assertIn("utm_source=bluesky", delivered["url"])
-        self.assertIn(delivered["url"], delivered["text"])
+        self.assertNotIn(delivered["url"], delivered["text"])
+
+    def test_bluesky_post_uses_clickable_visual_card(self):
+        item = distribution.channel_item(distribution.queue()[0], "bluesky")
+        thumbnail = {"$type": "blob", "ref": {"$link": "example"}, "mimeType": "image/jpeg", "size": 123}
+        record = distribution.bluesky_record(item, thumbnail)
+        self.assertEqual(record["embed"]["$type"], "app.bsky.embed.external")
+        self.assertEqual(record["embed"]["external"]["uri"], item["url"])
+        self.assertEqual(record["embed"]["external"]["thumb"], thumbnail)
+        self.assertEqual(record["langs"], ["en"])
 
     def test_connected_channel_activates_without_manual_flag(self):
         original_post = distribution.post_webhook
@@ -78,6 +90,8 @@ class RevenueAccelerationTests(unittest.TestCase):
                 distribution.FEED_PATH, distribution.QUEUE_PATH = original_feed, original_queue
         self.assertIn('rel="hub"', feed)
         self.assertIn('rel="self"', feed)
+        self.assertIn('xmlns:media=', feed)
+        self.assertIn('<media:content', feed)
 
     def test_paid_plan_is_blocked_by_default(self):
         plan = paid.build_plan()

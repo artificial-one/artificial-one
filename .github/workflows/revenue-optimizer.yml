@@ -47,6 +47,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install social-card image support
+        run: python -m pip install --disable-pip-version-check "Pillow>=12.0.0"
+
       - name: Restore private publishing state
         uses: actions/cache@v5
         with:
@@ -79,6 +82,7 @@ jobs:
           python scripts/build_ai_news.py --cached
           python scripts/build_decision_tools.py
           python scripts/build_sponsorship.py
+          python scripts/build_social_media.py
 
       - name: Monitor first-party offer changes
         run: python scripts/monitor_offer_changes.py --state .offer-monitor/private-state.json
@@ -121,6 +125,7 @@ jobs:
           python scripts/build_ai_news.py --check
           python scripts/build_decision_tools.py --check
           python scripts/build_sponsorship.py --check
+          python scripts/build_social_media.py --check
           python scripts/monitor_offer_changes.py --check
           python scripts/indexing_recovery.py --check
           node --check api/sponsor-checkout.js
@@ -129,7 +134,7 @@ jobs:
       - name: Commit only public, privacy-safe optimization output
         shell: bash
         run: |
-          git add -- data/revenue_strategy.json data/conversion_strategy.json data/distribution_queue.json data/paid_campaign_plan.json data/offer_change_alerts.json data/indexing_recovery.json ai-tool-finder.html index.html news.html newsletter feed.xml partner-offers.html partner-offers search-intent calculators decision-tools.html ai-stack-builder.html buyers-guides.html offer-updates.html sponsor.html sponsor-success.html sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js a10e20260915d74b93c2f18e7a45c901.txt ':(glob)**/*.html'
+          git add -- data/revenue_strategy.json data/conversion_strategy.json data/distribution_queue.json data/paid_campaign_plan.json data/offer_change_alerts.json data/indexing_recovery.json ai-tool-finder.html index.html news.html newsletter feed.xml partner-offers.html partner-offers search-intent calculators decision-tools.html ai-stack-builder.html buyers-guides.html offer-updates.html sponsor.html sponsor-success.html sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js a10e20260915d74b93c2f18e7a45c901.txt images/social images/social-cards ':(glob)**/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
