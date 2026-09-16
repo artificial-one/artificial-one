@@ -1,16 +1,29 @@
 {
   "incoming_link_distribution": {
-    "1": 20,
-    "3+": 52
+    "1": 35,
+    "3+": 40
   },
   "indexnow": {
     "key_location": "https://artificial.one/a10e20260915d74b93c2f18e7a45c901.txt",
     "submission_enabled": true
   },
-  "issues": [],
+  "issues": [
+    {
+      "issue": "sitemap",
+      "path": "calculators/beautiful-ai-presentations-value-calculator.html"
+    },
+    {
+      "issue": "sitemap",
+      "path": "calculators/descript-ai-video-editing-value-calculator.html"
+    },
+    {
+      "issue": "sitemap",
+      "path": "calculators/elevenlabs-ai-voice-value-calculator.html"
+    }
+  ],
   "method": "static-commercial-indexability-audit",
   "note": "This report covers static crawl signals. Google indexing verdicts remain private in the Search Console monitor.",
-  "priority_pages": 72,
+  "priority_pages": 75,
   "updated_at": "2026-09-15",
   "version": 1
 }
