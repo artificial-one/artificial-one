@@ -57,6 +57,8 @@ RESOURCES = (
         ("voice-production-cost", "Free AI voice production cost calculator", "calculators/voice-production-cost-calculator.html", "Compare an existing voice-production workflow with an AI-assisted scenario."),
         ("landing-page-roi", "Free landing page ROI calculator", "calculators/landing-page-roi-calculator.html", "Model how a conversion-rate change could affect monthly value before paying for a landing-page tool."),
         ("offer-updates", "AI tool pricing and plan change monitor", "offer-updates.html", "Follow confirmed changes from first-party software vendor pages and verify the current details before buying."),
+        ("ai-tool-database", "Search the AI Tool Intelligence Database", "ai-tool-database.html", "Search normalized AI tool records by workflow, category, free-plan signal and evidence status."),
+        ("ai-tool-alternatives", "Find an AI tool alternative", "ai-tool-alternatives.html", "Choose a tool and switching reason to get a transparent, evidence-weighted migration shortlist."),
 )
 
 

@@ -36,7 +36,18 @@ CANONICAL_RE = re.compile(r'<link\b[^>]*\brel=["\']canonical["\'][^>]*\bhref=["\
 
 
 def priority_pages() -> list[Path]:
-    paths = [ROOT / "ai-tool-finder.html", ROOT / "ai-stack-builder.html", ROOT / "decision-tools.html", ROOT / "offer-updates.html", ROOT / "partner-offers.html", ROOT / "appsumo-ai-tools.html", ROOT / "sponsor.html"]
+    paths = [
+        ROOT / "ai-tool-database.html",
+        ROOT / "ai-tool-alternatives.html",
+        ROOT / "ai-tool-changes.html",
+        ROOT / "ai-tool-finder.html",
+        ROOT / "ai-stack-builder.html",
+        ROOT / "decision-tools.html",
+        ROOT / "offer-updates.html",
+        ROOT / "partner-offers.html",
+        ROOT / "appsumo-ai-tools.html",
+        ROOT / "sponsor.html",
+    ]
     for folder in ("partner-offers", "search-intent", "calculators"):
         paths.extend(sorted((ROOT / folder).glob("*.html")))
     return [path for path in paths if path.exists()]

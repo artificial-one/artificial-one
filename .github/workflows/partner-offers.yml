@@ -20,6 +20,8 @@ on:
       - tests/test_partner_offer_pipeline.py
       - tests/test_affiliate_monetization.py
       - tests/test_affiliate_site_output.py
+      - scripts/build_tool_intelligence.py
+      - tests/test_tool_intelligence.py
   pull_request:
     paths:
       - data/partner_offers.json
@@ -35,6 +37,8 @@ on:
       - tests/test_partner_offer_pipeline.py
       - tests/test_affiliate_monetization.py
       - tests/test_affiliate_site_output.py
+      - scripts/build_tool_intelligence.py
+      - tests/test_tool_intelligence.py
 
 permissions:
   contents: write
@@ -67,10 +71,14 @@ jobs:
       - name: Add approved contextual placements
         run: python scripts/monetize_affiliate_links.py
 
+      - name: Refresh normalized tool intelligence
+        run: python scripts/build_tool_intelligence.py
+
       - name: Check generated output
         run: |
           python scripts/build_partner_offers.py --check
           python scripts/monetize_affiliate_links.py --check
+          python scripts/build_tool_intelligence.py --check
 
       - name: Ensure secrets are not tracked
         shell: bash
@@ -86,7 +94,7 @@ jobs:
         if: github.event_name != 'pull_request'
         shell: bash
         run: |
-          git add -A -- partner-offers.html ai-tool-finder.html sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js
+          git add -A -- partner-offers.html ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js
           if [ -d partner-offers ]; then git add -A -- partner-offers; fi
           git add -A -- '*.html'
           if git diff --cached --quiet; then exit 0; fi

@@ -1,0 +1,88 @@
+name: Refresh AI tool intelligence
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Refresh before the other search and revenue publishers run.
+    - cron: "37 4 * * *"
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/tool-intelligence.yml
+      - scripts/build_tool_intelligence.py
+      - scripts/monitor_tool_intelligence.py
+      - scripts/indexing_recovery.py
+      - data/partner_offers.json
+      - data/appsumo_offers.json
+      - tools/**/*.html
+      - tests/test_tool_intelligence.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: artificial-one-site-publisher
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Restore private source fingerprints and IndexNow state
+        uses: actions/cache@v5
+        with:
+          path: |
+            .tool-intelligence/private-state.json
+            .indexnow/private-state.json
+          key: tool-intelligence-private-${{ github.run_id }}
+          restore-keys: |
+            tool-intelligence-private-
+
+      - name: Build normalized database
+        run: python scripts/build_tool_intelligence.py
+
+      - name: Monitor a rotating vendor-source batch
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            python scripts/monitor_tool_intelligence.py --cached
+          else
+            python scripts/monitor_tool_intelligence.py --state .tool-intelligence/private-state.json --batch-size 75
+          fi
+
+      - name: Refresh crawl discovery and notify participating search engines
+        env:
+          INDEXNOW_SUBMIT_ENABLED: "true"
+        run: python scripts/indexing_recovery.py --submit --state .indexnow/private-state.json
+
+      - name: Verify database, monitoring and crawl assets
+        run: |
+          python -m unittest tests.test_tool_intelligence -v
+          python scripts/build_tool_intelligence.py --check
+          python scripts/monitor_tool_intelligence.py --check
+          python scripts/indexing_recovery.py --check
+
+      - name: Commit only public, privacy-safe intelligence assets
+        shell: bash
+        run: |
+          git add -- data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json data/indexing_recovery.json ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html index.html buyers-guides.html sitemap.xml
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh AI tool intelligence [skip ci]"
+          git push
+
+      - name: Publish public-safe summary
+        run: |
+          echo "## AI Tool Intelligence" >> "$GITHUB_STEP_SUMMARY"
+          echo "The normalized database, migration wizard, repeated-observation change history and crawl assets were refreshed." >> "$GITHUB_STEP_SUMMARY"
+          echo "Raw source observations and fingerprints remain in the private workflow cache." >> "$GITHUB_STEP_SUMMARY"
