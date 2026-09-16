@@ -51,6 +51,9 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertIn("utm_content=2026-09-15", next_day["url"])
         self.assertEqual(first["image_key"], "daily-editorial")
         self.assertEqual(first["daily"], "true")
+        self.assertTrue(first["vertical_image"].endswith("daily-editorial-vertical.jpg"))
+        self.assertEqual(len(first["thread"]), 2)
+        self.assertTrue(all(0 < len(reply) <= 295 for reply in first["thread"]))
 
     def test_editorial_calendar_covers_all_seven_content_slots(self):
         kinds = {distribution.queue(date(2026, 9, 14 + offset))[0]["kind"] for offset in range(7)}
@@ -70,6 +73,28 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertEqual(record["embed"]["external"]["uri"], item["url"])
         self.assertEqual(record["embed"]["external"]["thumb"], thumbnail)
         self.assertEqual(record["langs"], ["en"])
+
+    def test_bluesky_replies_form_one_rooted_thread(self):
+        root = {"uri": "at://did/root", "cid": "root-cid"}
+        parent = {"uri": "at://did/parent", "cid": "parent-cid"}
+        record = distribution.bluesky_reply_record("Useful context", root, parent)
+        self.assertEqual(record["reply"]["root"], root)
+        self.assertEqual(record["reply"]["parent"], parent)
+        self.assertEqual(record["text"], "Useful context")
+
+    def test_friday_editorial_routes_to_checked_appsumo_pulse(self):
+        original = distribution.OFFER_ALERTS_PATH
+        with tempfile.TemporaryDirectory() as folder:
+            empty_alerts = Path(folder) / "alerts.json"
+            empty_alerts.write_text('{"alerts":[]}', encoding="utf-8")
+            distribution.OFFER_ALERTS_PATH = empty_alerts
+            try:
+                item = distribution.queue(date(2026, 9, 18))[0]
+            finally:
+                distribution.OFFER_ALERTS_PATH = original
+        self.assertEqual(item["kind"], "offer-update")
+        self.assertIn("appsumo-ai-tools.html", item["url"])
+        self.assertIn("AppSumo", item["title"])
 
     def test_connected_channel_activates_without_manual_flag(self):
         original_post = distribution.post_webhook

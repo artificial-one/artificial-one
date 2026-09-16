@@ -41,6 +41,7 @@ except ModuleNotFoundError:  # Direct execution
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "data" / "partner_offers.json"
 OUTPUT_DIR = ROOT / "search-intent"
+ROUTE_PATH = ROOT / "data" / "content_routes.json"
 SITEMAP_PATH = ROOT / "sitemap.xml"
 SEARCH_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
 SITEMAP_START = "  <!-- search-revenue:start -->"
@@ -48,6 +49,7 @@ SITEMAP_END = "  <!-- search-revenue:end -->"
 MAX_ALTERNATIVE_PAGES = 8
 MAX_COMPARISON_PAGES = 8
 COLD_START_CLUSTER_SIZE = 6
+VALUE_CALCULATOR_COUNT = 6
 
 
 def intent_cluster(category: str) -> str:
@@ -196,6 +198,41 @@ def render_pricing(offer: dict[str, Any]) -> str:
     )
 
 
+def render_value_calculator(offer: dict[str, Any]) -> str:
+    use_cases = "".join(f"<li>{esc(item)}</li>" for item in offer.get("use_cases", []))
+    calculator = '''<div class="rounded-2xl border border-indigo-200 bg-indigo-50 p-6"><div class="grid gap-5 md:grid-cols-3"><label class="font-bold">Estimated monthly price<input id="tool-cost" class="mt-2 w-full rounded-lg border border-slate-300 bg-white p-3" type="number" min="0" step="1" value="50"></label><label class="font-bold">Hours saved monthly<input id="hours-saved" class="mt-2 w-full rounded-lg border border-slate-300 bg-white p-3" type="number" min="0" step="1" value="10"></label><label class="font-bold">Value of one hour<input id="hour-value" class="mt-2 w-full rounded-lg border border-slate-300 bg-white p-3" type="number" min="0" step="1" value="35"></label></div><div class="mt-6 grid gap-4 md:grid-cols-3"><p class="rounded-xl bg-white p-4"><span class="block text-sm text-slate-500">Monthly value</span><strong id="monthly-value" class="text-2xl">$350</strong></p><p class="rounded-xl bg-white p-4"><span class="block text-sm text-slate-500">Net monthly value</span><strong id="net-value" class="text-2xl">$300</strong></p><p class="rounded-xl bg-white p-4"><span class="block text-sm text-slate-500">Estimated ROI</span><strong id="roi-value" class="text-2xl">600%</strong></p></div></div><script>(function(){var cost=document.getElementById('tool-cost'),hours=document.getElementById('hours-saved'),value=document.getElementById('hour-value');function money(number){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(number)}function update(){var c=Math.max(0,Number(cost.value)||0),h=Math.max(0,Number(hours.value)||0),v=Math.max(0,Number(value.value)||0),gross=h*v,net=gross-c,roi=c?net/c*100:0;document.getElementById('monthly-value').textContent=money(gross);document.getElementById('net-value').textContent=money(net);document.getElementById('roi-value').textContent=(c?roi.toFixed(0):'0')+'%'}[cost,hours,value].forEach(function(input){input.addEventListener('input',update)});update()}());</script>'''
+    content = f'''<section class="bg-white"><div class="mx-auto max-w-5xl px-5 py-16"><p class="text-sm font-bold uppercase tracking-widest text-indigo-600">Free decision calculator</p><h1 class="mt-4 text-4xl font-black md:text-6xl">Is {esc(offer['name'])} worth the cost?</h1><p class="mt-6 max-w-3xl text-lg text-slate-600">Model the value of time saved before choosing a plan. Use your own assumptions; this calculator does not predict results or replace current vendor pricing.</p><div class="mt-8">{calculator}</div><p class="mt-4 text-sm text-slate-500">Calculation: hours saved × hourly value − monthly software cost. Verify the live price and plan limits before subscribing.</p></div></section><section class="mx-auto grid max-w-5xl gap-6 px-5 py-10 md:grid-cols-2"><article class="rounded-2xl border border-slate-200 bg-white p-6"><h2 class="text-2xl font-black">Workflows to evaluate</h2><ul class="mt-4 list-disc space-y-2 pl-5 text-slate-700">{use_cases}</ul><p class="mt-5"><a class="font-bold text-indigo-700" href="../partner-offers/{esc(offer['slug'])}.html">Read the complete fit and limitations guide →</a></p></article><article class="rounded-2xl border border-amber-200 bg-amber-50 p-6"><h2 class="text-2xl font-black">Before buying</h2><p class="mt-3 text-amber-950">{esc(offer['watch_out'])}</p><p class="mt-3 text-sm text-amber-900">{esc(offer['pricing_note'])}</p><div class="mt-6">{cta(offer, 'value-calculator-result')}</div><p class="mt-3 text-xs text-amber-900">Affiliate link. We may earn a commission at no extra cost to you.</p></article></section>'''
+    return shell(
+        title=f"{offer['name']} ROI Calculator: Estimate Monthly Value | artificial.one",
+        description=f"Estimate whether {offer['name']} could justify its monthly cost using your own time-saving and hourly-value assumptions.",
+        canonical_path=f"calculators/{offer['slug']}-value-calculator.html", content=content, prefix="../",
+        structured_data={"@context": "https://schema.org", "@type": "WebApplication", "name": f"{offer['name']} value calculator", "applicationCategory": "BusinessApplication", "isAccessibleForFree": True},
+    )
+
+
+def route_catalog(offers: list[dict[str, Any]]) -> dict[str, Any]:
+    stopwords = {"and", "for", "the", "with", "from", "into", "that", "this", "your", "teams", "tool", "tools", "software", "current", "workflow"}
+    routes = []
+    for offer in offers[:COLD_START_CLUSTER_SIZE]:
+        source = " ".join([str(offer["name"]), str(offer["category"]), str(offer["best_for"]), *map(str, offer.get("use_cases", []))])
+        words = [word for word in re.findall(r"[a-z0-9]+", source.casefold()) if len(word) >= 4 and word not in stopwords]
+        keywords = list(dict.fromkeys(words))[:18]
+        routes.append({
+            "offer_id": str(offer["id"]),
+            "name": str(offer["name"]),
+            "summary": str(offer["summary"]),
+            "url": f"/partner-offers/{offer['slug']}.html",
+            "calculator_url": f"/calculators/{offer['slug']}-value-calculator.html",
+            "strong_keywords": list(dict.fromkeys([
+                str(offer["name"]).casefold(),
+                str(offer["category"]).casefold(),
+                *[str(item).casefold() for item in offer.get("use_cases", [])[:2]],
+            ])),
+            "keywords": keywords,
+        })
+    return {"version": 1, "method": "reviewed-keyword-context-router", "routes": routes}
+
+
 def demand_catalog(offers: list[dict[str, Any]]) -> dict[str, tuple[dict[str, Any], str, int]]:
     result: dict[str, tuple[dict[str, Any], str, int]] = {}
     for offer in offers:
@@ -262,6 +299,9 @@ def planned_pages(offers: list[dict[str, Any]]) -> dict[Path, str]:
             competitor = alternatives[0]
             pages[OUTPUT_DIR / f"{primary['slug']}-vs-{competitor['slug']}.html"] = render_comparison(primary, competitor)
 
+    for primary in offers[:VALUE_CALCULATOR_COUNT]:
+        pages[ROOT / "calculators" / f"{primary['slug']}-value-calculator.html"] = render_value_calculator(primary)
+
     comparisons = 0
     for category, members in sorted(by_category.items()):
         if len(members) < 2:
@@ -316,23 +356,29 @@ def build(check: bool = False) -> int:
     registry = load_registry(REGISTRY_PATH)
     offers = apply_search_priority(apply_revenue_strategy(public_offers(validate_registry(registry), date.today())))
     expected = planned_pages(offers)
+    route_expected = json.dumps(route_catalog(offers), indent=2, ensure_ascii=False, sort_keys=True) + "\n"
     sitemap_source = SITEMAP_PATH.read_text(encoding="utf-8")
     sitemap_expected = update_sitemap(sitemap_source, list(expected), str(registry["updated_at"]))
     stale = [path for path, value in expected.items() if not path.exists() or path.read_text(encoding="utf-8") != value]
+    # Only clean the dedicated search-intent directory. Calculators are shared
+    # with the decision-tools pipeline, so removing unknown generated files here
+    # would cross ownership boundaries.
     existing = {path for path in OUTPUT_DIR.glob("*.html")} if OUTPUT_DIR.exists() else set()
     removable = {path for path in existing - set(expected) if GENERATED_MARKER in path.read_text(encoding="utf-8", errors="ignore")}
     if check:
-        if stale or removable or sitemap_source != sitemap_expected:
+        if stale or removable or sitemap_source != sitemap_expected or not ROUTE_PATH.exists() or ROUTE_PATH.read_text(encoding="utf-8") != route_expected:
             print("Search revenue pages are stale.", file=sys.stderr)
             return 1
         print(f"Search revenue build is current ({len(expected)} pages).")
         return 0
     OUTPUT_DIR.mkdir(exist_ok=True)
+    (ROOT / "calculators").mkdir(exist_ok=True)
     for path, value in expected.items():
         path.write_text(value, encoding="utf-8")
     for path in removable:
         path.unlink()
     SITEMAP_PATH.write_text(sitemap_expected, encoding="utf-8")
+    ROUTE_PATH.write_text(route_expected, encoding="utf-8")
     print(f"Built {len(expected)} deterministic commercial-intent pages.")
     return 0
 

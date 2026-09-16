@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 from textwrap import shorten
+from typing import Any
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
@@ -19,6 +20,7 @@ CARD_DIR = ROOT / "images" / "social-cards"
 AVATAR = SOCIAL_DIR / "bluesky-avatar.png"
 BANNER = SOCIAL_DIR / "bluesky-banner.jpg"
 CARD_SIZE = (1200, 630)
+VERTICAL_SIZE = (1000, 1500)
 
 
 def font(size: int, *, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
@@ -102,7 +104,7 @@ def build_profile_assets() -> None:
     banner.save(BANNER, format="JPEG", quality=88, optimize=True, progressive=True)
 
 
-def build_card(item: dict[str, str], index: int) -> Path:
+def build_card(item: dict[str, Any], index: int) -> Path:
     CARD_DIR.mkdir(parents=True, exist_ok=True)
     centering = (0.42 + ((index % 3) * 0.08), 0.5)
     card = base_image(CARD_SIZE, centering=centering)
@@ -143,7 +145,40 @@ def build_card(item: dict[str, str], index: int) -> Path:
     return output
 
 
-def validate(items: list[dict[str, str]]) -> list[str]:
+def build_vertical_card(item: dict[str, Any]) -> Path:
+    """Create a Pinterest/Shorts-ready portrait asset for today's editorial."""
+    CARD_DIR.mkdir(parents=True, exist_ok=True)
+    card = base_image(VERTICAL_SIZE, centering=(0.58, 0.5))
+    overlay = Image.new("RGBA", card.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay, "RGBA")
+    draw.rectangle((0, 0, 1000, 1500), fill=(4, 8, 30, 75))
+    draw.rounded_rectangle((64, 80, 936, 1418), radius=54, fill=(7, 12, 38, 218), outline=(167, 139, 250, 125), width=3)
+    draw.rounded_rectangle((110, 132, 470, 196), radius=30, fill=(99, 102, 241, 240))
+    draw.text((142, 150), "DAILY AI DECISION BRIEF", font=font(21, bold=True), fill="white")
+
+    title_face = font(72, bold=True)
+    y = 270
+    for line in wrapped_lines(draw, item["title"], title_face, 760, 5):
+        draw.text((112, y), line, font=title_face, fill="white")
+        y += 88
+    y += 32
+    description_face = font(36)
+    for line in wrapped_lines(draw, item["description"], description_face, 760, 6):
+        draw.text((114, y), line, font=description_face, fill=(224, 231, 255, 255))
+        y += 52
+
+    draw.rounded_rectangle((106, 1190, 894, 1300), radius=28, fill=(124, 58, 237, 245))
+    draw.text((188, 1221), "Read the independent guide →", font=font(34, bold=True), fill="white")
+    logo_mark(overlay, (112, 1330, 180, 1398))
+    draw.text((202, 1339), "artificial.one", font=font(31, bold=True), fill="white")
+
+    card = Image.alpha_composite(card.convert("RGBA"), overlay).convert("RGB")
+    output = CARD_DIR / "daily-editorial-vertical.jpg"
+    card.save(output, format="JPEG", quality=86, optimize=True, progressive=True)
+    return output
+
+
+def validate(items: list[dict[str, Any]]) -> list[str]:
     errors = []
     for item in items:
         card = CARD_DIR / f"{item.get('image_key', item['id'])}.jpg"
@@ -159,6 +194,13 @@ def validate(items: list[dict[str, str]]) -> list[str]:
             errors.append(f"missing profile asset: {asset.relative_to(ROOT)}")
         elif asset.stat().st_size > 1_000_000:
             errors.append(f"profile asset exceeds 1 MB: {asset.relative_to(ROOT)}")
+    daily = next((item for item in items if item.get("daily") == "true"), None)
+    if daily:
+        vertical = CARD_DIR / "daily-editorial-vertical.jpg"
+        if not vertical.exists():
+            errors.append(f"missing vertical card: {vertical.relative_to(ROOT)}")
+        elif vertical.stat().st_size > 1_500_000:
+            errors.append(f"vertical card exceeds 1.5 MB: {vertical.relative_to(ROOT)}")
     return errors
 
 
@@ -171,6 +213,9 @@ def main() -> int:
         build_profile_assets()
         for index, item in enumerate(items):
             build_card(item, index)
+        daily = next((item for item in items if item.get("daily") == "true"), None)
+        if daily:
+            build_vertical_card(daily)
         print(f"Built {len(items)} social cards and branded Bluesky profile artwork.")
     errors = validate(items)
     if errors:

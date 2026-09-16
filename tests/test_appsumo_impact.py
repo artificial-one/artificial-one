@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 
 from scripts import affiliate_network_monitor as monitor
@@ -61,6 +62,24 @@ class AppSumoImpactTests(unittest.TestCase):
         self.assertIn("AppSumo AI deals available today", page)
         self.assertIn("data-deal-card", page)
         self.assertIn('id="deal-search"', page)
+        self.assertIn("Today's checked deal pulse", page)
+
+    def test_deal_pulse_is_deterministic_and_homepage_safe(self):
+        registry = {"offers": [
+            {"id": f"deal-{index}", "name": f"Deal {index}", "category": "AI tools", "tracking_url": f"https://appsumo.8odi.net/{index}", "editorial_url": f"guide-{index}.html", "ai_relevant": True, "availability": "active", "last_checked_at": "2026-09-15", "slug": f"deal-{index}", "source_status": "new" if index == 0 else "approved"}
+            for index in range(5)
+        ]}
+        first = appsumo.deal_picks(registry, date(2026, 9, 16))
+        repeated = appsumo.deal_picks(registry, date(2026, 9, 16))
+        self.assertEqual(first, repeated)
+        self.assertEqual(len(first), 3)
+        self.assertEqual(first[0]["id"], "deal-0")
+        source = "<main>\n      {/* Featured Tools */}\n</main>"
+        rendered = appsumo.update_homepage(source, registry, date(2026, 9, 16))
+        rendered = appsumo.update_homepage(rendered, registry, date(2026, 9, 16))
+        self.assertEqual(rendered.count(appsumo.HOMEPAGE_START), 1)
+        self.assertIn('data-placement="homepage-deal-pulse"', rendered)
+        self.assertIn('rel="nofollow sponsored noopener"', rendered)
 
     def test_impact_subids_and_runtime_expiry_guard_are_installed(self):
         script = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
@@ -108,6 +127,18 @@ class AppSumoImpactTests(unittest.TestCase):
             path.write_text(json.dumps(payload), encoding="utf-8")
             coverage = monitor.website_coverage(path)
         self.assertEqual(coverage["promotable"], 1)
+
+    def test_private_dashboard_reports_first_100_click_goal(self):
+        _subject, text, html = monitor.render_dashboard(
+            {"rewards": {}, "transactions": {}, "partnerships": {}, "customers": {}},
+            {"connected": True, "actions": {"count": 0}, "programs": {}, "invoices": {}},
+            {"total": 5}, {"total": 100}, {"total": 20}, {"total": 2},
+            {"inventory": 184, "active": 151, "checking": 0, "expired": 33, "promotable": 100},
+            [], "https://example.test/run",
+        )
+        self.assertIn("5/100 (5%)", text)
+        self.assertIn("Drive 95 more qualified affiliate clicks", text)
+        self.assertIn("Clicks remaining to goal", html)
 
 
 if __name__ == "__main__":

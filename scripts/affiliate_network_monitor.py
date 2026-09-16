@@ -161,12 +161,19 @@ def render_dashboard(
     today = date.today().isoformat()
     ctr = (int(clicks.get("total") or 0) / int(impressions.get("total") or 1) * 100) if int(impressions.get("total") or 0) else 0
     visit_click_rate = (int(clicks.get("total") or 0) / int(visits.get("total") or 1) * 100) if int(visits.get("total") or 0) else 0
+    click_total = int(clicks.get("total") or 0)
+    click_goal = 100
+    click_progress = min(100.0, click_total / click_goal * 100)
+    clicks_remaining = max(0, click_goal - click_total)
     ps_rewards = partnerstack.get("rewards", {})
     ps_transactions = partnerstack.get("transactions", {})
     rows = [
         ("Site visits (28d)", str(visits.get("total", 0))),
         ("Internal news/guide route clicks (28d)", str(route_clicks.get("total", 0))),
         ("Site affiliate clicks (28d)", str(clicks.get("total", 0))),
+        ("Qualified affiliate-click goal (28d)", str(click_goal)),
+        ("Progress to click goal", f"{click_total}/{click_goal} ({click_progress:.0f}%)"),
+        ("Clicks remaining to goal", str(clicks_remaining)),
         ("Affiliate CTA impressions (28d)", str(impressions.get("total", 0))),
         ("Site CTA click-through rate", f"{ctr:.2f}%"),
         ("Visit-to-affiliate-click rate", f"{visit_click_rate:.2f}%"),
@@ -193,11 +200,13 @@ def render_dashboard(
     change_lines = changes or ["No meaningful aggregate change."]
     if not impact.get("connected"):
         action = "Complete the one-time Impact API connection; the website inventory and public availability automation can run before that connection is added."
-    elif int(impact.get("actions", {}).get("count") or 0) == 0 and int(clicks.get("total") or 0) > 0:
-        action = "Clicks are not yet producing Impact actions. Expand the best-matched buyer-intent page and test its primary CTA while keeping AppSumo brand bidding disabled."
-    elif int(visits.get("total") or 0) > 0 and int(clicks.get("total") or 0) == 0:
+    elif int(impact.get("actions", {}).get("count") or 0) == 0 and click_total > 0 and click_total < click_goal:
+        action = f"Drive {clicks_remaining} more qualified affiliate clicks to reach the first 100-click diagnostic sample, concentrating distribution on the guides and calculators already earning clicks. Keep AppSumo brand bidding disabled."
+    elif int(impact.get("actions", {}).get("count") or 0) == 0 and click_total >= click_goal:
+        action = "The first 100-click diagnostic sample is complete without an Impact action. Review partner-level click concentration, offer-page alignment and CTA promises before sending more traffic."
+    elif int(visits.get("total") or 0) > 0 and click_total == 0:
         action = "Visitors are arriving but have not clicked an affiliate CTA. Prioritize related-tool routing and above-the-fold comparison links on the pages receiving visits."
-    elif int(clicks.get("total") or 0) == 0:
+    elif click_total == 0:
         action = "No recent tracked visits or affiliate clicks. Activate a connected distribution channel and continue strengthening discovery of the highest-intent guides."
     else:
         action = "Keep the current automation running; expand only pages whose clicks begin producing attributed actions or commissions."

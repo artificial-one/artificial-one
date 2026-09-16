@@ -22,6 +22,7 @@ OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 NEWS_PATH = ROOT / "data" / "ai_news.json"
 OFFER_ALERTS_PATH = ROOT / "data" / "offer_change_alerts.json"
+APPSUMO_PATH = ROOT / "data" / "appsumo_offers.json"
 FEED_PATH = ROOT / "feed.xml"
 QUEUE_PATH = ROOT / "data" / "distribution_queue.json"
 FEED_URL = "https://artificial.one/feed.xml"
@@ -64,7 +65,14 @@ def attributed_url(path: str, campaign: str) -> str:
     return f"https://artificial.one/{path}{separator}utm_source=distribution&utm_medium=social&utm_campaign={campaign}"
 
 
-def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, str]:
+def appsumo_candidates() -> list[dict[str, Any]]:
+    return [
+        item for item in load(APPSUMO_PATH).get("offers", [])
+        if item.get("availability") == "active" and item.get("ai_relevant") and item.get("editorial_url")
+    ]
+
+
+def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, Any]:
     """Create one deterministic, fresh editorial post for the supplied day.
 
     The seven-day rotation is deliberately data-driven rather than generative-AI
@@ -80,6 +88,10 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, str]
         resource_id, title, path, description = RESOURCES[week % len(RESOURCES)]
         text = f"Monday tool pick · {edition}\n\n{description}\n\nTry the free tool ↓\n#AITools #Productivity"
         campaign, kind = "editorial-free-tools", "free-tool"
+        thread = [
+            "Use it before buying: enter realistic costs, time savings and workflow assumptions.",
+            "The result is a decision aid—not a promise of savings. Confirm live pricing and limits before subscribing.",
+        ]
     elif day == 1:
         news = list(load(NEWS_PATH).get("items", []))
         story = news[0] if news else {}
@@ -91,6 +103,10 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, str]
         path = "news.html"
         text = f"AI news watch · {edition}\n\n{headline}\n\nSee the source and related guides in today's briefing ↓\n#AI #AITools"
         campaign, kind = "editorial-ai-news", "ai-news"
+        thread = [
+            f"Source: {source}. Category: {category}. The briefing links to the original reporting.",
+            "We also connect the story to a practical decision guide when there is a relevant workflow—not a forced product pitch.",
+        ]
     elif day in (2, 5):
         offer = offers[(week * 2 + (1 if day == 5 else 0)) % len(offers)]
         use_cases = list(offer.get("use_cases") or [])
@@ -101,6 +117,10 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, str]
         label = "Weekend workflow" if day == 5 else "Workflow Wednesday"
         text = f"{label} · {edition}\n\n{description}\n\nCheck the fit, limitations and current pricing before you buy ↓\n#AITools #Productivity"
         campaign, kind = "editorial-workflows", "partner-guide"
+        thread = [
+            f"Best for: {str(offer.get('best_for') or 'teams evaluating this workflow')}"[:295],
+            f"Before buying: {str(offer.get('watch_out') or offer.get('pricing_note') or 'verify the current plan limits.')}"[:295],
+        ]
     elif day == 3:
         offer = offers[(week + 5) % len(offers)]
         title = f"Before you buy {offer['name']}"
@@ -108,6 +128,10 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, str]
         path = f"partner-offers/{offer['slug']}.html"
         text = f"Buyer checklist · {edition}\n\n{description}\n\nRead the independent fit guide ↓\n#AITools"
         campaign, kind = "editorial-buyer-guides", "partner-guide"
+        thread = [
+            f"Best for: {str(offer.get('best_for') or 'teams evaluating this workflow')}"[:295],
+            f"Pricing check: {str(offer.get('pricing_note') or 'verify the current vendor terms.')}"[:295],
+        ]
     elif day == 4:
         alerts = list(load(OFFER_ALERTS_PATH).get("alerts", []))
         if alerts:
@@ -115,11 +139,30 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, str]
             name = str(alert.get("name") or alert.get("offer_name") or "an AI tool")
             detail = str(alert.get("summary") or alert.get("message") or "A monitored vendor page changed. Verify the current details before buying.")
             title, description, path = f"Offer update: {name}", detail, "offer-updates.html"
+            thread = [
+                "The change monitor requires repeated first-party observations before publishing an alert.",
+                "Always verify the final price, limits and terms on the vendor page before buying.",
+            ]
         else:
-            offer = offers[(week + 11) % len(offers)]
-            title = f"Current pricing check: {offer['name']}"
-            description = str(offer.get("pricing_note") or "Verify the current plan and limits before subscribing.")
-            path = f"partner-offers/{offer['slug']}.html"
+            deals = appsumo_candidates()
+            if deals:
+                deal = deals[week % len(deals)]
+                title = f"Live AppSumo AI deal check: {deal['name']}"
+                description = f"The {deal['category']} destination is active and its independent fit guide is available."
+                path = "appsumo-ai-tools.html"
+                thread = [
+                    "Availability is checked automatically. AppSumo remains the source of truth for today's price, limits and refund terms.",
+                    "We do not claim a countdown or discount unless it is verified on the live destination.",
+                ]
+            else:
+                offer = offers[(week + 11) % len(offers)]
+                title = f"Current pricing check: {offer['name']}"
+                description = str(offer.get("pricing_note") or "Verify the current plan and limits before subscribing.")
+                path = f"partner-offers/{offer['slug']}.html"
+                thread = [
+                    f"Best for: {str(offer.get('best_for') or 'teams evaluating this workflow')}"[:295],
+                    f"Before buying: {str(offer.get('watch_out') or 'verify current limits.')}"[:295],
+                ]
         text = f"Friday offer check · {edition}\n\n{description}\n\nVerify the latest details before you buy ↓\n#AITools #SaaS"
         campaign, kind = "editorial-offer-updates", "offer-update"
     else:
@@ -137,6 +180,10 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, str]
         path = "news.html"
         text = f"Sunday AI briefing · {edition}\n\n{description}\n\nCatch up in a few minutes ↓\n#AI #AITools"
         campaign, kind = "weekly-roundup", "ai-news"
+        thread = [
+            "The briefing uses allowlisted sources and links back to original reporting.",
+            "Use the related calculators and buying guides to turn news into a concrete software decision.",
+        ]
 
     return {
         "id": item_id,
@@ -147,13 +194,15 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, str]
         "description": description,
         "page_path": path,
         "image": "https://artificial.one/images/social-cards/daily-editorial.jpg",
+        "vertical_image": "https://artificial.one/images/social-cards/daily-editorial-vertical.jpg",
         "image_alt": f"{title} — daily editorial from Artificial.One",
         "url": f"{attributed_url(path, campaign)}&utm_content={as_of.isoformat()}",
         "text": text[:295],
+        "thread": thread,
     }
 
 
-def queue(as_of: date | None = None) -> list[dict[str, str]]:
+def queue(as_of: date | None = None) -> list[dict[str, Any]]:
     as_of = as_of or datetime.now(timezone.utc).date()
     offers = published_offers()
     result = []
@@ -205,7 +254,7 @@ def queue(as_of: date | None = None) -> list[dict[str, str]]:
     return result
 
 
-def write_public_outputs(items: list[dict[str, str]]) -> None:
+def write_public_outputs(items: list[dict[str, Any]]) -> None:
     QUEUE_PATH.write_text(json.dumps({"version": 1, "items": items}, indent=2) + "\n", encoding="utf-8")
     now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
     rows = "".join(
@@ -294,7 +343,7 @@ def ensure_bluesky_profile(session: dict[str, Any]) -> bool:
     return True
 
 
-def bluesky_record(item: dict[str, str], thumbnail: dict[str, Any]) -> dict[str, Any]:
+def bluesky_record(item: dict[str, Any], thumbnail: dict[str, Any]) -> dict[str, Any]:
     return {
         "$type": "app.bsky.feed.post",
         "text": item["text"],
@@ -312,7 +361,29 @@ def bluesky_record(item: dict[str, str], thumbnail: dict[str, Any]) -> dict[str,
     }
 
 
-def post_bluesky(handle: str, password: str, item: dict[str, str]) -> str:
+def bluesky_reply_record(text: str, root: dict[str, str], parent: dict[str, str]) -> dict[str, Any]:
+    return {
+        "$type": "app.bsky.feed.post",
+        "text": text[:295],
+        "langs": ["en"],
+        "createdAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "reply": {
+            "root": {"uri": root["uri"], "cid": root["cid"]},
+            "parent": {"uri": parent["uri"], "cid": parent["cid"]},
+        },
+    }
+
+
+def create_bluesky_post(session: dict[str, Any], record: dict[str, Any]) -> dict[str, Any]:
+    payload = {"repo": session["did"], "collection": "app.bsky.feed.post", "record": record}
+    return request_json(
+        "https://bsky.social/xrpc/com.atproto.repo.createRecord",
+        data=payload,
+        headers={"Authorization": f"Bearer {session['accessJwt']}"},
+    )
+
+
+def post_bluesky(handle: str, password: str, item: dict[str, Any]) -> str:
     login = Request("https://bsky.social/xrpc/com.atproto.server.createSession", data=json.dumps({"identifier": handle, "password": password}).encode(), headers={"Content-Type": "application/json"}, method="POST")
     with urlopen(login, timeout=30) as response:
         session = json.load(response)
@@ -321,12 +392,22 @@ def post_bluesky(handle: str, password: str, item: dict[str, str]) -> str:
     if not image_path.exists():
         raise FileNotFoundError(f"Social card is missing: {image_path}")
     thumbnail = upload_bluesky_blob(session["accessJwt"], image_path)
-    record = bluesky_record(item, thumbnail)
-    payload = {"repo": session["did"], "collection": "app.bsky.feed.post", "record": record}
-    request = Request("https://bsky.social/xrpc/com.atproto.repo.createRecord", data=json.dumps(payload).encode(), headers={"Authorization": f"Bearer {session['accessJwt']}", "Content-Type": "application/json"}, method="POST")
-    with urlopen(request, timeout=30) as response:
-        result = json.load(response)
-    return f"visual card posted ({result.get('uri', 'record created')}); profile branded={str(profile_branded).lower()}"
+    result = create_bluesky_post(session, bluesky_record(item, thumbnail))
+    root = {"uri": str(result["uri"]), "cid": str(result["cid"])}
+    parent = root
+    replies = 0
+    reply_error = ""
+    for text in list(item.get("thread") or [])[:3]:
+        try:
+            response = create_bluesky_post(session, bluesky_reply_record(str(text), root, parent))
+            parent = {"uri": str(response["uri"]), "cid": str(response["cid"])}
+            replies += 1
+        except (HTTPError, URLError, TimeoutError, KeyError, ValueError) as exc:
+            # The root post has already succeeded. Do not fail the whole run and
+            # duplicate it tomorrow merely because a supporting reply failed.
+            reply_error = f"; reply delivery stopped after {replies}: {type(exc).__name__}"
+            break
+    return f"visual thread posted ({result.get('uri', 'record created')}; {replies} replies); profile branded={str(profile_branded).lower()}{reply_error}"
 
 
 def delete_bluesky_post(handle: str, password: str, rkey: str) -> str:
@@ -351,13 +432,13 @@ def delete_bluesky_post(handle: str, password: str, rkey: str) -> str:
     return f"duplicate post {rkey} deleted"
 
 
-def post_webhook(url: str, item: dict[str, str]) -> None:
+def post_webhook(url: str, item: dict[str, Any]) -> None:
     request = Request(url, data=json.dumps({"source": "artificial.one", **item}).encode(), headers={"Content-Type": "application/json"}, method="POST")
     with urlopen(request, timeout=30):
         pass
 
 
-def channel_item(item: dict[str, str], source: str) -> dict[str, str]:
+def channel_item(item: dict[str, Any], source: str) -> dict[str, Any]:
     attributed_url = item["url"].replace("utm_source=distribution", f"utm_source={source}")
     return {
         **item,

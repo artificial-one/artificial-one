@@ -37,6 +37,7 @@ class SearchRevenuePageTests(unittest.TestCase):
         self.assertIn("alpha-for-automate-a-recurring-team-workflow.html", names)
         self.assertIn("best-productivity-tools.html", names)
         self.assertIn("alpha-vs-beta.html", names)
+        self.assertIn("alpha-value-calculator.html", names)
 
     def test_priority_pricing_page_uses_reviewed_notes_and_tracked_cta(self):
         html = pages.render_pricing(offer("alpha"))
@@ -51,6 +52,22 @@ class SearchRevenuePageTests(unittest.TestCase):
         self.assertIn("Read review", html)
         self.assertIn("data-affiliate-offer", html)
         self.assertIn('data-placement="comparison-left"', html)
+
+    def test_value_calculator_uses_reviewed_inputs_and_tracked_result(self):
+        html = pages.render_value_calculator(offer("alpha"))
+        self.assertIn('id="hours-saved"', html)
+        self.assertIn('id="roi-value"', html)
+        self.assertIn("Verify the current limits", html)
+        self.assertIn('data-placement="value-calculator-result"', html)
+        self.assertIn("hours saved × hourly value", html)
+
+    def test_context_routes_point_to_guides_and_calculators(self):
+        catalog = pages.route_catalog([offer(f"tool-{index}") for index in range(8)])
+        self.assertEqual(len(catalog["routes"]), pages.COLD_START_CLUSTER_SIZE)
+        self.assertTrue(all(route["url"].startswith("/partner-offers/") for route in catalog["routes"]))
+        self.assertTrue(all(route["calculator_url"].startswith("/calculators/") for route in catalog["routes"]))
+        self.assertTrue(all(route["strong_keywords"] for route in catalog["routes"]))
+        self.assertTrue(all(route["keywords"] for route in catalog["routes"]))
 
     def test_sitemap_replaces_managed_block(self):
         source = '<?xml version="1.0"?><urlset>\n  <!-- search-revenue:start -->old  <!-- search-revenue:end -->\n</urlset>'

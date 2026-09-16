@@ -207,6 +207,71 @@
       .catch(function () { return {}; });
   }
 
+  function loadContentRoutes() {
+    if (!window.fetch) return Promise.resolve({ routes: [] });
+    return window.fetch("/data/content_routes.json", { credentials: "same-origin", cache: "no-cache" })
+      .then(function (response) { return response.ok ? response.json() : { routes: [] }; })
+      .catch(function () { return { routes: [] }; });
+  }
+
+  function installContextualRevenueRoute(catalog) {
+    if (document.getElementById("contextual-revenue-route")) return;
+    if (/^\/(partner-offers|search-intent|calculators)\//.test(window.location.pathname)) return;
+    var text = String(document.body && document.body.innerText || "").toLowerCase();
+    var best = null;
+    var bestScore = 0;
+    (catalog.routes || []).forEach(function (route) {
+      var score = 0;
+      (route.strong_keywords || []).forEach(function (keyword) {
+        if (keyword && text.indexOf(String(keyword).toLowerCase()) !== -1) score += 5;
+      });
+      (route.keywords || []).forEach(function (keyword) {
+        if (keyword && text.indexOf(String(keyword).toLowerCase()) !== -1) score += 1;
+      });
+      if (score > bestScore) {
+        best = route;
+        bestScore = score;
+      }
+    });
+    if (!best || bestScore < 3) return;
+
+    var card = document.createElement("aside");
+    card.id = "contextual-revenue-route";
+    card.setAttribute("aria-label", "Relevant independent tool guide");
+    card.style.cssText = "max-width:980px;margin:36px auto;padding:24px;border:1px solid #c7d2fe;border-radius:18px;background:#eef2ff;color:#172554;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif";
+
+    var eyebrow = document.createElement("p");
+    eyebrow.textContent = "Relevant decision guide";
+    eyebrow.style.cssText = "margin:0 0 8px;color:#4f46e5;font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase";
+    var title = document.createElement("h2");
+    title.textContent = "Would " + best.name + " fit this workflow?";
+    title.style.cssText = "margin:0;font-size:26px;line-height:1.2";
+    var summary = document.createElement("p");
+    summary.textContent = best.summary;
+    summary.style.cssText = "margin:12px 0 18px;line-height:1.6;color:#334155";
+    var guide = document.createElement("a");
+    guide.href = best.url + "?utm_source=onsite&utm_medium=content-route&utm_campaign=smart-routing";
+    guide.textContent = "Check fit, limitations and pricing →";
+    guide.dataset.contentRoute = "";
+    guide.dataset.relatedOfferId = best.offer_id;
+    guide.dataset.placement = "contextual-revenue-router";
+    guide.style.cssText = "display:inline-block;margin-right:16px;padding:11px 16px;border-radius:9px;background:#4f46e5;color:#fff;font-weight:750;text-decoration:none";
+    var calculator = document.createElement("a");
+    calculator.href = best.calculator_url + "?utm_source=onsite&utm_medium=content-route&utm_campaign=value-calculator";
+    calculator.textContent = "Estimate value first";
+    calculator.dataset.contentRoute = "";
+    calculator.dataset.relatedOfferId = best.offer_id;
+    calculator.dataset.placement = "contextual-value-calculator";
+    calculator.style.cssText = "display:inline-block;padding:10px 0;color:#4338ca;font-weight:750;text-decoration:none";
+    card.appendChild(eyebrow);
+    card.appendChild(title);
+    card.appendChild(summary);
+    card.appendChild(guide);
+    card.appendChild(calculator);
+    var footer = document.querySelector("footer");
+    (footer && footer.parentNode ? footer.parentNode : document.body).insertBefore(card, footer || null);
+  }
+
   function installStickyRecommendation(strategy) {
     var source = document.querySelector("a[data-affiliate-offer]");
     if (!source || document.getElementById("affiliate-sticky-recommendation")) return;
@@ -300,6 +365,7 @@
       loadConversionStrategy().then(function (strategy) {
         sendToConfiguredEndpoint(eventPayload(null, "site_visit"));
         applyAppSumoAvailability();
+        loadContentRoutes().then(installContextualRevenueRoute);
         installStickyRecommendation(strategy);
         trackVisibleRecommendations();
         observeDynamicRecommendations();
@@ -309,6 +375,7 @@
     loadConversionStrategy().then(function (strategy) {
       sendToConfiguredEndpoint(eventPayload(null, "site_visit"));
       applyAppSumoAvailability();
+      loadContentRoutes().then(installContextualRevenueRoute);
       installStickyRecommendation(strategy);
       trackVisibleRecommendations();
       observeDynamicRecommendations();
