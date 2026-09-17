@@ -164,10 +164,101 @@ const { useState } = React;
 // AI_NEWS_DATA_START
 const aiNewsItems = [
   {
+    "title": "The sexy AI-powered dating app scams are here",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/995348/ai-dating-app-scams",
+    "source": "The Verge AI",
+    "published_at": "2026-09-17T15:04:11+00:00",
+    "display_date": "Sep 17, 2026",
+    "category": "Research",
+    "related": {
+      "title": "Evaluate Rank Prompt for this workflow",
+      "url": "partner-offers/rank-prompt-ai-visibility.html",
+      "offer_id": "rank-prompt"
+    }
+  },
+  {
+    "title": "AI is feared globally as the destroyer of jobs",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs",
+    "source": "The Verge AI",
+    "published_at": "2026-09-17T14:18:57+00:00",
+    "display_date": "Sep 17, 2026",
+    "category": "Research",
+    "related": {
+      "title": "Evaluate Rank Prompt for this workflow",
+      "url": "partner-offers/rank-prompt-ai-visibility.html",
+      "offer_id": "rank-prompt"
+    }
+  },
+  {
+    "title": "Huawei plans Q1 2027 launch of new AI chip as it takes on Nvidia",
+    "url": "https://techcrunch.com/2026/09/17/huawei-plans-q1-2027-launch-of-new-ai-chip-as-it-takes-on-nvidia/",
+    "source": "TechCrunch AI",
+    "published_at": "2026-09-17T14:06:14+00:00",
+    "display_date": "Sep 17, 2026",
+    "category": "AI Tools & Products",
+    "related": {
+      "title": "Find the right AI tool for the job",
+      "url": "ai-tool-finder.html",
+      "offer_id": ""
+    }
+  },
+  {
+    "title": "Rival AI agents, Instinct and Meta’s Muse, both add the ability to make calls",
+    "url": "https://techcrunch.com/2026/09/17/rival-ai-agents-instinct-and-metas-muse-both-add-the-ability-to-make-calls/",
+    "source": "TechCrunch AI",
+    "published_at": "2026-09-17T13:46:16+00:00",
+    "display_date": "Sep 17, 2026",
+    "category": "AI Tools & Products",
+    "related": {
+      "title": "Evaluate Pinecone for this workflow",
+      "url": "partner-offers/pinecone-vector-database.html",
+      "offer_id": "pinecone"
+    }
+  },
+  {
+    "title": "Google, Nvidia, and Anthropic want Emerald AI to find space on the grid for more data centers",
+    "url": "https://techcrunch.com/2026/09/17/google-nvidia-and-anthropic-want-emerald-ai-to-find-space-on-the-grid-for-more-data-centers/",
+    "source": "TechCrunch AI",
+    "published_at": "2026-09-17T13:38:33+00:00",
+    "display_date": "Sep 17, 2026",
+    "category": "AI Tools & Products",
+    "related": {
+      "title": "Find the right AI tool for the job",
+      "url": "ai-tool-finder.html",
+      "offer_id": ""
+    }
+  },
+  {
+    "title": "An OpenAI model kept slipping prompt injections into its own notes, and researchers still aren't sure why",
+    "url": "https://the-decoder.com/an-openai-model-kept-slipping-prompt-injections-into-its-own-notes-and-researchers-still-arent-sure-why/",
+    "source": "The Decoder",
+    "published_at": "2026-09-17T13:37:55+00:00",
+    "display_date": "Sep 17, 2026",
+    "category": "Models & LLMs",
+    "related": {
+      "title": "Evaluate Rank Prompt for this workflow",
+      "url": "partner-offers/rank-prompt-ai-visibility.html",
+      "offer_id": "rank-prompt"
+    }
+  },
+  {
+    "title": "Microsoft AI CEO says AI threats are real, and Anthropic is making it worse",
+    "url": "https://www.theverge.com/podcast/996412/microsoft-ai-ceo-mustafa-suleyman-regulation-safety-anthropic-claude",
+    "source": "The Verge AI",
+    "published_at": "2026-09-17T13:36:43+00:00",
+    "display_date": "Sep 17, 2026",
+    "category": "Policy & Safety",
+    "related": {
+      "title": "Browse independent AI software buying guides",
+      "url": "buyers-guides.html",
+      "offer_id": ""
+    }
+  },
+  {
     "title": "Inside the suddenly explosive world of AI safety",
     "url": "https://www.theverge.com/ai-artificial-intelligence/996563/ai-safety-research-metr-redwood-openai-anthropic",
     "source": "The Verge AI",
-    "published_at": "2026-09-17T11:30:17+00:00",
+    "published_at": "2026-09-17T12:49:56+00:00",
     "display_date": "Sep 17, 2026",
     "category": "Models & LLMs",
     "related": {
@@ -222,97 +313,6 @@ const aiNewsItems = [
     "published_at": "2026-09-17T03:30:00+00:00",
     "display_date": "Sep 17, 2026",
     "category": "AI Business",
-    "related": {
-      "title": "Evaluate Pinecone for this workflow",
-      "url": "partner-offers/pinecone-vector-database.html",
-      "offer_id": "pinecone"
-    }
-  },
-  {
-    "title": "Al Gore says the real AI risk isn’t data centers",
-    "url": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-    "source": "TechCrunch AI",
-    "published_at": "2026-09-16T23:43:09+00:00",
-    "display_date": "Sep 16, 2026",
-    "category": "AI Tools & Products",
-    "related": {
-      "title": "Find the right AI tool for the job",
-      "url": "ai-tool-finder.html",
-      "offer_id": ""
-    }
-  },
-  {
-    "title": "Anthropic and OpenAI want to embed safety evaluators. Will they really be independent?",
-    "url": "https://techcrunch.com/2026/09/16/anthropic-and-openai-want-to-embed-safety-evaluators-will-they-really-be-independent/",
-    "source": "TechCrunch AI",
-    "published_at": "2026-09-16T21:07:24+00:00",
-    "display_date": "Sep 16, 2026",
-    "category": "Research",
-    "related": {
-      "title": "Evaluate Rank Prompt for this workflow",
-      "url": "partner-offers/rank-prompt-ai-visibility.html",
-      "offer_id": "rank-prompt"
-    }
-  },
-  {
-    "title": "The 2.5-hour AI-generated Odyssey movie is 2.5 hours too long",
-    "url": "https://www.theverge.com/entertainment/996499/ai-odyssey-movie-review",
-    "source": "The Verge AI",
-    "published_at": "2026-09-16T21:03:21+00:00",
-    "display_date": "Sep 16, 2026",
-    "category": "AI Tools & Products",
-    "related": {
-      "title": "Find the right AI tool for the job",
-      "url": "ai-tool-finder.html",
-      "offer_id": ""
-    }
-  },
-  {
-    "title": "The AI data center e-waste problem is huge — and getting bigger",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/996470/ai-data-center-e-waste-ban",
-    "source": "The Verge AI",
-    "published_at": "2026-09-16T20:40:46+00:00",
-    "display_date": "Sep 16, 2026",
-    "category": "AI Tools & Products",
-    "related": {
-      "title": "Find the right AI tool for the job",
-      "url": "ai-tool-finder.html",
-      "offer_id": ""
-    }
-  },
-  {
-    "title": "Snap is launching a new Specs AI tool, and it’s coming to iOS and Mac",
-    "url": "https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac",
-    "source": "The Verge AI",
-    "published_at": "2026-09-16T20:10:47+00:00",
-    "display_date": "Sep 16, 2026",
-    "category": "Models & LLMs",
-    "related": {
-      "title": "Evaluate Pinecone for this workflow",
-      "url": "partner-offers/pinecone-vector-database.html",
-      "offer_id": "pinecone"
-    }
-  },
-  {
-    "title": "EU president warns AI agents \"escaping their environment\" are just a preview of what's coming",
-    "url": "https://the-decoder.com/eu-president-warns-ai-agents-escaping-their-environment-are-just-a-preview-of-whats-coming/",
-    "source": "The Decoder",
-    "published_at": "2026-09-16T19:02:25+00:00",
-    "display_date": "Sep 16, 2026",
-    "category": "Models & LLMs",
-    "related": {
-      "title": "Evaluate Pinecone for this workflow",
-      "url": "partner-offers/pinecone-vector-database.html",
-      "offer_id": "pinecone"
-    }
-  },
-  {
-    "title": "Google will now let any AI agent run your smart home",
-    "url": "https://www.theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date",
-    "source": "The Verge AI",
-    "published_at": "2026-09-16T18:41:15+00:00",
-    "display_date": "Sep 16, 2026",
-    "category": "Models & LLMs",
     "related": {
       "title": "Evaluate Pinecone for this workflow",
       "url": "partner-offers/pinecone-vector-database.html",
