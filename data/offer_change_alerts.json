@@ -1,6 +1,12 @@
 {
   "alerts": [
     {
+      "detected_on": "2026-09-17",
+      "message": "The vendor’s product, pricing, plan or availability information changed. Recheck the current details before subscribing.",
+      "offer_id": "trainual",
+      "source_url": "https://trainual.com/"
+    },
+    {
       "detected_on": "2026-09-16",
       "message": "The vendor’s product, pricing, plan or availability information changed. Recheck the current details before subscribing.",
       "offer_id": "hubstaff",
@@ -14,6 +20,6 @@
     }
   ],
   "method": "two-observation-vendor-source-monitor",
-  "updated_at": "2026-09-16",
+  "updated_at": "2026-09-17",
   "version": 1
 }
