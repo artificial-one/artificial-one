@@ -99,22 +99,6 @@
       ]
     },
     {
-      "offer_id": "volza",
-      "name": "AO Generic Intent - Volza",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/volza-trade-intelligence.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-volza",
-      "keywords": [
-        "research data",
-        "find and compare potential international buyers or suppliers",
-        "research shipment activity for a product or market",
-        "support sourcing market entry and b2b prospecting decisions"
-      ],
-      "negative_keywords": [
-        "Volza"
-      ]
-    },
-    {
       "offer_id": "wegic",
       "name": "AO Generic Intent - Wegic",
       "eligible": false,
@@ -127,6 +111,21 @@
       ],
       "negative_keywords": [
         "Wegic"
+      ]
+    },
+    {
+      "offer_id": "whatconverts",
+      "name": "AO Generic Intent - WhatConverts",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/whatconverts-lead-attribution.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-whatconverts",
+      "keywords": [
+        "marketing analytics",
+        "attribute calls and forms to campaigns",
+        "report lead quality by traffic source"
+      ],
+      "negative_keywords": [
+        "WhatConverts"
       ]
     }
   ],
