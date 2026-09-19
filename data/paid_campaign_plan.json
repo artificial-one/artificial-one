@@ -24,21 +24,6 @@
       ]
     },
     {
-      "offer_id": "learnworlds",
-      "name": "AO Generic Intent - LearnWorlds",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/learnworlds-course-platform.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-learnworlds",
-      "keywords": [
-        "online learning",
-        "launch a paid online course",
-        "deliver branded customer or employee training"
-      ],
-      "negative_keywords": [
-        "LearnWorlds"
-      ]
-    },
-    {
       "offer_id": "pinecone",
       "name": "AO Generic Intent - Pinecone",
       "eligible": false,
@@ -126,6 +111,21 @@
       ],
       "negative_keywords": [
         "WhatConverts"
+      ]
+    },
+    {
+      "offer_id": "adcreative",
+      "name": "AO Generic Intent - AdCreative.ai",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/adcreative-ai-ad-design.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-adcreative",
+      "keywords": [
+        "marketing creative",
+        "generate ad creative variations",
+        "adapt campaign assets across formats"
+      ],
+      "negative_keywords": [
+        "AdCreative.ai"
       ]
     }
   ],

@@ -1,7 +1,7 @@
 {
   "incoming_link_distribution": {
-    "1": 25,
-    "3+": 50
+    "1": 30,
+    "3+": 46
   },
   "indexnow": {
     "key_location": "https://artificial.one/a10e20260915d74b93c2f18e7a45c901.txt",
@@ -19,11 +19,15 @@
     {
       "issue": "sitemap",
       "path": "calculators/elevenlabs-ai-voice-value-calculator.html"
+    },
+    {
+      "issue": "sitemap",
+      "path": "calculators/learnworlds-course-platform-value-calculator.html"
     }
   ],
   "method": "static-commercial-indexability-audit",
   "note": "This report covers static crawl signals. Google indexing verdicts remain private in the Search Console monitor.",
-  "priority_pages": 75,
+  "priority_pages": 76,
   "updated_at": "2026-09-19",
   "version": 1
 }

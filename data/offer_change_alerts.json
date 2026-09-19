@@ -1,6 +1,12 @@
 {
   "alerts": [
     {
+      "detected_on": "2026-09-19",
+      "message": "The vendor’s product, pricing, plan or availability information changed. Recheck the current details before subscribing.",
+      "offer_id": "learnworlds",
+      "source_url": "https://www.learnworlds.com/"
+    },
+    {
       "detected_on": "2026-09-18",
       "message": "The vendor’s product, pricing, plan or availability information changed. Recheck the current details before subscribing.",
       "offer_id": "pinecone",
@@ -26,6 +32,6 @@
     }
   ],
   "method": "two-observation-vendor-source-monitor",
-  "updated_at": "2026-09-18",
+  "updated_at": "2026-09-19",
   "version": 1
 }
