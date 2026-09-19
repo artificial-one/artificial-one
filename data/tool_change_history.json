@@ -1,11 +1,30 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 54,
+    "successful_checks": 64,
     "tracked_sources": 220
   },
-  "events": [],
+  "events": [
+    {
+      "detected_on": "2026-09-19",
+      "id": "e338f541303bd333",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://superhuman.com",
+      "tool_id": "superhuman",
+      "tool_name": "Superhuman"
+    },
+    {
+      "detected_on": "2026-09-19",
+      "id": "fc4653b025b35fd3",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://trainual.com/",
+      "tool_id": "trainual",
+      "tool_name": "Trainual"
+    }
+  ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-09-18",
+  "updated_at": "2026-09-19",
   "version": 1
 }
