@@ -22,6 +22,7 @@ try:
         build_opportunities,
         load_service_account,
         query_search_analytics,
+        resolve_site_property,
         send_email,
         submit_sitemap,
     )
@@ -33,6 +34,7 @@ except ModuleNotFoundError:  # Direct execution
         build_opportunities,
         load_service_account,
         query_search_analytics,
+        resolve_site_property,
         send_email,
         submit_sitemap,
     )
@@ -483,7 +485,8 @@ def write_if_changed(path: Path, value: dict[str, Any]) -> bool:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--site", default=os.environ.get("GSC_SITE_URL") or "https://www.artificial.one/")
+    parser.add_argument("--site", default=os.environ.get("GSC_SITE_URL") or "")
+    parser.add_argument("--origin", default="https://artificial.one")
     parser.add_argument("--sitemap", default="https://www.artificial.one/sitemap.xml")
     parser.add_argument("--email-to", default="hello@artificial.one")
     parser.add_argument("--email-from", default="Artificial.One Growth <onboarding@resend.dev>")
@@ -494,9 +497,10 @@ def main() -> int:
     try:
         raw_credentials = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "").strip()
         session = authorized_session(load_service_account(raw_credentials) if raw_credentials else None)
+        site_property = resolve_site_property(session, args.site)
         end = date.today() - timedelta(days=3)
         start = end - timedelta(days=max(1, args.days) - 1)
-        rows = query_search_analytics(session, args.site, start, end)
+        rows = query_search_analytics(session, site_property, start, end)
         weights = revenue_weights()
         opportunities = revenue_weighted_opportunities(rows, affiliate_paths(), weights)
         public = load_public_strategy(args.public_strategy)
@@ -504,7 +508,7 @@ def main() -> int:
         actions = update_experiments(rows, opportunities, weights, public, private, date.today())
         actions.extend(update_content_priority(opportunities, public, private, date.today()))
         actions.extend(update_demand_pages(rows, public, private, date.today()))
-        inspections = inspect_urls(session, args.site, inspection_targets(args.site, weights))
+        inspections = inspect_urls(session, site_property, inspection_targets(args.origin, weights))
         actions.extend(update_crawl_priority(inspections, public, date.today()))
         current_issues = inspection_signature(inspections)
         if current_issues != private.get("last_index_issues", []):
@@ -512,7 +516,7 @@ def main() -> int:
         private["last_index_issues"] = current_issues
         public_changed = write_if_changed(args.public_strategy, public)
         write_if_changed(args.private_state, private)
-        submit_sitemap(session, args.site, args.sitemap)
+        submit_sitemap(session, site_property, args.sitemap)
         resend_key = os.environ.get("RESEND_API_KEY", "").strip()
         if not resend_key:
             raise GrowthError("RESEND_API_KEY is not configured")
@@ -523,7 +527,7 @@ def main() -> int:
             with Path(github_output).open("a", encoding="utf-8") as handle:
                 handle.write(f"public_changed={'true' if public_changed else 'false'}\n")
                 handle.write(f"opportunities={len(opportunities)}\nissues={len(current_issues)}\nactions={len(actions)}\n")
-        print(f"Analyzed {len(rows)} rows, inspected {len(inspections)} URLs, found {len(opportunities)} opportunities, took {len(actions)} guarded actions.")
+        print(f"Using Search Console property {site_property}. Analyzed {len(rows)} rows, inspected {len(inspections)} URLs, found {len(opportunities)} opportunities, took {len(actions)} guarded actions.")
         return 0
     except GrowthError as exc:
         print(f"Search revenue engine failed: {exc}", file=os.sys.stderr)

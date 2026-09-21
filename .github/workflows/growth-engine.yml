@@ -18,7 +18,6 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     env:
-      GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
     steps:
       - uses: actions/checkout@v7

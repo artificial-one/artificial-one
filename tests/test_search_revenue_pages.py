@@ -77,6 +77,19 @@ class SearchRevenuePageTests(unittest.TestCase):
         self.assertEqual(result.count("search-revenue:start"), 1)
         self.assertEqual(result.count("example.html"), 1)
 
+    def test_only_obsolete_value_calculators_are_removed_from_shared_directory(self):
+        with tempfile.TemporaryDirectory() as folder:
+            directory = Path(folder)
+            current = directory / "current-value-calculator.html"
+            stale = directory / "stale-value-calculator.html"
+            unrelated = directory / "ai-roi-calculator.html"
+            for path in (current, stale, unrelated):
+                path.write_text("generated", encoding="utf-8")
+            self.assertEqual(
+                pages.stale_value_calculators({current}, directory),
+                {stale},
+            )
+
     def test_search_priority_controls_generated_page_order(self):
         original = pages.SEARCH_STRATEGY_PATH
         with tempfile.TemporaryDirectory() as folder:

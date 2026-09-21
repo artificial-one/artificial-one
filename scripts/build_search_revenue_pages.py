@@ -352,6 +352,15 @@ def update_sitemap(source: str, paths: list[Path], lastmod: str) -> str:
     return source.rsplit("</urlset>", 1)[0].rstrip() + "\n" + block + "\n</urlset>\n"
 
 
+def stale_value_calculators(expected: set[Path], calculator_dir: Path | None = None) -> set[Path]:
+    """Find obsolete calculators owned by this generator, without touching shared tools."""
+    directory = calculator_dir or ROOT / "calculators"
+    if not directory.exists():
+        return set()
+    expected_calculators = {path for path in expected if path.parent == directory}
+    return set(directory.glob("*-value-calculator.html")) - expected_calculators
+
+
 def build(check: bool = False) -> int:
     registry = load_registry(REGISTRY_PATH)
     offers = apply_search_priority(apply_revenue_strategy(public_offers(validate_registry(registry), date.today())))
@@ -360,11 +369,11 @@ def build(check: bool = False) -> int:
     sitemap_source = SITEMAP_PATH.read_text(encoding="utf-8")
     sitemap_expected = update_sitemap(sitemap_source, list(expected), str(registry["updated_at"]))
     stale = [path for path, value in expected.items() if not path.exists() or path.read_text(encoding="utf-8") != value]
-    # Only clean the dedicated search-intent directory. Calculators are shared
-    # with the decision-tools pipeline, so removing unknown generated files here
-    # would cross ownership boundaries.
     existing = {path for path in OUTPUT_DIR.glob("*.html")} if OUTPUT_DIR.exists() else set()
     removable = {path for path in existing - set(expected) if GENERATED_MARKER in path.read_text(encoding="utf-8", errors="ignore")}
+    # The calculators directory is shared, but this generator exclusively owns
+    # the narrowly named *-value-calculator.html family.
+    removable |= stale_value_calculators(set(expected))
     if check:
         if stale or removable or sitemap_source != sitemap_expected or not ROUTE_PATH.exists() or ROUTE_PATH.read_text(encoding="utf-8") != route_expected:
             print("Search revenue pages are stale.", file=sys.stderr)

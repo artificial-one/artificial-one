@@ -11,7 +11,7 @@ import json
 import os
 from pathlib import Path
 from typing import Any
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
 
 
@@ -56,6 +56,57 @@ def authorized_session(service_account_info: dict[str, Any] | None = None):
     else:
         credentials, _ = google.auth.default(scopes=scopes)
     return AuthorizedSession(credentials)
+
+
+def resolve_site_property(session, configured: str = "", host: str = "artificial.one") -> str:
+    """Select the verified Search Console property that covers ``host``.
+
+    Domain properties and URL-prefix properties use different identifiers. A
+    repository secret is therefore optional: the authenticated account is the
+    source of truth, while an accessible configured property still wins.
+    """
+    response = session.get(f"{SEARCH_API}/sites", timeout=30)
+    if response.status_code >= 400:
+        raise GrowthError(f"Search Console property discovery failed with HTTP {response.status_code}")
+    entries = response.json().get("siteEntry", [])
+    if not isinstance(entries, list):
+        raise GrowthError("Search Console returned an unexpected property collection")
+    available = [
+        str(item.get("siteUrl") or "")
+        for item in entries
+        if isinstance(item, dict)
+        and item.get("permissionLevel") != "siteUnverifiedUser"
+        and item.get("siteUrl")
+    ]
+    configured = configured.strip()
+    if configured and configured in available:
+        return configured
+
+    normalized_host = host.casefold().removeprefix("www.")
+
+    def covers_target(site_url: str) -> bool:
+        if site_url.casefold() == f"sc-domain:{normalized_host}":
+            return True
+        parsed = urlparse(site_url)
+        return parsed.hostname is not None and parsed.hostname.casefold().removeprefix("www.") == normalized_host
+
+    matches = [site_url for site_url in available if covers_target(site_url)]
+    if not matches:
+        raise GrowthError(
+            f"The authenticated Google account has no verified Search Console property covering {host}"
+        )
+
+    def preference(site_url: str) -> tuple[int, str]:
+        lowered = site_url.casefold()
+        if lowered == f"sc-domain:{normalized_host}":
+            return (0, lowered)
+        if lowered.rstrip("/") == f"https://{normalized_host}":
+            return (1, lowered)
+        if lowered.rstrip("/") == f"https://www.{normalized_host}":
+            return (2, lowered)
+        return (3, lowered)
+
+    return min(matches, key=preference)
 
 
 def query_search_analytics(session, site_url: str, start: date, end: date) -> list[dict[str, Any]]:
@@ -234,7 +285,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--site",
-        default=os.environ.get("GSC_SITE_URL") or "https://www.artificial.one/",
+        default=os.environ.get("GSC_SITE_URL") or "",
     )
     parser.add_argument("--sitemap", default="https://www.artificial.one/sitemap.xml")
     parser.add_argument("--email-to", default="hello@artificial.one")
@@ -246,17 +297,19 @@ def main() -> int:
         raw_credentials = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "").strip()
         info = load_service_account(raw_credentials) if raw_credentials else None
         session = authorized_session(info)
+        site_property = resolve_site_property(session, args.site)
         end = date.today() - timedelta(days=3)
         start = end - timedelta(days=max(1, args.days) - 1)
-        rows = query_search_analytics(session, args.site, start, end)
+        rows = query_search_analytics(session, site_property, start, end)
         opportunities = build_opportunities(rows, affiliate_paths())
-        submit_sitemap(session, args.site, args.sitemap)
+        submit_sitemap(session, site_property, args.sitemap)
         resend_key = os.environ.get("RESEND_API_KEY", "").strip()
         if not resend_key:
             raise GrowthError("RESEND_API_KEY is not configured")
         subject, text, html = render_email(opportunities, start, end)
         send_email(resend_key, args.email_from, args.email_to, subject, text, html)
         print(
+            f"Using Search Console property {site_property}. "
             f"Analyzed {len(rows)} Search Console rows; "
             f"emailed {len(opportunities)} sanitized opportunities."
         )

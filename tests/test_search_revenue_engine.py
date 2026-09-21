@@ -47,7 +47,54 @@ class FakeSession:
         return FakeResponse()
 
 
+class PropertyResponse:
+    status_code = 200
+
+    def __init__(self, entries):
+        self.entries = entries
+
+    def json(self):
+        return {"siteEntry": self.entries}
+
+
+class PropertySession:
+    def __init__(self, entries):
+        self.entries = entries
+
+    def get(self, *_args, **_kwargs):
+        return PropertyResponse(self.entries)
+
+
 class SearchRevenueEngineTests(unittest.TestCase):
+    def test_property_discovery_prefers_domain_property(self):
+        session = PropertySession([
+            {"siteUrl": "https://www.artificial.one/", "permissionLevel": "siteOwner"},
+            {"siteUrl": "sc-domain:artificial.one", "permissionLevel": "siteFullUser"},
+        ])
+        self.assertEqual(engine.resolve_site_property(session), "sc-domain:artificial.one")
+
+    def test_property_discovery_honors_accessible_configuration(self):
+        session = PropertySession([
+            {"siteUrl": "https://www.artificial.one/", "permissionLevel": "siteOwner"},
+            {"siteUrl": "sc-domain:artificial.one", "permissionLevel": "siteOwner"},
+        ])
+        self.assertEqual(
+            engine.resolve_site_property(session, "https://www.artificial.one/"),
+            "https://www.artificial.one/",
+        )
+
+    def test_property_discovery_rejects_unrelated_or_unverified_properties(self):
+        session = PropertySession([
+            {"siteUrl": "sc-domain:example.com", "permissionLevel": "siteOwner"},
+            {"siteUrl": "sc-domain:artificial.one", "permissionLevel": "siteUnverifiedUser"},
+        ])
+        with self.assertRaises(engine.GrowthError):
+            engine.resolve_site_property(session)
+
+    def test_inspection_targets_always_use_public_origin(self):
+        targets = engine.inspection_targets("https://artificial.one", {})
+        self.assertTrue(all(item.startswith("https://artificial.one/") for item in targets))
+
     def test_revenue_weight_changes_priority(self):
         rows = [
             row("/partner-offers/useful.html"),
