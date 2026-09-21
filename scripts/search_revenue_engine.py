@@ -487,7 +487,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--site", default=os.environ.get("GSC_SITE_URL") or "")
     parser.add_argument("--origin", default="https://artificial.one")
-    parser.add_argument("--sitemap", default="https://www.artificial.one/sitemap.xml")
+    parser.add_argument("--sitemap", default="https://artificial.one/sitemap.xml")
     parser.add_argument("--email-to", default="hello@artificial.one")
     parser.add_argument("--email-from", default="Artificial.One Growth <onboarding@resend.dev>")
     parser.add_argument("--days", type=int, default=28)
