@@ -140,9 +140,31 @@ def load_public_strategy(path: Path) -> dict[str, Any]:
             "content_priority": [],
             "demand_pages": [],
             "crawl_priority": [],
+            "observed_pages": [],
             "privacy": "No queries, traffic totals, customer data or revenue totals are published.",
         }
     return value
+
+
+def update_observed_pages(rows: list[dict[str, Any]], public: dict[str, Any], today: date) -> list[str]:
+    """Publish only paths seen by Google so index consolidation cannot hide demand."""
+    selected: set[str] = set()
+    for row in rows:
+        if float(row.get("impressions") or 0) <= 0:
+            continue
+        keys = row.get("keys", [])
+        if not isinstance(keys, list) or not keys:
+            continue
+        path = page_path(str(keys[0]))
+        if path.endswith(".html"):
+            selected.add(path)
+    desired = sorted(selected)[:1000]
+    previous = [str(item) for item in public.get("observed_pages", [])]
+    if desired == previous:
+        return []
+    public["observed_pages"] = desired
+    public["updated_at"] = today.isoformat()
+    return [f"Protected {len(desired)} URL paths with recent Google impressions from index consolidation."]
 
 
 def update_crawl_priority(
@@ -526,6 +548,7 @@ def main() -> int:
         actions = update_experiments(rows, opportunities, weights, public, private, date.today())
         actions.extend(update_content_priority(opportunities, public, private, date.today()))
         actions.extend(update_demand_pages(rows, public, private, date.today()))
+        actions.extend(update_observed_pages(rows, public, date.today()))
         inspections = inspect_urls(session, site_property, inspection_targets(args.origin, weights))
         actions.extend(update_crawl_priority(inspections, public, date.today()))
         current_issues = inspection_signature(inspections)

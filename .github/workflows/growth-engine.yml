@@ -63,6 +63,7 @@ jobs:
           python scripts/build_sponsorship.py
           python scripts/monitor_offer_changes.py --cached
           python scripts/build_tool_intelligence.py
+          python scripts/consolidate_legacy_index.py
           INDEXNOW_SUBMIT_ENABLED=true python scripts/indexing_recovery.py --submit
 
       - name: Verify the complete publishing loop
@@ -79,12 +80,13 @@ jobs:
           python scripts/monitor_offer_changes.py --check
           python scripts/build_tool_intelligence.py --check
           python scripts/monitor_tool_intelligence.py --check
+          python scripts/consolidate_legacy_index.py --check
           python scripts/indexing_recovery.py --check
 
       - name: Commit only public, privacy-safe winners and generated pages
         shell: bash
         run: |
-          git add -- data/search_growth_strategy.json data/indexing_recovery.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json partner-offers.html partner-offers ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html index.html search-intent buyers-guides.html sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js news.html
+          git add -- data/search_growth_strategy.json data/indexing_recovery.json data/legacy_index_consolidation.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json partner-offers.html partner-offers ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html index.html search-intent buyers-guides.html sitemap.xml assets/affiliate-tracking.js api/affiliate-event.js news.html ':(glob)tools/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -203,6 +203,17 @@ class SearchRevenueEngineTests(unittest.TestCase):
             engine.OFFERS_PATH = original_offers
             engine.REVENUE_STRATEGY_PATH = original_strategy
 
+    def test_observed_pages_publish_paths_without_queries_or_metrics(self):
+        public = {"version": 1, "experiments": {}, "observed_pages": []}
+        ignored = row("/tools/ignored.html", impressions=1, clicks=0)
+        ignored["impressions"] = 0
+        rows = [row("/tools/useful.html", impressions=1), ignored]
+        actions = engine.update_observed_pages(rows, public, date(2026, 9, 22))
+        self.assertEqual(public["observed_pages"], ["/tools/useful.html"])
+        self.assertNotIn("useful ai pricing", str(public))
+        self.assertNotIn("impressions", str(public))
+        self.assertEqual(len(actions), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

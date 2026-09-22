@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-22",
+  "method": "reversible-conservative-legacy-index-consolidation",
+  "policy": {
+    "scope": "Existing tools/*.html records only",
+    "noindex_requires": [
+      "verification status is legacy-catalog",
+      "no mapped evidence source",
+      "no active monetization",
+      "at most one internal inbound link",
+      "no Google impressions in the current Search Console window"
+    ],
+    "effect": "The page stays live with noindex,follow and is removed from the sitemap.",
+    "recovery": "The generated noindex is removed and the canonical is restored to the sitemap when the page no longer matches the policy."
+  },
+  "summary": {
+    "evaluated": 373,
+    "kept": 357,
+    "noindex": 16,
+    "restored": 0
+  },
+  "decisions": [
+    {
+      "path": "tools/ahrefs-alternative-review.html",
+      "name": "Best Ahrefs Alternatives with Super License 2026",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/buffer-alternative-review.html",
+      "name": "Best Buffer Alternatives with Super Access 2026",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/clickup-alternative-review.html",
+      "name": "Best ClickUp Alternatives with Super Access 2026",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/figma-alternative-review.html",
+      "name": "Best Figma Alternatives with Super Access 2026",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/hubspot-alternative-review.html",
+      "name": "Best HubSpot Alternatives with Super License 2026",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/jupitrr-review.html",
+      "name": "Jupitrr",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/lebesgue-review.html",
+      "name": "Lebesgue",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/loom-alternative-review.html",
+      "name": "Best Loom Alternatives with Super License 2026",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/mailchimp-alternative-review.html",
+      "name": "Best Mailchimp Alternatives with Super Access 2026",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/notion-alternative-review.html",
+      "name": "Best Notion Alternatives with Super Access 2026",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/riverside-alternative-review.html",
+      "name": "Best Riverside.fm Alternatives with Super License 2026",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/robinize-review.html",
+      "name": "Robinize",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/rybbit-review.html",
+      "name": "PRODUCT",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/typeform-alternative-review.html",
+      "name": "Best Typeform Alternatives with Super License 2026",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/visme-review.html",
+      "name": "Visme",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    },
+    {
+      "path": "tools/wp-reset-review.html",
+      "name": "WP Reset",
+      "action": "noindex",
+      "status": "legacy-catalog",
+      "inbound_links": 1,
+      "recent_google_impressions": false,
+      "reasons": [
+        "legacy catalogue record",
+        "no mapped evidence source",
+        "no active monetization",
+        "1 internal inbound links"
+      ]
+    }
+  ]
+}
