@@ -64,6 +64,17 @@ class AppSumoImpactTests(unittest.TestCase):
         self.assertIn('id="deal-search"', page)
         self.assertIn("Today's checked deal pulse", page)
 
+    def test_promoted_offer_inventory_has_no_arbitrary_default_cap(self):
+        registry = {"offers": [
+            {"id": f"appsumo-ai-{index}", "name": f"AI Tool {index}", "slug": f"ai-tool-{index}",
+             "category": "AI tools", "tracking_url": f"https://appsumo.8odi.net/{index}",
+             "editorial_url": f"appsumo-guides/ai-tool-{index}.html", "ai_relevant": True,
+             "availability": "active"}
+            for index in range(75)
+        ]}
+        self.assertEqual(len(appsumo.promoted_offers(registry)), 75)
+        self.assertEqual(len(appsumo.promoted_offers(registry, limit=5)), 5)
+
     def test_deal_pulse_is_deterministic_and_homepage_safe(self):
         registry = {"offers": [
             {"id": f"deal-{index}", "name": f"Deal {index}", "category": "AI tools", "tracking_url": f"https://appsumo.8odi.net/{index}", "editorial_url": f"guide-{index}.html", "ai_relevant": True, "availability": "active", "last_checked_at": "2026-09-15", "slug": f"deal-{index}", "source_status": "new" if index == 0 else "approved"}

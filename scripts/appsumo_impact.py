@@ -311,7 +311,7 @@ def _score(offer: dict[str, Any]) -> tuple[int, str]:
     return (-score, name)
 
 
-def promoted_offers(registry: dict[str, Any], limit: int = 24) -> list[dict[str, Any]]:
+def promoted_offers(registry: dict[str, Any], limit: int | None = None) -> list[dict[str, Any]]:
     eligible = [
         offer for offer in registry.get("offers", [])
         if offer.get("ai_relevant") and offer.get("editorial_url") and offer.get("availability") != "expired"
@@ -326,7 +326,7 @@ def promoted_offers(registry: dict[str, Any], limit: int = 24) -> list[dict[str,
             continue
         seen.add(key)
         unique.append(offer)
-    return unique[:limit]
+    return unique if limit is None else unique[:max(0, limit)]
 
 
 def deal_picks(registry: dict[str, Any], on_date: date | None = None, limit: int = 3) -> list[dict[str, Any]]:
