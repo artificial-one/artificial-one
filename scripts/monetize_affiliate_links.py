@@ -33,7 +33,7 @@ TOKEN_RE = re.compile(r"[a-z0-9]+")
 AUTO_EXCLUDED = {
     "about.html", "contact.html", "disclosure.html", "index.html",
     "news.html", "partner-offers.html", "partners.html", "privacy.html",
-    "terms.html", "ai-tool-finder.html",
+    "terms.html", "ai-tool-finder.html", "partner-opportunities.html",
 }
 STOP_WORDS = {
     "about", "after", "against", "and", "artificial", "best", "business",
