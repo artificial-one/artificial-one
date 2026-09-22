@@ -310,13 +310,72 @@ def partnerstack_links(api_key: str, partnership: dict[str, Any]) -> list[str]:
 
 
 def category_for(item: dict[str, Any]) -> str:
+    if item.get("network") == "awin":
+        text = " ".join(
+            str(value or "")
+            for value in (item.get("name"), item.get("description"), item.get("website"))
+        ).casefold()
+        category_rules = (
+            ("Document signing", ("esign", "sign pdf", "document signing", "electronic signature")),
+            ("Online learning", ("online course", "education", "skills training", "career development", "accredited course")),
+            ("AI product photography", ("product photo", "product photography", "ai photo", "photo shoot")),
+            ("Trade show technology", ("trade show", "exhibitor", "exhibition")),
+            ("Collectibles & display", ("lego", "collector", "display frame", "display case")),
+            ("AI productivity", ("ai productivity", "ai workflow", "work smarter")),
+        )
+        for category, needles in category_rules:
+            if any(needle in text for needle in needles):
+                return category
     ignored = {"affiliates", "publishers", "hot", "trusted"}
     return next((tag for tag in item.get("tags", []) if tag.casefold() not in ignored), "AI & Business Software")
+
+
+def positioning_for(name: str, category: str) -> tuple[str, str, list[str]]:
+    profiles = {
+        "Document signing": (
+            "iPhone and iPad users who need to sign and manage PDF or DOCX documents.",
+            "mobile document-signing workflows",
+            [f"Sign and manage PDF or DOCX documents with {name}", f"Compare {name} with other mobile e-signature apps"],
+        ),
+        "Online learning": (
+            "Learners and teams comparing flexible online courses and career-development resources.",
+            "online learning and skills development",
+            [f"Evaluate {name} for self-paced skills training", f"Compare {name} with other online-learning platforms"],
+        ),
+        "AI product photography": (
+            "E-commerce teams that need product imagery without a traditional photo shoot.",
+            "AI-assisted product photography",
+            [f"Create product imagery with {name}", f"Compare {name} with product-photography alternatives"],
+        ),
+        "Trade show technology": (
+            "Exhibitors and B2B teams preparing visual assets for trade shows.",
+            "trade-show preparation and visual production",
+            [f"Prepare trade-show visuals with {name}", f"Compare {name} with other exhibition-production options"],
+        ),
+        "Collectibles & display": (
+            "Collectors looking for purpose-built display frames and protective cases.",
+            "collectible display and protection",
+            [f"Evaluate {name} display options for a collection", f"Compare {name} with other display-frame and case options"],
+        ),
+        "AI productivity": (
+            "Professionals comparing AI-assisted tools for everyday workflows.",
+            "AI-assisted productivity workflows",
+            [f"Evaluate {name} for an AI-assisted workflow", f"Compare {name} with other AI productivity tools"],
+        ),
+    }
+    if category in profiles:
+        return profiles[category]
+    return (
+        f"Teams and professionals evaluating {category.casefold()} for a defined business workflow.",
+        f"{category.casefold()} options",
+        [f"Evaluate {name} for a relevant business workflow", f"Compare {name} with other {category.casefold()} options"],
+    )
 
 
 def auto_offer(item: dict[str, Any], tracking_url: str, today: str) -> dict[str, Any]:
     name = str(item["name"])
     category = category_for(item)
+    best_for, comparison_phrase, use_cases = positioning_for(name, category)
     summary = str(item.get("description") or f"A {category.casefold()} product available through an approved affiliate partnership.")
     if len(summary) < 35:
         summary = f"{name} is a {category.casefold()} product available through an approved affiliate partnership."
@@ -330,22 +389,54 @@ def auto_offer(item: dict[str, Any], tracking_url: str, today: str) -> dict[str,
     return {
         "id": slugify(name), "slug": f"{slugify(name)}-software", "name": name,
         "status": "published", "category": category, "summary": summary[:500],
-        "best_for": f"Teams and professionals evaluating {category.casefold()} for a defined business workflow.",
+        "best_for": best_for,
         "offer_label": f"Explore {name}", "pricing_note": f"Pricing, eligibility and plan limits can change; verify current details with {name}.",
         "tracking_url": tracking_url, "cta_label": f"Explore {name}", "featured": False, "sponsored": True,
         "approved_at": today, "terms_verified_at": today, "expires_at": None,
-        "why_consider": f"{name} may fit buyers actively evaluating {category.casefold()} options.",
+        "why_consider": f"{name} may fit buyers actively evaluating {comparison_phrase}.",
         "watch_out": "Confirm current pricing, regional availability, plan limits and partner terms before purchasing.",
-        "use_cases": [f"Evaluate {name} for a relevant business workflow", f"Compare {name} with other {category.casefold()} options"],
+        "use_cases": use_cases,
         "evidence": evidence,
-        "automation": {"source": item["source"], "policy_status": item["policy"]["status"], "discovered_by": "partner-opportunity-engine"},
+        "automation": {"source": item["source"], "network": item.get("network", "partnerstack"), "opportunity_id": item.get("id"), "policy_status": item["policy"]["status"], "discovered_by": "partner-opportunity-engine"},
     }
+
+
+def refresh_auto_offers(registry: dict[str, Any], opportunities: list[dict[str, Any]]) -> bool:
+    """Refresh search positioning for generated offers without touching manual copy."""
+    by_name = {normalized_name(str(item.get("name") or "")): item for item in opportunities}
+    changed = False
+    for offer in registry.get("offers", []):
+        if not isinstance(offer, dict) or offer.get("automation", {}).get("discovered_by") != "partner-opportunity-engine":
+            continue
+        item = by_name.get(normalized_name(str(offer.get("name") or "")))
+        if not item:
+            continue
+        name = str(offer["name"])
+        category = category_for(item)
+        best_for, comparison_phrase, use_cases = positioning_for(name, category)
+        replacements = {
+            "category": category,
+            "best_for": best_for,
+            "why_consider": f"{name} may fit buyers actively evaluating {comparison_phrase}.",
+            "use_cases": use_cases,
+        }
+        for key, value in replacements.items():
+            if offer.get(key) != value:
+                offer[key] = value
+                changed = True
+        automation = offer.setdefault("automation", {})
+        for key, value in (("network", item.get("network", "partnerstack")), ("opportunity_id", item.get("id"))):
+            if automation.get(key) != value:
+                automation[key] = value
+                changed = True
+    return changed
 
 
 def merge_auto_offers(root: Path, opportunities: list[dict[str, Any]], partnerships: dict[str, dict[str, Any]], api_key: str) -> list[str]:
     registry = load_json(root / "data/partner_offers.json", {"version": 1, "offers": []})
     audit_path = root / "data/partnerstack_program_audit.json"
     audit = load_json(audit_path, {"version": 1, "programs": [], "summary": {}})
+    registry_changed = refresh_auto_offers(registry, opportunities)
     existing = {normalized_name(str(item.get("name") or "")) for item in registry.get("offers", []) if isinstance(item, dict)}
     added: list[str] = []
     for item in opportunities:
@@ -373,9 +464,10 @@ def merge_auto_offers(root: Path, opportunities: list[dict[str, Any]], partnersh
         existing.add(key)
         added.append(str(item["name"]))
         item["state"] = "active_auto_onboarded"
-    if added:
+    if added or registry_changed:
         registry["updated_at"] = date.today().isoformat()
         (root / "data/partner_offers.json").write_text(json.dumps(registry, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    if added:
         known_audit = {normalized_name(str(row.get("name") or "")) for row in audit.get("programs", []) if isinstance(row, dict)}
         for item in opportunities:
             if str(item["name"]) not in added or normalized_name(str(item["name"])) in known_audit:
@@ -547,7 +639,7 @@ def run(root: Path, state_path: Path, email_to: str = "", email_from: str = "") 
     active = partnership_names(partnerships)
     print(f"Screening {len(discovered)} discovered opportunities and their policies…", flush=True)
     opportunities = prepare_opportunities(discovered, root, active)
-    added = merge_auto_offers(root, opportunities, active, api_key) if api_key else []
+    added = merge_auto_offers(root, opportunities, active, api_key)
     previous = load_json(root / "data/partner_opportunities.json", {})
     payload = public_payload(opportunities, previous)
     output = root / "data/partner_opportunities.json"

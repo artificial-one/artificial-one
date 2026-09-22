@@ -1,4 +1,5 @@
 import importlib.util
+import html
 import json
 import re
 import unittest
@@ -38,7 +39,7 @@ class AffiliateSiteOutputTests(unittest.TestCase):
             if offer["status"] != "published":
                 continue
             page = ROOT / "partner-offers" / f"{offer['slug']}.html"
-            text = page.read_text(encoding="utf-8")
+            text = html.unescape(page.read_text(encoding="utf-8"))
             self.assertIn(offer["tracking_url"], text, offer["id"])
             self.assertIn(f'data-offer-id="{offer["id"]}"', text, offer["id"])
             self.assertIn("affiliate-tracking.js", text, offer["id"])
@@ -50,7 +51,7 @@ class AffiliateSiteOutputTests(unittest.TestCase):
             for page in monetize.selected_pages(rule):
                 expected_by_page.setdefault(page, rule)
         for page, rule in expected_by_page.items():
-            text = page.read_text(encoding="utf-8")
+            text = html.unescape(page.read_text(encoding="utf-8"))
             offer_id = rule["offer_id"]
             self.assertIn("affiliate-tracking.js", text, page.as_posix())
             self.assertIn(f'data-offer-id="{offer_id}"', text, page.as_posix())

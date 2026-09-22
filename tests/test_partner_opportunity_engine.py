@@ -152,6 +152,34 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
             registry = json.loads((root / "data/partner_offers.json").read_text(encoding="utf-8"))
             self.assertEqual(registry["offers"][0]["tracking_url"], "https://sovrn.co/example")
 
+    def test_awin_categories_and_positioning_match_the_product(self):
+        cases = (
+            ({"network": "awin", "name": "Rewarx Studio AI", "description": "AI product photos without expensive shoots", "tags": ["Software"]}, "AI product photography"),
+            ({"network": "awin", "name": "Alison", "description": "Online education and skills training", "tags": ["Software"]}, "Online learning"),
+            ({"network": "awin", "name": "eSign", "description": "Sign PDF and DOCX documents on iOS", "tags": ["Software"]}, "Document signing"),
+            ({"network": "awin", "name": "BRKOX", "description": "Display frames for LEGO collectors", "tags": ["Software"]}, "Collectibles & display"),
+        )
+        for item, expected in cases:
+            with self.subTest(item=item["name"]):
+                self.assertEqual(scout.category_for(item), expected)
+
+    def test_existing_generated_offer_gets_refreshed_without_changing_manual_offer(self):
+        generated = {
+            "name": "Alison", "category": "Software", "best_for": "Generic", "why_consider": "Generic",
+            "use_cases": ["Generic one", "Generic two"],
+            "automation": {"discovered_by": "partner-opportunity-engine"},
+        }
+        manual = {"name": "Manual Tool", "category": "Hand edited"}
+        registry = {"offers": [generated, manual]}
+        changed = scout.refresh_auto_offers(registry, [{
+            "id": "awin:1", "network": "awin", "name": "Alison",
+            "description": "Online education and skills training", "tags": ["Software"],
+        }])
+        self.assertTrue(changed)
+        self.assertEqual(generated["category"], "Online learning")
+        self.assertEqual(generated["automation"]["network"], "awin")
+        self.assertEqual(manual["category"], "Hand edited")
+
 
 if __name__ == "__main__":
     unittest.main()
