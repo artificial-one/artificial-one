@@ -19,7 +19,7 @@ class PartnerStackCloudMonitorTests(unittest.TestCase):
         result = reduce_affiliate_click_results(
             ["2026-09-14", "2026-09-13"],
             [
-                {"result": ["total", "3", "offer:descript", "2", "page:/reviews.html", "3", "campaign:weekly-tools", "2"]},
+                {"result": ["total", "3", "offer:descript", "2", "page:/reviews.html", "3", "source:google", "2", "medium:organic", "2", "campaign:weekly-tools", "2", "landing:/reviews.html", "2"]},
                 {"result": 2},
                 {"result": ["total", "4", "offer:descript", "1", "offer:volza", "3"]},
                 {"result": 3},
@@ -29,6 +29,9 @@ class PartnerStackCloudMonitorTests(unittest.TestCase):
         self.assertEqual(result["unique_daily_sessions"], 5)
         self.assertEqual(result["by_offer"], {"descript": 3, "volza": 3})
         self.assertEqual(result["by_campaign"], {"weekly-tools": 2})
+        self.assertEqual(result["by_source"], {"google": 2})
+        self.assertEqual(result["by_medium"], {"organic": 2})
+        self.assertEqual(result["by_landing_page"], {"/reviews.html": 2})
 
     def test_unwraps_paginated_partner_response(self):
         items, has_more = _items_from_payload(

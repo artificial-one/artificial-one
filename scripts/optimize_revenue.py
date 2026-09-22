@@ -36,6 +36,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 WINDOW_DAYS = 28
+MONEY_CLUSTER_COUNT = 8
 
 
 def _slug(value: Any) -> str:
@@ -246,7 +247,15 @@ def build_strategy(ranking: list[str]) -> dict[str, Any]:
         "method": "privacy-safe-expected-earnings-ranking",
         "window_days": WINDOW_DAYS,
         "ranking": ranking,
-        "featured": ranking[:6],
+        "featured": ranking[:MONEY_CLUSTER_COUNT],
+        "money_clusters": ranking[:MONEY_CLUSTER_COUNT],
+        "growth_targets": {
+            "window_days": 28,
+            "qualified_visits": 1250,
+            "affiliate_click_goal": 100,
+            "affiliate_ctr_percent": 8,
+            "internal_route_ctr_percent": 15,
+        },
         "privacy": "Only offer ordering is published; raw traffic and customer data remain private.",
     }
 

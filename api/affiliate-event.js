@@ -11,6 +11,7 @@ const EVENT_STREAMS = {
   affiliate_impression: "impressions",
   site_visit: "visits",
   content_route_click: "route_clicks",
+  content_route_impression: "route_impressions",
 };
 
 function clean(value, pattern, fallback) {
@@ -50,7 +51,9 @@ async function persistAggregate(event) {
     ["HINCRBY", key, `placement:${event.placement}`, 1],
     ["HINCRBY", key, `page:${event.page_path}`, 1],
     ["HINCRBY", key, `source:${event.source}`, 1],
+    ["HINCRBY", key, `medium:${event.medium}`, 1],
     ["HINCRBY", key, `campaign:${event.campaign}`, 1],
+    ["HINCRBY", key, `landing:${event.landing_path}`, 1],
     ["PFADD", `${key}:sessions`, hash],
     ["EXPIRE", key, 63072000],
     ["EXPIRE", `${key}:sessions`, 63072000],
@@ -87,6 +90,10 @@ async function forwardToGa4(event) {
           offer_id: event.offer_id,
           placement: event.placement,
           page_path: event.page_path,
+          source: event.source,
+          medium: event.medium,
+          campaign: event.campaign,
+          landing_page: event.landing_path,
           engagement_time_msec: 1,
         },
       }],
@@ -124,7 +131,9 @@ module.exports = async function handler(req, res) {
     page_path: clean(body.page_path, SAFE_PATH, "/"),
     session_id: clean(body.session_id, /^[a-z0-9-]{1,80}$/i, "anonymous"),
     source: clean(body.source, SAFE_CHANNEL, "direct"),
+    medium: clean(body.medium, SAFE_CHANNEL, "unknown"),
     campaign: clean(body.campaign, SAFE_CHANNEL, "organic"),
+    landing_path: clean(body.landing_path, SAFE_PATH, "/"),
   };
 
   const results = await Promise.allSettled([

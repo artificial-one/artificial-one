@@ -1,5 +1,14 @@
 {
-  "content_priority": [],
+  "content_priority": [
+    "foxit",
+    "pinecone",
+    "rank-prompt",
+    "seamless",
+    "unbounce",
+    "wegic",
+    "whatconverts",
+    "adcreative"
+  ],
   "crawl_priority": [
     "/ai-tool-finder.html",
     "/partner-offers.html",
@@ -45,6 +54,6 @@
   "experiments": {},
   "method": "guarded-search-snippet-experiments",
   "privacy": "No queries, traffic totals, customer data or revenue totals are published.",
-  "updated_at": "2026-09-21",
+  "updated_at": "2026-09-22",
   "version": 1
 }

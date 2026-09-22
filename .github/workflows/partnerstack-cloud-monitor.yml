@@ -7,7 +7,12 @@ on:
     paths:
       - .github/workflows/partnerstack-cloud-monitor.yml
       - scripts/affiliate_network_monitor.py
+      - scripts/partnerstack_cloud_monitor.py
       - scripts/appsumo_impact.py
+      - assets/affiliate-tracking.js
+      - api/affiliate-event.js
+      - tests/test_partnerstack_cloud_monitor.py
+      - tests/test_appsumo_impact.py
       - data/impact_connection.json
   schedule:
     # 07:23 UTC is morning in Europe/Prague and avoids peak-hour scheduling.

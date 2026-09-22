@@ -51,6 +51,8 @@ class GrowthExpansionTests(unittest.TestCase):
         self.assertIn("WebApplication", stack)
         self.assertIn("data-affiliate-offer", stack)
         self.assertIn('../partner-offers/alpha.html', calculator)
+        self.assertIn("Share this calculator", calculator)
+        self.assertIn("shared-calculator", calculator)
 
     def test_sitemap_blocks_are_replaced_without_reordering(self):
         source = '<?xml version="1.0"?><urlset>\n  <!-- before -->\n  <!-- decision-tools:start -->old<!-- decision-tools:end -->\n  <!-- after -->\n</urlset>\n'

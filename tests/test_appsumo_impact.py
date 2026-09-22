@@ -90,9 +90,11 @@ class AppSumoImpactTests(unittest.TestCase):
         self.assertIn("affiliateUnavailable", script)
         self.assertIn('"site_visit"', script)
         self.assertIn('"content_route_click"', script)
+        self.assertIn('"content_route_impression"', script)
         endpoint = (ROOT / "api" / "affiliate-event.js").read_text(encoding="utf-8")
         self.assertIn('site_visit: "visits"', endpoint)
         self.assertIn('content_route_click: "route_clicks"', endpoint)
+        self.assertIn('content_route_impression: "route_impressions"', endpoint)
 
     def test_appsumo_is_permanently_blocked_from_paid_search(self):
         policy = {"prohibited_networks": ["impact-appsumo"], "prohibited_brand_terms": ["appsumo"]}
@@ -139,6 +141,20 @@ class AppSumoImpactTests(unittest.TestCase):
         self.assertIn("5/100 (5%)", text)
         self.assertIn("Drive 95 more qualified affiliate clicks", text)
         self.assertIn("Clicks remaining to goal", html)
+
+    def test_private_dashboard_reports_source_and_internal_route_quality(self):
+        _subject, text, _html = monitor.render_dashboard(
+            {"rewards": {}, "transactions": {}, "partnerships": {}, "customers": {}},
+            {"connected": True, "actions": {"count": 0}, "programs": {}, "invoices": {}},
+            {"total": 8, "by_source": {"google": 6}}, {"total": 100},
+            {"total": 100, "by_source": {"google": 80}, "by_medium": {"organic": 80}, "by_landing_page": {"/buyers-guides.html": 40}},
+            {"total": 15},
+            {"inventory": 184, "active": 151, "checking": 0, "expired": 33, "promotable": 19},
+            [], "https://example.test/run", route_impressions={"total": 100},
+        )
+        self.assertIn("Internal route click-through rate: 15.00%", text)
+        self.assertIn("Top visit sources: google: 80", text)
+        self.assertIn("Top landing pages: /buyers-guides.html: 40", text)
 
 
 if __name__ == "__main__":

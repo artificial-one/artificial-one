@@ -55,6 +55,8 @@ class RevenueOptimizerTests(unittest.TestCase):
         self.assertNotIn("clicks", encoded)
         self.assertNotIn("signups", encoded)
         self.assertEqual(strategy["featured"], ["one", "two"])
+        self.assertEqual(strategy["money_clusters"], ["one", "two"])
+        self.assertEqual(strategy["growth_targets"]["affiliate_click_goal"], 100)
 
     def test_program_names_map_to_offer_ids(self):
         offers = [{"id": "seamless", "name": "Seamless.AI"}]

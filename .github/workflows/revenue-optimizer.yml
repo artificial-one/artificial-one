@@ -17,6 +17,7 @@ on:
       - data/partner_offers.json
       - data/affiliate_placements.json
       - scripts/optimize_revenue.py
+      - scripts/search_revenue_engine.py
       - scripts/build_partner_offers.py
       - scripts/monetize_affiliate_links.py
       - assets/affiliate-tracking.js

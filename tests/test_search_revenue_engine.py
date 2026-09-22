@@ -179,6 +179,30 @@ class SearchRevenueEngineTests(unittest.TestCase):
         finally:
             engine.OFFERS_PATH = original
 
+    def test_content_priority_uses_revenue_clusters_before_search_volume_exists(self):
+        original_offers = engine.OFFERS_PATH
+        original_strategy = engine.REVENUE_STRATEGY_PATH
+        try:
+            with tempfile.TemporaryDirectory() as folder:
+                root = Path(folder)
+                offers = root / "offers.json"
+                strategy = root / "strategy.json"
+                offers.write_text(
+                    '{"offers":[{"id":"alpha","slug":"alpha","status":"published"},{"id":"draft","slug":"draft","status":"draft"}]}',
+                    encoding="utf-8",
+                )
+                strategy.write_text('{"money_clusters":["alpha","draft"]}', encoding="utf-8")
+                engine.OFFERS_PATH = offers
+                engine.REVENUE_STRATEGY_PATH = strategy
+                public = {"version": 1, "experiments": {}, "content_priority": []}
+                private = {"version": 1}
+                actions = engine.update_content_priority([], public, private, date(2026, 9, 22))
+                self.assertEqual(public["content_priority"], ["alpha"])
+                self.assertEqual(len(actions), 1)
+        finally:
+            engine.OFFERS_PATH = original_offers
+            engine.REVENUE_STRATEGY_PATH = original_strategy
+
 
 if __name__ == "__main__":
     unittest.main()

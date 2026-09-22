@@ -60,6 +60,8 @@ class SearchRevenuePageTests(unittest.TestCase):
         self.assertIn("Verify the current limits", html)
         self.assertIn('data-placement="value-calculator-result"', html)
         self.assertIn("hours saved × hourly value", html)
+        self.assertIn("Share this calculator", html)
+        self.assertIn("utm_source','shared-calculator", html)
 
     def test_context_routes_point_to_guides_and_calculators(self):
         catalog = pages.route_catalog([offer(f"tool-{index}") for index in range(8)])

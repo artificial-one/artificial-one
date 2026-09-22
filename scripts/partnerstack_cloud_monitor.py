@@ -159,7 +159,10 @@ def build_snapshot(
             "by_offer": {},
             "by_placement": {},
             "by_page": {},
+            "by_source": {},
+            "by_medium": {},
             "by_campaign": {},
+            "by_landing_page": {},
         },
         "affiliate_impressions": affiliate_impressions or {
             "window_days": CLICK_WINDOW_DAYS,
@@ -168,7 +171,10 @@ def build_snapshot(
             "by_offer": {},
             "by_placement": {},
             "by_page": {},
+            "by_source": {},
+            "by_medium": {},
             "by_campaign": {},
+            "by_landing_page": {},
         },
     }
 
@@ -180,7 +186,10 @@ def reduce_affiliate_click_results(
     offers: Counter[str] = Counter()
     placements: Counter[str] = Counter()
     pages: Counter[str] = Counter()
+    sources: Counter[str] = Counter()
+    media: Counter[str] = Counter()
     campaigns: Counter[str] = Counter()
+    landing_pages: Counter[str] = Counter()
     unique_daily_sessions = 0
     for index, _day in enumerate(days):
         hash_result = payload[index * 2].get("result", []) if index * 2 < len(payload) else []
@@ -198,8 +207,14 @@ def reduce_affiliate_click_results(
                     placements[name[10:]] += count
                 elif name.startswith("page:"):
                     pages[name[5:]] += count
+                elif name.startswith("source:"):
+                    sources[name[7:]] += count
+                elif name.startswith("medium:"):
+                    media[name[7:]] += count
                 elif name.startswith("campaign:"):
                     campaigns[name[9:]] += count
+                elif name.startswith("landing:"):
+                    landing_pages[name[8:]] += count
         unique_daily_sessions += _integer(session_result)
     return {
         "window_days": len(days),
@@ -208,7 +223,10 @@ def reduce_affiliate_click_results(
         "by_offer": dict(offers.most_common()),
         "by_placement": dict(placements.most_common()),
         "by_page": dict(pages.most_common(20)),
+        "by_source": dict(sources.most_common(20)),
+        "by_medium": dict(media.most_common(20)),
         "by_campaign": dict(campaigns.most_common(20)),
+        "by_landing_page": dict(landing_pages.most_common(20)),
     }
 
 
@@ -222,7 +240,7 @@ def fetch_affiliate_events(
     stream: str,
     days: int = CLICK_WINDOW_DAYS,
 ) -> dict[str, Any]:
-    if stream not in {"clicks", "impressions", "visits", "route_clicks"}:
+    if stream not in {"clicks", "impressions", "visits", "route_clicks", "route_impressions"}:
         raise PartnerStackError(f"Unsupported affiliate event stream: {stream}")
     end = datetime.now(timezone.utc).date()
     date_keys = [(end - timedelta(days=offset)).isoformat() for offset in range(days)]

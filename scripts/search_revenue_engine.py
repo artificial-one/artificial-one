@@ -249,13 +249,26 @@ def offer_ids_by_path() -> dict[str, str]:
     }
 
 
+def cold_start_priority(limit: int = 8) -> list[str]:
+    """Seed money clusters from reviewed revenue ranking before search data matures."""
+    registry = load_json(OFFERS_PATH, {"offers": []})
+    published = {
+        str(item.get("id"))
+        for item in registry.get("offers", [])
+        if isinstance(item, dict) and item.get("status") == "published" and item.get("id")
+    }
+    strategy = load_json(REVENUE_STRATEGY_PATH, {})
+    candidates = strategy.get("money_clusters") or strategy.get("featured") or strategy.get("ranking") or []
+    return [str(item) for item in candidates if str(item) in published][:limit]
+
+
 def update_content_priority(
     opportunities: list[dict[str, Any]], public: dict[str, Any], private: dict[str, Any], today: date
 ) -> list[str]:
     """Publish only offer IDs selected by demand, never queries or metrics."""
     last_update = private.get("content_priority_updated_on")
     try:
-        if last_update and (today - date.fromisoformat(str(last_update))).days < CONTENT_PRIORITY_DAYS:
+        if public.get("content_priority") and last_update and (today - date.fromisoformat(str(last_update))).days < CONTENT_PRIORITY_DAYS:
             return []
     except ValueError:
         pass
@@ -266,6 +279,11 @@ def update_content_priority(
             continue
         offer_id = mapping.get(page_path(str(item.get("page") or "")))
         if offer_id and offer_id not in selected:
+            selected.append(offer_id)
+        if len(selected) >= 8:
+            break
+    for offer_id in cold_start_priority(8):
+        if offer_id not in selected:
             selected.append(offer_id)
         if len(selected) >= 8:
             break

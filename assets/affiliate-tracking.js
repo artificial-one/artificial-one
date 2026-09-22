@@ -24,29 +24,42 @@
     try {
       var params = new URLSearchParams(window.location.search);
       var suppliedSource = params.get("utm_source");
+      var suppliedMedium = params.get("utm_medium");
       var suppliedCampaign = params.get("utm_campaign");
+      var saved = JSON.parse(window.sessionStorage.getItem(ACQUISITION_KEY) || "null");
       if (suppliedSource || suppliedCampaign) {
         var supplied = {
           source: compactSubId(suppliedSource, "direct"),
-          campaign: compactSubId(suppliedCampaign, "organic")
+          medium: compactSubId(suppliedMedium, "unknown"),
+          campaign: compactSubId(suppliedCampaign, "organic"),
+          landing_path: window.location.pathname
         };
+        // Preserve the first external acquisition source when a visitor follows
+        // one of our own UTM-tagged internal routes.
+        if (saved && saved.source && supplied.source === "onsite") return saved;
         window.sessionStorage.setItem(ACQUISITION_KEY, JSON.stringify(supplied));
         return supplied;
       }
-      var saved = JSON.parse(window.sessionStorage.getItem(ACQUISITION_KEY) || "null");
       if (saved && saved.source && saved.campaign) return saved;
       var referrerSource = "direct";
+      var referrerMedium = "none";
       if (document.referrer) {
         var referrer = new URL(document.referrer);
         if (referrer.hostname && referrer.hostname !== window.location.hostname) {
           referrerSource = compactSubId(referrer.hostname.replace(/^www\./, ""), "referral");
+          referrerMedium = "referral";
         }
       }
-      var discovered = { source: referrerSource, campaign: "organic" };
+      var discovered = {
+        source: referrerSource,
+        medium: referrerMedium,
+        campaign: "organic",
+        landing_path: window.location.pathname
+      };
       window.sessionStorage.setItem(ACQUISITION_KEY, JSON.stringify(discovered));
       return discovered;
     } catch (_) {
-      return { source: "direct", campaign: "organic" };
+      return { source: "direct", medium: "none", campaign: "organic", landing_path: window.location.pathname };
     }
   }
 
@@ -58,7 +71,9 @@
       placement: (link && link.dataset.placement) || "page",
       page_path: window.location.pathname,
       source: context.source,
+      medium: context.medium || "unknown",
       campaign: context.campaign,
+      landing_path: context.landing_path || window.location.pathname,
       session_id: sessionId,
       occurred_at: new Date().toISOString()
     };
@@ -123,6 +138,8 @@
 
   var impressionSeen = Object.create(null);
   var affiliateObserver = null;
+  var routeImpressionSeen = Object.create(null);
+  var routeObserver = null;
 
   function trackVisibleRecommendations() {
     if (!("IntersectionObserver" in window)) return;
@@ -147,9 +164,35 @@
     });
   }
 
+  function trackVisibleRoutes() {
+    if (!("IntersectionObserver" in window)) return;
+    if (!routeObserver) {
+      routeObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting || entry.intersectionRatio < 0.5) return;
+          var link = entry.target;
+          var key = [link.dataset.relatedOfferId, link.dataset.placement, window.location.pathname].join(":");
+          if (!routeImpressionSeen[key]) {
+            routeImpressionSeen[key] = true;
+            sendToConfiguredEndpoint(eventPayload(link, "content_route_impression"));
+          }
+          routeObserver.unobserve(link);
+        });
+      }, { threshold: [0.5] });
+    }
+    document.querySelectorAll("a[data-content-route]").forEach(function (link) {
+      if (link.dataset.routeObserved) return;
+      link.dataset.routeObserved = "1";
+      routeObserver.observe(link);
+    });
+  }
+
   function observeDynamicRecommendations() {
     if (!("MutationObserver" in window)) return;
-    new MutationObserver(trackVisibleRecommendations).observe(document.body, { childList: true, subtree: true });
+    new MutationObserver(function () {
+      trackVisibleRecommendations();
+      trackVisibleRoutes();
+    }).observe(document.body, { childList: true, subtree: true });
   }
 
   function sendToConfiguredEndpoint(payload) {
@@ -270,6 +313,7 @@
     card.appendChild(calculator);
     var footer = document.querySelector("footer");
     (footer && footer.parentNode ? footer.parentNode : document.body).insertBefore(card, footer || null);
+    trackVisibleRoutes();
   }
 
   function installStickyRecommendation(strategy) {
@@ -368,6 +412,7 @@
         loadContentRoutes().then(installContextualRevenueRoute);
         installStickyRecommendation(strategy);
         trackVisibleRecommendations();
+        trackVisibleRoutes();
         observeDynamicRecommendations();
       });
     });
@@ -378,6 +423,7 @@
       loadContentRoutes().then(installContextualRevenueRoute);
       installStickyRecommendation(strategy);
       trackVisibleRecommendations();
+      trackVisibleRoutes();
       observeDynamicRecommendations();
     });
   }

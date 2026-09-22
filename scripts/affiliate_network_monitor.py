@@ -157,12 +157,20 @@ def render_dashboard(
     partnerstack: dict[str, Any], impact: dict[str, Any], clicks: dict[str, Any],
     impressions: dict[str, Any], visits: dict[str, Any], route_clicks: dict[str, Any],
     coverage: dict[str, int], changes: list[str], run_url: str,
+    route_impressions: dict[str, Any] | None = None,
 ) -> tuple[str, str, str]:
     today = date.today().isoformat()
     ctr = (int(clicks.get("total") or 0) / int(impressions.get("total") or 1) * 100) if int(impressions.get("total") or 0) else 0
     visit_click_rate = (int(clicks.get("total") or 0) / int(visits.get("total") or 1) * 100) if int(visits.get("total") or 0) else 0
     click_total = int(clicks.get("total") or 0)
+    route_impressions = route_impressions or {}
+    route_view_total = int(route_impressions.get("total") or 0)
+    route_click_total = int(route_clicks.get("total") or 0)
+    route_ctr = (route_click_total / route_view_total * 100) if route_view_total else 0
     click_goal = 100
+    target_ctr = 8.0
+    route_ctr_goal = 15.0
+    visit_goal = 1250
     click_progress = min(100.0, click_total / click_goal * 100)
     clicks_remaining = max(0, click_goal - click_total)
     ps_rewards = partnerstack.get("rewards", {})
@@ -170,6 +178,8 @@ def render_dashboard(
     rows = [
         ("Site visits (28d)", str(visits.get("total", 0))),
         ("Internal news/guide route clicks (28d)", str(route_clicks.get("total", 0))),
+        ("Internal route impressions (28d)", str(route_view_total)),
+        ("Internal route click-through rate", f"{route_ctr:.2f}% (goal {route_ctr_goal:.0f}%)"),
         ("Site affiliate clicks (28d)", str(clicks.get("total", 0))),
         ("Qualified affiliate-click goal (28d)", str(click_goal)),
         ("Progress to click goal", f"{click_total}/{click_goal} ({click_progress:.0f}%)"),
@@ -177,7 +187,11 @@ def render_dashboard(
         ("Affiliate CTA impressions (28d)", str(impressions.get("total", 0))),
         ("Site CTA click-through rate", f"{ctr:.2f}%"),
         ("Visit-to-affiliate-click rate", f"{visit_click_rate:.2f}%"),
+        ("Qualified visit goal (28d)", f"{visit_goal} at {target_ctr:.0f}% affiliate CTR"),
+        ("Visits remaining to goal", str(max(0, visit_goal - int(visits.get("total") or 0)))),
         ("Top visit sources", _counts(visits.get("by_source", {}))),
+        ("Top visit media", _counts(visits.get("by_medium", {}))),
+        ("Top landing pages", _counts(visits.get("by_landing_page", {}))),
         ("Top affiliate-click sources", _counts(clicks.get("by_source", {}))),
         ("PartnerStack programs", str(partnerstack.get("partnerships", {}).get("count", 0))),
         ("PartnerStack signups", str(partnerstack.get("customers", {}).get("count", 0))),
@@ -239,17 +253,18 @@ def main(argv: list[str] | None = None) -> int:
     impressions = ps.fetch_affiliate_events(redis_url, redis_token, "impressions") if redis_url and redis_token else {}
     visits = ps.fetch_affiliate_events(redis_url, redis_token, "visits") if redis_url and redis_token else {}
     route_clicks = ps.fetch_affiliate_events(redis_url, redis_token, "route_clicks") if redis_url and redis_token else {}
+    route_impressions = ps.fetch_affiliate_events(redis_url, redis_token, "route_impressions") if redis_url and redis_token else {}
     partnerstack = ps.build_snapshot(collections, affiliate_clicks=clicks, affiliate_impressions=impressions)
     sid = os.environ.get("IMPACT_ACCOUNT_SID", "").strip()
     token = os.environ.get("IMPACT_AUTH_TOKEN", "").strip()
     impact = fetch_impact_snapshot(sid, token) if sid and token else {"connected": False}
-    current = {"schema_version": 1, "audited_at": datetime.now(timezone.utc).isoformat(), "partnerstack": partnerstack, "impact": impact, "acquisition": {"visits": visits, "route_clicks": route_clicks}}
+    current = {"schema_version": 2, "audited_at": datetime.now(timezone.utc).isoformat(), "partnerstack": partnerstack, "impact": impact, "acquisition": {"visits": visits, "route_clicks": route_clicks, "route_impressions": route_impressions}}
     previous = json.loads(args.baseline.read_text(encoding="utf-8")) if args.baseline.exists() else {}
     changes = ps.compare_snapshots(previous.get("partnerstack", {}), partnerstack) if previous else []
     if previous and impact.get("connected"):
         changes.extend(_impact_changes(previous.get("impact", {}), impact))
     run_url = f"{os.environ.get('GITHUB_SERVER_URL', '')}/{os.environ.get('GITHUB_REPOSITORY', '')}/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}".strip("/")
-    subject, text_body, html_body = render_dashboard(partnerstack, impact, clicks, impressions, visits, route_clicks, website_coverage(), changes, run_url)
+    subject, text_body, html_body = render_dashboard(partnerstack, impact, clicks, impressions, visits, route_clicks, website_coverage(), changes, run_url, route_impressions=route_impressions)
     if args.email_to:
         resend = os.environ.get("RESEND_API_KEY", "").strip()
         if not resend or not args.email_from:
