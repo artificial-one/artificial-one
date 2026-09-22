@@ -5,11 +5,11 @@
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 459,
-    "existing_active": 24,
+    "total": 468,
+    "existing_active": 25,
     "not_qualified": 14,
-    "policy_review_required": 58,
-    "ready_for_owner_application": 363
+    "policy_review_required": 22,
+    "ready_for_owner_application": 407
   },
   "opportunities": [
     {
@@ -579,10 +579,18 @@
         "marketing"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -1252,10 +1260,18 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -3301,19 +3317,11 @@
         "marketing"
       ],
       "already_active": false,
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": true,
-          "disclosure_required": true
-        },
-        "cookie_days": 60
+        "status": "unreachable",
+        "signals": {},
+        "cookie_days": null
       }
     },
     {
@@ -3416,10 +3424,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -4055,10 +4071,18 @@
         "productivity"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -5306,10 +5330,18 @@
         "productivity"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -6531,10 +6563,18 @@
         "productivity"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -6622,11 +6662,19 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 30
       }
     },
     {
@@ -7531,11 +7579,19 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 30
       }
     },
     {
@@ -7637,10 +7693,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": true,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -8093,10 +8157,18 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -8790,7 +8862,7 @@
       "name": "ABC Trainerize",
       "slug": "trainerize",
       "description": "ABC Trainerize is an online coaching platform helping coaches and fitness businesses offer fitness, nutrition and habit programs online and stay connected to their clients and their audience.",
-      "offer": "Earn 15% on monthly memberships",
+      "offer": "Earn 10% on monthly memberships",
       "tags": [
         "Affiliates",
         "B2B Marketplaces",
@@ -9078,11 +9150,19 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 30
       }
     },
     {
@@ -9574,10 +9654,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -9679,10 +9767,18 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -9966,10 +10062,18 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
         "cookie_days": null
       }
     },
@@ -10009,10 +10113,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -10743,10 +10855,18 @@
         "marketing"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -11038,10 +11158,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -11603,11 +11731,19 @@
         "marketing"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": 30
       }
     },
     {
@@ -11702,10 +11838,18 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -12391,10 +12535,18 @@
         "productivity"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -12744,10 +12896,18 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -12786,6 +12946,48 @@
         "e-commerce",
         "marketing",
         "sales"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "direct:buffer-ai",
+      "network": "direct-vendor",
+      "name": "Buffer AI",
+      "slug": "buffer-ai",
+      "description": "Buffer AI review - AI social media post generator",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://buffer.com/partners",
+      "terms_url": "https://buffer.com/partners",
+      "website": "https://buffer.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://buffer.com",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "content"
       ],
       "already_active": false,
       "state": "ready_for_owner_application",
@@ -13108,6 +13310,48 @@
       }
     },
     {
+      "id": "direct:creasquare",
+      "network": "direct-vendor",
+      "name": "Creasquare",
+      "slug": "creasquare",
+      "description": "Creasquare review - AI social media content creator",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://creasquare.io/affiliates/",
+      "terms_url": "https://creasquare.io/affiliates/",
+      "website": "https://creasquare.io",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://creasquare.io",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "content"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "direct:databricks-ai",
       "network": "direct-vendor",
       "name": "Databricks AI",
@@ -13132,6 +13376,48 @@
       "relevance_matches": [
         "ai",
         "analytics",
+        "content"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "direct:describely",
+      "network": "direct-vendor",
+      "name": "Describely",
+      "slug": "describely",
+      "description": "Describely review - AI product descriptions for ecommerce",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://describely.ai/affiliates",
+      "terms_url": "https://describely.ai/affiliates",
+      "website": "https://describely.ai",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://describely.ai",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
         "content"
       ],
       "already_active": false,
@@ -13191,6 +13477,40 @@
           "disclosure_required": false
         },
         "cookie_days": 45
+      }
+    },
+    {
+      "id": "direct:fathom",
+      "network": "direct-vendor",
+      "name": "Fathom",
+      "slug": "fathom",
+      "description": "Fathom review - Free AI meeting assistant",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://fathom.video/partner-programs",
+      "terms_url": "https://fathom.video/partner-programs",
+      "website": "https://fathom.video",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://fathom.video",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "content"
+      ],
+      "already_active": false,
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
+        "cookie_days": null
       }
     },
     {
@@ -13872,6 +14192,48 @@
       }
     },
     {
+      "id": "direct:opus-clip",
+      "network": "direct-vendor",
+      "name": "Opus Clip",
+      "slug": "opus-clip",
+      "description": "Opus Clip review - AI that turns long videos into viral clips",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://opus.pro/affiliate",
+      "terms_url": "https://opus.pro/affiliate",
+      "website": "https://opus.pro",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://opus.pro",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "content"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "direct:pictory-ai",
       "network": "direct-vendor",
       "name": "Pictory AI",
@@ -14124,6 +14486,175 @@
           "disclosure_required": false
         },
         "cookie_days": 45
+      }
+    },
+    {
+      "id": "direct:speechify",
+      "network": "direct-vendor",
+      "name": "Speechify",
+      "slug": "speechify",
+      "description": "Speechify review - AI text-to-speech for reading",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://speechify.com/affiliates/",
+      "terms_url": "https://speechify.com/affiliates/",
+      "website": "https://speechify.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://speechify.com",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "content"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 30
+      }
+    },
+    {
+      "id": "direct:stylar",
+      "network": "direct-vendor",
+      "name": "Stylar",
+      "slug": "stylar",
+      "description": "Stylar review - AI image editing and generation tool",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://www.dzine.ai/affiliate-program/",
+      "terms_url": "https://www.dzine.ai/affiliate-program/",
+      "website": "https://stylar.ai",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://stylar.ai",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "content"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 30
+      }
+    },
+    {
+      "id": "direct:submagic",
+      "network": "direct-vendor",
+      "name": "Submagic",
+      "slug": "submagic",
+      "description": "Submagic review - AI captions and video editing",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://submagic.co/affiliate",
+      "terms_url": "https://submagic.co/affiliate",
+      "website": "https://submagic.co",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://submagic.co",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "content",
+        "video"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "direct:sudowrite",
+      "network": "direct-vendor",
+      "name": "Sudowrite",
+      "slug": "sudowrite",
+      "description": "Sudowrite review - AI writing tool specifically for fiction and creative writing",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://sudowrite.notion.site/Sudowrite-Affiliate-Program-12788b26b71746f2a72cd05b7087e8c9",
+      "terms_url": "https://sudowrite.notion.site/Sudowrite-Affiliate-Program-12788b26b71746f2a72cd05b7087e8c9",
+      "website": "https://sudowrite.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://sudowrite.com",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "content"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
       }
     },
     {
@@ -14691,19 +15222,11 @@
       "relevance_matches": [
         "software"
       ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
+      "already_active": true,
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -15125,10 +15648,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -15735,10 +16266,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
         "cookie_days": null
       }
     },
@@ -15785,10 +16324,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -16373,10 +16920,18 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
         "cookie_days": null
       }
     },
@@ -16513,10 +17068,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -16611,10 +17174,18 @@
         "productivity"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -16816,10 +17387,18 @@
         "productivity"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -17688,10 +18267,18 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -17912,10 +18499,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -17956,18 +18551,10 @@
         "software"
       ],
       "already_active": false,
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -18005,7 +18592,7 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
+          "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
@@ -18640,10 +19227,18 @@
         "e-commerce"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -18913,7 +19508,7 @@
       "name": "Coffee and Contracts",
       "slug": "coffeeandcontracts",
       "description": "C&C is the go-to marketing platform for real estate agents. We give agents the content, tools, and strategy to grow their brand online, attract more clients, and show up confidently — without spending hours creating from scratch.",
-      "offer": "Earn 30% for the lifetime of the customer",
+      "offer": "Earn 35% for the lifetime of the customer",
       "tags": [
         "Affiliates",
         "Collaboration & Productivity",
@@ -19471,10 +20066,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -19707,10 +20310,18 @@
         "productivity"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -20113,10 +20724,18 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -20189,11 +20808,19 @@
         "video"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 60
       }
     },
     {
@@ -20738,10 +21365,18 @@
         "data"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -21150,10 +21785,18 @@
         "productivity"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -22051,10 +22694,18 @@
       "score": 39,
       "relevance_matches": [],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
         "cookie_days": null
       }
     },
@@ -22108,7 +22759,7 @@
       "name": "Shopmonkey",
       "slug": "shopmonkey",
       "description": "Shopmonkey is an all-in-one cloud-based shop management system used to organize and operate all aspects of a shop's operations.",
-      "offer": "Earn $300 for every Demo Held Lead",
+      "offer": "4% of monthly revenue",
       "tags": [],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/shopmonkey?company=shopmonkey&gref=marketplace",
       "terms_url": "https://www.shopmonkey.io/legal/terms-of-service",
@@ -22124,10 +22775,18 @@
       "score": 37,
       "relevance_matches": [],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
