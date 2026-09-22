@@ -1,10 +1,64 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 54,
+    "successful_checks": 66,
     "tracked_sources": 220
   },
   "events": [
+    {
+      "detected_on": "2026-09-22",
+      "id": "7bfce6aa1c159df1",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://speechify.com",
+      "tool_id": "speechify",
+      "tool_name": "Speechify"
+    },
+    {
+      "detected_on": "2026-09-22",
+      "id": "68587041793d5b21",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://thoughtspot.com",
+      "tool_id": "thoughtspot",
+      "tool_name": "ThoughtSpot"
+    },
+    {
+      "detected_on": "2026-09-22",
+      "id": "fccaa9cec81d9b2c",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://writer.com",
+      "tool_id": "writer",
+      "tool_name": "Writer"
+    },
+    {
+      "detected_on": "2026-09-22",
+      "id": "da4508400eea9947",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hubstaff.com/",
+      "tool_id": "hubstaff",
+      "tool_name": "Hubstaff"
+    },
+    {
+      "detected_on": "2026-09-22",
+      "id": "f1f63b5210bdabef",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://typecast.ai",
+      "tool_id": "typecast",
+      "tool_name": "Typecast"
+    },
+    {
+      "detected_on": "2026-09-22",
+      "id": "182118007243eced",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.learnworlds.com/",
+      "tool_id": "learnworlds",
+      "tool_name": "LearnWorlds"
+    },
     {
       "detected_on": "2026-09-19",
       "id": "e338f541303bd333",
@@ -25,6 +79,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-09-21",
+  "updated_at": "2026-09-22",
   "version": 1
 }
