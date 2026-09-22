@@ -6,11 +6,10 @@
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
     "total": 474,
-    "active_auto_onboarded": 6,
-    "existing_active": 24,
+    "existing_active": 30,
     "not_qualified": 14,
-    "policy_review_required": 22,
-    "ready_for_owner_application": 408
+    "policy_review_required": 23,
+    "ready_for_owner_application": 407
   },
   "opportunities": [
     {
@@ -8619,18 +8618,10 @@
         "software"
       ],
       "already_active": true,
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -8767,18 +8758,10 @@
         "software"
       ],
       "already_active": true,
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -9830,18 +9813,10 @@
         "software"
       ],
       "already_active": false,
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -18391,18 +18366,10 @@
         "software"
       ],
       "already_active": true,
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -18524,18 +18491,10 @@
         "software"
       ],
       "already_active": true,
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -18566,18 +18525,10 @@
         "software"
       ],
       "already_active": true,
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -18651,7 +18602,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 126,
+      "review_days": 120,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -18749,18 +18700,10 @@
         "software"
       ],
       "already_active": true,
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -21255,7 +21198,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 24,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 55,
       "relevance_matches": [
@@ -21407,15 +21350,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": true,
+          "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
       }
     },
     {
