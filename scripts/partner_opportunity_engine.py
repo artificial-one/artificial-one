@@ -470,7 +470,17 @@ def render_email(payload: dict[str, Any], added: list[str], run_url: str) -> tup
 
 def send_email(api_key: str, to: str, sender: str, subject: str, text: str, html: str) -> None:
     body = json.dumps({"from": sender, "to": [to], "subject": subject, "text": text, "html": html}).encode()
-    request = Request(RESEND_URL, data=body, headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}, method="POST")
+    request = Request(
+        RESEND_URL,
+        data=body,
+        headers={
+            "Accept": "application/json",
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "User-Agent": "artificial.one-partner-scout/1.0",
+        },
+        method="POST",
+    )
     with urlopen(request, timeout=35) as response:
         if response.status >= 300:
             raise ScoutError(f"Resend returned HTTP {response.status}")
