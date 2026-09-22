@@ -1,43 +1,247 @@
 {
   "version": 1,
-  "audited_at": "2026-09-14",
+  "audited_at": "2026-09-22",
   "source": "PartnerStack authenticated partner dashboard",
   "summary": {
-    "active_programs": 25,
+    "active_programs": 31,
     "terms_action_required": 0,
-    "trackable_links_confirmed": 22,
+    "trackable_links_confirmed": 28,
     "external_account_required": 1,
     "no_usable_link": 2
   },
   "programs": [
-    {"name": "Trainual", "slug": "trainual", "category": "Employee training and operations", "access": "usable", "website_status": "published"},
-    {"name": "Turbotic", "slug": "turbotic", "category": "Enterprise automation", "access": "usable", "website_status": "published"},
-    {"name": "Wegic", "slug": "wegic", "category": "AI website building", "access": "usable", "website_status": "published"},
-    {"name": "Pinecone", "slug": "pinecone", "category": "Vector database infrastructure", "access": "usable", "website_status": "published"},
-    {"name": "Kit (formerly ConvertKit)", "slug": "kit", "category": "Creator email marketing", "access": "usable", "website_status": "published"},
-    {"name": "Beautiful.ai", "slug": "beautifulai", "category": "AI presentations", "access": "usable", "website_status": "published"},
-    {"name": "Rank Prompt", "slug": "rankprompt", "category": "AI search visibility", "access": "usable", "website_status": "published"},
-    {"name": "Seamless", "slug": "seamlessai", "category": "B2B sales intelligence", "access": "usable", "website_status": "published"},
-    {"name": "MRPeasy", "slug": "mrpeasy", "category": "Manufacturing ERP", "access": "usable", "website_status": "published"},
-    {"name": "QuillBot", "slug": "quillbot", "category": "AI writing assistance", "access": "no_links_section", "website_status": "blocked"},
-    {"name": "AdCreative.ai", "slug": "adcreative", "category": "AI advertising creatives", "access": "usable", "website_status": "published"},
-    {"name": "Unbounce", "slug": "unbounce", "category": "Landing pages and conversion optimization", "access": "usable", "website_status": "published"},
-    {"name": "OmniSEO", "slug": "omniseo", "category": "SEO software", "access": "usable", "website_status": "published"},
-    {"name": "Volza", "slug": "volza", "category": "Global trade intelligence", "access": "usable", "website_status": "published"},
-    {"name": "LearnWorlds", "slug": "learnworlds", "category": "Online courses and LMS", "access": "usable", "website_status": "published"},
-    {"name": "Foxit", "slug": "foxit", "category": "PDF and document software", "access": "usable", "website_status": "published"},
-    {"name": "WhatConverts", "slug": "whatconverts", "category": "Lead and marketing attribution", "access": "usable", "website_status": "published"},
-    {"name": "Descript", "slug": "descriptinc", "category": "Audio and video editing", "access": "usable", "website_status": "published"},
-    {"name": "QuickSigner", "slug": "quicksigner", "category": "Electronic signatures", "access": "usable", "website_status": "published"},
-    {"name": "Hubstaff", "slug": "hubstaff9986", "category": "Time tracking and workforce management", "access": "usable", "website_status": "published"},
-    {"name": "Amplitude", "slug": "amplitude", "category": "Product analytics", "access": "program_paused_no_link", "website_status": "blocked"},
-    {"name": "Carepatron", "slug": "carepatron", "category": "Healthcare practice software", "access": "usable", "website_status": "published"},
-    {"name": "Eleven Labs Inc.", "slug": "elevenlabsinc", "category": "AI voice and audio", "access": "usable", "website_status": "published"},
-    {"name": "Kartra, WebinarJam & EverWebinar", "slug": "genesisdigital", "category": "Marketing automation and webinars", "access": "usable", "website_status": "published"},
-    {"name": "Runpod", "slug": "runpod", "category": "Cloud GPU infrastructure", "access": "external_account_required", "website_status": "draft"}
+    {
+      "name": "Trainual",
+      "slug": "trainual",
+      "category": "Employee training and operations",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Turbotic",
+      "slug": "turbotic",
+      "category": "Enterprise automation",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Wegic",
+      "slug": "wegic",
+      "category": "AI website building",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Pinecone",
+      "slug": "pinecone",
+      "category": "Vector database infrastructure",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Kit (formerly ConvertKit)",
+      "slug": "kit",
+      "category": "Creator email marketing",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Beautiful.ai",
+      "slug": "beautifulai",
+      "category": "AI presentations",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Rank Prompt",
+      "slug": "rankprompt",
+      "category": "AI search visibility",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Seamless",
+      "slug": "seamlessai",
+      "category": "B2B sales intelligence",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "MRPeasy",
+      "slug": "mrpeasy",
+      "category": "Manufacturing ERP",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "QuillBot",
+      "slug": "quillbot",
+      "category": "AI writing assistance",
+      "access": "no_links_section",
+      "website_status": "blocked"
+    },
+    {
+      "name": "AdCreative.ai",
+      "slug": "adcreative",
+      "category": "AI advertising creatives",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "category": "Landing pages and conversion optimization",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "OmniSEO",
+      "slug": "omniseo",
+      "category": "SEO software",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Volza",
+      "slug": "volza",
+      "category": "Global trade intelligence",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "LearnWorlds",
+      "slug": "learnworlds",
+      "category": "Online courses and LMS",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Foxit",
+      "slug": "foxit",
+      "category": "PDF and document software",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "WhatConverts",
+      "slug": "whatconverts",
+      "category": "Lead and marketing attribution",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Descript",
+      "slug": "descriptinc",
+      "category": "Audio and video editing",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "QuickSigner",
+      "slug": "quicksigner",
+      "category": "Electronic signatures",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Hubstaff",
+      "slug": "hubstaff9986",
+      "category": "Time tracking and workforce management",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Amplitude",
+      "slug": "amplitude",
+      "category": "Product analytics",
+      "access": "program_paused_no_link",
+      "website_status": "blocked"
+    },
+    {
+      "name": "Carepatron",
+      "slug": "carepatron",
+      "category": "Healthcare practice software",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Eleven Labs Inc.",
+      "slug": "elevenlabsinc",
+      "category": "AI voice and audio",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Kartra, WebinarJam & EverWebinar",
+      "slug": "genesisdigital",
+      "category": "Marketing automation and webinars",
+      "access": "usable",
+      "website_status": "published"
+    },
+    {
+      "name": "Runpod",
+      "slug": "runpod",
+      "category": "Cloud GPU infrastructure",
+      "access": "external_account_required",
+      "website_status": "draft"
+    },
+    {
+      "name": "EasyClaw",
+      "slug": "easyclaw",
+      "category": "Software",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:awin"
+    },
+    {
+      "name": "Rewarx Studio AI",
+      "slug": "rewarx-studio-ai",
+      "category": "Software",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:awin"
+    },
+    {
+      "name": "Alison US CA",
+      "slug": "alison-us-ca",
+      "category": "Software",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:awin"
+    },
+    {
+      "name": "brkox",
+      "slug": "brkox",
+      "category": "Software",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:awin"
+    },
+    {
+      "name": "eSign: Sign PDF DOCX Documents (iOS only)",
+      "slug": "esign-sign-pdf-docx-documents-ios-only",
+      "category": "Software",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:awin"
+    },
+    {
+      "name": "lensmor",
+      "slug": "lensmor",
+      "category": "Software",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:awin"
+    }
   ],
   "inactive_program_surfaces": [
-    {"name": "ClickUp", "slug": "clickup"},
-    {"name": "Surfer", "slug": "surferseo"}
+    {
+      "name": "ClickUp",
+      "slug": "clickup"
+    },
+    {
+      "name": "Surfer",
+      "slug": "surferseo"
+    }
   ]
 }

@@ -5,11 +5,12 @@
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 466,
+    "total": 474,
+    "active_auto_onboarded": 6,
     "existing_active": 24,
     "not_qualified": 14,
     "policy_review_required": 22,
-    "ready_for_owner_application": 406
+    "ready_for_owner_application": 408
   },
   "opportunities": [
     {
@@ -220,7 +221,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -1295,7 +1296,6 @@
         "Digital Advertising",
         "HR Software",
         "Hot",
-        "Internal Pick",
         "Marketing",
         "Office Software",
         "Publishers",
@@ -2370,7 +2370,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 55,
+      "review_days": 53,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -2426,7 +2426,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -2801,7 +2801,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -2901,7 +2901,6 @@
         "E-Commerce",
         "Hot",
         "Influencers",
-        "Priority",
         "Shopify integrated",
         "Subnetworks",
         "Trusted",
@@ -4765,7 +4764,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5158,7 +5157,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 22,
+      "review_days": 20,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -5465,7 +5464,6 @@
         "Hot",
         "Influencers",
         "Marketing",
-        "Priority",
         "Publishers",
         "Trusted",
         "Vertical Industry Software"
@@ -7707,7 +7705,7 @@
       "network": "partnerstack",
       "name": "Rippling",
       "slug": "rippling",
-      "description": "Trusted by more than 30,000 businesses, Rippling is the only platform that brings HR, IT, and Finance together - payroll, benefits, devices, expenses, compliance, and more, all in one place. Refer a client and earn $600 for a qualified demo, $1,000 when they sign.",
+      "description": "Rippling is the AI platform that manages HR, IT, and Finance, giving Rippling AI the data and permissions it needs to help manage your company. Refer a client and earn $600 for a qualified demo, $1,000 when they sign.",
       "offer": "Earn $1600 for every new paying customer",
       "tags": [
         "Affiliates",
@@ -7739,7 +7737,9 @@
       "source": "https://market.partnerstack.com/",
       "score": 72,
       "relevance_matches": [
+        "ai",
         "artificial intelligence",
+        "data",
         "software"
       ],
       "already_active": false,
@@ -8591,6 +8591,50 @@
       }
     },
     {
+      "id": "awin:126975",
+      "network": "awin",
+      "name": "EasyClaw",
+      "slug": "easyclaw",
+      "description": "Promote EasyClaw, an AI productivity platform that helps users work smarter and faster. Share AI workflow and productivity tools with your audience while earning commissions, exclusive offers, strong conversions, and affiliate support.",
+      "offer": "Joined Awin advertiser programme.",
+      "tags": [
+        "Software"
+      ],
+      "application_url": "https://ui.awin.com/",
+      "terms_url": "https://www.awin.com/gb/publisher-terms",
+      "website": "https://easyclaw.com/",
+      "source": "https://developer.awin.com/apidocs/for-publishers",
+      "approved": true,
+      "tracking_url": "https://www.awin1.com/cread.php?awinmid=126975&awinaffid=2733180&ued=https%3A%2F%2Feasyclaw.com%2F",
+      "links_enabled": true,
+      "revenue_share": true,
+      "sub_id_enabled": true,
+      "materials": true,
+      "waitlist": false,
+      "archived": false,
+      "score": 68,
+      "relevance_matches": [
+        "ai",
+        "productivity",
+        "software"
+      ],
+      "already_active": true,
+      "state": "active_auto_onboarded",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:influencerhero",
       "network": "partnerstack",
       "name": "Influencer Hero",
@@ -8603,7 +8647,6 @@
         "Digital Advertising",
         "Hot",
         "Influencers",
-        "Internal Pick",
         "Marketing",
         "Social Media",
         "Trusted"
@@ -8696,6 +8739,50 @@
       }
     },
     {
+      "id": "awin:129153",
+      "network": "awin",
+      "name": "Rewarx Studio AI",
+      "slug": "rewarx-studio-ai",
+      "description": "Partner with Rewarx Studio AI to help e-commerce brands create stunning AI product photos without expensive shoots. Earn up to 50% commission for 12 months ! We offer free test accounts and dedicated support for all our affiliates.",
+      "offer": "Joined Awin advertiser programme.",
+      "tags": [
+        "Software"
+      ],
+      "application_url": "https://ui.awin.com/",
+      "terms_url": "https://www.awin.com/gb/publisher-terms",
+      "website": "https://www.rewarx.com/",
+      "source": "https://developer.awin.com/apidocs/for-publishers",
+      "approved": true,
+      "tracking_url": "https://www.awin1.com/cread.php?awinmid=129153&awinaffid=2733180&ued=https%3A%2F%2Fwww.rewarx.com%2F",
+      "links_enabled": true,
+      "revenue_share": true,
+      "sub_id_enabled": true,
+      "materials": true,
+      "waitlist": false,
+      "archived": false,
+      "score": 68,
+      "relevance_matches": [
+        "ai",
+        "e-commerce",
+        "software"
+      ],
+      "already_active": true,
+      "state": "active_auto_onboarded",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:smartsuite",
       "network": "partnerstack",
       "name": "SmartSuite",
@@ -8727,6 +8814,50 @@
         "automation",
         "data",
         "productivity"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:softsyncaiinc",
+      "network": "partnerstack",
+      "name": "SoftSync AI Inc",
+      "slug": "softsyncaiinc",
+      "description": "SoftSync AI is a CRM for small and mid-sized sales teams. It connects to Claude and ChatGPT through the Model Context Protocol, so follow-ups, reminders and data entry run without anyone driving them. Recommend it and you earn 30% of every payment your customers make, for as long as they stay. Not a one-off bounty. Top affiliates move to 35%. Logos, screenshots and ready-to-paste copy are all in Resources. Questions go to Celine at celine@softsync.ai.",
+      "offer": "Lifetime earnings up to 40%. Become a Softsync affiliate!",
+      "tags": [
+        "ERP",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/softsyncaiinc?company=softsyncaiinc&gref=marketplace",
+      "terms_url": "https://www.softsync.ai/terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 68,
+      "relevance_matches": [
+        "ai",
+        "data",
+        "sales"
       ],
       "already_active": false,
       "state": "ready_for_owner_application",
@@ -8827,7 +8958,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 33,
+      "review_days": 29,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -9448,7 +9579,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -9504,6 +9635,57 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:dropbox",
+      "network": "partnerstack",
+      "name": "Dropbox DocSend",
+      "slug": "dropbox",
+      "description": "Dropbox DocSend is the secure sharing platform trusted by 47,000+ companies to pitch, share, and close deals with confidence. Earn revenue share while helping your community close deals faster. Join 700+ partners already helping VCs, accelerators, incubators, and dealmakers give their networks real-time engagement analytics, secure data rooms, and enterprise-grade security.",
+      "offer": "✨ Earn 20% recurring commission for the customer's first year!",
+      "tags": [
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Content Management",
+        "Hot",
+        "Internal Pick",
+        "Marketing",
+        "New",
+        "Other",
+        "Priority",
+        "Publishers",
+        "Sales",
+        "Subnetworks",
+        "Trusted",
+        "Website Partners"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/dropbox?company=dropbox&gref=marketplace",
+      "terms_url": "https://www.docsend.com/terms-of-service/",
+      "website": "https://www.docsend.com/",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "analytics",
+        "content",
+        "data",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -9648,10 +9830,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -12196,7 +12386,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -17826,7 +18016,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 44,
+      "review_days": 31,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18151,7 +18341,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 21,
+      "review_days": 26,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -18159,6 +18349,49 @@
       ],
       "already_active": false,
       "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "awin:120101",
+      "network": "awin",
+      "name": "Alison US CA",
+      "slug": "alison-us-ca",
+      "description": "Founded in 2007, Alison is the world’s largest free online empowerment platform for education and skills training. We offer over 6000 CPD accredited courses and a range of impactful career development tools.",
+      "offer": "Joined Awin advertiser programme.",
+      "tags": [
+        "Software"
+      ],
+      "application_url": "https://ui.awin.com/",
+      "terms_url": "https://www.awin.com/gb/publisher-terms",
+      "website": "https://alison.com/",
+      "source": "https://developer.awin.com/apidocs/for-publishers",
+      "approved": true,
+      "tracking_url": "https://www.awin1.com/cread.php?awinmid=120101&awinaffid=2733180&ued=https%3A%2F%2Falison.com%2F",
+      "links_enabled": true,
+      "revenue_share": true,
+      "sub_id_enabled": true,
+      "materials": true,
+      "waitlist": false,
+      "archived": false,
+      "score": 60,
+      "relevance_matches": [
+        "development",
+        "software"
+      ],
+      "already_active": true,
+      "state": "active_auto_onboarded",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -18265,6 +18498,90 @@
       }
     },
     {
+      "id": "awin:129093",
+      "network": "awin",
+      "name": "brkox",
+      "slug": "brkox",
+      "description": "BRKOX creates premium display frames and cases for LEGO® collectors, helping enthusiasts turn their builds into stunning home displays.",
+      "offer": "Joined Awin advertiser programme.",
+      "tags": [
+        "Software"
+      ],
+      "application_url": "https://ui.awin.com/",
+      "terms_url": "https://www.awin.com/gb/publisher-terms",
+      "website": "https://brkox.com/",
+      "source": "https://developer.awin.com/apidocs/for-publishers",
+      "approved": true,
+      "tracking_url": "https://www.awin1.com/cread.php?awinmid=129093&awinaffid=2733180&ued=https%3A%2F%2Fbrkox.com%2F",
+      "links_enabled": true,
+      "revenue_share": true,
+      "sub_id_enabled": true,
+      "materials": true,
+      "waitlist": false,
+      "archived": false,
+      "score": 60,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": true,
+      "state": "active_auto_onboarded",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "awin:123010",
+      "network": "awin",
+      "name": "eSign: Sign PDF DOCX Documents (iOS only)",
+      "slug": "esign-sign-pdf-docx-documents-ios-only",
+      "description": "Affiliate terms Model: RevShare Payout: from 20% lifetime You earn from 20% of the profit from every subscription for every user you refer, for the entire lifetime of that customer (including all renewals). Platform: iOS only GEO: Worldwide WW",
+      "offer": "Joined Awin advertiser programme.",
+      "tags": [
+        "Software"
+      ],
+      "application_url": "https://ui.awin.com/",
+      "terms_url": "https://www.awin.com/gb/publisher-terms",
+      "website": "https://apps.apple.com/us/app/esign-sign-pdf-docx-documents/id6755193759",
+      "source": "https://developer.awin.com/apidocs/for-publishers",
+      "approved": true,
+      "tracking_url": "https://www.awin1.com/cread.php?awinmid=123010&awinaffid=2733180&ued=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fesign-sign-pdf-docx-documents%2Fid6755193759",
+      "links_enabled": true,
+      "revenue_share": true,
+      "sub_id_enabled": true,
+      "materials": true,
+      "waitlist": false,
+      "archived": false,
+      "score": 60,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": true,
+      "state": "active_auto_onboarded",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:getida",
       "network": "partnerstack",
       "name": "Getida",
@@ -18334,7 +18651,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 120,
+      "review_days": 126,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -18391,6 +18708,48 @@
       ],
       "already_active": false,
       "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "awin:128865",
+      "network": "awin",
+      "name": "lensmor",
+      "slug": "lensmor",
+      "description": "Lensmor is a strong fit for affiliates and partners whose audience includes exhibitors and B2B teams preparing for high-value trade shows.",
+      "offer": "Joined Awin advertiser programme.",
+      "tags": [
+        "Software"
+      ],
+      "application_url": "https://ui.awin.com/",
+      "terms_url": "https://www.awin.com/gb/publisher-terms",
+      "website": "https://www.lensmor.com/",
+      "source": "https://developer.awin.com/apidocs/for-publishers",
+      "approved": true,
+      "tracking_url": "https://www.awin1.com/cread.php?awinmid=128865&awinaffid=2733180&ued=https%3A%2F%2Fwww.lensmor.com%2F",
+      "links_enabled": true,
+      "revenue_share": true,
+      "sub_id_enabled": true,
+      "materials": true,
+      "waitlist": false,
+      "archived": false,
+      "score": 60,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": true,
+      "state": "active_auto_onboarded",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -18575,7 +18934,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 21,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19326,7 +19685,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 8,
+      "review_days": 18,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19957,7 +20316,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -20005,7 +20364,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -20247,7 +20606,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 26,
+      "review_days": 27,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [

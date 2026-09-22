@@ -10,13 +10,10 @@
       "signup_url": "https://ui.awin.com/publisher-signup/en/step1",
       "dashboard_url": "https://ui.awin.com/",
       "capability": "program discovery and joined-program tracking links",
-      "connected": false,
-      "state": "owner_signup_or_credentials_required",
-      "missing_credentials": [
-        "AWIN_PUBLISHER_ID",
-        "AWIN_API_TOKEN"
-      ],
-      "records": 0
+      "connected": true,
+      "state": "connected",
+      "missing_credentials": [],
+      "records": 6
     },
     {
       "network": "sovrn",
