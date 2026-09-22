@@ -477,13 +477,30 @@ def send_email(api_key: str, to: str, sender: str, subject: str, text: str, html
 
 
 def run(root: Path, state_path: Path, email_to: str = "", email_from: str = "") -> dict[str, Any]:
-    discovered = parse_partnerstack_directory(fetch_text(MARKETPLACE_URL))
+    print("Fetching PartnerStack's public marketplace…", flush=True)
+    try:
+        discovered = parse_partnerstack_directory(fetch_text(MARKETPLACE_URL))
+    except Exception as exc:
+        previous_inventory = load_json(root / "data/partner_opportunities.json", {"opportunities": []})
+        discovered = [
+            item for item in previous_inventory.get("opportunities", [])
+            if isinstance(item, dict) and item.get("network") == "partnerstack"
+        ]
+        if not discovered:
+            raise ScoutError(f"PartnerStack marketplace fetch failed and no safe baseline exists: {exc}") from exc
+        print(f"Marketplace refresh unavailable ({exc}); retaining {len(discovered)} known PartnerStack opportunities.", file=sys.stderr, flush=True)
+    print("Scanning the verified catalog for direct-vendor programs…", flush=True)
     discovered.extend(discover_direct_programs(load_json(root / "data/tool_intelligence.json", {"tools": []})))
     api_key = os.environ.get("PARTNERSTACK_API_KEY", "").strip()
     partnerships: list[dict[str, Any]] = []
     if api_key:
-        partnerships = ps.fetch_all("partnerships", api_key, {"include_offers": "true", "include_archived": "true"})
+        print("Reading current PartnerStack partnership states…", flush=True)
+        try:
+            partnerships = ps.fetch_all("partnerships", api_key, {"include_offers": "true", "include_archived": "true"})
+        except Exception as exc:
+            print(f"Partnership status refresh unavailable ({exc}); continuing from the published registry.", file=sys.stderr, flush=True)
     active = partnership_names(partnerships)
+    print(f"Screening {len(discovered)} discovered opportunities and their policies…", flush=True)
     opportunities = prepare_opportunities(discovered, root, active)
     added = merge_auto_offers(root, opportunities, active, api_key) if api_key else []
     previous = load_json(root / "data/partner_opportunities.json", {})
@@ -500,15 +517,25 @@ def run(root: Path, state_path: Path, email_to: str = "", email_from: str = "") 
     changed = signature != state.get("signature") or bool(added)
     run_url = os.environ.get("GITHUB_SERVER_URL", "https://github.com") + "/" + os.environ.get("GITHUB_REPOSITORY", "artificial-one/artificial-one") + "/actions/runs/" + os.environ.get("GITHUB_RUN_ID", "manual")
     resend_key = os.environ.get("RESEND_API_KEY", "").strip()
+    email_error = ""
     if changed and email_to and email_from and resend_key:
-        send_email(resend_key, email_to, email_from, *render_email(payload, added, run_url))
+        try:
+            send_email(resend_key, email_to, email_from, *render_email(payload, added, run_url))
+            print(f"Meaningful-change email delivered to {email_to}.", flush=True)
+        except Exception as exc:
+            email_error = str(exc)
+            print(f"Opportunity email delivery deferred ({exc}); discovery and publishing will continue.", file=sys.stderr, flush=True)
     state_path.parent.mkdir(parents=True, exist_ok=True)
-    state_path.write_text(json.dumps({"version": 1, "signature": signature, "checked_at": datetime.now(timezone.utc).isoformat()}, indent=2) + "\n", encoding="utf-8")
+    saved_signature = state.get("signature") if email_error else signature
+    saved_state = {"version": 1, "signature": saved_signature, "checked_at": datetime.now(timezone.utc).isoformat()}
+    if email_error:
+        saved_state["last_email_error"] = email_error
+    state_path.write_text(json.dumps(saved_state, indent=2) + "\n", encoding="utf-8")
     output_file = os.environ.get("GITHUB_OUTPUT", "")
     if output_file:
         actionable = sum(item["state"] in {"ready_for_owner_application", "policy_review_required", "approved_link_pending"} for item in opportunities)
         with Path(output_file).open("a", encoding="utf-8") as handle:
-            handle.write(f"changed={'true' if changed else 'false'}\nactionable={actionable}\nonboarded={len(added)}\n")
+            handle.write(f"changed={'true' if changed else 'false'}\nactionable={actionable}\nonboarded={len(added)}\nemail_delivered={'false' if email_error else 'true'}\n")
     return payload
 
 
