@@ -178,14 +178,36 @@ def write_guides(offers: list[dict[str, Any]], root: Path = ROOT) -> int:
     return count
 
 
+def write_outputs(**values: Any) -> None:
+    output = os.environ.get("GITHUB_OUTPUT")
+    if not output:
+        return
+    with Path(output).open("a", encoding="utf-8") as handle:
+        for key, value in values.items():
+            handle.write(f"{key}={str(value).lower() if isinstance(value, bool) else value}\n")
+
+
 def run(root: Path = ROOT) -> dict[str, Any]:
     sid = os.environ.get("IMPACT_ACCOUNT_SID", "").strip()
     token = os.environ.get("IMPACT_AUTH_TOKEN", "").strip()
     if not sid or not token:
         raise RuntimeError("IMPACT_ACCOUNT_SID and IMPACT_AUTH_TOKEN are required")
     print("Reading every AppSumo asset exposed by the active Impact partnership…", flush=True)
-    ads = impact.impact_collection(sid, token, "Ads", "Ads", {"CampaignId": CAMPAIGN_ID})
-    contracts = impact.impact_collection(sid, token, "Contracts", "Contracts")
+    try:
+        ads = impact.impact_collection(sid, token, "Ads", "Ads", {"CampaignId": CAMPAIGN_ID})
+    except RuntimeError as exc:
+        if "403" not in str(exc):
+            raise
+        # Keep the mature workbook-backed catalog and the rest of the daily
+        # revenue monitor running while a scoped token awaits Ads read access.
+        print("Impact token lacks Ads read scope; preserving the existing AppSumo catalog.", file=sys.stderr)
+        write_outputs(products=0, new_items=0, links_created=0, guides_written=0, permission_required=True)
+        return {"permission_required": True, "reason": "impact_ads_scope"}
+    try:
+        contracts = impact.impact_collection(sid, token, "Contracts", "Contracts")
+    except RuntimeError as exc:
+        print(f"Impact contract summary unavailable; continuing without contract text: {exc}", file=sys.stderr)
+        contracts = []
     offers, created = normalize_ads(ads, sid, token)
     previous = appsumo.load_json(root / "data/appsumo_impact_ads.json")
     payload = {
@@ -210,10 +232,7 @@ def run(root: Path = ROOT) -> dict[str, Any]:
     guides = write_guides(offers, root)
     previous_ids = {str(item.get("id")) for item in previous.get("offers", []) if isinstance(item, dict)}
     new_items = sum(str(item.get("id")) not in previous_ids for item in offers)
-    output = os.environ.get("GITHUB_OUTPUT")
-    if output:
-        with Path(output).open("a", encoding="utf-8") as handle:
-            handle.write(f"products={len(offers)}\nnew_items={new_items}\nlinks_created={created}\nguides_written={guides}\n")
+    write_outputs(products=len(offers), new_items=new_items, links_created=created, guides_written=guides, permission_required=False)
     print(f"AppSumo scout retained {len(offers)} products without a quota; {created} missing tracking links created; {guides} guides written.")
     return payload
 

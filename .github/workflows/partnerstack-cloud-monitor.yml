@@ -110,6 +110,7 @@ jobs:
 
           The read-only PartnerStack/Impact audit and AppSumo availability check completed. The consolidated private dashboard was emailed to the configured recipient.
           AppSumo products discovered: ${{ steps.appsumo_scout.outputs.products }}; new assets: ${{ steps.appsumo_scout.outputs.new_items }}; missing tracking links created: ${{ steps.appsumo_scout.outputs.links_created }}.
+          Impact Ads permission required: ${{ steps.appsumo_scout.outputs.permission_required }}.
           Financial and customer metrics are intentionally omitted from this public repository's Actions summary.
           EOF
 

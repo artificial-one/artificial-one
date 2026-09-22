@@ -62,6 +62,28 @@ class ImpactAppSumoScoutTests(unittest.TestCase):
         self.assertTrue(result["coupon_restriction_detected"])
         self.assertNotIn("TermsContent", json.dumps(result))
 
+    def test_ads_scope_denial_preserves_existing_catalog(self):
+        original = scout.impact.impact_collection
+        original_sid = scout.os.environ.get("IMPACT_ACCOUNT_SID")
+        original_token = scout.os.environ.get("IMPACT_AUTH_TOKEN")
+        scout.impact.impact_collection = lambda *_args, **_kwargs: (_ for _ in ()).throw(RuntimeError("HTTP Error 403: Forbidden"))
+        scout.os.environ["IMPACT_ACCOUNT_SID"] = "sid"
+        scout.os.environ["IMPACT_AUTH_TOKEN"] = "token"
+        try:
+            with tempfile.TemporaryDirectory() as folder:
+                result = scout.run(Path(folder))
+        finally:
+            scout.impact.impact_collection = original
+            if original_sid is None:
+                scout.os.environ.pop("IMPACT_ACCOUNT_SID", None)
+            else:
+                scout.os.environ["IMPACT_ACCOUNT_SID"] = original_sid
+            if original_token is None:
+                scout.os.environ.pop("IMPACT_AUTH_TOKEN", None)
+            else:
+                scout.os.environ["IMPACT_AUTH_TOKEN"] = original_token
+        self.assertTrue(result["permission_required"])
+
 
 if __name__ == "__main__":
     unittest.main()
