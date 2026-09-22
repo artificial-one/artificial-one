@@ -96,6 +96,11 @@ def normalized_name(value: str) -> str:
     return re.sub(r"[^a-z0-9]", "", value.casefold())
 
 
+def partnerstack_application_url(slug: str) -> str:
+    encoded = quote(slug, safe="")
+    return f"https://dash.partnerstack.com/marketplace/all/details/{encoded}?{urlencode({'company': slug, 'gref': 'marketplace'})}"
+
+
 def https_url(value: Any) -> str:
     raw = unescape(str(value or "").strip())
     if raw.startswith("www."):
@@ -138,7 +143,7 @@ def parse_partnerstack_directory(source: str) -> list[dict[str, Any]]:
             "description": clean_text(item.get("enriched_description") or item.get("description"), 700),
             "offer": clean_text(item.get("offer") or item.get("group_marketplace_config", {}).get("marketplace_offer"), 300),
             "tags": sorted({tag for tag in tags if tag}),
-            "application_url": f"https://market.partnerstack.com/{quote(slug)}",
+            "application_url": partnerstack_application_url(slug),
             "terms_url": https_url(item.get("tos")),
             "website": https_url(item.get("website")),
             "waitlist": bool(item.get("waitlist")),
@@ -418,6 +423,8 @@ def prepare_opportunities(discovered: list[dict[str, Any]], root: Path, active: 
             item["state"] = "ready_for_owner_application" if item["policy"]["status"] == "reviewed" else "policy_review_required"
     for item in deduped.values():
         item.setdefault("policy", {"status": "not_reviewed", "signals": {}, "cookie_days": None})
+        if item.get("network") == "partnerstack" and item.get("slug"):
+            item["application_url"] = partnerstack_application_url(str(item["slug"]))
         item["application_url"] = public_reference_url(item.get("application_url"))
         item["terms_url"] = public_reference_url(item.get("terms_url"))
         item["website"] = public_reference_url(item.get("website"))
@@ -453,7 +460,7 @@ def render_queue_page(payload: dict[str, Any]) -> str:
     for item in payload["opportunities"]:
         restrictions = ", ".join(name.replace("_", " ") for name, value in item["policy"]["signals"].items() if value) or "No automated restriction signal; read the source terms."
         cards.append(
-            f'''<article data-card data-state="{escape(item['state'])}" data-network="{escape(item['network'])}" data-search="{escape((item['name']+' '+item.get('description','')+' '+' '.join(item.get('tags',[]))).casefold())}" class="card"><p class="eyebrow">{escape(item['network'])} · score {item['score']}/100</p><h2>{escape(item['name'])}</h2><p>{escape(item.get('offer') or item.get('description') or 'Public offer details were not stated.')}</p><p><strong>State:</strong> {escape(item['state'].replace('_',' '))}</p><p class="policy"><strong>Policy signals:</strong> {escape(restrictions)}</p><a href="{escape(item['application_url'], quote=True)}" rel="nofollow noopener" target="_blank">Review program and binding terms →</a></article>'''
+            f'''<article data-card data-state="{escape(item['state'])}" data-network="{escape(item['network'])}" data-search="{escape((item['name']+' '+item.get('description','')+' '+' '.join(item.get('tags',[]))).casefold())}" class="card"><p class="eyebrow">{escape(item['network'])} · score {item['score']}/100</p><h2>{escape(item['name'])}</h2><p>{escape(item.get('offer') or item.get('description') or 'Public offer details were not stated.')}</p><p><strong>State:</strong> {escape(item['state'].replace('_',' '))}</p><p class="policy"><strong>Policy signals:</strong> {escape(restrictions)}</p><a href="{escape(item['application_url'], quote=True)}" rel="nofollow noopener" target="_blank">Open this program in PartnerStack →</a></article>'''
         )
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Partner opportunity queue | artificial.one</title><style>body{{margin:0;background:#f8fafc;color:#0f172a;font-family:Inter,system-ui,sans-serif}}main{{max-width:1120px;margin:auto;padding:40px 20px}}h1{{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1;margin:.2em 0}}.lead{{max-width:780px;color:#475569;line-height:1.6}}.controls{{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:28px 0}}input,select{{padding:13px;border:1px solid #cbd5e1;border-radius:10px;background:white;font:inherit}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}}.card{{display:flex;flex-direction:column;border:1px solid #e2e8f0;border-radius:16px;background:white;padding:20px;box-shadow:0 5px 18px #0f172a0a}}.card h2{{margin:.25em 0}}.card p{{color:#475569;line-height:1.5}}.card a{{margin-top:auto;color:#4338ca;font-weight:800}}.eyebrow{{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:#4f46e5!important;font-weight:800}}.policy{{font-size:.85rem}}@media(max-width:800px){{.grid{{grid-template-columns:1fr 1fr}}}}@media(max-width:560px){{.controls,.grid{{grid-template-columns:1fr}}}}</style></head><body><main><p class="eyebrow">Owner review queue · updated {escape(payload['updated_at'])}</p><h1>Affiliate opportunities</h1><p class="lead">All discovered candidates are retained—there is no weekly application quota. This page is excluded from search. Review the source program and its binding terms before applying; the automation never accepts contracts, certifies business facts or supplies tax and banking details.</p><p><strong>{payload['summary'].get('ready_for_owner_application',0)}</strong> ready for owner review · <strong>{payload['summary'].get('policy_review_required',0)}</strong> need manual policy review · <strong>{payload['summary'].get('application_pending',0)}</strong> pending</p><section class="controls"><input id="q" type="search" placeholder="Search programs"><select id="state"><option value="">All states</option>{''.join(f'<option>{escape(value)}</option>' for value in sorted({item['state'] for item in payload['opportunities']}))}</select><select id="network"><option value="">All networks</option>{''.join(f'<option>{escape(value)}</option>' for value in sorted({item['network'] for item in payload['opportunities']}))}</select></section><p id="count"></p><section class="grid">{''.join(cards)}</section></main><script>(function(){{var q=document.getElementById('q'),s=document.getElementById('state'),n=document.getElementById('network'),cards=[].slice.call(document.querySelectorAll('[data-card]')),count=document.getElementById('count');function apply(){{var text=q.value.trim().toLowerCase(),shown=0;cards.forEach(function(card){{var visible=(!text||card.dataset.search.indexOf(text)>-1)&&(!s.value||card.dataset.state===s.value)&&(!n.value||card.dataset.network===n.value);card.hidden=!visible;if(visible)shown++;}});count.textContent=shown+' opportunities shown';}}[q,s,n].forEach(function(control){{control.addEventListener(control===q?'input':'change',apply);}});apply();}})();</script></body></html>'''
 

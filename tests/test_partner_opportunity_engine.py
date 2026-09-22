@@ -23,7 +23,10 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
         html = f"<script>window.__INITIAL_STATE__ = {json.dumps(state)};</script>"
         rows = scout.parse_partnerstack_directory(html)
         self.assertEqual(rows[0]["name"], "Example AI")
-        self.assertEqual(rows[0]["application_url"], "https://market.partnerstack.com/example")
+        self.assertEqual(
+            rows[0]["application_url"],
+            "https://dash.partnerstack.com/marketplace/all/details/example?company=example&gref=marketplace",
+        )
         score, matches = scout.relevance_score(rows[0])
         self.assertGreaterEqual(score, 70)
         self.assertIn("artificial intelligence", matches)
@@ -52,7 +55,7 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
                 rows = []
                 for index in range(30):
                     rows.append({
-                        "id": f"partnerstack:tool-{index}", "network": "partnerstack", "name": f"AI Tool {index}",
+                        "id": f"partnerstack:tool-{index}", "network": "partnerstack", "name": f"AI Tool {index}", "slug": f"tool-{index}",
                         "description": "AI software for marketing automation", "offer": "Earn commission", "tags": ["Artificial Intelligence"],
                         "application_url": f"https://market.partnerstack.com/tool-{index}", "terms_url": "https://example.com/terms",
                         "waitlist": False, "archived": False, "links_enabled": True, "materials": True,
@@ -61,6 +64,7 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
                 result = scout.prepare_opportunities(rows, root, {})
                 self.assertEqual(len(result), 30)
                 self.assertTrue(all(item["state"] == "ready_for_owner_application" for item in result))
+                self.assertTrue(all(item["application_url"].startswith("https://dash.partnerstack.com/marketplace/all/details/") for item in result))
             finally:
                 scout.inspect_policy = original
 
