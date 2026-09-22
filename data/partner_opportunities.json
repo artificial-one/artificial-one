@@ -8,8 +8,8 @@
     "total": 466,
     "existing_active": 24,
     "not_qualified": 14,
-    "policy_review_required": 21,
-    "ready_for_owner_application": 407
+    "policy_review_required": 22,
+    "ready_for_owner_application": 406
   },
   "opportunities": [
     {
@@ -1482,7 +1482,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -2115,53 +2115,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:niural",
-      "network": "partnerstack",
-      "name": "Niural AI",
-      "slug": "niural",
-      "description": "Niural AI is the first US PEO and Global Payroll platform built with automated intelligence and robust compliance. Our software is your AI-powered partner for managing payroll and benefits, in the US and beyond.",
-      "offer": "Earn $250 for leads, and significant revshare as a professional partner for referred customers.",
-      "tags": [
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "HR Software",
-        "Payroll",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/niural?company=niural&gref=marketplace",
-      "terms_url": "https://www.niural.com/legal/niural-for-partners-program-terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 33,
-      "source": "https://market.partnerstack.com/",
-      "score": 85,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -3159,127 +3112,6 @@
       }
     },
     {
-      "id": "partnerstack:vea",
-      "network": "partnerstack",
-      "name": "VEA",
-      "slug": "vea",
-      "description": "VEA is an AI powered business management platform for solopreneurs and small teams. One dashboard for customers, invoicing, work orders, scheduling, tasks, and AI analytics. $30/user/month. No contracts. Earn up to 30% recurring commission for 12 months per referral.",
-      "offer": "Earn up to 30% recurring revenue share for the first 12 months of every customer you refer",
-      "tags": [
-        "Accounting",
-        "Analytics",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Customer Service",
-        "ERP",
-        "HR Software",
-        "Office Software",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vea?company=vea&gref=marketplace",
-      "terms_url": "https://vea.ai/affiliate-terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 3,
-      "source": "https://market.partnerstack.com/",
-      "score": 85,
-      "relevance_matches": [
-        "ai",
-        "analytics",
-        "artificial intelligence",
-        "customer service",
-        "productivity",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:vidaglobal",
-      "network": "partnerstack",
-      "name": "Vida Global Inc.",
-      "slug": "vidaglobal",
-      "description": "Vida.io’s AI Phone Agents give small, medium, and large businesses true 24/7 support across calls, SMS, email, and web chat — relaying information, handling scheduling, screening and transferring calls, and conversing naturally in 10 languages.",
-      "offer": "Earn 10% of net revenue on new referral for two years!",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Ambassadors",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Hot",
-        "Hubspot integrated",
-        "Influencers",
-        "Managed Service Provider",
-        "Marketing",
-        "Media Partners",
-        "Publishers",
-        "Referral Partners",
-        "Resellers",
-        "Sales",
-        "System Integrator",
-        "Trusted",
-        "Value Added Reseller"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vidaglobal?company=vidaglobal&gref=marketplace",
-      "terms_url": "https://vida.io/terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 13,
-      "source": "https://market.partnerstack.com/",
-      "score": 85,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "customer service",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:vistasocial",
       "network": "partnerstack",
       "name": "Vista Social",
@@ -3716,57 +3548,6 @@
       }
     },
     {
-      "id": "partnerstack:feedvisor",
-      "network": "partnerstack",
-      "name": "Feedvisor",
-      "slug": "feedvisor",
-      "description": "The Fastest, Smartest Inventory-Aware Pricing Optimization Ever Introducing an award-winning solution for private label brands and sellers.",
-      "offer": "Earn 10% commission for every qualified customer",
-      "tags": [
-        "Affiliates",
-        "Analytics",
-        "Artificial Intelligence",
-        "Commerce",
-        "E-Commerce",
-        "Hot",
-        "Marketing",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/feedvisor?company=feedvisor&gref=marketplace",
-      "terms_url": "https://feedvisor.com/plans/terms-and-conditions/",
-      "website": "https://www.feedvisor.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 8,
-      "source": "https://market.partnerstack.com/",
-      "score": 81,
-      "relevance_matches": [
-        "analytics",
-        "artificial intelligence",
-        "e-commerce",
-        "marketing"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:ngram",
       "network": "partnerstack",
       "name": "ngram",
@@ -3995,7 +3776,6 @@
         "B2B Marketplaces",
         "Collaboration & Productivity",
         "Data Privacy",
-        "Hot",
         "IT Infrastructure",
         "Office Software",
         "Security",
@@ -4497,6 +4277,52 @@
       }
     },
     {
+      "id": "partnerstack:niural",
+      "network": "partnerstack",
+      "name": "Niural AI",
+      "slug": "niural",
+      "description": "Niural AI is the first US PEO and Global Payroll platform built with automated intelligence and robust compliance. Our software is your AI-powered partner for managing payroll and benefits, in the US and beyond.",
+      "offer": "Earn $250 for leads, and significant revshare as a professional partner for referred customers.",
+      "tags": [
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "HR Software",
+        "Payroll"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/niural?company=niural&gref=marketplace",
+      "terms_url": "https://www.niural.com/legal/niural-for-partners-program-terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 33,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "software"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:nutshell7477",
       "network": "partnerstack",
       "name": "Nutshell",
@@ -4959,6 +4785,124 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:vea",
+      "network": "partnerstack",
+      "name": "VEA",
+      "slug": "vea",
+      "description": "VEA is an AI powered business management platform for solopreneurs and small teams. One dashboard for customers, invoicing, work orders, scheduling, tasks, and AI analytics. $30/user/month. No contracts. Earn up to 30% recurring commission for 12 months per referral.",
+      "offer": "Earn up to 30% recurring revenue share for the first 12 months of every customer you refer",
+      "tags": [
+        "Accounting",
+        "Analytics",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Customer Service",
+        "ERP",
+        "HR Software",
+        "Office Software",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vea?company=vea&gref=marketplace",
+      "terms_url": "https://vea.ai/affiliate-terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 3,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "analytics",
+        "artificial intelligence",
+        "customer service",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:vidaglobal",
+      "network": "partnerstack",
+      "name": "Vida Global Inc.",
+      "slug": "vidaglobal",
+      "description": "Vida.io’s AI Phone Agents give small, medium, and large businesses true 24/7 support across calls, SMS, email, and web chat — relaying information, handling scheduling, screening and transferring calls, and conversing naturally in 10 languages.",
+      "offer": "Earn 10% of net revenue on new referral for two years!",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Ambassadors",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Hubspot integrated",
+        "Influencers",
+        "Managed Service Provider",
+        "Marketing",
+        "Media Partners",
+        "Publishers",
+        "Referral Partners",
+        "Resellers",
+        "Sales",
+        "System Integrator",
+        "Value Added Reseller"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vidaglobal?company=vidaglobal&gref=marketplace",
+      "terms_url": "https://vida.io/terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 13,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "customer service",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -5966,6 +5910,7 @@
         "Artificial Intelligence",
         "Collaboration & Productivity",
         "Customer Service",
+        "Hot",
         "Office Software",
         "Referral Partners",
         "Trusted",
@@ -6199,6 +6144,55 @@
         "productivity",
         "software",
         "video"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:feedvisor",
+      "network": "partnerstack",
+      "name": "Feedvisor",
+      "slug": "feedvisor",
+      "description": "The Fastest, Smartest Inventory-Aware Pricing Optimization Ever Introducing an award-winning solution for private label brands and sellers.",
+      "offer": "Earn 10% commission for every qualified customer",
+      "tags": [
+        "Affiliates",
+        "Analytics",
+        "Artificial Intelligence",
+        "Commerce",
+        "E-Commerce",
+        "Marketing"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/feedvisor?company=feedvisor&gref=marketplace",
+      "terms_url": "https://feedvisor.com/plans/terms-and-conditions/",
+      "website": "https://www.feedvisor.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 8,
+      "source": "https://market.partnerstack.com/",
+      "score": 76,
+      "relevance_matches": [
+        "analytics",
+        "artificial intelligence",
+        "e-commerce",
+        "marketing"
       ],
       "already_active": false,
       "state": "ready_for_owner_application",
@@ -9654,18 +9648,10 @@
         "software"
       ],
       "already_active": false,
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -9730,59 +9716,6 @@
       }
     },
     {
-      "id": "partnerstack:goflow",
-      "network": "partnerstack",
-      "name": "Goflow",
-      "slug": "goflow",
-      "description": "Goflow is a global leader in Multichannel Operating System (MCOS) that enables ecommerce sellers to manage their channel orders, shipping, inventory, listings, transfers, purchasing, forecasting, and analytics from a single interface.",
-      "offer": "Earn 10% or more revenue share - apply today! (ACV $5,000+/yr)",
-      "tags": [
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Commerce",
-        "E-Commerce",
-        "ERP",
-        "Hot",
-        "Sales",
-        "Shopify integrated",
-        "Supply Chain & Logistics",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/goflow?company=goflow&gref=marketplace",
-      "terms_url": "https://goflow.com/terms",
-      "website": "https://www.goflow.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 3,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "analytics",
-        "e-commerce",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:hellomade",
       "network": "partnerstack",
       "name": "Hello Bar & Subscribers",
@@ -9793,11 +9726,9 @@
         "Affiliates",
         "B2B Marketplaces",
         "Digital Advertising",
-        "Hot",
         "Marketing",
         "Sales",
         "Shopify integrated",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/hellomade?company=hellomade&gref=marketplace",
@@ -10881,9 +10812,7 @@
         "Affiliates",
         "Agencies",
         "Development",
-        "Hot",
         "Marketing",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/powr2155?company=powr2155&gref=marketplace",
@@ -11827,7 +11756,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 16,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11968,10 +11897,8 @@
         "Commerce",
         "E-Commerce",
         "Freelancer",
-        "Hot",
         "Marketing Professional",
         "Referral Partners",
-        "Trusted",
         "Web Developer",
         "hot"
       ],
@@ -12321,68 +12248,13 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 15,
+      "review_days": 16,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
         "marketing",
         "sales",
         "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:revenueroll",
-      "network": "partnerstack",
-      "name": "Tie (previously Revenue Roll)",
-      "slug": "revenueroll",
-      "description": "Tie's real-time B2C identity resolution and enrichment platform instantly reveals names, contact details, demographic data and psychographics for over 50% of website visitors—without requiring form submissions or purchases.",
-      "offer": "Earn 20%+ Of Recurring Revenue - Average Of $5K Per Referral",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Analytics",
-        "Commerce",
-        "Hot",
-        "Hubspot integrated",
-        "Influencers",
-        "Marketing",
-        "Sales",
-        "Salesforce integrated",
-        "Shopify integrated",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/revenueroll?company=revenueroll&gref=marketplace",
-      "terms_url": "https://meettie.com/partner-terms",
-      "website": "https://www.meettie.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 44,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "analytics",
-        "data",
-        "marketing",
-        "sales"
       ],
       "already_active": false,
       "state": "ready_for_owner_application",
@@ -12485,54 +12357,6 @@
         "data",
         "productivity",
         "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:truckstop",
-      "network": "partnerstack",
-      "name": "TRUCKSTOP",
-      "slug": "truckstop",
-      "description": "We develop and deliver technology solutions and services that empower freight professionals—carriers, brokers, and shippers of all sizes—to run their businesses from start to finish.",
-      "offer": "Earn up to 20% per active customer you refer!",
-      "tags": [
-        "Affiliates",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Hot",
-        "Other",
-        "Referral Partners",
-        "Supply Chain & Logistics",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/truckstop?company=truckstop&gref=marketplace",
-      "terms_url": "https://truckstop.com/partner-referral-program-agreement-terms-of-service",
-      "website": "https://www.truckstop.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 32,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "productivity"
       ],
       "already_active": false,
       "state": "ready_for_owner_application",
@@ -15446,11 +15270,9 @@
       "tags": [
         "Affiliates",
         "Customer Service",
-        "Hot",
         "IT Management",
         "Office Software",
         "Publishers",
-        "Trusted",
         "Vertical Industry Software",
         "hot"
       ],
@@ -16755,56 +16577,6 @@
       }
     },
     {
-      "id": "partnerstack:westfax",
-      "network": "partnerstack",
-      "name": "WestFax",
-      "slug": "westfax",
-      "description": "WestFax provides HIPAA-compliant cloud faxing built for enterprise healthcare organizations. We deliver high fax completion rates, enterprise-grade reliability, and responsive human support - helping providers streamline critical document exchange while maintaining strict compliance.",
-      "offer": "Earn 20% recurring commission for the lifetime of the customer!",
-      "tags": [
-        "Collaboration & Productivity",
-        "Data Privacy",
-        "Hot",
-        "IT Infrastructure",
-        "IT Management",
-        "Office Software",
-        "Security",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/westfax?company=westfax&gref=marketplace",
-      "terms_url": "https://westfax.com/partner-program-terms-and-conditions/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 8,
-      "source": "https://market.partnerstack.com/",
-      "score": 63,
-      "relevance_matches": [
-        "data",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:mycase",
       "network": "partnerstack",
       "name": "8am™",
@@ -17192,6 +16964,57 @@
         "marketing",
         "sales",
         "software"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:goflow",
+      "network": "partnerstack",
+      "name": "Goflow",
+      "slug": "goflow",
+      "description": "Goflow is a global leader in Multichannel Operating System (MCOS) that enables ecommerce sellers to manage their channel orders, shipping, inventory, listings, transfers, purchasing, forecasting, and analytics from a single interface.",
+      "offer": "Earn 10% or more revenue share - apply today! (ACV $5,000+/yr)",
+      "tags": [
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Commerce",
+        "E-Commerce",
+        "ERP",
+        "Sales",
+        "Shopify integrated",
+        "Supply Chain & Logistics"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/goflow?company=goflow&gref=marketplace",
+      "terms_url": "https://goflow.com/terms",
+      "website": "https://www.goflow.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 3,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "analytics",
+        "e-commerce",
+        "productivity",
+        "sales"
       ],
       "already_active": false,
       "state": "ready_for_owner_application",
@@ -17976,6 +17799,105 @@
       }
     },
     {
+      "id": "partnerstack:revenueroll",
+      "network": "partnerstack",
+      "name": "Tie (previously Revenue Roll)",
+      "slug": "revenueroll",
+      "description": "Tie's real-time B2C identity resolution and enrichment platform instantly reveals names, contact details, demographic data and psychographics for over 50% of website visitors—without requiring form submissions or purchases.",
+      "offer": "Earn 20%+ Of Recurring Revenue - Average Of $5K Per Referral",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Analytics",
+        "Commerce",
+        "Hubspot integrated",
+        "Influencers",
+        "Marketing",
+        "Sales",
+        "Salesforce integrated",
+        "Shopify integrated"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/revenueroll?company=revenueroll&gref=marketplace",
+      "terms_url": "https://meettie.com/partner-terms",
+      "website": "https://www.meettie.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 44,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "analytics",
+        "data",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:truckstop",
+      "network": "partnerstack",
+      "name": "TRUCKSTOP",
+      "slug": "truckstop",
+      "description": "We develop and deliver technology solutions and services that empower freight professionals—carriers, brokers, and shippers of all sizes—to run their businesses from start to finish.",
+      "offer": "Earn up to 20% per active customer you refer!",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Other",
+        "Referral Partners",
+        "Supply Chain & Logistics"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/truckstop?company=truckstop&gref=marketplace",
+      "terms_url": "https://truckstop.com/partner-referral-program-agreement-terms-of-service",
+      "website": "https://www.truckstop.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 32,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "productivity"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:unitelvoice",
       "network": "partnerstack",
       "name": "Unitel Voice",
@@ -18229,7 +18151,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 22,
+      "review_days": 21,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -18653,7 +18575,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 22,
+      "review_days": 21,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19005,7 +18927,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 20,
+      "review_days": 18,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19671,6 +19593,54 @@
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:westfax",
+      "network": "partnerstack",
+      "name": "WestFax",
+      "slug": "westfax",
+      "description": "WestFax provides HIPAA-compliant cloud faxing built for enterprise healthcare organizations. We deliver high fax completion rates, enterprise-grade reliability, and responsive human support - helping providers streamline critical document exchange while maintaining strict compliance.",
+      "offer": "Earn 20% recurring commission for the lifetime of the customer!",
+      "tags": [
+        "Collaboration & Productivity",
+        "Data Privacy",
+        "IT Infrastructure",
+        "IT Management",
+        "Office Software",
+        "Security"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/westfax?company=westfax&gref=marketplace",
+      "terms_url": "https://westfax.com/partner-program-terms-and-conditions/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 8,
+      "source": "https://market.partnerstack.com/",
+      "score": 58,
+      "relevance_matches": [
+        "data",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
         },
         "cookie_days": null
       }
@@ -22001,8 +21971,6 @@
       "tags": [
         "Affiliates",
         "Agencies",
-        "Hot",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/proof?company=proof&gref=marketplace",
@@ -22104,7 +22072,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 11,
+      "review_days": 12,
       "source": "https://market.partnerstack.com/",
       "score": 46,
       "relevance_matches": [
