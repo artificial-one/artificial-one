@@ -150,6 +150,7 @@ def website_coverage(path: Path = Path("data/appsumo_offers.json")) -> dict[str,
         "checking": sum(item.get("availability") in {"unchecked", "checking"} for item in offers),
         "expired": sum(item.get("availability") == "expired" for item in offers),
         "promotable": sum(bool(item.get("availability") != "expired" and item.get("ai_relevant") and item.get("editorial_url")) for item in offers),
+        "impact_api": sum(item.get("source_status") == "impact-api" for item in offers),
     }
 
 
@@ -210,6 +211,7 @@ def render_dashboard(
         ("AppSumo awaiting confirmation", str(coverage["checking"])),
         ("AppSumo expired/disabled", str(coverage["expired"])),
         ("AppSumo promotable editorial matches", str(coverage["promotable"])),
+        ("AppSumo products imported automatically from Impact", str(coverage.get("impact_api", 0))),
     ]
     change_lines = changes or ["No meaningful aggregate change."]
     if not impact.get("connected"):
@@ -258,13 +260,16 @@ def main(argv: list[str] | None = None) -> int:
     sid = os.environ.get("IMPACT_ACCOUNT_SID", "").strip()
     token = os.environ.get("IMPACT_AUTH_TOKEN", "").strip()
     impact = fetch_impact_snapshot(sid, token) if sid and token else {"connected": False}
-    current = {"schema_version": 2, "audited_at": datetime.now(timezone.utc).isoformat(), "partnerstack": partnerstack, "impact": impact, "acquisition": {"visits": visits, "route_clicks": route_clicks, "route_impressions": route_impressions}}
+    coverage = website_coverage()
+    current = {"schema_version": 2, "audited_at": datetime.now(timezone.utc).isoformat(), "partnerstack": partnerstack, "impact": impact, "website": coverage, "acquisition": {"visits": visits, "route_clicks": route_clicks, "route_impressions": route_impressions}}
     previous = json.loads(args.baseline.read_text(encoding="utf-8")) if args.baseline.exists() else {}
     changes = ps.compare_snapshots(previous.get("partnerstack", {}), partnerstack) if previous else []
     if previous and impact.get("connected"):
         changes.extend(_impact_changes(previous.get("impact", {}), impact))
+    if previous and previous.get("website", {}) != coverage:
+        changes.append("AppSumo website inventory or publication coverage changed")
     run_url = f"{os.environ.get('GITHUB_SERVER_URL', '')}/{os.environ.get('GITHUB_REPOSITORY', '')}/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}".strip("/")
-    subject, text_body, html_body = render_dashboard(partnerstack, impact, clicks, impressions, visits, route_clicks, website_coverage(), changes, run_url, route_impressions=route_impressions)
+    subject, text_body, html_body = render_dashboard(partnerstack, impact, clicks, impressions, visits, route_clicks, coverage, changes, run_url, route_impressions=route_impressions)
     if args.email_to:
         resend = os.environ.get("RESEND_API_KEY", "").strip()
         if not resend or not args.email_from:

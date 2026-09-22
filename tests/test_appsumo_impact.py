@@ -15,8 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 class AppSumoImpactTests(unittest.TestCase):
     def test_workbook_inventory_is_complete_and_public_safe(self):
         registry = json.loads((ROOT / "data" / "appsumo_offers.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(registry["offers"]), 184)
-        self.assertEqual(len({item["id"] for item in registry["offers"]}), 184)
+        self.assertGreaterEqual(len(registry["offers"]), 184)
+        self.assertEqual(len({item["id"] for item in registry["offers"]}), len(registry["offers"]))
         self.assertTrue(all(item["tracking_url"].startswith("https://appsumo.8odi.net/") for item in registry["offers"]))
         encoded = json.dumps(registry).casefold()
         self.assertNotIn("auth_token", encoded)

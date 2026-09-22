@@ -29,6 +29,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 WORKBOOK = ROOT / "appsumo-affiliate-links-tracker.xlsx"
 REGISTRY = ROOT / "data" / "appsumo_offers.json"
+IMPACT_INVENTORY = ROOT / "data" / "appsumo_impact_ads.json"
 HUB = ROOT / "appsumo-ai-tools.html"
 HOMEPAGE = ROOT / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
@@ -126,7 +127,11 @@ def infer_category(name: str) -> str:
 
 
 def _existing_editorial(slug: str, tracking_url: str, link_pages: dict[str, str] | None = None) -> str:
-    candidates = [ROOT / f"blog-{slug}.html", ROOT / "tools" / f"{slug}.html"]
+    candidates = [
+        ROOT / f"blog-{slug}.html",
+        ROOT / "tools" / f"{slug}.html",
+        ROOT / "appsumo-guides" / f"{slug}.html",
+    ]
     for candidate in candidates:
         if candidate.exists():
             return candidate.relative_to(ROOT).as_posix()
@@ -195,6 +200,36 @@ def build_registry(previous: dict[str, Any] | None = None) -> dict[str, Any]:
             "last_checked_at": prior.get("last_checked_at", ""),
             "source_status": source_status or "unknown",
         })
+    imported = load_json(IMPACT_INVENTORY)
+    known_slugs = {str(item.get("slug") or "").casefold() for item in offers}
+    known_names = {re.sub(r"[^a-z0-9]", "", str(item.get("name") or "").casefold()) for item in offers}
+    known_links = {str(item.get("tracking_url") or "") for item in offers}
+    for item in imported.get("offers", []):
+        if not isinstance(item, dict):
+            continue
+        tracking = str(item.get("tracking_url") or "")
+        slug = slugify(str(item.get("slug") or item.get("name") or ""))
+        name_key = re.sub(r"[^a-z0-9]", "", str(item.get("name") or "").casefold())
+        if not tracking.startswith("https://") or not slug or tracking in known_links or slug.casefold() in known_slugs or name_key in known_names:
+            continue
+        prior = old.get(str(item.get("id") or "")) or old_by_tracking.get(tracking, {})
+        offers.append({
+            "id": str(item.get("id") or f"appsumo-impact-{slug}"),
+            "name": str(item.get("name") or slug.replace("-", " ").title()),
+            "slug": slug,
+            "category": str(item.get("category") or infer_category(str(item.get("name") or slug))),
+            "tracking_url": tracking,
+            "product_url": str(item.get("product_url") or f"https://appsumo.com/products/{slug}/"),
+            "editorial_url": str(item.get("editorial_url") or ""),
+            "ai_relevant": bool(item.get("ai_relevant")),
+            "availability": str(prior.get("availability") or item.get("availability") or "unchecked"),
+            "last_checked_at": str(prior.get("last_checked_at") or ""),
+            "source_status": "impact-api",
+            "impact_ad_id": str(item.get("impact_ad_id") or ""),
+        })
+        known_links.add(tracking)
+        known_slugs.add(slug.casefold())
+        known_names.add(name_key)
     return {
         "version": 1,
         "updated_at": date.today().isoformat(),
@@ -396,8 +431,11 @@ def instrument_html(registry: dict[str, Any]) -> int:
     return changed
 
 
-def update_sitemap(source: str) -> str:
-    block = f"{SITEMAP_START}\n  <url><loc>https://artificial.one/appsumo-ai-tools.html</loc><lastmod>{date.today().isoformat()}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>\n{SITEMAP_END}"
+def update_sitemap(source: str, registry: dict[str, Any] | None = None) -> str:
+    guide_urls = sorted({str(item.get("editorial_url")) for item in (registry or {}).get("offers", []) if str(item.get("editorial_url") or "").startswith("appsumo-guides/")})
+    rows = [f"  <url><loc>https://artificial.one/appsumo-ai-tools.html</loc><lastmod>{date.today().isoformat()}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>"]
+    rows.extend(f"  <url><loc>https://artificial.one/{html.escape(url)}</loc><lastmod>{date.today().isoformat()}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>" for url in guide_urls)
+    block = f"{SITEMAP_START}\n" + "\n".join(rows) + f"\n{SITEMAP_END}"
     if SITEMAP_START in source and SITEMAP_END in source:
         return re.sub(re.escape(SITEMAP_START) + r".*?" + re.escape(SITEMAP_END), block, source, flags=re.S)
     return source.rsplit("</urlset>", 1)[0].rstrip() + "\n" + block + "\n</urlset>\n"
@@ -408,7 +446,7 @@ def expected_outputs(live_check: bool = False, state_path: Path = STATE) -> tupl
     if live_check:
         refresh_availability(registry, state_path)
     hub = render_hub(registry)
-    sitemap = update_sitemap(SITEMAP.read_text(encoding="utf-8"))
+    sitemap = update_sitemap(SITEMAP.read_text(encoding="utf-8"), registry)
     homepage = update_homepage(HOMEPAGE.read_text(encoding="utf-8"), registry)
     return registry, hub, sitemap, homepage
 

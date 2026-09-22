@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/partnerstack-cloud-monitor.yml
+      - scripts/impact_appsumo_scout.py
       - scripts/affiliate_network_monitor.py
       - scripts/partnerstack_cloud_monitor.py
       - scripts/appsumo_impact.py
@@ -47,6 +48,13 @@ jobs:
           restore-keys: |
             affiliate-network-private-
 
+      - name: Discover every AppSumo product asset and create missing tracking links
+        id: appsumo_scout
+        env:
+          IMPACT_ACCOUNT_SID: ${{ secrets.IMPACT_ACCOUNT_SID }}
+          IMPACT_AUTH_TOKEN: ${{ secrets.IMPACT_AUTH_TOKEN }}
+        run: python scripts/impact_appsumo_scout.py
+
       - name: Refresh AppSumo inventory, availability and page attribution
         run: python scripts/appsumo_impact.py --live-check --state .appsumo-monitor/availability.json
 
@@ -76,6 +84,7 @@ jobs:
       - name: Verify public AppSumo assets and safety rules
         run: |
           python -m unittest tests.test_appsumo_impact -v
+          python -m unittest tests.test_impact_appsumo_scout -v
           python -m unittest tests.test_tool_intelligence -v
           python scripts/appsumo_impact.py --check
           python scripts/build_tool_intelligence.py --check
@@ -85,7 +94,7 @@ jobs:
       - name: Commit public availability and generated site changes
         shell: bash
         run: |
-          git add -- data/appsumo_offers.json data/indexing_recovery.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json appsumo-ai-tools.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html index.html sitemap.xml assets/affiliate-tracking.js ':(glob)**/*.html'
+          git add -- data/appsumo_offers.json data/appsumo_impact_ads.json data/indexing_recovery.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json appsumo-ai-tools.html appsumo-guides ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html index.html sitemap.xml assets/affiliate-tracking.js ':(glob)**/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -100,6 +109,7 @@ jobs:
           ## Affiliate network cloud monitor
 
           The read-only PartnerStack/Impact audit and AppSumo availability check completed. The consolidated private dashboard was emailed to the configured recipient.
+          AppSumo products discovered: ${{ steps.appsumo_scout.outputs.products }}; new assets: ${{ steps.appsumo_scout.outputs.new_items }}; missing tracking links created: ${{ steps.appsumo_scout.outputs.links_created }}.
           Financial and customer metrics are intentionally omitted from this public repository's Actions summary.
           EOF
 
