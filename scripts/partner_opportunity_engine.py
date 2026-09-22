@@ -25,8 +25,10 @@ from urllib.request import Request, urlopen
 
 try:
     from scripts import partnerstack_cloud_monitor as ps
+    from scripts import affiliate_network_connectors as network_connectors
 except ImportError:
     import partnerstack_cloud_monitor as ps  # type: ignore
+    import affiliate_network_connectors as network_connectors  # type: ignore
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -36,7 +38,7 @@ QUEUE_PAGE_PATH = ROOT / "partner-opportunities.html"
 OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 INTELLIGENCE_PATH = ROOT / "data" / "tool_intelligence.json"
 RESEND_URL = "https://api.resend.com/emails"
-USER_AGENT = "artificial.one-partner-scout/1.0 (+https://artificial.one/)"
+USER_AGENT = "artificial.one-partner-scout/1.1 (+https://artificial.one/)"
 APPLICATION_PROFILE = (
     "artificial.one is an AI and business-software discovery and decision-support site. "
     "We publish transparent affiliate disclosures, factual use-case guides, comparisons "
@@ -183,9 +185,11 @@ def discover_vendor_program(record: dict[str, Any]) -> dict[str, Any] | None:
         return None
     name = clean_text(record.get("name"), 120)
     application = candidates[0]
+    network, platform = network_connectors.classify_application_platform(application)
     return {
         "id": f"direct:{slugify(name)}",
-        "network": "direct-vendor",
+        "network": network,
+        "platform": platform,
         "name": name,
         "slug": slugify(name),
         "description": clean_text(record.get("summary"), 700),
@@ -238,7 +242,7 @@ def relevance_score(item: dict[str, Any]) -> tuple[int, list[str]]:
         score += 4
     if any(str(tag).casefold() in {"trusted", "hot"} for tag in item.get("tags", [])):
         score += 5
-    if item.get("network") == "direct-vendor":
+    if str(item.get("network") or "").startswith("direct-"):
         score += 15
     if item.get("waitlist") or item.get("archived"):
         score -= 100
@@ -346,15 +350,22 @@ def merge_auto_offers(root: Path, opportunities: list[dict[str, Any]], partnersh
     added: list[str] = []
     for item in opportunities:
         key = normalized_name(str(item["name"]))
-        partnership = partnerships.get(key) or partnerships.get(normalized_name(str(item.get("slug") or "")))
-        approved = str((partnership or {}).get("approved_status") or (partnership or {}).get("status") or "").casefold() in {"approved", "active"}
+        # Records created by the original engine predate the explicit network
+        # field and are PartnerStack records by definition.
+        is_partnerstack = item.get("network", "partnerstack") == "partnerstack"
+        partnership = partnerships.get(key) or partnerships.get(normalized_name(str(item.get("slug") or ""))) if is_partnerstack else None
+        approved = (
+            str((partnership or {}).get("approved_status") or (partnership or {}).get("status") or "").casefold() in {"approved", "active"}
+            if is_partnerstack else bool(item.get("approved"))
+        )
         if (
-            not partnership or not approved or key in existing
+            not approved or key in existing
             or item.get("policy", {}).get("status") != "reviewed"
             or not https_url(item.get("website")) or not https_url(item.get("terms_url"))
         ):
             continue
-        links = partnerstack_links(api_key, partnership)
+        links = partnerstack_links(api_key, partnership) if is_partnerstack and partnership else [https_url(item.get("tracking_url"))]
+        links = [link for link in links if link]
         if not links:
             item["state"] = "approved_link_pending"
             continue
@@ -371,7 +382,7 @@ def merge_auto_offers(root: Path, opportunities: list[dict[str, Any]], partnersh
                 continue
             audit.setdefault("programs", []).append({
                 "name": item["name"], "slug": item["slug"], "category": category_for(item),
-                "access": "usable", "website_status": "published", "source": "partner-opportunity-engine",
+                "access": "usable", "website_status": "published", "source": f"partner-opportunity-engine:{item.get('network', 'unknown')}",
             })
         programs = [row for row in audit.get("programs", []) if isinstance(row, dict)]
         audit["audited_at"] = date.today().isoformat()
@@ -391,17 +402,27 @@ def prepare_opportunities(discovered: list[dict[str, Any]], root: Path, active: 
     deduped: dict[str, dict[str, Any]] = {}
     for item in discovered:
         key = normalized_name(str(item.get("name") or ""))
-        if not key or key in deduped:
+        if not key:
             continue
+        if key in deduped:
+            current = deduped[key]
+            current_value = (bool(current.get("approved")), bool(current.get("tracking_url")))
+            candidate_value = (bool(item.get("approved")), bool(item.get("tracking_url")))
+            if candidate_value <= current_value:
+                continue
         score, matches = relevance_score(item)
         item["score"] = score
         item["relevance_matches"] = matches
         slug_key = normalized_name(str(item.get("slug") or ""))
         partnership = active.get(key) or active.get(slug_key)
         partner_status = str((partnership or {}).get("approved_status") or (partnership or {}).get("status") or "").casefold()
-        item["already_active"] = key in known or slug_key in known or partner_status in {"approved", "active"}
-        if item["already_active"]:
+        registered = key in known or slug_key in known
+        approved = partner_status in {"approved", "active"} or bool(item.get("approved"))
+        item["already_active"] = registered or approved
+        if registered:
             item["state"] = "existing_active"
+        elif approved:
+            item["state"] = "policy_review_pending"
         elif partner_status == "pending":
             item["state"] = "application_pending"
         elif partner_status == "declined":
@@ -420,7 +441,10 @@ def prepare_opportunities(discovered: list[dict[str, Any]], root: Path, active: 
         for future in as_completed(futures):
             item = futures[future]
             item["policy"] = future.result()
-            item["state"] = "ready_for_owner_application" if item["policy"]["status"] == "reviewed" else "policy_review_required"
+            if item["policy"]["status"] == "reviewed":
+                item["state"] = "approved_ready_for_auto_onboarding" if item.get("approved") else "ready_for_owner_application"
+            else:
+                item["state"] = "policy_review_required"
     for item in deduped.values():
         item.setdefault("policy", {"status": "not_reviewed", "signals": {}, "cookie_days": None})
         if item.get("network") == "partnerstack" and item.get("slug"):
@@ -460,7 +484,7 @@ def render_queue_page(payload: dict[str, Any]) -> str:
     for item in payload["opportunities"]:
         restrictions = ", ".join(name.replace("_", " ") for name, value in item["policy"]["signals"].items() if value) or "No automated restriction signal; read the source terms."
         cards.append(
-            f'''<article data-card data-state="{escape(item['state'])}" data-network="{escape(item['network'])}" data-search="{escape((item['name']+' '+item.get('description','')+' '+' '.join(item.get('tags',[]))).casefold())}" class="card"><p class="eyebrow">{escape(item['network'])} · score {item['score']}/100</p><h2>{escape(item['name'])}</h2><p>{escape(item.get('offer') or item.get('description') or 'Public offer details were not stated.')}</p><p><strong>State:</strong> {escape(item['state'].replace('_',' '))}</p><p class="policy"><strong>Policy signals:</strong> {escape(restrictions)}</p><a href="{escape(item['application_url'], quote=True)}" rel="nofollow noopener" target="_blank">Open this program in PartnerStack →</a></article>'''
+            f'''<article data-card data-state="{escape(item['state'])}" data-network="{escape(item['network'])}" data-search="{escape((item['name']+' '+item.get('description','')+' '+' '.join(item.get('tags',[]))).casefold())}" class="card"><p class="eyebrow">{escape(item['network'])} · score {item['score']}/100</p><h2>{escape(item['name'])}</h2><p>{escape(item.get('offer') or item.get('description') or 'Public offer details were not stated.')}</p><p><strong>State:</strong> {escape(item['state'].replace('_',' '))}</p><p class="policy"><strong>Policy signals:</strong> {escape(restrictions)}</p><a href="{escape(item['application_url'], quote=True)}" rel="nofollow noopener" target="_blank">Open this program in {escape(str(item.get('platform') or item['network']).replace('-', ' ').title())} →</a></article>'''
         )
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Partner opportunity queue | artificial.one</title><style>body{{margin:0;background:#f8fafc;color:#0f172a;font-family:Inter,system-ui,sans-serif}}main{{max-width:1120px;margin:auto;padding:40px 20px}}h1{{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1;margin:.2em 0}}.lead{{max-width:780px;color:#475569;line-height:1.6}}.controls{{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:28px 0}}input,select{{padding:13px;border:1px solid #cbd5e1;border-radius:10px;background:white;font:inherit}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}}.card{{display:flex;flex-direction:column;border:1px solid #e2e8f0;border-radius:16px;background:white;padding:20px;box-shadow:0 5px 18px #0f172a0a}}.card h2{{margin:.25em 0}}.card p{{color:#475569;line-height:1.5}}.card a{{margin-top:auto;color:#4338ca;font-weight:800}}.eyebrow{{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:#4f46e5!important;font-weight:800}}.policy{{font-size:.85rem}}@media(max-width:800px){{.grid{{grid-template-columns:1fr 1fr}}}}@media(max-width:560px){{.controls,.grid{{grid-template-columns:1fr}}}}</style></head><body><main><p class="eyebrow">Owner review queue · updated {escape(payload['updated_at'])}</p><h1>Affiliate opportunities</h1><p class="lead">All discovered candidates are retained—there is no weekly application quota. This page is excluded from search. Review the source program and its binding terms before applying; the automation never accepts contracts, certifies business facts or supplies tax and banking details.</p><p><strong>{payload['summary'].get('ready_for_owner_application',0)}</strong> ready for owner review · <strong>{payload['summary'].get('policy_review_required',0)}</strong> need manual policy review · <strong>{payload['summary'].get('application_pending',0)}</strong> pending</p><section class="controls"><input id="q" type="search" placeholder="Search programs"><select id="state"><option value="">All states</option>{''.join(f'<option>{escape(value)}</option>' for value in sorted({item['state'] for item in payload['opportunities']}))}</select><select id="network"><option value="">All networks</option>{''.join(f'<option>{escape(value)}</option>' for value in sorted({item['network'] for item in payload['opportunities']}))}</select></section><p id="count"></p><section class="grid">{''.join(cards)}</section></main><script>(function(){{var q=document.getElementById('q'),s=document.getElementById('state'),n=document.getElementById('network'),cards=[].slice.call(document.querySelectorAll('[data-card]')),count=document.getElementById('count');function apply(){{var text=q.value.trim().toLowerCase(),shown=0;cards.forEach(function(card){{var visible=(!text||card.dataset.search.indexOf(text)>-1)&&(!s.value||card.dataset.state===s.value)&&(!n.value||card.dataset.network===n.value);card.hidden=!visible;if(visible)shown++;}});count.textContent=shown+' opportunities shown';}}[q,s,n].forEach(function(control){{control.addEventListener(control===q?'input':'change',apply);}});apply();}})();</script></body></html>'''
 
@@ -508,6 +532,10 @@ def run(root: Path, state_path: Path, email_to: str = "", email_from: str = "") 
         print(f"Marketplace refresh unavailable ({exc}); retaining {len(discovered)} known PartnerStack opportunities.", file=sys.stderr, flush=True)
     print("Scanning the verified catalog for direct-vendor programs…", flush=True)
     discovered.extend(discover_direct_programs(load_json(root / "data/tool_intelligence.json", {"tools": []})))
+    print("Reading optional Awin, CJ, Sovrn and Rakuten connectors…", flush=True)
+    network_items, network_status = network_connectors.discover(dict(os.environ), discovered)
+    discovered.extend(network_items)
+    network_connectors.write_status(root, network_status)
     api_key = os.environ.get("PARTNERSTACK_API_KEY", "").strip()
     partnerships: list[dict[str, Any]] = []
     if api_key:

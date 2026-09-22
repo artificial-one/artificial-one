@@ -111,6 +111,47 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
             finally:
                 scout.partnerstack_links = original
 
+    def test_connected_network_record_replaces_unmonetized_direct_duplicate(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "data").mkdir()
+            (root / "data/partner_offers.json").write_text('{"offers": []}', encoding="utf-8")
+            (root / "data/partnerstack_program_audit.json").write_text('{"programs": []}', encoding="utf-8")
+            direct = {
+                "id": "direct:example", "network": "direct-vendor", "name": "Example AI", "slug": "example-ai",
+                "description": "AI software for marketing teams", "offer": "Affiliate program", "tags": ["AI"],
+                "application_url": "https://example.com/affiliates", "terms_url": "https://example.com/terms",
+                "website": "https://example.com", "waitlist": False, "archived": False, "links_enabled": True,
+            }
+            monetized = {**direct, "id": "sovrn:example", "network": "sovrn", "approved": True,
+                         "tracking_url": "https://sovrn.co/example"}
+            original = scout.inspect_policy
+            try:
+                scout.inspect_policy = lambda _url: {"status": "reviewed", "signals": {}, "cookie_days": None}
+                result = scout.prepare_opportunities([direct, monetized], root, {})
+                self.assertEqual(len(result), 1)
+                self.assertEqual(result[0]["network"], "sovrn")
+                self.assertEqual(result[0]["state"], "approved_ready_for_auto_onboarding")
+            finally:
+                scout.inspect_policy = original
+
+    def test_connected_network_tracking_link_enters_offer_pipeline(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "data").mkdir()
+            (root / "data/partner_offers.json").write_text('{"version":1,"offers":[]}', encoding="utf-8")
+            (root / "data/partnerstack_program_audit.json").write_text('{"version":1,"programs":[],"summary":{}}', encoding="utf-8")
+            opportunity = {
+                "network": "sovrn", "approved": True, "tracking_url": "https://sovrn.co/example",
+                "name": "Example AI", "slug": "example-ai", "description": "AI workflow software for business teams.",
+                "tags": ["Artificial Intelligence"], "website": "https://example.com/", "terms_url": "https://sovrn.com/terms",
+                "source": "https://developer.sovrn.com/", "policy": {"status": "reviewed"},
+            }
+            added = scout.merge_auto_offers(root, [opportunity], {}, "")
+            self.assertEqual(added, ["Example AI"])
+            registry = json.loads((root / "data/partner_offers.json").read_text(encoding="utf-8"))
+            self.assertEqual(registry["offers"][0]["tracking_url"], "https://sovrn.co/example")
+
 
 if __name__ == "__main__":
     unittest.main()

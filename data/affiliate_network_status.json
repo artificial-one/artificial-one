@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-22",
+  "legal_gate": "Account creation, applications and acceptance of binding terms require owner action.",
+  "networks": [
+    {
+      "network": "awin",
+      "name": "Awin",
+      "priority": 1,
+      "signup_url": "https://ui.awin.com/publisher-signup/en/step1",
+      "dashboard_url": "https://ui.awin.com/",
+      "capability": "program discovery and joined-program tracking links",
+      "connected": false,
+      "state": "owner_signup_or_credentials_required",
+      "missing_credentials": ["AWIN_PUBLISHER_ID", "AWIN_API_TOKEN"],
+      "records": 0
+    },
+    {
+      "network": "sovrn",
+      "name": "Sovrn Commerce",
+      "priority": 2,
+      "signup_url": "https://www.sovrn.com/commerce/",
+      "dashboard_url": "https://commerce.sovrn.com/",
+      "capability": "monetizability checks and automatic fallback links",
+      "connected": false,
+      "state": "owner_signup_or_credentials_required",
+      "missing_credentials": ["SOVRN_COMMERCE_API_KEY"],
+      "records": 0
+    },
+    {
+      "network": "cj",
+      "name": "CJ Affiliate",
+      "priority": 3,
+      "signup_url": "https://signup.cj.com/member/signup/publisher/",
+      "dashboard_url": "https://members.cj.com/",
+      "capability": "joined-advertiser discovery",
+      "connected": false,
+      "state": "owner_signup_or_credentials_required",
+      "missing_credentials": ["CJ_PUBLISHER_CID", "CJ_PERSONAL_ACCESS_TOKEN"],
+      "records": 0
+    },
+    {
+      "network": "rakuten",
+      "name": "Rakuten Advertising",
+      "priority": 4,
+      "signup_url": "https://signup.linkshare.com/publishers/registration/landing",
+      "dashboard_url": "https://publisher.rakutenadvertising.com/",
+      "capability": "advertiser and partnership discovery",
+      "connected": false,
+      "state": "owner_signup_or_credentials_required",
+      "missing_credentials": ["RAKUTEN_ACCESS_TOKEN"],
+      "records": 0
+    }
+  ]
+}
