@@ -1,0 +1,58 @@
+name: Update business activity diary
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Refresh AI news
+      - Search growth engine
+      - Build partner offers
+      - Discover affiliate opportunities
+      - Affiliate network cloud monitor
+      - Optimize affiliate revenue
+      - Refresh AI tool intelligence
+    types: [completed]
+  schedule:
+    # Nightly fallback after the normal publishing window.
+    - cron: "55 23 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: artificial-one-business-diary
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild the evidence-based business diary
+        run: python scripts/build_business_activity_diary.py
+
+      - name: Verify diary rules
+        run: python -m unittest tests.test_business_activity_diary -v
+
+      - name: Commit only a materially changed diary
+        shell: bash
+        run: |
+          git add -- docs/AUTOMATED_BUSINESS_DIARY.md data/business_activity_diary.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update business activity diary [skip ci]"
+          if ! git push; then
+            git fetch origin main
+            git rebase origin/main
+            git push
+          fi
