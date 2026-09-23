@@ -2,9 +2,93 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-23T19:26:34+02:00",
+  "last_activity_at": "2026-09-23T23:28:47+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:dc1ee954d8e6f3065548a598c815211ba1eb7d0f:social_creatives",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:28:47+02:00",
+      "kind": "social_creatives_updated",
+      "summary": "Created or refreshed 7 social-media creative assets.",
+      "details": [
+        "images/social-cards/adcreative.jpg",
+        "images/social-cards/daily-editorial-vertical.jpg",
+        "images/social-cards/daily-editorial.jpg",
+        "images/social-cards/kit.jpg",
+        "images/social-cards/rank-prompt.jpg",
+        "images/social-cards/seamless.jpg",
+        "images/social-cards/unbounce.jpg"
+      ],
+      "source_commit": "dc1ee954d8e6"
+    },
+    {
+      "id": "git:dc1ee954d8e6f3065548a598c815211ba1eb7d0f:rss",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:28:47+02:00",
+      "kind": "distribution_updated",
+      "summary": "Published an updated RSS feed for content distribution.",
+      "source_commit": "dc1ee954d8e6"
+    },
+    {
+      "id": "git:dc1ee954d8e6f3065548a598c815211ba1eb7d0f:newsletter",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:28:47+02:00",
+      "kind": "newsletter_edition_updated",
+      "summary": "Published a refreshed web newsletter edition (email sending is not currently connected).",
+      "url": "https://artificial.one/newsletter/latest.html",
+      "source_commit": "dc1ee954d8e6"
+    },
+    {
+      "id": "git:dc1ee954d8e6f3065548a598c815211ba1eb7d0f:M:partner-offers.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:28:47+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Verified AI Partner Offers | artificial.one",
+      "url": "https://artificial.one/partner-offers.html",
+      "path": "partner-offers.html",
+      "source_commit": "dc1ee954d8e6"
+    },
+    {
+      "id": "git:dc1ee954d8e6f3065548a598c815211ba1eb7d0f:M:index.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:28:47+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "dc1ee954d8e6"
+    },
+    {
+      "id": "git:dc1ee954d8e6f3065548a598c815211ba1eb7d0f:M:calculators/landing-page-roi-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:28:47+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Landing Page ROI Calculator | Free Tool | artificial.one",
+      "url": "https://artificial.one/calculators/landing-page-roi-calculator.html",
+      "path": "calculators/landing-page-roi-calculator.html",
+      "source_commit": "dc1ee954d8e6"
+    },
+    {
+      "id": "git:dc1ee954d8e6f3065548a598c815211ba1eb7d0f:M:ai-tool-finder.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:28:47+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one",
+      "url": "https://artificial.one/ai-tool-finder.html",
+      "path": "ai-tool-finder.html",
+      "source_commit": "dc1ee954d8e6"
+    },
+    {
+      "id": "git:dc1ee954d8e6f3065548a598c815211ba1eb7d0f:M:ai-stack-builder.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:28:47+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one",
+      "url": "https://artificial.one/ai-stack-builder.html",
+      "path": "ai-stack-builder.html",
+      "source_commit": "dc1ee954d8e6"
+    },
     {
       "id": "git:c46c2a4ba7a046d21e5ec832a54529ec4d0b90b3:news_items_added",
       "date": "2026-09-23",
