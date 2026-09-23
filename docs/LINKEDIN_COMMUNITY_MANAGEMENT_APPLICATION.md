@@ -1,6 +1,24 @@
-# LinkedIn Community Management access preparation
+# LinkedIn Community Management access application
 
 This document is the application packet and implementation boundary for Artificial.One. It reflects LinkedIn’s official requirements as reviewed on September 23, 2026.
+
+## Current status
+
+The Development-tier application was submitted to LinkedIn on September 23, 2026.
+
+- Dedicated app: `Artificial One Community Desk`
+- LinkedIn app ID: `264917313`
+- LinkedIn client ID: `77hk0kplcg1l6i`
+- Associated organization: Artificial.One (`urn:li:organization:145231312`)
+- Company association: verified September 23, 2026
+- Business email: `hello@artificial.one` (verified during the access-request flow)
+- Privacy policy: <https://artificial.one/privacy.html>
+- Requested tier: Community Management API — Development
+- Submitted primary use case: Direct Advertiser — owned and operated LinkedIn activity only
+- Submitted capabilities: Page management and Page analytics
+- Review state: pending LinkedIn and Microsoft Vetting Services verification
+
+LinkedIn’s submission receipt says Microsoft Vetting Services will contact the business email. LinkedIn may request supporting registration documents, and the decision will be delivered by email.
 
 ## Intended commercial use case
 
@@ -37,13 +55,14 @@ Member-feed read access is deliberately excluded from the initial request becaus
 - Encrypted token storage in GitHub Actions and public-safe delivery receipts containing no access tokens.
 - A data-minimization rule: no general-feed scraping, automated connections, unsolicited messages, or sale of LinkedIn member data.
 
-## Remaining prerequisites that require the account owner
+## Completed prerequisites
 
-LinkedIn makes Community Management available only to registered legal organizations for commercial use. Before an application can credibly pass Development-tier review, the owner must provide or complete:
+LinkedIn makes Community Management available only to registered legal organizations for commercial use. The following prerequisites were completed on September 23, 2026:
 
-1. Add the applying Artificial One member as a super admin of the new official Company Page; the established Marek Eckhaus account currently administers it and mareke solutions s.r.o. is the legal operator.
-2. Verify the Company Page against a new, dedicated developer application.
-3. Verify `hello@artificial.one` as the business email and `artificial.one` as the organization’s domain.
+1. The applying member administers the official Artificial.One Company Page; mareke solutions s.r.o. is the legal operator.
+2. The Company Page was verified against the new, dedicated `Artificial One Community Desk` developer application.
+3. `hello@artificial.one` was verified as the business email, and the application uses `artificial.one` as the organization website.
+4. The access-request form was submitted with the registered organization name and Prague address.
 
 The current standalone publishing application should remain untouched. LinkedIn’s guidance says the Community Management request should use a new application without other API products, so the new Page-management app must be separate.
 
