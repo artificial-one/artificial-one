@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-23T23:28:47+02:00
+**Latest recorded activity:** 2026-09-23T23:45:27+02:00
 
 ## Daily productive system
 
@@ -30,6 +30,19 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 
 ### 2026-09-23
 
+- **23:45** — Added 10 new AI-news items to the live briefing.
+  - Enveda secures $311M to bring more nature-derived AI drugs into clinical trials
+  - Meta’s AI agent is a cute little guy who’s great at spending my money
+  - ChatGPT Voice gets closer to "Her" with email, calendar, and Slack access
+  - Google's new Flash TTS models let you design AI voices from scratch using text descriptions
+  - Anthropic’s biolab made a discovery it’s comparing to Crispr
+  - ChatGPT mobile app gets voice-based agentic features
+  - Airbnb widens access to GPT-6 Astra and OpenAI frontier models
+  - Building AI to accelerate science and improve lives
+  - AI for everyone in every language
+  - New insights from Google’s AI & Economy ATLAS
+- **23:45** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **23:45** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
 - **23:28** — Created or refreshed 7 social-media creative assets.
   - images/social-cards/adcreative.jpg
   - images/social-cards/daily-editorial-vertical.jpg

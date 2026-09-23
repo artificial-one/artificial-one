@@ -2,9 +2,49 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-23T23:28:47+02:00",
+  "last_activity_at": "2026-09-23T23:45:27+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:c3d34f816a491592fba9f32231d4ab830cdc5881:news_items_added",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:45:27+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 10 new AI-news items to the live briefing.",
+      "details": [
+        "Enveda secures $311M to bring more nature-derived AI drugs into clinical trials",
+        "Meta’s AI agent is a cute little guy who’s great at spending my money",
+        "ChatGPT Voice gets closer to \"Her\" with email, calendar, and Slack access",
+        "Google's new Flash TTS models let you design AI voices from scratch using text descriptions",
+        "Anthropic’s biolab made a discovery it’s comparing to Crispr",
+        "ChatGPT mobile app gets voice-based agentic features",
+        "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
+        "Building AI to accelerate science and improve lives",
+        "AI for everyone in every language",
+        "New insights from Google’s AI & Economy ATLAS"
+      ],
+      "source_commit": "c3d34f816a49"
+    },
+    {
+      "id": "git:c3d34f816a491592fba9f32231d4ab830cdc5881:M:news.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:45:27+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "c3d34f816a49"
+    },
+    {
+      "id": "git:c3d34f816a491592fba9f32231d4ab830cdc5881:M:index.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T23:45:27+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "c3d34f816a49"
+    },
     {
       "id": "git:dc1ee954d8e6f3065548a598c815211ba1eb7d0f:social_creatives",
       "date": "2026-09-23",
