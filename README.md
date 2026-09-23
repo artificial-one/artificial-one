@@ -17,6 +17,12 @@ Current offer state (2026-09-14): Volza and Descript are published as verified p
 - `data/partner_offers.json` – public offer registry
 - `scripts/build_partner_offers.py` – offer validation and static page builder
 - `assets/affiliate-tracking.js` – privacy-conscious click event adapter
+- `ask-elephant.html` – browser-private conversational tool decision assistant
+- `ai-stack-studio.html` – cost, overlap, export and sharing workspace
+- `workflow-recipes/` – outcome-led implementation recipes with matched tools
+- `ai-tool-observatory.html` – confirmed change radar and double-opt-in watchlists
+- `api/tool-catalog.js` – cached, privacy-safe catalogue and change API
+- `scripts/build_elephant_experience.py` – self-renewing Elephant experience builder
 - `Claude/` – experimental n8n content automation package
 
 ## Partner offer workflow
