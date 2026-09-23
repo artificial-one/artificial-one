@@ -82,6 +82,40 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertEqual(record["reply"]["parent"], parent)
         self.assertEqual(record["text"], "Useful context")
 
+    def test_linkedin_post_is_visual_attributed_and_professional(self):
+        item = distribution.channel_item(distribution.queue()[0], "linkedin")
+        commentary = distribution.linkedin_commentary(item)
+        self.assertIn("utm_source=linkedin", commentary)
+        self.assertIn("#AITools", commentary)
+        self.assertLessEqual(len(commentary), 3000)
+
+    def test_configured_linkedin_author_avoids_profile_lookup(self):
+        self.assertEqual(
+            distribution.linkedin_author_urn("token", "urn:li:person:123"),
+            "urn:li:person:123",
+        )
+
+    def test_new_linkedin_channel_does_not_inherit_legacy_sent_state(self):
+        legacy = {"version": 2, "sent": ["digest"], "sent_ids": ["daily-id"]}
+        self.assertEqual(distribution.channel_state(legacy, "bluesky")["sent_ids"], ["daily-id"])
+        self.assertEqual(distribution.channel_state(legacy, "linkedin")["sent_ids"], [])
+
+    def test_linkedin_receipt_is_written_only_after_success(self):
+        item = distribution.channel_item(distribution.queue(date(2026, 9, 15))[0], "linkedin")
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "receipts.json"
+            distribution.append_receipt(path, "linkedin", item, {
+                "urn": "urn:li:share:123",
+                "url": "https://www.linkedin.com/feed/update/urn:li:share:123/",
+            })
+            distribution.append_receipt(path, "linkedin", item, {
+                "urn": "urn:li:share:123",
+                "url": "https://www.linkedin.com/feed/update/urn:li:share:123/",
+            })
+            receipts = distribution.load(path)["receipts"]
+        self.assertEqual(len(receipts), 1)
+        self.assertEqual(receipts[0]["platform"], "linkedin")
+
     def test_friday_editorial_routes_to_checked_appsumo_pulse(self):
         original = distribution.OFFER_ALERTS_PATH
         with tempfile.TemporaryDirectory() as folder:
@@ -145,6 +179,51 @@ class RevenueAccelerationTests(unittest.TestCase):
                 else:
                     os.environ[key] = value
 
+    def test_channels_are_idempotent_independently(self):
+        original_linkedin = distribution.post_linkedin
+        original_webhook = distribution.post_webhook
+        original_ping = distribution.ping_websub
+        original_receipts = distribution.RECEIPTS_PATH
+        keys = (
+            "DISTRIBUTION_SEND_ENABLED", "DISTRIBUTION_WEBHOOK_URL",
+            "LINKEDIN_ACCESS_TOKEN", "LINKEDIN_AUTHOR_URN",
+        )
+        original = {key: os.environ.get(key) for key in keys}
+        delivered = []
+        try:
+            os.environ["DISTRIBUTION_SEND_ENABLED"] = "true"
+            os.environ["DISTRIBUTION_WEBHOOK_URL"] = "https://example.test/hook"
+            os.environ.pop("LINKEDIN_ACCESS_TOKEN", None)
+            os.environ.pop("LINKEDIN_AUTHOR_URN", None)
+            distribution.post_webhook = lambda _url, _item: delivered.append("syndication")
+            distribution.post_linkedin = lambda _token, _author, _item: delivered.append("linkedin") or {
+                "urn": "urn:li:share:123",
+                "url": "https://www.linkedin.com/feed/update/urn:li:share:123/",
+            }
+            distribution.ping_websub = lambda: "WebSub notified"
+            with tempfile.TemporaryDirectory() as folder:
+                state_path = Path(folder) / "state.json"
+                distribution.RECEIPTS_PATH = Path(folder) / "receipts.json"
+                distribution.run(state_path, date(2026, 9, 15))
+                os.environ["LINKEDIN_ACCESS_TOKEN"] = "token"
+                os.environ["LINKEDIN_AUTHOR_URN"] = "urn:li:person:123"
+                distribution.run(state_path, date(2026, 9, 15))
+                distribution.run(state_path, date(2026, 9, 15))
+                state = distribution.load(state_path)
+            self.assertEqual(delivered, ["syndication", "linkedin"])
+            self.assertEqual(len(state["channels"]["syndication"]["sent_ids"]), 1)
+            self.assertEqual(len(state["channels"]["linkedin"]["sent_ids"]), 1)
+        finally:
+            distribution.post_linkedin = original_linkedin
+            distribution.post_webhook = original_webhook
+            distribution.ping_websub = original_ping
+            distribution.RECEIPTS_PATH = original_receipts
+            for key, value in original.items():
+                if value is None:
+                    os.environ.pop(key, None)
+                else:
+                    os.environ[key] = value
+
     def test_duplicate_cleanup_marks_item_sent_without_publishing(self):
         original_delete = distribution.delete_bluesky_post
         original_ping = distribution.ping_websub
@@ -168,7 +247,7 @@ class RevenueAccelerationTests(unittest.TestCase):
                 state = distribution.load(state_path)
             self.assertEqual(deleted, ["duplicate-rkey"])
             self.assertIn("marked ai-stack-builder as distributed", status)
-            self.assertEqual(len(state["sent"]), 1)
+            self.assertEqual(len(state["channels"]["bluesky"]["sent"]), 1)
         finally:
             distribution.delete_bluesky_post = original_delete
             distribution.ping_websub = original_ping

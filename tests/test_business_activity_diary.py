@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+import tempfile
 import unittest
 
 from scripts import build_business_activity_diary as diary
@@ -32,6 +35,24 @@ class BusinessActivityDiaryTests(unittest.TestCase):
         self.assertIn("Beehiiv newsletter delivery", rendered)
         self.assertIn("Excluded noise", rendered)
         self.assertNotIn("unit tests passed", rendered)
+
+    def test_linkedin_receipt_becomes_confirmed_business_activity(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "data"
+            path.mkdir()
+            (path / "distribution_receipts.json").write_text(json.dumps({
+                "receipts": [{
+                    "id": "linkedin:urn:li:share:123",
+                    "platform": "linkedin",
+                    "title": "AI tool guide",
+                    "published_at": "2026-09-23T10:00:00Z",
+                    "url": "https://www.linkedin.com/feed/update/urn:li:share:123/",
+                }]
+            }), encoding="utf-8")
+            events = diary.receipt_events(Path(folder))
+        self.assertEqual(len(events), 1)
+        self.assertIn("Published LinkedIn post", events[0]["summary"])
+        self.assertEqual(events[0]["url"], "https://www.linkedin.com/feed/update/urn:li:share:123/")
 
 
 if __name__ == "__main__":

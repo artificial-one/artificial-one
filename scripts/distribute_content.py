@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 
@@ -25,6 +25,7 @@ OFFER_ALERTS_PATH = ROOT / "data" / "offer_change_alerts.json"
 APPSUMO_PATH = ROOT / "data" / "appsumo_offers.json"
 FEED_PATH = ROOT / "feed.xml"
 QUEUE_PATH = ROOT / "data" / "distribution_queue.json"
+RECEIPTS_PATH = ROOT / "data" / "distribution_receipts.json"
 FEED_URL = "https://artificial.one/feed.xml"
 WEBSUB_HUB = "https://pubsubhubbub.appspot.com/"
 SOCIAL_IMAGE_DIR = ROOT / "images" / "social-cards"
@@ -285,6 +286,156 @@ def request_json(url: str, *, data: dict[str, Any] | None = None, headers: dict[
     return value if isinstance(value, dict) else {}
 
 
+def linkedin_headers(access_token: str) -> dict[str, str]:
+    return {
+        "Authorization": f"Bearer {access_token}",
+        "X-Restli-Protocol-Version": "2.0.0",
+        "Content-Type": "application/json",
+    }
+
+
+def linkedin_author_urn(access_token: str, configured: str = "") -> str:
+    if configured:
+        return configured
+    profile = request_json(
+        "https://api.linkedin.com/v2/userinfo",
+        headers={"Authorization": f"Bearer {access_token}", "Accept": "application/json"},
+    )
+    member_id = str(profile.get("sub") or "").strip()
+    if not member_id:
+        raise ValueError("LinkedIn OpenID profile did not return a member identifier")
+    return f"urn:li:person:{member_id}"
+
+
+def linkedin_commentary(item: dict[str, Any]) -> str:
+    """Turn a compact social item into a useful professional-network post."""
+    lead = str(item.get("text") or item.get("description") or item["title"]).strip()
+    context = str(item.get("description") or "").strip()
+    paragraphs = [lead]
+    if context and context.casefold() not in lead.casefold():
+        paragraphs.append(context)
+    paragraphs.extend([
+        f"Explore the guide: {item['url']}",
+        "#ArtificialIntelligence #AITools #BusinessAutomation",
+    ])
+    return "\n\n".join(paragraphs)[:3000]
+
+
+def register_linkedin_image(access_token: str, author_urn: str) -> tuple[str, str]:
+    payload = {
+        "registerUploadRequest": {
+            "recipes": ["urn:li:digitalmediaRecipe:feedshare-image"],
+            "owner": author_urn,
+            "serviceRelationships": [{
+                "relationshipType": "OWNER",
+                "identifier": "urn:li:userGeneratedContent",
+            }],
+        }
+    }
+    response = request_json(
+        "https://api.linkedin.com/v2/assets?action=registerUpload",
+        data=payload,
+        headers=linkedin_headers(access_token),
+    )
+    value = response["value"]
+    mechanism = value["uploadMechanism"]["com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest"]
+    return str(value["asset"]), str(mechanism["uploadUrl"])
+
+
+def upload_linkedin_image(upload_url: str, image_path: Path) -> None:
+    request = Request(
+        upload_url,
+        data=image_path.read_bytes(),
+        headers={"Content-Type": mimetypes.guess_type(image_path.name)[0] or "image/jpeg"},
+        method="PUT",
+    )
+    with urlopen(request, timeout=60):
+        pass
+
+
+def create_linkedin_post(access_token: str, payload: dict[str, Any]) -> str:
+    request = Request(
+        "https://api.linkedin.com/v2/ugcPosts",
+        data=json.dumps(payload).encode("utf-8"),
+        headers=linkedin_headers(access_token),
+        method="POST",
+    )
+    with urlopen(request, timeout=30) as response:
+        post_urn = response.headers.get("X-RestLi-Id") or response.headers.get("x-restli-id")
+    if not post_urn:
+        raise ValueError("LinkedIn accepted the post but did not return its identifier")
+    return str(post_urn)
+
+
+def linkedin_post_url(post_urn: str) -> str:
+    return f"https://www.linkedin.com/feed/update/{post_urn}/"
+
+
+def post_linkedin(access_token: str, author_urn: str, item: dict[str, Any]) -> dict[str, str]:
+    author_urn = linkedin_author_urn(access_token, author_urn)
+    image_path = ROOT / item["image"].split("https://artificial.one/", 1)[-1]
+    if not image_path.exists():
+        raise FileNotFoundError(f"Social card is missing: {image_path}")
+    asset_urn, upload_url = register_linkedin_image(access_token, author_urn)
+    upload_linkedin_image(upload_url, image_path)
+    payload = {
+        "author": author_urn,
+        "lifecycleState": "PUBLISHED",
+        "specificContent": {
+            "com.linkedin.ugc.ShareContent": {
+                "shareCommentary": {"text": linkedin_commentary(item)},
+                "shareMediaCategory": "IMAGE",
+                "media": [{
+                    "status": "READY",
+                    "description": {"text": str(item["description"])[:200]},
+                    "media": asset_urn,
+                    "title": {"text": str(item["title"])[:200]},
+                }],
+            }
+        },
+        "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"},
+    }
+    post_urn = create_linkedin_post(access_token, payload)
+    return {"urn": post_urn, "url": linkedin_post_url(post_urn)}
+
+
+def append_receipt(path: Path, platform: str, item: dict[str, Any], result: dict[str, str]) -> None:
+    try:
+        payload = load(path)
+    except (OSError, json.JSONDecodeError):
+        payload = {"version": 1, "receipts": []}
+    receipts = list(payload.get("receipts") or [])
+    receipt_id = f"{platform}:{result['urn']}"
+    if not any(candidate.get("id") == receipt_id for candidate in receipts if isinstance(candidate, dict)):
+        receipts.append({
+            "id": receipt_id,
+            "platform": platform,
+            "item_id": item["id"],
+            "title": item["title"],
+            "published_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            "url": result["url"],
+        })
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({"version": 1, "receipts": receipts[-1000:]}, indent=2) + "\n", encoding="utf-8")
+
+
+def linkedin_token_warning(expires_at: str) -> str:
+    if not expires_at:
+        return ""
+    try:
+        expiry = datetime.fromisoformat(expires_at.replace("Z", "+00:00"))
+        if expiry.tzinfo is None:
+            expiry = expiry.replace(tzinfo=timezone.utc)
+    except ValueError:
+        return "LinkedIn token expiry setting is invalid"
+    days = (expiry - datetime.now(timezone.utc)).total_seconds() / 86400
+    if days <= 0:
+        return "LinkedIn access token has expired; reconnect LinkedIn"
+    if days <= 14:
+        return f"LinkedIn access token expires in {max(1, int(days))} day(s); reconnect it now"
+    return ""
+
+
 def upload_bluesky_blob(access_token: str, path: Path) -> dict[str, Any]:
     mime_type = mimetypes.guess_type(path.name)[0] or "image/jpeg"
     request = Request(
@@ -448,6 +599,32 @@ def channel_item(item: dict[str, Any], source: str) -> dict[str, Any]:
     }
 
 
+def channel_state(state: dict[str, Any], channel: str) -> dict[str, list[str]]:
+    channels = state.setdefault("channels", {})
+    if channel in channels:
+        return channels[channel]
+    # Version 2 used one global state. It represented the channels that existed
+    # then (Bluesky and the generic webhook), but must not suppress a newly
+    # connected LinkedIn channel.
+    inherited = channel in {"bluesky", "syndication"}
+    channels[channel] = {
+        "sent": list(state.get("sent", [])) if inherited else [],
+        "sent_ids": list(state.get("sent_ids", [])) if inherited else [],
+    }
+    return channels[channel]
+
+
+def save_distribution_state(path: Path, state: dict[str, Any]) -> None:
+    channels = {}
+    for name, value in dict(state.get("channels") or {}).items():
+        channels[name] = {
+            "sent": list(value.get("sent") or [])[-400:],
+            "sent_ids": list(value.get("sent_ids") or [])[-400:],
+        }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({"version": 3, "channels": channels}, indent=2) + "\n", encoding="utf-8")
+
+
 def run(state_path: Path, as_of: date | None = None) -> str:
     items = queue(as_of)
     write_public_outputs(items)
@@ -455,16 +632,17 @@ def run(state_path: Path, as_of: date | None = None) -> str:
     flag = (os.environ.get("DISTRIBUTION_SEND_ENABLED") or "").casefold()
     handle = (os.environ.get("BLUESKY_HANDLE") or "").strip()
     password = (os.environ.get("BLUESKY_APP_PASSWORD") or "").strip()
+    linkedin_token = (os.environ.get("LINKEDIN_ACCESS_TOKEN") or "").strip()
+    linkedin_author = (os.environ.get("LINKEDIN_AUTHOR_URN") or "").strip()
+    linkedin_expiry = (os.environ.get("LINKEDIN_TOKEN_EXPIRES_AT") or "").strip()
     webhook = (os.environ.get("DISTRIBUTION_WEBHOOK_URL") or "").strip()
     delete_rkey = (os.environ.get("BLUESKY_DELETE_RKEY") or "").strip()
     mark_sent_id = (os.environ.get("BLUESKY_MARK_SENT_ID") or "").strip()
-    connected = bool((handle and password) or webhook)
+    connected = bool((handle and password) or linkedin_token or webhook)
     try:
         state = load(state_path)
     except (OSError, json.JSONDecodeError):
-        state = {"version": 1, "sent": []}
-    sent = list(state.get("sent", []))
-    sent_ids = list(state.get("sent_ids", []))
+        state = {"version": 3, "channels": {}}
     maintenance_notes: list[str] = []
     state_changed = False
     if delete_rkey and handle and password:
@@ -472,14 +650,18 @@ def run(state_path: Path, as_of: date | None = None) -> str:
     if mark_sent_id:
         marked_item = next((candidate for candidate in items if candidate["id"] == mark_sent_id), None)
         if marked_item:
+            bluesky_state = channel_state(state, "bluesky")
             digest = sha256(marked_item["text"].encode()).hexdigest()
-            if digest not in sent:
-                sent.append(digest)
+            if digest not in bluesky_state["sent"]:
+                bluesky_state["sent"].append(digest)
+                bluesky_state["sent_ids"].append(marked_item["id"])
                 state_changed = True
                 maintenance_notes.append(f"marked {mark_sent_id} as distributed")
     if state_changed:
-        state_path.parent.mkdir(parents=True, exist_ok=True)
-        state_path.write_text(json.dumps({"version": 2, "sent": sent[-400:], "sent_ids": sent_ids[-400:]}, indent=2) + "\n", encoding="utf-8")
+        save_distribution_state(state_path, state)
+    token_warning = linkedin_token_warning(linkedin_expiry)
+    if token_warning:
+        print(f"::warning::{token_warning}")
     maintenance = f"; {'; '.join(maintenance_notes)}" if maintenance_notes else ""
     if not items or flag == "false" or (flag != "true" and not connected):
         return f"RSS and distribution queue refreshed; {websub_status}; social posting is waiting for a connected channel{maintenance}"
@@ -487,26 +669,49 @@ def run(state_path: Path, as_of: date | None = None) -> str:
     # remain in RSS as discovery inventory, preventing deployment or retries from
     # draining several posts on the same day.
     item = next((candidate for candidate in items if candidate.get("daily") == "true"), None)
-    if item and (item["id"] in sent_ids or sha256(item["text"].encode()).hexdigest() in sent):
-        item = None
     if not item:
-        return f"RSS refreshed; {websub_status}; today's editorial post was already distributed"
+        return f"RSS refreshed; {websub_status}; no daily editorial is available"
+    digest = sha256(item["text"].encode()).hexdigest()
     delivered = 0
-    delivery_notes = []
-    if handle and password:
-        delivery_notes.append(post_bluesky(handle, password, channel_item(item, "bluesky")))
-        delivered += 1
-    if webhook:
-        post_webhook(webhook, channel_item(item, "syndication"))
-        delivered += 1
+    delivery_notes: list[str] = []
+    failures: list[str] = []
+    channels: list[tuple[str, bool, Any]] = [
+        ("bluesky", bool(handle and password), lambda: post_bluesky(handle, password, channel_item(item, "bluesky"))),
+        ("linkedin", bool(linkedin_token), lambda: post_linkedin(linkedin_token, linkedin_author, channel_item(item, "linkedin"))),
+        ("syndication", bool(webhook), lambda: post_webhook(webhook, channel_item(item, "syndication"))),
+    ]
+    already_sent = 0
+    for name, enabled, publish in channels:
+        if not enabled:
+            continue
+        progress = channel_state(state, name)
+        if item["id"] in progress["sent_ids"] or digest in progress["sent"]:
+            already_sent += 1
+            continue
+        try:
+            result = publish()
+            if name == "linkedin":
+                append_receipt(RECEIPTS_PATH, name, item, result)
+                delivery_notes.append(f"LinkedIn image post published ({result['url']})")
+            elif result:
+                delivery_notes.append(str(result))
+            progress["sent"].append(digest)
+            progress["sent_ids"].append(item["id"])
+            save_distribution_state(state_path, state)
+            delivered += 1
+        except (HTTPError, URLError, TimeoutError, OSError, KeyError, ValueError) as exc:
+            failures.append(f"{name}: {type(exc).__name__}")
     if not delivered:
+        if already_sent and not failures:
+            return f"RSS refreshed; {websub_status}; today's editorial post was already distributed to every connected channel"
+        if failures:
+            raise RuntimeError("Social delivery failed without marking the item sent: " + ", ".join(failures))
         return f"RSS refreshed; {websub_status}; no external distribution account is connected"
-    sent.append(sha256(item["text"].encode()).hexdigest())
-    sent_ids.append(item["id"])
-    state_path.parent.mkdir(parents=True, exist_ok=True)
-    state_path.write_text(json.dumps({"version": 2, "sent": sent[-400:], "sent_ids": sent_ids[-400:]}, indent=2) + "\n", encoding="utf-8")
     detail = f"; {'; '.join(delivery_notes)}" if delivery_notes else ""
-    return f"{websub_status}; distributed one guide through {delivered} connected channel(s){detail}{maintenance}"
+    failure_note = f"; delivery failures: {', '.join(failures)}" if failures else ""
+    if failures:
+        print(f"::warning::Some social channels failed and remain eligible for retry: {', '.join(failures)}")
+    return f"{websub_status}; distributed one guide through {delivered} connected channel(s){detail}{failure_note}{maintenance}"
 
 
 if __name__ == "__main__":

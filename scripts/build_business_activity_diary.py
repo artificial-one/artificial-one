@@ -29,6 +29,7 @@ DOCUMENT_PATH = ROOT / "docs" / "AUTOMATED_BUSINESS_DIARY.md"
 TIMEZONE = ZoneInfo("Europe/Prague")
 DEFAULT_SINCE = "2026-09-15"
 DEFAULT_BLUESKY_HANDLE = "artificial-one.bsky.social"
+RECEIPTS_PATH = ROOT / "data" / "distribution_receipts.json"
 BOT_MARKERS = ("github-actions[bot]", "41898282+github-actions[bot]")
 INTERNAL_HTML = {"partner-opportunities.html"}
 SPECIAL_PUBLIC_HTML = {"newsletter/latest.html"}
@@ -222,6 +223,26 @@ def bluesky_events(handle: str) -> list[dict[str, Any]]:
     return result
 
 
+def receipt_events(root: Path) -> list[dict[str, Any]]:
+    """Load public-safe delivery receipts written only after API success."""
+    try:
+        payload = json.loads((root / RECEIPTS_PATH.relative_to(ROOT)).read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+    result: list[dict[str, Any]] = []
+    for receipt in payload.get("receipts", []):
+        if not isinstance(receipt, dict) or not receipt.get("id") or not receipt.get("published_at"):
+            continue
+        platform_key = str(receipt.get("platform") or "social network").casefold()
+        platform = "LinkedIn" if platform_key == "linkedin" else platform_key.title()
+        result.append(event(
+            str(receipt["id"]), str(receipt["published_at"]), "social_post_published",
+            f"Published {platform} post: {receipt.get('title') or receipt.get('item_id') or 'Artificial.One guide'}",
+            url=receipt.get("url"),
+        ))
+    return result
+
+
 def load_existing(path: Path) -> dict[str, Any]:
     try:
         value = json.loads(path.read_text(encoding="utf-8"))
@@ -254,12 +275,12 @@ def render_markdown(payload: dict[str, Any]) -> str:
         "- **Affiliate opportunity discovery — 05:41 UTC daily:** finds new programs, reviews public policy signals, and automatically publishes offers only when an approved partnership and usable tracking link already exist.",
         "- **Search growth — 06:11 UTC daily:** creates or refreshes commercial-intent pages and applies guarded search improvements based on Search Console demand.",
         "- **Affiliate-network and AppSumo monitoring — 07:23 UTC daily:** imports new monetizable AppSumo assets, refreshes availability, creates missing Impact links where authorized, and updates corresponding pages.",
-        "- **Revenue optimization and distribution — 08:13 UTC daily:** ranks offers, improves conversion routes, refreshes decision tools and creatives, publishes one confirmed Bluesky item, and updates RSS and the web newsletter.",
+        "- **Revenue optimization and distribution — 08:13 UTC daily:** ranks offers, improves conversion routes, refreshes decision tools and creatives, publishes one confirmed item to each connected social channel, and updates RSS and the web newsletter.",
         "- **Business diary — after productive workflows plus a 23:55 UTC fallback:** records the verified outcomes below.",
         "",
         "### Connected versus prepared channels",
         "",
-        "- **Active:** website publishing, PartnerStack, Impact/AppSumo, Awin, Bluesky, RSS, IndexNow, Search Console analysis, private email monitoring.",
+        "- **Active:** website publishing, PartnerStack, Impact/AppSumo, Awin, Bluesky, LinkedIn, RSS, IndexNow, Search Console analysis, private email monitoring.",
         "- **Prepared but not currently sending:** Beehiiv newsletter delivery (credentials absent) and Google paid advertising (live controls absent). The generated web newsletter and paid-campaign plan are recorded only as website/planning assets, never as sent campaigns.",
         "",
         "## Diary",
@@ -282,7 +303,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
     lines.extend([
         "## Audit boundaries",
         "",
-        "Included evidence: GitHub Actions bot commits that changed public business assets, structured additions to public offer/news/change inventories, and posts confirmed through Bluesky’s public feed.",
+        "Included evidence: GitHub Actions bot commits that changed public business assets, structured additions to public offer/news/change inventories, posts confirmed through Bluesky’s public feed, and LinkedIn receipts written only after LinkedIn accepted a post.",
         "",
         "Excluded noise: workflow starts/completions, unit tests, syntax checks, validation passes, dependency setup, cache operations, private monitoring totals, and code-only maintenance. Search submission is represented through the resulting discoverable content rather than as a technical job event.",
         "",
@@ -300,6 +321,8 @@ def build(root: Path, since: str, handle: str, fetch_social: bool = True) -> dic
     if fetch_social:
         for item in bluesky_events(handle):
             preserved_social[item["id"]] = item
+    for item in receipt_events(root):
+        preserved_social[item["id"]] = item
     entries.extend(preserved_social.values())
     deduped = {item["id"]: item for item in entries}
     ordered = sorted(deduped.values(), key=lambda item: (item["occurred_at"], item["id"]), reverse=True)
@@ -308,7 +331,7 @@ def build(root: Path, since: str, handle: str, fetch_social: bool = True) -> dic
         "history_begins": since,
         "timezone": "Europe/Prague",
         "last_activity_at": ordered[0]["occurred_at"] if ordered else None,
-        "method": "GitHub Actions publication commits plus confirmed public Bluesky posts",
+        "method": "GitHub Actions publication commits plus confirmed social-network posts",
         "entries": ordered,
     }
     data_path = root / DATA_PATH.relative_to(ROOT)
