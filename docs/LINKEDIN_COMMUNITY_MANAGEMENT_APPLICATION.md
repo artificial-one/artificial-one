@@ -25,6 +25,9 @@ Member-feed read access is deliberately excluded from the initial request becaus
 
 ## Assets already prepared
 
+- Registered legal organization: `mareke solutions s.r.o.`
+- Czech company number (IČO): `29415675`
+- Registered address: `Korunní 2569/108b, Vinohrady, 101 00 Praha 10, Czech Republic`
 - Public product website: <https://artificial.one/>
 - Public privacy policy: <https://artificial.one/privacy.html>
 - Business contact address: `hello@artificial.one`
@@ -33,20 +36,21 @@ Member-feed read access is deliberately excluded from the initial request becaus
 - Encrypted token storage in GitHub Actions and public-safe delivery receipts containing no access tokens.
 - A data-minimization rule: no general-feed scraping, automated connections, unsolicited messages, or sale of LinkedIn member data.
 
-## Prerequisites that require the account owner
+## Remaining prerequisites that require the account owner
 
 LinkedIn makes Community Management available only to registered legal organizations for commercial use. Before an application can credibly pass Development-tier review, the owner must provide or complete:
 
-1. The organization’s exact registered legal name and registered address.
-2. An official Artificial.One LinkedIn Company Page, with the applying member as its super admin.
-3. Company Page verification of a new, dedicated developer application.
-4. Verification of `hello@artificial.one` as the business email and `artificial.one` as the organization’s domain.
+1. An official Artificial.One LinkedIn Company Page, with the applying member as its super admin and mareke solutions s.r.o. identified as the legal operator.
+2. Company Page verification of a new, dedicated developer application.
+3. Verification of `hello@artificial.one` as the business email and `artificial.one` as the organization’s domain.
 
 The current standalone publishing application should remain untouched. LinkedIn’s guidance says the Community Management request should use a new application without other API products, so the new Page-management app must be separate.
 
 ## Development-tier application answers
 
-**Product description:** Artificial.One Community Desk is the private management interface used by Artificial.One to publish original Page content, review inbound engagement on its own posts and respond to those conversations through LinkedIn’s official APIs.
+**Legal organization:** mareke solutions s.r.o., IČO 29415675, Korunní 2569/108b, Vinohrady, 101 00 Praha 10, Czech Republic.
+
+**Product description:** Artificial.One Community Desk is the private management interface operated by mareke solutions s.r.o. to publish original Artificial.One Page content, review inbound engagement on its own posts and respond to those conversations through LinkedIn’s official APIs.
 
 **Customers/users:** Initially the internal Artificial.One operator only. It is not offered as a multi-tenant social-media automation product.
 
