@@ -2,9 +2,42 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-23T13:31:32+02:00",
+  "last_activity_at": "2026-09-23T14:05:14+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:869936872ece6647597ca75b7f65de3a7403c023:news_items_added",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T14:05:14+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 3 new AI-news items to the live briefing.",
+      "details": [
+        "OpenAI nabs key Patreon execs ahead of upcoming announcement",
+        "OpenAI hires Patreon co-founder Sam Yam to lead a new Creator Product division",
+        "Grab and OpenAI bring practical AI skills to Southeast Asia"
+      ],
+      "source_commit": "869936872ece"
+    },
+    {
+      "id": "git:869936872ece6647597ca75b7f65de3a7403c023:M:news.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T14:05:14+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "869936872ece"
+    },
+    {
+      "id": "git:869936872ece6647597ca75b7f65de3a7403c023:M:index.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T14:05:14+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "869936872ece"
+    },
     {
       "id": "git:5bda4a7baa20abbb4c8d14da4c6040e51de6309d:M:index.html",
       "date": "2026-09-23",
