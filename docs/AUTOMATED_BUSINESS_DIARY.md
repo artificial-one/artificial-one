@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-23T17:11:13+02:00
+**Latest recorded activity:** 2026-09-23T19:26:34+02:00
 
 ## Daily productive system
 
@@ -30,6 +30,24 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 
 ### 2026-09-23
 
+- **19:26** — Added 15 new AI-news items to the live briefing.
+  - Ringg’s AI agents resolve up to 65% of customer calls with OpenAI
+  - Even Americans who use AI every day are worried about it
+  - YouTube adds AI tools to Creator Studio with script coaching, smart thumbnails, and Gemini editing
+  - Two years of OpenAI Academy
+  - YouTube Music gets more conversational with new AI features
+  - Anthropic engineer explains why Claude's writing got worse although the model got smarter
+  - Meta's AI agent Muse draws 500,000 users in a week along with claims it copied OpenClaw
+  - YouTube will let you build your own algorithm with AI
+  - YouTube releases new AI features for creators within its Studio app
+  - Inside Basecamp Research, the AI startup turning evolution into training data
+  - YouTube is building AI creator tools that do almost everything for them
+  - **Know Who Spoke When: Build Real-Time, Multi-Speaker AI with NVIDIA Nemotron 3 Diarization**
+  - OpenAI extends cyber access to Ukraine for civilian defense
+  - Alibaba launches Qwen Audio 3.1 with new models and slashes AI audio prices by up to 95 percent
+  - Ema raises $77M as AI starts eating into enterprise software and services
+- **19:26** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **19:26** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
 - **17:11** — [Published Bluesky post: Elephant trunk check: Carepatron review and pricing guide](https://bsky.app/profile/artificial-one.bsky.social/post/3mw6zmhbvsg2w)
 - **15:38** — Created or refreshed 23 social-media creative assets.
   - images/social-cards/adcreative.jpg
