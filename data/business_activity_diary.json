@@ -2,9 +2,201 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-23T01:01:01+02:00",
-  "method": "GitHub Actions publication commits plus confirmed public Bluesky posts",
+  "last_activity_at": "2026-09-23T02:46:39+02:00",
+  "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:social_creatives",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "social_creatives_updated",
+      "summary": "Created or refreshed 15 social-media creative assets.",
+      "details": [
+        "images/social-cards/alison-us-ca.jpg",
+        "images/social-cards/brkox.jpg",
+        "images/social-cards/carepatron.jpg",
+        "images/social-cards/daily-editorial-vertical.jpg",
+        "images/social-cards/daily-editorial.jpg",
+        "images/social-cards/easyclaw.jpg",
+        "images/social-cards/esign-sign-pdf-docx-documents-ios-only.jpg",
+        "images/social-cards/hubstaff.jpg",
+        "images/social-cards/lensmor.jpg",
+        "images/social-cards/mrpeasy.jpg",
+        "images/social-cards/omniseo.jpg",
+        "images/social-cards/quicksigner.jpg",
+        "images/social-cards/rewarx-studio-ai.jpg",
+        "images/social-cards/trainual.jpg",
+        "images/social-cards/turbotic.jpg"
+      ],
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:rss",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "distribution_updated",
+      "summary": "Published an updated RSS feed for content distribution.",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:newsletter",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "newsletter_edition_updated",
+      "summary": "Published a refreshed web newsletter edition (email sending is not currently connected).",
+      "url": "https://artificial.one/newsletter/latest.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: LearnWorlds for Launch a paid online course: Fit, Limits & Alternatives | artificial.one",
+      "url": "https://artificial.one/search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html",
+      "path": "search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:search-intent/learnworlds-course-platform-alternatives.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best LearnWorlds Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/learnworlds-course-platform-alternatives.html",
+      "path": "search-intent/learnworlds-course-platform-alternatives.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Foxit for Edit and convert PDF documents: Fit, Limits & Alternatives | artificial.one",
+      "url": "https://artificial.one/search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html",
+      "path": "search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:search-intent/foxit-pdf-software-alternatives.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Foxit Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/foxit-pdf-software-alternatives.html",
+      "path": "search-intent/foxit-pdf-software-alternatives.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:partner-offers/foxit-pdf-software.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Foxit: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/foxit-pdf-software.html",
+      "path": "partner-offers/foxit-pdf-software.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:partner-offers.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Verified AI Partner Offers | artificial.one",
+      "url": "https://artificial.one/partner-offers.html",
+      "path": "partner-offers.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:offer-updates.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Pricing and Plan Updates | artificial.one",
+      "url": "https://artificial.one/offer-updates.html",
+      "path": "offer-updates.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:calculators/pdf-workflow-cost-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: PDF Workflow Cost Calculator | Free Tool | artificial.one",
+      "url": "https://artificial.one/calculators/pdf-workflow-cost-calculator.html",
+      "path": "calculators/pdf-workflow-cost-calculator.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:buyers-guides.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Software Buying Guides and Calculators | artificial.one",
+      "url": "https://artificial.one/buyers-guides.html",
+      "path": "buyers-guides.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:ai-tool-finder.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one",
+      "url": "https://artificial.one/ai-tool-finder.html",
+      "path": "ai-tool-finder.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:ai-tool-database.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one",
+      "url": "https://artificial.one/ai-tool-database.html",
+      "path": "ai-tool-database.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:M:ai-stack-builder.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one",
+      "url": "https://artificial.one/ai-stack-builder.html",
+      "path": "ai-stack-builder.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:D:search-intent/learnworlds-course-platform-vs-trainual-team-training.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_retired",
+      "summary": "Retired webpage: LearnWorlds vs Trainual: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/learnworlds-course-platform-vs-trainual-team-training.html",
+      "path": "search-intent/learnworlds-course-platform-vs-trainual-team-training.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:A:search-intent/learnworlds-course-platform-vs-alison-us-ca-software.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: LearnWorlds vs Alison US CA: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/learnworlds-course-platform-vs-alison-us-ca-software.html",
+      "path": "search-intent/learnworlds-course-platform-vs-alison-us-ca-software.html",
+      "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:A:search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:39+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: Foxit vs eSign: Sign PDF DOCX Documents (iOS only): Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html",
+      "path": "search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html",
+      "source_commit": "782ccfc50c9a"
+    },
     {
       "id": "git:0a91bc1a7710453a50b941ab5b3f6ade4394891f:M:index.html",
       "date": "2026-09-23",
