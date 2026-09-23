@@ -39,65 +39,6 @@
       ]
     },
     {
-      "offer_id": "unbounce",
-      "name": "AO Generic Intent - Unbounce",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/unbounce-landing-pages.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-unbounce",
-      "keywords": [
-        "conversion optimization",
-        "build campaign landing pages",
-        "test page variants for conversion improvement"
-      ],
-      "negative_keywords": [
-        "Unbounce"
-      ]
-    },
-    {
-      "offer_id": "wegic",
-      "name": "AO Generic Intent - Wegic",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/wegic-ai-website-builder.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-wegic",
-      "keywords": [
-        "website building",
-        "launch a small business website",
-        "create a portfolio or campaign landing site"
-      ],
-      "negative_keywords": [
-        "Wegic"
-      ]
-    },
-    {
-      "offer_id": "whatconverts",
-      "name": "AO Generic Intent - WhatConverts",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/whatconverts-lead-attribution.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-whatconverts",
-      "keywords": [
-        "marketing analytics",
-        "attribute calls and forms to campaigns",
-        "report lead quality by traffic source"
-      ],
-      "negative_keywords": [
-        "WhatConverts"
-      ]
-    },
-    {
-      "offer_id": "beautiful-ai",
-      "name": "AO Generic Intent - Beautiful.ai",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/beautiful-ai-presentations.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-beautiful-ai",
-      "keywords": [
-        "draft sales and investor presentations",
-        "keep recurring team decks visually consistent"
-      ],
-      "negative_keywords": [
-        "Beautiful.ai"
-      ]
-    },
-    {
       "offer_id": "kartra",
       "name": "AO Generic Intent - Kartra",
       "eligible": false,
@@ -125,6 +66,66 @@
       ],
       "negative_keywords": [
         "Kit"
+      ]
+    },
+    {
+      "offer_id": "learnworlds",
+      "name": "AO Generic Intent - LearnWorlds",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/learnworlds-course-platform.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-learnworlds",
+      "keywords": [
+        "online learning",
+        "launch a paid online course",
+        "deliver branded customer or employee training"
+      ],
+      "negative_keywords": [
+        "LearnWorlds"
+      ]
+    },
+    {
+      "offer_id": "pinecone",
+      "name": "AO Generic Intent - Pinecone",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/pinecone-vector-database.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-pinecone",
+      "keywords": [
+        "developer infrastructure",
+        "build retrieval augmented generation",
+        "add semantic search to an application"
+      ],
+      "negative_keywords": [
+        "Pinecone"
+      ]
+    },
+    {
+      "offer_id": "rank-prompt",
+      "name": "AO Generic Intent - Rank Prompt",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/rank-prompt-ai-visibility.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-rank-prompt",
+      "keywords": [
+        "seo visibility",
+        "monitor brand mentions in ai answers",
+        "compare ai search visibility with competitors"
+      ],
+      "negative_keywords": [
+        "Rank Prompt"
+      ]
+    },
+    {
+      "offer_id": "seamless",
+      "name": "AO Generic Intent - Seamless.AI",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-seamless",
+      "keywords": [
+        "sales intelligence",
+        "build targeted b2b prospect lists",
+        "enrich sales contact records"
+      ],
+      "negative_keywords": [
+        "Seamless.AI"
       ]
     }
   ],
