@@ -82,6 +82,46 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertEqual(record["reply"]["parent"], parent)
         self.assertEqual(record["text"], "Useful context")
 
+    def test_bluesky_profile_refresh_replaces_avatar_but_keeps_banner(self):
+        original_avatar = distribution.PROFILE_AVATAR
+        original_request = distribution.request_json
+        original_upload = distribution.upload_bluesky_blob
+        calls = []
+        with tempfile.TemporaryDirectory() as folder:
+            avatar = Path(folder) / "artificial-one-logo.png"
+            avatar.write_bytes(b"new-logo")
+            distribution.PROFILE_AVATAR = avatar
+            distribution.request_json = lambda url, data=None, headers=None: (
+                {
+                    "cid": "old-cid",
+                    "value": {
+                        "$type": "app.bsky.actor.profile",
+                        "displayName": "Artificial.One",
+                        "description": distribution.PROFILE_DESCRIPTION,
+                        "avatar": {"ref": "old-avatar"},
+                        "banner": {"ref": "existing-banner"},
+                    },
+                }
+                if "getRecord" in url
+                else calls.append(data) or {}
+            )
+            distribution.upload_bluesky_blob = lambda _token, path: {"ref": path.name}
+            try:
+                changed = distribution.ensure_bluesky_profile(
+                    {"did": "did:example:artificial-one", "accessJwt": "token"},
+                    refresh=True,
+                )
+            finally:
+                distribution.PROFILE_AVATAR = original_avatar
+                distribution.request_json = original_request
+                distribution.upload_bluesky_blob = original_upload
+        self.assertTrue(changed)
+        self.assertEqual(calls[0]["record"]["avatar"], {"ref": "artificial-one-logo.png"})
+        self.assertEqual(calls[0]["record"]["banner"], {"ref": "existing-banner"})
+
+    def test_canonical_bluesky_avatar_uses_shared_brand_logo(self):
+        self.assertEqual(distribution.PROFILE_AVATAR.name, "artificial-one-logo.png")
+
     def test_linkedin_post_is_visual_attributed_and_professional(self):
         item = distribution.channel_item(distribution.queue()[0], "linkedin")
         commentary = distribution.linkedin_commentary(item)

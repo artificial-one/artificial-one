@@ -29,7 +29,7 @@ RECEIPTS_PATH = ROOT / "data" / "distribution_receipts.json"
 FEED_URL = "https://artificial.one/feed.xml"
 WEBSUB_HUB = "https://pubsubhubbub.appspot.com/"
 SOCIAL_IMAGE_DIR = ROOT / "images" / "social-cards"
-PROFILE_AVATAR = ROOT / "images" / "social" / "bluesky-avatar.png"
+PROFILE_AVATAR = ROOT / "images" / "social" / "artificial-one-logo.png"
 PROFILE_BANNER = ROOT / "images" / "social" / "bluesky-banner.jpg"
 PROFILE_DISPLAY_NAME = "Artificial.One"
 PROFILE_DESCRIPTION = (
@@ -505,7 +505,7 @@ def upload_bluesky_blob(access_token: str, path: Path) -> dict[str, Any]:
         return json.load(response)["blob"]
 
 
-def ensure_bluesky_profile(session: dict[str, Any]) -> bool:
+def ensure_bluesky_profile(session: dict[str, Any], refresh: bool = False) -> bool:
     query = urlencode({"repo": session["did"], "collection": "app.bsky.actor.profile", "rkey": "self"})
     try:
         current = request_json(
@@ -522,13 +522,13 @@ def ensure_bluesky_profile(session: dict[str, Any]) -> bool:
     value.setdefault("$type", "app.bsky.actor.profile")
     changed = False
     branding_missing = not value.get("avatar") or not value.get("banner")
-    if branding_missing and value.get("displayName") != PROFILE_DISPLAY_NAME:
+    if (refresh or branding_missing) and value.get("displayName") != PROFILE_DISPLAY_NAME:
         value["displayName"] = PROFILE_DISPLAY_NAME
         changed = True
-    if branding_missing and value.get("description") != PROFILE_DESCRIPTION:
+    if (refresh or branding_missing) and value.get("description") != PROFILE_DESCRIPTION:
         value["description"] = PROFILE_DESCRIPTION
         changed = True
-    if not value.get("avatar") and PROFILE_AVATAR.exists():
+    if (refresh or not value.get("avatar")) and PROFILE_AVATAR.exists():
         value["avatar"] = upload_bluesky_blob(session["accessJwt"], PROFILE_AVATAR)
         changed = True
     if not value.get("banner") and PROFILE_BANNER.exists():
@@ -551,6 +551,20 @@ def ensure_bluesky_profile(session: dict[str, Any]) -> bool:
         headers={"Authorization": f"Bearer {session['accessJwt']}"},
     )
     return True
+
+
+def refresh_bluesky_profile(handle: str, password: str) -> str:
+    """Force the public Bluesky identity to match the repository brand asset."""
+    if not handle or not password:
+        raise RuntimeError("BLUESKY_HANDLE and BLUESKY_APP_PASSWORD are required")
+    if not PROFILE_AVATAR.exists():
+        raise FileNotFoundError(f"Bluesky profile logo is missing: {PROFILE_AVATAR}")
+    session = request_json(
+        "https://bsky.social/xrpc/com.atproto.server.createSession",
+        data={"identifier": handle, "password": password},
+    )
+    ensure_bluesky_profile(session, refresh=True)
+    return f"Bluesky profile refreshed for {handle} from {PROFILE_AVATAR.name}"
 
 
 def bluesky_record(item: dict[str, Any], thumbnail: dict[str, Any]) -> dict[str, Any]:
@@ -811,5 +825,18 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", type=Path, default=ROOT / ".revenue-acceleration" / "distribution.json")
     parser.add_argument("--linkedin-bonus", action="store_true", help="Publish the second weekday LinkedIn post only")
+    parser.add_argument(
+        "--refresh-bluesky-profile",
+        action="store_true",
+        help="Replace the Bluesky avatar and canonical profile copy from repository assets",
+    )
     args = parser.parse_args()
-    print(publish_linkedin_bonus(args.state) if args.linkedin_bonus else run(args.state))
+    if args.refresh_bluesky_profile:
+        print(refresh_bluesky_profile(
+            (os.environ.get("BLUESKY_HANDLE") or "").strip(),
+            (os.environ.get("BLUESKY_APP_PASSWORD") or "").strip(),
+        ))
+    elif args.linkedin_bonus:
+        print(publish_linkedin_bonus(args.state))
+    else:
+        print(run(args.state))

@@ -31,6 +31,7 @@ Member-feed read access is deliberately excluded from the initial request becaus
 - Public product website: <https://artificial.one/>
 - Public privacy policy: <https://artificial.one/privacy.html>
 - Business contact address: `hello@artificial.one`
+- Official LinkedIn Company Page: <https://www.linkedin.com/company/artificial-one/> (organization ID `145231312`)
 - Existing official-API visual publishing implementation and confirmed delivery receipts.
 - A twelve-post weekly editorial system using original Artificial.One content.
 - Encrypted token storage in GitHub Actions and public-safe delivery receipts containing no access tokens.
@@ -40,9 +41,9 @@ Member-feed read access is deliberately excluded from the initial request becaus
 
 LinkedIn makes Community Management available only to registered legal organizations for commercial use. Before an application can credibly pass Development-tier review, the owner must provide or complete:
 
-1. An official Artificial.One LinkedIn Company Page, with the applying member as its super admin and mareke solutions s.r.o. identified as the legal operator.
-2. Company Page verification of a new, dedicated developer application.
-3. Verification of `hello@artificial.one` as the business email and `artificial.one` as the organization’s domain.
+1. Add the applying Artificial One member as a super admin of the new official Company Page; the established Marek Eckhaus account currently administers it and mareke solutions s.r.o. is the legal operator.
+2. Verify the Company Page against a new, dedicated developer application.
+3. Verify `hello@artificial.one` as the business email and `artificial.one` as the organization’s domain.
 
 The current standalone publishing application should remain untouched. LinkedIn’s guidance says the Community Management request should use a new application without other API products, so the new Page-management app must be separate.
 

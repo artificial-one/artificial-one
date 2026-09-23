@@ -1,0 +1,37 @@
+name: Sync social profile branding
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - images/social/artificial-one-logo.png
+      - scripts/distribute_content.py
+      - .github/workflows/social-profile-sync.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: artificial-one-social-profile-sync
+  cancel-in-progress: true
+
+jobs:
+  sync-bluesky:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Apply canonical Artificial.One branding to Bluesky
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: python scripts/distribute_content.py --refresh-bluesky-profile
+
+      - name: Verify the social publisher
+        run: python -m unittest tests.test_revenue_acceleration -v

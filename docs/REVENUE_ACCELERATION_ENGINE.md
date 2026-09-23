@@ -41,6 +41,8 @@ Eligible campaigns are checked daily. A campaign with no conversion is automatic
 
 `.github/workflows/linkedin-publisher.yml` runs on weekday afternoons and publishes one additional visual, question-led LinkedIn post from reviewed website inventory. Together with the daily publisher, the cadence is two posts Monday–Friday and one post Saturday–Sunday.
 
+`.github/workflows/social-profile-sync.yml` applies the canonical `images/social/artificial-one-logo.png` asset to the Bluesky profile whenever that brand asset changes. This keeps the public profile synchronized from GitHub without an attended computer; the existing banner is preserved.
+
 Public outputs include:
 
 - `data/revenue_strategy.json`
