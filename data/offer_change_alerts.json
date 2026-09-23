@@ -1,6 +1,12 @@
 {
   "alerts": [
     {
+      "detected_on": "2026-09-23",
+      "message": "The vendor’s product, pricing, plan or availability information changed. Recheck the current details before subscribing.",
+      "offer_id": "pinecone",
+      "source_url": "https://www.pinecone.io/"
+    },
+    {
       "detected_on": "2026-09-21",
       "message": "The vendor’s product, pricing, plan or availability information changed. Recheck the current details before subscribing.",
       "offer_id": "quicksigner",
@@ -50,6 +56,6 @@
     }
   ],
   "method": "two-observation-vendor-source-monitor",
-  "updated_at": "2026-09-21",
+  "updated_at": "2026-09-23",
   "version": 1
 }
