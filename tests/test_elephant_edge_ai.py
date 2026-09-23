@@ -200,6 +200,73 @@ class ElephantEdgeAiTests(unittest.TestCase):
             "Which assumption would you test first?",
         )
 
+    def test_x_validator_rejects_model_links_claims_and_repetition(self):
+        source = "Title: AI software ROI calculator\nReviewed context: Estimate break-even before buying."
+        good = (
+            "🐘 A calculator gets a trunk check before joining the herd.\n\n"
+            "AI software ROI calculator.\n\n"
+            "Which assumption would you test first?"
+        )
+        self.assertTrue(edge.valid_x_post(good, source))
+        self.assertFalse(edge.valid_x_post(good + " https://example.com", source))
+        self.assertFalse(edge.valid_x_post(good.replace("calculator", "revolutionary tool"), source))
+        self.assertFalse(edge.valid_x_post(good.replace("gets a trunk check", "estimates savings"), source))
+        self.assertFalse(edge.valid_x_post(good.replace("gets a trunk check", 'says "buy it"'), source))
+        self.assertFalse(edge.valid_x_post(good, source, [good]))
+
+    def test_x_hook_shortening_keeps_only_a_complete_safe_clause(self):
+        hook = (
+            "🐘 A calculator checks monthly time value before another subscription joins the herd, "
+            "then checks net return and break-even before the marketing confetti reaches the ceiling."
+        )
+        self.assertEqual(
+            edge.shorten_x_hook(hook),
+            "🐘 A calculator checks monthly time value before another subscription joins the herd.",
+        )
+        self.assertEqual(edge.shorten_x_hook("x" * 160), "")
+
+    def test_x_generation_inserts_reviewed_topic_around_guarded_model_copy(self):
+        original_run = edge.subprocess.run
+        original_model = os.environ.get("ELEPHANT_MODEL_PATH")
+        original_cli = os.environ.get("LLAMA_CLI_PATH")
+        with tempfile.TemporaryDirectory() as folder:
+            model = Path(folder) / "model.gguf"
+            cli = Path(folder) / "llama-cli"
+            model.write_bytes(b"model")
+            cli.write_bytes(b"binary")
+            os.environ["ELEPHANT_MODEL_PATH"] = str(model)
+            os.environ["LLAMA_CLI_PATH"] = str(cli)
+            edge.subprocess.run = lambda *args, **kwargs: SimpleNamespace(
+                returncode=0,
+                stdout=(
+                    "HOOK: 🐘 A calculator gets a trunk check before joining the herd.\n"
+                    "QUESTION: Which assumption would you test first?\n"
+                ),
+                stderr="",
+            )
+            try:
+                post = edge.generate_x_post(
+                    "Title: AI software ROI calculator\n"
+                    "Reviewed context: Estimate break-even before buying another subscription.",
+                    "x-1",
+                )
+            finally:
+                edge.subprocess.run = original_run
+                if original_model is None:
+                    os.environ.pop("ELEPHANT_MODEL_PATH", None)
+                else:
+                    os.environ["ELEPHANT_MODEL_PATH"] = original_model
+                if original_cli is None:
+                    os.environ.pop("LLAMA_CLI_PATH", None)
+                else:
+                    os.environ["LLAMA_CLI_PATH"] = original_cli
+        self.assertEqual(
+            post,
+            "🐘 A calculator gets a trunk check before joining the herd.\n\n"
+            "AI software ROI calculator.\n\n"
+            "Which assumption would you test first?",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

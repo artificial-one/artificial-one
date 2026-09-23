@@ -41,6 +41,53 @@ class XElephantTests(unittest.TestCase):
         self.assertEqual(first["text"], second["text"])
         self.assertEqual(first["image"], second["image"])
 
+    def test_edge_ai_post_keeps_route_deterministic_and_remembers_success(self):
+        item = x.build_post(date(2026, 9, 23), "evening")
+        original_generate = x.elephant_edge_ai.generate_x_post
+        original_enabled = os.environ.get("ELEPHANT_EDGE_AI_ENABLED")
+        generated = (
+            "🐘 A calculator gets a trunk check before joining the herd.\n\n"
+            "AI software ROI calculator.\n\n"
+            "Which assumption would you test first?"
+        )
+        x.elephant_edge_ai.generate_x_post = lambda *_args, **_kwargs: generated
+        os.environ["ELEPHANT_EDGE_AI_ENABLED"] = "true"
+        state = {"recent_ai_posts": []}
+        try:
+            copy, used_ai = x.edge_post_copy(item, state)
+            self.assertNotIn(item["url"], generated)
+            self.assertTrue(copy.endswith(item["url"]))
+            x.remember_ai_post(state, copy, used_ai)
+        finally:
+            x.elephant_edge_ai.generate_x_post = original_generate
+            if original_enabled is None:
+                os.environ.pop("ELEPHANT_EDGE_AI_ENABLED", None)
+            else:
+                os.environ["ELEPHANT_EDGE_AI_ENABLED"] = original_enabled
+        self.assertTrue(used_ai)
+        self.assertEqual(state["recent_ai_posts"], [copy])
+        self.assertLessEqual(x.x_weighted_length(copy), 275)
+
+    def test_edge_ai_post_falls_back_without_changing_memory(self):
+        item = x.build_post(date(2026, 9, 23), "morning")
+        original_generate = x.elephant_edge_ai.generate_x_post
+        original_enabled = os.environ.get("ELEPHANT_EDGE_AI_ENABLED")
+        x.elephant_edge_ai.generate_x_post = lambda *_args, **_kwargs: None
+        os.environ["ELEPHANT_EDGE_AI_ENABLED"] = "true"
+        state = {"recent_ai_posts": []}
+        try:
+            copy, used_ai = x.edge_post_copy(item, state)
+            x.remember_ai_post(state, copy, used_ai)
+        finally:
+            x.elephant_edge_ai.generate_x_post = original_generate
+            if original_enabled is None:
+                os.environ.pop("ELEPHANT_EDGE_AI_ENABLED", None)
+            else:
+                os.environ["ELEPHANT_EDGE_AI_ENABLED"] = original_enabled
+        self.assertFalse(used_ai)
+        self.assertEqual(copy, item["text"])
+        self.assertEqual(state["recent_ai_posts"], [])
+
     def test_oauth_signature_is_stable_for_fixed_nonce_and_time(self):
         header = x.oauth_header(
             "GET", "https://api.x.com/2/users/me?user.fields=username",

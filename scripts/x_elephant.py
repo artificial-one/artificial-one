@@ -28,8 +28,10 @@ from urllib.request import Request, urlopen
 
 try:
     from scripts import distribute_content as distribution
+    from scripts import elephant_edge_ai
 except ModuleNotFoundError:  # Direct execution: python scripts/x_elephant.py
     import distribute_content as distribution  # type: ignore
+    import elephant_edge_ai  # type: ignore
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -218,6 +220,7 @@ def load_state(path: Path) -> dict[str, Any]:
     state.setdefault("replied_tweet_ids", [])
     state.setdefault("opt_out_user_ids", [])
     state.setdefault("reply_days", {})
+    state.setdefault("recent_ai_posts", [])
     return state
 
 
@@ -227,6 +230,7 @@ def save_state(path: Path, state: dict[str, Any]) -> None:
     state["replied_tweet_ids"] = list(state.get("replied_tweet_ids") or [])[-1000:]
     state["opt_out_user_ids"] = list(dict.fromkeys(state.get("opt_out_user_ids") or []))[-1000:]
     state["reply_days"] = dict(sorted(dict(state.get("reply_days") or {}).items())[-14:])
+    state["recent_ai_posts"] = list(state.get("recent_ai_posts") or [])[-100:]
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(state, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
@@ -294,12 +298,52 @@ def build_post(as_of: date, slot: str) -> dict[str, Any]:
         "id": f"x-elephant-{as_of.isoformat()}-{slot}",
         "kind": "x-elephant",
         "slot": slot,
+        "subject_title": title,
         "title": f"{PROFILE_DISPLAY_NAME}: {title}",
         "text": copy,
         "url": link,
         "has_affiliate_or_site_link": has_link,
         "image_alt": f"{title} — playful automated elephant post from Artificial.One",
     }
+
+
+def x_reviewed_brief(item: dict[str, Any]) -> str:
+    return "\n".join([
+        f"Title: {str(item.get('subject_title') or item.get('title') or '').strip()}",
+        f"Reviewed context: {str(item.get('description') or '').strip()}",
+        f"Posting slot: {str(item.get('slot') or '').strip()}",
+        "Brand voice: playful, practical Artificial.One elephant; skeptical of AI hype.",
+    ])
+
+
+def edge_post_copy(item: dict[str, Any], state: dict[str, Any]) -> tuple[str, bool]:
+    fallback = str(item.get("text") or "").strip()
+    if (os.environ.get("ELEPHANT_EDGE_AI_ENABLED") or "").casefold() != "true":
+        return fallback, False
+    recent = [str(value) for value in state.get("recent_ai_posts") or []]
+    generated = elephant_edge_ai.generate_x_post(
+        x_reviewed_brief(item), str(item.get("id") or "x-elephant"), recent,
+    )
+    if not generated:
+        return fallback, False
+    slot = str(item.get("slot") or "")
+    if slot == "evening":
+        candidate = f"{generated}\n\n{item['url']}"
+    elif slot == "midday":
+        candidate = f"{generated}\n\n— automated elephant"
+    else:
+        candidate = generated
+    if x_weighted_length(candidate) > 275:
+        return fallback, False
+    return candidate, True
+
+
+def remember_ai_post(state: dict[str, Any], copy: str, used_ai: bool) -> None:
+    if not used_ai:
+        return
+    history = list(state.get("recent_ai_posts") or [])
+    history.append(copy)
+    state["recent_ai_posts"] = history[-100:]
 
 
 def post_tweet(text: str, media_id: str | None = None, reply_to: str = "") -> dict[str, Any]:
@@ -420,6 +464,8 @@ def run(state_path: Path, slot: str, as_of: date | None = None) -> str:
     if (os.environ.get("X_AUTOMATED_LABEL_CONFIRMED") or "").casefold() != "true":
         raise RuntimeError("Confirm the X automated-account label before enabling cloud sends")
     state = load_state(state_path)
+    generated_copy, used_ai = edge_post_copy(item, state)
+    item["text"] = generated_copy
     digest = sha256(item["text"].encode()).hexdigest()
     if item["id"] in state["posted_ids"] or digest in state["post_digests"]:
         mention_notes = process_mentions(state, as_of)
@@ -437,6 +483,7 @@ def run(state_path: Path, slot: str, as_of: date | None = None) -> str:
     )
     state["posted_ids"].append(item["id"])
     state["post_digests"].append(digest)
+    remember_ai_post(state, generated_copy, used_ai)
     mention_notes = process_mentions(state, as_of)
     save_state(state_path, state)
     return f"Published playful X elephant post ({url}); " + "; ".join(mention_notes)

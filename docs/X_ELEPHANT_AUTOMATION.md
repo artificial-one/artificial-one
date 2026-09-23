@@ -7,9 +7,12 @@ Artificial.One's X presence is designed as a clearly disclosed automated elephan
 - Three original visual posts every day at deliberately uneven times.
 - Morning discovery, midday discussion, and evening decision-guide formats.
 - Existing reviewed Artificial.One inventory supplies every subject and image.
+- A checksum-verified local Qwen model drafts the playful hook and question. The reviewed topic, image, attribution and optional route are inserted deterministically.
+- Generated copy is length-, claim-, safety- and repetition-checked; the existing reviewed templates are the automatic fallback.
 - Only the evening post carries a website or affiliate route, keeping two-thirds of the feed conversational rather than promotional.
 - Confirmed publications enter `data/distribution_receipts.json`, so the business-activity diary can include them.
 - Durable private state prevents duplicate posts and duplicate replies across workflow runs.
+- The model runs inside GitHub Actions from the shared private cache, without a laptop or hosted-model API.
 
 ## Persona
 
@@ -33,6 +36,8 @@ The voice uses recurring formats including Trunk Test, SaaS Smell Test, Elephant
 - AI replies run only when `X_AI_REPLY_APPROVED=true`, which must not be set until X grants written approval.
 - Original posting runs only when the account is visibly labeled automated and `X_AUTOMATED_LABEL_CONFIRMED=true`.
 - `X_ELEPHANT_ENABLED=false` is the immediate stop control.
+- Manual workflow runs do not publish unless their explicit `publish` checkbox is enabled.
+- Mention replies retain the separate written-approval gate and are not changed by original-post generation.
 
 ## Required GitHub configuration
 

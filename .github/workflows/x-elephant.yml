@@ -9,6 +9,11 @@ on:
         default: auto
         type: choice
         options: [auto, morning, midday, evening]
+      publish:
+        description: Publish during this manual run
+        required: false
+        default: false
+        type: boolean
   schedule:
     # Three deliberately uneven UTC times avoid machine-like round-hour timing.
     - cron: "17 7 * * *"
@@ -35,6 +40,15 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Restore the verified edge-AI runtime
+        uses: actions/cache@v5
+        with:
+          path: .edge-ai
+          key: elephant-edge-ai-qwen2.5-1.5b-q4km-llama-b10982-v1
+
+      - name: Install or verify the free local model
+        run: python scripts/setup_elephant_edge_ai.py
+
       - name: Restore private elephant memory
         uses: actions/cache@v5
         with:
@@ -43,21 +57,26 @@ jobs:
           restore-keys: |
             x-elephant-
 
-      - name: Publish one original visual post and process eligible mentions
+      - name: Verify persona and edge-AI safety guardrails
+        run: |
+          python -m unittest tests.test_elephant_edge_ai -v
+          python -m unittest tests.test_x_elephant -v
+
+      - name: Generate and publish one original visual post
         env:
           X_API_KEY: ${{ secrets.X_API_KEY }}
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           X_ACCOUNT_USERNAME: ${{ vars.X_ACCOUNT_USERNAME }}
-          X_ELEPHANT_ENABLED: ${{ vars.X_ELEPHANT_ENABLED }}
+          X_ELEPHANT_ENABLED: ${{ (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.publish)) && vars.X_ELEPHANT_ENABLED || 'false' }}
           X_AUTOMATED_LABEL_CONFIRMED: ${{ vars.X_AUTOMATED_LABEL_CONFIRMED }}
           X_AI_REPLY_APPROVED: ${{ vars.X_AI_REPLY_APPROVED }}
           X_SLOT: ${{ inputs.slot || 'auto' }}
+          ELEPHANT_EDGE_AI_ENABLED: "true"
+          ELEPHANT_MODEL_PATH: .edge-ai/qwen2.5-1.5b-instruct-q4_k_m.gguf
+          LLAMA_CLI_PATH: .edge-ai/llama.cpp/build/bin/llama-cli
         run: python scripts/x_elephant.py --slot "$X_SLOT" --state .revenue-acceleration/x-elephant.json
-
-      - name: Verify persona and safety guardrails
-        run: python -m unittest tests.test_x_elephant -v
 
       - name: Record only a confirmed publication
         shell: bash
