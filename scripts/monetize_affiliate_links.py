@@ -71,9 +71,18 @@ def published_offers(registry: dict[str, Any]) -> dict[str, dict[str, Any]]:
 
 
 def _set_attribute(tag: str, name: str, value: str) -> str:
-    pattern = re.compile(rf"\s{name}=(['\"])(.*?)\1", re.I | re.S)
+    # Accept quoted, unquoted and boolean HTML attributes. Generated pages use
+    # the compact boolean form for data-affiliate-offer; treating that as
+    # absent would append a duplicate attribute and make the pipeline oscillate.
+    pattern = re.compile(
+        rf"\s{name}(?:=(?:(['\"])(.*?)\1|[^\s>]+))?(?=\s|/?>)",
+        re.I | re.S,
+    )
     replacement = f' {name}="{html.escape(value, quote=True)}"'
-    if pattern.search(tag):
+    existing = pattern.search(tag)
+    if existing:
+        if not value and "=" not in existing.group(0):
+            return tag
         return pattern.sub(replacement, tag, count=1)
     return tag[:-1] + replacement + ">"
 
