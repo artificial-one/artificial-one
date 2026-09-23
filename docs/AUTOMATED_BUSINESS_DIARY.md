@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-23T07:08:12+02:00
+**Latest recorded activity:** 2026-09-23T08:54:20+02:00
 
 ## Daily productive system
 
@@ -29,6 +29,10 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 
 ### 2026-09-23
 
+- **08:54** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **08:54** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
+- **08:54** — [Updated webpage: AI Tool Pricing & Feature Change History | artificial.one](https://artificial.one/ai-tool-changes.html)
+- **08:54** — [Updated webpage: AI Tool Alternatives & Migration Wizard | artificial.one](https://artificial.one/ai-tool-alternatives.html)
 - **07:08** — Added 5 new AI-news items to the live briefing.
   - “We’re already fighting yesterday’s battle”: Greece’s prime minister gets candid about AI
   - OpenAI wants to consult elite mathematicians about how to not fumble again
