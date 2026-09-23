@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-23T14:05:14+02:00
+**Latest recorded activity:** 2026-09-23T15:38:27+02:00
 
 ## Daily productive system
 
@@ -30,6 +30,53 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 
 ### 2026-09-23
 
+- **15:38** — Created or refreshed 23 social-media creative assets.
+  - images/social-cards/adcreative.jpg
+  - images/social-cards/alison-us-ca.jpg
+  - images/social-cards/beautiful-ai.jpg
+  - images/social-cards/brkox.jpg
+  - images/social-cards/carepatron.jpg
+  - images/social-cards/daily-editorial-vertical.jpg
+  - images/social-cards/daily-editorial.jpg
+  - images/social-cards/descript.jpg
+  - images/social-cards/easyclaw.jpg
+  - images/social-cards/elevenlabs.jpg
+  - images/social-cards/esign-sign-pdf-docx-documents-ios-only.jpg
+  - images/social-cards/everleakproof-us.jpg
+  - images/social-cards/hubstaff.jpg
+  - images/social-cards/kartra.jpg
+  - images/social-cards/kit.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/omniseo.jpg
+  - images/social-cards/rewarx-studio-ai.jpg
+  - images/social-cards/turbotic.jpg
+  - images/social-cards/unbounce.jpg
+  - images/social-cards/volza.jpg
+  - images/social-cards/wegic.jpg
+  - images/social-cards/whatconverts.jpg
+- **15:38** — Published an updated RSS feed for content distribution.
+- **15:38** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **15:38** — [Updated webpage: LearnWorlds for Launch a paid online course: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html)
+- **15:38** — [Updated webpage: Best LearnWorlds Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-alternatives.html)
+- **15:38** — [Updated webpage: Foxit for Edit and convert PDF documents: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html)
+- **15:38** — [Updated webpage: Best Foxit Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-alternatives.html)
+- **15:38** — [Updated webpage: Volza: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/volza-trade-intelligence.html)
+- **15:38** — [Updated webpage: Seamless.AI: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html)
+- **15:38** — [Updated webpage: Rank Prompt: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/rank-prompt-ai-visibility.html)
+- **15:38** — [Updated webpage: Kit: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/kit-creator-email-marketing.html)
+- **15:38** — [Updated webpage: Foxit: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/foxit-pdf-software.html)
+- **15:38** — [Updated webpage: EverLeakProof US: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/everleakproof-us-software.html)
+- **15:38** — [Updated webpage: ElevenLabs: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/elevenlabs-ai-voice.html)
+- **15:38** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **15:38** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **15:38** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **15:38** — [Updated webpage: PDF Workflow Cost Calculator | Free Tool | artificial.one](https://artificial.one/calculators/pdf-workflow-cost-calculator.html)
+- **15:38** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **15:38** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **15:38** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **15:38** — [Retired webpage: Foxit vs eSign: Sign PDF DOCX Documents (iOS only): Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html)
+- **15:38** — [Published LinkedIn post: One practical way to use Unbounce](https://www.linkedin.com/feed/update/urn:li:share:7508520084819267585/)
+- **15:38** — [Published Bluesky post: Workflow Wednesday · Sep 23 Test page variants for conversion improvement. Check the fit, limitations and current pricing before you buy ↓ #AITools #Productivity](https://bsky.app/profile/artificial-one.bsky.social/post/3mw6ufyqsl32n)
 - **14:05** — Added 3 new AI-news items to the live briefing.
   - OpenAI nabs key Patreon execs ahead of upcoming announcement
   - OpenAI hires Patreon co-founder Sam Yam to lead a new Creator Product division
