@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "audited_at": "2026-09-22",
+  "audited_at": "2026-09-23",
   "source": "PartnerStack authenticated partner dashboard",
   "summary": {
-    "active_programs": 31,
+    "active_programs": 32,
     "terms_action_required": 0,
-    "trackable_links_confirmed": 28,
+    "trackable_links_confirmed": 29,
     "external_account_required": 1,
     "no_usable_link": 2
   },
@@ -228,6 +228,14 @@
     {
       "name": "lensmor",
       "slug": "lensmor",
+      "category": "Software",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:awin"
+    },
+    {
+      "name": "EverLeakProof US",
+      "slug": "everleakproof-us",
       "category": "Software",
       "access": "usable",
       "website_status": "published",

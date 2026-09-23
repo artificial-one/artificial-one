@@ -1,15 +1,16 @@
 {
   "version": 1,
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-09-23",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 474,
+    "total": 475,
+    "active_auto_onboarded": 1,
     "existing_active": 30,
     "not_qualified": 14,
-    "policy_review_required": 23,
-    "ready_for_owner_application": 407
+    "policy_review_required": 22,
+    "ready_for_owner_application": 408
   },
   "opportunities": [
     {
@@ -913,7 +914,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 120,
+      "review_days": 129,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -1920,7 +1921,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 23,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -2269,55 +2270,6 @@
         "e-commerce",
         "marketing",
         "sales"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:rebolt",
-      "network": "partnerstack",
-      "name": "Rebolt",
-      "slug": "rebolt",
-      "description": "Rebolt is the all-in-one marketing platform for home service businesses, offering SEO-optimized websites, social media management, and AI-powered content creation.",
-      "offer": "20% revenue share for the first year",
-      "tags": [
-        "Artificial Intelligence",
-        "Digital Advertising",
-        "Marketing",
-        "Other",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/rebolt?company=rebolt&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/1Qxnwt4LERDpR6D5XqxZVJey1tR5jZvcf/edit",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 85,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "content",
-        "marketing",
-        "seo"
       ],
       "already_active": false,
       "state": "ready_for_owner_application",
@@ -4408,6 +4360,54 @@
       "policy": {
         "status": "not_reviewed",
         "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:rebolt",
+      "network": "partnerstack",
+      "name": "Rebolt",
+      "slug": "rebolt",
+      "description": "Rebolt is the all-in-one marketing platform for home service businesses, offering SEO-optimized websites, social media management, and AI-powered content creation.",
+      "offer": "20% revenue share for the first year",
+      "tags": [
+        "Artificial Intelligence",
+        "Digital Advertising",
+        "Marketing",
+        "Other"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/rebolt?company=rebolt&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/1Qxnwt4LERDpR6D5XqxZVJey1tR5jZvcf/edit",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "content",
+        "marketing",
+        "seo"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -7512,13 +7512,13 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": true,
+          "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
+          "email_restricted": false,
+          "incentive_restricted": false,
           "content_approval_required": false,
-          "disclosure_required": true
+          "disclosure_required": false
         },
         "cookie_days": null
       }
@@ -8486,6 +8486,57 @@
       }
     },
     {
+      "id": "partnerstack:zep",
+      "network": "partnerstack",
+      "name": "ZEP",
+      "slug": "zep",
+      "description": "B2B SaaS provider of cloud solutions for project management, project time tracking and working time tracking. With +3000 clients and +50.000 users on the platform, ZEP is an established player with a renownened client base.",
+      "offer": "Earn up to +20% recurring commissions or 35% of the first 12 months (ACV $500)",
+      "tags": [
+        "Affiliates",
+        "Collaboration & Productivity",
+        "ERP",
+        "HR",
+        "HR Software",
+        "Hot",
+        "Office Software",
+        "Resellers",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/zep?company=zep&gref=marketplace",
+      "terms_url": "",
+      "website": "https://www.zep.de/en/",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 49,
+      "source": "https://market.partnerstack.com/",
+      "score": 71,
+      "relevance_matches": [
+        "productivity",
+        "saas",
+        "software"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:callhippo",
       "network": "partnerstack",
       "name": "CallHippo",
@@ -8586,7 +8637,7 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 30
+        "cookie_days": null
       }
     },
     {
@@ -9665,10 +9716,18 @@
         "sales"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": true,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -9873,6 +9932,59 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:goflow",
+      "network": "partnerstack",
+      "name": "Goflow",
+      "slug": "goflow",
+      "description": "Goflow is a global leader in Multichannel Operating System (MCOS) that enables ecommerce sellers to manage their channel orders, shipping, inventory, listings, transfers, purchasing, forecasting, and analytics from a single interface.",
+      "offer": "Earn 10% or more revenue share - apply today! (ACV $5,000+/yr)",
+      "tags": [
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Commerce",
+        "E-Commerce",
+        "ERP",
+        "Hot",
+        "Sales",
+        "Shopify integrated",
+        "Supply Chain & Logistics",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/goflow?company=goflow&gref=marketplace",
+      "terms_url": "https://goflow.com/terms",
+      "website": "https://www.goflow.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 3,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "analytics",
+        "e-commerce",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -10977,7 +11089,9 @@
         "Affiliates",
         "Agencies",
         "Development",
+        "Hot",
         "Marketing",
+        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/powr2155?company=powr2155&gref=marketplace",
@@ -11406,7 +11520,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 19,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12269,66 +12383,6 @@
       }
     },
     {
-      "id": "partnerstack:textline",
-      "network": "partnerstack",
-      "name": "Textline",
-      "slug": "textline",
-      "description": "Textline is the most secure business text messaging platform for modern customer support, sales, and logistics teams. Textline is HIPAA and SOC2 compliant. Built for teams, popular features include automations, announcements, MMS, templates, and surveys.",
-      "offer": "Earn up to 25% of the deal value in recurring commissions!",
-      "tags": [
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Customer Service",
-        "Digital Advertising",
-        "HR Software",
-        "Hot",
-        "Hubspot integrated",
-        "Marketing",
-        "Office Software",
-        "Partner Lead Importer",
-        "Referral Partners",
-        "Sales",
-        "Salesforce integrated",
-        "Shopify integrated",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/textline?company=textline&gref=marketplace",
-      "terms_url": "https://www.textline.com/legal/partners-affiliates",
-      "website": "https://www.textline.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "customer service",
-        "marketing",
-        "productivity",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": true,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:thryv",
       "network": "partnerstack",
       "name": "Thryv",
@@ -12438,6 +12492,61 @@
       }
     },
     {
+      "id": "partnerstack:revenueroll",
+      "network": "partnerstack",
+      "name": "Tie (previously Revenue Roll)",
+      "slug": "revenueroll",
+      "description": "Tie's real-time B2C identity resolution and enrichment platform instantly reveals names, contact details, demographic data and psychographics for over 50% of website visitors—without requiring form submissions or purchases.",
+      "offer": "Earn 20%+ Of Recurring Revenue - Average Of $5K Per Referral",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Analytics",
+        "Commerce",
+        "Hot",
+        "Hubspot integrated",
+        "Influencers",
+        "Marketing",
+        "Sales",
+        "Salesforce integrated",
+        "Shopify integrated",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/revenueroll?company=revenueroll&gref=marketplace",
+      "terms_url": "https://meettie.com/partner-terms",
+      "website": "https://www.meettie.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 31,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "analytics",
+        "data",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:doist",
       "network": "partnerstack",
       "name": "Todoist Inc",
@@ -12462,7 +12571,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 40,
+      "review_days": 41,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -14947,55 +15056,6 @@
       }
     },
     {
-      "id": "partnerstack:zep",
-      "network": "partnerstack",
-      "name": "ZEP",
-      "slug": "zep",
-      "description": "B2B SaaS provider of cloud solutions for project management, project time tracking and working time tracking. With +3000 clients and +50.000 users on the platform, ZEP is an established player with a renownened client base.",
-      "offer": "Earn up to +20% recurring commissions or 35% of the first 12 months (ACV $500)",
-      "tags": [
-        "Affiliates",
-        "Collaboration & Productivity",
-        "ERP",
-        "HR",
-        "HR Software",
-        "Office Software",
-        "Resellers"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/zep?company=zep&gref=marketplace",
-      "terms_url": "",
-      "website": "https://www.zep.de/en/",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 49,
-      "source": "https://market.partnerstack.com/",
-      "score": 66,
-      "relevance_matches": [
-        "productivity",
-        "saas",
-        "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:airslate",
       "network": "partnerstack",
       "name": "airSlate",
@@ -16093,6 +16153,51 @@
       }
     },
     {
+      "id": "partnerstack:ultahost",
+      "network": "partnerstack",
+      "name": "Ultahost",
+      "slug": "ultahost",
+      "description": "Ultahost offers domain registration, reliable web hosting, and intuitive website building tools, empowering individuals and businesses to easily create, manage, and grow their online presence.",
+      "offer": "Join Ultahost Partners",
+      "tags": [
+        "B2B Marketplaces",
+        "Content Management",
+        "Design",
+        "Development",
+        "Digital Advertising",
+        "Hosting Providers",
+        "Hot",
+        "IT Infrastructure",
+        "Office Software",
+        "Other"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ultahost?company=ultahost&gref=marketplace",
+      "terms_url": "https://ultahost.com/affiliate-program-agreement",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 15,
+      "source": "https://market.partnerstack.com/",
+      "score": 65,
+      "relevance_matches": [
+        "content",
+        "design",
+        "development",
+        "software"
+      ],
+      "already_active": false,
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:xero5440",
       "network": "partnerstack",
       "name": "Xero",
@@ -17147,57 +17252,6 @@
       }
     },
     {
-      "id": "partnerstack:goflow",
-      "network": "partnerstack",
-      "name": "Goflow",
-      "slug": "goflow",
-      "description": "Goflow is a global leader in Multichannel Operating System (MCOS) that enables ecommerce sellers to manage their channel orders, shipping, inventory, listings, transfers, purchasing, forecasting, and analytics from a single interface.",
-      "offer": "Earn 10% or more revenue share - apply today! (ACV $5,000+/yr)",
-      "tags": [
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Commerce",
-        "E-Commerce",
-        "ERP",
-        "Sales",
-        "Shopify integrated",
-        "Supply Chain & Logistics"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/goflow?company=goflow&gref=marketplace",
-      "terms_url": "https://goflow.com/terms",
-      "website": "https://www.goflow.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 3,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "analytics",
-        "e-commerce",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:gravity",
       "network": "partnerstack",
       "name": "Gravity",
@@ -17920,6 +17974,64 @@
       }
     },
     {
+      "id": "partnerstack:textline",
+      "network": "partnerstack",
+      "name": "Textline",
+      "slug": "textline",
+      "description": "Textline is the most secure business text messaging platform for modern customer support, sales, and logistics teams. Textline is HIPAA and SOC2 compliant. Built for teams, popular features include automations, announcements, MMS, templates, and surveys.",
+      "offer": "Earn up to 25% of the deal value in recurring commissions!",
+      "tags": [
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Customer Service",
+        "Digital Advertising",
+        "HR Software",
+        "Hubspot integrated",
+        "Marketing",
+        "Office Software",
+        "Partner Lead Importer",
+        "Referral Partners",
+        "Sales",
+        "Salesforce integrated",
+        "Shopify integrated"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/textline?company=textline&gref=marketplace",
+      "terms_url": "https://www.textline.com/legal/partners-affiliates",
+      "website": "https://www.textline.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "customer service",
+        "marketing",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": true,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:weve",
       "network": "partnerstack",
       "name": "The Go Game",
@@ -17946,59 +18058,6 @@
       "score": 62,
       "relevance_matches": [
         "productivity"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:revenueroll",
-      "network": "partnerstack",
-      "name": "Tie (previously Revenue Roll)",
-      "slug": "revenueroll",
-      "description": "Tie's real-time B2C identity resolution and enrichment platform instantly reveals names, contact details, demographic data and psychographics for over 50% of website visitors—without requiring form submissions or purchases.",
-      "offer": "Earn 20%+ Of Recurring Revenue - Average Of $5K Per Referral",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Analytics",
-        "Commerce",
-        "Hubspot integrated",
-        "Influencers",
-        "Marketing",
-        "Sales",
-        "Salesforce integrated",
-        "Shopify integrated"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/revenueroll?company=revenueroll&gref=marketplace",
-      "terms_url": "https://meettie.com/partner-terms",
-      "website": "https://www.meettie.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 31,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "analytics",
-        "data",
-        "marketing",
-        "sales"
       ],
       "already_active": false,
       "state": "ready_for_owner_application",
@@ -18533,6 +18592,49 @@
       }
     },
     {
+      "id": "awin:121298",
+      "network": "awin",
+      "name": "EverLeakProof US",
+      "slug": "everleakproof-us",
+      "description": "EverLeakProof is a women's health brand for period care and bladder leak protection. AOV $75 and 20% base commission, with higher approved content-partner terms available.",
+      "offer": "Joined Awin advertiser programme.",
+      "tags": [
+        "Software"
+      ],
+      "application_url": "https://ui.awin.com/",
+      "terms_url": "https://www.awin.com/gb/publisher-terms",
+      "website": "https://everleakproof.com",
+      "source": "https://developer.awin.com/apidocs/for-publishers",
+      "approved": true,
+      "tracking_url": "https://www.awin1.com/cread.php?awinmid=121298&awinaffid=2733180&ued=https%3A%2F%2Feverleakproof.com",
+      "links_enabled": true,
+      "revenue_share": true,
+      "sub_id_enabled": true,
+      "materials": true,
+      "waitlist": false,
+      "archived": false,
+      "score": 60,
+      "relevance_matches": [
+        "content",
+        "software"
+      ],
+      "already_active": true,
+      "state": "active_auto_onboarded",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:getida",
       "network": "partnerstack",
       "name": "Getida",
@@ -18703,50 +18805,6 @@
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
-        "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:ultahost",
-      "network": "partnerstack",
-      "name": "Ultahost",
-      "slug": "ultahost",
-      "description": "Ultahost offers domain registration, reliable web hosting, and intuitive website building tools, empowering individuals and businesses to easily create, manage, and grow their online presence.",
-      "offer": "Join Ultahost Partners",
-      "tags": [
-        "B2B Marketplaces",
-        "Content Management",
-        "Design",
-        "Development",
-        "Digital Advertising",
-        "Hosting Providers",
-        "IT Infrastructure",
-        "Office Software",
-        "Other"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ultahost?company=ultahost&gref=marketplace",
-      "terms_url": "https://ultahost.com/affiliate-program-agreement",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 15,
-      "source": "https://market.partnerstack.com/",
-      "score": 60,
-      "relevance_matches": [
-        "content",
-        "design",
-        "development",
-        "software"
-      ],
-      "already_active": false,
-      "state": "policy_review_required",
-      "policy": {
-        "status": "unreachable",
         "signals": {},
         "cookie_days": null
       }
