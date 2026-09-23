@@ -2,9 +2,30 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-23T09:16:22+02:00",
+  "last_activity_at": "2026-09-23T11:30:02+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:b804a06885d3b0954e5c965001d20c3848772c78:vendor_changes_detected",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T11:30:02+02:00",
+      "kind": "vendor_changes_detected",
+      "summary": "Published 1 confirmed vendor pricing, plan, or availability changes.",
+      "details": [
+        "Submagic"
+      ],
+      "source_commit": "b804a06885d3"
+    },
+    {
+      "id": "git:b804a06885d3b0954e5c965001d20c3848772c78:M:ai-tool-changes.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T11:30:02+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Pricing & Feature Change History | artificial.one",
+      "url": "https://artificial.one/ai-tool-changes.html",
+      "path": "ai-tool-changes.html",
+      "source_commit": "b804a06885d3"
+    },
     {
       "id": "git:71b26ec939906071304a5558e49c95463417ba36:rss",
       "date": "2026-09-23",
