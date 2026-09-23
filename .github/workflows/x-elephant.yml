@@ -1,0 +1,74 @@
+name: Run playful X elephant
+
+on:
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: Posting slot to run
+        required: false
+        default: auto
+        type: choice
+        options: [auto, morning, midday, evening]
+  schedule:
+    # Three deliberately uneven UTC times avoid machine-like round-hour timing.
+    - cron: "17 7 * * *"
+    - cron: "41 13 * * *"
+    - cron: "23 19 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: artificial-one-x-elephant
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Restore private elephant memory
+        uses: actions/cache@v5
+        with:
+          path: .revenue-acceleration/x-elephant.json
+          key: x-elephant-${{ github.run_id }}
+          restore-keys: |
+            x-elephant-
+
+      - name: Publish one original visual post and process eligible mentions
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_ACCOUNT_USERNAME: ${{ vars.X_ACCOUNT_USERNAME }}
+          X_ELEPHANT_ENABLED: ${{ vars.X_ELEPHANT_ENABLED }}
+          X_AUTOMATED_LABEL_CONFIRMED: ${{ vars.X_AUTOMATED_LABEL_CONFIRMED }}
+          X_AI_REPLY_APPROVED: ${{ vars.X_AI_REPLY_APPROVED }}
+          X_SLOT: ${{ inputs.slot || 'auto' }}
+        run: python scripts/x_elephant.py --slot "$X_SLOT" --state .revenue-acceleration/x-elephant.json
+
+      - name: Verify persona and safety guardrails
+        run: python -m unittest tests.test_x_elephant -v
+
+      - name: Record only a confirmed publication
+        shell: bash
+        run: |
+          git add -- data/distribution_receipts.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Record playful X elephant publication [skip ci]"
+          if ! git push; then
+            git fetch origin main
+            git rebase origin/main
+            git push
+          fi
