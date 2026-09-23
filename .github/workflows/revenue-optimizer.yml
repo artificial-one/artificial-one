@@ -173,6 +173,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Optimize affiliate revenue [skip ci]"
+          # Other productive workflows can legitimately update main while this
+          # longer job runs. Replay this small generated-output commit on top of
+          # those updates instead of failing after content was already sent.
+          git pull --rebase origin main
           git push
 
       - name: Publish a privacy-safe run summary
