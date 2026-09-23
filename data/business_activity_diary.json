@@ -2,9 +2,70 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-23T02:46:39+02:00",
+  "last_activity_at": "2026-09-23T02:52:35+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:9068c25e442c2e4c9a80cd629668e81b7c56cf83:social_creatives",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:52:35+02:00",
+      "kind": "social_creatives_updated",
+      "summary": "Created or refreshed 5 social-media creative assets.",
+      "details": [
+        "images/social-cards/daily-editorial-vertical.jpg",
+        "images/social-cards/daily-editorial.jpg",
+        "images/social-cards/quicksigner.jpg",
+        "images/social-cards/trainual.jpg",
+        "images/social-cards/turbotic.jpg"
+      ],
+      "source_commit": "9068c25e442c"
+    },
+    {
+      "id": "git:9068c25e442c2e4c9a80cd629668e81b7c56cf83:rss",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:52:35+02:00",
+      "kind": "distribution_updated",
+      "summary": "Published an updated RSS feed for content distribution.",
+      "source_commit": "9068c25e442c"
+    },
+    {
+      "id": "git:9068c25e442c2e4c9a80cd629668e81b7c56cf83:M:partner-offers.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:52:35+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Verified AI Partner Offers | artificial.one",
+      "url": "https://artificial.one/partner-offers.html",
+      "path": "partner-offers.html",
+      "source_commit": "9068c25e442c"
+    },
+    {
+      "id": "git:9068c25e442c2e4c9a80cd629668e81b7c56cf83:M:ai-tool-finder.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:52:35+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one",
+      "url": "https://artificial.one/ai-tool-finder.html",
+      "path": "ai-tool-finder.html",
+      "source_commit": "9068c25e442c"
+    },
+    {
+      "id": "git:9068c25e442c2e4c9a80cd629668e81b7c56cf83:M:ai-stack-builder.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:52:35+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one",
+      "url": "https://artificial.one/ai-stack-builder.html",
+      "path": "ai-stack-builder.html",
+      "source_commit": "9068c25e442c"
+    },
+    {
+      "id": "bluesky:at://did:plc:jbekuorna4bmpbwfj6fl7alk/app.bsky.feed.post/3mw5jdffnz32q",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:47:09+02:00",
+      "kind": "social_post_published",
+      "summary": "Published Bluesky post: Workflow Wednesday · Sep 23 Organize content optimization work. Check the fit, limitations and current pricing before you buy ↓ #AITools #Productivity",
+      "url": "https://bsky.app/profile/artificial-one.bsky.social/post/3mw5jdffnz32q"
+    },
     {
       "id": "git:782ccfc50c9ada53c576fa8241be729e07a416f3:social_creatives",
       "date": "2026-09-23",
@@ -196,6 +257,14 @@
       "url": "https://artificial.one/search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html",
       "path": "search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html",
       "source_commit": "782ccfc50c9a"
+    },
+    {
+      "id": "linkedin:urn:li:activity:7508326062968164352",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T02:46:00+02:00",
+      "kind": "social_post_published",
+      "summary": "Published LinkedIn post: One practical way to use OmniSEO",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508326062968164352/"
     },
     {
       "id": "git:0a91bc1a7710453a50b941ab5b3f6ade4394891f:M:index.html",
