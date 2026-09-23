@@ -16,6 +16,11 @@ from urllib.parse import urlencode
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+try:
+    from scripts import elephant_edge_ai
+except ModuleNotFoundError:  # Direct execution: python scripts/distribute_content.py
+    import elephant_edge_ai  # type: ignore
+
 
 ROOT = Path(__file__).resolve().parents[1]
 OFFERS_PATH = ROOT / "data" / "partner_offers.json"
@@ -299,6 +304,37 @@ def linkedin_bonus_item(as_of: date | None = None) -> dict[str, Any] | None:
         "image_alt": f"{item['title']} — playful AI tool discussion from Artificial.One",
     })
     return item
+
+
+def linkedin_reviewed_brief(item: dict[str, Any]) -> str:
+    return "\n".join([
+        f"Title: {str(item.get('title') or '').strip()}",
+        f"Reviewed context: {str(item.get('description') or '').strip()}",
+        f"Editorial fallback: {str(item.get('linkedin_copy') or item.get('text') or '').strip()}",
+        "Brand voice: playful, practical Artificial.One elephant; skeptical of AI hype.",
+    ])
+
+
+def linkedin_edge_copy(
+    item: dict[str, Any], state: dict[str, Any],
+) -> tuple[str, bool]:
+    fallback = str(item.get("linkedin_copy") or item.get("text") or item.get("description") or "").strip()
+    enabled = (os.environ.get("ELEPHANT_EDGE_AI_ENABLED") or "").casefold() == "true"
+    if not enabled:
+        return fallback, False
+    recent = [str(value) for value in state.get("recent_linkedin_ai_copy") or []]
+    generated = elephant_edge_ai.generate_linkedin_post(
+        linkedin_reviewed_brief(item), str(item.get("id") or item.get("title") or "linkedin"), recent,
+    )
+    return (generated, True) if generated else (fallback, False)
+
+
+def remember_linkedin_ai_copy(state: dict[str, Any], copy: str, used_ai: bool) -> None:
+    if not used_ai:
+        return
+    recent = list(state.get("recent_linkedin_ai_copy") or [])
+    recent.append(copy)
+    state["recent_linkedin_ai_copy"] = recent[-100:]
 
 
 def write_public_outputs(items: list[dict[str, Any]]) -> None:
@@ -692,7 +728,12 @@ def save_distribution_state(path: Path, state: dict[str, Any]) -> None:
             "sent_ids": list(value.get("sent_ids") or [])[-400:],
         }
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps({"version": 3, "channels": channels}, indent=2) + "\n", encoding="utf-8")
+    payload = {
+        "version": 3,
+        "channels": channels,
+        "recent_linkedin_ai_copy": list(state.get("recent_linkedin_ai_copy") or [])[-100:],
+    }
+    path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
 def publish_linkedin_bonus(state_path: Path, as_of: date | None = None) -> str:
@@ -710,12 +751,14 @@ def publish_linkedin_bonus(state_path: Path, as_of: date | None = None) -> str:
         return "Playful LinkedIn post prepared; cloud sending is disabled"
     if not token:
         raise RuntimeError("LINKEDIN_ACCESS_TOKEN is required for the playful publisher")
-    delivered = channel_item(item, "linkedin")
-    digest = sha256(linkedin_commentary(delivered).encode()).hexdigest()
     try:
         state = load(state_path)
     except (OSError, json.JSONDecodeError):
         state = {"version": 3, "channels": {}}
+    delivered = channel_item(item, "linkedin")
+    generated_copy, used_ai = linkedin_edge_copy(delivered, state)
+    delivered["linkedin_copy"] = generated_copy
+    digest = sha256(linkedin_commentary(delivered).encode()).hexdigest()
     progress = channel_state(state, "linkedin-playful")
     if (
         item["id"] in progress["sent_ids"]
@@ -727,6 +770,7 @@ def publish_linkedin_bonus(state_path: Path, as_of: date | None = None) -> str:
     append_receipt(RECEIPTS_PATH, "linkedin", delivered, result)
     progress["sent"].append(digest)
     progress["sent_ids"].append(item["id"])
+    remember_linkedin_ai_copy(state, generated_copy, used_ai)
     save_distribution_state(state_path, state)
     return f"Playful LinkedIn image post published ({result['url']})"
 
@@ -781,9 +825,18 @@ def run(state_path: Path, as_of: date | None = None) -> str:
     delivered = 0
     delivery_notes: list[str] = []
     failures: list[str] = []
+    linkedin_delivery: dict[str, Any] = {}
+
+    def publish_linkedin_item() -> dict[str, str]:
+        prepared = channel_item(item, "linkedin")
+        generated_copy, used_ai = linkedin_edge_copy(prepared, state)
+        prepared["linkedin_copy"] = generated_copy
+        linkedin_delivery.update({"item": prepared, "copy": generated_copy, "used_ai": used_ai})
+        return post_linkedin(linkedin_token, linkedin_author, prepared)
+
     channels: list[tuple[str, bool, Any]] = [
         ("bluesky", bool(handle and password), lambda: post_bluesky(handle, password, channel_item(item, "bluesky"))),
-        ("linkedin", bool(linkedin_token), lambda: post_linkedin(linkedin_token, linkedin_author, channel_item(item, "linkedin"))),
+        ("linkedin", bool(linkedin_token), publish_linkedin_item),
         ("syndication", bool(webhook), lambda: post_webhook(webhook, channel_item(item, "syndication"))),
     ]
     already_sent = 0
@@ -797,7 +850,13 @@ def run(state_path: Path, as_of: date | None = None) -> str:
         try:
             result = publish()
             if name == "linkedin":
-                append_receipt(RECEIPTS_PATH, name, item, result)
+                prepared = linkedin_delivery.get("item") or item
+                append_receipt(RECEIPTS_PATH, name, prepared, result)
+                remember_linkedin_ai_copy(
+                    state,
+                    str(linkedin_delivery.get("copy") or ""),
+                    bool(linkedin_delivery.get("used_ai")),
+                )
                 delivery_notes.append(f"LinkedIn image post published ({result['url']})")
             elif result:
                 delivery_notes.append(str(result))
