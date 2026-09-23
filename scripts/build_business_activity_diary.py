@@ -276,6 +276,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
         "- **Search growth — 06:11 UTC daily:** creates or refreshes commercial-intent pages and applies guarded search improvements based on Search Console demand.",
         "- **Affiliate-network and AppSumo monitoring — 07:23 UTC daily:** imports new monetizable AppSumo assets, refreshes availability, creates missing Impact links where authorized, and updates corresponding pages.",
         "- **Revenue optimization and distribution — 08:13 UTC daily:** ranks offers, improves conversion routes, refreshes decision tools and creatives, publishes one confirmed item to each connected social channel, and updates RSS and the web newsletter.",
+        "- **Playful Bluesky elephant — 10:37 and 17:47 UTC daily:** publishes one extra visual elephant-persona post, answers recent mentions, joins at most one relevant AI-tool question, appreciates useful posts, and selectively follows back relevant people within strict anti-spam limits.",
         "- **Playful LinkedIn edition — 14:43 UTC Monday–Friday:** publishes a second original visual post with a conversational hook and a genuine discussion question. Together with the daily edition, LinkedIn receives twelve posts per week.",
         "- **Business diary — after productive workflows plus a 23:55 UTC fallback:** records the verified outcomes below.",
         "",
