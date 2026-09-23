@@ -59,6 +59,10 @@ class PartnerOfferPipelineTests(unittest.TestCase):
         self.assertIn('data-watch-offer="useful-ai"', page)
         self.assertIn('class="mobile-offer-cta"', page)
         self.assertIn('FAQPage', page)
+        self.assertIn("product website screenshot", page)
+        self.assertIn("Current buying facts", page)
+        self.assertIn("Free trial", page)
+        self.assertEqual(page.count('data-tab data-content='), 3)
 
     def test_related_offers_prioritize_same_category(self):
         primary = published_offer()
@@ -100,6 +104,18 @@ class PartnerOfferPipelineTests(unittest.TestCase):
         self.assertIn('data-placement="homepage-pick"', result)
         self.assertIn('id="ai1-offer-data"', result)
         self.assertIn('"id": "useful-ai"', result)
+
+    def test_homepage_picks_publish_six_visual_cards(self):
+        offers = [published_offer(id=f"tool-{index}", slug=f"tool-{index}", name=f"Tool {index}") for index in range(7)]
+        block = pipeline.render_homepage_picks(offers)
+        self.assertEqual(block.count('data-placement="homepage-pick"'), 6)
+        self.assertEqual(block.count("product website preview"), 6)
+
+    def test_public_catalog_has_three_outcome_use_cases_and_product_media(self):
+        data = pipeline.public_offer_data(published_offer())
+        self.assertEqual(len(data["useCases"]), 3)
+        self.assertTrue(data["logoUrl"].startswith("https://"))
+        self.assertTrue(data["screenshotUrl"].startswith("https://"))
 
     def test_review_page_links_to_search_intent_cluster(self):
         first = published_offer(id="first", slug="first", name="First")

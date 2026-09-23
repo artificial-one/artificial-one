@@ -221,6 +221,50 @@
     }
   }
 
+  function installUnifiedShell() {
+    if (document.querySelector(".site-header")) return;
+    var stylesheet = Array.prototype.find.call(document.styleSheets || [], function (sheet) { return /decision-engine\.css/.test(sheet.href || ""); });
+    if (!stylesheet) {
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "/assets/decision-engine.css";
+      document.head.appendChild(link);
+    }
+    var legacy = document.querySelector("body > header, body > nav");
+    var header = document.createElement("header");
+    header.className = "site-header";
+    header.innerHTML = '<div class="nav-wrap"><a class="brand" href="/"><img src="/images/social/artificial-one-logo.png" alt="Artificial.One elephant" width="43" height="43"><span>artificial<span class="brand-dot">.</span>one</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button><nav class="primary-nav" aria-label="Primary navigation"><a href="/ai-tool-finder.html">Find Tools</a><a href="/ai-tool-finder.html?compare=">Compare</a><a href="/partner-offers.html">Deals</a><a href="/news.html">What’s New</a><a class="stack-trigger" href="/ai-tool-finder.html?stack=">My Stack</a><details class="more-menu"><summary>Explore ▾</summary><div class="more-links"><a href="/reviews.html">All reviews</a><a href="/decision-tools.html">Free tools</a><a href="/buyers-guides.html">Buyer guides</a><a href="/about.html">How we evaluate</a></div></details></nav></div>';
+    if (legacy) legacy.replaceWith(header); else document.body.insertBefore(header, document.body.firstChild);
+    var toggle = header.querySelector(".nav-toggle");
+    var nav = header.querySelector(".primary-nav");
+    toggle.addEventListener("click", function () { var open = nav.classList.toggle("is-open"); toggle.setAttribute("aria-expanded", String(open)); });
+  }
+
+  function trackWebVitals() {
+    if (!("PerformanceObserver" in window)) return;
+    var lcp = 0;
+    try {
+      new PerformanceObserver(function (list) {
+        list.getEntries().forEach(function (entry) { lcp = Math.max(lcp, entry.startTime || 0); });
+      }).observe({ type: "largest-contentful-paint", buffered: true });
+      var cls = 0;
+      new PerformanceObserver(function (list) {
+        list.getEntries().forEach(function (entry) { if (!entry.hadRecentInput) cls += entry.value || 0; });
+      }).observe({ type: "layout-shift", buffered: true });
+      window.addEventListener("pagehide", function () {
+        sendToConfiguredEndpoint(Object.assign(eventPayload(null, "web_vital"), { metric: "lcp", value: Math.round(lcp) }));
+        sendToConfiguredEndpoint(Object.assign(eventPayload(null, "web_vital"), { metric: "cls", value: Math.round(cls * 1000) }));
+      }, { once: true });
+    } catch (_) {}
+  }
+
+  function trackReturningVisitor() {
+    try {
+      if (window.localStorage.getItem("ai1_seen_before")) sendToConfiguredEndpoint(eventPayload(null, "returning_visit"));
+      window.localStorage.setItem("ai1_seen_before", new Date().toISOString());
+    } catch (_) {}
+  }
+
   function hashBucket(value) {
     var hash = 2166136261;
     for (var index = 0; index < value.length; index += 1) {
@@ -406,6 +450,9 @@
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
+      installUnifiedShell();
+      trackReturningVisitor();
+      trackWebVitals();
       loadConversionStrategy().then(function (strategy) {
         sendToConfiguredEndpoint(eventPayload(null, "site_visit"));
         applyAppSumoAvailability();
@@ -417,6 +464,9 @@
       });
     });
   } else {
+    installUnifiedShell();
+    trackReturningVisitor();
+    trackWebVitals();
     loadConversionStrategy().then(function (strategy) {
       sendToConfiguredEndpoint(eventPayload(null, "site_visit"));
       applyAppSumoAvailability();

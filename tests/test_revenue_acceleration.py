@@ -30,6 +30,7 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertEqual(first[2], second[2])
         self.assertIn("affiliate", first[1].casefold())
         self.assertIn("utm_source=newsletter", first[1])
+        self.assertIn("Five tools to evaluate", first[1])
 
     def test_distribution_queue_uses_attributed_site_links(self):
         items = distribution.queue(date(2026, 9, 15))

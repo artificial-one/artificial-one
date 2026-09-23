@@ -1,0 +1,35 @@
+name: Production performance budget
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - ai-tool-finder.html
+      - partner-offers/**
+      - assets/decision-engine.css
+      - assets/decision-engine.js
+      - assets/affiliate-tracking.js
+      - lighthouserc.json
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-performance-budget
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Wait for the production deployment
+        run: curl --fail --retry 18 --retry-all-errors --retry-delay 10 https://artificial.one/
+      - name: Install Lighthouse CI
+        run: npm install --global @lhci/cli@0.15.x
+      - name: Enforce LCP and layout-shift budgets
+        run: lhci autorun --config=./lighthouserc.json

@@ -103,6 +103,7 @@ jobs:
           python scripts/build_sponsorship.py
           python scripts/build_social_media.py
           python scripts/build_tool_intelligence.py
+          python scripts/normalize_legacy_brand.py
 
       - name: Monitor first-party offer changes
         run: python scripts/monitor_offer_changes.py --state .offer-monitor/private-state.json
@@ -159,6 +160,7 @@ jobs:
           python scripts/build_social_media.py --check
           python scripts/monitor_offer_changes.py --check
           python scripts/build_tool_intelligence.py --check
+          python scripts/normalize_legacy_brand.py --check
           python scripts/monitor_tool_intelligence.py --check
           python scripts/consolidate_legacy_index.py --check
           python scripts/indexing_recovery.py --check

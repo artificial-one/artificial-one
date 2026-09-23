@@ -24,6 +24,10 @@ VARIANTS = {
     "a": {"message": "Considering this tool? Check the current partner offer.", "cta": "View partner offer"},
     "b": {"message": "See current pricing, limits and partner terms before deciding.", "cta": "Check current offer"},
 }
+CARD_VARIANTS = {
+    "a": {"cta": "See {name} plans"},
+    "b": {"cta": "Try {name} on your workflow"},
+}
 
 
 def variant_totals(aggregate: dict[str, Any]) -> dict[str, int]:
@@ -53,6 +57,7 @@ def build_strategy(winner: str | None) -> dict[str, Any]:
     return {
         "version": 1,
         "sticky": {"mode": "winner" if winner else "experiment", "winner": winner, "variants": VARIANTS},
+        "cards": {"mode": "winner" if winner else "experiment", "winner": winner, "variants": CARD_VARIANTS},
         "privacy": "Only the selected conversion variant is public; raw interaction totals remain private.",
     }
 

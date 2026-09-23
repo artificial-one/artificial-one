@@ -159,6 +159,7 @@ def render_dashboard(
     impressions: dict[str, Any], visits: dict[str, Any], route_clicks: dict[str, Any],
     coverage: dict[str, int], changes: list[str], run_url: str,
     route_impressions: dict[str, Any] | None = None,
+    funnel: dict[str, dict[str, Any]] | None = None,
 ) -> tuple[str, str, str]:
     today = date.today().isoformat()
     ctr = (int(clicks.get("total") or 0) / int(impressions.get("total") or 1) * 100) if int(impressions.get("total") or 0) else 0
@@ -171,6 +172,23 @@ def render_dashboard(
     click_goal = 100
     target_ctr = 8.0
     route_ctr_goal = 15.0
+    funnel = funnel or {}
+    matcher_starts = int(funnel.get("matcher_starts", {}).get("total") or 0)
+    matcher_completions = int(funnel.get("matcher_completions", {}).get("total") or 0)
+    recommendation_views = int(funnel.get("recommendation_impressions", {}).get("total") or 0)
+    matcher_clicks = int(clicks.get("by_placement", {}).get("matcher-result") or 0)
+    matcher_start_rate = matcher_starts / max(1, int(visits.get("total") or 0)) * 100
+    matcher_completion_rate = matcher_completions / max(1, matcher_starts) * 100
+    results_ctr = matcher_clicks / max(1, recommendation_views) * 100
+    commercial_clicks = sum(int(value or 0) for key, value in clicks.get("by_placement", {}).items() if str(key).startswith("offer-page"))
+    commercial_views = sum(int(value or 0) for key, value in impressions.get("by_placement", {}).items() if str(key).startswith("offer-page"))
+    commercial_ctr = commercial_clicks / max(1, commercial_views) * 100
+    opt_ins = int(funnel.get("email_opt_ins", {}).get("total") or 0) + int(funnel.get("watchlist_adds", {}).get("total") or 0)
+    opt_in_rate = opt_ins / max(1, int(visits.get("total") or 0)) * 100
+    return_rate = int(funnel.get("returning_visits", {}).get("total") or 0) / max(1, int(visits.get("total") or 0)) * 100
+    vital_metrics = funnel.get("web_vitals", {}).get("metrics", {})
+    lcp_average = float(vital_metrics.get("lcp:sum") or 0) / max(1, int(vital_metrics.get("lcp:count") or 0))
+    cls_average = float(vital_metrics.get("cls:sum") or 0) / max(1, int(vital_metrics.get("cls:count") or 0)) / 1000
     visit_goal = 1250
     click_progress = min(100.0, click_total / click_goal * 100)
     clicks_remaining = max(0, click_goal - click_total)
@@ -188,6 +206,14 @@ def render_dashboard(
         ("Affiliate CTA impressions (28d)", str(impressions.get("total", 0))),
         ("Site CTA click-through rate", f"{ctr:.2f}%"),
         ("Visit-to-affiliate-click rate", f"{visit_click_rate:.2f}%"),
+        ("Homepage matcher-start rate", f"{matcher_start_rate:.2f}% (target >25%)"),
+        ("Matcher completion rate", f"{matcher_completion_rate:.2f}% (target >55%)"),
+        ("Results-to-affiliate click rate", f"{results_ctr:.2f}% (target 12-20%)"),
+        ("Commercial-page affiliate CTR", f"{commercial_ctr:.2f}% (target >15%)"),
+        ("Email/watch opt-in rate", f"{opt_in_rate:.2f}% (target 4-8%)"),
+        ("Returning visitor rate", f"{return_rate:.2f}% (target >20%)"),
+        ("Observed LCP", f"{lcp_average / 1000:.2f}s (target <2.5s)" if lcp_average else "awaiting field data (target <2.5s)"),
+        ("Observed CLS", f"{cls_average:.3f} (target <0.1)" if vital_metrics.get("cls:count") else "awaiting field data (target <0.1)"),
         ("Qualified visit goal (28d)", f"{visit_goal} at {target_ctr:.0f}% affiliate CTR"),
         ("Visits remaining to goal", str(max(0, visit_goal - int(visits.get("total") or 0)))),
         ("Top visit sources", _counts(visits.get("by_source", {}))),
@@ -256,12 +282,17 @@ def main(argv: list[str] | None = None) -> int:
     visits = ps.fetch_affiliate_events(redis_url, redis_token, "visits") if redis_url and redis_token else {}
     route_clicks = ps.fetch_affiliate_events(redis_url, redis_token, "route_clicks") if redis_url and redis_token else {}
     route_impressions = ps.fetch_affiliate_events(redis_url, redis_token, "route_impressions") if redis_url and redis_token else {}
+    funnel_streams = (
+        "matcher_starts", "matcher_completions", "recommendation_impressions",
+        "email_opt_ins", "watchlist_adds", "returning_visits", "web_vitals",
+    )
+    funnel = {stream: ps.fetch_affiliate_events(redis_url, redis_token, stream) for stream in funnel_streams} if redis_url and redis_token else {}
     partnerstack = ps.build_snapshot(collections, affiliate_clicks=clicks, affiliate_impressions=impressions)
     sid = os.environ.get("IMPACT_ACCOUNT_SID", "").strip()
     token = os.environ.get("IMPACT_AUTH_TOKEN", "").strip()
     impact = fetch_impact_snapshot(sid, token) if sid and token else {"connected": False}
     coverage = website_coverage()
-    current = {"schema_version": 2, "audited_at": datetime.now(timezone.utc).isoformat(), "partnerstack": partnerstack, "impact": impact, "website": coverage, "acquisition": {"visits": visits, "route_clicks": route_clicks, "route_impressions": route_impressions}}
+    current = {"schema_version": 3, "audited_at": datetime.now(timezone.utc).isoformat(), "partnerstack": partnerstack, "impact": impact, "website": coverage, "acquisition": {"visits": visits, "route_clicks": route_clicks, "route_impressions": route_impressions, "funnel": funnel}}
     previous = json.loads(args.baseline.read_text(encoding="utf-8")) if args.baseline.exists() else {}
     changes = ps.compare_snapshots(previous.get("partnerstack", {}), partnerstack) if previous else []
     if previous and impact.get("connected"):
@@ -269,7 +300,7 @@ def main(argv: list[str] | None = None) -> int:
     if previous and previous.get("website", {}) != coverage:
         changes.append("AppSumo website inventory or publication coverage changed")
     run_url = f"{os.environ.get('GITHUB_SERVER_URL', '')}/{os.environ.get('GITHUB_REPOSITORY', '')}/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}".strip("/")
-    subject, text_body, html_body = render_dashboard(partnerstack, impact, clicks, impressions, visits, route_clicks, coverage, changes, run_url, route_impressions=route_impressions)
+    subject, text_body, html_body = render_dashboard(partnerstack, impact, clicks, impressions, visits, route_clicks, coverage, changes, run_url, route_impressions=route_impressions, funnel=funnel)
     if args.email_to:
         resend = os.environ.get("RESEND_API_KEY", "").strip()
         if not resend or not args.email_from:

@@ -11,7 +11,7 @@ import sys
 from datetime import date
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -289,7 +289,7 @@ def shell(
     <div><h4>Learn</h4><a href="{prefix}news.html">AI radar</a><a href="{prefix}buyers-guides.html">Buyer guides</a><a href="{prefix}about.html">Methodology</a></div>
     <div><h4>Company</h4><a href="{prefix}partners.html">For partners</a><a href="{prefix}privacy.html">Privacy</a><a href="mailto:hello@artificial.one">hello@artificial.one</a></div>
   </div></footer>
-  <aside class="stack-panel" data-stack-panel aria-label="My AI Stack"><div class="panel-head"><h2>My AI Stack</h2><button class="close-btn" type="button" data-close-panel aria-label="Close">×</button></div><p>Tools you saved on this device. No account required.</p><div class="saved-list" data-stack-list></div></aside>
+  <aside class="stack-panel" data-stack-panel aria-label="My AI Stack"><div class="panel-head"><h2>My AI Stack</h2><button class="close-btn" type="button" data-close-panel aria-label="Close">×</button></div><p>Tools, watched deals and recent decisions saved on this device. No account required.</p><div class="saved-list" data-stack-list></div><div class="panel-actions"><button class="btn btn-secondary btn-small" type="button" data-share-stack>Copy shareable stack</button></div><section class="panel-section"><h3>Deal alerts</h3><div data-watch-alerts><p class="empty compact">The elephant is listening for pricing changes.</p></div></section><section class="panel-section"><h3>Recent comparisons</h3><div data-comparison-history><p class="empty compact">Run a match to build your decision history.</p></div></section></aside>
   <div class="compare-drawer" data-compare-drawer><div class="compare-bar"><strong>Compare</strong><div class="compare-items" data-compare-items></div><button class="btn btn-small" type="button" data-open-compare>Compare now</button><button class="icon-btn" type="button" data-clear-compare aria-label="Clear comparison">×</button></div></div>
   <div class="modal-backdrop" data-compare-modal role="dialog" aria-modal="true" aria-label="Tool comparison"><div class="compare-modal"><div class="panel-head"><h2>Side-by-side decision</h2><button class="close-btn" type="button" data-close-panel aria-label="Close">×</button></div><div class="comparison-grid" data-comparison-grid></div><div class="loop-actions"><button class="btn btn-secondary btn-small" type="button" data-share-compare>Copy share link</button></div></div></div>
   <script src="{prefix}assets/decision-engine.js" defer></script>
@@ -305,15 +305,43 @@ def public_offer_data(offer: dict[str, Any], prefix: str = "") -> dict[str, Any]
     cta = str(offer.get("cta_label") or f"Check {offer['name']}")
     if cta.casefold().startswith("explore "):
         cta = f"Check {offer['name']} options"
+    official_url = next((str(item.get("url")) for item in offer.get("evidence", []) if item.get("url")), str(offer["tracking_url"]))
+    host = urlparse(official_url).netloc.removeprefix("www.")
+    trial_text = "Free trial availability varies"
+    trial_source = " ".join((str(offer.get("cta_label", "")), str(offer.get("offer_label", "")), str(offer.get("pricing_note", "")), str(offer.get("tracking_url", "")))).casefold()
+    if any(term in trial_source for term in ("free trial", "start free", "try free", "free plan")):
+        trial_text = "Free trial or plan available"
+    label = str(offer["offer_label"])
+    price_text = label if re.search(r"(?:[$£€]|\bfree\b|\btrial\b|\d+\s*%|\blifetime\b)", label, re.I) else "See current plans"
+    use_cases = outcome_use_cases(offer)
     return {
         "id": offer["id"], "slug": offer["slug"], "name": offer["name"],
         "category": offer["category"], "summary": offer["summary"],
         "best": offer["best_for"], "offer": offer["pricing_note"],
         "why": offer["why_consider"], "limit": offer["watch_out"],
         "verified": offer["terms_verified_at"], "featured": bool(offer.get("featured")),
-        "useCases": offer["use_cases"], "affiliateUrl": offer["tracking_url"],
+        "useCases": use_cases, "affiliateUrl": offer["tracking_url"],
         "url": f"{prefix}partner-offers/{offer['slug']}.html", "cta": cta, "color": color,
+        "price": price_text, "trial": trial_text, "officialUrl": official_url,
+        "logoUrl": f"https://www.google.com/s2/favicons?domain={quote(host)}&sz=128",
+        "screenshotUrl": f"https://s.wordpress.com/mshots/v1/{quote(official_url, safe='')}?w=1000",
     }
+
+
+def outcome_use_cases(offer: dict[str, Any]) -> list[str]:
+    """Always give a buyer three outcome-oriented paths without inventing product claims."""
+    values = [str(item).strip() for item in offer.get("use_cases", []) if str(item).strip()]
+    fallbacks = [
+        f"Evaluate {offer['name']} against your current workflow",
+        f"Compare {offer['name']} with alternatives before buying",
+        f"Validate the current plan, limits and total cost",
+    ]
+    for value in fallbacks:
+        if len(values) >= 3:
+            break
+        if value not in values:
+            values.append(value)
+    return values[:3]
 
 
 def catalog_script(offers: list[dict[str, Any]], prefix: str = "") -> str:
@@ -325,12 +353,13 @@ def offer_card(offer: dict[str, Any], placement: str = "offer-hub") -> str:
     data = public_offer_data(offer)
     mark = "".join(word[:1] for word in str(offer["name"]).split()[:2]).upper()
     search = " ".join([str(offer["name"]), str(offer["category"]), str(offer["best_for"]), *offer["use_cases"]]).casefold()
-    return f'''<article class="tool-card" data-tool-card data-id="{esc(offer['id'])}" data-category="{esc(offer['category'])}" data-search="{esc(search)}" style="--brand:{data['color']}">
-      <div class="card-top"><span class="tool-mark" aria-hidden="true">{esc(mark)}</span><span class="fit-score">Verified<small>{esc(offer['terms_verified_at'])}</small></span></div>
+    return f'''<article class="tool-card" data-tool-card data-id="{esc(offer['id'])}" data-category="{esc(offer['category'])}" data-search="{esc(search)}" data-new-date="{esc(offer['terms_verified_at'])}" style="--brand:{data['color']}">
+      <div class="product-visual product-visual-card"><img src="{esc(data['screenshotUrl'])}" alt="{esc(offer['name'])} product website preview" width="1000" height="563" loading="lazy" decoding="async"><span class="product-logo"><img src="{esc(data['logoUrl'])}" alt="{esc(offer['name'])} logo" width="48" height="48" loading="lazy" decoding="async"><b aria-hidden="true">{esc(mark)}</b></span></div>
+      <div class="card-top"><span class="new-badge" hidden>New since your last visit</span><span class="fit-score">Verified<small>{esc(offer['terms_verified_at'])}</small></span></div>
       <p class="category">{esc(offer['category'])}</p><h2>{esc(offer['name'])}</h2>
-      <p class="summary">{esc(offer['summary'])}</p><p class="reason"><strong>Best for:</strong> {esc(offer['best_for'])}</p>
+      <p class="summary">{esc(offer['summary'])}</p><p class="reason"><strong>Best for:</strong> {esc(offer['best_for'])}</p><p class="outcome"><strong>Outcome:</strong> {esc(data['useCases'][0])}</p>
       <p class="limitation"><strong>Know first:</strong> {esc(offer['watch_out'])}</p>
-      <div class="meta-row"><span class="tag">{esc(offer['offer_label'])}</span><span class="tag verified">Terms checked</span></div>
+      <div class="meta-row"><span class="tag">{esc(data['price'])}</span><span class="tag">{esc(data['trial'])}</span><span class="tag verified">Terms checked</span></div>
       <div class="card-actions"><a class="btn btn-small" href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer['id'])}" data-placement="{esc(placement)}">{esc(data['cta'])} →</a><button class="icon-btn compare-add" type="button" data-id="{esc(offer['id'])}" aria-label="Compare {esc(offer['name'])}">⇄</button><button class="icon-btn stack-add" type="button" data-id="{esc(offer['id'])}" aria-label="Save {esc(offer['name'])}">＋</button><a class="details link-subtle" href="partner-offers/{esc(offer['slug'])}.html">Full verdict</a></div>
     </article>'''
 
@@ -419,7 +448,7 @@ def render_finder(offers: list[dict[str, Any]]) -> str:
     )
 
 
-def render_homepage_picks(offers: list[dict[str, Any]], limit: int = 4) -> str:
+def render_homepage_picks(offers: list[dict[str, Any]], limit: int = 6) -> str:
     cards = "\n".join(
         f'''              <article className="rounded-2xl border border-slate-700 bg-slate-900 p-7">
                 <p className="text-xs font-bold uppercase tracking-widest text-emerald-300">{esc(offer['category'])}</p>
@@ -657,7 +686,7 @@ def render_finder(offers: list[dict[str, Any]]) -> str:
     )
 
 
-def render_homepage_picks(offers: list[dict[str, Any]], limit: int = 4) -> str:
+def render_homepage_picks(offers: list[dict[str, Any]], limit: int = 6) -> str:
     cards = "\n".join(offer_card(offer, "homepage-pick") for offer in offers[:limit])
     return f"{HOME_PICKS_START}\n{cards}\n{HOME_PICKS_END}"
 
@@ -671,6 +700,7 @@ def update_homepage_picks(source: str, offers: list[dict[str, Any]]) -> str:
     if not picks_pattern.search(source):
         raise OfferValidationError("Homepage revenue pick markers are missing")
     source = picks_pattern.sub(render_homepage_picks(offers), source, count=1)
+    source = re.sub(r"<strong>\d+</strong> verified partner offers", f"<strong>{len(offers)}</strong> verified partner offers", source, count=1)
     catalog_pattern = re.compile(re.escape(HOME_CATALOG_START) + r".*?" + re.escape(HOME_CATALOG_END), re.S)
     if not catalog_pattern.search(source):
         raise OfferValidationError("Homepage matcher catalog markers are missing")
@@ -684,7 +714,7 @@ def render_offer(
     """Render a reusable decision page designed to answer fit before the affiliate click."""
     title, description = search_snippet(offer)
     data = public_offer_data(offer, "../")
-    use_cases = [str(item) for item in offer["use_cases"]]
+    use_cases = outcome_use_cases(offer)
     use_case_buttons = "".join(
         f'<button class="tab{(" is-active" if index == 0 else "")}" type="button" data-tab data-content="{esc(item)}">Use case {index + 1}</button>'
         for index, item in enumerate(use_cases)
@@ -694,10 +724,7 @@ def render_offer(
         for item in offer["evidence"]
     )
     related = related_offers or []
-    related_cards = "".join(
-        f'''<article class="tool-card" style="--brand:{public_offer_data(item)['color']}"><p class="category">{esc(item['category'])}</p><h3>{esc(item['name'])}</h3><p class="summary">{esc(item['best_for'])}</p><div class="card-actions"><a class="btn btn-small" href="{esc(item['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(item['id'])}" data-placement="offer-alternative">Check options →</a><button class="icon-btn compare-add" type="button" data-id="{esc(item['id'])}" aria-label="Compare {esc(item['name'])}">⇄</button><a class="details link-subtle" href="{esc(item['slug'])}.html">Verdict</a></div></article>'''
-        for item in related[:2]
-    )
+    related_cards = "".join(offer_card(item, "offer-alternative").replace('href="partner-offers/', 'href="') for item in related[:2])
     intent_links = "".join(
         f'<a href="{esc(url)}">{esc(label)} →</a>' for url, label in (search_links or [])
     )
@@ -714,8 +741,8 @@ def render_offer(
     ]
     faq_html = "".join(f'<details><summary>{esc(question)}</summary><p>{esc(answer)}</p></details>' for question, answer in faq)
     content = f'''
-    <section class="offer-hero"><div class="container offer-grid"><div><p class="eyebrow">{esc(offer['category'])} · independent fit check</p><h1>{esc(offer['name'])}: <span class="gradient-text">is it right for your job?</span></h1><p class="lead">{esc(offer['summary'])}</p><div class="verdict"><strong>Quick verdict</strong><p>{esc(offer['why_consider'])}</p></div><div class="loop-actions"><button class="btn btn-secondary compare-add" type="button" data-id="{esc(offer['id'])}">⇄ Add to comparison</button><button class="btn btn-secondary stack-add" type="button" data-id="{esc(offer['id'])}">＋ Save to My Stack</button><button class="btn btn-secondary" type="button" data-watch-offer="{esc(offer['id'])}">Watch this deal</button></div></div>
-      <aside class="surface offer-aside"><p class="eyebrow">Current pricing note</p><h2>{esc(offer['offer_label'])}</h2><p class="price-note">{esc(offer['pricing_note'])}</p><a class="btn btn-acid" href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer['id'])}" data-placement="offer-page-primary">{esc(data['cta'])} →</a><p class="verified-line">✓ Terms checked {esc(offer['terms_verified_at'])}</p><p class="disclosure">Affiliate link. We may earn a commission; your price does not increase.</p></aside>
+    <section class="offer-hero"><div class="container offer-grid"><div><p class="eyebrow">{esc(offer['category'])} · independent fit check</p><div class="offer-product-visual product-visual"><img src="{esc(data['screenshotUrl'])}" alt="{esc(offer['name'])} product website screenshot" width="1000" height="563" loading="lazy" decoding="async"><span class="product-logo"><img src="{esc(data['logoUrl'])}" alt="{esc(offer['name'])} logo" width="56" height="56" decoding="async"><b aria-hidden="true">{esc(offer['name'][:2])}</b></span></div><h1>{esc(offer['name'])}: <span class="gradient-text">is it right for your job?</span></h1><p class="lead">{esc(offer['summary'])}</p><div class="verdict"><strong>One-line verdict</strong><p>{esc(offer['why_consider'])}</p></div><div class="loop-actions"><button class="btn btn-secondary compare-add" type="button" data-id="{esc(offer['id'])}">⇄ Add to comparison</button><button class="btn btn-secondary stack-add" type="button" data-id="{esc(offer['id'])}">＋ Save to My Stack</button><button class="btn btn-secondary" type="button" data-watch-offer="{esc(offer['id'])}">Watch this deal</button></div></div>
+      <aside class="surface offer-aside"><p class="eyebrow">Current buying facts</p><h2>{esc(data['price'])}</h2><dl class="buying-facts"><div><dt>Trial</dt><dd>{esc(data['trial'])}</dd></div><div><dt>Last verified</dt><dd>{esc(offer['terms_verified_at'])}</dd></div></dl><p class="price-note">{esc(offer['pricing_note'])}</p><a class="btn btn-acid" href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer['id'])}" data-placement="offer-page-primary">{esc(data['cta'])} →</a><p class="verified-line">✓ Product, destination and terms checked {esc(offer['terms_verified_at'])}</p><p class="disclosure">Affiliate link. We may earn a commission; your price does not increase.</p></aside>
     </div></section>
     <section class="container section-tight"><div class="content-grid">
       <article class="surface content-card"><h2>Best for</h2><p>{esc(offer['best_for'])}</p></article>

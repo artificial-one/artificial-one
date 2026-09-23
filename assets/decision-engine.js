@@ -10,6 +10,7 @@
   };
   var catalog = [];
   var compareItems = [];
+  var previousVisit = "";
 
   function read(key, fallback) {
     try { return JSON.parse(localStorage.getItem(key)) || fallback; }
@@ -117,16 +118,24 @@
     return String(name || "AI").split(/\s+/).slice(0,2).map(function (part) { return part.charAt(0); }).join("");
   }
 
-  function cardMarkup(item, fit, placement) {
+  function imageMarkup(item, kind) {
+    var screenshot = item.screenshotUrl ? '<img src="' + text(item.screenshotUrl) + '" alt="' + text(item.name) + ' product website preview" width="1000" height="563" loading="lazy" decoding="async">' : '';
+    var logo = item.logoUrl ? '<img src="' + text(item.logoUrl) + '" alt="' + text(item.name) + ' logo" width="48" height="48" loading="lazy" decoding="async">' : '';
+    return '<div class="product-visual product-visual-' + text(kind || "card") + '">' + screenshot + '<span class="product-logo">' + logo + '<b aria-hidden="true">' + text(initials(item.name)) + '</b></span></div>';
+  }
+
+  function cardMarkup(item, fit, placement, position) {
     var verified = item.verified ? "Verified " + text(item.verified) : "Partner verified";
     var brand = item.color || "#8b5cf6";
-    return '<article class="tool-card" data-tool-card data-id="' + text(item.id) + '" style="--brand:' + text(brand) + '">' +
-      '<div class="card-top"><span class="tool-mark" aria-hidden="true">' + text(initials(item.name)) + '</span><span class="fit-score">' + fit + '%<small>fit score</small></span></div>' +
+    var winner = position === 0 ? '<span class="winner-badge">Recommended winner</span>' : '';
+    return '<article class="tool-card' + (position === 0 ? ' is-winner' : '') + '" data-tool-card data-id="' + text(item.id) + '" style="--brand:' + text(brand) + '">' + imageMarkup(item, "card") +
+      '<div class="card-top">' + winner + '<span class="fit-score"><span class="fit-number" style="--fit:' + fit + '">' + fit + '%</span><small>fit score</small></span></div>' +
       '<p class="category">' + text(item.category) + '</p><h3>' + text(item.name) + '</h3>' +
       '<p class="summary">' + text(item.summary) + '</p>' +
-      '<p class="reason"><strong>Why it fits:</strong> ' + text(item.why || item.best) + '</p>' +
+      '<p class="reason"><strong>' + (position === 0 ? 'Why it wins:' : 'Why it fits:') + '</strong> ' + text(item.why || item.best) + '</p>' +
+      '<p class="outcome"><strong>Outcome:</strong> ' + text((item.useCases || [])[0] || item.best) + '</p>' +
       '<p class="limitation"><strong>Know first:</strong> ' + text(item.limit || item.offer) + '</p>' +
-      '<div class="meta-row"><span class="tag">' + text(item.offer) + '</span><span class="tag verified">' + verified + '</span></div>' +
+      '<div class="meta-row"><span class="tag">' + text(item.price || item.offer) + '</span><span class="tag">' + text(item.trial || "Check trial status") + '</span><span class="tag verified">' + verified + '</span></div>' +
       '<div class="card-actions"><a class="btn btn-small" href="' + text(item.affiliateUrl) + '" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="' + text(item.id) + '" data-placement="' + text(placement) + '">' + text(item.cta || ("Check " + item.name)) + ' →</a>' +
       '<button class="icon-btn compare-add" type="button" data-id="' + text(item.id) + '" aria-label="Compare ' + text(item.name) + '">⇄</button>' +
       '<button class="icon-btn stack-add" type="button" data-id="' + text(item.id) + '" aria-label="Save ' + text(item.name) + '">＋</button>' +
@@ -140,10 +149,11 @@
     var grid = document.querySelector("[data-matcher-results-grid]");
     var area = document.querySelector("[data-matcher-results]");
     if (!grid || !area) return;
-    grid.innerHTML = ranked.map(function (entry) { return cardMarkup(entry.item, entry.score, "matcher-result"); }).join("");
+    grid.innerHTML = ranked.map(function (entry, position) { return cardMarkup(entry.item, entry.score, "matcher-result", position); }).join("");
     area.classList.add("is-visible");
     area.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
     bindDynamic(area);
+    initCardCtaExperiment();
     ranked.forEach(function (entry, position) {
       send("recommendation_impression", { offer_id: entry.item.id, position: position + 1, score: entry.score, mission: mission, query: query });
     });
@@ -151,6 +161,7 @@
     var history = read(STORE.history, []);
     history.unshift({ at: new Date().toISOString(), query: query, mission: mission, ids: ranked.map(function (entry) { return entry.item.id; }) });
     write(STORE.history, history.slice(0,12));
+    renderHistory();
   }
 
   function initMatcher() {
@@ -191,7 +202,7 @@
     var target = panel.querySelector("[data-stack-list]");
     var ids = read(STORE.stack, []);
     if (!ids.length) {
-      target.innerHTML = '<p class="empty">Your stack is empty. Save useful tools as you browse.</p>';
+      target.innerHTML = '<div class="empty-state"><span class="elephant-state" aria-hidden="true">🐘</span><p>Your stack is empty. Save useful tools as you browse.</p></div>';
       return;
     }
     target.innerHTML = ids.map(function (id) {
@@ -201,6 +212,48 @@
     }).join("");
     Array.prototype.forEach.call(target.querySelectorAll(".stack-remove"), function (button) {
       button.addEventListener("click", function () { toggleStackItem(button.dataset.id, false); });
+    });
+  }
+
+  function initHomePicks() {
+    var target = document.querySelector("[data-home-picks]");
+    if (!target || !catalog.length) return;
+    var history = read(STORE.history, []);
+    var latest = history[0] || {};
+    var saved = read(STORE.stack, []);
+    var watched = read(STORE.watch, []);
+    var ranked = catalog.map(function (item, index) {
+      var value = score(item, latest.query || "", latest.mission || "", index);
+      if (saved.indexOf(item.id) >= 0) value += 5;
+      if (watched.indexOf(item.id) >= 0) value += 3;
+      var age = Math.max(0, (Date.now() - Date.parse(item.verified || "2000-01-01")) / 86400000);
+      value += Math.max(0, 4 - Math.floor(age / 30));
+      return { item: item, score: Math.min(98, value) };
+    }).sort(function (a,b) { return b.score - a.score; }).slice(0,6);
+    target.innerHTML = ranked.map(function (entry) { return cardMarkup(entry.item, entry.score, "homepage-pick"); }).join("");
+    bindDynamic(target);
+  }
+
+  function renderHistory() {
+    var target = document.querySelector("[data-comparison-history]");
+    if (!target) return;
+    var history = read(STORE.history, []).slice(0,4);
+    if (!history.length) {
+      target.innerHTML = '<p class="empty compact">Run a match to build your decision history.</p>';
+      return;
+    }
+    target.innerHTML = history.map(function (entry, index) {
+      var names = (entry.ids || []).map(function (id) { var item = itemById(id); return item && item.name; }).filter(Boolean);
+      return '<button class="history-item" type="button" data-history-index="' + index + '"><strong>' + text(entry.query || entry.mission || "Tool shortlist") + '</strong><small>' + text(names.join(" · ")) + '</small></button>';
+    }).join("");
+    Array.prototype.forEach.call(target.querySelectorAll("[data-history-index]"), function (button) {
+      button.addEventListener("click", function () {
+        var entry = history[Number(button.dataset.historyIndex)];
+        if (!entry) return;
+        write(STORE.compare, (entry.ids || []).slice(0,2));
+        renderCompareDrawer();
+        openComparison();
+      });
     });
   }
 
@@ -244,7 +297,7 @@
     target.innerHTML = compareItems.map(function (id) {
       var item = itemById(id);
       if (!item) return "";
-      return '<article class="comparison-column"><span class="tool-mark">' + text(initials(item.name)) + '</span><h3>' + text(item.name) + '</h3><dl><dt>Best for</dt><dd>' + text(item.best) + '</dd><dt>Current pricing note</dt><dd>' + text(item.offer) + '</dd><dt>Why consider it</dt><dd>' + text(item.why) + '</dd><dt>Limitation</dt><dd>' + text(item.limit) + '</dd><dt>Verified</dt><dd>' + text(item.verified) + '</dd></dl><a class="btn" href="' + text(item.affiliateUrl) + '" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="' + text(item.id) + '" data-placement="compare-modal">' + text(item.cta) + ' →</a></article>';
+      return '<article class="comparison-column">' + imageMarkup(item, "compare") + '<h3>' + text(item.name) + '</h3><dl><dt>Best for</dt><dd>' + text(item.best) + '</dd><dt>Price / offer</dt><dd>' + text(item.price || item.offer) + '</dd><dt>Trial</dt><dd>' + text(item.trial || "Check current availability") + '</dd><dt>Why consider it</dt><dd>' + text(item.why) + '</dd><dt>Limitation</dt><dd>' + text(item.limit) + '</dd><dt>Verified</dt><dd>' + text(item.verified) + '</dd></dl><a class="btn" href="' + text(item.affiliateUrl) + '" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="' + text(item.id) + '" data-placement="compare-modal">' + text(item.cta) + ' →</a></article>';
     }).join("");
     modal.classList.add("is-open");
     modal.querySelector(".close-btn").focus();
@@ -283,6 +336,15 @@
       share.textContent = "Link copied";
       send("compare_share", { offer_ids: compareItems.join(",") });
     });
+    var shareStack = document.querySelector("[data-share-stack]");
+    if (shareStack) shareStack.addEventListener("click", function () {
+      var ids = read(STORE.stack, []);
+      var url = new URL(location.origin + "/ai-tool-finder.html");
+      url.searchParams.set("stack", ids.join(","));
+      if (navigator.clipboard) navigator.clipboard.writeText(url.toString());
+      shareStack.textContent = ids.length ? "Stack link copied" : "Empty stack link copied";
+      send("stack_share", { offer_ids: ids.join(",") });
+    });
     var clear = document.querySelector("[data-clear-compare]");
     if (clear) clear.addEventListener("click", function () { write(STORE.compare, []); renderCompareDrawer(); });
     document.addEventListener("keydown", function (event) {
@@ -318,12 +380,27 @@
     update();
   }
 
+  function radarMarkup(item) {
+    return '<a class="news-item" href="' + text(item.url || "news.html") + '" data-content-route data-placement="home-news-radar" data-new-date="' + text(item.date || "") + '"><time>' + text(item.label || "New") + '</time><strong>' + text(item.title) + '</strong><small>' + text(item.kind || "AI news") + ' →</small></a>';
+  }
+
   function initNews() {
     var target = document.querySelector("[data-news-radar]");
     if (!target || !Array.isArray(window.AI1_NEWS_ITEMS)) return;
-    target.innerHTML = window.AI1_NEWS_ITEMS.slice(0,4).map(function (item) {
-      return '<a class="news-item" href="' + text(item.related && item.related.url ? item.related.url : "news.html") + '" data-content-route data-placement="home-news-radar"><time>' + text(item.display_date || "New") + '</time><strong>' + text(item.title) + '</strong><small>' + text(item.category || item.source) + ' →</small></a>';
-    }).join("");
+    var news = window.AI1_NEWS_ITEMS.slice(0,3).map(function (item) {
+      return { title: item.title, url: item.related && item.related.url ? item.related.url : "news.html", label: item.display_date || "New", kind: item.category || item.source, date: String(item.published_at || "").slice(0,10) };
+    });
+    var newest = catalog.slice().sort(function (a,b) { return String(b.verified || "").localeCompare(String(a.verified || "")); }).slice(0,2).map(function (item) {
+      return { title: item.name + " joined the verified decision engine", url: item.url, label: item.verified, kind: "New tool", date: item.verified };
+    });
+    fetch("/data/offer_change_alerts.json", { credentials: "same-origin", cache: "no-cache" }).then(function (response) { return response.ok ? response.json() : { alerts: [] }; }).then(function (payload) {
+      var changes = (payload.alerts || []).slice(0,2).map(function (alert) {
+        var item = itemById(alert.offer_id);
+        return { title: (item ? item.name : "A tracked tool") + " pricing or availability changed", url: item ? item.url : "offer-updates.html", label: alert.detected_on, kind: "Price / plan change", date: alert.detected_on };
+      });
+      target.innerHTML = changes.concat(newest, news).slice(0,6).map(radarMarkup).join("");
+      initNewVisit();
+    }).catch(function () { target.innerHTML = newest.concat(news).slice(0,6).map(radarMarkup).join(""); });
   }
 
   function initCalculator() {
@@ -374,20 +451,75 @@
         send("watchlist_add", { offer_id: id });
       });
     });
+    var watched = read(STORE.watch, []);
+    var target = document.querySelector("[data-watch-alerts]");
+    if (!target || !watched.length || !window.fetch) return;
+    fetch("/data/offer_change_alerts.json", { credentials: "same-origin", cache: "no-cache" }).then(function (response) { return response.ok ? response.json() : { alerts: [] }; }).then(function (payload) {
+      var seen = read("ai1_seen_alerts", []);
+      var alerts = (payload.alerts || []).filter(function (alert) { return watched.indexOf(alert.offer_id) >= 0; }).filter(function (alert, index, all) { return all.findIndex(function (item) { return item.offer_id === alert.offer_id; }) === index; });
+      if (!alerts.length) return;
+      target.innerHTML = alerts.map(function (alert) {
+        var item = itemById(alert.offer_id);
+        var key = alert.offer_id + ":" + alert.detected_on;
+        return '<a class="alert-item' + (seen.indexOf(key) < 0 ? ' is-new' : '') + '" href="' + text(item ? item.url : "offer-updates.html") + '"><span class="elephant-state" aria-hidden="true">🐘</span><span><strong>' + text(item ? item.name : "Tracked tool") + ' changed</strong><small>' + text(alert.detected_on) + ' · Recheck price or availability</small></span></a>';
+      }).join("");
+      write("ai1_seen_alerts", alerts.map(function (alert) { return alert.offer_id + ":" + alert.detected_on; }));
+    }).catch(function () {});
   }
 
   function initNewVisit() {
-    var previous = read(STORE.visit, "");
     var badges = document.querySelectorAll("[data-new-date]");
-    if (previous) Array.prototype.forEach.call(badges, function (badge) { if (badge.dataset.newDate > previous.slice(0,10)) badge.hidden = false; });
+    var recent = [];
+    if (previousVisit) Array.prototype.forEach.call(badges, function (badge) {
+      if (badge.dataset.newDate > previousVisit.slice(0,10)) {
+        badge.hidden = false;
+        var card = badge.closest("[data-tool-card]");
+        if (card && recent.indexOf(card.dataset.id) < 0) recent.push(card.dataset.id);
+      }
+    });
+    var target = document.querySelector("[data-new-since-list]");
+    if (target && recent.length) target.innerHTML = recent.slice(0,4).map(function (id) {
+      var item = itemById(id);
+      return item ? '<a class="new-since-item" href="' + text(item.url) + '"><strong>' + text(item.name) + '</strong><small>Verified ' + text(item.verified) + '</small></a>' : '';
+    }).join("");
     write(STORE.visit, new Date().toISOString());
+  }
+
+  function initOptIns() {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-email-opt-in]"), function (link) {
+      link.addEventListener("click", function () { send("email_opt_in", { placement: "weekly-shortlist" }); });
+    });
+  }
+
+  function initCardCtaExperiment() {
+    if (!window.fetch) return;
+    fetch("/data/conversion_strategy.json", { credentials: "same-origin", cache: "no-cache" }).then(function (response) { return response.ok ? response.json() : {}; }).then(function (strategy) {
+      var cards = strategy.cards || {};
+      var hash = 0;
+      var source = anonymousSession() + ":" + location.pathname;
+      for (var index = 0; index < source.length; index += 1) hash = ((hash << 5) - hash + source.charCodeAt(index)) | 0;
+      var winner = cards.mode === "winner" && (cards.winner === "a" || cards.winner === "b") ? cards.winner : null;
+      var key = winner ? (Math.abs(hash) % 10 ? winner : (winner === "a" ? "b" : "a")) : (Math.abs(hash) % 2 ? "a" : "b");
+      var template = cards.variants && cards.variants[key] && cards.variants[key].cta;
+      if (!template) return;
+      Array.prototype.forEach.call(document.querySelectorAll(".tool-card a[data-affiliate-offer]"), function (link) {
+        var item = itemById(link.dataset.offerId);
+        if (!item) return;
+        link.textContent = template.replace("{name}", item.name) + " →";
+        link.dataset.placement = (link.dataset.placement || "card") + "-card-cro-" + key;
+      });
+    }).catch(function () {});
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     parseCatalog();
-    var queryCompare = new URLSearchParams(location.search).get("compare");
+    previousVisit = read(STORE.visit, "");
+    var params = new URLSearchParams(location.search);
+    var queryCompare = params.get("compare");
     if (queryCompare) write(STORE.compare, queryCompare.split(",").filter(Boolean).slice(0,2));
-    initNav(); initMatcher(); initCatalogFilters(); initPanels(); initNews(); initCalculator(); initTabs(); initWatch(); initNewVisit();
-    bindDynamic(document); renderStack(); renderCompareDrawer();
+    var queryStack = params.get("stack");
+    if (queryStack) write(STORE.stack, queryStack.split(",").filter(function (id) { return !!itemById(id); }).slice(0,20));
+    initNav(); initMatcher(); initHomePicks(); initCatalogFilters(); initPanels(); initNews(); initCalculator(); initTabs(); initWatch(); initNewVisit(); initOptIns(); initCardCtaExperiment();
+    bindDynamic(document); renderStack(); renderHistory(); renderCompareDrawer();
   });
 })();

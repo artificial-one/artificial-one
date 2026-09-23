@@ -190,6 +190,7 @@ def reduce_affiliate_click_results(
     media: Counter[str] = Counter()
     campaigns: Counter[str] = Counter()
     landing_pages: Counter[str] = Counter()
+    metrics: Counter[str] = Counter()
     unique_daily_sessions = 0
     for index, _day in enumerate(days):
         hash_result = payload[index * 2].get("result", []) if index * 2 < len(payload) else []
@@ -198,7 +199,13 @@ def reduce_affiliate_click_results(
             fields = iter(hash_result)
             for field, value in zip(fields, fields):
                 name = str(field)
-                count = _integer(value)
+                if name.startswith("metric:") and name.endswith(":sum"):
+                    try:
+                        count = float(value)
+                    except (TypeError, ValueError):
+                        count = 0
+                else:
+                    count = _integer(value)
                 if name == "total":
                     totals["total"] += count
                 elif name.startswith("offer:"):
@@ -215,6 +222,8 @@ def reduce_affiliate_click_results(
                     campaigns[name[9:]] += count
                 elif name.startswith("landing:"):
                     landing_pages[name[8:]] += count
+                elif name.startswith("metric:"):
+                    metrics[name[7:]] += count
         unique_daily_sessions += _integer(session_result)
     return {
         "window_days": len(days),
@@ -227,6 +236,7 @@ def reduce_affiliate_click_results(
         "by_medium": dict(media.most_common(20)),
         "by_campaign": dict(campaigns.most_common(20)),
         "by_landing_page": dict(landing_pages.most_common(20)),
+        "metrics": dict(metrics),
     }
 
 
@@ -240,7 +250,12 @@ def fetch_affiliate_events(
     stream: str,
     days: int = CLICK_WINDOW_DAYS,
 ) -> dict[str, Any]:
-    if stream not in {"clicks", "impressions", "visits", "route_clicks", "route_impressions"}:
+    if stream not in {
+        "clicks", "impressions", "visits", "route_clicks", "route_impressions",
+        "matcher_starts", "matcher_completions", "recommendation_impressions",
+        "email_opt_ins", "watchlist_adds", "returning_visits", "web_vitals",
+        "stack_shares",
+    }:
         raise PartnerStackError(f"Unsupported affiliate event stream: {stream}")
     end = datetime.now(timezone.utc).date()
     date_keys = [(end - timedelta(days=offset)).isoformat() for offset in range(days)]

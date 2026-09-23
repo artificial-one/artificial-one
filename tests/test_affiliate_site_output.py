@@ -109,12 +109,28 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         self.assertIn("matcher-catalog:start", homepage)
         for event in (
             "matcher_start", "matcher_complete", "recommendation_impression",
-            "compare_add", "stack_save", "watchlist_add",
+            "compare_add", "stack_save", "stack_share", "watchlist_add", "email_opt_in",
         ):
             self.assertIn(event, engine)
         endpoint = (ROOT / "api" / "affiliate-event.js").read_text(encoding="utf-8")
         self.assertIn('matcher_complete: "matcher_completions"', endpoint)
         self.assertIn('watchlist_add: "watchlist_adds"', endpoint)
+        self.assertIn('web_vital: "web_vitals"', endpoint)
+
+    def test_homepage_exposes_complete_decision_and_return_loop(self):
+        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        engine = (ROOT / "assets" / "decision-engine.js").read_text(encoding="utf-8")
+        self.assertIn("Compare two tools", homepage)
+        self.assertIn("pricing checks", homepage)
+        self.assertIn("data-new-since-list", homepage)
+        self.assertIn("data-share-stack", homepage)
+        self.assertIn("Recommended winner", engine)
+        self.assertIn("offer_change_alerts.json", engine)
+
+    def test_imported_offer_copy_is_buyer_facing(self):
+        serialized = json.dumps(self.registry).casefold()
+        for phrase in ("earn up to 50%", "affiliate support", "affiliate terms model", "strong fit for affiliates"):
+            self.assertNotIn(phrase, serialized)
 
 
 if __name__ == "__main__":
