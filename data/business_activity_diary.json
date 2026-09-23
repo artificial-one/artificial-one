@@ -2,9 +2,765 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-23T08:54:20+02:00",
+  "last_activity_at": "2026-09-23T09:01:58+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:social_creatives",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "social_creatives_updated",
+      "summary": "Created or refreshed 9 social-media creative assets.",
+      "details": [
+        "images/social-cards/elevenlabs.jpg",
+        "images/social-cards/kartra.jpg",
+        "images/social-cards/kit.jpg",
+        "images/social-cards/learnworlds.jpg",
+        "images/social-cards/seamless.jpg",
+        "images/social-cards/unbounce.jpg",
+        "images/social-cards/volza.jpg",
+        "images/social-cards/wegic.jpg",
+        "images/social-cards/whatconverts.jpg"
+      ],
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:rss",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "distribution_updated",
+      "summary": "Published an updated RSS feed for content distribution.",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:newsletter",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "newsletter_edition_updated",
+      "summary": "Published a refreshed web newsletter edition (email sending is not currently connected).",
+      "url": "https://artificial.one/newsletter/latest.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:sponsor.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Sponsor artificial.one | AI Software Audience",
+      "url": "https://artificial.one/sponsor.html",
+      "path": "sponsor.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:sponsor-success.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Sponsorship intake | artificial.one",
+      "url": "https://artificial.one/sponsor-success.html",
+      "path": "sponsor-success.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/whatconverts-lead-attribution-vs-unbounce-landing-pages.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WhatConverts vs Unbounce: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/whatconverts-lead-attribution-vs-unbounce-landing-pages.html",
+      "path": "search-intent/whatconverts-lead-attribution-vs-unbounce-landing-pages.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/whatconverts-lead-attribution-pricing.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WhatConverts Pricing: Plans, Limits & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/whatconverts-lead-attribution-pricing.html",
+      "path": "search-intent/whatconverts-lead-attribution-pricing.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/whatconverts-lead-attribution-for-attribute-calls-and-forms-to-campaigns.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WhatConverts for Attribute calls and forms to campaigns: Fit, Limits & Alternatives | artificial.one",
+      "url": "https://artificial.one/search-intent/whatconverts-lead-attribution-for-attribute-calls-and-forms-to-campaigns.html",
+      "path": "search-intent/whatconverts-lead-attribution-for-attribute-calls-and-forms-to-campaigns.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/whatconverts-lead-attribution-alternatives.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best WhatConverts Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/whatconverts-lead-attribution-alternatives.html",
+      "path": "search-intent/whatconverts-lead-attribution-alternatives.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/wegic-ai-website-builder-vs-beautiful-ai-presentations.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Wegic vs Beautiful.ai: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/wegic-ai-website-builder-vs-beautiful-ai-presentations.html",
+      "path": "search-intent/wegic-ai-website-builder-vs-beautiful-ai-presentations.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/wegic-ai-website-builder-pricing.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Wegic Pricing: Plans, Limits & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/wegic-ai-website-builder-pricing.html",
+      "path": "search-intent/wegic-ai-website-builder-pricing.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/wegic-ai-website-builder-for-launch-a-small-business-website.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Wegic for Launch a small-business website: Fit, Limits & Alternatives | artificial.one",
+      "url": "https://artificial.one/search-intent/wegic-ai-website-builder-for-launch-a-small-business-website.html",
+      "path": "search-intent/wegic-ai-website-builder-for-launch-a-small-business-website.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/wegic-ai-website-builder-alternatives.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Wegic Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/wegic-ai-website-builder-alternatives.html",
+      "path": "search-intent/wegic-ai-website-builder-alternatives.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/unbounce-landing-pages-vs-whatconverts-lead-attribution.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Unbounce vs WhatConverts: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/unbounce-landing-pages-vs-whatconverts-lead-attribution.html",
+      "path": "search-intent/unbounce-landing-pages-vs-whatconverts-lead-attribution.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/unbounce-landing-pages-pricing.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Unbounce Pricing: Plans, Limits & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/unbounce-landing-pages-pricing.html",
+      "path": "search-intent/unbounce-landing-pages-pricing.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/unbounce-landing-pages-for-build-campaign-landing-pages.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Unbounce for Build campaign landing pages: Fit, Limits & Alternatives | artificial.one",
+      "url": "https://artificial.one/search-intent/unbounce-landing-pages-for-build-campaign-landing-pages.html",
+      "path": "search-intent/unbounce-landing-pages-for-build-campaign-landing-pages.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/unbounce-landing-pages-alternatives.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Unbounce Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/unbounce-landing-pages-alternatives.html",
+      "path": "search-intent/unbounce-landing-pages-alternatives.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/trainual-team-training-vs-hubstaff-time-tracking.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Trainual vs Hubstaff: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/trainual-team-training-vs-hubstaff-time-tracking.html",
+      "path": "search-intent/trainual-team-training-vs-hubstaff-time-tracking.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/omniseo-search-optimization-vs-rank-prompt-ai-visibility.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: OmniSEO vs Rank Prompt: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/omniseo-search-optimization-vs-rank-prompt-ai-visibility.html",
+      "path": "search-intent/omniseo-search-optimization-vs-rank-prompt-ai-visibility.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/learnworlds-course-platform-vs-alison-us-ca-software.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: LearnWorlds vs Alison US CA: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/learnworlds-course-platform-vs-alison-us-ca-software.html",
+      "path": "search-intent/learnworlds-course-platform-vs-alison-us-ca-software.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/learnworlds-course-platform-pricing.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: LearnWorlds Pricing: Plans, Limits & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/learnworlds-course-platform-pricing.html",
+      "path": "search-intent/learnworlds-course-platform-pricing.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: LearnWorlds for Launch a paid online course: Fit, Limits & Alternatives | artificial.one",
+      "url": "https://artificial.one/search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html",
+      "path": "search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/learnworlds-course-platform-alternatives.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best LearnWorlds Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/learnworlds-course-platform-alternatives.html",
+      "path": "search-intent/learnworlds-course-platform-alternatives.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/kit-creator-email-marketing-vs-unbounce-landing-pages.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kit vs Unbounce: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/kit-creator-email-marketing-vs-unbounce-landing-pages.html",
+      "path": "search-intent/kit-creator-email-marketing-vs-unbounce-landing-pages.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/kit-creator-email-marketing-pricing.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kit Pricing: Plans, Limits & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/kit-creator-email-marketing-pricing.html",
+      "path": "search-intent/kit-creator-email-marketing-pricing.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/kit-creator-email-marketing-for-launch-and-grow-a-newsletter.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kit for Launch and grow a newsletter: Fit, Limits & Alternatives | artificial.one",
+      "url": "https://artificial.one/search-intent/kit-creator-email-marketing-for-launch-and-grow-a-newsletter.html",
+      "path": "search-intent/kit-creator-email-marketing-for-launch-and-grow-a-newsletter.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/kit-creator-email-marketing-alternatives.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Kit Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/kit-creator-email-marketing-alternatives.html",
+      "path": "search-intent/kit-creator-email-marketing-alternatives.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/kartra-marketing-platform-vs-unbounce-landing-pages.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kartra vs Unbounce: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/kartra-marketing-platform-vs-unbounce-landing-pages.html",
+      "path": "search-intent/kartra-marketing-platform-vs-unbounce-landing-pages.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/kartra-marketing-platform-pricing.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kartra Pricing: Plans, Limits & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/kartra-marketing-platform-pricing.html",
+      "path": "search-intent/kartra-marketing-platform-pricing.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/kartra-marketing-platform-for-build-a-marketing-funnel.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kartra for Build a marketing funnel: Fit, Limits & Alternatives | artificial.one",
+      "url": "https://artificial.one/search-intent/kartra-marketing-platform-for-build-a-marketing-funnel.html",
+      "path": "search-intent/kartra-marketing-platform-for-build-a-marketing-funnel.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/kartra-marketing-platform-alternatives.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Kartra Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/kartra-marketing-platform-alternatives.html",
+      "path": "search-intent/kartra-marketing-platform-alternatives.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/foxit-pdf-software-vs-quicksigner-electronic-signatures.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Foxit vs QuickSigner: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/foxit-pdf-software-vs-quicksigner-electronic-signatures.html",
+      "path": "search-intent/foxit-pdf-software-vs-quicksigner-electronic-signatures.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Foxit vs eSign: Sign PDF DOCX Documents (iOS only): Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html",
+      "path": "search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/foxit-pdf-software-pricing.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Foxit Pricing: Plans, Limits & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/foxit-pdf-software-pricing.html",
+      "path": "search-intent/foxit-pdf-software-pricing.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Foxit for Edit and convert PDF documents: Fit, Limits & Alternatives | artificial.one",
+      "url": "https://artificial.one/search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html",
+      "path": "search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/foxit-pdf-software-alternatives.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Foxit Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/foxit-pdf-software-alternatives.html",
+      "path": "search-intent/foxit-pdf-software-alternatives.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/best-seo-visibility-tools.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best SEO & Visibility Tools: Reviews, Use Cases & Pricing | artificial.one",
+      "url": "https://artificial.one/search-intent/best-seo-visibility-tools.html",
+      "path": "search-intent/best-seo-visibility-tools.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/best-productivity-business-tools.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Productivity & Business Tools: Reviews, Use Cases & Pricing | artificial.one",
+      "url": "https://artificial.one/search-intent/best-productivity-business-tools.html",
+      "path": "search-intent/best-productivity-business-tools.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/best-documents-pdf-tools.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Documents & PDF Tools: Reviews, Use Cases & Pricing | artificial.one",
+      "url": "https://artificial.one/search-intent/best-documents-pdf-tools.html",
+      "path": "search-intent/best-documents-pdf-tools.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/beautiful-ai-presentations-vs-wegic-ai-website-builder.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Beautiful.ai vs Wegic: Features, Pricing & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/beautiful-ai-presentations-vs-wegic-ai-website-builder.html",
+      "path": "search-intent/beautiful-ai-presentations-vs-wegic-ai-website-builder.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/beautiful-ai-presentations-pricing.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Beautiful.ai Pricing: Plans, Limits & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/beautiful-ai-presentations-pricing.html",
+      "path": "search-intent/beautiful-ai-presentations-pricing.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/beautiful-ai-presentations-for-draft-sales-and-investor-presentations.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Beautiful.ai for Draft sales and investor presentations: Fit, Limits & Alternatives | artificial.one",
+      "url": "https://artificial.one/search-intent/beautiful-ai-presentations-for-draft-sales-and-investor-presentations.html",
+      "path": "search-intent/beautiful-ai-presentations-for-draft-sales-and-investor-presentations.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:search-intent/beautiful-ai-presentations-alternatives.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Beautiful.ai Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/beautiful-ai-presentations-alternatives.html",
+      "path": "search-intent/beautiful-ai-presentations-alternatives.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/whatconverts-lead-attribution.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WhatConverts: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/whatconverts-lead-attribution.html",
+      "path": "partner-offers/whatconverts-lead-attribution.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/wegic-ai-website-builder.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Wegic: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/wegic-ai-website-builder.html",
+      "path": "partner-offers/wegic-ai-website-builder.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/unbounce-landing-pages.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Unbounce: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/unbounce-landing-pages.html",
+      "path": "partner-offers/unbounce-landing-pages.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/seamless-ai-sales-intelligence.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Seamless.AI: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html",
+      "path": "partner-offers/seamless-ai-sales-intelligence.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/rank-prompt-ai-visibility.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Rank Prompt: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/rank-prompt-ai-visibility.html",
+      "path": "partner-offers/rank-prompt-ai-visibility.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/pinecone-vector-database.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Pinecone: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/pinecone-vector-database.html",
+      "path": "partner-offers/pinecone-vector-database.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/omniseo-search-optimization.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: OmniSEO: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/omniseo-search-optimization.html",
+      "path": "partner-offers/omniseo-search-optimization.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/learnworlds-course-platform.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: LearnWorlds: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/learnworlds-course-platform.html",
+      "path": "partner-offers/learnworlds-course-platform.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/kit-creator-email-marketing.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kit: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/kit-creator-email-marketing.html",
+      "path": "partner-offers/kit-creator-email-marketing.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/kartra-marketing-platform.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kartra: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/kartra-marketing-platform.html",
+      "path": "partner-offers/kartra-marketing-platform.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers/beautiful-ai-presentations.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Beautiful.ai: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/beautiful-ai-presentations.html",
+      "path": "partner-offers/beautiful-ai-presentations.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:partner-offers.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Verified AI Partner Offers | artificial.one",
+      "url": "https://artificial.one/partner-offers.html",
+      "path": "partner-offers.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:offer-updates.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Pricing and Plan Updates | artificial.one",
+      "url": "https://artificial.one/offer-updates.html",
+      "path": "offer-updates.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:news.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:index.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:decision-tools.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Free AI Tool Calculators and Stack Builder | artificial.one",
+      "url": "https://artificial.one/decision-tools.html",
+      "path": "decision-tools.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/whatconverts-lead-attribution-value-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WhatConverts ROI Calculator: Estimate Monthly Value | artificial.one",
+      "url": "https://artificial.one/calculators/whatconverts-lead-attribution-value-calculator.html",
+      "path": "calculators/whatconverts-lead-attribution-value-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/wegic-ai-website-builder-value-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Wegic ROI Calculator: Estimate Monthly Value | artificial.one",
+      "url": "https://artificial.one/calculators/wegic-ai-website-builder-value-calculator.html",
+      "path": "calculators/wegic-ai-website-builder-value-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/voice-production-cost-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Voice Production Cost Calculator | Free Tool | artificial.one",
+      "url": "https://artificial.one/calculators/voice-production-cost-calculator.html",
+      "path": "calculators/voice-production-cost-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/unbounce-landing-pages-value-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Unbounce ROI Calculator: Estimate Monthly Value | artificial.one",
+      "url": "https://artificial.one/calculators/unbounce-landing-pages-value-calculator.html",
+      "path": "calculators/unbounce-landing-pages-value-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/pdf-workflow-cost-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: PDF Workflow Cost Calculator | Free Tool | artificial.one",
+      "url": "https://artificial.one/calculators/pdf-workflow-cost-calculator.html",
+      "path": "calculators/pdf-workflow-cost-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/learnworlds-course-platform-value-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: LearnWorlds ROI Calculator: Estimate Monthly Value | artificial.one",
+      "url": "https://artificial.one/calculators/learnworlds-course-platform-value-calculator.html",
+      "path": "calculators/learnworlds-course-platform-value-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/landing-page-roi-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Landing Page ROI Calculator | Free Tool | artificial.one",
+      "url": "https://artificial.one/calculators/landing-page-roi-calculator.html",
+      "path": "calculators/landing-page-roi-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/kit-creator-email-marketing-value-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kit ROI Calculator: Estimate Monthly Value | artificial.one",
+      "url": "https://artificial.one/calculators/kit-creator-email-marketing-value-calculator.html",
+      "path": "calculators/kit-creator-email-marketing-value-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/kartra-marketing-platform-value-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kartra ROI Calculator: Estimate Monthly Value | artificial.one",
+      "url": "https://artificial.one/calculators/kartra-marketing-platform-value-calculator.html",
+      "path": "calculators/kartra-marketing-platform-value-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/foxit-pdf-software-value-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Foxit ROI Calculator: Estimate Monthly Value | artificial.one",
+      "url": "https://artificial.one/calculators/foxit-pdf-software-value-calculator.html",
+      "path": "calculators/foxit-pdf-software-value-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/beautiful-ai-presentations-value-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Beautiful.ai ROI Calculator: Estimate Monthly Value | artificial.one",
+      "url": "https://artificial.one/calculators/beautiful-ai-presentations-value-calculator.html",
+      "path": "calculators/beautiful-ai-presentations-value-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:calculators/ai-software-roi-calculator.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Software ROI Calculator | Free Tool | artificial.one",
+      "url": "https://artificial.one/calculators/ai-software-roi-calculator.html",
+      "path": "calculators/ai-software-roi-calculator.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:buyers-guides.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Software Buying Guides and Calculators | artificial.one",
+      "url": "https://artificial.one/buyers-guides.html",
+      "path": "buyers-guides.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:ai-tool-finder.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one",
+      "url": "https://artificial.one/ai-tool-finder.html",
+      "path": "ai-tool-finder.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:M:ai-stack-builder.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one",
+      "url": "https://artificial.one/ai-stack-builder.html",
+      "path": "ai-stack-builder.html",
+      "source_commit": "580a4a092879"
+    },
+    {
+      "id": "git:580a4a0928790c22a2f2ce6da63893aeebed0cd6:A:search-intent/best-online-learning-tools.html",
+      "date": "2026-09-23",
+      "occurred_at": "2026-09-23T09:01:58+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: Best Online Learning Tools: Reviews, Use Cases & Pricing | artificial.one",
+      "url": "https://artificial.one/search-intent/best-online-learning-tools.html",
+      "path": "search-intent/best-online-learning-tools.html",
+      "source_commit": "580a4a092879"
+    },
     {
       "id": "git:4f031fc2f2d436753cde1a6c0d47206a0d92f656:M:buyers-guides.html",
       "date": "2026-09-23",
