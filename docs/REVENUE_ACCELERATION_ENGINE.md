@@ -20,7 +20,7 @@ This system automates the six revenue-growth loops for artificial.one. It runs i
 
 ## 5. Distribution engine
 
-`scripts/distribute_content.py` refreshes `feed.xml` and `data/distribution_queue.json` with campaign-attributed links. Its self-renewing seven-day editorial calendar creates a fresh post every day from current site data: free tools, monitored AI news, partner use cases, buyer cautions, confirmed offer changes, workflow tips and a weekly roundup. It requires no model API or attended computer. The daily schedule can publish exactly one dated editorial item to Bluesky or a connected webhook; push-triggered builds never publish, and manual runs publish only when the `publish_social` input is selected. Deduplication state is retained privately in the workflow cache.
+`scripts/distribute_content.py` refreshes `feed.xml` and `data/distribution_queue.json` with campaign-attributed links. Its self-renewing seven-day editorial calendar creates a fresh post every day from current site data: free tools, monitored AI news, partner use cases, buyer cautions, confirmed offer changes, workflow tips and a weekly roundup. It requires no model API or attended computer. The main daily schedule publishes one dated visual item to every connected social channel. A separate weekday LinkedIn schedule publishes a second, playful discussion post, bringing LinkedIn to twelve original visual posts per week. Both publishers use per-channel deduplication and confirmed delivery receipts; they never scrape feeds, send connection requests or imitate engagement.
 
 ## 6. Controlled paid acquisition
 
@@ -38,6 +38,8 @@ Eligible campaigns are checked daily. A campaign with no conversion is automatic
 ## Cloud schedule and outputs
 
 `.github/workflows/revenue-optimizer.yml` runs daily after the PartnerStack audit. It ranks offers, evaluates conversion tests, rebuilds commercial pages, refreshes AI news, creates the newsletter/RSS/distribution/ad plans, runs the complete test suite, and commits only public generated artifacts. Private publishing state is cached and no personal customer data is committed.
+
+`.github/workflows/linkedin-publisher.yml` runs on weekday afternoons and publishes one additional visual, question-led LinkedIn post from reviewed website inventory. Together with the daily publisher, the cadence is two posts Monday–Friday and one post Saturday–Sunday.
 
 Public outputs include:
 

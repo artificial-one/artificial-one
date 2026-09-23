@@ -89,6 +89,24 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertIn("#AITools", commentary)
         self.assertLessEqual(len(commentary), 3000)
 
+    def test_linkedin_weekly_cadence_is_twelve_visual_posts(self):
+        week = [date(2026, 9, 21 + offset) for offset in range(7)]
+        bonus = [distribution.linkedin_bonus_item(day) for day in week]
+        self.assertEqual(sum(item is not None for item in bonus), 5)
+        self.assertEqual(7 + sum(item is not None for item in bonus), 12)
+        self.assertTrue(all(item["image"].endswith(".jpg") for item in bonus if item))
+        self.assertTrue(all("linkedin-playful" in item["url"] for item in bonus if item))
+        self.assertTrue(all(item["linkedin_copy"].endswith("?") for item in bonus if item))
+
+    def test_linkedin_bonus_is_deterministic_and_playful(self):
+        first = distribution.linkedin_bonus_item(date(2026, 9, 23))
+        repeated = distribution.linkedin_bonus_item(date(2026, 9, 23))
+        self.assertEqual(first, repeated)
+        self.assertIsNotNone(first)
+        self.assertIn("Tiny game", first["linkedin_copy"])
+        self.assertEqual(first["id"], "linkedin-play-2026-09-23")
+        self.assertIsNone(distribution.linkedin_bonus_item(date(2026, 9, 26)))
+
     def test_configured_linkedin_author_avoids_profile_lookup(self):
         self.assertEqual(
             distribution.linkedin_author_urn("token", "urn:li:person:123"),
@@ -115,6 +133,42 @@ class RevenueAccelerationTests(unittest.TestCase):
             receipts = distribution.load(path)["receipts"]
         self.assertEqual(len(receipts), 1)
         self.assertEqual(receipts[0]["platform"], "linkedin")
+
+    def test_linkedin_bonus_records_success_and_will_not_duplicate(self):
+        original_post = distribution.post_linkedin
+        original_receipts = distribution.RECEIPTS_PATH
+        keys = (
+            "DISTRIBUTION_SEND_ENABLED", "LINKEDIN_ACCESS_TOKEN",
+            "LINKEDIN_AUTHOR_URN", "LINKEDIN_TOKEN_EXPIRES_AT",
+        )
+        original = {key: os.environ.get(key) for key in keys}
+        sent = []
+        try:
+            os.environ["DISTRIBUTION_SEND_ENABLED"] = "true"
+            os.environ["LINKEDIN_ACCESS_TOKEN"] = "token"
+            os.environ["LINKEDIN_AUTHOR_URN"] = "urn:li:person:123"
+            os.environ.pop("LINKEDIN_TOKEN_EXPIRES_AT", None)
+            distribution.post_linkedin = lambda _token, _author, item: sent.append(item) or {
+                "urn": "urn:li:activity:456",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:456/",
+            }
+            with tempfile.TemporaryDirectory() as folder:
+                distribution.RECEIPTS_PATH = Path(folder) / "receipts.json"
+                state_path = Path(folder) / "state.json"
+                first = distribution.publish_linkedin_bonus(state_path, date(2026, 9, 23))
+                second = distribution.publish_linkedin_bonus(state_path, date(2026, 9, 23))
+            self.assertIn("published", first)
+            self.assertIn("already published", second)
+            self.assertEqual(len(sent), 1)
+            self.assertIn("utm_source=linkedin", sent[0]["url"])
+        finally:
+            distribution.post_linkedin = original_post
+            distribution.RECEIPTS_PATH = original_receipts
+            for key, value in original.items():
+                if value is None:
+                    os.environ.pop(key, None)
+                else:
+                    os.environ[key] = value
 
     def test_friday_editorial_routes_to_checked_appsumo_pulse(self):
         original = distribution.OFFER_ALERTS_PATH

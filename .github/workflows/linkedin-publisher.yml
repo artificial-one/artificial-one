@@ -1,0 +1,60 @@
+name: Publish playful LinkedIn post
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Second weekday post. The main revenue workflow publishes the daily post.
+    - cron: "43 14 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: artificial-one-linkedin-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Restore private delivery state
+        uses: actions/cache@v5
+        with:
+          path: .revenue-acceleration/linkedin-playful.json
+          key: linkedin-playful-${{ github.run_id }}
+          restore-keys: |
+            linkedin-playful-
+
+      - name: Publish one playful visual post
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          LINKEDIN_TOKEN_EXPIRES_AT: ${{ vars.LINKEDIN_TOKEN_EXPIRES_AT }}
+          DISTRIBUTION_SEND_ENABLED: ${{ vars.DISTRIBUTION_SEND_ENABLED }}
+        run: python scripts/distribute_content.py --linkedin-bonus --state .revenue-acceleration/linkedin-playful.json
+
+      - name: Verify the publisher
+        run: python -m unittest tests.test_revenue_acceleration -v
+
+      - name: Record only a confirmed publication
+        shell: bash
+        run: |
+          git add -- data/distribution_receipts.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Record playful LinkedIn publication [skip ci]"
+          if ! git push; then
+            git fetch origin main
+            git rebase origin/main
+            git push
+          fi

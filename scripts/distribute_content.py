@@ -257,6 +257,50 @@ def queue(as_of: date | None = None) -> list[dict[str, Any]]:
     return result
 
 
+def linkedin_bonus_item(as_of: date | None = None) -> dict[str, Any] | None:
+    """Build the second, weekday-only LinkedIn post.
+
+    It reuses reviewed site inventory and existing visual cards, but gives the
+    post a more conversational LinkedIn-native angle.  Weekends deliberately
+    remain at one post per day, yielding twelve scheduled posts per week.
+    """
+    as_of = as_of or datetime.now(timezone.utc).date()
+    if as_of.weekday() >= 5:
+        return None
+    inventory = queue(as_of)[1:]
+    if not inventory:
+        return None
+    item = dict(inventory[(as_of.toordinal() * 5 + as_of.weekday()) % len(inventory)])
+    hooks = (
+        "Monday confession: our software stack does not need another shiny tab.",
+        "Hot take: ‘AI-powered’ is not a buying criterion. Workflow fit is.",
+        "Tiny game: keep it, trial it, or delete it?",
+        "The expensive AI tool is the one nobody actually uses.",
+        "Friday software therapy: let’s talk about the subscription you forgot to cancel.",
+    )
+    questions = (
+        "What is the one job you would make this tool prove before paying?",
+        "Would this remove real work—or merely create a new dashboard to check?",
+        "Which verdict would you give it: keep, trial, or delete?",
+        "What would make this earn a permanent place in your stack?",
+        "Which AI subscription is currently fighting for its life in your budget?",
+    )
+    item.update({
+        "id": f"linkedin-play-{as_of.isoformat()}",
+        "kind": "linkedin-play",
+        "title": f"{hooks[as_of.weekday()]} {item['title']}",
+        "url": item["url"].replace("utm_campaign=", "utm_campaign=linkedin-playful-"),
+        "linkedin_copy": (
+            f"{hooks[as_of.weekday()]}\n\n"
+            f"Today’s candidate: {item['title']}\n\n"
+            f"{item['description']}\n\n"
+            f"{questions[as_of.weekday()]}"
+        ),
+        "image_alt": f"{item['title']} — playful AI tool discussion from Artificial.One",
+    })
+    return item
+
+
 def write_public_outputs(items: list[dict[str, Any]]) -> None:
     QUEUE_PATH.write_text(json.dumps({"version": 1, "items": items}, indent=2) + "\n", encoding="utf-8")
     now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
@@ -309,7 +353,7 @@ def linkedin_author_urn(access_token: str, configured: str = "") -> str:
 
 def linkedin_commentary(item: dict[str, Any]) -> str:
     """Turn a compact social item into a useful professional-network post."""
-    lead = str(item.get("text") or item.get("description") or item["title"]).strip()
+    lead = str(item.get("linkedin_copy") or item.get("text") or item.get("description") or item["title"]).strip()
     context = str(item.get("description") or "").strip()
     paragraphs = [lead]
     if context and context.casefold() not in lead.casefold():
@@ -417,6 +461,19 @@ def append_receipt(path: Path, platform: str, item: dict[str, Any], result: dict
         })
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({"version": 1, "receipts": receipts[-1000:]}, indent=2) + "\n", encoding="utf-8")
+
+
+def receipt_has_item(path: Path, platform: str, item_id: str) -> bool:
+    try:
+        receipts = load(path).get("receipts", [])
+    except (OSError, json.JSONDecodeError):
+        return False
+    return any(
+        isinstance(receipt, dict)
+        and receipt.get("platform") == platform
+        and receipt.get("item_id") == item_id
+        for receipt in receipts
+    )
 
 
 def linkedin_token_warning(expires_at: str) -> str:
@@ -625,6 +682,42 @@ def save_distribution_state(path: Path, state: dict[str, Any]) -> None:
     path.write_text(json.dumps({"version": 3, "channels": channels}, indent=2) + "\n", encoding="utf-8")
 
 
+def publish_linkedin_bonus(state_path: Path, as_of: date | None = None) -> str:
+    """Publish the second weekday LinkedIn item without touching other channels."""
+    item = linkedin_bonus_item(as_of)
+    if item is None:
+        return "Weekend cadence retained: no second LinkedIn post is scheduled"
+    flag = (os.environ.get("DISTRIBUTION_SEND_ENABLED") or "").casefold()
+    token = (os.environ.get("LINKEDIN_ACCESS_TOKEN") or "").strip()
+    author = (os.environ.get("LINKEDIN_AUTHOR_URN") or "").strip()
+    warning = linkedin_token_warning((os.environ.get("LINKEDIN_TOKEN_EXPIRES_AT") or "").strip())
+    if warning:
+        print(f"::warning::{warning}")
+    if flag != "true":
+        return "Playful LinkedIn post prepared; cloud sending is disabled"
+    if not token:
+        raise RuntimeError("LINKEDIN_ACCESS_TOKEN is required for the playful publisher")
+    delivered = channel_item(item, "linkedin")
+    digest = sha256(linkedin_commentary(delivered).encode()).hexdigest()
+    try:
+        state = load(state_path)
+    except (OSError, json.JSONDecodeError):
+        state = {"version": 3, "channels": {}}
+    progress = channel_state(state, "linkedin-playful")
+    if (
+        item["id"] in progress["sent_ids"]
+        or digest in progress["sent"]
+        or receipt_has_item(RECEIPTS_PATH, "linkedin", item["id"])
+    ):
+        return "Today’s playful LinkedIn post was already published"
+    result = post_linkedin(token, author, delivered)
+    append_receipt(RECEIPTS_PATH, "linkedin", delivered, result)
+    progress["sent"].append(digest)
+    progress["sent_ids"].append(item["id"])
+    save_distribution_state(state_path, state)
+    return f"Playful LinkedIn image post published ({result['url']})"
+
+
 def run(state_path: Path, as_of: date | None = None) -> str:
     items = queue(as_of)
     write_public_outputs(items)
@@ -717,5 +810,6 @@ def run(state_path: Path, as_of: date | None = None) -> str:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", type=Path, default=ROOT / ".revenue-acceleration" / "distribution.json")
+    parser.add_argument("--linkedin-bonus", action="store_true", help="Publish the second weekday LinkedIn post only")
     args = parser.parse_args()
-    print(run(args.state))
+    print(publish_linkedin_bonus(args.state) if args.linkedin_bonus else run(args.state))
