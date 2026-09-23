@@ -1,0 +1,83 @@
+name: Run playful Bluesky elephant
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish_and_engage:
+        description: Publish and interact during this manual run
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    # Two spaced engagement passes. The revenue workflow still publishes the
+    # daily visual edition at 08:13 UTC.
+    - cron: "37 10 * * *"
+    - cron: "47 17 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: artificial-one-bluesky-elephant
+  cancel-in-progress: false
+
+jobs:
+  engage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Restore the verified edge-AI runtime
+        id: edge-cache
+        uses: actions/cache@v5
+        with:
+          path: .edge-ai
+          key: elephant-edge-ai-qwen2.5-1.5b-q4km-llama-b10982-v1
+
+      - name: Install or verify the free local model
+        run: python scripts/setup_elephant_edge_ai.py
+
+      - name: Restore private elephant memory
+        uses: actions/cache@v5
+        with:
+          path: .revenue-acceleration/bluesky-elephant.json
+          key: bluesky-elephant-${{ github.run_id }}
+          restore-keys: |
+            bluesky-elephant-
+
+      - name: Verify the elephant guardrails
+        run: |
+          python -m unittest tests.test_bluesky_elephant -v
+          python -m unittest tests.test_elephant_edge_ai -v
+          python -m unittest tests.test_revenue_acceleration -v
+
+      - name: Post, reply, appreciate, and connect
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          BLUESKY_ELEPHANT_ENABLED: ${{ (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.publish_and_engage)) && (vars.BLUESKY_ELEPHANT_ENABLED || vars.DISTRIBUTION_SEND_ENABLED) || 'false' }}
+          ELEPHANT_EDGE_AI_ENABLED: "true"
+          ELEPHANT_MODEL_PATH: .edge-ai/qwen2.5-1.5b-instruct-q4_k_m.gguf
+          LLAMA_CLI_PATH: .edge-ai/llama.cpp/build/bin/llama-cli
+        run: python scripts/bluesky_elephant.py --state .revenue-acceleration/bluesky-elephant.json
+
+      - name: Record only a confirmed original post
+        shell: bash
+        run: |
+          git add -- data/distribution_receipts.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Record playful Bluesky elephant publication [skip ci]"
+          if ! git push; then
+            git fetch origin main
+            git rebase origin/main
+            git push
+          fi

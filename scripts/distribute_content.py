@@ -31,10 +31,10 @@ WEBSUB_HUB = "https://pubsubhubbub.appspot.com/"
 SOCIAL_IMAGE_DIR = ROOT / "images" / "social-cards"
 PROFILE_AVATAR = ROOT / "images" / "social" / "artificial-one-logo.png"
 PROFILE_BANNER = ROOT / "images" / "social" / "bluesky-banner.jpg"
-PROFILE_DISPLAY_NAME = "Artificial.One"
+PROFILE_DISPLAY_NAME = "Artificial.One 🐘"
 PROFILE_DESCRIPTION = (
-    "Independent AI tool comparisons, practical calculators and verified partner offers. "
-    "Find the right tools before you buy: artificial.one"
+    "🐘 Playful automated elephant bot for independent AI-tool comparisons, practical "
+    "calculators and verified offers. Human-owned; bot-posted. artificial.one"
 )
 
 
@@ -521,11 +521,10 @@ def ensure_bluesky_profile(session: dict[str, Any], refresh: bool = False) -> bo
 
     value.setdefault("$type", "app.bsky.actor.profile")
     changed = False
-    branding_missing = not value.get("avatar") or not value.get("banner")
-    if (refresh or branding_missing) and value.get("displayName") != PROFILE_DISPLAY_NAME:
+    if value.get("displayName") != PROFILE_DISPLAY_NAME:
         value["displayName"] = PROFILE_DISPLAY_NAME
         changed = True
-    if (refresh or branding_missing) and value.get("description") != PROFILE_DESCRIPTION:
+    if value.get("description") != PROFILE_DESCRIPTION:
         value["description"] = PROFILE_DESCRIPTION
         changed = True
     if (refresh or not value.get("avatar")) and PROFILE_AVATAR.exists():
