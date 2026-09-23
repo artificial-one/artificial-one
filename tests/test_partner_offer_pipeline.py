@@ -55,6 +55,10 @@ class PartnerOfferPipelineTests(unittest.TestCase):
         self.assertIn('data-placement="offer-page-bottom"', page)
         self.assertIn("Use Cases, Fit &amp; Partner Offer", page)
         self.assertIn('type="application/ld+json"', page)
+        self.assertIn('data-value-calculator', page)
+        self.assertIn('data-watch-offer="useful-ai"', page)
+        self.assertIn('class="mobile-offer-cta"', page)
+        self.assertIn('FAQPage', page)
 
     def test_related_offers_prioritize_same_category(self):
         primary = published_offer()
@@ -85,6 +89,17 @@ class PartnerOfferPipelineTests(unittest.TestCase):
         self.assertIn('data-placement="tool-finder"', page)
         self.assertIn('data-offer-id="useful-ai"', page)
         self.assertIn("affiliate-tracking.js", page)
+        self.assertIn("Show my best 3", page)
+        self.assertIn("decision-engine.js", page)
+        self.assertNotIn("cdn.tailwindcss.com", page)
+
+    def test_homepage_catalog_update_requires_and_populates_both_markers(self):
+        source = """<div><!-- revenue-picks:start --><!-- revenue-picks:end --></div>
+<!-- matcher-catalog:start --><script>[]</script><!-- matcher-catalog:end -->"""
+        result = pipeline.update_homepage_picks(source, [published_offer()])
+        self.assertIn('data-placement="homepage-pick"', result)
+        self.assertIn('id="ai1-offer-data"', result)
+        self.assertIn('"id": "useful-ai"', result)
 
     def test_review_page_links_to_search_intent_cluster(self):
         first = published_offer(id="first", slug="first", name="First")

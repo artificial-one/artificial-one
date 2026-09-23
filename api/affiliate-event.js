@@ -12,6 +12,17 @@ const EVENT_STREAMS = {
   site_visit: "visits",
   content_route_click: "route_clicks",
   content_route_impression: "route_impressions",
+  matcher_start: "matcher_starts",
+  matcher_complete: "matcher_completions",
+  recommendation_impression: "recommendation_impressions",
+  compare_add: "compare_adds",
+  compare_remove: "compare_removes",
+  compare_open: "compare_opens",
+  compare_share: "compare_shares",
+  stack_save: "stack_saves",
+  stack_remove: "stack_removes",
+  watchlist_add: "watchlist_adds",
+  use_case_tab: "use_case_tabs",
 };
 
 function clean(value, pattern, fallback) {

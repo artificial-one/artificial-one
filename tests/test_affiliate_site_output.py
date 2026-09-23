@@ -100,6 +100,22 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         self.assertIn('url.searchParams.set("sid3"', text)
         self.assertIn("affiliate_impression", text)
 
+    def test_decision_engine_homepage_is_prebuilt_and_instrumented(self):
+        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        engine = (ROOT / "assets" / "decision-engine.js").read_text(encoding="utf-8")
+        self.assertNotIn("cdn.tailwindcss.com", homepage)
+        self.assertNotIn("babel.min.js", homepage)
+        self.assertIn("Show my best 3", homepage)
+        self.assertIn("matcher-catalog:start", homepage)
+        for event in (
+            "matcher_start", "matcher_complete", "recommendation_impression",
+            "compare_add", "stack_save", "watchlist_add",
+        ):
+            self.assertIn(event, engine)
+        endpoint = (ROOT / "api" / "affiliate-event.js").read_text(encoding="utf-8")
+        self.assertIn('matcher_complete: "matcher_completions"', endpoint)
+        self.assertIn('watchlist_add: "watchlist_adds"', endpoint)
+
 
 if __name__ == "__main__":
     unittest.main()

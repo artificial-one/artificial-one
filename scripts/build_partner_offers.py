@@ -26,8 +26,10 @@ SITEMAP_PATH = ROOT / "sitemap.xml"
 GENERATED_MARKER = "<!-- GENERATED: partner-offer-pipeline -->"
 SITEMAP_START = "  <!-- partner-offers:start -->"
 SITEMAP_END = "  <!-- partner-offers:end -->"
-HOME_PICKS_START = "{/* revenue-picks:start */}"
-HOME_PICKS_END = "{/* revenue-picks:end */}"
+HOME_PICKS_START = "<!-- revenue-picks:start -->"
+HOME_PICKS_END = "<!-- revenue-picks:end -->"
+HOME_CATALOG_START = "<!-- matcher-catalog:start -->"
+HOME_CATALOG_END = "<!-- matcher-catalog:end -->"
 ALLOWED_STATUSES = {"draft", "approved", "published", "paused", "expired"}
 SLUG_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
@@ -260,81 +262,99 @@ def shell(
   <meta name="affiliate-event-endpoint" content="/api/affiliate-event">
   <link rel="alternate" type="application/rss+xml" title="artificial.one AI tool guides" href="{prefix}feed.xml">
   {json_ld(structured_data) if structured_data else ""}
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }}
-    .gradient-text {{ background: linear-gradient(135deg,#4f46e5,#9333ea,#db2777); -webkit-background-clip:text; color:transparent; }}
-    .btn-primary {{ background:linear-gradient(135deg,#4f46e5,#9333ea); transition:.2s ease; }}
-    .btn-primary:hover {{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(79,70,229,.25); }}
-  </style>
+  <link rel="preload" href="{prefix}images/social/artificial-one-logo.png" as="image">
+  <link rel="stylesheet" href="{prefix}assets/decision-engine.css">
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   {GENERATED_MARKER}
-  <header class="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-      <a href="{prefix}index.html"><img src="{prefix}artificial-one-logo-large.svg" alt="artificial.one" class="h-14"></a>
-      <nav class="flex items-center gap-5 text-sm font-semibold">
-        <a href="{prefix}reviews.html" class="text-slate-600 hover:text-indigo-600">Reviews</a>
-        <a href="{prefix}ai-tool-finder.html" class="text-indigo-700">Tool finder</a>
-        <a href="{prefix}decision-tools.html" class="hidden text-indigo-700 md:inline">Free tools</a>
-        <a href="{prefix}partner-offers.html" class="text-indigo-700">Partner offers</a>
-        <a href="{prefix}sponsor.html" class="hidden text-indigo-700 lg:inline">Sponsor</a>
-        <a href="{prefix}partners.html" class="rounded-lg border border-indigo-200 px-4 py-2 text-indigo-700 hover:bg-indigo-50">For partners</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="{prefix}index.html"><img src="{prefix}images/social/artificial-one-logo.png" alt="Artificial.One elephant"><span>artificial<span class="brand-dot">.</span>one</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="{prefix}ai-tool-finder.html">Find Tools</a>
+        <a href="{prefix}ai-tool-finder.html?compare=">Compare</a>
+        <a href="{prefix}partner-offers.html">Deals</a>
+        <a href="{prefix}news.html">What’s New</a>
+        <button class="stack-trigger" type="button" data-open-stack>My Stack</button>
+        <details class="more-menu"><summary>Explore ▾</summary><div class="more-links"><a href="{prefix}reviews.html">All reviews</a><a href="{prefix}decision-tools.html">Free tools</a><a href="{prefix}buyers-guides.html">Buyer guides</a><a href="{prefix}about.html">How we evaluate</a><a href="{prefix}partners.html">For partners</a></div></details>
       </nav>
     </div>
   </header>
-  <main>{content}</main>
-  <footer class="mt-16 border-t border-slate-200 bg-white">
-    <div class="mx-auto max-w-6xl px-5 py-10 text-sm text-slate-600">
-      <p class="font-semibold text-slate-800">artificial.one</p>
-      <p class="mt-2">We may earn a commission when you buy through marked partner links, at no extra cost to you. Commercial relationships never guarantee a positive review.</p>
-      <div class="mt-4 flex flex-wrap gap-4"><a class="text-indigo-700" href="{prefix}about.html">About</a><a class="text-indigo-700" href="{prefix}partners.html">Work with us</a><a class="text-indigo-700" href="mailto:hello@artificial.one">Contact</a></div>
-    </div>
-  </footer>
+  <main id="main-content">{content}</main>
+  <footer class="site-footer"><div class="container footer-grid">
+    <div><a class="brand" href="{prefix}index.html"><img src="{prefix}images/social/artificial-one-logo.png" alt=""><span>artificial<span class="brand-dot">.</span>one</span></a><p>Independent AI-tool decisions, built around your job—not a wall of logos.</p><p class="disclosure">We may earn a commission from marked links at no extra cost to you. Payment never guarantees a positive verdict.</p></div>
+    <div><h4>Decide</h4><a href="{prefix}ai-tool-finder.html">Find tools</a><a href="{prefix}partner-offers.html">Verified deals</a><a href="{prefix}decision-tools.html">Free calculators</a></div>
+    <div><h4>Learn</h4><a href="{prefix}news.html">AI radar</a><a href="{prefix}buyers-guides.html">Buyer guides</a><a href="{prefix}about.html">Methodology</a></div>
+    <div><h4>Company</h4><a href="{prefix}partners.html">For partners</a><a href="{prefix}privacy.html">Privacy</a><a href="mailto:hello@artificial.one">hello@artificial.one</a></div>
+  </div></footer>
+  <aside class="stack-panel" data-stack-panel aria-label="My AI Stack"><div class="panel-head"><h2>My AI Stack</h2><button class="close-btn" type="button" data-close-panel aria-label="Close">×</button></div><p>Tools you saved on this device. No account required.</p><div class="saved-list" data-stack-list></div></aside>
+  <div class="compare-drawer" data-compare-drawer><div class="compare-bar"><strong>Compare</strong><div class="compare-items" data-compare-items></div><button class="btn btn-small" type="button" data-open-compare>Compare now</button><button class="icon-btn" type="button" data-clear-compare aria-label="Clear comparison">×</button></div></div>
+  <div class="modal-backdrop" data-compare-modal role="dialog" aria-modal="true" aria-label="Tool comparison"><div class="compare-modal"><div class="panel-head"><h2>Side-by-side decision</h2><button class="close-btn" type="button" data-close-panel aria-label="Close">×</button></div><div class="comparison-grid" data-comparison-grid></div><div class="loop-actions"><button class="btn btn-secondary btn-small" type="button" data-share-compare>Copy share link</button></div></div></div>
+  <script src="{prefix}assets/decision-engine.js" defer></script>
   <script src="{prefix}assets/affiliate-tracking.js" defer></script>
 </body>
 </html>
 '''
 
 
-def offer_card(offer: dict[str, Any]) -> str:
-    badge = "Featured" if offer.get("featured") else esc(offer["category"])
-    return f'''
-      <article class="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <div class="flex items-center justify-between gap-3"><span class="rounded-full bg-indigo-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-indigo-700">{badge}</span><span class="text-xs text-slate-500">Terms checked {esc(offer["terms_verified_at"])}</span></div>
-        <h2 class="mt-5 text-2xl font-bold">{esc(offer["name"])}</h2>
-        <p class="mt-3 flex-1 text-slate-600">{esc(offer["summary"])}</p>
-        <p class="mt-5 text-sm font-semibold text-emerald-700">{esc(offer["offer_label"])}</p>
-        <p class="mt-1 text-sm text-slate-500">{esc(offer["pricing_note"])}</p>
-        <a href="partner-offers/{esc(offer['slug'])}.html" class="mt-6 font-semibold text-indigo-700 hover:underline">See our offer analysis →</a>
-      </article>'''
+def public_offer_data(offer: dict[str, Any], prefix: str = "") -> dict[str, Any]:
+    palette = ("#8b5cf6", "#9cff3b", "#ff4da6", "#29d3ff", "#ffca58")
+    color = palette[sum(ord(char) for char in str(offer["id"])) % len(palette)]
+    cta = str(offer.get("cta_label") or f"Check {offer['name']}")
+    if cta.casefold().startswith("explore "):
+        cta = f"Check {offer['name']} options"
+    return {
+        "id": offer["id"], "slug": offer["slug"], "name": offer["name"],
+        "category": offer["category"], "summary": offer["summary"],
+        "best": offer["best_for"], "offer": offer["pricing_note"],
+        "why": offer["why_consider"], "limit": offer["watch_out"],
+        "verified": offer["terms_verified_at"], "featured": bool(offer.get("featured")),
+        "useCases": offer["use_cases"], "affiliateUrl": offer["tracking_url"],
+        "url": f"{prefix}partner-offers/{offer['slug']}.html", "cta": cta, "color": color,
+    }
+
+
+def catalog_script(offers: list[dict[str, Any]], prefix: str = "") -> str:
+    payload = json.dumps([public_offer_data(offer, prefix) for offer in offers], ensure_ascii=False).replace("<", "\\u003c")
+    return f'<script id="ai1-offer-data" type="application/json">{payload}</script>'
+
+
+def offer_card(offer: dict[str, Any], placement: str = "offer-hub") -> str:
+    data = public_offer_data(offer)
+    mark = "".join(word[:1] for word in str(offer["name"]).split()[:2]).upper()
+    search = " ".join([str(offer["name"]), str(offer["category"]), str(offer["best_for"]), *offer["use_cases"]]).casefold()
+    return f'''<article class="tool-card" data-tool-card data-id="{esc(offer['id'])}" data-category="{esc(offer['category'])}" data-search="{esc(search)}" style="--brand:{data['color']}">
+      <div class="card-top"><span class="tool-mark" aria-hidden="true">{esc(mark)}</span><span class="fit-score">Verified<small>{esc(offer['terms_verified_at'])}</small></span></div>
+      <p class="category">{esc(offer['category'])}</p><h2>{esc(offer['name'])}</h2>
+      <p class="summary">{esc(offer['summary'])}</p><p class="reason"><strong>Best for:</strong> {esc(offer['best_for'])}</p>
+      <p class="limitation"><strong>Know first:</strong> {esc(offer['watch_out'])}</p>
+      <div class="meta-row"><span class="tag">{esc(offer['offer_label'])}</span><span class="tag verified">Terms checked</span></div>
+      <div class="card-actions"><a class="btn btn-small" href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer['id'])}" data-placement="{esc(placement)}">{esc(data['cta'])} →</a><button class="icon-btn compare-add" type="button" data-id="{esc(offer['id'])}" aria-label="Compare {esc(offer['name'])}">⇄</button><button class="icon-btn stack-add" type="button" data-id="{esc(offer['id'])}" aria-label="Save {esc(offer['name'])}">＋</button><a class="details link-subtle" href="partner-offers/{esc(offer['slug'])}.html">Full verdict</a></div>
+    </article>'''
 
 
 def render_hub(offers: list[dict[str, Any]]) -> str:
     if offers:
         cards = "\n".join(offer_card(offer) for offer in offers)
-        listing = f'<div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{cards}</div>'
+        listing = f'<div class="card-grid">{cards}</div>'
         lead = f"{len(offers)} currently verified partner offer{'s' if len(offers) != 1 else ''}."
     else:
-        listing = '''<div class="mt-10 rounded-2xl border border-dashed border-indigo-300 bg-indigo-50 p-10 text-center">
-          <h2 class="text-2xl font-bold">The first verified offers are being reviewed</h2>
-          <p class="mx-auto mt-3 max-w-2xl text-slate-600">We publish an offer only after its terms, destination and audience fit have been checked. Join the newsletter or return soon for the first release.</p>
-          <a href="partners.html" class="mt-6 inline-block font-semibold text-indigo-700 hover:underline">Represent an AI product? Submit an offer →</a>
+        listing = '''<div class="surface empty">
+          <h2>The first verified offers are being reviewed</h2>
+          <p>We publish an offer only after its terms, destination and audience fit have been checked.</p>
+          <a class="link-subtle" href="partners.html">Represent an AI product? Submit an offer →</a>
         </div>'''
         lead = "A curated feed of partner offers, selected for usefulness rather than commission size."
 
     content = f'''
-    <section class="bg-white">
-      <div class="mx-auto max-w-6xl px-5 py-20 text-center">
-        <p class="text-sm font-bold uppercase tracking-widest text-indigo-600">Commercially transparent</p>
-        <h1 class="mt-4 text-4xl font-black md:text-6xl">Verified AI <span class="gradient-text">partner offers</span></h1>
-        <p class="mx-auto mt-6 max-w-3xl text-lg text-slate-600">{lead} Every listing identifies sponsored links and shows when terms were last checked.</p>
-      </div>
-    </section>
-    <section class="mx-auto max-w-6xl px-5 py-12">
-      <div class="rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-950"><strong>How we earn:</strong> marked links may pay artificial.one a commission. You pay no extra. Payment does not buy a positive verdict or guaranteed placement.</div>
+    <section class="section"><div class="container"><p class="eyebrow">Commercially transparent</p><div class="section-head"><div><h1>Verified AI <span class="gradient-text">deals worth checking</span></h1><p>{lead} Terms, fit and limitations are visible before the click.</p></div></div>
+      <div class="surface content-card"><strong>How we earn:</strong> marked links may pay artificial.one a commission. You pay no extra. Payment does not buy a positive verdict or guaranteed placement.</div>
+    </div></section>
+    <section class="container section-tight">
       {listing}
-    </section>'''
+    </section>{catalog_script(offers)}'''
     return shell(
         title="Verified AI Partner Offers | artificial.one",
         description="Curated and independently evaluated offers from AI software partners, with transparent affiliate disclosures and verified terms.",
@@ -608,6 +628,124 @@ def render_offer(
                 },
             ],
         },
+    )
+
+
+def render_finder(offers: list[dict[str, Any]]) -> str:
+    """Render the explainable task-first matcher and the full verified catalog."""
+    categories = sorted({str(offer["category"]) for offer in offers})
+    category_buttons = "".join(
+        f'<button type="button" data-filter="{esc(category)}">{esc(category)}</button>'
+        for category in categories
+    )
+    cards = "".join(offer_card(offer, "tool-finder") for offer in offers)
+    content = f'''
+    <section class="hero"><div class="container"><p class="eyebrow">AI decision engine</p><h1>Tell us what you need. <span class="gradient-text">We’ll shortlist the AI tools worth paying for.</span></h1><p class="hero-copy">Find the right AI tool for your job. Describe the outcome, get three explainable matches, then compare before you click.</p>
+      <form class="matcher" data-matcher-form><label for="finder-task"><strong>What do you want to accomplish?</strong></label><div class="matcher-row"><input id="finder-task" type="search" placeholder="e.g. Turn a webinar into clips and captions"><button class="btn btn-acid" type="submit">Show my best 3</button></div><div class="mission-list"><button class="mission" type="button" data-mission="create" data-prompt="Create video, audio, images or written content">Create</button><button class="mission" type="button" data-mission="sell" data-prompt="Get leads and improve marketing conversion">Sell</button><button class="mission" type="button" data-mission="automate" data-prompt="Automate repetitive business workflows">Automate</button><button class="mission" type="button" data-mission="research" data-prompt="Research markets, documents or data">Research</button><button class="mission" type="button" data-mission="build" data-prompt="Build a website, app or AI workflow">Build</button></div><p class="matcher-note">No sign-up. Scores explain task fit; partner relationships never guarantee placement.</p></form>
+      <div class="results" data-matcher-results><div class="results-head"><h2>Your best three</h2><span>Ranked by task fit, evidence and verified availability</span></div><div class="results-grid" data-matcher-results-grid></div></div>
+    </div></section>
+    <section class="container section-tight"><div class="catalog-controls surface"><label for="tool-search">Or browse every verified tool</label><input id="tool-search" type="search" placeholder="Search by task, category or product"><div class="filters"><button type="button" class="active" data-filter="all">All tools</button>{category_buttons}</div><p id="finder-count" aria-live="polite"></p></div><div id="tool-grid" class="card-grid">{cards}</div><div id="no-tools" class="empty" hidden>No exact match yet. Try a broader phrase or browse all tools.</div></section>{catalog_script(offers)}'''
+    return shell(
+        title="AI Tool Finder: Match Your Goal to the Right Tool | artificial.one",
+        description="Describe the outcome you want and get three explainable AI-tool matches, with verified terms, limitations and transparent partner links.",
+        canonical_path="ai-tool-finder.html",
+        content=content,
+        structured_data={
+            "@context": "https://schema.org", "@type": "ItemList", "name": "AI tool finder",
+            "itemListElement": [{"@type": "ListItem", "position": index, "name": offer["name"], "url": f"https://artificial.one/partner-offers/{offer['slug']}.html"} for index, offer in enumerate(offers, 1)],
+        },
+    )
+
+
+def render_homepage_picks(offers: list[dict[str, Any]], limit: int = 4) -> str:
+    cards = "\n".join(offer_card(offer, "homepage-pick") for offer in offers[:limit])
+    return f"{HOME_PICKS_START}\n{cards}\n{HOME_PICKS_END}"
+
+
+def render_homepage_catalog(offers: list[dict[str, Any]]) -> str:
+    return f"{HOME_CATALOG_START}\n{catalog_script(offers)}\n{HOME_CATALOG_END}"
+
+
+def update_homepage_picks(source: str, offers: list[dict[str, Any]]) -> str:
+    picks_pattern = re.compile(re.escape(HOME_PICKS_START) + r".*?" + re.escape(HOME_PICKS_END), re.S)
+    if not picks_pattern.search(source):
+        raise OfferValidationError("Homepage revenue pick markers are missing")
+    source = picks_pattern.sub(render_homepage_picks(offers), source, count=1)
+    catalog_pattern = re.compile(re.escape(HOME_CATALOG_START) + r".*?" + re.escape(HOME_CATALOG_END), re.S)
+    if not catalog_pattern.search(source):
+        raise OfferValidationError("Homepage matcher catalog markers are missing")
+    return catalog_pattern.sub(render_homepage_catalog(offers), source, count=1)
+
+
+def render_offer(
+    offer: dict[str, Any], related_offers: list[dict[str, Any]] | None = None,
+    search_links: list[tuple[str, str]] | None = None,
+) -> str:
+    """Render a reusable decision page designed to answer fit before the affiliate click."""
+    title, description = search_snippet(offer)
+    data = public_offer_data(offer, "../")
+    use_cases = [str(item) for item in offer["use_cases"]]
+    use_case_buttons = "".join(
+        f'<button class="tab{(" is-active" if index == 0 else "")}" type="button" data-tab data-content="{esc(item)}">Use case {index + 1}</button>'
+        for index, item in enumerate(use_cases)
+    )
+    evidence = "".join(
+        f'<li><a class="link-subtle" href="{esc(item["url"])}" target="_blank" rel="noopener">{esc(item["label"])} ↗</a></li>'
+        for item in offer["evidence"]
+    )
+    related = related_offers or []
+    related_cards = "".join(
+        f'''<article class="tool-card" style="--brand:{public_offer_data(item)['color']}"><p class="category">{esc(item['category'])}</p><h3>{esc(item['name'])}</h3><p class="summary">{esc(item['best_for'])}</p><div class="card-actions"><a class="btn btn-small" href="{esc(item['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(item['id'])}" data-placement="offer-alternative">Check options →</a><button class="icon-btn compare-add" type="button" data-id="{esc(item['id'])}" aria-label="Compare {esc(item['name'])}">⇄</button><a class="details link-subtle" href="{esc(item['slug'])}.html">Verdict</a></div></article>'''
+        for item in related[:2]
+    )
+    intent_links = "".join(
+        f'<a href="{esc(url)}">{esc(label)} →</a>' for url, label in (search_links or [])
+    )
+    review_link = (
+        f'<a class="link-subtle" href="../{esc(offer["review_url"])}">Read the full independent review →</a>'
+        if offer.get("review_url") else ""
+    )
+    relationship = "Sponsored commercial relationship" if offer.get("sponsored") else "Affiliate relationship"
+    expiry = esc(offer.get("expires_at") or "No fixed end date supplied")
+    faq = [
+        (f"Who is {offer['name']} best for?", str(offer["best_for"])),
+        (f"What should I check before buying {offer['name']}?", str(offer["watch_out"])),
+        ("Is this an affiliate link?", "Yes. Artificial.One may earn a commission from qualifying purchases at no extra cost to you. The relationship does not buy a positive verdict."),
+    ]
+    faq_html = "".join(f'<details><summary>{esc(question)}</summary><p>{esc(answer)}</p></details>' for question, answer in faq)
+    content = f'''
+    <section class="offer-hero"><div class="container offer-grid"><div><p class="eyebrow">{esc(offer['category'])} · independent fit check</p><h1>{esc(offer['name'])}: <span class="gradient-text">is it right for your job?</span></h1><p class="lead">{esc(offer['summary'])}</p><div class="verdict"><strong>Quick verdict</strong><p>{esc(offer['why_consider'])}</p></div><div class="loop-actions"><button class="btn btn-secondary compare-add" type="button" data-id="{esc(offer['id'])}">⇄ Add to comparison</button><button class="btn btn-secondary stack-add" type="button" data-id="{esc(offer['id'])}">＋ Save to My Stack</button><button class="btn btn-secondary" type="button" data-watch-offer="{esc(offer['id'])}">Watch this deal</button></div></div>
+      <aside class="surface offer-aside"><p class="eyebrow">Current pricing note</p><h2>{esc(offer['offer_label'])}</h2><p class="price-note">{esc(offer['pricing_note'])}</p><a class="btn btn-acid" href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer['id'])}" data-placement="offer-page-primary">{esc(data['cta'])} →</a><p class="verified-line">✓ Terms checked {esc(offer['terms_verified_at'])}</p><p class="disclosure">Affiliate link. We may earn a commission; your price does not increase.</p></aside>
+    </div></section>
+    <section class="container section-tight"><div class="content-grid">
+      <article class="surface content-card"><h2>Best for</h2><p>{esc(offer['best_for'])}</p></article>
+      <article class="surface content-card warn"><h2>Not ideal when…</h2><p>{esc(offer['watch_out'])}</p></article>
+      <article class="surface content-card span-2" data-tabs data-offer-id="{esc(offer['id'])}"><h2>What can you do with it?</h2><div class="tabs">{use_case_buttons}</div><div class="tab-panel" data-tab-panel>{esc(use_cases[0])}</div></article>
+      <article class="surface content-card"><h2>Why it makes the shortlist</h2><p>{esc(offer['why_consider'])}</p><h3>Practical strengths</h3><ul><li>Focused fit for the use cases above</li><li>Current partner destination has been checked</li><li>Can be compared and saved without an account</li></ul></article>
+      <article class="surface content-card warn"><h2>Limitations</h2><p>{esc(offer['watch_out'])}</p><p>Features, allowances and pricing can change. Confirm the live plan before paying.</p></article>
+      <article class="surface content-card span-2"><h2>Will it pay for itself?</h2><p class="disclosure">This calculator is illustrative, not a promise of savings.</p><form class="calculator" data-value-calculator><label>Monthly tool cost ($)<input name="monthly" type="number" min="0" value="30"></label><label>Hours saved monthly<input name="hours" type="number" min="0" value="4"></label><label>Your hour value ($)<input name="value" type="number" min="0" value="25"></label><output class="calc-result" data-calc-output></output></form></article>
+      <article class="surface content-card span-2"><h2>Verification &amp; disclosure</h2><p>{relationship}. This does not change our editorial assessment.</p><dl class="trust-grid"><div class="stat"><strong>{esc(offer['terms_verified_at'])}</strong><span>Terms checked</span></div><div class="stat"><strong>{expiry}</strong><span>Offer expiry</span></div><div class="stat"><strong>{esc(offer['approved_at'])}</strong><span>Editorial approval</span></div></dl><h3>Primary sources</h3><ul>{evidence}</ul>{review_link}</article>
+      <article class="surface content-card span-2 faq"><h2>Questions before you decide</h2>{faq_html}</article>
+    </div></section>
+    <section class="container section-tight"><div class="section-head"><div><p class="eyebrow">Keep your options open</p><h2>Two alternatives to compare</h2></div></div><div class="card-grid">{related_cards}</div></section>
+    <section class="container section-tight"><div class="surface content-card"><h2>Continue the workflow</h2><div class="related-links">{intent_links}<a href="../ai-tool-finder.html">Run a fresh tool match →</a></div></div></section>
+    <section class="narrow section-tight"><div class="surface loop-card"><h2>Ready to evaluate {esc(offer['name'])}?</h2><p>Open the verified destination and confirm today’s plan, limits and terms.</p><a class="btn btn-acid" href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer['id'])}" data-placement="offer-page-bottom">{esc(data['cta'])} →</a><p class="disclosure">Affiliate link. We may earn a commission; your price does not increase.</p></div></section>
+    <div class="mobile-offer-cta"><a class="btn btn-acid" href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer['id'])}" data-placement="offer-page-mobile">{esc(data['cta'])} →</a></div>
+    {catalog_script([offer, *related], '../')}'''
+    structured = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "SoftwareApplication", "name": offer["name"], "applicationCategory": offer["category"], "description": offer["summary"], "url": f"https://artificial.one/partner-offers/{offer['slug']}.html"},
+            {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Partner offers", "item": "https://artificial.one/partner-offers.html"}, {"@type": "ListItem", "position": 2, "name": offer["name"], "item": f"https://artificial.one/partner-offers/{offer['slug']}.html"}]},
+            {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": question, "acceptedAnswer": {"@type": "Answer", "text": answer}} for question, answer in faq]},
+        ],
+    }
+    return shell(
+        title=title, description=description,
+        canonical_path=f"partner-offers/{offer['slug']}.html", content=content, prefix="../",
+        social_image=f"https://artificial.one/images/social-cards/{offer['id']}.jpg",
+        social_image_alt=f"Independent {offer['name']} fit, use-case and pricing guide from Artificial.One",
+        structured_data=structured,
     )
 
 
