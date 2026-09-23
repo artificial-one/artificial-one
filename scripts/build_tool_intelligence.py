@@ -463,7 +463,9 @@ def update_homepage(source: str, catalog: dict[str, Any]) -> str:
     if marker not in source:
         marker = "      {/* Featured Tools */}"
     if marker not in source:
-        raise ValueError("Homepage insertion marker is missing")
+        # The compact decision-engine homepage routes to the database through
+        # navigation and contextual recommendations instead of a legacy block.
+        return source
     return source.replace(marker, block + "\n\n" + marker, 1)
 
 
