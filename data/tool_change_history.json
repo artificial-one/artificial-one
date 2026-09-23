@@ -1,10 +1,19 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 66,
-    "tracked_sources": 220
+    "successful_checks": 64,
+    "tracked_sources": 226
   },
   "events": [
+    {
+      "detected_on": "2026-09-23",
+      "id": "4572ed47f7d75404",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://submagic.co",
+      "tool_id": "submagic",
+      "tool_name": "Submagic"
+    },
     {
       "detected_on": "2026-09-22",
       "id": "7bfce6aa1c159df1",
@@ -79,6 +88,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-09-23",
   "version": 1
 }
