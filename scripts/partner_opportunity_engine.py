@@ -44,6 +44,7 @@ APPLICATION_PROFILE = (
     "We publish transparent affiliate disclosures, factual use-case guides, comparisons "
     "and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding."
 )
+ACTIONABLE_STATES = {"ready_for_owner_application", "policy_review_required", "approved_link_pending", "terms_required"}
 RELEVANCE_TERMS = {
     "artificial intelligence": 38, "ai": 26, "software": 18, "saas": 24,
     "automation": 24, "marketing": 20, "sales": 18, "analytics": 20,
@@ -288,6 +289,75 @@ def partnership_names(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     return result
 
 
+def _nested_value(item: dict[str, Any], keys: tuple[str, ...]) -> Any:
+    """Return the first useful value for a small, explicit set of API fields."""
+    queue: list[dict[str, Any]] = [item]
+    while queue:
+        current = queue.pop(0)
+        for key in keys:
+            value = current.get(key)
+            if value not in (None, "", [], {}):
+                return value
+        queue.extend(value for value in current.values() if isinstance(value, dict))
+    return ""
+
+
+def relationship_terms_required(item: dict[str, Any]) -> bool:
+    """Detect an explicit terms gate without guessing from a missing link."""
+    explicit = _nested_value(item, ("terms_required", "requires_terms_acceptance", "tos_required"))
+    if isinstance(explicit, bool):
+        return explicit
+    status = clean_text(_nested_value(item, ("terms_status", "tos_status", "access_status")), 80).casefold()
+    return status in {"required", "pending", "not_accepted", "terms_required"}
+
+
+def merge_authenticated_partnerstack(
+    discovered: list[dict[str, Any]], partnerships: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    """Make the authenticated relationship list authoritative over discovery."""
+    by_name: dict[str, dict[str, Any]] = {}
+    for item in discovered:
+        if item.get("network", "partnerstack") == "partnerstack":
+            key = normalized_name(str(item.get("name") or ""))
+            if key:
+                by_name[key] = item
+
+    for partnership in partnerships:
+        company = partnership.get("company") if isinstance(partnership.get("company"), dict) else {}
+        name = clean_text(company.get("name") or partnership.get("company_name") or partnership.get("name"), 120)
+        if not name:
+            continue
+        slug = slugify(str(company.get("slug") or partnership.get("company_slug") or partnership.get("slug") or name))
+        status = clean_text(partnership.get("approved_status") or partnership.get("status"), 80).casefold()
+        fields = {
+            "approved": status in {"approved", "active"},
+            "authenticated_relationship": True,
+            "relationship_status": status or "unknown",
+            "terms_required": relationship_terms_required(partnership),
+            "partnership_key": clean_text(partnership.get("key") or partnership.get("partnership_key"), 160),
+        }
+        existing = by_name.get(normalized_name(name))
+        if existing:
+            existing.update(fields)
+            continue
+
+        website = https_url(_nested_value(partnership, ("website", "website_url", "url")))
+        terms = https_url(_nested_value(partnership, ("tos", "terms_url", "terms")))
+        record = {
+            "id": f"partnerstack:{slug}", "network": "partnerstack", "name": name, "slug": slug,
+            "description": clean_text(_nested_value(partnership, ("description", "company_description", "program_description")), 700),
+            "offer": clean_text(_nested_value(partnership, ("offer", "commission_description")), 300),
+            "tags": ["Software"], "application_url": partnerstack_application_url(slug),
+            "terms_url": terms, "website": website, "waitlist": False, "archived": False,
+            "links_enabled": True, "materials": False, "sub_id_enabled": False,
+            "revenue_share": True, "review_days": 0, "source": "https://dash.partnerstack.com/home",
+            **fields,
+        }
+        discovered.append(record)
+        by_name[normalized_name(name)] = record
+    return discovered
+
+
 def partnerstack_links(api_key: str, partnership: dict[str, Any]) -> list[str]:
     identifier = str(partnership.get("key") or partnership.get("partnership_key") or "")
     if not identifier:
@@ -386,6 +456,9 @@ def auto_offer(item: dict[str, Any], tracking_url: str, today: str) -> dict[str,
         evidence.append({"label": f"{name} product website", "url": website})
     if terms:
         evidence.append({"label": f"{name} partner terms", "url": terms})
+    if not evidence:
+        reference = https_url(item.get("application_url")) or "https://partnerstack.com/"
+        evidence.append({"label": f"{name} authenticated partner record", "url": reference})
     return {
         "id": slugify(name), "slug": f"{slugify(name)}-software", "name": name,
         "status": "published", "category": category, "summary": summary[:500],
@@ -449,21 +522,32 @@ def merge_auto_offers(root: Path, opportunities: list[dict[str, Any]], partnersh
             str((partnership or {}).get("approved_status") or (partnership or {}).get("status") or "").casefold() in {"approved", "active"}
             if is_partnerstack else bool(item.get("approved"))
         )
-        if (
-            not approved or key in existing
-            or item.get("policy", {}).get("status") != "reviewed"
-            or not https_url(item.get("website")) or not https_url(item.get("terms_url"))
-        ):
+        if key in existing:
+            if approved:
+                item["relationship_state"] = "published"
+            continue
+        if not approved:
+            continue
+        if item.get("terms_required"):
+            item["relationship_state"] = "terms_required"
+            item["state"] = "terms_required"
+            continue
+        authenticated = bool(item.get("authenticated_relationship")) or not is_partnerstack
+        if not authenticated and item.get("policy", {}).get("status") != "reviewed":
             continue
         links = partnerstack_links(api_key, partnership) if is_partnerstack and partnership else [https_url(item.get("tracking_url"))]
         links = [link for link in links if link]
         if not links:
             item["state"] = "approved_link_pending"
+            item["relationship_state"] = "active_link_pending"
             continue
+        item["tracking_url"] = links[0]
+        item["relationship_state"] = "publishable"
         registry.setdefault("offers", []).append(auto_offer(item, links[0], date.today().isoformat()))
         existing.add(key)
         added.append(str(item["name"]))
         item["state"] = "active_auto_onboarded"
+        item["relationship_state"] = "published"
     if added or registry_changed:
         registry["updated_at"] = date.today().isoformat()
         (root / "data/partner_offers.json").write_text(json.dumps(registry, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -512,7 +596,19 @@ def prepare_opportunities(discovered: list[dict[str, Any]], root: Path, active: 
         approved = partner_status in {"approved", "active"} or bool(item.get("approved"))
         item["already_active"] = registered or approved
         if registered:
+            item["relationship_state"] = "published"
+        elif item.get("terms_required"):
+            item["relationship_state"] = "terms_required"
+        elif approved and item.get("tracking_url"):
+            item["relationship_state"] = "publishable"
+        elif approved:
+            item["relationship_state"] = "active_link_pending"
+        else:
+            item["relationship_state"] = "pending"
+        if registered:
             item["state"] = "existing_active"
+        elif item.get("terms_required"):
+            item["state"] = "terms_required"
         elif approved:
             item["state"] = "policy_review_pending"
         elif partner_status == "pending":
@@ -535,6 +631,8 @@ def prepare_opportunities(discovered: list[dict[str, Any]], root: Path, active: 
             item["policy"] = future.result()
             if item["policy"]["status"] == "reviewed":
                 item["state"] = "approved_ready_for_auto_onboarding" if item.get("approved") else "ready_for_owner_application"
+            elif item.get("authenticated_relationship") and item.get("approved"):
+                item["state"] = "approved_ready_for_auto_onboarding"
             else:
                 item["state"] = "policy_review_required"
     for item in deduped.values():
@@ -578,11 +676,11 @@ def render_queue_page(payload: dict[str, Any]) -> str:
         cards.append(
             f'''<article data-card data-state="{escape(item['state'])}" data-network="{escape(item['network'])}" data-search="{escape((item['name']+' '+item.get('description','')+' '+' '.join(item.get('tags',[]))).casefold())}" class="card"><p class="eyebrow">{escape(item['network'])} · score {item['score']}/100</p><h2>{escape(item['name'])}</h2><p>{escape(item.get('offer') or item.get('description') or 'Public offer details were not stated.')}</p><p><strong>State:</strong> {escape(item['state'].replace('_',' '))}</p><p class="policy"><strong>Policy signals:</strong> {escape(restrictions)}</p><a href="{escape(item['application_url'], quote=True)}" rel="nofollow noopener" target="_blank">Open this program in {escape(str(item.get('platform') or item['network']).replace('-', ' ').title())} →</a></article>'''
         )
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Partner opportunity queue | artificial.one</title><style>body{{margin:0;background:#f8fafc;color:#0f172a;font-family:Inter,system-ui,sans-serif}}main{{max-width:1120px;margin:auto;padding:40px 20px}}h1{{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1;margin:.2em 0}}.lead{{max-width:780px;color:#475569;line-height:1.6}}.controls{{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:28px 0}}input,select{{padding:13px;border:1px solid #cbd5e1;border-radius:10px;background:white;font:inherit}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}}.card{{display:flex;flex-direction:column;border:1px solid #e2e8f0;border-radius:16px;background:white;padding:20px;box-shadow:0 5px 18px #0f172a0a}}.card h2{{margin:.25em 0}}.card p{{color:#475569;line-height:1.5}}.card a{{margin-top:auto;color:#4338ca;font-weight:800}}.eyebrow{{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:#4f46e5!important;font-weight:800}}.policy{{font-size:.85rem}}@media(max-width:800px){{.grid{{grid-template-columns:1fr 1fr}}}}@media(max-width:560px){{.controls,.grid{{grid-template-columns:1fr}}}}</style></head><body><main><p class="eyebrow">Owner review queue · updated {escape(payload['updated_at'])}</p><h1>Affiliate opportunities</h1><p class="lead">All discovered candidates are retained—there is no weekly application quota. This page is excluded from search. Review the source program and its binding terms before applying; the automation never accepts contracts, certifies business facts or supplies tax and banking details.</p><p><strong>{payload['summary'].get('ready_for_owner_application',0)}</strong> ready for owner review · <strong>{payload['summary'].get('policy_review_required',0)}</strong> need manual policy review · <strong>{payload['summary'].get('application_pending',0)}</strong> pending</p><section class="controls"><input id="q" type="search" placeholder="Search programs"><select id="state"><option value="">All states</option>{''.join(f'<option>{escape(value)}</option>' for value in sorted({item['state'] for item in payload['opportunities']}))}</select><select id="network"><option value="">All networks</option>{''.join(f'<option>{escape(value)}</option>' for value in sorted({item['network'] for item in payload['opportunities']}))}</select></section><p id="count"></p><section class="grid">{''.join(cards)}</section></main><script>(function(){{var q=document.getElementById('q'),s=document.getElementById('state'),n=document.getElementById('network'),cards=[].slice.call(document.querySelectorAll('[data-card]')),count=document.getElementById('count');function apply(){{var text=q.value.trim().toLowerCase(),shown=0;cards.forEach(function(card){{var visible=(!text||card.dataset.search.indexOf(text)>-1)&&(!s.value||card.dataset.state===s.value)&&(!n.value||card.dataset.network===n.value);card.hidden=!visible;if(visible)shown++;}});count.textContent=shown+' opportunities shown';}}[q,s,n].forEach(function(control){{control.addEventListener(control===q?'input':'change',apply);}});apply();}})();</script></body></html>'''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Partner opportunity queue | artificial.one</title><style>body{{margin:0;background:#f8fafc;color:#0f172a;font-family:Inter,system-ui,sans-serif}}main{{max-width:1120px;margin:auto;padding:40px 20px}}h1{{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1;margin:.2em 0}}.lead{{max-width:780px;color:#475569;line-height:1.6}}.controls{{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:28px 0}}input,select{{padding:13px;border:1px solid #cbd5e1;border-radius:10px;background:white;font:inherit}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}}.card{{display:flex;flex-direction:column;border:1px solid #e2e8f0;border-radius:16px;background:white;padding:20px;box-shadow:0 5px 18px #0f172a0a}}.card h2{{margin:.25em 0}}.card p{{color:#475569;line-height:1.5}}.card a{{margin-top:auto;color:#4338ca;font-weight:800}}.eyebrow{{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:#4f46e5!important;font-weight:800}}.policy{{font-size:.85rem}}@media(max-width:800px){{.grid{{grid-template-columns:1fr 1fr}}}}@media(max-width:560px){{.controls,.grid{{grid-template-columns:1fr}}}}</style></head><body><main><p class="eyebrow">Owner review queue · updated {escape(payload['updated_at'])}</p><h1>Affiliate opportunities</h1><p class="lead">All discovered candidates are retained—there is no weekly application quota. This page is excluded from search. Review the source program and its binding terms before applying; the automation never accepts contracts, certifies business facts or supplies tax and banking details.</p><p><strong>{payload['summary'].get('ready_for_owner_application',0)}</strong> ready for owner review · <strong>{payload['summary'].get('terms_required',0)}</strong> need terms accepted · <strong>{payload['summary'].get('approved_link_pending',0)}</strong> need a usable link · <strong>{payload['summary'].get('application_pending',0)}</strong> pending</p><section class="controls"><input id="q" type="search" placeholder="Search programs"><select id="state"><option value="">All states</option>{''.join(f'<option>{escape(value)}</option>' for value in sorted({item['state'] for item in payload['opportunities']}))}</select><select id="network"><option value="">All networks</option>{''.join(f'<option>{escape(value)}</option>' for value in sorted({item['network'] for item in payload['opportunities']}))}</select></section><p id="count"></p><section class="grid">{''.join(cards)}</section></main><script>(function(){{var q=document.getElementById('q'),s=document.getElementById('state'),n=document.getElementById('network'),cards=[].slice.call(document.querySelectorAll('[data-card]')),count=document.getElementById('count');function apply(){{var text=q.value.trim().toLowerCase(),shown=0;cards.forEach(function(card){{var visible=(!text||card.dataset.search.indexOf(text)>-1)&&(!s.value||card.dataset.state===s.value)&&(!n.value||card.dataset.network===n.value);card.hidden=!visible;if(visible)shown++;}});count.textContent=shown+' opportunities shown';}}[q,s,n].forEach(function(control){{control.addEventListener(control===q?'input':'change',apply);}});apply();}})();</script></body></html>'''
 
 
 def render_email(payload: dict[str, Any], added: list[str], run_url: str) -> tuple[str, str, str]:
-    actionable = [item for item in payload["opportunities"] if item["state"] in {"ready_for_owner_application", "policy_review_required", "approved_link_pending"}]
+    actionable = [item for item in payload["opportunities"] if item["state"] in ACTIONABLE_STATES]
     lines = ["Artificial.One partner opportunity scout", "", f"Actionable opportunities: {len(actionable)}", f"Automatically onboarded: {len(added)}", "", "Applications and binding terms require owner action.", ""]
     queue_url = "https://artificial.one/partner-opportunities.html"
     lines.extend([f"Review the complete uncapped queue: {queue_url}", f"Cloud run: {run_url}"])
@@ -642,6 +740,7 @@ def run(
             partnerships = ps.fetch_all("partnerships", api_key, {"include_offers": "true", "include_archived": "true"})
         except Exception as exc:
             print(f"Partnership status refresh unavailable ({exc}); continuing from the published registry.", file=sys.stderr, flush=True)
+    discovered = merge_authenticated_partnerstack(discovered, partnerships)
     active = partnership_names(partnerships)
     print(f"Screening {len(discovered)} discovered opportunities and their policies…", flush=True)
     opportunities = prepare_opportunities(discovered, root, active)
@@ -676,7 +775,7 @@ def run(
     state_path.write_text(json.dumps(saved_state, indent=2) + "\n", encoding="utf-8")
     output_file = os.environ.get("GITHUB_OUTPUT", "")
     if output_file:
-        actionable = sum(item["state"] in {"ready_for_owner_application", "policy_review_required", "approved_link_pending"} for item in opportunities)
+        actionable = sum(item["state"] in ACTIONABLE_STATES for item in opportunities)
         with Path(output_file).open("a", encoding="utf-8") as handle:
             handle.write(f"changed={'true' if changed else 'false'}\nactionable={actionable}\nonboarded={len(added)}\nemail_delivered={'false' if email_error else 'true'}\n")
     return payload

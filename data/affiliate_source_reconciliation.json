@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-25",
+  "contract": {
+    "states": [
+      "pending",
+      "terms_required",
+      "active_link_pending",
+      "publishable",
+      "published"
+    ],
+    "rule": "Every approved relationship with a usable tracking URL must have a public page containing that exact URL.",
+    "future_sources": "Any connector represented in partner_opportunities.json is reconciled automatically."
+  },
+  "summary": {
+    "total": 725,
+    "active_link_pending": 8,
+    "pending": 441,
+    "published": 276,
+    "blocking_failures": 0,
+    "activation_blockers": 8
+  },
+  "networks": {
+    "awin": {
+      "total": 7,
+      "published": 7
+    },
+    "direct-vendor": {
+      "total": 47,
+      "pending": 47
+    },
+    "impact-appsumo": {
+      "total": 250,
+      "published": 250
+    },
+    "partnerstack": {
+      "total": 421,
+      "active_link_pending": 8,
+      "pending": 394,
+      "published": 19
+    }
+  },
+  "activation_blockers": [
+    {
+      "source_id": "partnerstack:elevenlabsinc",
+      "reason": "active_link_pending"
+    },
+    {
+      "source_id": "partnerstack:fullenrich",
+      "reason": "active_link_pending"
+    },
+    {
+      "source_id": "partnerstack:mindstudio",
+      "reason": "active_link_pending"
+    },
+    {
+      "source_id": "partnerstack:quillbot",
+      "reason": "active_link_pending"
+    },
+    {
+      "source_id": "partnerstack:runpod",
+      "reason": "external_account_required"
+    },
+    {
+      "source_id": "partnerstack:amplitude",
+      "reason": "active_link_pending"
+    },
+    {
+      "source_id": "partnerstack:breezyhr",
+      "reason": "active_link_pending"
+    },
+    {
+      "source_id": "partnerstack:genesisdigital",
+      "reason": "active_link_pending"
+    }
+  ],
+  "failures": []
+}

@@ -10,10 +10,12 @@ on:
       - scripts/affiliate_network_monitor.py
       - scripts/partnerstack_cloud_monitor.py
       - scripts/appsumo_impact.py
+      - scripts/affiliate_source_reconciliation.py
       - assets/affiliate-tracking.js
       - api/affiliate-event.js
       - tests/test_partnerstack_cloud_monitor.py
       - tests/test_appsumo_impact.py
+      - tests/test_affiliate_source_reconciliation.py
       - data/impact_connection.json
   schedule:
     # 07:23 UTC is morning in Europe/Prague and avoids peak-hour scheduling.
@@ -64,6 +66,9 @@ jobs:
       - name: Refresh normalized tool intelligence
         run: python scripts/build_tool_intelligence.py
 
+      - name: Reconcile every source with exact public affiliate links
+        run: python scripts/affiliate_source_reconciliation.py
+
       - name: Refresh crawl discovery and notify participating search engines
         env:
           INDEXNOW_SUBMIT_ENABLED: "true"
@@ -89,7 +94,9 @@ jobs:
           python -m unittest tests.test_appsumo_impact -v
           python -m unittest tests.test_impact_appsumo_scout -v
           python -m unittest tests.test_tool_intelligence -v
+          python -m unittest tests.test_affiliate_source_reconciliation -v
           python scripts/appsumo_impact.py --check
+          python scripts/affiliate_source_reconciliation.py --check
           python scripts/build_tool_intelligence.py --check
           python scripts/indexing_recovery.py --check
           node --check assets/affiliate-tracking.js
@@ -97,7 +104,7 @@ jobs:
       - name: Commit public availability and generated site changes
         shell: bash
         run: |
-          git add -- data/appsumo_offers.json data/indexing_recovery.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json appsumo-ai-tools.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html index.html sitemap.xml assets/affiliate-tracking.js ':(glob)**/*.html'
+          git add -- data/appsumo_offers.json data/affiliate_source_reconciliation.json data/indexing_recovery.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json appsumo-ai-tools.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html index.html sitemap.xml assets/affiliate-tracking.js ':(glob)**/*.html'
           if [ -e data/appsumo_impact_ads.json ]; then git add -- data/appsumo_impact_ads.json; fi
           if [ -d appsumo-guides ]; then git add -- appsumo-guides; fi
           if git diff --cached --quiet; then exit 0; fi
@@ -116,6 +123,7 @@ jobs:
           The read-only PartnerStack/Impact audit and AppSumo availability check completed. The consolidated private dashboard was emailed to the configured recipient.
           AppSumo products discovered: ${{ steps.appsumo_scout.outputs.products }}; new assets: ${{ steps.appsumo_scout.outputs.new_items }}; missing tracking links created: ${{ steps.appsumo_scout.outputs.links_created }}.
           Impact Ads permission required: ${{ steps.appsumo_scout.outputs.permission_required }}.
+          Every publishable source record was reconciled against its exact public-page affiliate link.
           Financial and customer metrics are intentionally omitted from this public repository's Actions summary.
           EOF
 

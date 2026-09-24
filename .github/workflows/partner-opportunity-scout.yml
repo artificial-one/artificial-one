@@ -16,8 +16,10 @@ on:
       - .github/workflows/partner-opportunity-scout.yml
       - scripts/partner_opportunity_engine.py
       - scripts/affiliate_network_connectors.py
+      - scripts/affiliate_source_reconciliation.py
       - tests/test_partner_opportunity_engine.py
       - tests/test_affiliate_network_connectors.py
+      - tests/test_affiliate_source_reconciliation.py
 
 permissions:
   contents: write
@@ -73,22 +75,24 @@ jobs:
           python scripts/monetize_affiliate_links.py
           python scripts/build_tool_intelligence.py
           python scripts/consolidate_legacy_index.py
+          python scripts/affiliate_source_reconciliation.py
           INDEXNOW_SUBMIT_ENABLED=true python scripts/indexing_recovery.py --submit --state .indexnow/private-state.json
 
       - name: Verify opportunity and publishing safety
         run: |
-          python -m unittest tests.test_partner_opportunity_engine tests.test_affiliate_network_connectors tests.test_partner_offer_pipeline -v
+          python -m unittest tests.test_partner_opportunity_engine tests.test_affiliate_network_connectors tests.test_affiliate_source_reconciliation tests.test_partner_offer_pipeline -v
           python scripts/build_partner_offers.py --check
           python scripts/build_search_revenue_pages.py --check
           python scripts/monetize_affiliate_links.py --check
           python scripts/build_tool_intelligence.py --check
           python scripts/consolidate_legacy_index.py --check
+          python scripts/affiliate_source_reconciliation.py --check
           python scripts/indexing_recovery.py --check
 
       - name: Commit public-safe inventory and newly activated offers
         shell: bash
         run: |
-          git add -- data/partner_opportunities.json data/affiliate_network_status.json data/partner_offers.json data/partnerstack_program_audit.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/indexing_recovery.json data/legacy_index_consolidation.json partner-opportunities.html partner-offers.html partner-offers search-intent calculators ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html sitemap.xml assets/affiliate-tracking.js ':(glob)tools/*.html'
+          git add -- data/partner_opportunities.json data/affiliate_network_status.json data/affiliate_source_reconciliation.json data/partner_offers.json data/partnerstack_program_audit.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/indexing_recovery.json data/legacy_index_consolidation.json partner-opportunities.html partner-offers.html partner-offers search-intent calculators ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html sitemap.xml assets/affiliate-tracking.js ':(glob)tools/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -111,4 +115,5 @@ jobs:
           echo "## Affiliate opportunity scout" >> "$GITHUB_STEP_SUMMARY"
           echo "Actionable opportunities: ${{ steps.scout.outputs.actionable }}; automatically onboarded: ${{ steps.scout.outputs.onboarded }}." >> "$GITHUB_STEP_SUMMARY"
           echo "Awin, CJ, Sovrn and Rakuten are queried automatically when their narrowly scoped repository secrets are present." >> "$GITHUB_STEP_SUMMARY"
+          echo "All current and future connector records are reconciled against exact public-page affiliate links before deployment." >> "$GITHUB_STEP_SUMMARY"
           echo "No application quota is imposed. Binding applications and terms remain an owner action." >> "$GITHUB_STEP_SUMMARY"
