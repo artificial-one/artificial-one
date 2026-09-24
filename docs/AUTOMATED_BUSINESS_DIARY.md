@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-24T13:45:29+02:00
+**Latest recorded activity:** 2026-09-24T14:10:15+02:00
 
 ## Daily productive system
 
@@ -30,6 +30,10 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 
 ### 2026-09-24
 
+- **14:10** — Added 1 new AI-news items to the live briefing.
+  - Gemini 4 is almost ready, says new Google DeepMind chief
+- **14:10** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **14:10** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
 - **13:45** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
 - **11:28** — Published 2 confirmed vendor pricing, plan, or availability changes.
   - Krisp

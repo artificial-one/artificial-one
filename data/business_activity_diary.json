@@ -2,9 +2,40 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-24T13:45:29+02:00",
+  "last_activity_at": "2026-09-24T14:10:15+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:939a9cd9f1cf9a5e2cc0225d8c65c7501e4f01b3:news_items_added",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T14:10:15+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 1 new AI-news items to the live briefing.",
+      "details": [
+        "Gemini 4 is almost ready, says new Google DeepMind chief"
+      ],
+      "source_commit": "939a9cd9f1cf"
+    },
+    {
+      "id": "git:939a9cd9f1cf9a5e2cc0225d8c65c7501e4f01b3:M:news.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T14:10:15+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "939a9cd9f1cf"
+    },
+    {
+      "id": "git:939a9cd9f1cf9a5e2cc0225d8c65c7501e4f01b3:M:index.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T14:10:15+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "939a9cd9f1cf"
+    },
     {
       "id": "git:55379fcabf8e9631790f502768d948eef9819266:M:buyers-guides.html",
       "date": "2026-09-24",
