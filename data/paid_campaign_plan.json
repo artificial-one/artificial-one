@@ -39,6 +39,22 @@
       ]
     },
     {
+      "offer_id": "volza",
+      "name": "AO Generic Intent - Volza",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/volza-trade-intelligence.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-volza",
+      "keywords": [
+        "research data",
+        "find and compare potential international buyers or suppliers",
+        "research shipment activity for a product or market",
+        "support sourcing market entry and b2b prospecting decisions"
+      ],
+      "negative_keywords": [
+        "Volza"
+      ]
+    },
+    {
       "offer_id": "elevenlabs",
       "name": "AO Generic Intent - ElevenLabs",
       "eligible": false,
@@ -69,37 +85,6 @@
       ]
     },
     {
-      "offer_id": "volza",
-      "name": "AO Generic Intent - Volza",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/volza-trade-intelligence.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-volza",
-      "keywords": [
-        "research data",
-        "find and compare potential international buyers or suppliers",
-        "research shipment activity for a product or market",
-        "support sourcing market entry and b2b prospecting decisions"
-      ],
-      "negative_keywords": [
-        "Volza"
-      ]
-    },
-    {
-      "offer_id": "rank-prompt",
-      "name": "AO Generic Intent - Rank Prompt",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/rank-prompt-ai-visibility.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-rank-prompt",
-      "keywords": [
-        "seo visibility",
-        "monitor brand mentions in ai answers",
-        "compare ai search visibility with competitors"
-      ],
-      "negative_keywords": [
-        "Rank Prompt"
-      ]
-    },
-    {
       "offer_id": "seamless",
       "name": "AO Generic Intent - Seamless.AI",
       "eligible": false,
@@ -127,6 +112,21 @@
       ],
       "negative_keywords": [
         "LearnWorlds"
+      ]
+    },
+    {
+      "offer_id": "rank-prompt",
+      "name": "AO Generic Intent - Rank Prompt",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/rank-prompt-ai-visibility.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-rank-prompt",
+      "keywords": [
+        "seo visibility",
+        "monitor brand mentions in ai answers",
+        "compare ai search visibility with competitors"
+      ],
+      "negative_keywords": [
+        "Rank Prompt"
       ]
     }
   ],
