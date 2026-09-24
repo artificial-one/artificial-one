@@ -2,9 +2,20 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-24T23:46:14+02:00",
+  "last_activity_at": "2026-09-25T01:04:52+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:f18c45beb3085f6325579aa28407f1c478988577:affiliate_opportunities_found",
+      "date": "2026-09-25",
+      "occurred_at": "2026-09-25T01:04:52+02:00",
+      "kind": "affiliate_opportunities_found",
+      "summary": "Discovered 1 new affiliate opportunities for evaluation.",
+      "details": [
+        "Wegic"
+      ],
+      "source_commit": "f18c45beb308"
+    },
     {
       "id": "git:1e5d338c49fd8e02bbf0877af27c98e64679d393:news_items_added",
       "date": "2026-09-24",
