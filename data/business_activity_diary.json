@@ -2,9 +2,41 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-24T03:15:32+02:00",
+  "last_activity_at": "2026-09-24T07:20:25+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:78de0af8e0e7f19c3f3b89521dd310fb705118ca:news_items_added",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T07:20:25+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 2 new AI-news items to the live briefing.",
+      "details": [
+        "Everything new coming to Meta’s AI agent Muse",
+        "ChatGPT Ads expands to Southeast Asia and Taiwan"
+      ],
+      "source_commit": "78de0af8e0e7"
+    },
+    {
+      "id": "git:78de0af8e0e7f19c3f3b89521dd310fb705118ca:M:news.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T07:20:25+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "78de0af8e0e7"
+    },
+    {
+      "id": "git:78de0af8e0e7f19c3f3b89521dd310fb705118ca:M:index.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T07:20:25+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "78de0af8e0e7"
+    },
     {
       "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:social_creatives",
       "date": "2026-09-24",
