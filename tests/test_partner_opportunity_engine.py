@@ -88,6 +88,20 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
         self.assertEqual(html.count("data-card "), 25)
         self.assertIn("https://example.com/24", html)
 
+    def test_latest_report_email_links_to_the_complete_queue(self):
+        payload = {
+            "summary": {},
+            "opportunities": [
+                {"state": "ready_for_owner_application"},
+                {"state": "policy_review_required"},
+                {"state": "not_qualified"},
+            ],
+        }
+        subject, text, html = scout.render_email(payload, [], "https://github.com/example/run")
+        self.assertIn("2 require review", subject)
+        self.assertIn("https://artificial.one/partner-opportunities.html", text)
+        self.assertIn("Open the complete opportunity queue", html)
+
     def test_approved_partner_with_link_enters_offer_pipeline(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

@@ -609,7 +609,13 @@ def send_email(api_key: str, to: str, sender: str, subject: str, text: str, html
             raise ScoutError(f"Resend returned HTTP {response.status}")
 
 
-def run(root: Path, state_path: Path, email_to: str = "", email_from: str = "") -> dict[str, Any]:
+def run(
+    root: Path,
+    state_path: Path,
+    email_to: str = "",
+    email_from: str = "",
+    force_email: bool = False,
+) -> dict[str, Any]:
     print("Fetching PartnerStack's public marketplace…", flush=True)
     try:
         discovered = parse_partnerstack_directory(fetch_text(MARKETPLACE_URL))
@@ -655,7 +661,7 @@ def run(root: Path, state_path: Path, email_to: str = "", email_from: str = "") 
     run_url = os.environ.get("GITHUB_SERVER_URL", "https://github.com") + "/" + os.environ.get("GITHUB_REPOSITORY", "artificial-one/artificial-one") + "/actions/runs/" + os.environ.get("GITHUB_RUN_ID", "manual")
     resend_key = os.environ.get("RESEND_API_KEY", "").strip()
     email_error = ""
-    if changed and email_to and email_from and resend_key:
+    if (changed or force_email) and email_to and email_from and resend_key:
         try:
             send_email(resend_key, email_to, email_from, *render_email(payload, added, run_url))
             print(f"Meaningful-change email delivered to {email_to}.", flush=True)
@@ -681,9 +687,10 @@ if __name__ == "__main__":
     parser.add_argument("--state", type=Path, default=ROOT / ".partner-scout/state.json")
     parser.add_argument("--email-to", default="")
     parser.add_argument("--email-from", default="Artificial.One Partner Scout <onboarding@resend.dev>")
+    parser.add_argument("--force-email", action="store_true", help="Send the current report even when the inventory is unchanged.")
     args = parser.parse_args()
     try:
-        result = run(ROOT, args.state, args.email_to, args.email_from)
+        result = run(ROOT, args.state, args.email_to, args.email_from, args.force_email)
         print(f"Partner scout evaluated {result['summary']['total']} opportunities with no application quota.")
     except (ScoutError, OSError, ValueError) as exc:
         print(f"Partner scout failed: {exc}", file=sys.stderr)

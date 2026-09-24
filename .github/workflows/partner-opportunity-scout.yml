@@ -2,6 +2,12 @@ name: Discover affiliate opportunities
 
 on:
   workflow_dispatch:
+    inputs:
+      send_latest_report:
+        description: Email the current partnership report even if nothing changed
+        required: false
+        default: true
+        type: boolean
   schedule:
     - cron: "41 5 * * *"
   push:
@@ -58,6 +64,7 @@ jobs:
           --state .partner-scout/state.json
           --email-to hello@artificial.one
           --email-from "Artificial.One Partner Scout <onboarding@resend.dev>"
+          ${{ inputs.send_latest_report && '--force-email' || '' }}
 
       - name: Build newly activated offers through the existing safe pipeline
         run: |
