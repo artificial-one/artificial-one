@@ -39,6 +39,21 @@
       ]
     },
     {
+      "offer_id": "elevenlabs",
+      "name": "AO Generic Intent - ElevenLabs",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/elevenlabs-ai-voice.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-elevenlabs",
+      "keywords": [
+        "audio voice",
+        "generate narration and voiceovers",
+        "dub spoken content into other languages"
+      ],
+      "negative_keywords": [
+        "ElevenLabs"
+      ]
+    },
+    {
       "offer_id": "omniseo",
       "name": "AO Generic Intent - OmniSEO",
       "eligible": false,
@@ -51,50 +66,6 @@
       ],
       "negative_keywords": [
         "OmniSEO"
-      ]
-    },
-    {
-      "offer_id": "learnworlds",
-      "name": "AO Generic Intent - LearnWorlds",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/learnworlds-course-platform.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-learnworlds",
-      "keywords": [
-        "online learning",
-        "launch a paid online course",
-        "deliver branded customer or employee training"
-      ],
-      "negative_keywords": [
-        "LearnWorlds"
-      ]
-    },
-    {
-      "offer_id": "everleakproof-us",
-      "name": "AO Generic Intent - EverLeakProof US",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/everleakproof-us-software.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-everleakproof-us",
-      "keywords": [
-        "evaluate for a relevant business workflow",
-        "compare with other software options"
-      ],
-      "negative_keywords": [
-        "EverLeakProof US"
-      ]
-    },
-    {
-      "offer_id": "pinecone",
-      "name": "AO Generic Intent - Pinecone",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/pinecone-vector-database.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-pinecone",
-      "keywords": [
-        "developer infrastructure",
-        "build retrieval augmented generation",
-        "add semantic search to an application"
-      ],
-      "negative_keywords": [
-        "Pinecone"
       ]
     },
     {
@@ -114,18 +85,48 @@
       ]
     },
     {
-      "offer_id": "elevenlabs",
-      "name": "AO Generic Intent - ElevenLabs",
+      "offer_id": "rank-prompt",
+      "name": "AO Generic Intent - Rank Prompt",
       "eligible": false,
       "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/elevenlabs-ai-voice.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-elevenlabs",
+      "landing_url": "https://artificial.one/partner-offers/rank-prompt-ai-visibility.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-rank-prompt",
       "keywords": [
-        "audio voice",
-        "generate narration and voiceovers",
-        "dub spoken content into other languages"
+        "seo visibility",
+        "monitor brand mentions in ai answers",
+        "compare ai search visibility with competitors"
       ],
       "negative_keywords": [
-        "ElevenLabs"
+        "Rank Prompt"
+      ]
+    },
+    {
+      "offer_id": "seamless",
+      "name": "AO Generic Intent - Seamless.AI",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-seamless",
+      "keywords": [
+        "sales intelligence",
+        "build targeted b2b prospect lists",
+        "enrich sales contact records"
+      ],
+      "negative_keywords": [
+        "Seamless.AI"
+      ]
+    },
+    {
+      "offer_id": "learnworlds",
+      "name": "AO Generic Intent - LearnWorlds",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/learnworlds-course-platform.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-learnworlds",
+      "keywords": [
+        "online learning",
+        "launch a paid online course",
+        "deliver branded customer or employee training"
+      ],
+      "negative_keywords": [
+        "LearnWorlds"
       ]
     }
   ],
