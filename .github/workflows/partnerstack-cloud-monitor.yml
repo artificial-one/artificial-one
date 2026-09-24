@@ -23,7 +23,6 @@ on:
 
 permissions:
   contents: write
-  issues: write
 
 concurrency:
   group: artificial-one-site-publisher
@@ -80,14 +79,11 @@ jobs:
           PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
           IMPACT_ACCOUNT_SID: ${{ secrets.IMPACT_ACCOUNT_SID }}
           IMPACT_AUTH_TOKEN: ${{ secrets.IMPACT_AUTH_TOKEN }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
           UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
         run: >-
           python scripts/affiliate_network_monitor.py
           --baseline .affiliate-monitor/baseline.json
-          --email-to hello@artificial.one
-          --email-from "Artificial.One Partner Monitor <onboarding@resend.dev>"
 
       - name: Verify public AppSumo assets and safety rules
         run: |
@@ -120,7 +116,7 @@ jobs:
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
           ## Affiliate network cloud monitor
 
-          The read-only PartnerStack/Impact audit and AppSumo availability check completed. The consolidated private dashboard was emailed to the configured recipient.
+          The read-only PartnerStack/Impact audit and AppSumo availability check completed. Its results are collected by the single daily executive report.
           AppSumo products discovered: ${{ steps.appsumo_scout.outputs.products }}; new assets: ${{ steps.appsumo_scout.outputs.new_items }}; missing tracking links created: ${{ steps.appsumo_scout.outputs.links_created }}.
           Impact Ads permission required: ${{ steps.appsumo_scout.outputs.permission_required }}.
           Every publishable source record was reconciled against its exact public-page affiliate link.
@@ -136,23 +132,3 @@ jobs:
             .appsumo-monitor/availability.json
             .indexnow/private-state.json
           key: affiliate-network-private-${{ github.run_id }}
-
-      - name: Notify the repository owner about a meaningful change
-        if: steps.monitor.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        shell: bash
-        run: |
-          cat > /tmp/partnerstack-notice.md <<EOF
-          The cloud monitor detected a meaningful change in sanitized PartnerStack or Impact aggregate data.
-
-          Review the private [PartnerStack](https://dash.partnerstack.com/home) or [Impact](https://app.impact.com/) dashboard before changing public content.
-
-          Automated run: ${RUN_URL}
-          EOF
-          gh issue create \
-            --repo "${GITHUB_REPOSITORY}" \
-            --title "Affiliate network monitor: attention needed ($(date -u +%F))" \
-            --body-file /tmp/partnerstack-notice.md \
-            --assignee artificial-one

@@ -1,0 +1,36 @@
+# Source control and automation are not website assets.
+.git
+.github
+.cursor
+.codex
+.secrets
+
+# Private runtime state and the local edge model belong on GitHub Actions only.
+.edge-ai
+.affiliate-monitor
+.appsumo-monitor
+.indexnow
+.partner-metrics
+.partner-scout
+.revenue-acceleration
+.search-growth
+
+# Development, tests, documentation and historical prototypes.
+Claude
+scripts
+tests
+docs
+*.py
+*.ps1
+*.md
+*.code-workspace
+*.bak
+*.xlsx
+og_images_needed.csv
+
+# Local caches and editor output.
+__pycache__
+*.pyc
+.pytest_cache
+.DS_Store
+Thumbs.db

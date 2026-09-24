@@ -19,7 +19,7 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 - **Revenue optimization and distribution — 08:13 UTC daily:** ranks offers, improves conversion routes, refreshes decision tools and creatives, publishes one confirmed item to each connected social channel, and updates RSS and the web newsletter.
 - **Playful Bluesky elephant — 10:37 and 17:47 UTC daily:** publishes one extra visual elephant-persona post, answers recent mentions, joins at most one relevant AI-tool question, appreciates useful posts, and selectively follows back relevant people within strict anti-spam limits.
 - **Playful LinkedIn edition — 14:43 UTC Monday–Friday:** publishes a second original visual post with a conversational hook and a genuine discussion question. Together with the daily edition, LinkedIn receives twelve posts per week.
-- **Business diary — after productive workflows plus a 23:55 UTC fallback:** records the verified outcomes below.
+- **Business diary — 20:15 UTC daily:** records the verified outcomes below in one consolidated roll-up.
 
 ### Connected versus prepared channels
 

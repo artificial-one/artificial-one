@@ -1,0 +1,73 @@
+name: Send daily executive report
+
+on:
+  workflow_dispatch:
+    inputs:
+      send_even_if_already_sent:
+        description: Send another copy for today
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    # After the day's website, affiliate and social publishing windows.
+    - cron: "30 20 * * *"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: artificial-one-daily-executive-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Restore private report history
+        uses: actions/cache/restore@v5
+        with:
+          path: .daily-executive
+          key: daily-executive-${{ github.run_id }}
+          restore-keys: daily-executive-
+
+      - name: Refresh the business outcomes diary
+        run: python scripts/build_business_activity_diary.py
+
+      - name: Refresh aggregate commercial results
+        continue-on-error: true
+        env:
+          PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
+          IMPACT_ACCOUNT_SID: ${{ secrets.IMPACT_ACCOUNT_SID }}
+          IMPACT_AUTH_TOKEN: ${{ secrets.IMPACT_AUTH_TOKEN }}
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+        run: python scripts/affiliate_network_monitor.py --baseline .daily-executive/affiliate-snapshot.json
+
+      - name: Send the single daily management brief
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: >-
+          python scripts/daily_executive_report.py
+          --snapshot .daily-executive/affiliate-snapshot.json
+          --state .daily-executive/state.json
+          --email-to hello@artificial.one
+          --email-from "Artificial.One Daily Brief <onboarding@resend.dev>"
+          ${{ inputs.send_even_if_already_sent && '--force' || '' }}
+
+      - name: Save private report history
+        if: always()
+        uses: actions/cache/save@v5
+        with:
+          path: .daily-executive
+          key: daily-executive-${{ github.run_id }}

@@ -2,12 +2,6 @@ name: Discover affiliate opportunities
 
 on:
   workflow_dispatch:
-    inputs:
-      send_latest_report:
-        description: Email the current partnership report even if nothing changed
-        required: false
-        default: true
-        type: boolean
   schedule:
     - cron: "41 5 * * *"
   push:
@@ -54,7 +48,6 @@ jobs:
         id: scout
         env:
           PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           AWIN_PUBLISHER_ID: ${{ secrets.AWIN_PUBLISHER_ID }}
           AWIN_API_TOKEN: ${{ secrets.AWIN_API_TOKEN }}
           SOVRN_COMMERCE_API_KEY: ${{ secrets.SOVRN_COMMERCE_API_KEY }}
@@ -64,9 +57,6 @@ jobs:
         run: >-
           python scripts/partner_opportunity_engine.py
           --state .partner-scout/state.json
-          --email-to hello@artificial.one
-          --email-from "Artificial.One Partner Scout <onboarding@resend.dev>"
-          ${{ inputs.send_latest_report && '--force-email' || '' }}
 
       - name: Build newly activated offers through the existing safe pipeline
         run: |

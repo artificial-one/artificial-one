@@ -2,21 +2,9 @@ name: Update business activity diary
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - Refresh AI news
-      - Search growth engine
-      - Build partner offers
-      - Discover affiliate opportunities
-      - Affiliate network cloud monitor
-      - Optimize affiliate revenue
-      - Publish playful LinkedIn post
-      - Run playful Bluesky elephant
-      - Refresh AI tool intelligence
-    types: [completed]
   schedule:
-    # Nightly fallback after the normal publishing window.
-    - cron: "55 23 * * *"
+    # One daily roll-up after the normal publishing and social windows.
+    - cron: "15 20 * * *"
 
 permissions:
   contents: write
@@ -27,7 +15,6 @@ concurrency:
 
 jobs:
   update:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
