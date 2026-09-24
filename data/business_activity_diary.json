@@ -2,9 +2,41 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-24T07:20:25+02:00",
+  "last_activity_at": "2026-09-24T11:28:40+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:28e758cafb385d22f686e5281242c7da9e838a86:vendor_changes_detected",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T11:28:40+02:00",
+      "kind": "vendor_changes_detected",
+      "summary": "Published 2 confirmed vendor pricing, plan, or availability changes.",
+      "details": [
+        "Krisp",
+        "Postly"
+      ],
+      "source_commit": "28e758cafb38"
+    },
+    {
+      "id": "git:28e758cafb385d22f686e5281242c7da9e838a86:M:ai-tool-observatory.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T11:28:40+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Price & Product Changes | artificial.one",
+      "url": "https://artificial.one/ai-tool-observatory.html",
+      "path": "ai-tool-observatory.html",
+      "source_commit": "28e758cafb38"
+    },
+    {
+      "id": "git:28e758cafb385d22f686e5281242c7da9e838a86:M:ai-tool-changes.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T11:28:40+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Pricing & Feature Change History | artificial.one",
+      "url": "https://artificial.one/ai-tool-changes.html",
+      "path": "ai-tool-changes.html",
+      "source_commit": "28e758cafb38"
+    },
     {
       "id": "git:78de0af8e0e7f19c3f3b89521dd310fb705118ca:news_items_added",
       "date": "2026-09-24",
