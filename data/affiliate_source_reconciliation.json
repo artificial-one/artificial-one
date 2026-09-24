@@ -14,10 +14,9 @@
   },
   "summary": {
     "total": 726,
-    "active_link_pending": 8,
+    "active_link_pending": 16,
     "pending": 433,
     "published": 277,
-    "terms_required": 8,
     "blocking_failures": 0,
     "activation_blockers": 16
   },
@@ -36,28 +35,27 @@
     },
     "partnerstack": {
       "total": 422,
-      "active_link_pending": 8,
+      "active_link_pending": 16,
       "pending": 386,
-      "published": 20,
-      "terms_required": 8
+      "published": 20
     }
   },
   "activation_blockers": [
     {
       "source_id": "partnerstack:amplemarket",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:capsule",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:castmagic",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:close",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:elevenlabsinc",
@@ -69,7 +67,7 @@
     },
     {
       "source_id": "partnerstack:leadpages",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:mindstudio",
@@ -77,11 +75,11 @@
     },
     {
       "source_id": "partnerstack:webpros",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:reply",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:quillbot",
@@ -97,7 +95,7 @@
     },
     {
       "source_id": "partnerstack:800",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:breezyhr",
