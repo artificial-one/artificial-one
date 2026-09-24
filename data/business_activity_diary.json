@@ -2,9 +2,187 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-24T02:57:18+02:00",
+  "last_activity_at": "2026-09-24T02:58:22+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:social_creatives",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "social_creatives_updated",
+      "summary": "Created or refreshed 11 social-media creative assets.",
+      "details": [
+        "images/social-cards/beautiful-ai.jpg",
+        "images/social-cards/daily-editorial-vertical.jpg",
+        "images/social-cards/daily-editorial.jpg",
+        "images/social-cards/descript.jpg",
+        "images/social-cards/elevenlabs.jpg",
+        "images/social-cards/learnworlds.jpg",
+        "images/social-cards/omniseo.jpg",
+        "images/social-cards/unbounce.jpg",
+        "images/social-cards/volza.jpg",
+        "images/social-cards/wegic.jpg",
+        "images/social-cards/whatconverts.jpg"
+      ],
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:rss",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "distribution_updated",
+      "summary": "Published an updated RSS feed for content distribution.",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:newsletter",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "newsletter_edition_updated",
+      "summary": "Published a refreshed web newsletter edition (email sending is not currently connected).",
+      "url": "https://artificial.one/newsletter/latest.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:partner-offers/volza-trade-intelligence.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Volza: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/volza-trade-intelligence.html",
+      "path": "partner-offers/volza-trade-intelligence.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:partner-offers/seamless-ai-sales-intelligence.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Seamless.AI: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html",
+      "path": "partner-offers/seamless-ai-sales-intelligence.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:partner-offers/rank-prompt-ai-visibility.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Rank Prompt: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/rank-prompt-ai-visibility.html",
+      "path": "partner-offers/rank-prompt-ai-visibility.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:partner-offers/pinecone-vector-database.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Pinecone: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/pinecone-vector-database.html",
+      "path": "partner-offers/pinecone-vector-database.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:partner-offers/learnworlds-course-platform.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: LearnWorlds: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/learnworlds-course-platform.html",
+      "path": "partner-offers/learnworlds-course-platform.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:partner-offers/everleakproof-us-software.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: EverLeakProof US: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/everleakproof-us-software.html",
+      "path": "partner-offers/everleakproof-us-software.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:partner-offers/elevenlabs-ai-voice.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: ElevenLabs: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/elevenlabs-ai-voice.html",
+      "path": "partner-offers/elevenlabs-ai-voice.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:partner-offers.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Verified AI Partner Offers | artificial.one",
+      "url": "https://artificial.one/partner-offers.html",
+      "path": "partner-offers.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:offer-updates.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Pricing and Plan Updates | artificial.one",
+      "url": "https://artificial.one/offer-updates.html",
+      "path": "offer-updates.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:news.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:index.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:calculators/landing-page-roi-calculator.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Landing Page ROI Calculator | Free Tool | artificial.one",
+      "url": "https://artificial.one/calculators/landing-page-roi-calculator.html",
+      "path": "calculators/landing-page-roi-calculator.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:ai-tool-finder.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one",
+      "url": "https://artificial.one/ai-tool-finder.html",
+      "path": "ai-tool-finder.html",
+      "source_commit": "f5006aab70df"
+    },
+    {
+      "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:M:ai-stack-builder.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:58:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one",
+      "url": "https://artificial.one/ai-stack-builder.html",
+      "path": "ai-stack-builder.html",
+      "source_commit": "f5006aab70df"
+    },
     {
       "id": "git:3635bec09aa9e2ebc89326f75d4756ba896db3ce:news_items_added",
       "date": "2026-09-24",
