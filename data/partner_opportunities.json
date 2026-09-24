@@ -1,13 +1,12 @@
 {
   "version": 1,
-  "updated_at": "2026-09-23",
+  "updated_at": "2026-09-24",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
     "total": 475,
-    "active_auto_onboarded": 1,
-    "existing_active": 30,
+    "existing_active": 31,
     "not_qualified": 14,
     "policy_review_required": 22,
     "ready_for_owner_application": 408
@@ -72,7 +71,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -1135,7 +1134,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -1251,7 +1250,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 74,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -2025,7 +2024,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 30,
+      "review_days": 29,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -2321,7 +2320,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 54,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3196,7 +3195,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 18,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -4248,7 +4247,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 33,
+      "review_days": 51,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5591,7 +5590,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 203,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -5700,7 +5699,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 33,
+      "review_days": 34,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6593,7 +6592,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 75,
       "relevance_matches": [
@@ -8868,7 +8867,7 @@
     {
       "id": "partnerstack:softsyncaiinc",
       "network": "partnerstack",
-      "name": "SoftSync AI Inc",
+      "name": "SoftSync",
       "slug": "softsyncaiinc",
       "description": "SoftSync AI is a CRM for small and mid-sized sales teams. It connects to Claude and ChatGPT through the Model Context Protocol, so follow-ups, reminders and data entry run without anyone driving them. Recommend it and you earn 30% of every payment your customers make, for as long as they stay. Not a one-off bounty. Top affiliates move to 35%. Logos, screenshots and ready-to-paste copy are all in Resources. Questions go to Celine at celine@softsync.ai.",
       "offer": "Lifetime earnings up to 40%. Become a Softsync affiliate!",
@@ -9262,7 +9261,7 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
+          "paid_search_restricted": true,
           "coupon_restricted": false,
           "email_restricted": false,
           "incentive_restricted": false,
@@ -9509,7 +9508,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -9716,18 +9715,10 @@
         "sales"
       ],
       "already_active": false,
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": true,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -9862,7 +9853,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 48,
+      "review_days": 53,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -9872,10 +9863,18 @@
         "software"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -12297,7 +12296,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12415,7 +12414,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12521,7 +12520,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 31,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12680,7 +12679,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 20,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12782,7 +12781,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 226,
+      "review_days": 469,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -15083,7 +15082,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 50,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -15510,7 +15509,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 62,
+      "review_days": 65,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -15804,7 +15803,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 14,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -15891,7 +15890,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 12,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16030,7 +16029,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16671,7 +16670,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 41,
+      "review_days": 40,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17850,7 +17849,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18375,7 +18374,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 26,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -18619,18 +18618,10 @@
         "software"
       ],
       "already_active": true,
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -18704,7 +18695,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 120,
+      "review_days": 94,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19150,14 +19141,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": true,
-          "coupon_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 180
+        "cookie_days": null
       }
     },
     {
@@ -19336,7 +19327,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 7,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20998,56 +20989,6 @@
       }
     },
     {
-      "id": "partnerstack:kixie",
-      "network": "partnerstack",
-      "name": "Kixie",
-      "slug": "kixie",
-      "description": "Kixie is a sales engagement platform that boosts sales and service team performance with ultra-reliable, easily automated, calling & texting features fully integrated into your CRM of choice.",
-      "offer": "20% reward on transaction value*",
-      "tags": [
-        "Affiliates",
-        "Hot",
-        "Hubspot integrated",
-        "Referral Partners",
-        "Sales",
-        "Salesforce integrated",
-        "Shopify integrated",
-        "System Integrator",
-        "Trusted",
-        "hot"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/kixie?company=kixie&gref=marketplace",
-      "terms_url": "https://www.kixie.com/marketing-partner-program-tos/",
-      "website": "https://www.kixie.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 10,
-      "source": "https://market.partnerstack.com/",
-      "score": 56,
-      "relevance_matches": [
-        "sales"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:pdware",
       "network": "partnerstack",
       "name": "PDWare",
@@ -21408,15 +21349,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
+          "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -22797,6 +22738,56 @@
       }
     },
     {
+      "id": "partnerstack:kixie",
+      "network": "partnerstack",
+      "name": "Kixie",
+      "slug": "kixie",
+      "description": "Kixie is a sales engagement platform that boosts sales and service team performance with ultra-reliable, easily automated, calling & texting features fully integrated into your CRM of choice.",
+      "offer": "",
+      "tags": [
+        "Affiliates",
+        "Hot",
+        "Hubspot integrated",
+        "Referral Partners",
+        "Sales",
+        "Salesforce integrated",
+        "Shopify integrated",
+        "System Integrator",
+        "Trusted",
+        "hot"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/kixie?company=kixie&gref=marketplace",
+      "terms_url": "https://www.kixie.com/marketing-partner-program-tos/",
+      "website": "https://www.kixie.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 10,
+      "source": "https://market.partnerstack.com/",
+      "score": 41,
+      "relevance_matches": [
+        "sales"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:sonatype",
       "network": "partnerstack",
       "name": "Sonatype",
@@ -22905,7 +22896,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 33,
+      "review_days": 40,
       "source": "https://market.partnerstack.com/",
       "score": 40,
       "relevance_matches": [
