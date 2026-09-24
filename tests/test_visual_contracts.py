@@ -19,6 +19,14 @@ class VisualContractTests(unittest.TestCase):
         self.assertIn("aspect-ratio: auto; object-fit: contain", css)
         self.assertIn("min-height: calc(100svh - 74px)", css)
         self.assertIn(".brand img { display: none; }", css)
+        self.assertIn(".brand::before", css)
+        self.assertIn("artificial-one-elephant-mark.png", css)
+
+    def test_observatory_uses_buyer_language(self):
+        builder = (ROOT / "scripts" / "build_elephant_experience.py").read_text(encoding="utf-8")
+        self.assertIn("AI tool price &amp; product changes", builder)
+        self.assertIn("Check before you subscribe", builder)
+        self.assertNotIn("Repeated-source monitoring", builder)
 
     def test_recipe_cards_have_explicit_dark_surface_contrast(self):
         css = (ROOT / "assets" / "decision-engine.css").read_text(encoding="utf-8")

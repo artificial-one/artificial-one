@@ -202,7 +202,7 @@
     var target = panel.querySelector("[data-stack-list]");
     var ids = read(STORE.stack, []);
     if (!ids.length) {
-      target.innerHTML = '<div class="empty-state"><span class="elephant-state" aria-hidden="true">🐘</span><p>Your stack is empty. Save useful tools as you browse.</p></div>';
+      target.innerHTML = '<div class="empty-state"><span class="elephant-state" aria-hidden="true"></span><p>Your stack is empty. Save useful tools as you browse.</p></div>';
       return;
     }
     target.innerHTML = ids.map(function (id) {
@@ -461,7 +461,7 @@
       target.innerHTML = alerts.map(function (alert) {
         var item = itemById(alert.offer_id);
         var key = alert.offer_id + ":" + alert.detected_on;
-        return '<a class="alert-item' + (seen.indexOf(key) < 0 ? ' is-new' : '') + '" href="' + text(item ? item.url : "offer-updates.html") + '"><span class="elephant-state" aria-hidden="true">🐘</span><span><strong>' + text(item ? item.name : "Tracked tool") + ' changed</strong><small>' + text(alert.detected_on) + ' · Recheck price or availability</small></span></a>';
+        return '<a class="alert-item' + (seen.indexOf(key) < 0 ? ' is-new' : '') + '" href="' + text(item ? item.url : "offer-updates.html") + '"><span class="elephant-state" aria-hidden="true"></span><span><strong>' + text(item ? item.name : "Tracked tool") + ' changed</strong><small>' + text(alert.detected_on) + ' · Recheck price or availability</small></span></a>';
       }).join("");
       write("ai1_seen_alerts", alerts.map(function (alert) { return alert.offer_id + ":" + alert.detected_on; }));
     }).catch(function () {});

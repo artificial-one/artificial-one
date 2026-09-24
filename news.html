@@ -231,262 +231,262 @@
   ]
 }</script>
   <style>
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#0f172a;background:#f8fafc} a{color:inherit} header{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid #e2e8f0;z-index:5} nav{max-width:1120px;margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px} nav img{height:54px} nav div{display:flex;gap:22px;font-weight:650} .hero{background:white;text-align:center;padding:72px 22px} .hero small{font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#4f46e5} .hero h1{font-size:clamp(2.4rem,7vw,4.8rem);line-height:1.02;margin:18px auto;max-width:940px;color:#0f172a} .hero p{max-width:720px;margin:auto;color:#475569;font-size:1.1rem;line-height:1.7} main{max-width:1120px;margin:auto;padding:42px 22px 80px} .notice{padding:16px 18px;border:1px solid #c7d2fe;background:#eef2ff;border-radius:14px;color:#3730a3;margin-bottom:28px} .picks{margin:0 0 40px;padding:28px;border-radius:20px;background:linear-gradient(135deg,#eef2ff,#faf5ff);border:1px solid #c7d2fe} .picks>div:first-child>small,.pick small{font-weight:800;letter-spacing:.1em;color:#4f46e5} .picks h2{margin:8px 0 4px;color:#0f172a} .picks p{color:#475569} .pick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px} .pick{display:flex;flex-direction:column;padding:18px;border-radius:14px;background:white;border:1px solid #e2e8f0;text-decoration:none} .pick strong{font-size:1.15rem;margin:8px 0;color:#0f172a} .pick span{color:#64748b;font-size:.9rem;line-height:1.5} .pick b{color:#4338ca;margin-top:auto;padding-top:15px;font-size:.9rem} .picks .disclosure{font-size:.75rem;margin-bottom:0} .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px} .card{display:flex;flex-direction:column;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:24px;box-shadow:0 3px 12px rgba(15,23,42,.04)} .meta{display:flex;justify-content:space-between;gap:12px;color:#64748b;font-size:.75rem;text-transform:uppercase;font-weight:750;letter-spacing:.04em} .meta span{color:#4f46e5} .card h2{font-size:1.25rem;line-height:1.35;margin:17px 0;color:#0f172a} .card p{color:#64748b;margin:0 0 18px} .route{margin-top:auto;padding:14px;border-radius:12px;background:#eef2ff} .route small{display:block;color:#6366f1;font-weight:800;letter-spacing:.08em} .route a,.card>a.source{display:block;margin-top:7px;color:#4338ca;font-weight:750;text-decoration:none} .card>a.source{margin-top:16px} footer{border-top:1px solid #e2e8f0;background:#fff;padding:34px 22px;text-align:center;color:#64748b} @media(max-width:900px){.grid,.pick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}} @media(max-width:620px){nav div{gap:12px;font-size:.85rem} .grid,.pick-grid{grid-template-columns:1fr}}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#0f172a;background:#090914} a{color:inherit} header{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid #e2e8f0;z-index:5} nav{max-width:1120px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px} nav img{height:48px} nav div{display:flex;gap:22px;font-weight:650} .news-page .hero{min-height:0!important;background:radial-gradient(circle at 86% 10%,rgba(156,255,59,.18),transparent 18rem),linear-gradient(120deg,#17112c,#101827);text-align:left;padding:30px 22px 32px} .hero>*{display:block;max-width:1120px;margin-left:auto;margin-right:auto} .hero small{font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:#9cff3b} .hero h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1;margin-top:8px;margin-bottom:10px;color:#fff} .hero p{max-width:1120px;color:#cbd5e1;font-size:1rem;line-height:1.55;margin-top:0;margin-bottom:0} main{max-width:1120px;margin:auto;padding:22px 22px 80px} .notice{padding:12px 15px;border:1px solid rgba(156,255,59,.3);background:rgba(156,255,59,.08);border-radius:12px;color:#d9f99d;margin-bottom:22px} .picks{margin:0 0 32px;padding:26px;border-radius:22px;background:linear-gradient(135deg,#eef2ff,#faf5ff);border:1px solid #c7d2fe} .picks>div:first-child>small,.pick small{font-weight:900;letter-spacing:.1em;color:#4f46e5} .picks h2{margin:8px 0 4px;color:#0f172a} .picks p{color:#475569} .pick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px} .pick{display:flex;flex-direction:column;padding:19px;border-radius:16px;background:linear-gradient(145deg,#fff,#f4f0ff);border:1px solid #ddd6fe;text-decoration:none;box-shadow:0 8px 24px rgba(79,70,229,.08);transition:transform .2s ease,box-shadow .2s ease} .pick:nth-child(2){background:linear-gradient(145deg,#ecfeff,#fff)} .pick:nth-child(3){background:linear-gradient(145deg,#f7fee7,#fff)} .pick:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(79,70,229,.18)} .pick strong{font-size:1.15rem;margin:8px 0;color:#0f172a} .pick span{color:#64748b;font-size:.9rem;line-height:1.5} .pick b{color:#4338ca;margin-top:auto;padding-top:15px;font-size:.9rem} .picks .disclosure{font-size:.75rem;margin-bottom:0} .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px} .card{--c1:#7c3aed;--c2:#ec4899;display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid rgba(255,255,255,.16);border-radius:20px;box-shadow:0 16px 42px rgba(0,0,0,.28);transition:transform .2s ease,box-shadow .2s ease} .card:nth-child(6n+2){--c1:#0f766e;--c2:#22d3ee} .card:nth-child(6n+3){--c1:#c2410c;--c2:#fbbf24} .card:nth-child(6n+4){--c1:#1d4ed8;--c2:#8b5cf6} .card:nth-child(6n+5){--c1:#be123c;--c2:#fb7185} .card:nth-child(6n+6){--c1:#166534;--c2:#84cc16} .card:hover{transform:translateY(-6px);box-shadow:0 24px 56px rgba(0,0,0,.4)} .story-link{display:block;text-decoration:none} .story-visual{position:relative;min-height:142px;overflow:hidden;padding:18px;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff} .story-visual::after{content:"";position:absolute;right:-4px;bottom:-18px;width:148px;height:148px;background:url("images/branding/artificial-one-elephant-mark.png") center/contain no-repeat;opacity:.48;filter:drop-shadow(0 10px 20px rgba(0,0,0,.35))} .story-visual span,.story-visual strong{position:relative;z-index:1;display:block;max-width:64%} .story-visual span{font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase} .story-visual strong{margin-top:8px;font-size:.9rem} .story-copy{padding:20px 20px 8px} .meta{display:flex;justify-content:space-between;gap:12px;color:#64748b;font-size:.72rem;text-transform:uppercase;font-weight:800;letter-spacing:.04em} .meta b{color:var(--c1)} .card h2{font-size:1.25rem;line-height:1.35;margin:13px 0;color:#0f172a} .route{margin:auto 16px 16px;padding:14px;border-radius:13px;background:linear-gradient(135deg,#eef2ff,#f5f3ff)} .route small{display:block;color:#6366f1;font-weight:900;letter-spacing:.08em} .route a{display:block;margin-top:7px;color:#4338ca;font-weight:800;text-decoration:none} footer{border-top:1px solid rgba(255,255,255,.12);background:#080812;padding:34px 22px;text-align:center;color:#94a3b8} footer a{color:#c4b5fd} @media(max-width:900px){.grid,.pick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}} @media(max-width:620px){nav div{gap:12px;font-size:.85rem} .grid,.pick-grid{grid-template-columns:1fr} .news-page .hero{padding:24px 18px}}
   </style>
-</head><body>
+</head><body class="news-page">
 <header><nav><a href="index.html"><img src="artificial-one-logo-large.svg" alt="artificial.one"></a><div><a href="reviews.html">Reviews</a><a href="partner-offers.html">Partner offers</a></div></nav></header>
-<section class="hero"><small>Automatically refreshed</small><h1>Latest AI, LLM &amp; AI tool news</h1><p>Headlines from official research labs and established technology publications. We link to the original reporting and do not republish article bodies.</p></section>
+<section class="hero"><small>Fresh stories, useful routes</small><h1>What changed in AI today</h1><p>Open the original reporting, then jump straight to a related tool guide when the story affects something you may buy.</p></section>
 <main><div class="notice">Last material update: 2026-09-24T00:14:12.552339+00:00 · Sources are allowlisted and feed content is treated as untrusted data.</div><section class="picks"><div><small>EDITOR'S PARTNER PICKS</small><h2>Tools worth evaluating now</h2><p>Current, verified partner destinations with clear use cases and limitations.</p></div><div class="pick-grid"><a class="pick" href="partner-offers/foxit-pdf-software.html"><small>Documents &amp; PDF</small><strong>Foxit</strong><span>PDF software for viewing, editing, converting, organizing and signing documents.</span><b>See fit &amp; current offer →</b></a><a class="pick" href="partner-offers/kartra-marketing-platform.html"><small>Marketing Automation</small><strong>Kartra</strong><span>An online-business platform combining funnels, email marketing, pages, memberships and related sales tools.</span><b>See fit &amp; current offer →</b></a><a class="pick" href="partner-offers/omniseo-search-optimization.html"><small>SEO &amp; Visibility</small><strong>OmniSEO</strong><span>SEO software for analyzing and improving a site&#x27;s search visibility and content opportunities.</span><b>See fit &amp; current offer →</b></a></div><p class="disclosure">Marked offer pages contain affiliate links. We may earn a commission at no extra cost to you.</p></section><div class="grid">      <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T23:39:44+00:00">Sep 23, 2026</time></div>
-        <h2>Meta introduces camera-free AI glasses</h2>
-        <p>TechCrunch AI</p>
+        <a class="story-link" href="https://techcrunch.com/2026/09/23/meta-introduces-camera-free-ai-glasses/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>TechCrunch AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T23:39:44+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Meta introduces camera-free AI glasses</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://techcrunch.com/2026/09/23/meta-introduces-camera-free-ai-glasses/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T22:17:39+00:00">Sep 23, 2026</time></div>
-        <h2>Anthropic says its biology lab has already found something big</h2>
-        <p>TechCrunch AI</p>
+        <a class="story-link" href="https://techcrunch.com/2026/09/23/anthropic-says-its-biology-lab-has-already-found-something-big/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>TechCrunch AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T22:17:39+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Anthropic says its biology lab has already found something big</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://techcrunch.com/2026/09/23/anthropic-says-its-biology-lab-has-already-found-something-big/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T19:31:28+00:00">Sep 23, 2026</time></div>
-        <h2>Enveda secures $311M to bring more nature-derived AI drugs into clinical trials</h2>
-        <p>TechCrunch AI</p>
+        <a class="story-link" href="https://techcrunch.com/2026/09/23/enveda-secures-311m-to-bring-more-nature-derived-ai-drugs-into-clinical-trials/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>TechCrunch AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T19:31:28+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Enveda secures $311M to bring more nature-derived AI drugs into clinical trials</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/carepatron-practice-management.html" data-content-route data-related-offer-id="carepatron" data-placement="news-card-related">Evaluate Carepatron for this workflow →</a></div>
-        <a class="source" href="https://techcrunch.com/2026/09/23/enveda-secures-311m-to-bring-more-nature-derived-ai-drugs-into-clinical-trials/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T18:50:37+00:00">Sep 23, 2026</time></div>
-        <h2>Meta’s AI agent is a cute little guy who’s great at spending my money</h2>
-        <p>The Verge AI</p>
+        <a class="story-link" href="https://www.theverge.com/ai-artificial-intelligence/999526/meta-muse-ai-agent-hands-on-shopping" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>The Verge AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T18:50:37+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Meta’s AI agent is a cute little guy who’s great at spending my money</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://www.theverge.com/ai-artificial-intelligence/999526/meta-muse-ai-agent-hands-on-shopping" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T17:57:37+00:00">Sep 23, 2026</time></div>
-        <h2>ChatGPT Voice gets closer to &quot;Her&quot; with email, calendar, and Slack access</h2>
-        <p>The Decoder</p>
+        <a class="story-link" href="https://the-decoder.com/chatgpt-voice-gets-closer-to-her-with-email-calendar-and-slack-access/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>The Decoder</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T17:57:37+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>ChatGPT Voice gets closer to &quot;Her&quot; with email, calendar, and Slack access</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/elevenlabs-ai-voice.html" data-content-route data-related-offer-id="elevenlabs" data-placement="news-card-related">Evaluate ElevenLabs for this workflow →</a></div>
-        <a class="source" href="https://the-decoder.com/chatgpt-voice-gets-closer-to-her-with-email-calendar-and-slack-access/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T17:39:10+00:00">Sep 23, 2026</time></div>
-        <h2>Google&#x27;s new Flash TTS models let you design AI voices from scratch using text descriptions</h2>
-        <p>The Decoder</p>
+        <a class="story-link" href="https://the-decoder.com/googles-new-flash-tts-models-let-you-design-ai-voices-from-scratch-using-text-descriptions/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>The Decoder</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T17:39:10+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Google&#x27;s new Flash TTS models let you design AI voices from scratch using text descriptions</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/elevenlabs-ai-voice.html" data-content-route data-related-offer-id="elevenlabs" data-placement="news-card-related">Evaluate ElevenLabs for this workflow →</a></div>
-        <a class="source" href="https://the-decoder.com/googles-new-flash-tts-models-let-you-design-ai-voices-from-scratch-using-text-descriptions/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T17:10:35+00:00">Sep 23, 2026</time></div>
-        <h2>Anthropic’s biolab made a discovery it’s comparing to Crispr</h2>
-        <p>The Verge AI</p>
+        <a class="story-link" href="https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>The Verge AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T17:10:35+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Anthropic’s biolab made a discovery it’s comparing to Crispr</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T17:00:00+00:00">Sep 23, 2026</time></div>
-        <h2>ChatGPT mobile app gets voice-based agentic features</h2>
-        <p>TechCrunch AI</p>
+        <a class="story-link" href="https://techcrunch.com/2026/09/23/chatgpt-mobile-app-gets-voice-based-agentic-features/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>TechCrunch AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T17:00:00+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>ChatGPT mobile app gets voice-based agentic features</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/elevenlabs-ai-voice.html" data-content-route data-related-offer-id="elevenlabs" data-placement="news-card-related">Evaluate ElevenLabs for this workflow →</a></div>
-        <a class="source" href="https://techcrunch.com/2026/09/23/chatgpt-mobile-app-gets-voice-based-agentic-features/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Policy &amp; Safety</span><time datetime="2026-09-23T16:49:58+00:00">Sep 23, 2026</time></div>
-        <h2>Even Americans who use AI every day are worried about it</h2>
-        <p>TechCrunch AI</p>
+        <a class="story-link" href="https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Policy &amp; Safety</span><strong>TechCrunch AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T16:49:58+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Even Americans who use AI every day are worried about it</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="buyers-guides.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Browse independent AI software buying guides →</a></div>
-        <a class="source" href="https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T16:37:43+00:00">Sep 23, 2026</time></div>
-        <h2>YouTube adds AI tools to Creator Studio with script coaching, smart thumbnails, and Gemini editing</h2>
-        <p>The Decoder</p>
+        <a class="story-link" href="https://the-decoder.com/youtube-adds-ai-tools-to-creator-studio-with-script-coaching-smart-thumbnails-and-gemini-editing/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>The Decoder</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T16:37:43+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>YouTube adds AI tools to Creator Studio with script coaching, smart thumbnails, and Gemini editing</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/kit-creator-email-marketing.html" data-content-route data-related-offer-id="kit" data-placement="news-card-related">Evaluate Kit for this workflow →</a></div>
-        <a class="source" href="https://the-decoder.com/youtube-adds-ai-tools-to-creator-studio-with-script-coaching-smart-thumbnails-and-gemini-editing/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T16:00:00+00:00">Sep 23, 2026</time></div>
-        <h2>Two years of OpenAI Academy</h2>
-        <p>OpenAI</p>
+        <a class="story-link" href="https://openai.com/index/two-years-of-openai-academy" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>OpenAI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T16:00:00+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Two years of OpenAI Academy</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://openai.com/index/two-years-of-openai-academy" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T15:19:30+00:00">Sep 23, 2026</time></div>
-        <h2>YouTube Music gets more conversational with new AI features</h2>
-        <p>TechCrunch AI</p>
+        <a class="story-link" href="https://techcrunch.com/2026/09/23/youtube-music-gets-more-conversational-with-new-ai-features/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>TechCrunch AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T15:19:30+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>YouTube Music gets more conversational with new AI features</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://techcrunch.com/2026/09/23/youtube-music-gets-more-conversational-with-new-ai-features/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T15:14:34+00:00">Sep 23, 2026</time></div>
-        <h2>Anthropic engineer explains why Claude&#x27;s writing got worse although the model got smarter</h2>
-        <p>The Decoder</p>
+        <a class="story-link" href="https://the-decoder.com/anthropic-engineer-explains-why-claudes-writing-got-worse-although-the-model-got-smarter/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>The Decoder</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T15:14:34+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Anthropic engineer explains why Claude&#x27;s writing got worse although the model got smarter</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://the-decoder.com/anthropic-engineer-explains-why-claudes-writing-got-worse-although-the-model-got-smarter/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T14:42:38+00:00">Sep 23, 2026</time></div>
-        <h2>Meta&#x27;s AI agent Muse draws 500,000 users in a week along with claims it copied OpenClaw</h2>
-        <p>The Decoder</p>
+        <a class="story-link" href="https://the-decoder.com/metas-ai-agent-muse-draws-500000-users-in-a-week-along-with-claims-it-copied-openclaw/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>The Decoder</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T14:42:38+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Meta&#x27;s AI agent Muse draws 500,000 users in a week along with claims it copied OpenClaw</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://the-decoder.com/metas-ai-agent-muse-draws-500000-users-in-a-week-along-with-claims-it-copied-openclaw/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T14:35:12+00:00">Sep 23, 2026</time></div>
-        <h2>OpenAI nabs key Patreon execs ahead of upcoming announcement</h2>
-        <p>The Verge AI</p>
+        <a class="story-link" href="https://www.theverge.com/ai-artificial-intelligence/999249/openai-creators-patreon-execs-hire-sam-yam" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>The Verge AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T14:35:12+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>OpenAI nabs key Patreon execs ahead of upcoming announcement</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://www.theverge.com/ai-artificial-intelligence/999249/openai-creators-patreon-execs-hire-sam-yam" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T14:30:00+00:00">Sep 23, 2026</time></div>
-        <h2>YouTube will let you build your own algorithm with AI</h2>
-        <p>TechCrunch AI</p>
+        <a class="story-link" href="https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>TechCrunch AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T14:30:00+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>YouTube will let you build your own algorithm with AI</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T14:30:00+00:00">Sep 23, 2026</time></div>
-        <h2>YouTube releases new AI features for creators within its Studio app</h2>
-        <p>TechCrunch AI</p>
+        <a class="story-link" href="https://techcrunch.com/2026/09/23/youtube-releases-new-ai-features-for-creators-within-its-studio-app/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>TechCrunch AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T14:30:00+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>YouTube releases new AI features for creators within its Studio app</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/kit-creator-email-marketing.html" data-content-route data-related-offer-id="kit" data-placement="news-card-related">Evaluate Kit for this workflow →</a></div>
-        <a class="source" href="https://techcrunch.com/2026/09/23/youtube-releases-new-ai-features-for-creators-within-its-studio-app/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T13:52:23+00:00">Sep 23, 2026</time></div>
-        <h2>Inside Basecamp Research, the AI startup turning evolution into training data</h2>
-        <p>The Decoder</p>
+        <a class="story-link" href="https://the-decoder.com/inside-basecamp-research-the-ai-startup-turning-evolution-into-training-data/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>The Decoder</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T13:52:23+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Inside Basecamp Research, the AI startup turning evolution into training data</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/rank-prompt-ai-visibility.html" data-content-route data-related-offer-id="rank-prompt" data-placement="news-card-related">Evaluate Rank Prompt for this workflow →</a></div>
-        <a class="source" href="https://the-decoder.com/inside-basecamp-research-the-ai-startup-turning-evolution-into-training-data/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T13:49:24+00:00">Sep 23, 2026</time></div>
-        <h2>YouTube is building AI creator tools that do almost everything for them</h2>
-        <p>The Verge AI</p>
+        <a class="story-link" href="https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>The Verge AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T13:49:24+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>YouTube is building AI creator tools that do almost everything for them</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/kit-creator-email-marketing.html" data-content-route data-related-offer-id="kit" data-placement="news-card-related">Evaluate Kit for this workflow →</a></div>
-        <a class="source" href="https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T13:00:00+00:00">Sep 23, 2026</time></div>
-        <h2>OpenAI extends cyber access to Ukraine for civilian defense</h2>
-        <p>OpenAI</p>
+        <a class="story-link" href="https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>OpenAI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T13:00:00+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>OpenAI extends cyber access to Ukraine for civilian defense</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T12:31:20+00:00">Sep 23, 2026</time></div>
-        <h2>Alibaba launches Qwen Audio 3.1 with new models and slashes AI audio prices by up to 95 percent</h2>
-        <p>The Decoder</p>
+        <a class="story-link" href="https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>The Decoder</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T12:31:20+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Alibaba launches Qwen Audio 3.1 with new models and slashes AI audio prices by up to 95 percent</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/elevenlabs-ai-voice.html" data-content-route data-related-offer-id="elevenlabs" data-placement="news-card-related">Evaluate ElevenLabs for this workflow →</a></div>
-        <a class="source" href="https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T12:00:00+00:00">Sep 23, 2026</time></div>
-        <h2>Ringg’s AI agents resolve up to 65% of customer calls with OpenAI</h2>
-        <p>OpenAI</p>
+        <a class="story-link" href="https://openai.com/index/ringg" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>OpenAI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T12:00:00+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Ringg’s AI agents resolve up to 65% of customer calls with OpenAI</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://openai.com/index/ringg" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-23T01:00:00+00:00">Sep 23, 2026</time></div>
-        <h2>Airbnb widens access to GPT-6 Astra and OpenAI frontier models</h2>
-        <p>OpenAI</p>
+        <a class="story-link" href="https://openai.com/index/airbnb-gpt-6-astra" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>OpenAI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T01:00:00+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Airbnb widens access to GPT-6 Astra and OpenAI frontier models</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://openai.com/index/airbnb-gpt-6-astra" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-23T00:00:00+00:00">Sep 23, 2026</time></div>
-        <h2>Grab and OpenAI bring practical AI skills to Southeast Asia</h2>
-        <p>OpenAI</p>
+        <a class="story-link" href="https://openai.com/index/grab-openai-ai-skills-southeast-asia" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>OpenAI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-23T00:00:00+00:00">Sep 23, 2026</time><b>Open story ↗</b></div><h2>Grab and OpenAI bring practical AI skills to Southeast Asia</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://openai.com/index/grab-openai-ai-skills-southeast-asia" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-22T19:45:47+00:00">Sep 22, 2026</time></div>
-        <h2>Microsoft disrupts AI-assisted platform that compromised 12,000 accounts</h2>
-        <p>Ars Technica AI</p>
+        <a class="story-link" href="https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>Ars Technica AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-22T19:45:47+00:00">Sep 22, 2026</time><b>Open story ↗</b></div><h2>Microsoft disrupts AI-assisted platform that compromised 12,000 accounts</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-22T00:00:00+00:00">Sep 22, 2026</time></div>
-        <h2>Transformers now runs llama.cpp quants</h2>
-        <p>Hugging Face</p>
+        <a class="story-link" href="https://huggingface.co/blog/transformers-llama-cpp-quants" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>Hugging Face</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-22T00:00:00+00:00">Sep 22, 2026</time><b>Open story ↗</b></div><h2>Transformers now runs llama.cpp quants</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://huggingface.co/blog/transformers-llama-cpp-quants" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-22T00:00:00+00:00">Sep 22, 2026</time></div>
-        <h2>Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community</h2>
-        <p>Hugging Face</p>
+        <a class="story-link" href="https://huggingface.co/blog/omlx" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>Hugging Face</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-22T00:00:00+00:00">Sep 22, 2026</time><b>Open story ↗</b></div><h2>Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/kit-creator-email-marketing.html" data-content-route data-related-offer-id="kit" data-placement="news-card-related">Evaluate Kit for this workflow →</a></div>
-        <a class="source" href="https://huggingface.co/blog/omlx" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-21T22:24:38+00:00">Sep 21, 2026</time></div>
-        <h2>Muse, Meta&#x27;s extraordinarily privileged AI assistant, has a serious 0-day</h2>
-        <p>Ars Technica AI</p>
+        <a class="story-link" href="https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>Ars Technica AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-21T22:24:38+00:00">Sep 21, 2026</time><b>Open story ↗</b></div><h2>Muse, Meta&#x27;s extraordinarily privileged AI assistant, has a serious 0-day</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-21T13:44:34+00:00">Sep 21, 2026</time></div>
-        <h2>Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem</h2>
-        <p>Hugging Face</p>
+        <a class="story-link" href="https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>Hugging Face</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-21T13:44:34+00:00">Sep 21, 2026</time><b>Open story ↗</b></div><h2>Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Research</span><time datetime="2026-09-18T14:00:00+00:00">Sep 18, 2026</time></div>
-        <h2>New experts join Google’s AI &amp; Economy team</h2>
-        <p>Google AI</p>
+        <a class="story-link" href="https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Research</span><strong>Google AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-18T14:00:00+00:00">Sep 18, 2026</time><b>Open story ↗</b></div><h2>New experts join Google’s AI &amp; Economy team</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/rank-prompt-ai-visibility.html" data-content-route data-related-offer-id="rank-prompt" data-placement="news-card-related">Evaluate Rank Prompt for this workflow →</a></div>
-        <a class="source" href="https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>Models &amp; LLMs</span><time datetime="2026-09-17T18:33:13+00:00">Sep 17, 2026</time></div>
-        <h2>LLMs respond differently to harmful prompts when AI watermarking is used</h2>
-        <p>Ars Technica AI</p>
+        <a class="story-link" href="https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>Models &amp; LLMs</span><strong>Ars Technica AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-17T18:33:13+00:00">Sep 17, 2026</time><b>Open story ↗</b></div><h2>LLMs respond differently to harmful prompts when AI watermarking is used</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-15T16:00:44+00:00">Sep 15, 2026</time></div>
-        <h2>Your Agent Aced the Task. Will It Do It Again?</h2>
-        <p>Hugging Face</p>
+        <a class="story-link" href="https://huggingface.co/blog/ibm-research/altk-evolve-consistency" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>Hugging Face</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-15T16:00:44+00:00">Sep 15, 2026</time><b>Open story ↗</b></div><h2>Your Agent Aced the Task. Will It Do It Again?</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="partner-offers/pinecone-vector-database.html" data-content-route data-related-offer-id="pinecone" data-placement="news-card-related">Evaluate Pinecone for this workflow →</a></div>
-        <a class="source" href="https://huggingface.co/blog/ibm-research/altk-evolve-consistency" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-15T16:00:00+00:00">Sep 15, 2026</time></div>
-        <h2>AI for Societal Impact</h2>
-        <p>Google AI</p>
+        <a class="story-link" href="https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>Google AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-15T16:00:00+00:00">Sep 15, 2026</time><b>Open story ↗</b></div><h2>AI for Societal Impact</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-15T16:00:00+00:00">Sep 15, 2026</time></div>
-        <h2>Building AI to accelerate science and improve lives</h2>
-        <p>Google AI</p>
+        <a class="story-link" href="https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>Google AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-15T16:00:00+00:00">Sep 15, 2026</time><b>Open story ↗</b></div><h2>Building AI to accelerate science and improve lives</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-15T16:00:00+00:00">Sep 15, 2026</time></div>
-        <h2>AI for everyone in every language</h2>
-        <p>Google AI</p>
+        <a class="story-link" href="https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>Google AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-15T16:00:00+00:00">Sep 15, 2026</time><b>Open story ↗</b></div><h2>AI for everyone in every language</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article>
       <article class="card">
-        <div class="meta"><span>AI Tools &amp; Products</span><time datetime="2026-09-15T13:00:00+00:00">Sep 15, 2026</time></div>
-        <h2>New insights from Google’s AI &amp; Economy ATLAS</h2>
-        <p>Google AI</p>
+        <a class="story-link" href="https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/" target="_blank" rel="noopener noreferrer">
+          <div class="story-visual"><span>AI Tools &amp; Products</span><strong>Google AI</strong></div>
+          <div class="story-copy"><div class="meta"><time datetime="2026-09-15T13:00:00+00:00">Sep 15, 2026</time><b>Open story ↗</b></div><h2>New insights from Google’s AI &amp; Economy ATLAS</h2></div>
+        </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="ai-tool-finder.html" data-content-route data-related-offer-id="" data-placement="news-card-related">Find the right AI tool for the job →</a></div>
-        <a class="source" href="https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/" target="_blank" rel="noopener noreferrer">Read at the original source ↗</a>
       </article></div></main>
 <footer>© 2026 artificial.one · <a href="about.html">About</a> · <a href="partner-offers.html">Partner offers</a></footer>
 <script src="assets/affiliate-tracking.js" defer></script>
