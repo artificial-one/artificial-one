@@ -2,9 +2,162 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-24T02:58:22+02:00",
+  "last_activity_at": "2026-09-24T03:15:32+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:social_creatives",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "social_creatives_updated",
+      "summary": "Created or refreshed 6 social-media creative assets.",
+      "details": [
+        "images/social-cards/elevenlabs.jpg",
+        "images/social-cards/learnworlds.jpg",
+        "images/social-cards/omniseo.jpg",
+        "images/social-cards/rank-prompt.jpg",
+        "images/social-cards/seamless.jpg",
+        "images/social-cards/volza.jpg"
+      ],
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:rss",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "distribution_updated",
+      "summary": "Published an updated RSS feed for content distribution.",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:newsletter",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "newsletter_edition_updated",
+      "summary": "Published a refreshed web newsletter edition (email sending is not currently connected).",
+      "url": "https://artificial.one/newsletter/latest.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:search-intent/whatconverts-lead-attribution-alternatives.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best WhatConverts Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/whatconverts-lead-attribution-alternatives.html",
+      "path": "search-intent/whatconverts-lead-attribution-alternatives.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:search-intent/unbounce-landing-pages-alternatives.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Unbounce Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/unbounce-landing-pages-alternatives.html",
+      "path": "search-intent/unbounce-landing-pages-alternatives.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:search-intent/kit-creator-email-marketing-alternatives.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Kit Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/kit-creator-email-marketing-alternatives.html",
+      "path": "search-intent/kit-creator-email-marketing-alternatives.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:search-intent/kartra-marketing-platform-alternatives.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Best Kartra Alternatives: Compare Features & Fit | artificial.one",
+      "url": "https://artificial.one/search-intent/kartra-marketing-platform-alternatives.html",
+      "path": "search-intent/kartra-marketing-platform-alternatives.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:partner-offers/seamless-ai-sales-intelligence.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Seamless.AI: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html",
+      "path": "partner-offers/seamless-ai-sales-intelligence.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:partner-offers/rank-prompt-ai-visibility.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Rank Prompt: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/rank-prompt-ai-visibility.html",
+      "path": "partner-offers/rank-prompt-ai-visibility.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:partner-offers/kartra-marketing-platform.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kartra: Use Cases, Fit & Partner Offer | artificial.one",
+      "url": "https://artificial.one/partner-offers/kartra-marketing-platform.html",
+      "path": "partner-offers/kartra-marketing-platform.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:partner-offers.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Verified AI Partner Offers | artificial.one",
+      "url": "https://artificial.one/partner-offers.html",
+      "path": "partner-offers.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:news.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:index.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:ai-tool-finder.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one",
+      "url": "https://artificial.one/ai-tool-finder.html",
+      "path": "ai-tool-finder.html",
+      "source_commit": "1a876885066f"
+    },
+    {
+      "id": "git:1a876885066fe74f31314d498dc376aed1f7316c:M:ai-stack-builder.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T03:15:32+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one",
+      "url": "https://artificial.one/ai-stack-builder.html",
+      "path": "ai-stack-builder.html",
+      "source_commit": "1a876885066f"
+    },
     {
       "id": "git:f5006aab70dfbed0754c20fbe500240e87f4f54e:social_creatives",
       "date": "2026-09-24",
