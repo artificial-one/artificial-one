@@ -13,6 +13,10 @@ SPEC.loader.exec_module(normalizer)
 
 
 class VisualContractTests(unittest.TestCase):
+    def test_hidden_filtered_cards_cannot_be_forced_visible(self):
+        css = (ROOT / "assets" / "decision-engine.css").read_text(encoding="utf-8")
+        self.assertIn("[hidden] { display: none !important; }", css)
+
     def test_home_hero_contains_the_full_brand_art(self):
         css = (ROOT / "assets" / "decision-engine.css").read_text(encoding="utf-8")
         self.assertIn(".hero-art img { position: relative", css)

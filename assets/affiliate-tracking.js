@@ -187,11 +187,29 @@
     });
   }
 
+  function enableAffiliateCardNavigation() {
+    var cardSelector = ".tool-card,.tool,.recipe-tool,.comparison-column,.studio-item,.elephant-result";
+    document.querySelectorAll("a[data-affiliate-offer]").forEach(function (link) {
+      var card = link.closest(cardSelector);
+      if (!card || card.dataset.affiliateCardReady === "1") return;
+      card.dataset.affiliateCardReady = "1";
+      card.classList.add("is-affiliate-card");
+      card.title = "Open the partner website";
+      card.addEventListener("click", function (event) {
+        if (event.defaultPrevented || link.dataset.affiliateUnavailable === "1") return;
+        if (event.target.closest("a,button,input,select,textarea,label,summary,[role='button']")) return;
+        if (window.getSelection && String(window.getSelection()).trim()) return;
+        link.click();
+      });
+    });
+  }
+
   function observeDynamicRecommendations() {
     if (!("MutationObserver" in window)) return;
     new MutationObserver(function () {
       trackVisibleRecommendations();
       trackVisibleRoutes();
+      enableAffiliateCardNavigation();
     }).observe(document.body, { childList: true, subtree: true });
   }
 
@@ -451,6 +469,7 @@
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
       installUnifiedShell();
+      enableAffiliateCardNavigation();
       trackReturningVisitor();
       trackWebVitals();
       loadConversionStrategy().then(function (strategy) {
@@ -465,6 +484,7 @@
     });
   } else {
     installUnifiedShell();
+    enableAffiliateCardNavigation();
     trackReturningVisitor();
     trackWebVitals();
     loadConversionStrategy().then(function (strategy) {

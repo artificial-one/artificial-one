@@ -100,6 +100,14 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         self.assertIn('url.searchParams.set("sid3"', text)
         self.assertIn("affiliate_impression", text)
 
+    def test_monetized_cards_open_their_existing_affiliate_link(self):
+        text = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
+        self.assertIn("function enableAffiliateCardNavigation()", text)
+        self.assertIn('a[data-affiliate-offer]', text)
+        self.assertIn("link.click();", text)
+        self.assertIn("event.target.closest(\"a,button,input,select,textarea,label,summary,[role='button']\")", text)
+        self.assertGreaterEqual(text.count("enableAffiliateCardNavigation();"), 3)
+
     def test_decision_engine_homepage_is_prebuilt_and_instrumented(self):
         homepage = (ROOT / "index.html").read_text(encoding="utf-8")
         engine = (ROOT / "assets" / "decision-engine.js").read_text(encoding="utf-8")
