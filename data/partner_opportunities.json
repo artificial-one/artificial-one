@@ -6,10 +6,11 @@
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
     "total": 475,
+    "approved_link_pending": 1,
     "existing_active": 31,
     "not_qualified": 14,
     "policy_review_required": 23,
-    "ready_for_owner_application": 407
+    "ready_for_owner_application": 406
   },
   "opportunities": [
     {
@@ -1491,7 +1492,7 @@
         "productivity",
         "sales"
       ],
-      "already_active": false,
+      "already_active": true,
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1979,8 +1980,8 @@
         "artificial intelligence",
         "development"
       ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
+      "already_active": true,
+      "state": "approved_link_pending",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -2039,6 +2040,57 @@
       "policy": {
         "status": "unreachable",
         "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:modgeinc",
+      "network": "partnerstack",
+      "name": "Modge",
+      "slug": "modgeinc",
+      "description": "Modge is an all-in-one workforce analytics and management platform for distributed teams. One lightweight desktop agent captures every worked hour, then runs the entire chain on a single source of truth: scheduling, attendance, leave, payroll-ready timesheets, automated client invoicing through Stripe, and revenue, cost, and margin by client, project, and person. It flags idle streaks, mouse jigglers, and off-shift sessions before they distort billing, so every invoice is backed by real data.",
+      "offer": "30% rev share of new annual plans",
+      "tags": [
+        "Analytics",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "HR Software",
+        "Hot",
+        "Office Software",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/modgeinc?company=modgeinc&gref=marketplace",
+      "terms_url": "https://modge.com/affiliates-agreement",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 85,
+      "relevance_matches": [
+        "analytics",
+        "artificial intelligence",
+        "data",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
         "cookie_days": null
       }
     },
@@ -3451,52 +3503,6 @@
       }
     },
     {
-      "id": "partnerstack:expertiseai",
-      "network": "partnerstack",
-      "name": "Expertise AI",
-      "slug": "expertiseai",
-      "description": "AI sales agent that replaces traditional stone age chatbots for HubSpot first businesses",
-      "offer": "20% revenue share for 3 years if the referral converts (≈$18K total on a $30K deal)",
-      "tags": [
-        "Artificial Intelligence",
-        "Hot",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/expertiseai?company=expertiseai&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/126UCKu1m-dGJp8GyaDAmixnhPPPpU5RL/view?usp=sharing",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 81,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "sales"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:ngram",
       "network": "partnerstack",
       "name": "ngram",
@@ -4120,55 +4126,6 @@
       "policy": {
         "status": "unreachable",
         "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:modgeinc",
-      "network": "partnerstack",
-      "name": "Modge",
-      "slug": "modgeinc",
-      "description": "Modge is an all-in-one workforce analytics and management platform for distributed teams. One lightweight desktop agent captures every worked hour, then runs the entire chain on a single source of truth: scheduling, attendance, leave, payroll-ready timesheets, automated client invoicing through Stripe, and revenue, cost, and margin by client, project, and person. It flags idle streaks, mouse jigglers, and off-shift sessions before they distort billing, so every invoice is backed by real data.",
-      "offer": "30% rev share of new annual plans",
-      "tags": [
-        "Analytics",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "HR Software",
-        "Office Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/modgeinc?company=modgeinc&gref=marketplace",
-      "terms_url": "https://modge.com/affiliates-agreement",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "analytics",
-        "artificial intelligence",
-        "data",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
         "cookie_days": null
       }
     },
@@ -5128,58 +5085,6 @@
       }
     },
     {
-      "id": "partnerstack:crowdstrike",
-      "network": "partnerstack",
-      "name": "CrowdStrike",
-      "slug": "crowdstrike",
-      "description": "Experience the power of CrowdStrike's advanced cybersecurity protection, simplified for small and medium-sized business. CrowdStrike offers AI powered cybersecurity to detect, prevent, and respond to threats across endpoints, identities, and cloud workloads, helping businesses stop breaches and stay protected in real time.",
-      "offer": "Earn $100 for every new customer!",
-      "tags": [
-        "Agencies",
-        "Artificial Intelligence",
-        "Data Privacy",
-        "Governance, Risk, & Compliance",
-        "Hot",
-        "IT Management",
-        "Publishers",
-        "Referral Partners",
-        "Security",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/crowdstrike?company=crowdstrike&gref=marketplace",
-      "terms_url": "https://www.crowdstrike.com/en-us/legal/affiliate-agreement/",
-      "website": "https://www.crowdstrike.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 20,
-      "source": "https://market.partnerstack.com/",
-      "score": 77,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "data"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:flocksy",
       "network": "partnerstack",
       "name": "Flocksy",
@@ -5389,58 +5294,6 @@
           "coupon_restricted": true,
           "email_restricted": true,
           "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:logomeai",
-      "network": "partnerstack",
-      "name": "Logome.ai",
-      "slug": "logomeai",
-      "description": "Create a logo and brand kit you'll love with Logome's AI logo generator",
-      "offer": "Earn 50% commission on every successful sale.",
-      "tags": [
-        "Affiliates",
-        "Artificial Intelligence",
-        "Commerce",
-        "Design",
-        "Digital Advertising",
-        "Hot",
-        "Marketing",
-        "Publishers",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/logomeai?company=logomeai&gref=marketplace",
-      "terms_url": "",
-      "website": "https://www.logome.ai/",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 77,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "design",
-        "marketing"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -5828,7 +5681,7 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
+          "paid_search_restricted": true,
           "coupon_restricted": false,
           "email_restricted": true,
           "incentive_restricted": false,
@@ -6158,6 +6011,50 @@
       }
     },
     {
+      "id": "partnerstack:expertiseai",
+      "network": "partnerstack",
+      "name": "Expertise AI",
+      "slug": "expertiseai",
+      "description": "AI sales agent that replaces traditional stone age chatbots for HubSpot first businesses",
+      "offer": "20% revenue share for 3 years if the referral converts (≈$18K total on a $30K deal)",
+      "tags": [
+        "Artificial Intelligence",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/expertiseai?company=expertiseai&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/126UCKu1m-dGJp8GyaDAmixnhPPPpU5RL/view?usp=sharing",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 76,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "sales"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:feedvisor",
       "network": "partnerstack",
       "name": "Feedvisor",
@@ -6418,46 +6315,6 @@
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
-        "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:testdriverai3875",
-      "network": "partnerstack",
-      "name": "TestDriver.ai",
-      "slug": "testdriverai3875",
-      "description": "TestDriver automatically runs every pull request in a real desktop sandbox, finds bugs, and builds regression tests.",
-      "offer": "30% for every transaction for the customer's first year",
-      "tags": [
-        "Artificial Intelligence",
-        "Development",
-        "Hosting Providers",
-        "IT Infrastructure",
-        "IT Management",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/testdriverai3875?company=testdriverai3875&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1BWzAYjS7uraX8O1siTK8SXcQLzmlj2E7/view?usp=drive_link",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 107,
-      "source": "https://market.partnerstack.com/",
-      "score": 76,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "development"
-      ],
-      "already_active": false,
-      "state": "policy_review_required",
-      "policy": {
-        "status": "unreachable",
         "signals": {},
         "cookie_days": null
       }
@@ -6738,7 +6595,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 75,
       "relevance_matches": [
@@ -7553,7 +7410,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 72,
       "relevance_matches": [
@@ -7693,6 +7550,106 @@
           "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": true,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:crowdstrike",
+      "network": "partnerstack",
+      "name": "CrowdStrike",
+      "slug": "crowdstrike",
+      "description": "Experience the power of CrowdStrike's advanced cybersecurity protection, simplified for small and medium-sized business. CrowdStrike offers AI powered cybersecurity to detect, prevent, and respond to threats across endpoints, identities, and cloud workloads, helping businesses stop breaches and stay protected in real time.",
+      "offer": "Earn $100 for every new customer!",
+      "tags": [
+        "Agencies",
+        "Artificial Intelligence",
+        "Data Privacy",
+        "Governance, Risk, & Compliance",
+        "IT Management",
+        "Publishers",
+        "Referral Partners",
+        "Security"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/crowdstrike?company=crowdstrike&gref=marketplace",
+      "terms_url": "https://www.crowdstrike.com/en-us/legal/affiliate-agreement/",
+      "website": "https://www.crowdstrike.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 20,
+      "source": "https://market.partnerstack.com/",
+      "score": 72,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "data"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:logomeai",
+      "network": "partnerstack",
+      "name": "Logome.ai",
+      "slug": "logomeai",
+      "description": "Create a logo and brand kit you'll love with Logome's AI logo generator",
+      "offer": "Earn 50% commission on every successful sale.",
+      "tags": [
+        "Affiliates",
+        "Artificial Intelligence",
+        "Commerce",
+        "Design",
+        "Digital Advertising",
+        "Marketing",
+        "Publishers"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/logomeai?company=logomeai&gref=marketplace",
+      "terms_url": "",
+      "website": "https://www.logome.ai/",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 72,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "design",
+        "marketing"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
           "disclosure_required": false
         },
         "cookie_days": null
@@ -8432,6 +8389,45 @@
       }
     },
     {
+      "id": "partnerstack:testdriverai3875",
+      "network": "partnerstack",
+      "name": "TestDriver.ai",
+      "slug": "testdriverai3875",
+      "description": "TestDriver automatically runs every pull request in a real desktop sandbox, finds bugs, and builds regression tests.",
+      "offer": "30% for every transaction for the customer's first year",
+      "tags": [
+        "Artificial Intelligence",
+        "Development",
+        "Hosting Providers",
+        "IT Infrastructure",
+        "IT Management"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/testdriverai3875?company=testdriverai3875&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/1BWzAYjS7uraX8O1siTK8SXcQLzmlj2E7/view?usp=drive_link",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 107,
+      "source": "https://market.partnerstack.com/",
+      "score": 71,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "development"
+      ],
+      "already_active": false,
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:typewiseag",
       "network": "partnerstack",
       "name": "Typewise",
@@ -9020,7 +9016,7 @@
       "name": "ABC Trainerize",
       "slug": "trainerize",
       "description": "ABC Trainerize is an online coaching platform helping coaches and fitness businesses offer fitness, nutrition and habit programs online and stay connected to their clients and their audience.",
-      "offer": "Earn 15% on monthly memberships",
+      "offer": "Earn 10% on annual memberships",
       "tags": [
         "Affiliates",
         "B2B Marketplaces",
@@ -9939,59 +9935,6 @@
       }
     },
     {
-      "id": "partnerstack:goflow",
-      "network": "partnerstack",
-      "name": "Goflow",
-      "slug": "goflow",
-      "description": "Goflow is a global leader in Multichannel Operating System (MCOS) that enables ecommerce sellers to manage their channel orders, shipping, inventory, listings, transfers, purchasing, forecasting, and analytics from a single interface.",
-      "offer": "Earn 10% or more revenue share - apply today! (ACV $5,000+/yr)",
-      "tags": [
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Commerce",
-        "E-Commerce",
-        "ERP",
-        "Hot",
-        "Sales",
-        "Shopify integrated",
-        "Supply Chain & Logistics",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/goflow?company=goflow&gref=marketplace",
-      "terms_url": "https://goflow.com/terms",
-      "website": "https://www.goflow.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 3,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "analytics",
-        "e-commerce",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:hellomade",
       "network": "partnerstack",
       "name": "Hello Bar & Subscribers",
@@ -10636,62 +10579,6 @@
       }
     },
     {
-      "id": "partnerstack:ninjaone",
-      "network": "partnerstack",
-      "name": "NinjaOne",
-      "slug": "ninjaone",
-      "description": "Become a NinjaOne affiliate partner and empower your clients to streamline their IT operations! NinjaOne's RMM platform offers visibility, security & control, boosting client productivity & reducing IT costs. #1 for support, Ninja is a proven solution.",
-      "offer": "Join our affiliate network and earn on clicks, leads, and demos! We personalize based on your advertisement portfolio. Visit our website to learn more about NinjaOne and apply today!",
-      "tags": [
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Development",
-        "Hot",
-        "IT Infrastructure",
-        "IT Management",
-        "IoT Management",
-        "Office Software",
-        "Other",
-        "Publishers",
-        "Security",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ninjaone?company=ninjaone&gref=marketplace",
-      "terms_url": "https://www.ninjaone.com/affiliate-program-terms/",
-      "website": "https://www.ninjaone.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "customer service",
-        "development",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:notifyme",
       "network": "partnerstack",
       "name": "Notify Me!",
@@ -10736,59 +10623,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:lucensoftware",
-      "network": "partnerstack",
-      "name": "Office Timeline",
-      "slug": "lucensoftware",
-      "description": "Create project timelines, Gantt charts, and roadmaps in PowerPoint with Office Timeline—a project management add-in built for consultants, PMOs, and teams needing fast, professional visuals for client updates and executive reporting.",
-      "offer": "Earn up to 50% commission in Year 1 (~$100 per referral). CPC, CPL, & CPA models available.",
-      "tags": [
-        "Collaboration & Productivity",
-        "Content Management",
-        "Design",
-        "Hot",
-        "Marketing",
-        "Office Software",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/lucensoftware?company=lucensoftware&gref=marketplace",
-      "terms_url": "https://img.officetimeline.com/uploads/assets/Partner_Affiliate_Program_Terms_and_Conditions_Office_Timeline_2025_04d5aa4d3c.pdf",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "content",
-        "design",
-        "marketing",
-        "productivity",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -11088,9 +10922,7 @@
         "Affiliates",
         "Agencies",
         "Development",
-        "Hot",
         "Marketing",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/powr2155?company=powr2155&gref=marketplace",
@@ -12356,7 +12188,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 35,
+      "review_days": 12,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12577,10 +12409,18 @@
         "productivity"
       ],
       "already_active": false,
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -16096,54 +15936,6 @@
       }
     },
     {
-      "id": "partnerstack:topechelonsoftware",
-      "network": "partnerstack",
-      "name": "Top Echelon Software",
-      "slug": "topechelonsoftware",
-      "description": "Top Echelon is an applicant tracking and recruiting software designed to help businesses streamline their hiring process.",
-      "offer": "Earn 20% revenue share on your customer's first year purchases!",
-      "tags": [
-        "Affiliates",
-        "Ambassadors",
-        "HR",
-        "HR Software",
-        "Hot",
-        "Office Software",
-        "Referral Partners",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/topechelonsoftware?company=topechelonsoftware&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1sV2lgbE816l-GnfRqwOeyUmNlPG6Qgb0/view?usp=share_link",
-      "website": "https://www.topechelon.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 14,
-      "source": "https://market.partnerstack.com/",
-      "score": 65,
-      "relevance_matches": [
-        "software"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:ultahost",
       "network": "partnerstack",
       "name": "Ultahost",
@@ -17243,6 +17035,57 @@
       }
     },
     {
+      "id": "partnerstack:goflow",
+      "network": "partnerstack",
+      "name": "Goflow",
+      "slug": "goflow",
+      "description": "Goflow is a global leader in Multichannel Operating System (MCOS) that enables ecommerce sellers to manage their channel orders, shipping, inventory, listings, transfers, purchasing, forecasting, and analytics from a single interface.",
+      "offer": "Earn 10% or more revenue share - apply today! (ACV $5,000+/yr)",
+      "tags": [
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Commerce",
+        "E-Commerce",
+        "ERP",
+        "Sales",
+        "Shopify integrated",
+        "Supply Chain & Logistics"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/goflow?company=goflow&gref=marketplace",
+      "terms_url": "https://goflow.com/terms",
+      "website": "https://www.goflow.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 3,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "analytics",
+        "e-commerce",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:gravity",
       "network": "partnerstack",
       "name": "Gravity",
@@ -17598,6 +17441,111 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:ninjaone",
+      "network": "partnerstack",
+      "name": "NinjaOne",
+      "slug": "ninjaone",
+      "description": "Become a NinjaOne affiliate partner and empower your clients to streamline their IT operations! NinjaOne's RMM platform offers visibility, security & control, boosting client productivity & reducing IT costs. #1 for support, Ninja is a proven solution.",
+      "offer": "Join our affiliate network and earn on clicks, leads, and demos! We personalize based on your advertisement portfolio. Visit our website to learn more about NinjaOne and apply today!",
+      "tags": [
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Development",
+        "IT Infrastructure",
+        "IT Management",
+        "IoT Management",
+        "Office Software",
+        "Other",
+        "Publishers",
+        "Security"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ninjaone?company=ninjaone&gref=marketplace",
+      "terms_url": "https://www.ninjaone.com/affiliate-program-terms/",
+      "website": "https://www.ninjaone.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "customer service",
+        "development",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:lucensoftware",
+      "network": "partnerstack",
+      "name": "Office Timeline",
+      "slug": "lucensoftware",
+      "description": "Create project timelines, Gantt charts, and roadmaps in PowerPoint with Office Timeline—a project management add-in built for consultants, PMOs, and teams needing fast, professional visuals for client updates and executive reporting.",
+      "offer": "Earn up to 50% commission in Year 1 (~$100 per referral). CPC, CPL, & CPA models available.",
+      "tags": [
+        "Collaboration & Productivity",
+        "Content Management",
+        "Design",
+        "Marketing",
+        "Office Software",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/lucensoftware?company=lucensoftware&gref=marketplace",
+      "terms_url": "https://img.officetimeline.com/uploads/assets/Partner_Affiliate_Program_Terms_and_Conditions_Office_Timeline_2025_04d5aa4d3c.pdf",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "content",
+        "design",
+        "marketing",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -18175,7 +18123,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "Earn 10% on every referral",
+      "offer": "5% on year 2 renewal",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -18366,7 +18314,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 25,
+      "review_days": 26,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -18793,6 +18741,52 @@
       }
     },
     {
+      "id": "partnerstack:topechelonsoftware",
+      "network": "partnerstack",
+      "name": "Top Echelon Software",
+      "slug": "topechelonsoftware",
+      "description": "Top Echelon is an applicant tracking and recruiting software designed to help businesses streamline their hiring process.",
+      "offer": "Earn 20% revenue share on your customer's first year purchases!",
+      "tags": [
+        "Affiliates",
+        "Ambassadors",
+        "HR",
+        "HR Software",
+        "Office Software",
+        "Referral Partners"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/topechelonsoftware?company=topechelonsoftware&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/1sV2lgbE816l-GnfRqwOeyUmNlPG6Qgb0/view?usp=share_link",
+      "website": "https://www.topechelon.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 14,
+      "source": "https://market.partnerstack.com/",
+      "score": 60,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:vestwell",
       "network": "partnerstack",
       "name": "Vestwell",
@@ -18918,7 +18912,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 22,
+      "review_days": 19,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19128,18 +19122,10 @@
         "e-commerce"
       ],
       "already_active": false,
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -21706,50 +21692,6 @@
       }
     },
     {
-      "id": "partnerstack:betterliferealestatefundinginc",
-      "network": "partnerstack",
-      "name": "BetterLife Real Estate Funding",
-      "slug": "betterliferealestatefundinginc",
-      "description": "BetterLife Real Estate Funding (BetterLife REF) specializes in DSCR loans and creative lending solutions built specifically for real estate investors. We were built to buck the bureaucracy that comes with traditional bank lending. Flexible terms, fast closings in as little as 5 days. With a repeat borrower rate of more than 70%, you can trust us with your community.",
-      "offer": "Earn $700 per successful referral",
-      "tags": [
-        "Accounting",
-        "Hot",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/betterliferealestatefundinginc?company=betterliferealestatefundinginc&gref=marketplace",
-      "terms_url": "https://betterliferef.com/affiliateterms/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": false,
-      "review_days": 7,
-      "source": "https://market.partnerstack.com/",
-      "score": 52,
-      "relevance_matches": [
-        "sales"
-      ],
-      "already_active": false,
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:coast361",
       "network": "partnerstack",
       "name": "Coast",
@@ -22152,6 +22094,48 @@
       "policy": {
         "status": "unreachable",
         "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:betterliferealestatefundinginc",
+      "network": "partnerstack",
+      "name": "BetterLife Real Estate Funding",
+      "slug": "betterliferealestatefundinginc",
+      "description": "BetterLife Real Estate Funding (BetterLife REF) specializes in DSCR loans and creative lending solutions built specifically for real estate investors. We were built to buck the bureaucracy that comes with traditional bank lending. Flexible terms, fast closings in as little as 5 days. With a repeat borrower rate of more than 70%, you can trust us with your community.",
+      "offer": "Earn $700 per successful referral",
+      "tags": [
+        "Accounting",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/betterliferealestatefundinginc?company=betterliferealestatefundinginc&gref=marketplace",
+      "terms_url": "https://betterliferef.com/affiliateterms/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 7,
+      "source": "https://market.partnerstack.com/",
+      "score": 47,
+      "relevance_matches": [
+        "sales"
+      ],
+      "already_active": false,
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -23172,7 +23156,7 @@
       "name": "Guesty",
       "slug": "guesty",
       "description": "With Guesty’s Affiliate Program, you can earn an additional stream of income, with up to 5K per referral Help your network of hospitality pros succeed in growing their businesses with our advanced hospitality operations platform.",
-      "offer": "$50 for per Listing",
+      "offer": "Earn $100 for a Customer's First Listing",
       "tags": [
         "Hot",
         "Trusted"
@@ -23236,7 +23220,7 @@
       "name": "LettrLabs",
       "slug": "lettrlabs",
       "description": "LettrLabs is an automated direct mail platform designed to target, segment, automate and measure results of campaigns. We empower organizations to connect with their clients through personalized, handwritten mailers that leave a lasting impression using automations that make direct mail as easy as digital.",
-      "offer": "Earn 4% for 18 months",
+      "offer": "Earn 3% for 12 months",
       "tags": [],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/lettrlabs?company=lettrlabs&gref=marketplace",
       "terms_url": "https://www.lettrlabs.com/company/terms-of-service",
