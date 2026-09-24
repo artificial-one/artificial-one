@@ -1,0 +1,176 @@
+/* Current Artificial.One shell for the original tools/*.html catalogue. */
+body.legacy-tool-page {
+  margin: 0 !important;
+  background: #080812 !important;
+  color: #f7f7fb !important;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+body.legacy-tool-page .site-header {
+  padding: 0 !important;
+  text-align: left !important;
+  background: rgba(8,8,18,.92) !important;
+}
+
+body.legacy-tool-page .site-header .nav-wrap {
+  width: min(var(--max),calc(100% - 32px)) !important;
+  max-width: none !important;
+  height: 74px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.legacy-tool-page .site-header .primary-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 22px !important;
+  margin-left: auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  text-align: left !important;
+}
+
+body.legacy-tool-page .site-header .brand,
+body.legacy-tool-page .site-header .primary-nav a,
+body.legacy-tool-page .site-header .more-menu summary {
+  color: #f7f7fb !important;
+}
+
+body.legacy-tool-page > nav {
+  border-color: rgba(255,255,255,.11) !important;
+  background: #0d0d19 !important;
+}
+
+body.legacy-tool-page > nav img { display: none !important; }
+body.legacy-tool-page > nav a:first-child::after {
+  content: "artificial.one";
+  color: #f8fafc;
+  font-size: 1.05rem;
+  font-weight: 950;
+  letter-spacing: -.03em;
+}
+
+body.legacy-tool-page > article,
+body.legacy-tool-page > main,
+body.legacy-tool-page > .container {
+  width: min(920px,calc(100% - 36px)) !important;
+  max-width: 920px !important;
+  margin-inline: auto !important;
+  padding-top: 42px !important;
+  color: #f7f7fb !important;
+}
+
+body.legacy-tool-page article > header,
+body.legacy-tool-page main > header,
+body.legacy-tool-page .quick-verdict,
+body.legacy-tool-page .pros,
+body.legacy-tool-page .cons,
+body.legacy-tool-page .rating-box,
+body.legacy-tool-page .bg-white,
+body.legacy-tool-page .bg-gray-50,
+body.legacy-tool-page .bg-gray-100,
+body.legacy-tool-page [data-beehiiv-form="newsletter"] {
+  border-color: rgba(255,255,255,.12) !important;
+  background: linear-gradient(145deg,#17172b,#10101e) !important;
+  color: #f7f7fb !important;
+  box-shadow: none !important;
+}
+
+body.legacy-tool-page h1,
+body.legacy-tool-page h2,
+body.legacy-tool-page h3,
+body.legacy-tool-page h4,
+body.legacy-tool-page strong,
+body.legacy-tool-page .text-gray-900,
+body.legacy-tool-page .text-gray-800,
+body.legacy-tool-page .text-green-800,
+body.legacy-tool-page .text-blue-800 {
+  color: #f8fafc !important;
+}
+
+body.legacy-tool-page p,
+body.legacy-tool-page li,
+body.legacy-tool-page td,
+body.legacy-tool-page .text-gray-700,
+body.legacy-tool-page .text-gray-600 {
+  color: #c5c5d4 !important;
+}
+
+body.legacy-tool-page a,
+body.legacy-tool-page .text-purple-600,
+body.legacy-tool-page .text-purple-700 {
+  color: #c4a7ff;
+}
+
+body.legacy-tool-page article nav[aria-label="Breadcrumb"] {
+  border-color: rgba(255,255,255,.12) !important;
+  color: #aaaac0 !important;
+}
+
+body.legacy-tool-page input,
+body.legacy-tool-page select,
+body.legacy-tool-page textarea {
+  border-color: rgba(255,255,255,.16) !important;
+  background: #090913 !important;
+  color: #fff !important;
+}
+
+body.legacy-tool-page table,
+body.legacy-tool-page th,
+body.legacy-tool-page td {
+  border-color: rgba(255,255,255,.12) !important;
+}
+
+body.legacy-tool-page th {
+  background: #18182c !important;
+  color: #f8fafc !important;
+}
+
+body.legacy-tool-page .cta-box,
+body.legacy-tool-page .bg-gradient-to-r {
+  border: 1px solid rgba(156,255,59,.24) !important;
+  background: linear-gradient(135deg,#30205f,#18221e) !important;
+  color: #fff !important;
+}
+
+body.legacy-tool-page .cta-box p,
+body.legacy-tool-page .cta-box h2,
+body.legacy-tool-page .cta-box h3,
+body.legacy-tool-page .bg-gradient-to-r p,
+body.legacy-tool-page .bg-gradient-to-r h2,
+body.legacy-tool-page .bg-gradient-to-r h3 {
+  color: #fff !important;
+}
+
+body.legacy-tool-page .rating,
+body.legacy-tool-page .score {
+  color: #9cff3b !important;
+}
+
+body.legacy-tool-page .bg-green-100.text-green-800,
+body.legacy-tool-page .bg-blue-100.text-blue-800,
+body.legacy-tool-page .bg-gray-100.text-gray-800 {
+  border: 1px solid rgba(255,255,255,.12) !important;
+  background: #18182c !important;
+  color: #f8fafc !important;
+}
+
+body.legacy-tool-page footer {
+  border-color: rgba(255,255,255,.11) !important;
+  background: #0d0d19 !important;
+  color: #aaaac0 !important;
+}
+
+@media (max-width: 650px) {
+  body.legacy-tool-page > article,
+  body.legacy-tool-page > main,
+  body.legacy-tool-page > .container { padding-top: 26px !important; }
+  body.legacy-tool-page .pros-cons { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 820px) {
+  body.legacy-tool-page .site-header .primary-nav { display: none !important; }
+  body.legacy-tool-page .site-header .primary-nav.is-open { display: flex !important; }
+}

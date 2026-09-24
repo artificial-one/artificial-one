@@ -9,6 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = (ROOT / "about.html", ROOT / "reviews.html", ROOT / "blog.html")
+TOOL_PAGES = tuple(sorted((ROOT / "tools").glob("*.html")))
+TOOL_STYLE_MARKER = "<!-- AI1 LEGACY TOOL SHELL -->"
 
 
 def normalize(source: str) -> str:
@@ -54,6 +56,26 @@ def normalize(source: str) -> str:
     return source
 
 
+def normalize_tool_page(source: str) -> str:
+    """Apply the current shell without rewriting a legacy review's content."""
+    source = source.replace('<body class="bg-white">', '<body class="bg-white legacy-tool-page">', 1)
+    source = source.replace("<body>", '<body class="legacy-tool-page">', 1)
+    if TOOL_STYLE_MARKER not in source and "</head>" in source:
+        styles = (
+            f"    {TOOL_STYLE_MARKER}\n"
+            '    <link rel="stylesheet" href="../assets/decision-engine.css">\n'
+            '    <link rel="stylesheet" href="../assets/legacy-tool-pages.css">\n'
+        )
+        source = source.replace("</head>", styles + "</head>", 1)
+    if "assets/affiliate-tracking.js" not in source and "</body>" in source:
+        source = source.replace(
+            "</body>",
+            '    <script src="../assets/affiliate-tracking.js" defer></script>\n</body>',
+            1,
+        )
+    return source
+
+
 def main(check: bool = False) -> int:
     stale: list[str] = []
     for path in PAGES:
@@ -65,8 +87,19 @@ def main(check: bool = False) -> int:
             stale.append(path.name)
         else:
             path.write_text(expected, encoding="utf-8")
+    for path in TOOL_PAGES:
+        current = path.read_text(encoding="utf-8")
+        expected = normalize_tool_page(current)
+        if current == expected:
+            continue
+        if check:
+            stale.append(path.relative_to(ROOT).as_posix())
+        else:
+            path.write_text(expected, encoding="utf-8")
     if stale:
-        print("Legacy brand normalization is stale: " + ", ".join(stale))
+        sample = ", ".join(stale[:12])
+        suffix = f" (+{len(stale) - 12} more)" if len(stale) > 12 else ""
+        print("Legacy brand normalization is stale: " + sample + suffix)
         return 1
     print("Legacy brand and evidence language are aligned.")
     return 0
