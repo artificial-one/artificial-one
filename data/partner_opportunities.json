@@ -6,12 +6,11 @@
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
     "total": 476,
-    "approved_link_pending": 10,
+    "approved_link_pending": 18,
     "existing_active": 25,
     "not_qualified": 14,
-    "policy_review_required": 21,
-    "ready_for_owner_application": 398,
-    "terms_required": 8
+    "policy_review_required": 20,
+    "ready_for_owner_application": 399
   },
   "opportunities": [
     {
@@ -289,10 +288,10 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
-      "approved": false,
+      "approved": true,
       "authenticated_relationship": true,
-      "relationship_status": "tos-acceptance-pending",
-      "terms_required": true,
+      "relationship_status": "active",
+      "terms_required": false,
       "partnership_key": "part_bYzvz67j4mJ7uA",
       "score": 85,
       "relevance_matches": [
@@ -302,12 +301,20 @@
         "productivity",
         "sales"
       ],
-      "already_active": false,
-      "relationship_state": "terms_required",
-      "state": "terms_required",
+      "already_active": true,
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
-        "status": "not_reviewed",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -672,10 +679,10 @@
       "revenue_share": true,
       "review_days": 3,
       "source": "https://market.partnerstack.com/",
-      "approved": false,
+      "approved": true,
       "authenticated_relationship": true,
-      "relationship_status": "tos-acceptance-pending",
-      "terms_required": true,
+      "relationship_status": "active",
+      "terms_required": false,
       "partnership_key": "part_xTClykiM4pAbxp",
       "score": 85,
       "relevance_matches": [
@@ -687,12 +694,20 @@
         "sales",
         "software"
       ],
-      "already_active": false,
-      "relationship_state": "terms_required",
-      "state": "terms_required",
+      "already_active": true,
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
-        "status": "not_reviewed",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -802,10 +817,10 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
-      "approved": false,
+      "approved": true,
       "authenticated_relationship": true,
-      "relationship_status": "tos-acceptance-pending",
-      "terms_required": true,
+      "relationship_status": "active",
+      "terms_required": false,
       "partnership_key": "part_gioKssXEkixGCH",
       "score": 85,
       "relevance_matches": [
@@ -817,12 +832,20 @@
         "marketing",
         "productivity"
       ],
-      "already_active": false,
-      "relationship_state": "terms_required",
-      "state": "terms_required",
+      "already_active": true,
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
-        "status": "not_reviewed",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -858,10 +881,10 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
-      "approved": false,
+      "approved": true,
       "authenticated_relationship": true,
-      "relationship_status": "tos-acceptance-pending",
-      "terms_required": true,
+      "relationship_status": "active",
+      "terms_required": false,
       "partnership_key": "part_lKnDKCOQQg6XFz",
       "score": 85,
       "relevance_matches": [
@@ -873,12 +896,20 @@
         "sales",
         "software"
       ],
-      "already_active": false,
-      "relationship_state": "terms_required",
-      "state": "terms_required",
+      "already_active": true,
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
-        "status": "not_reviewed",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -1840,10 +1871,10 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
-      "approved": false,
+      "approved": true,
       "authenticated_relationship": true,
-      "relationship_status": "tos-acceptance-pending",
-      "terms_required": true,
+      "relationship_status": "active",
+      "terms_required": false,
       "partnership_key": "part_KxKePr0DCZxxHb",
       "score": 85,
       "relevance_matches": [
@@ -1854,12 +1885,20 @@
         "sales",
         "software"
       ],
-      "already_active": false,
-      "relationship_state": "terms_required",
-      "state": "terms_required",
+      "already_active": true,
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
-        "status": "not_reviewed",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -2442,10 +2481,10 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
-      "approved": false,
+      "approved": true,
       "authenticated_relationship": true,
-      "relationship_status": "tos-acceptance-pending",
-      "terms_required": true,
+      "relationship_status": "active",
+      "terms_required": false,
       "partnership_key": "part_1qafO7PmnrNy3i",
       "score": 85,
       "relevance_matches": [
@@ -2454,12 +2493,20 @@
         "development",
         "software"
       ],
-      "already_active": false,
-      "relationship_state": "terms_required",
-      "state": "terms_required",
+      "already_active": true,
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
-        "status": "not_reviewed",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -2558,10 +2605,10 @@
       "revenue_share": true,
       "review_days": 52,
       "source": "https://market.partnerstack.com/",
-      "approved": false,
+      "approved": true,
       "authenticated_relationship": true,
-      "relationship_status": "tos-acceptance-pending",
-      "terms_required": true,
+      "relationship_status": "active",
+      "terms_required": false,
       "partnership_key": "part_NbOSLIlPqaKFDP",
       "score": 85,
       "relevance_matches": [
@@ -2572,12 +2619,20 @@
         "marketing",
         "sales"
       ],
-      "already_active": false,
-      "relationship_state": "terms_required",
-      "state": "terms_required",
+      "already_active": true,
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
-        "status": "not_reviewed",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -9437,22 +9492,30 @@
       "revenue_share": true,
       "review_days": 29,
       "source": "https://market.partnerstack.com/",
-      "approved": false,
+      "approved": true,
       "authenticated_relationship": true,
-      "relationship_status": "tos-acceptance-pending",
-      "terms_required": true,
+      "relationship_status": "active",
+      "terms_required": false,
       "partnership_key": "part_AiDoRzCAEBgPtA",
       "score": 67,
       "relevance_matches": [
         "productivity",
         "software"
       ],
-      "already_active": false,
-      "relationship_state": "terms_required",
-      "state": "terms_required",
+      "already_active": true,
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
-        "status": "not_reviewed",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -10176,10 +10239,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": true,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -22033,15 +22104,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
+          "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
