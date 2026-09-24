@@ -5,12 +5,12 @@
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 475,
-    "approved_link_pending": 1,
-    "existing_active": 31,
+    "total": 476,
+    "approved_link_pending": 10,
+    "existing_active": 25,
     "not_qualified": 14,
-    "policy_review_required": 21,
-    "ready_for_owner_application": 408
+    "policy_review_required": 22,
+    "ready_for_owner_application": 405
   },
   "opportunities": [
     {
@@ -65,6 +65,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -113,6 +114,11 @@
       "revenue_share": true,
       "review_days": 3,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_StekKO3M9mbGt2",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -124,6 +130,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -183,6 +190,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -223,12 +231,18 @@
       "revenue_share": true,
       "review_days": 9,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_8iFDetp0QOhVaI",
       "score": 85,
       "relevance_matches": [
         "ai",
         "artificial intelligence"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -274,6 +288,11 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": false,
+      "partnership_key": "part_bYzvz67j4mJ7uA",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -283,6 +302,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -334,6 +354,11 @@
       "revenue_share": true,
       "review_days": 4,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_194mSpYxx1aYQH",
       "score": 85,
       "relevance_matches": [
         "analytics",
@@ -346,6 +371,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -397,6 +423,11 @@
       "revenue_share": true,
       "review_days": 4,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_wsOiGPtSfB1xkj",
       "score": 85,
       "relevance_matches": [
         "analytics",
@@ -406,6 +437,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -454,6 +486,11 @@
       "revenue_share": true,
       "review_days": 3,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_LrNUcZSNjQ2cmI",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -467,6 +504,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -513,6 +551,11 @@
       "revenue_share": true,
       "review_days": 7,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_JOMIgzBYCUZMfe",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -525,6 +568,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -572,6 +616,11 @@
       "revenue_share": true,
       "review_days": 4,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_g0ns0x1GaRjoZJ",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -580,6 +629,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -629,6 +679,11 @@
       "revenue_share": true,
       "review_days": 3,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": false,
+      "partnership_key": "part_xTClykiM4pAbxp",
       "score": 85,
       "relevance_matches": [
         "analytics",
@@ -640,6 +695,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -695,6 +751,11 @@
       "revenue_share": true,
       "review_days": 3,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_1WoaJATfUerUR4",
       "score": 85,
       "relevance_matches": [
         "analytics",
@@ -709,6 +770,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -755,6 +817,11 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": false,
+      "partnership_key": "part_gioKssXEkixGCH",
       "score": 85,
       "relevance_matches": [
         "artificial intelligence",
@@ -766,6 +833,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -813,6 +881,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": false,
+      "partnership_key": "part_lKnDKCOQQg6XFz",
       "score": 85,
       "relevance_matches": [
         "analytics",
@@ -824,6 +897,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -865,6 +939,11 @@
       "revenue_share": true,
       "review_days": -1,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_K6h4KnJ4NaaGQZ",
       "score": 85,
       "relevance_matches": [
         "artificial intelligence",
@@ -872,6 +951,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -916,6 +996,11 @@
       "revenue_share": true,
       "review_days": 129,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_zriCnMLLkndmLZ",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -926,6 +1011,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -972,6 +1058,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_H7szNHZggCbOsQ",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -986,6 +1077,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1037,6 +1129,11 @@
       "revenue_share": true,
       "review_days": -1,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_tiQVB0s6uSeXst",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1049,6 +1146,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1092,6 +1190,11 @@
       "revenue_share": true,
       "review_days": 25,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_mbIJizlpjTNctl",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1101,6 +1204,7 @@
         "video"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -1137,6 +1241,11 @@
       "revenue_share": true,
       "review_days": 12,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_m1TqFlACuwwFpB",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1146,6 +1255,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1198,6 +1308,11 @@
       "revenue_share": true,
       "review_days": 4,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_16YO5stpOmzb81",
       "score": 85,
       "relevance_matches": [
         "analytics",
@@ -1210,6 +1325,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1253,6 +1369,11 @@
       "revenue_share": true,
       "review_days": -1,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_xYONIW8XSvwLGd",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1261,6 +1382,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1314,6 +1436,11 @@
       "revenue_share": true,
       "review_days": 6,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_eQmwmLLoc0diP5",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1329,7 +1456,8 @@
         "software"
       ],
       "already_active": true,
-      "state": "existing_active",
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
         "status": "not_reviewed",
         "signals": {},
@@ -1376,6 +1504,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_i4wFRarfjw7PAJ",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1388,6 +1521,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1437,6 +1571,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_Nn04JC4ikVk4qC",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1448,6 +1587,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -1484,6 +1624,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_pyAn8bWef1l7dO",
       "score": 85,
       "relevance_matches": [
         "artificial intelligence",
@@ -1493,7 +1638,8 @@
         "sales"
       ],
       "already_active": true,
-      "state": "ready_for_owner_application",
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -1539,6 +1685,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-denied",
+      "terms_required": false,
+      "partnership_key": "part_rEe3JXqSC9YXaD",
       "score": 85,
       "relevance_matches": [
         "artificial intelligence",
@@ -1548,6 +1699,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1592,6 +1744,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-denied",
+      "terms_required": false,
+      "partnership_key": "part_TKarpMNKFd9REm",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1600,6 +1757,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1649,6 +1807,11 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-denied",
+      "terms_required": false,
+      "partnership_key": "part_iiEjSCVo1VPgX3",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1660,6 +1823,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1707,6 +1871,11 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": false,
+      "partnership_key": "part_KxKePr0DCZxxHb",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1717,6 +1886,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1768,6 +1938,11 @@
       "revenue_share": true,
       "review_days": 43,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_PO01QzfMr27ZoY",
       "score": 85,
       "relevance_matches": [
         "artificial intelligence",
@@ -1778,7 +1953,8 @@
         "software"
       ],
       "already_active": true,
-      "state": "existing_active",
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
         "status": "not_reviewed",
         "signals": {},
@@ -1816,6 +1992,11 @@
       "revenue_share": true,
       "review_days": 3,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-denied",
+      "terms_required": false,
+      "partnership_key": "part_JMNltjlll3YiFb",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1826,6 +2007,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1870,6 +2052,11 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_IvU53CXerqa84r",
       "score": 85,
       "relevance_matches": [
         "artificial intelligence",
@@ -1878,6 +2065,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1923,6 +2111,11 @@
       "revenue_share": true,
       "review_days": 23,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_nkVYiXFaJOyCpk",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1933,6 +2126,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -1974,6 +2168,11 @@
       "revenue_share": true,
       "review_days": -1,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_5ICrH0ctZpP3i6",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -1981,6 +2180,7 @@
         "development"
       ],
       "already_active": true,
+      "relationship_state": "active_link_pending",
       "state": "approved_link_pending",
       "policy": {
         "status": "reviewed",
@@ -2027,6 +2227,11 @@
       "revenue_share": true,
       "review_days": 29,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_SQa0JlB7iXFzgv",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -2036,6 +2241,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -2079,6 +2285,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2143,6 +2350,11 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_6cdwICVYN88oCP",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -2158,6 +2370,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2203,6 +2416,11 @@
       "revenue_share": true,
       "review_days": 4,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-denied",
+      "terms_required": false,
+      "partnership_key": "part_HdPqzVdtDv5byv",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -2213,6 +2431,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2262,6 +2481,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": false,
+      "partnership_key": "part_1qafO7PmnrNy3i",
       "score": 85,
       "relevance_matches": [
         "artificial intelligence",
@@ -2270,6 +2494,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2315,6 +2540,11 @@
       "revenue_share": true,
       "review_days": 140,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_Nz1hQt3nWr72mk",
       "score": 85,
       "relevance_matches": [
         "artificial intelligence",
@@ -2323,6 +2553,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2374,6 +2605,11 @@
       "revenue_share": true,
       "review_days": 52,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": false,
+      "partnership_key": "part_NbOSLIlPqaKFDP",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -2384,6 +2620,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2430,6 +2667,11 @@
       "revenue_share": true,
       "review_days": 6,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_iWpnHzRY97D340",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -2443,6 +2685,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2488,6 +2731,11 @@
       "revenue_share": true,
       "review_days": -1,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_d0z4jItagk8JiD",
       "score": 85,
       "relevance_matches": [
         "analytics",
@@ -2497,6 +2745,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2540,6 +2789,11 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_Uq9lE7HtbBYtqx",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -2547,7 +2801,8 @@
         "sales"
       ],
       "already_active": true,
-      "state": "existing_active",
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
         "status": "not_reviewed",
         "signals": {},
@@ -2580,6 +2835,11 @@
       "revenue_share": true,
       "review_days": 41,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_7dLqbqSP5pXXjD",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -2587,6 +2847,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2640,6 +2901,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_7n1xJG6wFvoXdE",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -2653,6 +2919,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2708,6 +2975,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2761,6 +3029,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2812,6 +3081,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2872,6 +3142,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2929,6 +3200,7 @@
         "saas"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -2984,6 +3256,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3031,6 +3304,11 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_ZWrfYC4hlnSJEi",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -3040,6 +3318,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -3089,6 +3368,11 @@
       "revenue_share": true,
       "review_days": 8,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_Ql9S9mVMxDWd3x",
       "score": 85,
       "relevance_matches": [
         "ai",
@@ -3105,6 +3389,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -3150,6 +3435,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -3202,6 +3488,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3257,6 +3544,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3309,6 +3597,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3378,6 +3667,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3443,6 +3733,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3487,6 +3778,7 @@
         "artificial intelligence"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3546,6 +3838,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3593,6 +3886,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3648,6 +3942,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3704,6 +3999,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3755,6 +4051,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3806,6 +4103,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3857,6 +4155,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3912,6 +4211,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -3960,6 +4260,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4011,6 +4312,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4066,6 +4368,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -4122,6 +4425,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -4167,6 +4471,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4213,6 +4518,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4268,6 +4574,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4306,12 +4613,18 @@
       "revenue_share": true,
       "review_days": 17,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_vs95djYghyPjup",
       "score": 80,
       "relevance_matches": [
         "ai",
         "artificial intelligence"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -4352,6 +4665,7 @@
         "seo"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4414,6 +4728,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4474,6 +4789,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4526,6 +4842,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4574,6 +4891,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4622,6 +4940,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4673,6 +4992,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4731,6 +5051,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4787,6 +5108,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4849,6 +5171,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4897,6 +5220,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -4946,6 +5270,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5014,6 +5339,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5070,6 +5396,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5118,6 +5445,11 @@
       "revenue_share": false,
       "review_days": 7,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-denied",
+      "terms_required": false,
+      "partnership_key": "part_z2dFFzVClyxS0n",
       "score": 77,
       "relevance_matches": [
         "artificial intelligence",
@@ -5125,6 +5457,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5180,6 +5513,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5232,6 +5566,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5284,6 +5619,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5341,6 +5677,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5394,6 +5731,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5451,6 +5789,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5509,6 +5848,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5567,6 +5907,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5619,6 +5960,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5666,6 +6008,11 @@
       "revenue_share": false,
       "review_days": 33,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_uFkLFFXQWoT83L",
       "score": 77,
       "relevance_matches": [
         "ai",
@@ -5676,7 +6023,8 @@
         "software"
       ],
       "already_active": true,
-      "state": "existing_active",
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
         "status": "not_reviewed",
         "signals": {},
@@ -5732,6 +6080,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5781,6 +6130,11 @@
       "revenue_share": false,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_pRdwIQMZcJOB8u",
       "score": 77,
       "relevance_matches": [
         "analytics",
@@ -5794,6 +6148,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -5841,6 +6196,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5894,6 +6250,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -5937,6 +6294,11 @@
       "revenue_share": true,
       "review_days": 4,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_vans06v88GqItL",
       "score": 76,
       "relevance_matches": [
         "ai",
@@ -5948,6 +6310,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -6002,6 +6365,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6051,6 +6415,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6095,6 +6460,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6144,6 +6510,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6196,6 +6563,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6242,6 +6610,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -6273,6 +6642,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_QirzVfhs4eieZD",
       "score": 76,
       "relevance_matches": [
         "ai",
@@ -6281,6 +6655,7 @@
         "marketing"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -6318,6 +6693,11 @@
       "revenue_share": true,
       "review_days": -1,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_UU6d2kr4KxBHHa",
       "score": 76,
       "relevance_matches": [
         "ai",
@@ -6327,6 +6707,7 @@
         "marketing"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -6360,6 +6741,11 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_0gYEAEpMGhYGFj",
       "score": 76,
       "relevance_matches": [
         "ai",
@@ -6368,6 +6754,7 @@
         "productivity"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -6405,6 +6792,11 @@
       "revenue_share": true,
       "review_days": -1,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_hjWQXpP9CboU12",
       "score": 75,
       "relevance_matches": [
         "ai",
@@ -6415,7 +6807,8 @@
         "marketing"
       ],
       "already_active": true,
-      "state": "existing_active",
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
         "status": "not_reviewed",
         "signals": {},
@@ -6466,6 +6859,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6517,6 +6911,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6565,6 +6960,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6609,6 +7005,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6660,6 +7057,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6723,6 +7121,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6768,6 +7167,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6817,6 +7217,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -6864,6 +7265,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6908,6 +7310,7 @@
         "ai"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -6974,6 +7377,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7033,6 +7437,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7086,6 +7491,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7145,6 +7551,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7201,6 +7608,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7255,6 +7663,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -7306,6 +7715,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7362,6 +7772,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7417,6 +7828,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7476,6 +7888,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7538,6 +7951,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7596,6 +8010,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7646,6 +8061,7 @@
         "data"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7696,6 +8112,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7754,6 +8171,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7818,6 +8236,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7878,6 +8297,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -7927,6 +8347,11 @@
       "revenue_share": false,
       "review_days": 15,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_zVDAJOkRWUo0GC",
       "score": 72,
       "relevance_matches": [
         "ai",
@@ -7939,6 +8364,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -7999,6 +8425,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8056,6 +8483,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8107,6 +8535,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8162,6 +8591,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8212,6 +8642,7 @@
         "saas"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8274,6 +8705,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8326,6 +8758,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8378,6 +8811,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8429,6 +8863,7 @@
         "seo"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8476,6 +8911,7 @@
         "development"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -8521,6 +8957,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8572,6 +9009,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8623,6 +9061,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8676,6 +9115,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8720,6 +9160,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -8764,6 +9205,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8816,6 +9258,7 @@
         "e-commerce"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8860,6 +9303,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -8901,6 +9345,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -8945,6 +9390,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9004,6 +9450,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9045,12 +9492,18 @@
       "revenue_share": true,
       "review_days": 29,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": false,
+      "partnership_key": "part_AiDoRzCAEBgPtA",
       "score": 67,
       "relevance_matches": [
         "productivity",
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9103,6 +9556,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9156,6 +9610,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9204,6 +9659,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9258,6 +9714,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9308,6 +9765,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9360,6 +9818,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9411,6 +9870,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9457,6 +9917,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9513,6 +9974,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9571,6 +10033,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9611,12 +10074,18 @@
       "revenue_share": true,
       "review_days": -1,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_evYV5PMNsOkPo0",
       "score": 67,
       "relevance_matches": [
         "customer service",
         "productivity"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -9657,6 +10126,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9708,6 +10178,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9767,6 +10238,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -9808,6 +10280,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9862,6 +10335,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9915,6 +10389,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -9975,6 +10450,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10023,6 +10499,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -10067,6 +10544,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10117,6 +10595,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10171,6 +10650,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10215,6 +10695,11 @@
       "revenue_share": true,
       "review_days": 17,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_IgEj0Us5uwu4gd",
       "score": 67,
       "relevance_matches": [
         "analytics",
@@ -10222,6 +10707,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -10268,6 +10754,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10319,6 +10806,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10369,6 +10857,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10424,6 +10913,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10472,6 +10962,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10520,6 +11011,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10572,6 +11064,11 @@
       "revenue_share": true,
       "review_days": 3,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_ui1YqcGMPfA6pv",
       "score": 67,
       "relevance_matches": [
         "e-commerce",
@@ -10580,6 +11077,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -10619,6 +11117,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10671,6 +11170,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10722,6 +11222,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10786,6 +11287,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10845,6 +11347,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10900,6 +11403,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10952,6 +11456,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -10999,6 +11504,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11057,6 +11563,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11105,6 +11612,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11164,6 +11672,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11203,12 +11712,18 @@
       "revenue_share": true,
       "review_days": 2,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_ipObPOBAn7dy1l",
       "score": 67,
       "relevance_matches": [
         "productivity",
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -11253,6 +11768,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11310,6 +11826,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11361,6 +11878,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11419,6 +11937,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11473,6 +11992,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11522,6 +12042,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11567,6 +12088,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11622,6 +12144,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11671,6 +12194,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11723,6 +12247,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11772,6 +12297,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11821,6 +12347,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11879,6 +12406,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11929,6 +12457,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -11981,6 +12510,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12032,6 +12562,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12087,6 +12618,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12140,6 +12672,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12200,6 +12733,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12258,6 +12792,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12309,6 +12844,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12364,6 +12900,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12411,6 +12948,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12466,6 +13004,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12527,6 +13066,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12581,6 +13121,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -12624,6 +13165,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12668,12 +13210,18 @@
       "revenue_share": true,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_MKrtdImPyzMlp3",
       "score": 67,
       "relevance_matches": [
         "analytics",
         "marketing"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -12717,6 +13265,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12775,6 +13324,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12827,6 +13377,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12879,6 +13430,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12922,6 +13474,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -12971,6 +13524,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13014,6 +13568,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13057,6 +13612,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13102,6 +13658,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13146,6 +13703,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13189,6 +13747,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13232,6 +13791,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13276,6 +13836,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13319,6 +13880,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13363,6 +13925,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13406,6 +13969,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -13441,6 +14005,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13485,6 +14050,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13528,6 +14094,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13571,6 +14138,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13614,6 +14182,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13658,6 +14227,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13702,6 +14272,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13745,6 +14316,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13789,6 +14361,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13833,6 +14406,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13877,6 +14451,7 @@
         "design"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13920,6 +14495,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -13963,6 +14539,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14006,6 +14583,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14049,6 +14627,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14092,6 +14671,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14136,6 +14716,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14179,6 +14760,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14223,6 +14805,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14266,6 +14849,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14309,6 +14893,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14353,6 +14938,7 @@
         "design"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14396,6 +14982,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14439,6 +15026,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14483,6 +15071,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14526,6 +15115,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14570,6 +15160,7 @@
         "seo"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14613,6 +15204,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14656,6 +15248,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14700,6 +15293,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14743,6 +15337,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14786,6 +15381,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14829,6 +15425,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14873,6 +15470,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14924,6 +15522,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -14970,6 +15569,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15018,6 +15618,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15061,12 +15662,18 @@
       "revenue_share": true,
       "review_days": -1,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_YV15cNJ3BIZbn8",
       "score": 65,
       "relevance_matches": [
         "software"
       ],
       "already_active": true,
-      "state": "ready_for_owner_application",
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -15114,6 +15721,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15160,6 +15768,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15209,6 +15818,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15255,6 +15865,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15303,6 +15914,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15351,6 +15963,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15400,6 +16013,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15452,6 +16066,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15497,6 +16112,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15546,6 +16162,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15595,6 +16212,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15645,6 +16263,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -15683,6 +16302,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15731,6 +16351,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15778,6 +16399,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15827,6 +16449,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15871,6 +16494,7 @@
         "customer service"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15914,6 +16538,11 @@
       "revenue_share": false,
       "review_days": 14,
       "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-denied",
+      "terms_required": false,
+      "partnership_key": "part_xefKWOki7BxyT1",
       "score": 65,
       "relevance_matches": [
         "ai",
@@ -15922,6 +16551,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -15975,6 +16605,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -16014,6 +16645,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16063,6 +16695,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16112,6 +16745,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16170,6 +16804,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16213,6 +16848,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16265,6 +16901,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16314,6 +16951,7 @@
         "data"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16365,6 +17003,11 @@
       "revenue_share": false,
       "review_days": 1,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_ViVYb92zmcxeOo",
       "score": 63,
       "relevance_matches": [
         "automation",
@@ -16374,7 +17017,8 @@
         "software"
       ],
       "already_active": true,
-      "state": "existing_active",
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
         "status": "not_reviewed",
         "signals": {},
@@ -16413,6 +17057,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16465,6 +17110,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16517,6 +17163,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16569,6 +17216,7 @@
         "e-commerce"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16616,6 +17264,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16665,6 +17314,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16716,6 +17366,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16765,6 +17416,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16817,6 +17469,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16864,6 +17517,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16924,6 +17578,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -16970,6 +17625,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17021,6 +17677,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17072,6 +17729,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17131,6 +17789,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17178,6 +17837,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17234,6 +17894,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17283,6 +17944,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17338,6 +18000,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17390,6 +18053,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17435,6 +18099,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17489,6 +18154,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17540,6 +18206,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17596,6 +18263,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17649,6 +18317,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17699,6 +18368,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17747,6 +18417,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17800,6 +18471,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17847,6 +18519,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17899,6 +18572,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -17957,6 +18631,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18001,6 +18676,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18040,13 +18716,14 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 32,
+      "review_days": 38,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18104,6 +18781,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18125,7 +18803,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "Earn 10% on every referral",
+      "offer": "Earn 15% on every referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -18159,6 +18837,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18213,6 +18892,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18271,6 +18951,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18323,6 +19004,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18366,6 +19048,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -18407,6 +19090,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -18449,6 +19133,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18491,6 +19176,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -18525,6 +19211,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -18560,6 +19247,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -18598,6 +19286,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18645,6 +19334,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18693,6 +19383,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18735,6 +19426,7 @@
         "software"
       ],
       "already_active": true,
+      "relationship_state": "published",
       "state": "existing_active",
       "policy": {
         "status": "not_reviewed",
@@ -18773,6 +19465,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18818,6 +19511,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18876,6 +19570,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -18923,6 +19618,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -18976,18 +19672,11 @@
         "software"
       ],
       "already_active": false,
-      "state": "ready_for_owner_application",
+      "relationship_state": "pending",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -19031,6 +19720,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19084,6 +19774,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19132,19 +19823,20 @@
         "e-commerce"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -19183,6 +19875,7 @@
         "e-commerce"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19236,6 +19929,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -19282,6 +19976,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19325,6 +20020,11 @@
       "revenue_share": false,
       "review_days": 8,
       "source": "https://market.partnerstack.com/",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_b1rsQjLpDQtExY",
       "score": 59,
       "relevance_matches": [
         "content",
@@ -19332,7 +20032,8 @@
         "sales"
       ],
       "already_active": true,
-      "state": "existing_active",
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
         "status": "not_reviewed",
         "signals": {},
@@ -19372,6 +20073,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19415,6 +20117,7 @@
         "seo"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19465,6 +20168,7 @@
         "e-commerce"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19526,6 +20230,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19578,6 +20283,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19633,6 +20339,7 @@
         "video"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19682,6 +20389,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19733,6 +20441,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19784,6 +20493,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19829,6 +20539,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19874,6 +20585,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19929,6 +20641,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -19977,6 +20690,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20027,6 +20741,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20072,6 +20787,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20118,6 +20834,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20173,6 +20890,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20217,6 +20935,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20264,6 +20983,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20313,6 +21033,7 @@
         "e-commerce"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20360,6 +21081,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20415,6 +21137,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20466,6 +21189,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -20508,6 +21232,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20553,6 +21278,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20604,6 +21330,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20653,6 +21380,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20697,6 +21425,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20742,6 +21471,7 @@
         "development"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20787,6 +21517,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20833,6 +21564,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20880,6 +21612,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20922,6 +21655,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -20969,6 +21703,7 @@
         "design"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21011,6 +21746,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21053,6 +21789,7 @@
         "content"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21099,6 +21836,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21144,6 +21882,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21203,6 +21942,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21246,6 +21986,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21289,6 +22030,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21341,19 +22083,20 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
+          "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -21401,6 +22144,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21459,6 +22203,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21506,6 +22251,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21565,6 +22311,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21610,6 +22357,7 @@
         "data"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21657,6 +22405,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -21694,6 +22443,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21743,6 +22493,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21793,6 +22544,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21840,6 +22592,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21890,6 +22643,7 @@
         "marketing"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21942,6 +22696,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -21986,6 +22741,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22030,6 +22786,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -22066,6 +22823,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22108,6 +22866,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
@@ -22142,6 +22901,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22189,6 +22949,7 @@
         "customer service"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22241,6 +23002,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22282,6 +23044,7 @@
       "score": 47,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22325,6 +23088,7 @@
       "score": 47,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22374,6 +23138,7 @@
         "customer service"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22416,6 +23181,7 @@
         "data"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22467,6 +23233,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22510,6 +23277,7 @@
       "score": 43,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22555,6 +23323,7 @@
       "score": 42,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22592,6 +23361,7 @@
       "score": 42,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22633,6 +23403,7 @@
         "ai"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22675,6 +23446,7 @@
         "data"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22716,6 +23488,7 @@
         "ai"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22766,6 +23539,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22807,6 +23581,7 @@
         "ai"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22848,6 +23623,7 @@
         "ai"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22904,6 +23680,7 @@
         "sales"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22945,6 +23722,7 @@
         "saas"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -22985,6 +23763,7 @@
       "score": 39,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -23029,6 +23808,7 @@
       "score": 39,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -23066,6 +23846,7 @@
       "score": 37,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -23078,6 +23859,45 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:wegic",
+      "network": "partnerstack",
+      "name": "Wegic",
+      "slug": "wegic",
+      "description": "",
+      "offer": "",
+      "tags": [
+        "Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/wegic?company=wegic&gref=marketplace",
+      "terms_url": "",
+      "website": "https://try.wegic.ai/gp5cnif98onj",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 0,
+      "source": "https://dash.partnerstack.com/home",
+      "approved": true,
+      "authenticated_relationship": true,
+      "relationship_status": "active",
+      "terms_required": false,
+      "partnership_key": "part_W12bynAQWYGJnA",
+      "score": 36,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": true,
+      "relationship_state": "published",
+      "state": "existing_active",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -23108,6 +23928,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -23153,6 +23974,7 @@
         "productivity"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "ready_for_owner_application",
       "policy": {
         "status": "reviewed",
@@ -23193,6 +24015,7 @@
       "score": 34,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23225,6 +24048,7 @@
       "score": 34,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23254,6 +24078,7 @@
       "score": 33,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23283,6 +24108,7 @@
       "score": 33,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23316,6 +24142,7 @@
         "software"
       ],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23347,6 +24174,7 @@
       "score": 15,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23378,6 +24206,7 @@
       "score": 15,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23409,6 +24238,7 @@
       "score": 15,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23440,6 +24270,7 @@
       "score": 15,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23472,6 +24303,7 @@
       "score": 15,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23503,6 +24335,7 @@
       "score": 15,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23534,6 +24367,7 @@
       "score": 15,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23565,6 +24399,7 @@
       "score": 15,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
@@ -23596,6 +24431,7 @@
       "score": 15,
       "relevance_matches": [],
       "already_active": false,
+      "relationship_state": "pending",
       "state": "not_qualified",
       "policy": {
         "status": "not_reviewed",
