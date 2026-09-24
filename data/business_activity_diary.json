@@ -2,9 +2,41 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-24T02:12:43+02:00",
+  "last_activity_at": "2026-09-24T02:14:22+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:4d2bf0794cfb682cfceb5a025a61080ab2dd2372:news_items_added",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:14:22+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 2 new AI-news items to the live briefing.",
+      "details": [
+        "Meta introduces camera-free AI glasses",
+        "Anthropic says its biology lab has already found something big"
+      ],
+      "source_commit": "4d2bf0794cfb"
+    },
+    {
+      "id": "git:4d2bf0794cfb682cfceb5a025a61080ab2dd2372:M:news.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:14:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "4d2bf0794cfb"
+    },
+    {
+      "id": "git:4d2bf0794cfb682cfceb5a025a61080ab2dd2372:M:index.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:14:22+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "4d2bf0794cfb"
+    },
     {
       "id": "git:7cee828886edcbc82ba58f06e24916702e9a749b:M:ai-tool-database.html",
       "date": "2026-09-24",

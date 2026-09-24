@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-24T02:12:43+02:00
+**Latest recorded activity:** 2026-09-24T02:14:22+02:00
 
 ## Daily productive system
 
@@ -30,6 +30,11 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 
 ### 2026-09-24
 
+- **02:14** — Added 2 new AI-news items to the live briefing.
+  - Meta introduces camera-free AI glasses
+  - Anthropic says its biology lab has already found something big
+- **02:14** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **02:14** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
 - **02:12** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
 - **01:41** — [Updated webpage: AI Tool Observatory: Pricing, Availability and Product Changes | artificial.one](https://artificial.one/ai-tool-observatory.html)
 - **01:40** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
