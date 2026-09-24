@@ -17,6 +17,14 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
         self.assertTrue(rows[0]["approved"])
         self.assertTrue(rows[0]["authenticated_relationship"])
 
+    def test_partnerstack_tos_acceptance_pending_is_terms_required(self):
+        rows = scout.merge_authenticated_partnerstack([], [{
+            "key": "part_terms", "status": "tos-acceptance-pending",
+            "company": {"name": "Terms Pending AI", "slug": "terms-pending-ai"},
+        }])
+        self.assertTrue(rows[0]["terms_required"])
+        self.assertFalse(rows[0]["approved"])
+
     def test_authenticated_partnership_enriches_public_record(self):
         public = [{"network": "partnerstack", "name": "Example AI", "slug": "example", "description": "Rich public description"}]
         rows = scout.merge_authenticated_partnerstack(public, [{

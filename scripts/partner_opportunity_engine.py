@@ -307,8 +307,13 @@ def relationship_terms_required(item: dict[str, Any]) -> bool:
     explicit = _nested_value(item, ("terms_required", "requires_terms_acceptance", "tos_required"))
     if isinstance(explicit, bool):
         return explicit
-    status = clean_text(_nested_value(item, ("terms_status", "tos_status", "access_status")), 80).casefold()
-    return status in {"required", "pending", "not_accepted", "terms_required"}
+    status = clean_text(
+        _nested_value(item, ("terms_status", "tos_status", "access_status", "approved_status", "status")), 80
+    ).casefold().replace("_", "-")
+    return status in {
+        "required", "pending", "not-accepted", "terms-required",
+        "tos-acceptance-pending", "terms-acceptance-pending",
+    }
 
 
 def merge_authenticated_partnerstack(
