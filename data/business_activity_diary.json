@@ -2,9 +2,52 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-24T02:14:22+02:00",
+  "last_activity_at": "2026-09-24T02:57:18+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:3635bec09aa9e2ebc89326f75d4756ba896db3ce:news_items_added",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:57:18+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 3 new AI-news items to the live briefing.",
+      "details": [
+        "Meta made a Tamagotchi-like wearable for its Muse AI agent",
+        "Meta is making a standalone Muse AI gadget",
+        "AI bots \"Timmy,\" \"Ren,\" and \"Jackie\" are flooding social media with slop"
+      ],
+      "source_commit": "3635bec09aa9"
+    },
+    {
+      "id": "git:3635bec09aa9e2ebc89326f75d4756ba896db3ce:M:news.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:57:18+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "3635bec09aa9"
+    },
+    {
+      "id": "git:3635bec09aa9e2ebc89326f75d4756ba896db3ce:M:index.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:57:18+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "3635bec09aa9"
+    },
+    {
+      "id": "git:3635bec09aa9e2ebc89326f75d4756ba896db3ce:M:buyers-guides.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T02:57:18+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Software Buying Guides and Calculators | artificial.one",
+      "url": "https://artificial.one/buyers-guides.html",
+      "path": "buyers-guides.html",
+      "source_commit": "3635bec09aa9"
+    },
     {
       "id": "git:4d2bf0794cfb682cfceb5a025a61080ab2dd2372:news_items_added",
       "date": "2026-09-24",
