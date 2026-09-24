@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-24T14:10:15+02:00
+**Latest recorded activity:** 2026-09-24T14:47:50+02:00
 
 ## Daily productive system
 
@@ -30,6 +30,12 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 
 ### 2026-09-24
 
+- **14:47** — [Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/turn-recordings-into-content.html)
+- **14:47** — [Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/ship-an-ai-powered-product.html)
+- **14:47** — [Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/onboard-a-growing-team.html)
+- **14:47** — [Updated webpage: Launch and measure a converting campaign — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/launch-a-converting-campaign.html)
+- **14:47** — [Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/build-a-business-website.html)
+- **14:47** — [Updated webpage: AppSumo AI Deals Available Today | artificial.one](https://artificial.one/appsumo-ai-tools.html)
 - **14:10** — Added 1 new AI-news items to the live briefing.
   - Gemini 4 is almost ready, says new Google DeepMind chief
 - **14:10** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
