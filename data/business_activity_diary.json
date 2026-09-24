@@ -2,9 +2,57 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-24T17:29:32+02:00",
+  "last_activity_at": "2026-09-24T19:31:38+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:8cf2d101e264d459d82d04403d4543c74142b725:news_items_added",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T19:31:38+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 18 new AI-news items to the live briefing.",
+      "details": [
+        "Black Forest Labs launches FLUX 3 Action, an open robotics AI model",
+        "20 minutes with the CEO of ElevenLabs, now reportedly valued at $22B",
+        "Gemini can now call businesses for you so you don’t have to wait on hold",
+        "Anthropic says Claude discovered a new enzyme system, but CRISPR researchers call it routine genome mining",
+        "AI performance costs are falling faster than those of any previous technology",
+        "Google tests letting Gemini call businesses for you",
+        "It’s sinister that Meta’s Muse AI mascot is so cute",
+        "Shield AI, Waabi, and General Motors on building AI when failure is not an option at TechCrunch Disrupt 2026",
+        "Google is sending an AI satellite into space next week",
+        "U.S. bill proposes permanent ban on artificial superintelligence and creation of new federal AI agency",
+        "Meta’s Muse AI Charms can interact with each other",
+        "Ando wants to take on Slack with a team messaging app that lets humans and agents work together",
+        "TechCrunch Disrupt 2026: Cal AI’s Zach Yadegari on how to create viral growth and capitalize on it",
+        "Accelerating vision-language models with LFM2.5-VL-DSpark",
+        "OpenAI's agents went after government and university sites months before Hugging Face",
+        "Deepmind was built to chase AGI, but its new chief just wants Gemini 4 out the door",
+        "Meta gives its Muse AI agent video avatars, email addresses, and Mac control",
+        "Australia to investigate if OpenAI hack of government health website broke the law"
+      ],
+      "source_commit": "8cf2d101e264"
+    },
+    {
+      "id": "git:8cf2d101e264d459d82d04403d4543c74142b725:M:news.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T19:31:38+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "8cf2d101e264"
+    },
+    {
+      "id": "git:8cf2d101e264d459d82d04403d4543c74142b725:M:index.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T19:31:38+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "8cf2d101e264"
+    },
     {
       "id": "bluesky:at://did:plc:jbekuorna4bmpbwfj6fl7alk/app.bsky.feed.post/3mwbl445qfi2x",
       "date": "2026-09-24",

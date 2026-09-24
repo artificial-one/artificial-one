@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-24T17:29:32+02:00
+**Latest recorded activity:** 2026-09-24T19:31:38+02:00
 
 ## Daily productive system
 
@@ -30,6 +30,27 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 
 ### 2026-09-24
 
+- **19:31** — Added 18 new AI-news items to the live briefing.
+  - Black Forest Labs launches FLUX 3 Action, an open robotics AI model
+  - 20 minutes with the CEO of ElevenLabs, now reportedly valued at $22B
+  - Gemini can now call businesses for you so you don’t have to wait on hold
+  - Anthropic says Claude discovered a new enzyme system, but CRISPR researchers call it routine genome mining
+  - AI performance costs are falling faster than those of any previous technology
+  - Google tests letting Gemini call businesses for you
+  - It’s sinister that Meta’s Muse AI mascot is so cute
+  - Shield AI, Waabi, and General Motors on building AI when failure is not an option at TechCrunch Disrupt 2026
+  - Google is sending an AI satellite into space next week
+  - U.S. bill proposes permanent ban on artificial superintelligence and creation of new federal AI agency
+  - Meta’s Muse AI Charms can interact with each other
+  - Ando wants to take on Slack with a team messaging app that lets humans and agents work together
+  - TechCrunch Disrupt 2026: Cal AI’s Zach Yadegari on how to create viral growth and capitalize on it
+  - Accelerating vision-language models with LFM2.5-VL-DSpark
+  - OpenAI's agents went after government and university sites months before Hugging Face
+  - Deepmind was built to chase AGI, but its new chief just wants Gemini 4 out the door
+  - Meta gives its Muse AI agent video avatars, email addresses, and Mac control
+  - Australia to investigate if OpenAI hack of government health website broke the law
+- **19:31** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **19:31** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
 - **17:29** — [Published Bluesky post: Elephant trunk check: Trainual review and pricing guide](https://bsky.app/profile/artificial-one.bsky.social/post/3mwbl445qfi2x)
 - **15:33** — Created or refreshed 15 social-media creative assets.
   - images/social-cards/adcreative.jpg
