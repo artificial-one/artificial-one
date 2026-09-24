@@ -2,9 +2,46 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-09-24T20:41:19+02:00",
+  "last_activity_at": "2026-09-24T23:46:14+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:1e5d338c49fd8e02bbf0877af27c98e64679d393:news_items_added",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T23:46:14+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 7 new AI-news items to the live briefing.",
+      "details": [
+        "Gemini 3.8 Live with Live Avatar gives Google’s AI a face",
+        "Top AI experts badly underestimated how fast the field is moving, study finds",
+        "PrismML brings its tiny LLMs to Qualcomm-powered smart glasses",
+        "Sakana AI hires Jürgen Schmidhuber, inventor of deep learning, world models, and your next ChatGPT update",
+        "Jensen Huang talks about AI and climate change like a supervillain",
+        "Meta is going to let you build games with AI right on your phone",
+        "Google's Suncatcher project aims to put AI data centers in orbit powered by solar energy"
+      ],
+      "source_commit": "1e5d338c49fd"
+    },
+    {
+      "id": "git:1e5d338c49fd8e02bbf0877af27c98e64679d393:M:news.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T23:46:14+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "1e5d338c49fd"
+    },
+    {
+      "id": "git:1e5d338c49fd8e02bbf0877af27c98e64679d393:M:index.html",
+      "date": "2026-09-24",
+      "occurred_at": "2026-09-24T23:46:14+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Find AI Tools Worth Paying For | Artificial.One",
+      "url": "https://artificial.one/",
+      "path": "index.html",
+      "source_commit": "1e5d338c49fd"
+    },
     {
       "id": "linkedin:urn:li:share:7508958764864016385",
       "date": "2026-09-24",
