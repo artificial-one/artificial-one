@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_on": "2026-09-24",
+      "id": "50ad35c7502b7513",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://krisp.ai",
+      "tool_id": "krisp",
+      "tool_name": "Krisp"
+    },
+    {
+      "detected_on": "2026-09-24",
+      "id": "0e7cfa0b117dd1b3",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://postly.ai",
+      "tool_id": "postly",
+      "tool_name": "Postly"
+    },
+    {
       "detected_on": "2026-09-23",
       "id": "4572ed47f7d75404",
       "kind": "pricing or plan",
@@ -87,14 +105,20 @@
     {
       "category": "AI Tools & Products",
       "published": "",
-      "title": "Meta made a Tamagotchi-like wearable for its Muse AI agent",
-      "url": "https://techcrunch.com/2026/09/23/meta-made-a-tamagotchi-like-wearable-for-its-muse-ai-agent/"
+      "title": "Everything new coming to Meta’s AI agent Muse",
+      "url": "https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse/"
     },
     {
       "category": "AI Tools & Products",
       "published": "",
       "title": "Meta is making a standalone Muse AI gadget",
       "url": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Meta made a Tamagotchi-like wearable for its Muse AI agent",
+      "url": "https://techcrunch.com/2026/09/23/meta-made-a-tamagotchi-like-wearable-for-its-muse-ai-agent/"
     },
     {
       "category": "AI Tools & Products",
@@ -183,12 +207,6 @@
     {
       "category": "Models & LLMs",
       "published": "",
-      "title": "YouTube will let you build your own algorithm with AI",
-      "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
       "title": "Inside Basecamp Research, the AI startup turning evolution into training data",
       "url": "https://the-decoder.com/inside-basecamp-research-the-ai-startup-turning-evolution-into-training-data/"
     },
@@ -213,6 +231,12 @@
     {
       "category": "Models & LLMs",
       "published": "",
+      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
+      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
       "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
       "url": "https://openai.com/index/airbnb-gpt-6-astra"
     },
@@ -221,12 +245,6 @@
       "published": "",
       "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
       "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts",
-      "url": "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/"
     }
   ],
   "recipes": [
@@ -368,7 +386,7 @@
     }
   ],
   "stats": {
-    "changes": 9,
+    "changes": 11,
     "monetized": 284,
     "recipes": 8,
     "reviewed": 29,
