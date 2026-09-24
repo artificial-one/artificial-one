@@ -9,8 +9,9 @@
     "approved_link_pending": 10,
     "existing_active": 25,
     "not_qualified": 14,
-    "policy_review_required": 22,
-    "ready_for_owner_application": 405
+    "policy_review_required": 21,
+    "ready_for_owner_application": 398,
+    "terms_required": 8
   },
   "opportunities": [
     {
@@ -291,7 +292,7 @@
       "approved": false,
       "authenticated_relationship": true,
       "relationship_status": "tos-acceptance-pending",
-      "terms_required": false,
+      "terms_required": true,
       "partnership_key": "part_bYzvz67j4mJ7uA",
       "score": 85,
       "relevance_matches": [
@@ -302,19 +303,11 @@
         "sales"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -682,7 +675,7 @@
       "approved": false,
       "authenticated_relationship": true,
       "relationship_status": "tos-acceptance-pending",
-      "terms_required": false,
+      "terms_required": true,
       "partnership_key": "part_xTClykiM4pAbxp",
       "score": 85,
       "relevance_matches": [
@@ -695,19 +688,11 @@
         "software"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -820,7 +805,7 @@
       "approved": false,
       "authenticated_relationship": true,
       "relationship_status": "tos-acceptance-pending",
-      "terms_required": false,
+      "terms_required": true,
       "partnership_key": "part_gioKssXEkixGCH",
       "score": 85,
       "relevance_matches": [
@@ -833,19 +818,11 @@
         "productivity"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -884,7 +861,7 @@
       "approved": false,
       "authenticated_relationship": true,
       "relationship_status": "tos-acceptance-pending",
-      "terms_required": false,
+      "terms_required": true,
       "partnership_key": "part_lKnDKCOQQg6XFz",
       "score": 85,
       "relevance_matches": [
@@ -897,19 +874,11 @@
         "software"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -1874,7 +1843,7 @@
       "approved": false,
       "authenticated_relationship": true,
       "relationship_status": "tos-acceptance-pending",
-      "terms_required": false,
+      "terms_required": true,
       "partnership_key": "part_KxKePr0DCZxxHb",
       "score": 85,
       "relevance_matches": [
@@ -1886,19 +1855,11 @@
         "software"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -2484,7 +2445,7 @@
       "approved": false,
       "authenticated_relationship": true,
       "relationship_status": "tos-acceptance-pending",
-      "terms_required": false,
+      "terms_required": true,
       "partnership_key": "part_1qafO7PmnrNy3i",
       "score": 85,
       "relevance_matches": [
@@ -2494,19 +2455,11 @@
         "software"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -2608,7 +2561,7 @@
       "approved": false,
       "authenticated_relationship": true,
       "relationship_status": "tos-acceptance-pending",
-      "terms_required": false,
+      "terms_required": true,
       "partnership_key": "part_NbOSLIlPqaKFDP",
       "score": 85,
       "relevance_matches": [
@@ -2620,19 +2573,11 @@
         "sales"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -9495,7 +9440,7 @@
       "approved": false,
       "authenticated_relationship": true,
       "relationship_status": "tos-acceptance-pending",
-      "terms_required": false,
+      "terms_required": true,
       "partnership_key": "part_AiDoRzCAEBgPtA",
       "score": 67,
       "relevance_matches": [
@@ -9503,19 +9448,11 @@
         "software"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -18803,7 +18740,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "Earn 15% on every referral",
+      "offer": "Earn 10% on every referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -19673,10 +19610,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -22088,15 +22033,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": true,
+          "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
       }
     },
     {
