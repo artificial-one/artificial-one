@@ -12,7 +12,7 @@ import os
 from pathlib import Path
 import re
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 try:
     from scripts.growth_search_console import (
@@ -45,6 +45,7 @@ OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 REVENUE_STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 PUBLIC_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
 INSPECTION_API = "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect"
+SEARCH_API = "https://searchconsole.googleapis.com/webmasters/v3"
 MIN_QUERY_IMPRESSIONS = 20
 MIN_EXPERIMENT_IMPRESSIONS = 80
 EXPERIMENT_DAYS = 14
@@ -128,6 +129,113 @@ def aggregate_pages(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
                 "position": metrics["position_total"] / impressions,
             }
     return result
+
+
+def query_site_summary(session: Any, site_url: str, start: date, end: date) -> dict[str, Any]:
+    """Return exact site totals without the anonymized-query undercount."""
+    endpoint = f"{SEARCH_API}/sites/{quote(site_url, safe='')}/searchAnalytics/query"
+    response = session.post(endpoint, json={
+        "startDate": start.isoformat(),
+        "endDate": end.isoformat(),
+        "type": "web",
+        "dataState": "final",
+        "rowLimit": 1,
+    }, timeout=45)
+    if response.status_code >= 400:
+        raise GrowthError(f"Search Console summary query failed with HTTP {response.status_code}")
+    rows = response.json().get("rows", [])
+    row = rows[0] if isinstance(rows, list) and rows and isinstance(rows[0], dict) else {}
+    return {
+        "clicks": int(float(row.get("clicks") or 0)),
+        "impressions": int(float(row.get("impressions") or 0)),
+        "ctr": round(float(row.get("ctr") or 0), 6),
+        "position": round(float(row.get("position") or 0), 2),
+    }
+
+
+def sitemap_status(session: Any, site_url: str, sitemap_url: str) -> dict[str, Any]:
+    """Read Google's latest sitemap processing totals and warnings."""
+    endpoint = (
+        f"{SEARCH_API}/sites/{quote(site_url, safe='')}/sitemaps/"
+        f"{quote(sitemap_url, safe='')}"
+    )
+    response = session.get(endpoint, timeout=30)
+    if response.status_code >= 400:
+        return {"available": False, "error": f"HTTP {response.status_code}"}
+    payload = response.json()
+    contents = payload.get("contents", [])
+    submitted = 0
+    indexed = 0
+    counts_available = False
+    if isinstance(contents, list):
+        for item in contents:
+            if not isinstance(item, dict):
+                continue
+            if "submitted" in item or "indexed" in item:
+                counts_available = True
+            submitted += int(item.get("submitted") or 0)
+            indexed += int(item.get("indexed") or 0)
+    return {
+        "available": True,
+        "counts_available": counts_available,
+        "submitted": submitted if counts_available else None,
+        "indexed": indexed if counts_available else None,
+        "errors": int(payload.get("errors") or 0),
+        "warnings": int(payload.get("warnings") or 0),
+        "pending": bool(payload.get("isPending")),
+        "last_submitted": str(payload.get("lastSubmitted") or ""),
+        "last_downloaded": str(payload.get("lastDownloaded") or ""),
+    }
+
+
+def build_executive_snapshot(
+    rows: list[dict[str, Any]], current: dict[str, Any], previous: dict[str, Any],
+    inspections: list[dict[str, str]], sitemap: dict[str, Any],
+    monetized_paths: set[str], start: date, end: date,
+    previous_snapshot: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Build the private, human-readable Search Console input for the daily brief."""
+    previous_snapshot = previous_snapshot or {}
+    pages = aggregate_pages(rows)
+    money_pages = [
+        (path, values) for path, values in pages.items()
+        if path in monetized_paths or path.startswith("/partner-offers/")
+    ]
+    money_pages.sort(key=lambda item: (-item[1]["clicks"], -item[1]["impressions"], item[0]))
+    status_by_url = {str(item.get("url") or ""): str(item.get("status") or "UNKNOWN") for item in inspections}
+    old_statuses = (previous_snapshot.get("indexing") or {}).get("status_by_url") or {}
+    newly_indexed = [url for url, status in status_by_url.items() if status == "PASS" and old_statuses.get(url) not in {None, "PASS"}]
+    lost_indexing = [url for url, status in status_by_url.items() if status == "ISSUE" and old_statuses.get(url) == "PASS"]
+    issues = [item for item in inspections if item.get("status") != "PASS"]
+    return {
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "period": {"start": start.isoformat(), "end": end.isoformat(), "days": (end - start).days + 1, "data_lag_days": 3},
+        "performance": {"current": current, "previous": previous},
+        "sitemap": sitemap,
+        "indexing": {
+            "inspected": len(inspections),
+            "indexed": sum(item.get("status") == "PASS" for item in inspections),
+            "issues": len(issues),
+            "api_errors": sum(item.get("status") == "API_ERROR" for item in inspections),
+            "newly_indexed": newly_indexed,
+            "lost_indexing": lost_indexing,
+            "issue_details": issues[:10],
+            "status_by_url": status_by_url,
+        },
+        "commercial_search": {
+            "pages_with_impressions": len(money_pages),
+            "top_pages": [
+                {
+                    "path": path,
+                    "clicks": int(values["clicks"]),
+                    "impressions": int(values["impressions"]),
+                    "ctr": round(values["ctr"], 6),
+                    "position": round(values["position"], 1),
+                }
+                for path, values in money_pages[:5]
+            ],
+        },
+    }
 
 
 def load_public_strategy(path: Path) -> dict[str, Any]:
@@ -532,6 +640,7 @@ def main() -> int:
     parser.add_argument("--email-from", default="Artificial.One Growth <onboarding@resend.dev>")
     parser.add_argument("--days", type=int, default=28)
     parser.add_argument("--private-state", type=Path, default=ROOT / ".search-growth" / "private-state.json")
+    parser.add_argument("--executive-snapshot", type=Path, default=ROOT / ".search-growth" / "executive-snapshot.json")
     parser.add_argument("--public-strategy", type=Path, default=PUBLIC_STRATEGY_PATH)
     args = parser.parse_args()
     try:
@@ -540,9 +649,14 @@ def main() -> int:
         site_property = resolve_site_property(session, args.site)
         end = date.today() - timedelta(days=3)
         start = end - timedelta(days=max(1, args.days) - 1)
+        previous_end = start - timedelta(days=1)
+        previous_start = previous_end - timedelta(days=max(1, args.days) - 1)
         rows = query_search_analytics(session, site_property, start, end)
+        current_summary = query_site_summary(session, site_property, start, end)
+        previous_summary = query_site_summary(session, site_property, previous_start, previous_end)
         weights = revenue_weights()
-        opportunities = revenue_weighted_opportunities(rows, affiliate_paths(), weights)
+        monetized_paths = affiliate_paths()
+        opportunities = revenue_weighted_opportunities(rows, monetized_paths, weights)
         public = load_public_strategy(args.public_strategy)
         private = load_json(args.private_state, {"version": 1, "experiments": {}, "last_index_issues": []})
         actions = update_experiments(rows, opportunities, weights, public, private, date.today())
@@ -555,14 +669,16 @@ def main() -> int:
         if current_issues != private.get("last_index_issues", []):
             actions.append(f"Index audit changed: {len(current_issues)} priority URLs currently need attention.")
         private["last_index_issues"] = current_issues
+        previous_snapshot = load_json(args.executive_snapshot, {})
+        executive_snapshot = build_executive_snapshot(
+            rows, current_summary, previous_summary, inspections,
+            sitemap_status(session, site_property, args.sitemap), monetized_paths,
+            start, end, previous_snapshot,
+        )
         public_changed = write_if_changed(args.public_strategy, public)
         write_if_changed(args.private_state, private)
+        write_if_changed(args.executive_snapshot, executive_snapshot)
         submit_sitemap(session, site_property, args.sitemap)
-        resend_key = os.environ.get("RESEND_API_KEY", "").strip()
-        if not resend_key:
-            raise GrowthError("RESEND_API_KEY is not configured")
-        subject, text, html = render_report(opportunities, inspections, actions, start, end)
-        send_email(resend_key, args.email_from, args.email_to, subject, text, html)
         github_output = os.environ.get("GITHUB_OUTPUT", "")
         if github_output:
             with Path(github_output).open("a", encoding="utf-8") as handle:

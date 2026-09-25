@@ -47,6 +47,13 @@ jobs:
           key: content-marketplace-${{ github.run_id }}
           restore-keys: content-marketplace-
 
+      - name: Restore private Google Search Console summary
+        uses: actions/cache/restore@v5
+        with:
+          path: .search-growth/executive-snapshot.json
+          key: search-growth-private-${{ github.run_id }}
+          restore-keys: search-growth-private-
+
       - name: Refresh the business outcomes diary
         run: python scripts/build_business_activity_diary.py
 
@@ -70,6 +77,7 @@ jobs:
           python scripts/daily_executive_report.py
           --snapshot .daily-executive/affiliate-snapshot.json
           --marketplace-status .content-marketplace/status.json
+          --search-snapshot .search-growth/executive-snapshot.json
           --state .daily-executive/state.json
           --email-to hello@artificial.one
           --email-from "Artificial.One Daily Brief <onboarding@resend.dev>"

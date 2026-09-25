@@ -47,6 +47,27 @@ class FakeSession:
         return FakeResponse()
 
 
+class SummaryResponse:
+    status_code = 200
+
+    def __init__(self, payload):
+        self.payload = payload
+
+    def json(self):
+        return self.payload
+
+
+class SummarySession:
+    def post(self, *_args, **_kwargs):
+        return SummaryResponse({"rows": [{"clicks": 12, "impressions": 600, "ctr": 0.02, "position": 8.4}]})
+
+    def get(self, *_args, **_kwargs):
+        return SummaryResponse({
+            "errors": 0, "warnings": 1, "lastSubmitted": "2026-09-25T00:00:00Z",
+            "contents": [{"type": "web", "submitted": "120", "indexed": "87"}],
+        })
+
+
 class PropertyResponse:
     status_code = 200
 
@@ -159,6 +180,36 @@ class SearchRevenueEngineTests(unittest.TestCase):
             public_path = Path(folder) / "public.json"
             self.assertTrue(engine.write_if_changed(public_path, {"version": 1}))
             self.assertFalse(engine.write_if_changed(public_path, {"version": 1}))
+
+    def test_search_summary_and_sitemap_counts_are_management_ready(self):
+        session = SummarySession()
+        summary = engine.query_site_summary(session, "sc-domain:artificial.one", date(2026, 8, 1), date(2026, 8, 28))
+        sitemap = engine.sitemap_status(session, "sc-domain:artificial.one", "https://artificial.one/sitemap.xml")
+        self.assertEqual(summary["clicks"], 12)
+        self.assertEqual(summary["impressions"], 600)
+        self.assertEqual(sitemap["submitted"], 120)
+        self.assertEqual(sitemap["indexed"], 87)
+        self.assertEqual(sitemap["warnings"], 1)
+
+    def test_executive_snapshot_tracks_index_changes_and_money_pages(self):
+        inspections = [
+            {"url": "https://artificial.one/partner-offers/useful.html", "status": "PASS", "detail": "Indexed and crawlable"},
+            {"url": "https://artificial.one/partner-offers/broken.html", "status": "ISSUE", "detail": "Crawled - currently not indexed"},
+        ]
+        previous = {"indexing": {"status_by_url": {
+            "https://artificial.one/partner-offers/useful.html": "ISSUE",
+            "https://artificial.one/partner-offers/broken.html": "PASS",
+        }}}
+        snapshot = engine.build_executive_snapshot(
+            [row()], {"clicks": 4, "impressions": 100, "ctr": .04, "position": 7},
+            {"clicks": 2, "impressions": 80, "ctr": .025, "position": 9}, inspections,
+            {"available": True, "counts_available": True, "submitted": 120, "indexed": 87},
+            {"/partner-offers/useful.html"}, date(2026, 8, 1), date(2026, 8, 28), previous,
+        )
+        self.assertEqual(snapshot["indexing"]["indexed"], 1)
+        self.assertEqual(len(snapshot["indexing"]["newly_indexed"]), 1)
+        self.assertEqual(len(snapshot["indexing"]["lost_indexing"]), 1)
+        self.assertEqual(snapshot["commercial_search"]["pages_with_impressions"], 1)
 
     def test_content_priority_exposes_ids_not_queries_or_metrics(self):
         original = engine.OFFERS_PATH

@@ -58,6 +58,36 @@ class DailyExecutiveReportTests(unittest.TestCase):
         self.assertNotIn("attributed actions", text)
         self.assertNotIn("monetized offers under coverage", text)
         self.assertNotIn("All catalogues stayed current", text)
+        self.assertIn("GOOGLE SEARCH AND INDEXING", text)
+
+    def test_report_explains_google_indexing_with_period_and_issues(self):
+        model = {
+            "date": date(2026, 9, 25),
+            "activity": {"pages_created": 0, "pages_updated": 0, "social_posts": 0, "highlights": []},
+            "published_offers": 2, "visits": 50, "clicks": 4, "signups": 0,
+            "impact_actions": 0, "paying_customers": 0, "partnerstack_transactions": 0,
+            "revenue": "USD 0.00", "commissions": "USD 0.00", "owner_actions": [],
+            "system_work": [], "health": {"status": "healthy", "healthy": 10, "attention": 0, "issues": []},
+            "social": {},
+            "search": {
+                "period": {"start": "2026-08-25", "end": "2026-09-21", "data_lag_days": 3},
+                "performance": {
+                    "current": {"clicks": 12, "impressions": 600, "ctr": .02, "position": 8.4},
+                    "previous": {"clicks": 6, "impressions": 400, "ctr": .015, "position": 10.2},
+                },
+                "sitemap": {"counts_available": True, "submitted": 120, "indexed": 87, "errors": 0, "warnings": 1},
+                "indexing": {"indexed": 38, "inspected": 40, "newly_indexed": ["one"], "lost_indexing": [], "issue_details": [
+                    {"url": "https://artificial.one/partner-offers/broken.html", "detail": "Crawled - currently not indexed"}
+                ]},
+                "commercial_search": {"pages_with_impressions": 9, "top_pages": []},
+            },
+        }
+        _, text, html = render(model)
+        self.assertIn("Sitemap indexed/submitted: 87 / 120", text)
+        self.assertIn("Priority pages indexed: 38/40", text)
+        self.assertIn("2026-08-25 to 2026-09-21", html)
+        self.assertIn("Crawled - currently not indexed", html)
+        self.assertIn("Open Google Search Console", html)
 
     def test_every_owner_decision_is_rendered_without_grouping(self):
         actions = [

@@ -42,6 +42,7 @@ jobs:
         with:
           path: |
             .search-growth/private-state.json
+            .search-growth/executive-snapshot.json
             .indexnow/private-state.json
           key: search-growth-private-${{ github.run_id }}
           restore-keys: |

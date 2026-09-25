@@ -383,6 +383,7 @@ def github_health(token: str, repository: str, now: datetime) -> dict[str, Any]:
 def report_model(
     root: Path, snapshot_path: Path, report_date: date, health: dict[str, Any],
     marketplace_status_path: Path | None = None, report_time: datetime | None = None,
+    search_snapshot_path: Path | None = None,
 ) -> dict[str, Any]:
     diary = load_json(root / "data" / "business_activity_diary.json", {"entries": []})
     reconciliation = load_json(root / "data" / "affiliate_source_reconciliation.json", {})
@@ -391,6 +392,7 @@ def report_model(
     appsumo = load_json(root / "data" / "appsumo_offers.json", {"offers": []})
     snapshot = load_json(snapshot_path, {})
     marketplace = load_json(marketplace_status_path, {}) if marketplace_status_path else {}
+    search = load_json(search_snapshot_path, {}) if search_snapshot_path else {}
     activity = daily_activity(diary, report_date.isoformat())
     partnerstack = snapshot.get("partnerstack", {})
     impact = snapshot.get("impact", {})
@@ -426,6 +428,7 @@ def report_model(
         "owner_actions": actions,
         "system_work": work_queue,
         "social": social,
+        "search": search,
         "blocking_failures": integer(summary.get("blocking_failures")),
         "health": health,
         "content_orders": integer(marketplace.get("orders_total")),
@@ -463,6 +466,108 @@ def metric_card(label: str, value: str, background: str) -> str:
         f"<div style='font-size:12px;color:#667085;text-transform:uppercase;letter-spacing:.6px'>{escape(label)}</div>"
         f"<div style='font-size:24px;font-weight:800;color:#182230;margin-top:8px'>{escape(value)}</div></div></td>"
     )
+
+
+def trend_text(current: float, previous: float, *, lower_is_better: bool = False, percentage_points: bool = False) -> str:
+    delta = current - previous
+    improved = delta < 0 if lower_is_better else delta > 0
+    if percentage_points:
+        amount = f"{abs(delta) * 100:.2f} percentage points"
+    elif previous:
+        amount = f"{abs(delta / previous) * 100:.1f}%"
+    elif current:
+        amount = "new activity"
+    else:
+        return "no change"
+    if delta == 0:
+        return "no change"
+    return f"{amount} {'better' if improved else 'lower' if not lower_is_better else 'worse'} than the previous period"
+
+
+def render_search(search: dict[str, Any]) -> tuple[str, str]:
+    if not search:
+        html = (
+            '<tr><td style="padding:12px 30px"><div style="background:#eaf3ff;border-radius:18px;padding:22px">'
+            '<h2 style="font-size:18px;margin:0 0 8px">Google search and indexing</h2>'
+            '<div style="color:#667085;font-size:13px">The next Search Console collection has not completed yet.</div>'
+            '</div></td></tr>'
+        )
+        return html, "Google Search Console data is awaiting its next collection."
+
+    period = search.get("period") or {}
+    performance = search.get("performance") or {}
+    current = performance.get("current") or {}
+    previous = performance.get("previous") or {}
+    indexing = search.get("indexing") or {}
+    sitemap = search.get("sitemap") or {}
+    commercial = search.get("commercial_search") or {}
+    clicks = integer(current.get("clicks"))
+    impressions = integer(current.get("impressions"))
+    ctr = float(current.get("ctr") or 0)
+    position = float(current.get("position") or 0)
+    indexed = integer(indexing.get("indexed"))
+    inspected = integer(indexing.get("inspected"))
+
+    if sitemap.get("counts_available"):
+        sitemap_value = f"{integer(sitemap.get('indexed'))} / {integer(sitemap.get('submitted'))}"
+        sitemap_note = "pages Google reports indexed / submitted in the sitemap"
+    else:
+        sitemap_value = "Not reported"
+        sitemap_note = "Google did not return a sitewide sitemap index count"
+
+    issue_details = indexing.get("issue_details") or []
+    if issue_details:
+        issue_html = "".join(
+            "<li style='margin:7px 0'>"
+            f"<a href='{escape(str(item.get('url') or ''))}' style='color:#4737a8;text-decoration:none;font-weight:700'>"
+            f"{escape(str(item.get('url') or 'Unknown page'))}</a> — {escape(str(item.get('detail') or item.get('status') or 'needs attention'))}"
+            "</li>" for item in issue_details
+        )
+        issue_block = f"<div style='margin-top:16px'><strong>Pages needing attention</strong><ul style='padding-left:20px;margin:6px 0 0'>{issue_html}</ul></div>"
+        issue_text = "\n".join(f"- {item.get('url')}: {item.get('detail') or item.get('status')}" for item in issue_details)
+    else:
+        issue_block = "<div style='margin-top:16px;color:#315c49'><strong>No inspected priority page currently has an indexing problem.</strong></div>"
+        issue_text = "- No inspected priority page currently has an indexing problem."
+
+    top_pages = commercial.get("top_pages") or []
+    top_html = "".join(
+        "<div style='background:#fff;border:1px solid #dce9f7;border-radius:12px;padding:11px 13px;margin-top:8px'>"
+        f"<a href='https://artificial.one{escape(str(item.get('path') or '/'))}' style='color:#4737a8;text-decoration:none;font-weight:700'>{escape(str(item.get('path') or '/'))}</a>"
+        f"<div style='font-size:12px;color:#667085;margin-top:4px'>{integer(item.get('clicks'))} Google clicks · {integer(item.get('impressions'))} appearances · average position {float(item.get('position') or 0):.1f}</div></div>"
+        for item in top_pages
+    ) or "<div style='font-size:13px;color:#667085;margin-top:8px'>No affiliate page has recorded a Google impression in this reporting period yet.</div>"
+
+    newly = len(indexing.get("newly_indexed") or [])
+    lost = len(indexing.get("lost_indexing") or [])
+    search_console_url = "https://search.google.com/search-console?resource_id=" + quote("https://artificial.one/", safe="")
+    html = f'''<tr><td style="padding:12px 30px"><div style="background:#eaf3ff;border-radius:18px;padding:22px">
+      <h2 style="font-size:18px;margin:0 0 5px">Google search and indexing</h2>
+      <p style="font-size:13px;color:#667085;margin:0 0 14px">Final Google data for {escape(str(period.get('start') or '?'))} to {escape(str(period.get('end') or '?'))}; Search Console normally has a {integer(period.get('data_lag_days'))}-day delay.</p>
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
+        {metric_card('Google clicks', str(clicks), '#f1edff')}
+        {metric_card('Search appearances', str(impressions), '#fff3df')}
+        {metric_card('Sitemap indexed / submitted', sitemap_value, '#e9f8f1')}
+        {metric_card('Priority pages indexed', f'{indexed} / {inspected}', '#f7f5fd')}
+      </tr></table>
+      <div style="font-size:13px;color:#475467;line-height:1.6;margin-top:12px">
+        Clicks: {escape(trend_text(clicks, integer(previous.get('clicks'))))}. Impressions: {escape(trend_text(impressions, integer(previous.get('impressions'))))}.<br>
+        Click-through rate: <strong>{ctr * 100:.2f}%</strong> ({escape(trend_text(ctr, float(previous.get('ctr') or 0), percentage_points=True))}). Average position: <strong>{position:.1f}</strong> ({escape(trend_text(position, float(previous.get('position') or 0), lower_is_better=True))}).<br>
+        <strong>{integer(commercial.get('pages_with_impressions'))}</strong> affiliate page(s) appeared in Google results · <strong>{newly}</strong> newly indexed in the inspected set · <strong>{lost}</strong> lost indexing · sitemap errors <strong>{integer(sitemap.get('errors'))}</strong>, warnings <strong>{integer(sitemap.get('warnings'))}</strong>.<br>
+        <span style="color:#667085">{escape(sitemap_note)}.</span>
+      </div>
+      {issue_block}
+      <div style="margin-top:17px"><strong>Affiliate pages getting the most Google visibility</strong>{top_html}</div>
+      <div style="margin-top:16px"><a href="{search_console_url}" style="display:inline-block;background:#5b57d9;color:white;text-decoration:none;font-weight:700;border-radius:10px;padding:9px 14px">Open Google Search Console</a></div>
+    </div></td></tr>'''
+    text = "\n".join([
+        f"Period: {period.get('start')} to {period.get('end')} ({period.get('data_lag_days', 3)}-day data delay)",
+        f"Google clicks: {clicks}; search appearances: {impressions}; CTR: {ctr * 100:.2f}%; average position: {position:.1f}",
+        f"Sitemap indexed/submitted: {sitemap_value}; sitemap errors: {integer(sitemap.get('errors'))}; warnings: {integer(sitemap.get('warnings'))}",
+        f"Priority pages indexed: {indexed}/{inspected}; newly indexed: {newly}; lost indexing: {lost}",
+        f"Affiliate pages with Google impressions: {integer(commercial.get('pages_with_impressions'))}",
+        issue_text,
+    ])
+    return html, text
 
 
 def readable_social_metrics(values: dict[str, Any] | None) -> str:
@@ -517,6 +622,7 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
     action_count = len(model["owner_actions"])
     summary = management_summary(model)
     social_html, social_text = render_social(model.get("social") or {})
+    search_html, search_text = render_search(model.get("search") or {})
     highlights = model["activity"]["highlights"]
     if highlights:
         highlight_html = "".join(
@@ -594,6 +700,7 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
 <tr><td style="padding:12px 30px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
   <td style="background:#f7f5fd;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 13px">What the system delivered today</h2><ul style="padding-left:20px;margin:0;color:#475467;line-height:1.5">{highlight_html}</ul></td>
 </tr></table></td></tr>
+{search_html}
 {social_html}
 <tr><td style="padding:12px 30px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
   <td style="background:#fff8ea;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 4px">{escape(action_intro)}</h2>
@@ -625,7 +732,7 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         f"PartnerStack confirmed paying customers (since tracking began): {model['paying_customers']}",
         f"PartnerStack recorded transactions (since tracking began): {model.get('partnerstack_transactions', 0)}",
         f"Impact tracked lead or sale events (since tracking began): {model['impact_actions']}", "",
-        "DELIVERED TODAY", highlights_text, "", "SOCIAL MEDIA PUBLISHED IN THE LAST 24 HOURS", social_text, "", "YOUR ACTIONS", action_text, "",
+        "DELIVERED TODAY", highlights_text, "", "GOOGLE SEARCH AND INDEXING", search_text, "", "SOCIAL MEDIA PUBLISHED IN THE LAST 24 HOURS", social_text, "", "YOUR ACTIONS", action_text, "",
         "APPROVED PARTNERSHIPS BEING PUBLISHED", work_text, "",
         "AUTOMATION STATUS", health_title, health_detail,
     ]) + "\n"
@@ -648,6 +755,7 @@ def main() -> int:
     parser.add_argument("--snapshot", type=Path, default=Path(".daily-executive/affiliate-snapshot.json"))
     parser.add_argument("--state", type=Path, default=Path(".daily-executive/state.json"))
     parser.add_argument("--marketplace-status", type=Path, default=Path(".content-marketplace/status.json"))
+    parser.add_argument("--search-snapshot", type=Path, default=Path(".search-growth/executive-snapshot.json"))
     parser.add_argument("--email-to", default="")
     parser.add_argument("--email-from", default="Artificial.One Daily Brief <onboarding@resend.dev>")
     parser.add_argument("--date", default="")
@@ -661,7 +769,7 @@ def main() -> int:
         print(f"Daily executive report already sent for {report_date.isoformat()}.")
         return 0
     health = github_health(os.environ.get("GITHUB_TOKEN", ""), os.environ.get("GITHUB_REPOSITORY", ""), now)
-    model = report_model(ROOT, args.snapshot, report_date, health, args.marketplace_status, now)
+    model = report_model(ROOT, args.snapshot, report_date, health, args.marketplace_status, now, args.search_snapshot)
     subject, text, html = render(model)
     if args.output_html:
         args.output_html.parent.mkdir(parents=True, exist_ok=True)
