@@ -15,12 +15,12 @@
   },
   "summary": {
     "total": 726,
-    "active_link_pending": 14,
-    "pending": 432,
-    "published": 279,
-    "terms_required": 1,
+    "active_link_pending": 10,
+    "inactive": 1,
+    "pending": 431,
+    "published": 284,
     "blocking_failures": 0,
-    "activation_blockers": 15
+    "activation_blockers": 10
   },
   "networks": {
     "awin": {
@@ -37,15 +37,19 @@
     },
     "partnerstack": {
       "total": 422,
-      "active_link_pending": 14,
-      "pending": 385,
-      "published": 22,
-      "terms_required": 1
+      "active_link_pending": 10,
+      "inactive": 1,
+      "pending": 384,
+      "published": 27
     }
   },
   "activation_blockers": [
     {
       "source_id": "partnerstack:amplemarket",
+      "reason": "active_link_pending"
+    },
+    {
+      "source_id": "partnerstack:callrail",
       "reason": "active_link_pending"
     },
     {
@@ -57,12 +61,8 @@
       "reason": "active_link_pending"
     },
     {
-      "source_id": "partnerstack:close",
-      "reason": "active_link_pending"
-    },
-    {
       "source_id": "partnerstack:databox",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:fullenrich",
@@ -70,18 +70,6 @@
     },
     {
       "source_id": "partnerstack:leadpages",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:mindstudio",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:webpros",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:reply",
       "reason": "active_link_pending"
     },
     {
@@ -93,15 +81,7 @@
       "reason": "external_account_required"
     },
     {
-      "source_id": "partnerstack:amplitude",
-      "reason": "active_link_pending"
-    },
-    {
       "source_id": "partnerstack:800",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:breezyhr",
       "reason": "active_link_pending"
     }
   ],

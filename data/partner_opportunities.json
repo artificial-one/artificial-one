@@ -6,12 +6,13 @@
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
     "total": 476,
-    "approved_link_pending": 18,
+    "active_auto_onboarded": 5,
+    "approved_link_pending": 14,
     "existing_active": 25,
     "not_qualified": 14,
-    "policy_review_required": 22,
-    "ready_for_owner_application": 396,
-    "terms_required": 1
+    "policy_review_required": 23,
+    "program_paused": 1,
+    "ready_for_owner_application": 394
   },
   "opportunities": [
     {
@@ -176,7 +177,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 30,
+      "review_days": 29,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -617,9 +618,9 @@
       "revenue_share": true,
       "review_days": 4,
       "source": "https://market.partnerstack.com/",
-      "approved": false,
+      "approved": true,
       "authenticated_relationship": true,
-      "relationship_status": "application-pending",
+      "relationship_status": "active",
       "terms_required": false,
       "partnership_key": "part_g0ns0x1GaRjoZJ",
       "score": 85,
@@ -629,9 +630,9 @@
         "artificial intelligence",
         "marketing"
       ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "already_active": true,
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -898,8 +899,8 @@
         "software"
       ],
       "already_active": true,
-      "relationship_state": "active_link_pending",
-      "state": "approved_link_pending",
+      "relationship_state": "published",
+      "state": "active_auto_onboarded",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -912,7 +913,8 @@
           "disclosure_required": false
         },
         "cookie_days": null
-      }
+      },
+      "tracking_url": "https://refer.close.com/jcz4neaz74qq"
     },
     {
       "id": "partnerstack:closely",
@@ -1057,12 +1059,12 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
-      "approved": false,
+      "approved": true,
       "authenticated_relationship": true,
-      "relationship_status": "tos-acceptance-pending",
-      "terms_required": true,
+      "relationship_status": "active",
+      "terms_required": false,
       "partnership_key": "part_H7szNHZggCbOsQ",
       "score": 85,
       "relevance_matches": [
@@ -1077,13 +1079,21 @@
         "sales",
         "software"
       ],
-      "already_active": false,
-      "relationship_state": "terms_required",
-      "state": "terms_required",
+      "already_active": true,
+      "relationship_state": "active_link_pending",
+      "state": "approved_link_pending",
       "policy": {
-        "status": "not_reviewed",
-        "signals": {},
-        "cookie_days": null
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": 90
       }
     },
     {
@@ -1303,7 +1313,7 @@
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
-      "relationship_status": "application-pending",
+      "relationship_status": "application-denied",
       "terms_required": false,
       "partnership_key": "part_16YO5stpOmzb81",
       "score": 85,
@@ -1562,7 +1572,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1721,7 +1731,9 @@
         "Artificial Intelligence",
         "Digital Advertising",
         "Hot",
+        "Internal Pick",
         "Marketing",
+        "Priority",
         "Sales",
         "System Integrator",
         "Trusted"
@@ -1983,7 +1995,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2173,8 +2185,8 @@
         "development"
       ],
       "already_active": true,
-      "relationship_state": "active_link_pending",
-      "state": "approved_link_pending",
+      "relationship_state": "published",
+      "state": "active_auto_onboarded",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -2187,7 +2199,8 @@
           "disclosure_required": false
         },
         "cookie_days": null
-      }
+      },
+      "tracking_url": "https://get.mindstudio.ai/eobgeb638nnc-8drt"
     },
     {
       "id": "partnerstack:miroaffiliate",
@@ -2472,7 +2485,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 89,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2487,8 +2500,8 @@
         "software"
       ],
       "already_active": true,
-      "relationship_state": "active_link_pending",
-      "state": "approved_link_pending",
+      "relationship_state": "published",
+      "state": "active_auto_onboarded",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -2501,7 +2514,8 @@
           "disclosure_required": false
         },
         "cookie_days": null
-      }
+      },
+      "tracking_url": "https://try.plesk.com/5491i707p1yy-z4f5m7"
     },
     {
       "id": "partnerstack:quartile",
@@ -2613,8 +2627,8 @@
         "sales"
       ],
       "already_active": true,
-      "relationship_state": "active_link_pending",
-      "state": "approved_link_pending",
+      "relationship_state": "published",
+      "state": "active_auto_onboarded",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -2627,7 +2641,8 @@
           "disclosure_required": false
         },
         "cookie_days": null
-      }
+      },
+      "tracking_url": "https://get.reply.io/awaa6y0hrv2p"
     },
     {
       "id": "partnerstack:respondio",
@@ -6799,13 +6814,14 @@
         "marketing"
       ],
       "already_active": true,
-      "relationship_state": "active_link_pending",
-      "state": "approved_link_pending",
+      "relationship_state": "inactive",
+      "state": "program_paused",
       "policy": {
         "status": "not_reviewed",
         "signals": {},
         "cookie_days": null
-      }
+      },
+      "status_note": "PartnerStack states that the program paused on 2026-08-01 and commissions stopped after that date."
     },
     {
       "id": "partnerstack:buyist",
@@ -9359,8 +9375,8 @@
       "network": "partnerstack",
       "name": "SoftSync",
       "slug": "softsyncaiinc",
-      "description": "SoftSync AI is a CRM for small and mid-sized sales teams. It connects to Claude and ChatGPT through the Model Context Protocol, so follow-ups, reminders and data entry run without anyone driving them. Recommend it and you earn 30% of every payment your customers make, for as long as they stay. Not a one-off bounty. Top affiliates move to 35%. Logos, screenshots and ready-to-paste copy are all in Resources. Questions go to Celine at celine@softsync.ai.",
-      "offer": "Lifetime earnings up to 40%. Become a Softsync affiliate!",
+      "description": "Lifetime recurring commission up to 50%. SoftSync AI is the CRM that works inside Claude and ChatGPT, so follow-ups and data entry run on their own. Earn on every payment, for life, no cap: 1 paying customer: 30% 5: 35% 10: 40% 20: 50% Each level applies to all your customers. Your audience gets 30% off plus a 30-day trial. Swipe file and demos in Resources. Daily post ideas: x.com/celinehaverstad Demos: youtube.com/@SoftSyncCRM Questions: marketing@softsync.ai",
+      "offer": "Lifetime earnings up to 50%. Become a Softsync affiliate!",
       "tags": [
         "ERP",
         "Sales"
@@ -9380,6 +9396,7 @@
       "relevance_matches": [
         "ai",
         "data",
+        "marketing",
         "sales"
       ],
       "already_active": false,
@@ -10198,8 +10215,8 @@
         "Affiliates",
         "Collaboration & Productivity",
         "Content Management",
+        "Featured",
         "Hot",
-        "Internal Pick",
         "Marketing",
         "New",
         "Other",
@@ -11417,7 +11434,7 @@
       "name": "Pixel Union Partner Program",
       "slug": "pixelunion",
       "description": "Promote industry leading premium Shopify themes and Shopify store management apps from Pixel Union & Out of the Sandbox today. Trusted by over 100,000 merchants and counting!",
-      "offer": "Earn 15% commission on referred sales across Pixel Union, Out of the Sandbox, Archetype Themes, Clean Canvas, and Theme Updater & Backups.",
+      "offer": "10% for aspirational affiliates",
       "tags": [
         "Affiliates",
         "Commerce",
@@ -12443,7 +12460,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 17,
+      "review_days": 118,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12771,7 +12788,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 12,
+      "review_days": 21,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -14243,7 +14260,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -15769,8 +15786,8 @@
         "software"
       ],
       "already_active": true,
-      "relationship_state": "active_link_pending",
-      "state": "approved_link_pending",
+      "relationship_state": "published",
+      "state": "active_auto_onboarded",
       "policy": {
         "status": "reviewed",
         "signals": {
@@ -15783,7 +15800,8 @@
           "disclosure_required": false
         },
         "cookie_days": null
-      }
+      },
+      "tracking_url": "https://breezyhr.partnerlinks.io/n5sgbrz7ybl4"
     },
     {
       "id": "partnerstack:cognism",
@@ -17198,7 +17216,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 40,
+      "review_days": 39,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -18142,7 +18160,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 22,
+      "review_days": 21,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -19824,14 +19842,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": true,
-          "coupon_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 180
+        "cookie_days": null
       }
     },
     {
@@ -20269,7 +20287,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 10,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -21699,18 +21717,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -22083,15 +22093,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
+          "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {

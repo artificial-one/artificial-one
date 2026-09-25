@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "audited_at": "2026-09-23",
+  "audited_at": "2026-09-25",
   "source": "PartnerStack authenticated partner dashboard",
   "summary": {
-    "active_programs": 32,
+    "active_programs": 37,
     "terms_action_required": 0,
-    "trackable_links_confirmed": 29,
+    "trackable_links_confirmed": 34,
     "external_account_required": 1,
     "no_usable_link": 2
   },
@@ -240,6 +240,46 @@
       "access": "usable",
       "website_status": "published",
       "source": "partner-opportunity-engine:awin"
+    },
+    {
+      "name": "Close",
+      "slug": "close",
+      "category": "Analytics",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "MindStudio",
+      "slug": "mindstudio",
+      "category": "Artificial Intelligence",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "Plesk",
+      "slug": "webpros",
+      "category": "Artificial Intelligence",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "Reply.io",
+      "slug": "reply",
+      "category": "Analytics",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "Breezy HR",
+      "slug": "breezyhr",
+      "category": "HR",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
     }
   ],
   "inactive_program_surfaces": [

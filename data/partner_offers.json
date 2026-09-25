@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-23",
+  "updated_at": "2026-09-25",
   "offers": [
     {
       "id": "volza",
@@ -996,6 +996,199 @@
         "source": "https://developer.awin.com/apidocs/for-publishers",
         "network": "awin",
         "opportunity_id": "awin:121298",
+        "policy_status": "reviewed",
+        "discovered_by": "partner-opportunity-engine"
+      }
+    },
+    {
+      "id": "close",
+      "slug": "close-software",
+      "name": "Close",
+      "status": "published",
+      "category": "Analytics",
+      "summary": "Close is a GTM platform built to help small and medium size businesses grow faster. We combine the power of a CRM with built-in communication, automation, coaching and reporting tools to help customer facing teams quickly acquire, manage, engage, and win more deals, faster.",
+      "best_for": "Teams and professionals evaluating analytics for a defined business workflow.",
+      "offer_label": "Explore Close",
+      "pricing_note": "Pricing, eligibility and plan limits can change; verify current details with Close.",
+      "tracking_url": "https://refer.close.com/jcz4neaz74qq",
+      "cta_label": "Explore Close",
+      "featured": false,
+      "sponsored": true,
+      "approved_at": "2026-09-25",
+      "terms_verified_at": "2026-09-25",
+      "expires_at": null,
+      "why_consider": "Close may fit buyers actively evaluating analytics options.",
+      "watch_out": "Confirm current pricing, regional availability, plan limits and partner terms before purchasing.",
+      "use_cases": [
+        "Evaluate Close for a relevant business workflow",
+        "Compare Close with other analytics options"
+      ],
+      "evidence": [
+        {
+          "label": "Close partner terms",
+          "url": "https://www.close.com/partners/partner-program-agreement"
+        }
+      ],
+      "automation": {
+        "source": "https://market.partnerstack.com/",
+        "network": "partnerstack",
+        "opportunity_id": "partnerstack:close",
+        "policy_status": "reviewed",
+        "discovered_by": "partner-opportunity-engine"
+      }
+    },
+    {
+      "id": "mindstudio",
+      "slug": "mindstudio-software",
+      "name": "MindStudio",
+      "status": "published",
+      "category": "Artificial Intelligence",
+      "summary": "Rapidly build AI agents with MindStudio's flexible and secure no-code platform.",
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "offer_label": "Explore MindStudio",
+      "pricing_note": "Pricing, eligibility and plan limits can change; verify current details with MindStudio.",
+      "tracking_url": "https://get.mindstudio.ai/eobgeb638nnc-8drt",
+      "cta_label": "Explore MindStudio",
+      "featured": false,
+      "sponsored": true,
+      "approved_at": "2026-09-25",
+      "terms_verified_at": "2026-09-25",
+      "expires_at": null,
+      "why_consider": "MindStudio may fit buyers actively evaluating artificial intelligence options.",
+      "watch_out": "Confirm current pricing, regional availability, plan limits and partner terms before purchasing.",
+      "use_cases": [
+        "Evaluate MindStudio for a relevant business workflow",
+        "Compare MindStudio with other artificial intelligence options"
+      ],
+      "evidence": [
+        {
+          "label": "MindStudio product website",
+          "url": "https://www.mindstudio.ai"
+        },
+        {
+          "label": "MindStudio partner terms",
+          "url": "https://www.mindstudio.ai/legal/terms-of-use"
+        }
+      ],
+      "automation": {
+        "source": "https://market.partnerstack.com/",
+        "network": "partnerstack",
+        "opportunity_id": "partnerstack:mindstudio",
+        "policy_status": "reviewed",
+        "discovered_by": "partner-opportunity-engine"
+      }
+    },
+    {
+      "id": "plesk",
+      "slug": "plesk-software",
+      "name": "Plesk",
+      "status": "published",
+      "category": "Artificial Intelligence",
+      "summary": "Plesk is a leading web hosting control panel that helps hosting providers, agencies and developers easily manage websites, WordPress, email, DNS and databases from one dashboard. It runs on most clouds and servers, automates updates, backups and security, and offers 100+ extensions so users can sell, bundle and scale hosting services faster with less technical overhead.",
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "offer_label": "Explore Plesk",
+      "pricing_note": "Pricing, eligibility and plan limits can change; verify current details with Plesk.",
+      "tracking_url": "https://try.plesk.com/5491i707p1yy-z4f5m7",
+      "cta_label": "Explore Plesk",
+      "featured": false,
+      "sponsored": true,
+      "approved_at": "2026-09-25",
+      "terms_verified_at": "2026-09-25",
+      "expires_at": null,
+      "why_consider": "Plesk may fit buyers actively evaluating artificial intelligence options.",
+      "watch_out": "Confirm current pricing, regional availability, plan limits and partner terms before purchasing.",
+      "use_cases": [
+        "Evaluate Plesk for a relevant business workflow",
+        "Compare Plesk with other artificial intelligence options"
+      ],
+      "evidence": [
+        {
+          "label": "Plesk product website",
+          "url": "https://www.plesk.com/"
+        },
+        {
+          "label": "Plesk partner terms",
+          "url": "https://www.plesk.com/legal/"
+        }
+      ],
+      "automation": {
+        "source": "https://market.partnerstack.com/",
+        "network": "partnerstack",
+        "opportunity_id": "partnerstack:webpros",
+        "policy_status": "reviewed",
+        "discovered_by": "partner-opportunity-engine"
+      }
+    },
+    {
+      "id": "reply-io",
+      "slug": "reply-io-software",
+      "name": "Reply.io",
+      "status": "published",
+      "category": "Analytics",
+      "summary": "Reply is an AI Sales Engagement platform, combining lead generation, email warm-up, email validation, data scraping, multichannel outreach and much more. It's an an one-stop shop designed to automate your personalized outreach at scale.",
+      "best_for": "Teams and professionals evaluating analytics for a defined business workflow.",
+      "offer_label": "Explore Reply.io",
+      "pricing_note": "Pricing, eligibility and plan limits can change; verify current details with Reply.io.",
+      "tracking_url": "https://get.reply.io/awaa6y0hrv2p",
+      "cta_label": "Explore Reply.io",
+      "featured": false,
+      "sponsored": true,
+      "approved_at": "2026-09-25",
+      "terms_verified_at": "2026-09-25",
+      "expires_at": null,
+      "why_consider": "Reply.io may fit buyers actively evaluating analytics options.",
+      "watch_out": "Confirm current pricing, regional availability, plan limits and partner terms before purchasing.",
+      "use_cases": [
+        "Evaluate Reply.io for a relevant business workflow",
+        "Compare Reply.io with other analytics options"
+      ],
+      "evidence": [
+        {
+          "label": "Reply.io partner terms",
+          "url": "https://reply.io/terms-of-service/"
+        }
+      ],
+      "automation": {
+        "source": "https://market.partnerstack.com/",
+        "network": "partnerstack",
+        "opportunity_id": "partnerstack:reply",
+        "policy_status": "reviewed",
+        "discovered_by": "partner-opportunity-engine"
+      }
+    },
+    {
+      "id": "breezy-hr",
+      "slug": "breezy-hr-software",
+      "name": "Breezy HR",
+      "status": "published",
+      "category": "HR",
+      "summary": "Modernize your recruiting process with Breezy! End-to-end recruiting software to attract & hire great employees with less effort.",
+      "best_for": "Teams and professionals evaluating hr for a defined business workflow.",
+      "offer_label": "Explore Breezy HR",
+      "pricing_note": "Pricing, eligibility and plan limits can change; verify current details with Breezy HR.",
+      "tracking_url": "https://breezyhr.partnerlinks.io/n5sgbrz7ybl4",
+      "cta_label": "Explore Breezy HR",
+      "featured": false,
+      "sponsored": true,
+      "approved_at": "2026-09-25",
+      "terms_verified_at": "2026-09-25",
+      "expires_at": null,
+      "why_consider": "Breezy HR may fit buyers actively evaluating hr options.",
+      "watch_out": "Confirm current pricing, regional availability, plan limits and partner terms before purchasing.",
+      "use_cases": [
+        "Evaluate Breezy HR for a relevant business workflow",
+        "Compare Breezy HR with other hr options"
+      ],
+      "evidence": [
+        {
+          "label": "Breezy HR partner terms",
+          "url": "https://breezy.hr/terms"
+        }
+      ],
+      "automation": {
+        "source": "https://market.partnerstack.com/",
+        "network": "partnerstack",
+        "opportunity_id": "partnerstack:breezyhr",
         "policy_status": "reviewed",
         "discovered_by": "partner-opportunity-engine"
       }
