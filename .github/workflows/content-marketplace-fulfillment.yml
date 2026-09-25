@@ -1,0 +1,77 @@
+name: Fulfil sponsored-content orders
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Fast enough for commercial orders without producing deployments when nothing changes.
+    - cron: "17 */2 * * *"
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/content-marketplace-fulfillment.yml
+      - scripts/partnerstack_content_marketplace.py
+      - data/sponsorship_inventory.json
+      - tests/test_partnerstack_content_marketplace.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: artificial-one-site-publisher
+  cancel-in-progress: false
+
+jobs:
+  fulfil:
+    if: ${{ github.event_name != 'push' || github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Restore private order and submission state
+        uses: actions/cache/restore@v5
+        with:
+          path: .content-marketplace
+          key: content-marketplace-${{ github.run_id }}
+          restore-keys: content-marketplace-
+
+      - name: Build accepted order deliverables and submit previously deployed pages
+        env:
+          PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
+        run: >-
+          python scripts/partnerstack_content_marketplace.py
+          --state .content-marketplace/state.json
+          --status .content-marketplace/status.json
+          --submit
+
+      - name: Rebuild the sponsored offers surface
+        run: python scripts/build_partner_offers.py
+
+      - name: Verify the commercial fulfilment contract
+        run: |
+          python -m unittest tests.test_partnerstack_content_marketplace -v
+          python -m unittest tests.test_daily_executive_report -v
+          python scripts/build_partner_offers.py --check
+
+      - name: Publish new or changed deliverables
+        shell: bash
+        run: |
+          git add -- data/sponsored_campaigns.json sponsored.html sponsored sitemap.xml partner-offers.html ai-tool-finder.html index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Fulfil sponsored-content orders"
+          git push
+
+      - name: Save private order and submission state
+        if: always()
+        uses: actions/cache/save@v5
+        with:
+          path: .content-marketplace
+          key: content-marketplace-${{ github.run_id }}

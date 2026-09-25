@@ -28,6 +28,7 @@ STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 NEWS_PATH = ROOT / "data" / "ai_news.json"
 OFFER_ALERTS_PATH = ROOT / "data" / "offer_change_alerts.json"
 APPSUMO_PATH = ROOT / "data" / "appsumo_offers.json"
+SPONSORED_PATH = ROOT / "data" / "sponsored_campaigns.json"
 FEED_PATH = ROOT / "feed.xml"
 QUEUE_PATH = ROOT / "data" / "distribution_queue.json"
 RECEIPTS_PATH = ROOT / "data" / "distribution_receipts.json"
@@ -214,6 +215,32 @@ def queue(as_of: date | None = None) -> list[dict[str, Any]]:
     as_of = as_of or datetime.now(timezone.utc).date()
     offers = published_offers()
     result = []
+    for campaign in load(SPONSORED_PATH).get("campaigns", []):
+        dates = [str(value) for value in campaign.get("social_publish_dates", [])]
+        if as_of.isoformat() not in dates:
+            continue
+        target = str(campaign.get("target_url") or campaign.get("page_url") or "")
+        result.append({
+            "id": f"sponsored-{campaign['order_key']}-{as_of.isoformat()}",
+            "kind": "sponsored-campaign",
+            "daily": "true",
+            "title": f"Sponsored: {campaign['brand']}",
+            "description": str(campaign.get("brief") or "")[:240],
+            "page_path": f"sponsored/{campaign['slug']}.html",
+            "image": "https://artificial.one/images/social-cards/daily-editorial.jpg",
+            "image_alt": f"Sponsored partner feature for {campaign['brand']} on Artificial.One",
+            "url": target,
+            "text": (
+                f"Sponsored partner feature · {campaign['brand']}\n\n"
+                f"{str(campaign.get('brief') or '')[:170]}\n\n"
+                "Paid placement; independent rankings are unchanged. Learn more ↓\n#Sponsored #AITools"
+            )[:295],
+            "linkedin_copy": (
+                f"Sponsored partner feature: {campaign['brand']}\n\n"
+                f"{str(campaign.get('brief') or '')[:500]}\n\n"
+                "This is a paid placement. Artificial.One keeps its independent rankings separate."
+            ),
+        })
     if offers:
         result.append(daily_editorial(as_of, offers))
     for index, (resource_id, title, path, copy) in enumerate(RESOURCES):

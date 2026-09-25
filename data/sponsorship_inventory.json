@@ -1,29 +1,58 @@
 {
   "version": 1,
-  "updated_at": "2026-09-15",
+  "updated_at": "2026-09-25",
   "currency": "usd",
   "checkout_enabled": false,
   "packages": [
     {
-      "id": "newsletter-spotlight",
-      "name": "Newsletter spotlight",
+      "id": "sponsored-evaluation",
+      "name": "Sponsored AI Tool Evaluation & Placement",
+      "partnerstack_type": "Product comparison",
+      "price_cents": 12900,
+      "timeline_business_days": "6–10",
+      "description": "A disclosed evaluation page, relevant category or comparison placement, one tracked link and one social mention.",
+      "fulfillment": "The sponsor supplies factual product information. Artificial.One preserves editorial independence and does not promise a positive verdict.",
+      "deliverables": ["sponsored_page", "category_placement", "tracked_link", "social_post"]
+    },
+    {
+      "id": "sponsored-launch-brief",
+      "name": "Sponsored Launch Brief",
+      "partnerstack_type": "Blog post",
+      "price_cents": 19900,
+      "timeline_business_days": "5–8",
+      "description": "A clearly labelled launch brief with a tracked product link and distribution through Artificial.One discovery surfaces.",
+      "fulfillment": "One factual sponsor brief based on supplied and independently checkable information.",
+      "deliverables": ["sponsored_page", "tracked_link", "social_post"]
+    },
+    {
+      "id": "category-spotlight-30",
+      "name": "30-Day Category Spotlight",
+      "partnerstack_type": "On-site ad spaces",
       "price_cents": 14900,
-      "description": "One clearly labelled sponsor block in a weekly AI tools briefing.",
-      "fulfillment": "One edition; final copy remains subject to disclosure and relevance checks."
+      "timeline_business_days": "3–5",
+      "description": "A clearly labelled sponsor spotlight on the commercial offers hub for 30 days.",
+      "fulfillment": "Placement is time-limited, visibly sponsored and never changes organic rankings.",
+      "deliverables": ["sponsored_page", "category_placement", "tracked_link"]
     },
     {
-      "id": "category-sponsor",
-      "name": "Category sponsor",
-      "price_cents": 24900,
-      "description": "A clearly labelled sponsor placement on one relevant category or decision-tool page.",
-      "fulfillment": "Thirty days; placement does not influence editorial rankings."
+      "id": "visual-social-launch",
+      "name": "Visual Social Launch",
+      "partnerstack_type": "Social media",
+      "price_cents": 7900,
+      "timeline_business_days": "3–5",
+      "description": "One clearly labelled visual launch post across the connected Artificial.One social distribution channels.",
+      "fulfillment": "Copy is grounded in sponsor-supplied facts and identifies the commercial relationship.",
+      "deliverables": ["sponsored_page", "tracked_link", "social_post"]
     },
     {
-      "id": "launch-brief",
-      "name": "Sponsored launch brief",
+      "id": "ai-tool-launch-bundle",
+      "name": "AI Tool Launch Bundle",
+      "partnerstack_type": "Other",
       "price_cents": 39900,
-      "description": "A disclosed product-launch brief distributed through the site, feed and newsletter.",
-      "fulfillment": "One factual brief; claims require source evidence and publication is not guaranteed."
+      "timeline_business_days": "7–12",
+      "description": "A sponsored launch page, 30-day offers-hub spotlight, tracked link and two social placements.",
+      "fulfillment": "The full launch package remains clearly disclosed and editorial rankings stay independent.",
+      "deliverables": ["sponsored_page", "category_placement", "tracked_link", "social_post", "social_followup"]
     }
   ]
 }

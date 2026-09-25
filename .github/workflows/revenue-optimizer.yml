@@ -38,6 +38,10 @@ on:
       - scripts/paid_acquisition.py
       - data/paid_acquisition_policy.json
       - data/sponsorship_inventory.json
+      - data/sponsored_campaigns.json
+      - sponsored.html
+      - sponsored/**
+      - scripts/partnerstack_content_marketplace.py
       - scripts/build_decision_tools.py
       - scripts/build_sponsorship.py
       - scripts/indexing_recovery.py

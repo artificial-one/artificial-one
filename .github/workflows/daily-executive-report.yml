@@ -40,6 +40,13 @@ jobs:
           key: daily-executive-${{ github.run_id }}
           restore-keys: daily-executive-
 
+      - name: Restore private Content Marketplace status
+        uses: actions/cache/restore@v5
+        with:
+          path: .content-marketplace
+          key: content-marketplace-${{ github.run_id }}
+          restore-keys: content-marketplace-
+
       - name: Refresh the business outcomes diary
         run: python scripts/build_business_activity_diary.py
 
@@ -60,6 +67,7 @@ jobs:
         run: >-
           python scripts/daily_executive_report.py
           --snapshot .daily-executive/affiliate-snapshot.json
+          --marketplace-status .content-marketplace/status.json
           --state .daily-executive/state.json
           --email-to hello@artificial.one
           --email-from "Artificial.One Daily Brief <onboarding@resend.dev>"

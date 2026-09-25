@@ -3,7 +3,7 @@ import unittest
 from datetime import date
 from pathlib import Path
 
-from scripts.daily_executive_report import daily_activity, owner_actions, render
+from scripts.daily_executive_report import daily_activity, live_affiliate_destinations, owner_actions, render, system_work
 
 
 class DailyExecutiveReportTests(unittest.TestCase):
@@ -47,6 +47,52 @@ class DailyExecutiveReportTests(unittest.TestCase):
         self.assertIn("senior-management", html)
         self.assertNotIn("workflow run", text.casefold())
         self.assertNotIn("cache", text.casefold())
+        self.assertIn("last 28 days", text)
+        self.assertIn("sign-ups or purchase events", text)
+        self.assertNotIn("attributed actions", text)
+        self.assertNotIn("monetized offers under coverage", text)
+        self.assertNotIn("All catalogues stayed current", text)
+
+    def test_every_owner_decision_is_rendered_without_grouping(self):
+        actions = [
+            {"title": f"Decision {index}", "detail": "Accept terms", "url": f"https://example.com/{index}"}
+            for index in range(9)
+        ]
+        model = {
+            "date": date(2026, 9, 25),
+            "activity": {"pages_created": 0, "pages_updated": 0, "social_posts": 0, "highlights": []},
+            "published_offers": 2, "visits": 50, "clicks": 4, "signups": 1,
+            "impact_actions": 0, "paying_customers": 0, "revenue": "USD 0.00",
+            "commissions": "USD 0.00", "owner_actions": actions, "system_work": [],
+            "health": {"status": "healthy", "healthy": 10, "attention": 0, "issues": []},
+        }
+        _, text, html = render(model)
+        self.assertIn("Decision 8", html)
+        self.assertIn("Decision 8", text)
+        self.assertNotIn("similar term decisions", html)
+        self.assertNotIn("You will never be asked", html)
+
+    def test_live_destination_count_is_unique_and_ai_relevant(self):
+        partners = {"offers": [
+            {"status": "published", "tracking_url": "https://example.com/a"},
+            {"status": "published", "tracking_url": "https://example.com/a"},
+        ]}
+        appsumo = {"offers": [
+            {"availability": "active", "ai_relevant": True, "editorial_url": "guide.html", "tracking_url": "https://example.com/b"},
+            {"availability": "active", "ai_relevant": False, "editorial_url": "other.html", "tracking_url": "https://example.com/c"},
+        ]}
+        self.assertEqual(live_affiliate_destinations(partners, appsumo), 2)
+
+    def test_machine_work_names_every_pending_approved_program(self):
+        reconciliation = {"activation_blockers": [
+            {"source_id": "partnerstack:one", "reason": "active_link_pending"},
+            {"source_id": "partnerstack:two", "reason": "active_link_pending"},
+        ]}
+        opportunities = {"opportunities": [
+            {"id": "partnerstack:one", "name": "One"},
+            {"id": "partnerstack:two", "name": "Two"},
+        ]}
+        self.assertEqual([item["title"] for item in system_work(reconciliation, opportunities)], ["One", "Two"])
 
 
 if __name__ == "__main__":

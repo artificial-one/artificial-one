@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REGISTRY = ROOT / "data" / "partner_offers.json"
 STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 SEARCH_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
+SPONSORED_CAMPAIGNS_PATH = ROOT / "data" / "sponsored_campaigns.json"
 HUB_PATH = ROOT / "partner-offers.html"
 FINDER_PATH = ROOT / "ai-tool-finder.html"
 HOME_PATH = ROOT / "index.html"
@@ -365,6 +366,36 @@ def offer_card(offer: dict[str, Any], placement: str = "offer-hub") -> str:
     </article>'''
 
 
+def sponsored_spotlight() -> str:
+    """Render only paid placements that are currently within their booked window."""
+    try:
+        payload = json.loads(SPONSORED_CAMPAIGNS_PATH.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return ""
+    today = date.today().isoformat()
+    campaigns = [
+        item for item in payload.get("campaigns", [])
+        if isinstance(item, dict)
+        and "category_placement" in (item.get("deliverables") or [])
+        and str(item.get("spotlight_until") or "") >= today
+    ]
+    if not campaigns:
+        return ""
+    cards = "".join(
+        f'''<a class="tool-card sponsored-card" href="sponsored/{esc(item['slug'])}.html">
+          <p class="eyebrow">Sponsored spotlight</p><h2>{esc(item['brand'])}</h2>
+          <p class="summary">{esc(str(item.get('brief') or '')[:240])}</p>
+          <span class="link-subtle">Open the disclosed sponsor feature →</span>
+        </a>'''
+        for item in campaigns[:3]
+    )
+    return f'''<section class="surface content-card sponsored-spotlight"><div class="section-head"><div>
+      <p class="eyebrow">Paid placement</p><h2>Sponsored partner spotlight</h2>
+      <p>Clearly labelled commercial placements. Payment never changes independent rankings.</p>
+    </div><a class="link-subtle" href="sponsored.html">All sponsored features →</a></div>
+    <div class="card-grid">{cards}</div></section>'''
+
+
 def render_hub(offers: list[dict[str, Any]]) -> str:
     if offers:
         cards = "\n".join(offer_card(offer) for offer in offers)
@@ -383,6 +414,7 @@ def render_hub(offers: list[dict[str, Any]]) -> str:
       <div class="surface content-card"><strong>How we earn:</strong> marked links may pay artificial.one a commission. You pay no extra. Payment does not buy a positive verdict or guaranteed placement.</div>
     </div></section>
     <section class="container section-tight">
+      {sponsored_spotlight()}
       {listing}
     </section>{catalog_script(offers)}'''
     return shell(

@@ -87,7 +87,10 @@ def opportunity_lookup(payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
     }
 
 
-def owner_actions(reconciliation: dict[str, Any], opportunities: dict[str, Any]) -> list[dict[str, str]]:
+def owner_actions(
+    reconciliation: dict[str, Any], opportunities: dict[str, Any],
+    marketplace: dict[str, Any] | None = None,
+) -> list[dict[str, str]]:
     lookup = opportunity_lookup(opportunities)
     actions: list[dict[str, str]] = []
     labels = {
@@ -107,13 +110,53 @@ def owner_actions(reconciliation: dict[str, Any], opportunities: dict[str, Any])
             "detail": "This requires your acceptance because it creates a legal or account commitment.",
             "url": url,
         })
+    for action in (marketplace or {}).get("owner_actions", []):
+        if not isinstance(action, dict):
+            continue
+        actions.append({
+            "title": str(action.get("title") or "Review a sponsored-content request"),
+            "detail": str(action.get("detail") or "Accepting creates a binding delivery commitment."),
+            "url": str(action.get("url") or "https://dash.partnerstack.com/content-marketplace/requests"),
+        })
     actions.sort(key=lambda action: action["title"].casefold())
     return actions
 
 
+def system_work(reconciliation: dict[str, Any], opportunities: dict[str, Any]) -> list[dict[str, str]]:
+    """Explain every approved relationship the automation has not published yet."""
+    lookup = opportunity_lookup(opportunities)
+    work: list[dict[str, str]] = []
+    for blocker in reconciliation.get("activation_blockers", []):
+        if str(blocker.get("reason") or "") != "active_link_pending":
+            continue
+        source_id = str(blocker.get("source_id") or "")
+        item = lookup.get(source_id, {})
+        name = str(item.get("name") or source_id.partition(":")[2].replace("-", " ").title())
+        work.append({
+            "title": name,
+            "detail": "Approved relationship detected. The system is obtaining or verifying its affiliate link; after that it will create and publish the product page.",
+        })
+    return sorted(work, key=lambda item: item["title"].casefold())
+
+
+def live_affiliate_destinations(partner_offers: dict[str, Any], appsumo: dict[str, Any]) -> int:
+    """Count unique, public, AI-relevant destinations—not pages or database rows."""
+    urls: set[str] = set()
+    for item in partner_offers.get("offers", []):
+        if item.get("status") == "published" and str(item.get("tracking_url") or "").startswith("https://"):
+            urls.add(str(item["tracking_url"]))
+    for item in appsumo.get("offers", []):
+        if (
+            item.get("availability") != "expired" and item.get("ai_relevant")
+            and item.get("editorial_url") and str(item.get("tracking_url") or "").startswith("https://")
+        ):
+            urls.add(str(item["tracking_url"]))
+    return len(urls)
+
+
 def github_health(token: str, repository: str, now: datetime) -> dict[str, Any]:
     if not token or not repository:
-        return {"status": "unknown", "healthy": 0, "attention": 0}
+        return {"status": "unknown", "healthy": 0, "attention": 0, "issues": []}
     since = (now.astimezone(timezone.utc) - timedelta(hours=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
     url = f"https://api.github.com/repos/{repository}/actions/runs?per_page=100&created=%3E%3D{quote(since)}"
     request = Request(url, headers={
@@ -126,7 +169,7 @@ def github_health(token: str, repository: str, now: datetime) -> dict[str, Any]:
         with urlopen(request, timeout=30) as response:
             payload = json.load(response)
     except Exception:
-        return {"status": "unknown", "healthy": 0, "attention": 0}
+        return {"status": "unknown", "healthy": 0, "attention": 0, "issues": []}
     latest: dict[str, dict[str, Any]] = {}
     for run in payload.get("workflow_runs", []):
         name = str(run.get("name") or run.get("workflow_id") or "")
@@ -140,16 +183,30 @@ def github_health(token: str, repository: str, now: datetime) -> dict[str, Any]:
     pending = sum(str(run.get("status")) != "completed" for run in latest.values())
     healthy = len(latest) - attention - pending
     status = "healthy" if attention == 0 else "recovering"
-    return {"status": status, "healthy": healthy, "attention": attention, "pending": pending}
+    issues = [
+        {
+            "name": name,
+            "url": str(run.get("html_url") or ""),
+            "result": str(run.get("conclusion") or "needs another attempt").replace("_", " "),
+        }
+        for name, run in sorted(latest.items())
+        if str(run.get("status")) == "completed"
+        and str(run.get("conclusion")) not in {"success", "skipped", "neutral"}
+    ]
+    return {"status": status, "healthy": healthy, "attention": attention, "pending": pending, "issues": issues}
 
 
-def report_model(root: Path, snapshot_path: Path, report_date: date, health: dict[str, Any]) -> dict[str, Any]:
+def report_model(
+    root: Path, snapshot_path: Path, report_date: date, health: dict[str, Any],
+    marketplace_status_path: Path | None = None,
+) -> dict[str, Any]:
     diary = load_json(root / "data" / "business_activity_diary.json", {"entries": []})
     reconciliation = load_json(root / "data" / "affiliate_source_reconciliation.json", {})
     opportunities = load_json(root / "data" / "partner_opportunities.json", {})
     partner_offers = load_json(root / "data" / "partner_offers.json", {"offers": []})
     appsumo = load_json(root / "data" / "appsumo_offers.json", {"offers": []})
     snapshot = load_json(snapshot_path, {})
+    marketplace = load_json(marketplace_status_path, {}) if marketplace_status_path else {}
     activity = daily_activity(diary, report_date.isoformat())
     partnerstack = snapshot.get("partnerstack", {})
     impact = snapshot.get("impact", {})
@@ -161,11 +218,9 @@ def report_model(root: Path, snapshot_path: Path, report_date: date, health: dic
     impact_revenue = money_map(impact.get("actions", {}).get("revenue", {}))
     impact_commission = money_map(impact.get("actions", {}).get("commissions", {}))
     summary = reconciliation.get("summary", {})
-    published = integer(summary.get("published")) or len(partner_offers.get("offers", [])) + sum(
-        item.get("availability") != "expired" for item in appsumo.get("offers", [])
-    )
-    actions = owner_actions(reconciliation, opportunities)
-    system_queue = integer(summary.get("active_link_pending"))
+    published = live_affiliate_destinations(partner_offers, appsumo)
+    actions = owner_actions(reconciliation, opportunities, marketplace)
+    work_queue = system_work(reconciliation, opportunities)
     revenue_text = f"USD {ps_revenue:.2f} + {impact_revenue}" if impact_revenue != "USD 0.00" else f"USD {ps_revenue:.2f}"
     commission_text = f"USD {ps_commission:.2f} + {impact_commission}" if impact_commission != "USD 0.00" else f"USD {ps_commission:.2f}"
     return {
@@ -173,16 +228,21 @@ def report_model(root: Path, snapshot_path: Path, report_date: date, health: dic
         "activity": activity,
         "published_offers": published,
         "visits": integer(visits.get("total")),
+        "visit_window_days": integer(visits.get("window_days")) or 28,
         "clicks": integer(clicks.get("total")),
+        "click_window_days": integer(clicks.get("window_days")) or 28,
         "signups": integer(partnerstack.get("customers", {}).get("count")),
         "paying_customers": integer(partnerstack.get("customers", {}).get("paid_count")),
         "impact_actions": integer(impact.get("actions", {}).get("count")),
         "revenue": revenue_text,
         "commissions": commission_text,
         "owner_actions": actions,
-        "system_queue": system_queue,
+        "system_work": work_queue,
         "blocking_failures": integer(summary.get("blocking_failures")),
         "health": health,
+        "content_orders": integer(marketplace.get("orders_total")),
+        "content_fulfilling": integer(marketplace.get("fulfilling")),
+        "content_completed": integer(marketplace.get("completed")),
     }
 
 
@@ -195,11 +255,15 @@ def management_summary(model: dict[str, Any]) -> str:
         pieces.append(f"improved {activity['pages_updated']} existing page{'s' if activity['pages_updated'] != 1 else ''}")
     if activity["social_posts"]:
         pieces.append(f"published {activity['social_posts']} social post{'s' if activity['social_posts'] != 1 else ''}")
-    completed = ", ".join(pieces) if pieces else "kept the commercial catalogue and monitoring current"
+    completed = ", ".join(pieces) if pieces else "made no new public website or social-media publication"
+    conversions = model["signups"] + model["impact_actions"]
     return (
         f"Today the automated system {completed}. "
-        f"The site now has {model['published_offers']} monetized offers under coverage. "
-        f"It recorded {model['clicks']} affiliate clicks and {model['signups'] + model['impact_actions']} attributed actions in the current reporting window."
+        f"The website currently links to {model['published_offers']} unique, live AI-product affiliate destinations. "
+        f"During the last {model.get('click_window_days', 28)} days, visitors made {model['clicks']} outbound affiliate clicks. "
+        f"Partners reported {conversions} tracked sign-up or purchase event{'s' if conversions != 1 else ''}; "
+        f"{model['paying_customers']} {'are' if model['paying_customers'] != 1 else 'is'} confirmed as paying customers. "
+        f"Sponsored-content orders: {model.get('content_fulfilling', 0)} in fulfilment and {model.get('content_completed', 0)} completed."
     )
 
 
@@ -227,11 +291,11 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         )
         highlights_text = "\n".join(f"- {item['text']}" for item in highlights)
     else:
-        highlight_html = "<li>All catalogues stayed current; no public asset needed a material change today.</li>"
-        highlights_text = "- All catalogues stayed current; no public asset needed a material change today."
+        highlight_html = "<li>No new public webpage or social-media post was published today.</li>"
+        highlights_text = "- No new public webpage or social-media post was published today."
 
     if action_count:
-        shown = model["owner_actions"][:5]
+        shown = model["owner_actions"]
         action_html = "".join(
             "<tr><td style='padding:12px 0;border-bottom:1px solid #f1d7b7'>"
             f"<div style='font-weight:800;color:#7a3f00'>{escape(action['title'])}</div>"
@@ -240,8 +304,6 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
             "font-weight:700;border-radius:10px;padding:9px 14px'>Open the exact program</a></td></tr>"
             for action in shown
         )
-        if action_count > len(shown):
-            action_html += f"<tr><td style='padding-top:12px;color:#7b6653'>Plus {action_count - len(shown)} similar term decisions, grouped for the next report.</td></tr>"
         action_intro = f"{action_count} decision{'s' if action_count != 1 else ''} need your approval"
         action_text = "\n".join(f"- {item['title']}: {item['url']}" for item in shown)
     else:
@@ -253,18 +315,33 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         action_text = "- No action required. The system completed everything it was authorised to do."
 
     health = model["health"]
-    if health.get("status") == "recovering":
-        health_title = "Operating, with automated follow-up needed"
-        health_detail = f"{health.get('attention', 0)} process area(s) need another automated attempt. No user action is requested."
-        health_color = "#fff3df"
-    elif health.get("status") == "healthy":
-        health_title = "All monitored systems are operating normally"
-        health_detail = f"{health.get('healthy', 0)} scheduled business processes reported normally in the last 30 hours."
-        health_color = "#e9f8f1"
+    issues = health.get("issues") or []
+    if issues:
+        issue_rows = "".join(
+            f"<li style='margin-bottom:8px'><strong>{escape(item['name'])}</strong>: {escape(item['result'])}. "
+            + (f"<a href='{escape(item['url'])}' style='color:#4737a8'>Open details</a>" if item.get("url") else "")
+            + " The system will retry; no action from you is currently required.</li>"
+            for item in issues
+        )
+        health_title = "Automated work that did not finish"
+        health_detail = "; ".join(f"{item['name']}: {item['result']}" for item in issues)
+        health_html = f"<div style='background:#fff3df;border-radius:18px;padding:20px'><div style='font-weight:800'>{health_title}</div><ul style='color:#52606d;font-size:13px'>{issue_rows}</ul></div>"
     else:
-        health_title = "Business publishing is active"
-        health_detail = "No user action is requested. Health detail will refresh in the next report."
-        health_color = "#eef3ff"
+        health_title = "All business automations finished normally"
+        health_detail = "No automated business process needs attention."
+        health_html = f"<div style='background:#e9f8f1;border-radius:18px;padding:20px'><div style='font-weight:800'>{health_title}</div></div>"
+
+    work = model.get("system_work") or []
+    if work:
+        work_rows = "".join(
+            f"<li style='margin-bottom:10px'><strong>{escape(item['title'])}</strong> — {escape(item['detail'])}</li>"
+            for item in work
+        )
+        work_html = f'''<tr><td style="padding:12px 30px"><div style="background:#eef3ff;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 12px">Approved partnerships being published</h2><ul style="padding-left:20px;margin:0;color:#475467">{work_rows}</ul></div></td></tr>'''
+        work_text = "\n".join(f"- {item['title']}: {item['detail']}" for item in work)
+    else:
+        work_html = ""
+        work_text = "- None."
 
     html = f"""<!doctype html>
 <html><body style="margin:0;background:#f4f1fb;font-family:Arial,Helvetica,sans-serif;color:#182230">
@@ -279,20 +356,18 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
 <tr><td style="padding:14px 24px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
   {metric_card('Revenue', model['revenue'], '#f1edff')}
   {metric_card('Commissions', model['commissions'], '#fff3df')}
-  {metric_card('Site visits', str(model['visits']), '#e9f8f1')}
-  {metric_card('Affiliate clicks', str(model['clicks']), '#eaf3ff')}
+  {metric_card(f"Site visits · last {model.get('visit_window_days', 28)} days", str(model['visits']), '#e9f8f1')}
+  {metric_card(f"Affiliate clicks · last {model.get('click_window_days', 28)} days", str(model['clicks']), '#eaf3ff')}
 </tr></table></td></tr>
 <tr><td style="padding:12px 30px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
   <td style="background:#f7f5fd;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 13px">What the system delivered today</h2><ul style="padding-left:20px;margin:0;color:#475467;line-height:1.5">{highlight_html}</ul></td>
 </tr></table></td></tr>
 <tr><td style="padding:12px 30px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
   <td style="background:#fff8ea;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 4px">{escape(action_intro)}</h2>
-  <p style="margin:0 0 8px;color:#7b6653;font-size:13px">You will never be asked to perform publishing, link creation, page building or routine monitoring.</p>
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0">{action_html}</table></td>
 </tr></table></td></tr>
-<tr><td style="padding:12px 30px 30px"><div style="background:{health_color};border-radius:18px;padding:20px">
-  <div style="font-weight:800">{escape(health_title)}</div><div style="color:#52606d;font-size:13px;margin-top:5px">{escape(health_detail)} {model['system_queue']} approved program link(s) are being handled by the system.</div>
-</div></td></tr>
+{work_html}
+<tr><td style="padding:12px 30px 30px">{health_html}</td></tr>
 <tr><td style="background:#26203b;color:#d9d3eb;padding:22px 30px;font-size:12px;line-height:1.6">
   Prepared automatically for senior-management review. Financial figures are aggregate and contain no customer identities.<br>
   <a href="https://artificial.one/" style="color:#bba8ff">Open artificial.one</a>
@@ -302,10 +377,14 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         "ARTIFICIAL.ONE — DAILY BUSINESS BRIEF", pretty_date, "", "EXECUTIVE SUMMARY", summary, "",
         "KEY NUMBERS",
         f"Revenue: {model['revenue']}", f"Commissions: {model['commissions']}",
-        f"Site visits: {model['visits']}", f"Affiliate clicks: {model['clicks']}",
-        f"Published affiliate offers: {model['published_offers']}", "",
+        f"Site visits (last {model.get('visit_window_days', 28)} days): {model['visits']}",
+        f"Outbound affiliate clicks (last {model.get('click_window_days', 28)} days): {model['clicks']}",
+        f"Unique live AI affiliate destinations: {model['published_offers']}",
+        f"Partner-reported sign-ups or purchase events: {model['signups'] + model['impact_actions']}",
+        f"Confirmed paying customers: {model['paying_customers']}", "",
         "DELIVERED TODAY", highlights_text, "", "YOUR ACTIONS", action_text, "",
-        "SYSTEM STATUS", health_title, health_detail,
+        "APPROVED PARTNERSHIPS BEING PUBLISHED", work_text, "",
+        "AUTOMATION STATUS", health_title, health_detail,
     ]) + "\n"
     return subject, text, html
 
@@ -325,6 +404,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", type=Path, default=Path(".daily-executive/affiliate-snapshot.json"))
     parser.add_argument("--state", type=Path, default=Path(".daily-executive/state.json"))
+    parser.add_argument("--marketplace-status", type=Path, default=Path(".content-marketplace/status.json"))
     parser.add_argument("--email-to", default="")
     parser.add_argument("--email-from", default="Artificial.One Daily Brief <onboarding@resend.dev>")
     parser.add_argument("--date", default="")
@@ -338,7 +418,7 @@ def main() -> int:
         print(f"Daily executive report already sent for {report_date.isoformat()}.")
         return 0
     health = github_health(os.environ.get("GITHUB_TOKEN", ""), os.environ.get("GITHUB_REPOSITORY", ""), now)
-    model = report_model(ROOT, args.snapshot, report_date, health)
+    model = report_model(ROOT, args.snapshot, report_date, health, args.marketplace_status)
     subject, text, html = render(model)
     if args.output_html:
         args.output_html.parent.mkdir(parents=True, exist_ok=True)
