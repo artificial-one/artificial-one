@@ -133,14 +133,14 @@ class RevenueAccelerationTests(unittest.TestCase):
     def test_linkedin_partner_card_clicks_through_to_affiliate_destination(self):
         item = next(candidate for candidate in distribution.queue() if candidate.get("affiliate_url"))
         payload = distribution.linkedin_post_payload(
-            "urn:li:person:123", item, "urn:li:digitalmediaAsset:456",
+            "urn:li:person:123", item, "urn:li:image:456",
         )
-        share = payload["specificContent"]["com.linkedin.ugc.ShareContent"]
-        self.assertEqual(share["shareMediaCategory"], "ARTICLE")
-        self.assertEqual(share["media"][0]["originalUrl"], item["affiliate_url"])
-        self.assertEqual(share["media"][0]["media"], "urn:li:digitalmediaAsset:456")
-        self.assertIn(item["affiliate_url"], share["shareCommentary"]["text"])
-        self.assertIn("may earn a commission", share["shareCommentary"]["text"])
+        article = payload["content"]["article"]
+        self.assertEqual(article["source"], item["affiliate_url"])
+        self.assertEqual(article["thumbnail"], "urn:li:image:456")
+        self.assertIn(item["affiliate_url"], payload["commentary"])
+        self.assertIn("may earn a commission", payload["commentary"])
+        self.assertEqual(payload["distribution"]["feedDistribution"], "MAIN_FEED")
 
     def test_linkedin_weekly_cadence_is_twelve_visual_posts(self):
         week = [date(2026, 9, 21 + offset) for offset in range(7)]

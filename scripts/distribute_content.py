@@ -42,6 +42,7 @@ PROFILE_DESCRIPTION = (
     "🐘 Playful automated elephant bot for independent AI-tool comparisons, practical "
     "calculators and verified offers. Human-owned; bot-posted. artificial.one"
 )
+LINKEDIN_VERSION = "202609"
 
 
 def load(path: Path) -> dict[str, Any]:
@@ -404,6 +405,7 @@ def request_json(url: str, *, data: dict[str, Any] | None = None, headers: dict[
 def linkedin_headers(access_token: str) -> dict[str, str]:
     return {
         "Authorization": f"Bearer {access_token}",
+        "Linkedin-Version": LINKEDIN_VERSION,
         "X-Restli-Protocol-Version": "2.0.0",
         "Content-Type": "application/json",
     }
@@ -443,24 +445,15 @@ def linkedin_commentary(item: dict[str, Any]) -> str:
 
 
 def register_linkedin_image(access_token: str, author_urn: str) -> tuple[str, str]:
-    payload = {
-        "registerUploadRequest": {
-            "recipes": ["urn:li:digitalmediaRecipe:feedshare-image"],
-            "owner": author_urn,
-            "serviceRelationships": [{
-                "relationshipType": "OWNER",
-                "identifier": "urn:li:userGeneratedContent",
-            }],
-        }
-    }
+    """Initialize an upload through LinkedIn's current Images API."""
+    payload = {"initializeUploadRequest": {"owner": author_urn}}
     response = request_json(
-        "https://api.linkedin.com/v2/assets?action=registerUpload",
+        "https://api.linkedin.com/rest/images?action=initializeUpload",
         data=payload,
         headers=linkedin_headers(access_token),
     )
     value = response["value"]
-    mechanism = value["uploadMechanism"]["com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest"]
-    return str(value["asset"]), str(mechanism["uploadUrl"])
+    return str(value["image"]), str(value["uploadUrl"])
 
 
 def upload_linkedin_image(upload_url: str, image_path: Path) -> None:
@@ -476,7 +469,7 @@ def upload_linkedin_image(upload_url: str, image_path: Path) -> None:
 
 def create_linkedin_post(access_token: str, payload: dict[str, Any]) -> str:
     request = Request(
-        "https://api.linkedin.com/v2/ugcPosts",
+        "https://api.linkedin.com/rest/posts",
         data=json.dumps(payload).encode("utf-8"),
         headers=linkedin_headers(access_token),
         method="POST",
@@ -496,26 +489,28 @@ def linkedin_post_url(post_urn: str) -> str:
     return f"https://www.linkedin.com/feed/update/{post_urn}/"
 
 
-def linkedin_post_payload(author_urn: str, item: dict[str, Any], asset_urn: str) -> dict[str, Any]:
-    """Build a linked visual card instead of a non-clickable image lightbox."""
+def linkedin_post_payload(author_urn: str, item: dict[str, Any], image_urn: str) -> dict[str, Any]:
+    """Build an official article card whose thumbnail opens the destination."""
     destination = str(item.get("affiliate_url") or item["url"]).strip()
     return {
         "author": author_urn,
-        "lifecycleState": "PUBLISHED",
-        "specificContent": {
-            "com.linkedin.ugc.ShareContent": {
-                "shareCommentary": {"text": linkedin_commentary(item)},
-                "shareMediaCategory": "ARTICLE",
-                "media": [{
-                    "status": "READY",
-                    "description": {"text": str(item["description"])[:200]},
-                    "media": asset_urn,
-                    "originalUrl": destination,
-                    "title": {"text": str(item["title"])[:200]},
-                }],
+        "commentary": linkedin_commentary(item),
+        "visibility": "PUBLIC",
+        "distribution": {
+            "feedDistribution": "MAIN_FEED",
+            "targetEntities": [],
+            "thirdPartyDistributionChannels": [],
+        },
+        "content": {
+            "article": {
+                "source": destination,
+                "thumbnail": image_urn,
+                "title": str(item["title"])[:200],
+                "description": str(item["description"])[:256],
             }
         },
-        "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"},
+        "lifecycleState": "PUBLISHED",
+        "isReshareDisabledByAuthor": False,
     }
 
 
