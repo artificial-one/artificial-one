@@ -17,6 +17,7 @@ import os
 from pathlib import Path
 import time
 from typing import Any
+from urllib.error import HTTPError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
@@ -795,7 +796,16 @@ def wait_for_delivery(api_key: str, email_id: str, wait_seconds: int = 90) -> st
     deadline = time.monotonic() + max(wait_seconds, 0)
     last_event = "accepted"
     while True:
-        details = resend_json(api_key, f"{RESEND_URL}/{quote(email_id, safe='')}")
+        try:
+            details = resend_json(api_key, f"{RESEND_URL}/{quote(email_id, safe='')}")
+        except HTTPError as exc:
+            if exc.code in {401, 403}:
+                print(
+                    "Resend accepted the daily report; the configured send-only key "
+                    "cannot read delivery events."
+                )
+                return "accepted_unverified"
+            raise
         last_event = str(details.get("last_event") or last_event).casefold()
         if last_event in successful:
             return last_event
@@ -825,7 +835,8 @@ def send_email(api_key: str, sender: str, recipient: str, subject: str, text: st
     if not email_id:
         raise RuntimeError("Resend accepted the report without returning a message ID")
     event = wait_for_delivery(api_key, email_id)
-    print(f"Resend confirmed daily report delivery: id={email_id}, event={event}, sender={sender}")
+    status_label = "confirmed" if event in {"delivered", "opened", "clicked"} else "recorded"
+    print(f"Resend daily report status {status_label}: id={email_id}, event={event}, sender={sender}")
     return {"id": email_id, "event": event, "sender": sender}
 
 

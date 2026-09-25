@@ -3,6 +3,7 @@ import unittest
 from datetime import date, datetime
 from pathlib import Path
 from unittest.mock import patch
+from urllib.error import HTTPError
 
 from scripts.daily_executive_report import (
     daily_activity, live_affiliate_destinations, owner_actions, render,
@@ -30,6 +31,14 @@ class DailyExecutiveReportTests(unittest.TestCase):
         with patch("scripts.daily_executive_report.resend_json", return_value={"last_event": "bounced"}):
             with self.assertRaisesRegex(RuntimeError, "bounced"):
                 wait_for_delivery("secret", "email-id", wait_seconds=0)
+
+    def test_delivery_wait_tolerates_send_only_api_key(self):
+        error = HTTPError("https://api.resend.com/emails/id", 401, "Unauthorized", None, None)
+        with patch("scripts.daily_executive_report.resend_json", side_effect=error):
+            self.assertEqual(
+                wait_for_delivery("secret", "email-id", wait_seconds=0),
+                "accepted_unverified",
+            )
 
     def test_daily_activity_contains_only_requested_day(self):
         payload = {"entries": [
