@@ -409,12 +409,15 @@ def render_hub(offers: list[dict[str, Any]]) -> str:
         </div>'''
         lead = "A curated feed of partner offers, selected for usefulness rather than commission size."
 
+    spotlight = sponsored_spotlight()
+    spotlight_block = f"      {spotlight}\n" if spotlight else ""
+
     content = f'''
     <section class="section"><div class="container"><p class="eyebrow">Commercially transparent</p><div class="section-head"><div><h1>Verified AI <span class="gradient-text">deals worth checking</span></h1><p>{lead} Terms, fit and limitations are visible before the click.</p></div></div>
       <div class="surface content-card"><strong>How we earn:</strong> marked links may pay artificial.one a commission. You pay no extra. Payment does not buy a positive verdict or guaranteed placement.</div>
     </div></section>
     <section class="container section-tight">
-      {sponsored_spotlight()}
+{spotlight_block.rstrip()}
       {listing}
     </section>{catalog_script(offers)}'''
     return shell(

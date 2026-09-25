@@ -3,7 +3,10 @@ import unittest
 from datetime import date
 from pathlib import Path
 
-from scripts.daily_executive_report import daily_activity, live_affiliate_destinations, owner_actions, render, system_work
+from scripts.daily_executive_report import (
+    daily_activity, live_affiliate_destinations, owner_actions, render,
+    social_posts_for_day, system_work,
+)
 
 
 class DailyExecutiveReportTests(unittest.TestCase):
@@ -39,6 +42,7 @@ class DailyExecutiveReportTests(unittest.TestCase):
             "impact_actions": 0, "paying_customers": 0, "partnerstack_transactions": 0, "revenue": "USD 0.00",
             "commissions": "USD 0.00", "owner_actions": [], "system_queue": 8,
             "blocking_failures": 0, "health": {"status": "healthy", "healthy": 10, "attention": 0},
+            "social": {},
         }
         subject, text, html = render(model)
         self.assertIn("daily business brief", subject)
@@ -67,6 +71,7 @@ class DailyExecutiveReportTests(unittest.TestCase):
             "impact_actions": 0, "paying_customers": 0, "partnerstack_transactions": 0, "revenue": "USD 0.00",
             "commissions": "USD 0.00", "owner_actions": actions, "system_work": [],
             "health": {"status": "healthy", "healthy": 10, "attention": 0, "issues": []},
+            "social": {},
         }
         _, text, html = render(model)
         self.assertIn("Decision 8", html)
@@ -95,6 +100,31 @@ class DailyExecutiveReportTests(unittest.TestCase):
             {"id": "partnerstack:two", "name": "Two"},
         ]}
         self.assertEqual([item["title"] for item in system_work(reconciliation, opportunities)], ["One", "Two"])
+
+    def test_social_section_lists_every_post_for_report_day_with_links_and_metrics(self):
+        receipts = {"receipts": [
+            {
+                "id": "bluesky:at://did:example/app.bsky.feed.post/one",
+                "platform": "bluesky", "title": "Blue post",
+                "published_at": "2026-09-25T08:00:00Z", "url": "https://bsky.app/post/one",
+            },
+            {
+                "id": "linkedin:urn:li:share:123", "platform": "linkedin", "title": "Linked post",
+                "published_at": "2026-09-25T09:00:00Z", "url": "https://linkedin.example/123",
+            },
+            {
+                "id": "linkedin:urn:li:share:old", "platform": "linkedin", "title": "Old",
+                "published_at": "2026-09-24T09:00:00Z", "url": "https://linkedin.example/old",
+            },
+        ]}
+        metrics = {
+            "at://did:example/app.bsky.feed.post/one": {"likes": 4, "comments": 2, "reposts": 1},
+            "urn:li:share:123": {"likes": 7, "comments": 3, "reposts": 2, "views": 80},
+        }
+        result = social_posts_for_day(receipts, date(2026, 9, 25), metrics)
+        self.assertEqual([item["title"] for item in result["linkedin"]], ["Linked post"])
+        self.assertEqual(result["linkedin"][0]["metrics"]["views"], 80)
+        self.assertEqual(result["bluesky"][0]["url"], "https://bsky.app/post/one")
 
 
 if __name__ == "__main__":

@@ -64,6 +64,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
         run: >-
           python scripts/daily_executive_report.py
           --snapshot .daily-executive/affiliate-snapshot.json

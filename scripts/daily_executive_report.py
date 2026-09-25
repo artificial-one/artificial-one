@@ -24,6 +24,8 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 PRAGUE = ZoneInfo("Europe/Prague")
 RESEND_URL = "https://api.resend.com/emails"
+LINKEDIN_VERSION = "202608"
+SOCIAL_PLATFORMS = ("linkedin", "bluesky", "x")
 
 
 def load_json(path: Path, default: Any | None = None) -> Any:
@@ -154,6 +156,123 @@ def live_affiliate_destinations(partner_offers: dict[str, Any], appsumo: dict[st
     return len(urls)
 
 
+def receipt_urn(receipt: dict[str, Any]) -> str:
+    identifier = str(receipt.get("id") or "")
+    return identifier.split(":", 1)[1] if ":" in identifier else identifier
+
+
+def local_receipt_date(receipt: dict[str, Any]) -> date | None:
+    value = str(receipt.get("published_at") or "")
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(PRAGUE).date()
+    except (ValueError, TypeError):
+        return None
+
+
+def bluesky_metrics(receipts: list[dict[str, Any]]) -> dict[str, dict[str, int]]:
+    wanted = [receipt_urn(item) for item in receipts if item.get("platform") == "bluesky"]
+    if not wanted:
+        return {}
+    query = "&".join(f"uris={quote(uri, safe='')}" for uri in wanted)
+    request = Request(
+        f"https://public.api.bsky.app/xrpc/app.bsky.feed.getPosts?{query}",
+        headers={"Accept": "application/json", "User-Agent": "artificial.one-daily-report/1.0"},
+    )
+    try:
+        with urlopen(request, timeout=30) as response:
+            posts = json.load(response).get("posts", [])
+    except Exception:
+        return {}
+    return {
+        str(post.get("uri") or ""): {
+            "likes": integer(post.get("likeCount")),
+            "comments": integer(post.get("replyCount")),
+            "reposts": integer(post.get("repostCount")),
+            "quotes": integer(post.get("quoteCount")),
+        }
+        for post in posts if isinstance(post, dict) and post.get("uri")
+    }
+
+
+def linkedin_metrics(receipts: list[dict[str, Any]], token: str, author_urn: str) -> dict[str, dict[str, Any]]:
+    """Read organic company-post statistics when LinkedIn has granted reporting access."""
+    if not token or not author_urn:
+        return {}
+    headers = {
+        "Accept": "application/json",
+        "Authorization": f"Bearer {token}",
+        "LinkedIn-Version": LINKEDIN_VERSION,
+        "X-Restli-Protocol-Version": "2.0.0",
+        "User-Agent": "artificial.one-daily-report/1.0",
+    }
+    result: dict[str, dict[str, Any]] = {}
+    for receipt in receipts:
+        if receipt.get("platform") != "linkedin":
+            continue
+        urn = receipt_urn(receipt)
+        url = (
+            "https://api.linkedin.com/rest/organizationalEntityShareStatistics"
+            f"?q=organizationalEntity&organizationalEntity={quote(author_urn, safe='')}"
+            f"&shares=List({quote(urn, safe='')})"
+        )
+        try:
+            with urlopen(Request(url, headers=headers), timeout=30) as response:
+                elements = json.load(response).get("elements", [])
+            totals = elements[0].get("totalShareStatistics", {}) if elements else {}
+            result[urn] = {
+                "likes": integer(totals.get("likeCount")),
+                "comments": integer(totals.get("commentCount")),
+                "reposts": integer(totals.get("shareCount")),
+                "views": integer(totals.get("impressionCount")),
+                "clicks": integer(totals.get("clickCount")),
+            }
+        except Exception:
+            continue
+    return result
+
+
+def social_posts_for_day(
+    receipts: dict[str, Any], report_date: date, metrics: dict[str, dict[str, Any]] | None = None,
+) -> dict[str, list[dict[str, Any]]]:
+    metrics = metrics or {}
+    grouped: dict[str, list[dict[str, Any]]] = {platform: [] for platform in SOCIAL_PLATFORMS}
+    for receipt in receipts.get("receipts", []):
+        if not isinstance(receipt, dict) or local_receipt_date(receipt) != report_date:
+            continue
+        platform = str(receipt.get("platform") or "").casefold()
+        if platform not in grouped:
+            grouped[platform] = []
+        urn = receipt_urn(receipt)
+        grouped[platform].append({
+            "title": str(receipt.get("title") or receipt.get("item_id") or "Artificial.One post"),
+            "url": str(receipt.get("url") or ""),
+            "published_at": str(receipt.get("published_at") or ""),
+            "metrics": metrics.get(urn),
+        })
+    for posts in grouped.values():
+        posts.sort(key=lambda item: item["published_at"])
+    return grouped
+
+
+def social_performance(root: Path, report_date: date) -> dict[str, list[dict[str, Any]]]:
+    receipts = load_json(root / "data" / "distribution_receipts.json", {"receipts": []})
+    todays = [
+        item for item in receipts.get("receipts", [])
+        if isinstance(item, dict) and local_receipt_date(item) == report_date
+    ]
+    metrics: dict[str, dict[str, Any]] = {}
+    metrics.update(bluesky_metrics(todays))
+    metrics.update(linkedin_metrics(
+        todays,
+        os.environ.get("LINKEDIN_ACCESS_TOKEN", "").strip(),
+        os.environ.get("LINKEDIN_AUTHOR_URN", "").strip(),
+    ))
+    return social_posts_for_day(receipts, report_date, metrics)
+
+
 def github_health(token: str, repository: str, now: datetime) -> dict[str, Any]:
     if not token or not repository:
         return {"status": "unknown", "healthy": 0, "attention": 0, "issues": []}
@@ -242,6 +361,7 @@ def report_model(
     published = live_affiliate_destinations(partner_offers, appsumo)
     actions = owner_actions(reconciliation, opportunities, marketplace)
     work_queue = system_work(reconciliation, opportunities)
+    social = social_performance(root, report_date)
     revenue_text = f"USD {ps_revenue:.2f} + {impact_revenue}" if impact_revenue != "USD 0.00" else f"USD {ps_revenue:.2f}"
     commission_text = f"USD {ps_commission:.2f} + {impact_commission}" if impact_commission != "USD 0.00" else f"USD {ps_commission:.2f}"
     return {
@@ -260,6 +380,7 @@ def report_model(
         "commissions": commission_text,
         "owner_actions": actions,
         "system_work": work_queue,
+        "social": social,
         "blocking_failures": integer(summary.get("blocking_failures")),
         "health": health,
         "content_orders": integer(marketplace.get("orders_total")),
@@ -299,12 +420,58 @@ def metric_card(label: str, value: str, background: str) -> str:
     )
 
 
+def readable_social_metrics(values: dict[str, Any] | None) -> str:
+    if values is None:
+        return "Engagement metrics are not available from the platform with the current API permission."
+    labels = (
+        ("likes", "likes"), ("comments", "comments"), ("reposts", "reposts/shares"),
+        ("quotes", "quotes"), ("views", "views"), ("clicks", "post clicks"),
+    )
+    return " · ".join(f"{integer(values.get(key))} {label}" for key, label in labels if key in values)
+
+
+def render_social(social: dict[str, list[dict[str, Any]]]) -> tuple[str, str]:
+    names = {"linkedin": "LinkedIn", "bluesky": "Bluesky", "x": "X"}
+    platform_html: list[str] = []
+    platform_text: list[str] = []
+    for platform in SOCIAL_PLATFORMS:
+        posts = social.get(platform, [])
+        platform_text.append(names[platform])
+        if not posts:
+            platform_html.append(
+                f"<div style='margin:0 0 16px'><strong>{names[platform]}</strong>"
+                "<div style='color:#667085;font-size:13px;margin-top:4px'>No automated post was published today.</div></div>"
+            )
+            platform_text.append("- No automated post was published today.")
+            continue
+        rows = []
+        for post in posts:
+            title = escape(post["title"])
+            url = escape(post["url"])
+            metrics = escape(readable_social_metrics(post.get("metrics")))
+            rows.append(
+                "<div style='background:#fff;border:1px solid #e8e3f3;border-radius:13px;padding:13px 15px;margin-top:9px'>"
+                f"<a href='{url}' style='font-weight:800;color:#4737a8;text-decoration:none'>{title} →</a>"
+                f"<div style='font-size:12px;color:#667085;margin-top:7px'>{metrics}</div></div>"
+            )
+            platform_text.append(f"- {post['title']}: {post['url']} — {readable_social_metrics(post.get('metrics'))}")
+        platform_html.append(f"<div style='margin:0 0 18px'><strong>{names[platform]}</strong>{''.join(rows)}</div>")
+    html = (
+        '<tr><td style="padding:12px 30px"><div style="background:#f1edff;border-radius:18px;padding:22px">'
+        '<h2 style="font-size:18px;margin:0 0 14px">Social media published today</h2>'
+        '<p style="font-size:13px;color:#667085;margin:0 0 16px">Open any post directly and compare its live engagement.</p>'
+        + "".join(platform_html) + "</div></td></tr>"
+    )
+    return html, "\n".join(platform_text)
+
+
 def render(model: dict[str, Any]) -> tuple[str, str, str]:
     day = model["date"]
     pretty_date = day.strftime("%d %B %Y")
     subject = f"Artificial.One daily business brief — {pretty_date}"
     action_count = len(model["owner_actions"])
     summary = management_summary(model)
+    social_html, social_text = render_social(model.get("social") or {})
     highlights = model["activity"]["highlights"]
     if highlights:
         highlight_html = "".join(
@@ -382,6 +549,7 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
 <tr><td style="padding:12px 30px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
   <td style="background:#f7f5fd;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 13px">What the system delivered today</h2><ul style="padding-left:20px;margin:0;color:#475467;line-height:1.5">{highlight_html}</ul></td>
 </tr></table></td></tr>
+{social_html}
 <tr><td style="padding:12px 30px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
   <td style="background:#fff8ea;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 4px">{escape(action_intro)}</h2>
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0">{action_html}</table></td>
@@ -412,7 +580,7 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         f"PartnerStack confirmed paying customers (since tracking began): {model['paying_customers']}",
         f"PartnerStack recorded transactions (since tracking began): {model.get('partnerstack_transactions', 0)}",
         f"Impact tracked lead or sale events (since tracking began): {model['impact_actions']}", "",
-        "DELIVERED TODAY", highlights_text, "", "YOUR ACTIONS", action_text, "",
+        "DELIVERED TODAY", highlights_text, "", "SOCIAL MEDIA PUBLISHED TODAY", social_text, "", "YOUR ACTIONS", action_text, "",
         "APPROVED PARTNERSHIPS BEING PUBLISHED", work_text, "",
         "AUTOMATION STATUS", health_title, health_detail,
     ]) + "\n"
