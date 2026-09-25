@@ -2,14 +2,35 @@ import tempfile
 import unittest
 from datetime import date, datetime
 from pathlib import Path
+from unittest.mock import patch
 
 from scripts.daily_executive_report import (
     daily_activity, live_affiliate_destinations, owner_actions, render,
-    social_posts_for_day, social_posts_for_window, system_work, PRAGUE,
+    social_posts_for_day, social_posts_for_window, system_work, verified_sender,
+    wait_for_delivery, PRAGUE,
 )
 
 
 class DailyExecutiveReportTests(unittest.TestCase):
+    def test_verified_sender_prefers_artificial_one_domain(self):
+        with patch("scripts.daily_executive_report.resend_json", return_value={"data": [
+            {"name": "other.example", "status": "verified"},
+            {"name": "artificial.one", "status": "verified"},
+        ]}):
+            sender = verified_sender("secret", "Artificial.One <onboarding@resend.dev>")
+        self.assertEqual(sender, "Artificial.One Daily Brief <reports@artificial.one>")
+
+    def test_delivery_wait_requires_real_delivery_event(self):
+        with patch("scripts.daily_executive_report.resend_json", side_effect=[
+            {"last_event": "sent"}, {"last_event": "delivered"},
+        ]), patch("scripts.daily_executive_report.time.sleep"):
+            self.assertEqual(wait_for_delivery("secret", "email-id", wait_seconds=90), "delivered")
+
+    def test_delivery_wait_rejects_bounce(self):
+        with patch("scripts.daily_executive_report.resend_json", return_value={"last_event": "bounced"}):
+            with self.assertRaisesRegex(RuntimeError, "bounced"):
+                wait_for_delivery("secret", "email-id", wait_seconds=0)
+
     def test_daily_activity_contains_only_requested_day(self):
         payload = {"entries": [
             {"date": "2026-09-25", "kind": "webpage_created", "path": "one.html", "summary": "Published One"},

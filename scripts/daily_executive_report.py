@@ -15,6 +15,7 @@ from html import escape
 import json
 import os
 from pathlib import Path
+import time
 from typing import Any
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -24,6 +25,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 PRAGUE = ZoneInfo("Europe/Prague")
 RESEND_URL = "https://api.resend.com/emails"
+RESEND_DOMAINS_URL = "https://api.resend.com/domains"
 LINKEDIN_VERSION = "202608"
 SOCIAL_PLATFORMS = ("linkedin", "bluesky", "x")
 
@@ -745,15 +747,86 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
     return subject, text, html
 
 
-def send_email(api_key: str, sender: str, recipient: str, subject: str, text: str, html: str) -> None:
+def resend_json(api_key: str, url: str, *, payload: dict[str, Any] | None = None) -> dict[str, Any]:
+    body = json.dumps(payload).encode() if payload is not None else None
+    request = Request(url, data=body, headers={
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "User-Agent": "artificial.one-daily-report/1.1",
+    }, method="POST" if payload is not None else "GET")
+    with urlopen(request, timeout=40) as response:
+        if response.status >= 300:
+            raise RuntimeError(f"Resend request failed with HTTP {response.status}")
+        response_body = response.read().decode("utf-8")
+    result = json.loads(response_body or "{}")
+    if not isinstance(result, dict):
+        raise RuntimeError("Resend returned an unexpected response")
+    return result
+
+
+def verified_sender(api_key: str, requested_sender: str) -> str:
+    """Prefer our verified domain instead of Resend's testing-only sender."""
+    if "@resend.dev" not in requested_sender.casefold():
+        return requested_sender
+    try:
+        domains = resend_json(api_key, RESEND_DOMAINS_URL).get("data", [])
+    except Exception as exc:  # Sending still produces a precise API error if discovery is unavailable.
+        print(f"Could not inspect verified sending domains: {type(exc).__name__}")
+        return requested_sender
+    eligible = [
+        str(item.get("name") or "").strip().casefold()
+        for item in domains
+        if isinstance(item, dict)
+        and str(item.get("status") or "").casefold() == "verified"
+        and (
+            str(item.get("name") or "").strip().casefold() == "artificial.one"
+            or str(item.get("name") or "").strip().casefold().endswith(".artificial.one")
+        )
+    ]
+    if not eligible:
+        return requested_sender
+    domain = sorted(eligible, key=lambda value: (value != "artificial.one", len(value)))[0]
+    return f"Artificial.One Daily Brief <reports@{domain}>"
+
+
+def wait_for_delivery(api_key: str, email_id: str, wait_seconds: int = 90) -> str:
+    successful = {"delivered", "opened", "clicked"}
+    failed = {"bounced", "complained", "suppressed", "failed", "canceled"}
+    deadline = time.monotonic() + max(wait_seconds, 0)
+    last_event = "accepted"
+    while True:
+        details = resend_json(api_key, f"{RESEND_URL}/{quote(email_id, safe='')}")
+        last_event = str(details.get("last_event") or last_event).casefold()
+        if last_event in successful:
+            return last_event
+        if last_event in failed:
+            raise RuntimeError(f"Resend could not deliver the daily report (event: {last_event})")
+        if time.monotonic() >= deadline:
+            raise RuntimeError(
+                f"Resend accepted the daily report but did not confirm delivery within {wait_seconds} seconds "
+                f"(latest event: {last_event})"
+            )
+        time.sleep(min(5, max(deadline - time.monotonic(), 0)))
+
+
+def send_email(api_key: str, sender: str, recipient: str, subject: str, text: str, html: str) -> dict[str, str]:
+    sender = verified_sender(api_key, sender)
     payload = json.dumps({"from": sender, "to": [recipient], "subject": subject, "text": text, "html": html}).encode()
     request = Request(RESEND_URL, data=payload, headers={
         "Authorization": f"Bearer {api_key}", "Content-Type": "application/json",
-        "User-Agent": "artificial.one-daily-report/1.0",
+        "User-Agent": "artificial.one-daily-report/1.1",
     }, method="POST")
     with urlopen(request, timeout=40) as response:
         if response.status >= 300:
             raise RuntimeError(f"Daily report delivery failed with HTTP {response.status}")
+        response_body = response.read().decode("utf-8")
+    result = json.loads(response_body or "{}")
+    email_id = str(result.get("id") or "").strip()
+    if not email_id:
+        raise RuntimeError("Resend accepted the report without returning a message ID")
+    event = wait_for_delivery(api_key, email_id)
+    print(f"Resend confirmed daily report delivery: id={email_id}, event={event}, sender={sender}")
+    return {"id": email_id, "event": event, "sender": sender}
 
 
 def main() -> int:
@@ -784,12 +857,15 @@ def main() -> int:
         api_key = os.environ.get("RESEND_API_KEY", "").strip()
         if not api_key:
             raise RuntimeError("RESEND_API_KEY is required to send the daily report")
-        send_email(api_key, args.email_from, args.email_to, subject, text, html)
+        delivery = send_email(api_key, args.email_from, args.email_to, subject, text, html)
         args.state.parent.mkdir(parents=True, exist_ok=True)
         args.state.write_text(json.dumps({
             "last_sent_date": report_date.isoformat(),
             "last_sent_at": now.isoformat(timespec="seconds"),
             "subject": subject,
+            "resend_email_id": delivery["id"],
+            "delivery_event": delivery["event"],
+            "sender": delivery["sender"],
         }, indent=2) + "\n", encoding="utf-8")
     print(f"Prepared executive report for {report_date.isoformat()}: {subject}")
     return 0
