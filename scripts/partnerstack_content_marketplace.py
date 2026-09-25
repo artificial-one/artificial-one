@@ -24,7 +24,9 @@ from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[1]
-API_BASE = "https://api.partnerstack.com/api/v2"
+# The Content Marketplace is served by PartnerStack's dashboard API namespace,
+# not the versioned Partner API used for partnerships and rewards.
+API_BASE = "https://api.partnerstack.com/api"
 ORDERS_PATH = "/content-marketplace/orders"
 INVENTORY_PATH = ROOT / "data" / "sponsorship_inventory.json"
 PUBLIC_PATH = ROOT / "data" / "sponsored_campaigns.json"
