@@ -159,12 +159,13 @@ def github_health(token: str, repository: str, now: datetime) -> dict[str, Any]:
         return {"status": "unknown", "healthy": 0, "attention": 0, "issues": []}
     since = (now.astimezone(timezone.utc) - timedelta(hours=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
     url = f"https://api.github.com/repos/{repository}/actions/runs?per_page=100&created=%3E%3D{quote(since)}"
-    request = Request(url, headers={
+    headers = {
         "Accept": "application/vnd.github+json",
         "Authorization": f"Bearer {token}",
         "User-Agent": "artificial.one-daily-report/1.0",
         "X-GitHub-Api-Version": "2022-11-28",
-    })
+    }
+    request = Request(url, headers=headers)
     try:
         with urlopen(request, timeout=30) as response:
             payload = json.load(response)
@@ -183,16 +184,36 @@ def github_health(token: str, repository: str, now: datetime) -> dict[str, Any]:
     pending = sum(str(run.get("status")) != "completed" for run in latest.values())
     healthy = len(latest) - attention - pending
     status = "healthy" if attention == 0 else "recovering"
-    issues = [
-        {
+    issues: list[dict[str, str]] = []
+    for name, run in sorted(latest.items()):
+        if str(run.get("status")) != "completed" or str(run.get("conclusion")) in {"success", "skipped", "neutral"}:
+            continue
+        failed_work = "The automation run did not complete."
+        jobs_url = str(run.get("jobs_url") or "")
+        if jobs_url:
+            try:
+                with urlopen(Request(jobs_url, headers=headers), timeout=30) as response:
+                    jobs = json.load(response).get("jobs", [])
+                failed_jobs = []
+                for job in jobs:
+                    failed_steps = [
+                        str(step.get("name") or "") for step in job.get("steps", [])
+                        if str(step.get("conclusion") or "") not in {"", "success", "skipped", "neutral"}
+                    ]
+                    if failed_steps:
+                        failed_jobs.append(f"{job.get('name') or 'Job'} — {', '.join(failed_steps)}")
+                    elif str(job.get("conclusion") or "") not in {"success", "skipped", "neutral"}:
+                        failed_jobs.append(str(job.get("name") or "Job failed"))
+                if failed_jobs:
+                    failed_work = "; ".join(failed_jobs)
+            except Exception:
+                pass
+        issues.append({
             "name": name,
             "url": str(run.get("html_url") or ""),
             "result": str(run.get("conclusion") or "needs another attempt").replace("_", " "),
-        }
-        for name, run in sorted(latest.items())
-        if str(run.get("status")) == "completed"
-        and str(run.get("conclusion")) not in {"success", "skipped", "neutral"}
-    ]
+            "failed_work": failed_work,
+        })
     return {"status": status, "healthy": healthy, "attention": attention, "pending": pending, "issues": issues}
 
 
@@ -233,6 +254,7 @@ def report_model(
         "click_window_days": integer(clicks.get("window_days")) or 28,
         "signups": integer(partnerstack.get("customers", {}).get("count")),
         "paying_customers": integer(partnerstack.get("customers", {}).get("paid_count")),
+        "partnerstack_transactions": integer(partnerstack.get("transactions", {}).get("count")),
         "impact_actions": integer(impact.get("actions", {}).get("count")),
         "revenue": revenue_text,
         "commissions": commission_text,
@@ -256,13 +278,14 @@ def management_summary(model: dict[str, Any]) -> str:
     if activity["social_posts"]:
         pieces.append(f"published {activity['social_posts']} social post{'s' if activity['social_posts'] != 1 else ''}")
     completed = ", ".join(pieces) if pieces else "made no new public website or social-media publication"
-    conversions = model["signups"] + model["impact_actions"]
     return (
         f"Today the automated system {completed}. "
-        f"The website currently links to {model['published_offers']} unique, live AI-product affiliate destinations. "
-        f"During the last {model.get('click_window_days', 28)} days, visitors made {model['clicks']} outbound affiliate clicks. "
-        f"Partners reported {conversions} tracked sign-up or purchase event{'s' if conversions != 1 else ''}; "
-        f"{model['paying_customers']} {'are' if model['paying_customers'] != 1 else 'is'} confirmed as paying customers. "
+        f"The website currently publishes {model['published_offers']} different live, tracked affiliate destination links. "
+        f"During the last {model.get('visit_window_days', 28)} days it received {model['visits']} visits, and during the last "
+        f"{model.get('click_window_days', 28)} days visitors clicked an affiliate link {model['clicks']} times. "
+        f"Since partner tracking began, PartnerStack reports {model['signups']} referred sign-up{'s' if model['signups'] != 1 else ''}, "
+        f"including {model['paying_customers']} confirmed paying customer{'s' if model['paying_customers'] != 1 else ''}; "
+        f"Impact reports {model['impact_actions']} tracked lead or sale event{'s' if model['impact_actions'] != 1 else ''}. "
         f"Sponsored-content orders: {model.get('content_fulfilling', 0)} in fulfilment and {model.get('content_completed', 0)} completed."
     )
 
@@ -308,23 +331,20 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         action_text = "\n".join(f"- {item['title']}: {item['url']}" for item in shown)
     else:
         action_intro = "No action required from you today"
-        action_html = (
-            "<tr><td style='padding:8px 0;color:#315c49'>The system completed everything it was authorised to do. "
-            "Machine-manageable items remain in the automated queue.</td></tr>"
-        )
-        action_text = "- No action required. The system completed everything it was authorised to do."
+        action_html = "<tr><td style='padding:8px 0;color:#315c49'>No decisions are waiting for you.</td></tr>"
+        action_text = "- No action required from you today. No decisions are waiting for you."
 
     health = model["health"]
     issues = health.get("issues") or []
     if issues:
         issue_rows = "".join(
-            f"<li style='margin-bottom:8px'><strong>{escape(item['name'])}</strong>: {escape(item['result'])}. "
+            f"<li style='margin-bottom:8px'><strong>{escape(item['name'])}</strong>: {escape(item.get('failed_work') or item['result'])}. "
             + (f"<a href='{escape(item['url'])}' style='color:#4737a8'>Open details</a>" if item.get("url") else "")
             + " The system will retry; no action from you is currently required.</li>"
             for item in issues
         )
         health_title = "Automated work that did not finish"
-        health_detail = "; ".join(f"{item['name']}: {item['result']}" for item in issues)
+        health_detail = "; ".join(f"{item['name']}: {item.get('failed_work') or item['result']}" for item in issues)
         health_html = f"<div style='background:#fff3df;border-radius:18px;padding:20px'><div style='font-weight:800'>{health_title}</div><ul style='color:#52606d;font-size:13px'>{issue_rows}</ul></div>"
     else:
         health_title = "All business automations finished normally"
@@ -366,6 +386,14 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
   <td style="background:#fff8ea;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 4px">{escape(action_intro)}</h2>
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0">{action_html}</table></td>
 </tr></table></td></tr>
+<tr><td style="padding:0 30px 12px"><div style="background:#eef3ff;border-radius:14px;padding:14px 18px;color:#475467;font-size:13px;line-height:1.5">
+  <strong style="color:#26324a">How to read these numbers:</strong> {model['published_offers']} is the number of different tracked affiliate destinations currently available on the website. {model['clicks']} is how many times visitors clicked any of those links during the last {model.get('click_window_days', 28)} days. These numbers measure inventory and traffic, so they are not expected to match.
+</div></td></tr>
+<tr><td style="padding:0 30px 12px"><div style="background:#e9f8f1;border-radius:14px;padding:14px 18px;color:#315c49;font-size:13px;line-height:1.55">
+  <strong>Results reported by affiliate networks · since tracking began</strong><br>
+  PartnerStack referred sign-ups: <strong>{model['signups']}</strong> · confirmed paying customers: <strong>{model['paying_customers']}</strong> · recorded transactions: <strong>{model.get('partnerstack_transactions', 0)}</strong><br>
+  Impact tracked lead or sale events: <strong>{model['impact_actions']}</strong>
+</div></td></tr>
 {work_html}
 <tr><td style="padding:12px 30px 30px">{health_html}</td></tr>
 <tr><td style="background:#26203b;color:#d9d3eb;padding:22px 30px;font-size:12px;line-height:1.6">
@@ -379,9 +407,11 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         f"Revenue: {model['revenue']}", f"Commissions: {model['commissions']}",
         f"Site visits (last {model.get('visit_window_days', 28)} days): {model['visits']}",
         f"Outbound affiliate clicks (last {model.get('click_window_days', 28)} days): {model['clicks']}",
-        f"Unique live AI affiliate destinations: {model['published_offers']}",
-        f"Partner-reported sign-ups or purchase events: {model['signups'] + model['impact_actions']}",
-        f"Confirmed paying customers: {model['paying_customers']}", "",
+        f"Different live tracked affiliate destinations currently on the website: {model['published_offers']}",
+        f"PartnerStack referred sign-ups (since tracking began): {model['signups']}",
+        f"PartnerStack confirmed paying customers (since tracking began): {model['paying_customers']}",
+        f"PartnerStack recorded transactions (since tracking began): {model.get('partnerstack_transactions', 0)}",
+        f"Impact tracked lead or sale events (since tracking began): {model['impact_actions']}", "",
         "DELIVERED TODAY", highlights_text, "", "YOUR ACTIONS", action_text, "",
         "APPROVED PARTNERSHIPS BEING PUBLISHED", work_text, "",
         "AUTOMATION STATUS", health_title, health_detail,

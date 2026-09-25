@@ -36,7 +36,7 @@ class DailyExecutiveReportTests(unittest.TestCase):
             "date": date(2026, 9, 25),
             "activity": {"pages_created": 2, "pages_updated": 3, "social_posts": 1, "highlights": []},
             "published_offers": 277, "visits": 50, "clicks": 4, "signups": 1,
-            "impact_actions": 0, "paying_customers": 0, "revenue": "USD 0.00",
+            "impact_actions": 0, "paying_customers": 0, "partnerstack_transactions": 0, "revenue": "USD 0.00",
             "commissions": "USD 0.00", "owner_actions": [], "system_queue": 8,
             "blocking_failures": 0, "health": {"status": "healthy", "healthy": 10, "attention": 0},
         }
@@ -48,7 +48,9 @@ class DailyExecutiveReportTests(unittest.TestCase):
         self.assertNotIn("workflow run", text.casefold())
         self.assertNotIn("cache", text.casefold())
         self.assertIn("last 28 days", text)
-        self.assertIn("sign-ups or purchase events", text)
+        self.assertIn("PartnerStack referred sign-ups (since tracking began)", text)
+        self.assertIn("inventory and traffic", html)
+        self.assertIn("Impact tracked lead or sale events", text)
         self.assertNotIn("attributed actions", text)
         self.assertNotIn("monetized offers under coverage", text)
         self.assertNotIn("All catalogues stayed current", text)
@@ -62,7 +64,7 @@ class DailyExecutiveReportTests(unittest.TestCase):
             "date": date(2026, 9, 25),
             "activity": {"pages_created": 0, "pages_updated": 0, "social_posts": 0, "highlights": []},
             "published_offers": 2, "visits": 50, "clicks": 4, "signups": 1,
-            "impact_actions": 0, "paying_customers": 0, "revenue": "USD 0.00",
+            "impact_actions": 0, "paying_customers": 0, "partnerstack_transactions": 0, "revenue": "USD 0.00",
             "commissions": "USD 0.00", "owner_actions": actions, "system_work": [],
             "health": {"status": "healthy", "healthy": 10, "attention": 0, "issues": []},
         }
