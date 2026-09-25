@@ -2,6 +2,12 @@ name: Fulfil sponsored-content orders
 
 on:
   workflow_dispatch:
+    inputs:
+      execute_fulfillment:
+        description: Build and submit accepted orders (unchecked only validates the connection)
+        required: false
+        default: false
+        type: boolean
   schedule:
     # Fast enough for commercial orders without producing deployments when nothing changes.
     - cron: "17 */2 * * *"
@@ -42,6 +48,7 @@ jobs:
           restore-keys: content-marketplace-
 
       - name: Build accepted order deliverables and submit previously deployed pages
+        if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.execute_fulfillment) }}
         env:
           PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
         run: >-
@@ -50,7 +57,14 @@ jobs:
           --status .content-marketplace/status.json
           --submit
 
+      - name: Validate the Content Marketplace connection without changing anything
+        if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.execute_fulfillment) }}
+        env:
+          PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
+        run: python scripts/partnerstack_content_marketplace.py --inspect-only
+
       - name: Rebuild the sponsored offers surface
+        if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.execute_fulfillment) }}
         run: python scripts/build_partner_offers.py
 
       - name: Verify the commercial fulfilment contract
@@ -60,6 +74,7 @@ jobs:
           python scripts/build_partner_offers.py --check
 
       - name: Publish new or changed deliverables
+        if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.execute_fulfillment) }}
         shell: bash
         run: |
           git add -- data/sponsored_campaigns.json sponsored.html sponsored sitemap.xml partner-offers.html ai-tool-finder.html index.html
@@ -70,7 +85,7 @@ jobs:
           git push
 
       - name: Save private order and submission state
-        if: always()
+        if: ${{ always() && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.execute_fulfillment)) }}
         uses: actions/cache/save@v5
         with:
           path: .content-marketplace

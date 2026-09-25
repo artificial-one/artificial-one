@@ -10,6 +10,7 @@ Raw buyer/order data stays in an ignored private state directory.
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 from datetime import date, datetime, timedelta, timezone
 from html import escape
 import json
@@ -345,10 +346,16 @@ def main() -> int:
     parser.add_argument("--status", type=Path, default=Path(".content-marketplace/status.json"))
     parser.add_argument("--api-base", default=os.environ.get("PARTNERSTACK_API_BASE", API_BASE))
     parser.add_argument("--submit", action="store_true")
+    parser.add_argument("--inspect-only", action="store_true", help="Check the connection without writing or submitting anything")
     args = parser.parse_args()
     api_key = os.environ.get("PARTNERSTACK_API_KEY", "").strip()
     if not api_key:
         raise RuntimeError("PARTNERSTACK_API_KEY is required")
+    if args.inspect_only:
+        orders = [normalize_order(item) for item in fetch_orders(api_key, args.api_base)]
+        statuses = Counter(item["status"] for item in orders if item["key"])
+        print(f"Content Marketplace connection verified: {len(orders)} order(s); statuses={dict(sorted(statuses.items()))}")
+        return 0
     result = run(api_key, args.state, args.status, api_base=args.api_base, submit=args.submit)
     print(
         f"Content Marketplace: {result['orders_total']} order(s), "
