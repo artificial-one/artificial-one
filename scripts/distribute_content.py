@@ -481,8 +481,12 @@ def create_linkedin_post(access_token: str, payload: dict[str, Any]) -> str:
         headers=linkedin_headers(access_token),
         method="POST",
     )
-    with urlopen(request, timeout=30) as response:
-        post_urn = response.headers.get("X-RestLi-Id") or response.headers.get("x-restli-id")
+    try:
+        with urlopen(request, timeout=30) as response:
+            post_urn = response.headers.get("X-RestLi-Id") or response.headers.get("x-restli-id")
+    except HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")[:1200]
+        raise RuntimeError(f"LinkedIn rejected the post (HTTP {exc.code}): {detail}") from exc
     if not post_urn:
         raise ValueError("LinkedIn accepted the post but did not return its identifier")
     return str(post_urn)
