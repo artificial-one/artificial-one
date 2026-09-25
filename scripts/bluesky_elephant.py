@@ -30,8 +30,8 @@ except ModuleNotFoundError:  # Direct execution: python scripts/bluesky_elephant
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_STATE = ROOT / ".revenue-acceleration" / "bluesky-elephant.json"
 MAX_BONUS_POSTS_PER_DAY = 1
-MAX_REPLIES_PER_DAY = 3
-MAX_DISCOVERY_REPLIES_PER_DAY = 1
+MAX_REPLIES_PER_DAY = 4
+MAX_DISCOVERY_REPLIES_PER_DAY = 2
 MAX_LIKES_PER_DAY = 5
 MAX_FOLLOWS_PER_DAY = 2
 STATE_RETENTION_DAYS = 21
@@ -44,13 +44,13 @@ TOPIC_KEYWORDS = {
     "growth workflow": ("marketing", "seo", "sales", "conversion", "email", "social media"),
 }
 SEARCH_QUERIES = (
-    '"AI tools"',
-    '"AI workflow"',
-    '"AI agent"',
-    '"AI subscription"',
-    '"which AI"',
-    '"best AI tool"',
-    '"LLM tools"',
+    "AI tools",
+    "AI workflow",
+    "AI agent",
+    "AI automation",
+    "AI subscription",
+    "best AI tool",
+    "LLM tools",
 )
 TOPICAL_PROFILE_WORDS = (
     "ai", "tech", "software", "automation", "developer", "marketing",
@@ -439,11 +439,26 @@ def parse_time(value: str) -> datetime | None:
 
 
 def discovery_candidates(active_session: dict[str, Any], as_of: date) -> list[dict[str, Any]]:
-    query = SEARCH_QUERIES[as_of.toordinal() % len(SEARCH_QUERIES)]
-    payload = authenticated_get(active_session, "app.bsky.feed.searchPosts", {
-        "q": query, "sort": "latest", "lang": "en", "limit": 25,
-    })
-    return [item for item in payload.get("posts", []) if isinstance(item, dict)]
+    """Search several adjacent topics so one sparse query cannot silence engagement."""
+    start = as_of.toordinal() % len(SEARCH_QUERIES)
+    found: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for offset in range(len(SEARCH_QUERIES)):
+        query = SEARCH_QUERIES[(start + offset) % len(SEARCH_QUERIES)]
+        payload = authenticated_get(active_session, "app.bsky.feed.searchPosts", {
+            "q": query, "sort": "latest", "lang": "en", "limit": 20,
+        })
+        for item in payload.get("posts", []):
+            if not isinstance(item, dict):
+                continue
+            identity = str(item.get("uri") or item.get("cid") or "")
+            if not identity or identity in seen:
+                continue
+            seen.add(identity)
+            found.append(item)
+        if len(found) >= 60:
+            break
+    return found
 
 
 def candidate_is_recent_question(item: dict[str, Any], active_session: dict[str, Any], now: datetime) -> bool:
@@ -451,9 +466,9 @@ def candidate_is_recent_question(item: dict[str, Any], active_session: dict[str,
     record = item.get("record") if isinstance(item.get("record"), dict) else {}
     text = str(record.get("text") or "")
     created = parse_time(str(record.get("createdAt") or ""))
-    if not created or now - created > timedelta(hours=12) or created > now + timedelta(minutes=5):
+    if not created or now - created > timedelta(hours=24) or created > now + timedelta(minutes=5):
         return False
-    if record.get("reply") or "?" not in text or not (40 <= len(text) <= 290):
+    if record.get("reply") or not (40 <= len(text) <= 290):
         return False
     if not relevant(text) or not safe_text(text) or asks_for_opt_out(f"{text} {author.get('description', '')}"):
         return False
@@ -474,7 +489,13 @@ def discover_and_engage(
         return []
     now = now or utc_now()
     opt_out = set(state.get("opt_out_dids") or [])
-    for item in discovery_candidates(active_session, as_of):
+    candidates = discovery_candidates(active_session, as_of)
+    candidates.sort(key=lambda item: (
+        "?" not in str((item.get("record") or {}).get("text") or ""),
+        -int(item.get("likeCount") or 0),
+        -int(item.get("repostCount") or 0),
+    ))
+    for item in candidates:
         uri = str(item.get("uri") or "")
         cid = str(item.get("cid") or "")
         author = item.get("author") if isinstance(item.get("author"), dict) else {}
@@ -496,14 +517,14 @@ def discover_and_engage(
         bucket["discovery_replies"].append(uri)
         remember_ai_reply(state, response_text, used_ai)
         save_state(state_path, state, as_of)
-        notes = [f"joined @{author.get('handle') or did}'s AI-tool question"]
+        notes = [f"joined @{author.get('handle') or did}'s AI-tool conversation"]
         if uri not in bucket["liked_uris"] and len(bucket["liked_uris"]) < MAX_LIKES_PER_DAY:
             like_post(active_session, subject)
             bucket["liked_uris"].append(uri)
             save_state(state_path, state, as_of)
-            notes.append(f"liked @{author.get('handle') or did}'s question")
+            notes.append(f"liked @{author.get('handle') or did}'s post")
         return notes
-    return []
+    return [f"searched {len(candidates)} recent AI posts; no safe, relevant conversation was available"]
 
 
 def run(state_path: Path, as_of: date | None = None) -> str:

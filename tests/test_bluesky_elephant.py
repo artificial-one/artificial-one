@@ -70,7 +70,7 @@ class BlueskyElephantTests(unittest.TestCase):
         self.assertEqual(reply, generated)
         self.assertEqual(state["recent_ai_replies"], [generated])
 
-    def test_discovery_requires_recent_relevant_non_promotional_question(self):
+    def test_discovery_requires_recent_relevant_non_promotional_post(self):
         now = datetime(2026, 9, 23, 12, tzinfo=timezone.utc)
         session = {"did": "did:example:self"}
         base = {
@@ -83,6 +83,14 @@ class BlueskyElephantTests(unittest.TestCase):
             },
         }
         self.assertTrue(elephant.candidate_is_recent_question(base, session, now))
+        useful_statement = {
+            **base,
+            "record": {
+                **base["record"],
+                "text": "My AI workflow finally removed a repetitive developer task instead of adding another dashboard.",
+            },
+        }
+        self.assertTrue(elephant.candidate_is_recent_question(useful_statement, session, now))
         promo = {**base, "record": {**base["record"], "text": "Which AI tool? Buy now https://spam.test"}}
         self.assertFalse(elephant.candidate_is_recent_question(promo, session, now))
         stale = {**base, "record": {**base["record"], "createdAt": "2026-09-22T10:30:00Z"}}
@@ -143,8 +151,8 @@ class BlueskyElephantTests(unittest.TestCase):
 
     def test_day_limits_are_intentionally_conservative(self):
         self.assertEqual(elephant.MAX_BONUS_POSTS_PER_DAY, 1)
-        self.assertEqual(elephant.MAX_REPLIES_PER_DAY, 3)
-        self.assertEqual(elephant.MAX_DISCOVERY_REPLIES_PER_DAY, 1)
+        self.assertEqual(elephant.MAX_REPLIES_PER_DAY, 4)
+        self.assertEqual(elephant.MAX_DISCOVERY_REPLIES_PER_DAY, 2)
         self.assertEqual(elephant.MAX_LIKES_PER_DAY, 5)
         self.assertEqual(elephant.MAX_FOLLOWS_PER_DAY, 2)
 

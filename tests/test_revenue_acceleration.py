@@ -130,6 +130,18 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertIn("#AITools", commentary)
         self.assertLessEqual(len(commentary), 3000)
 
+    def test_linkedin_partner_card_clicks_through_to_affiliate_destination(self):
+        item = next(candidate for candidate in distribution.queue() if candidate.get("affiliate_url"))
+        payload = distribution.linkedin_post_payload(
+            "urn:li:person:123", item, "urn:li:digitalmediaAsset:456",
+        )
+        share = payload["specificContent"]["com.linkedin.ugc.ShareContent"]
+        self.assertEqual(share["shareMediaCategory"], "ARTICLE")
+        self.assertEqual(share["media"][0]["originalUrl"], item["affiliate_url"])
+        self.assertEqual(share["media"][0]["media"], "urn:li:digitalmediaAsset:456")
+        self.assertIn(item["affiliate_url"], share["shareCommentary"]["text"])
+        self.assertIn("may earn a commission", share["shareCommentary"]["text"])
+
     def test_linkedin_weekly_cadence_is_twelve_visual_posts(self):
         week = [date(2026, 9, 21 + offset) for offset in range(7)]
         bonus = [distribution.linkedin_bonus_item(day) for day in week]

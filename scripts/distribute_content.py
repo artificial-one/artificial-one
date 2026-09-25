@@ -92,6 +92,7 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, Any]
     # Avoid platform-specific strftime flags for removing a leading zero.
     edition = f"{as_of.strftime('%b')} {as_of.day}"
     item_id = f"daily-{as_of.isoformat()}"
+    affiliate_url = ""
 
     if day == 0:
         resource_id, title, path, description = RESOURCES[week % len(RESOURCES)]
@@ -118,6 +119,7 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, Any]
         ]
     elif day in (2, 5):
         offer = offers[(week * 2 + (1 if day == 5 else 0)) % len(offers)]
+        affiliate_url = str(offer.get("tracking_url") or "")
         use_cases = list(offer.get("use_cases") or [])
         use_case = str(use_cases[week % len(use_cases)]) if use_cases else str(offer.get("best_for", "a practical AI workflow"))
         title = f"One practical way to use {offer['name']}"
@@ -132,6 +134,7 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, Any]
         ]
     elif day == 3:
         offer = offers[(week + 5) % len(offers)]
+        affiliate_url = str(offer.get("tracking_url") or "")
         title = f"Before you buy {offer['name']}"
         description = str(offer.get("watch_out") or offer.get("pricing_note") or "Check current limits, pricing and workflow fit before subscribing.")
         path = f"partner-offers/{offer['slug']}.html"
@@ -165,6 +168,7 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, Any]
                 ]
             else:
                 offer = offers[(week + 11) % len(offers)]
+                affiliate_url = str(offer.get("tracking_url") or "")
                 title = f"Current pricing check: {offer['name']}"
                 description = str(offer.get("pricing_note") or "Verify the current plan and limits before subscribing.")
                 path = f"partner-offers/{offer['slug']}.html"
@@ -194,7 +198,7 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, Any]
             "Use the related calculators and buying guides to turn news into a concrete software decision.",
         ]
 
-    return {
+    result = {
         "id": item_id,
         "image_key": "daily-editorial",
         "daily": "true",
@@ -209,6 +213,9 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, Any]
         "text": text[:295],
         "thread": thread,
     }
+    if affiliate_url:
+        result["affiliate_url"] = affiliate_url
+    return result
 
 
 def queue(as_of: date | None = None) -> list[dict[str, Any]]:
@@ -284,6 +291,7 @@ def queue(as_of: date | None = None) -> list[dict[str, Any]]:
             "image": f"https://artificial.one/images/social-cards/{offer['id']}.jpg",
             "image_alt": f"Independent {offer['name']} fit, use-case and pricing guide from Artificial.One",
             "url": url,
+            "affiliate_url": str(offer.get("tracking_url") or ""),
             "text": text[:295],
         })
     return result
@@ -421,10 +429,16 @@ def linkedin_commentary(item: dict[str, Any]) -> str:
     paragraphs = [lead]
     if context and context.casefold() not in lead.casefold():
         paragraphs.append(context)
-    paragraphs.extend([
-        f"Explore the guide: {item['url']}",
-        "#ArtificialIntelligence #AITools #BusinessAutomation",
-    ])
+    affiliate_url = str(item.get("affiliate_url") or "").strip()
+    if affiliate_url:
+        paragraphs.extend([
+            f"Open the current partner offer: {affiliate_url}",
+            f"Read the independent guide: {item['url']}",
+            "Partner link: Artificial.One may earn a commission at no extra cost to you.",
+        ])
+    else:
+        paragraphs.append(f"Explore the guide: {item['url']}")
+    paragraphs.append("#ArtificialIntelligence #AITools #BusinessAutomation")
     return "\n\n".join(paragraphs)[:3000]
 
 
@@ -478,6 +492,29 @@ def linkedin_post_url(post_urn: str) -> str:
     return f"https://www.linkedin.com/feed/update/{post_urn}/"
 
 
+def linkedin_post_payload(author_urn: str, item: dict[str, Any], asset_urn: str) -> dict[str, Any]:
+    """Build a linked visual card instead of a non-clickable image lightbox."""
+    destination = str(item.get("affiliate_url") or item["url"]).strip()
+    return {
+        "author": author_urn,
+        "lifecycleState": "PUBLISHED",
+        "specificContent": {
+            "com.linkedin.ugc.ShareContent": {
+                "shareCommentary": {"text": linkedin_commentary(item)},
+                "shareMediaCategory": "ARTICLE",
+                "media": [{
+                    "status": "READY",
+                    "description": {"text": str(item["description"])[:200]},
+                    "media": asset_urn,
+                    "originalUrl": destination,
+                    "title": {"text": str(item["title"])[:200]},
+                }],
+            }
+        },
+        "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"},
+    }
+
+
 def post_linkedin(access_token: str, author_urn: str, item: dict[str, Any]) -> dict[str, str]:
     author_urn = linkedin_author_urn(access_token, author_urn)
     image_path = ROOT / item["image"].split("https://artificial.one/", 1)[-1]
@@ -485,23 +522,7 @@ def post_linkedin(access_token: str, author_urn: str, item: dict[str, Any]) -> d
         raise FileNotFoundError(f"Social card is missing: {image_path}")
     asset_urn, upload_url = register_linkedin_image(access_token, author_urn)
     upload_linkedin_image(upload_url, image_path)
-    payload = {
-        "author": author_urn,
-        "lifecycleState": "PUBLISHED",
-        "specificContent": {
-            "com.linkedin.ugc.ShareContent": {
-                "shareCommentary": {"text": linkedin_commentary(item)},
-                "shareMediaCategory": "IMAGE",
-                "media": [{
-                    "status": "READY",
-                    "description": {"text": str(item["description"])[:200]},
-                    "media": asset_urn,
-                    "title": {"text": str(item["title"])[:200]},
-                }],
-            }
-        },
-        "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"},
-    }
+    payload = linkedin_post_payload(author_urn, item, asset_urn)
     post_urn = create_linkedin_post(access_token, payload)
     return {"urn": post_urn, "url": linkedin_post_url(post_urn)}
 
