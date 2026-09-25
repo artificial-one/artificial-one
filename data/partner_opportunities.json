@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-24",
+  "updated_at": "2026-09-25",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -9,8 +9,8 @@
     "approved_link_pending": 18,
     "existing_active": 25,
     "not_qualified": 14,
-    "policy_review_required": 20,
-    "ready_for_owner_application": 399
+    "policy_review_required": 22,
+    "ready_for_owner_application": 397
   },
   "opportunities": [
     {
@@ -10239,18 +10239,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": true,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -19681,18 +19673,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -24012,7 +23996,7 @@
       "name": "Guesty",
       "slug": "guesty",
       "description": "With Guesty’s Affiliate Program, you can earn an additional stream of income, with up to 5K per referral Help your network of hospitality pros succeed in growing their businesses with our advanced hospitality operations platform.",
-      "offer": "$50 for per Listing",
+      "offer": "Earn $100 for a Customer's First Listing",
       "tags": [
         "Hot",
         "Trusted"
@@ -24078,7 +24062,7 @@
       "name": "LettrLabs",
       "slug": "lettrlabs",
       "description": "LettrLabs is an automated direct mail platform designed to target, segment, automate and measure results of campaigns. We empower organizations to connect with their clients through personalized, handwritten mailers that leave a lasting impression using automations that make direct mail as easy as digital.",
-      "offer": "Earn 3% for 12 months",
+      "offer": "Earn 4% for 18 months",
       "tags": [],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/lettrlabs?company=lettrlabs&gref=marketplace",
       "terms_url": "https://www.lettrlabs.com/company/terms-of-service",
