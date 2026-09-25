@@ -85,21 +85,6 @@
       ]
     },
     {
-      "offer_id": "omniseo",
-      "name": "AO Generic Intent - OmniSEO",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/omniseo-search-optimization.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-omniseo",
-      "keywords": [
-        "seo visibility",
-        "find seo improvement opportunities",
-        "organize content optimization work"
-      ],
-      "negative_keywords": [
-        "OmniSEO"
-      ]
-    },
-    {
       "offer_id": "brkox",
       "name": "AO Generic Intent - brkox",
       "eligible": false,
@@ -112,6 +97,21 @@
       ],
       "negative_keywords": [
         "brkox"
+      ]
+    },
+    {
+      "offer_id": "omniseo",
+      "name": "AO Generic Intent - OmniSEO",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/omniseo-search-optimization.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-omniseo",
+      "keywords": [
+        "seo visibility",
+        "find seo improvement opportunities",
+        "organize content optimization work"
+      ],
+      "negative_keywords": [
+        "OmniSEO"
       ]
     },
     {
