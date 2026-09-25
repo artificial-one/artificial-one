@@ -107,7 +107,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Refresh AppSumo availability"
-          git push
+          # A social receipt or another publisher can legitimately update main
+          # after this longer audit checked it out. Replay the generated-output
+          # commit on top of that update instead of losing a completed audit.
+          if ! git push; then
+            git fetch origin main
+            git rebase origin/main
+            git push
+          fi
 
       - name: Add public-safe result to the workflow summary
         if: always() && steps.monitor.outcome == 'success'
