@@ -436,7 +436,7 @@ def linkedin_commentary(item: dict[str, Any]) -> str:
         paragraphs.extend([
             f"Open the current partner offer: {affiliate_url}",
             f"Read the independent guide: {item['url']}",
-            "Partner link: Artificial.One may earn a commission at no extra cost to you.",
+            "Affiliate disclosure: we may earn a commission at no extra cost to you.",
         ])
     else:
         paragraphs.append(f"Explore the guide: {item['url']}")

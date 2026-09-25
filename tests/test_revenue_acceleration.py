@@ -140,6 +140,7 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertEqual(article["thumbnail"], "urn:li:image:456")
         self.assertIn(item["affiliate_url"], payload["commentary"])
         self.assertIn("may earn a commission", payload["commentary"])
+        self.assertNotIn("Artificial.One may earn", payload["commentary"])
         self.assertEqual(payload["distribution"]["feedDistribution"], "MAIN_FEED")
 
     def test_linkedin_weekly_cadence_is_twelve_visual_posts(self):
