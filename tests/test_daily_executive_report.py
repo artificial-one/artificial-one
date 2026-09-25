@@ -76,7 +76,7 @@ class DailyExecutiveReportTests(unittest.TestCase):
                     "previous": {"clicks": 6, "impressions": 400, "ctr": .015, "position": 10.2},
                 },
                 "sitemap": {"counts_available": True, "submitted": 120, "indexed": 87, "errors": 0, "warnings": 1},
-                "indexing": {"indexed": 38, "inspected": 40, "newly_indexed": ["one"], "lost_indexing": [], "issue_details": [
+                "indexing": {"affiliate_pages": 40, "indexed": 38, "inspected": 40, "issues": 2, "complete": True, "newly_indexed": ["one"], "lost_indexing": [], "issue_details": [
                     {"url": "https://artificial.one/partner-offers/broken.html", "detail": "Crawled - currently not indexed"}
                 ]},
                 "commercial_search": {"pages_with_impressions": 9, "top_pages": []},
@@ -84,7 +84,8 @@ class DailyExecutiveReportTests(unittest.TestCase):
         }
         _, text, html = render(model)
         self.assertIn("Sitemap indexed/submitted: 87 / 120", text)
-        self.assertIn("Priority pages indexed: 38/40", text)
+        self.assertIn("Affiliate pages checked: 40/40", text)
+        self.assertIn("Are our affiliate pages indexed and healthy?", html)
         self.assertIn("2026-08-25 to 2026-09-21", html)
         self.assertIn("Crawled - currently not indexed", html)
         self.assertIn("Open Google Search Console", html)

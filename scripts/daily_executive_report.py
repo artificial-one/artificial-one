@@ -507,6 +507,10 @@ def render_search(search: dict[str, Any]) -> tuple[str, str]:
     position = float(current.get("position") or 0)
     indexed = integer(indexing.get("indexed"))
     inspected = integer(indexing.get("inspected"))
+    affiliate_pages = integer(indexing.get("affiliate_pages")) or inspected
+    index_issues = integer(indexing.get("issues"))
+    api_errors = integer(indexing.get("api_errors"))
+    healthy_percent = (indexed / affiliate_pages * 100) if affiliate_pages else 0
 
     if sitemap.get("counts_available"):
         sitemap_value = f"{integer(sitemap.get('indexed'))} / {integer(sitemap.get('submitted'))}"
@@ -541,19 +545,20 @@ def render_search(search: dict[str, Any]) -> tuple[str, str]:
     lost = len(indexing.get("lost_indexing") or [])
     search_console_url = "https://search.google.com/search-console?resource_id=" + quote("https://artificial.one/", safe="")
     html = f'''<tr><td style="padding:12px 30px"><div style="background:#eaf3ff;border-radius:18px;padding:22px">
-      <h2 style="font-size:18px;margin:0 0 5px">Google search and indexing</h2>
+      <h2 style="font-size:18px;margin:0 0 5px">Are our affiliate pages indexed and healthy?</h2>
       <p style="font-size:13px;color:#667085;margin:0 0 14px">Final Google data for {escape(str(period.get('start') or '?'))} to {escape(str(period.get('end') or '?'))}; Search Console normally has a {integer(period.get('data_lag_days'))}-day delay.</p>
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
-        {metric_card('Google clicks', str(clicks), '#f1edff')}
-        {metric_card('Search appearances', str(impressions), '#fff3df')}
-        {metric_card('Sitemap indexed / submitted', sitemap_value, '#e9f8f1')}
-        {metric_card('Priority pages indexed', f'{indexed} / {inspected}', '#f7f5fd')}
+        {metric_card('Affiliate pages checked', f'{inspected} / {affiliate_pages}', '#f1edff')}
+        {metric_card('Indexed and healthy', f'{indexed} · {healthy_percent:.1f}%', '#e9f8f1')}
+        {metric_card('Need indexing attention', str(index_issues), '#fff3df')}
+        {metric_card('Appearing in Google', str(integer(commercial.get('pages_with_impressions'))), '#f7f5fd')}
       </tr></table>
       <div style="font-size:13px;color:#475467;line-height:1.6;margin-top:12px">
+        Audit coverage: <strong>{'complete' if indexing.get('complete') else 'incomplete'}</strong> · API checks that could not complete: <strong>{api_errors}</strong>.<br>
         Clicks: {escape(trend_text(clicks, integer(previous.get('clicks'))))}. Impressions: {escape(trend_text(impressions, integer(previous.get('impressions'))))}.<br>
-        Click-through rate: <strong>{ctr * 100:.2f}%</strong> ({escape(trend_text(ctr, float(previous.get('ctr') or 0), percentage_points=True))}). Average position: <strong>{position:.1f}</strong> ({escape(trend_text(position, float(previous.get('position') or 0), lower_is_better=True))}).<br>
-        <strong>{integer(commercial.get('pages_with_impressions'))}</strong> affiliate page(s) appeared in Google results · <strong>{newly}</strong> newly indexed in the inspected set · <strong>{lost}</strong> lost indexing · sitemap errors <strong>{integer(sitemap.get('errors'))}</strong>, warnings <strong>{integer(sitemap.get('warnings'))}</strong>.<br>
-        <span style="color:#667085">{escape(sitemap_note)}.</span>
+        Google clicks: <strong>{clicks}</strong> · search appearances: <strong>{impressions}</strong> · click-through rate: <strong>{ctr * 100:.2f}%</strong> · average position: <strong>{position:.1f}</strong>.<br>
+        Changes since the previous audit: <strong>{newly}</strong> newly indexed · <strong>{lost}</strong> lost indexing. Sitemap: <strong>{sitemap_value}</strong> indexed/submitted · errors <strong>{integer(sitemap.get('errors'))}</strong> · warnings <strong>{integer(sitemap.get('warnings'))}</strong>.<br>
+        <span style="color:#667085">{escape(sitemap_note)}. Ranking data is delayed by Google, while the URL health check runs daily.</span>
       </div>
       {issue_block}
       <div style="margin-top:17px"><strong>Affiliate pages getting the most Google visibility</strong>{top_html}</div>
@@ -562,8 +567,9 @@ def render_search(search: dict[str, Any]) -> tuple[str, str]:
     text = "\n".join([
         f"Period: {period.get('start')} to {period.get('end')} ({period.get('data_lag_days', 3)}-day data delay)",
         f"Google clicks: {clicks}; search appearances: {impressions}; CTR: {ctr * 100:.2f}%; average position: {position:.1f}",
+        f"Affiliate pages checked: {inspected}/{affiliate_pages}; indexed and healthy: {indexed}; need attention: {index_issues}; API errors: {api_errors}",
         f"Sitemap indexed/submitted: {sitemap_value}; sitemap errors: {integer(sitemap.get('errors'))}; warnings: {integer(sitemap.get('warnings'))}",
-        f"Priority pages indexed: {indexed}/{inspected}; newly indexed: {newly}; lost indexing: {lost}",
+        f"Newly indexed: {newly}; lost indexing: {lost}",
         f"Affiliate pages with Google impressions: {integer(commercial.get('pages_with_impressions'))}",
         issue_text,
     ])

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from html import escape
 import json
@@ -51,7 +52,9 @@ MIN_EXPERIMENT_IMPRESSIONS = 80
 EXPERIMENT_DAYS = 14
 MAX_EXPERIMENT_DAYS = 28
 MAX_NEW_EXPERIMENTS = 3
-MAX_INSPECTIONS = 40
+MAX_INSPECTIONS = 1800
+MAX_REPORT_INSPECTIONS = 40
+INSPECTION_WORKERS = 8
 CONTENT_PRIORITY_DAYS = 7
 MIN_DEMAND_PAGE_IMPRESSIONS = 30
 MAX_DEMAND_PAGES = 12
@@ -213,10 +216,12 @@ def build_executive_snapshot(
         "performance": {"current": current, "previous": previous},
         "sitemap": sitemap,
         "indexing": {
+            "affiliate_pages": len(monetized_paths),
             "inspected": len(inspections),
             "indexed": sum(item.get("status") == "PASS" for item in inspections),
             "issues": len(issues),
             "api_errors": sum(item.get("status") == "API_ERROR" for item in inspections),
+            "complete": len(inspections) == len(monetized_paths),
             "newly_indexed": newly_indexed,
             "lost_indexing": lost_indexing,
             "issue_details": issues[:10],
@@ -523,12 +528,14 @@ def update_experiments(
     return actions
 
 
-def inspection_targets(site_url: str, weights: dict[str, float]) -> list[str]:
+def inspection_targets(
+    site_url: str, weights: dict[str, float], monetized_paths: set[str] | None = None,
+) -> list[str]:
+    """Return every monetized page, ordered with revenue pages first."""
     base = site_url.rstrip("/")
-    priorities = ["/", "/ai-tool-finder.html", "/partner-offers.html"]
-    priorities.extend(path for path, _ in sorted(weights.items(), key=lambda item: -item[1]))
-    search_pages = sorted((ROOT / "search-intent").glob("*.html")) if (ROOT / "search-intent").exists() else []
-    priorities.extend("/" + page.relative_to(ROOT).as_posix() for page in search_pages)
+    monetized_paths = monetized_paths if monetized_paths is not None else affiliate_paths()
+    weighted = [path for path, _ in sorted(weights.items(), key=lambda item: -item[1])]
+    priorities = weighted + sorted(monetized_paths)
     unique: list[str] = []
     for path in priorities:
         url = base + (path if path.startswith("/") else "/" + path)
@@ -543,13 +550,11 @@ def _canonical_key(url: str) -> tuple[str, str]:
 
 
 def inspect_urls(session: Any, site_url: str, urls: list[str]) -> list[dict[str, str]]:
-    results: list[dict[str, str]] = []
-    for url in urls:
+    def inspect_one(url: str) -> dict[str, str]:
         try:
             response = session.post(INSPECTION_API, json={"inspectionUrl": url, "siteUrl": site_url}, timeout=35)
             if response.status_code >= 400:
-                results.append({"url": url, "status": "API_ERROR", "detail": f"HTTP {response.status_code}"})
-                continue
+                return {"url": url, "status": "API_ERROR", "detail": f"HTTP {response.status_code}"}
             inspection = response.json().get("inspectionResult", {})
             index = inspection.get("indexStatusResult", {}) if isinstance(inspection, dict) else {}
             problems: list[str] = []
@@ -564,18 +569,21 @@ def inspect_urls(session: Any, site_url: str, urls: list[str]) -> list[dict[str,
             user_canonical = str(index.get("userCanonical") or "")
             if google_canonical and user_canonical and _canonical_key(google_canonical) != _canonical_key(user_canonical):
                 problems.append("Google-selected canonical differs")
-            results.append(
-                {
-                    "url": url,
-                    "status": "PASS" if not problems else "ISSUE",
-                    "detail": "; ".join(problems) or "Indexed and crawlable",
-                    "last_crawl": str(index.get("lastCrawlTime") or "Not yet crawled"),
-                    "rich_results": str((inspection.get("richResultsResult") or {}).get("verdict") or "UNKNOWN") if isinstance(inspection, dict) else "UNKNOWN",
-                }
-            )
+            return {
+                "url": url,
+                "status": "PASS" if not problems else "ISSUE",
+                "detail": "; ".join(problems) or "Indexed and crawlable",
+                "last_crawl": str(index.get("lastCrawlTime") or "Not yet crawled"),
+                "rich_results": str((inspection.get("richResultsResult") or {}).get("verdict") or "UNKNOWN") if isinstance(inspection, dict) else "UNKNOWN",
+            }
         except Exception as exc:  # One URL must not prevent the remaining audit.
-            results.append({"url": url, "status": "API_ERROR", "detail": type(exc).__name__})
-    return results
+            return {"url": url, "status": "API_ERROR", "detail": type(exc).__name__}
+
+    # One complete daily pass stays below Google's daily inspection allowance.
+    # A small worker pool avoids turning hundreds of independent API calls into
+    # a multi-hour job while remaining comfortably below per-minute limits.
+    with ThreadPoolExecutor(max_workers=INSPECTION_WORKERS) as executor:
+        return list(executor.map(inspect_one, urls))
 
 
 def inspection_signature(results: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -591,7 +599,7 @@ def render_report(
     text_lines = [subject, "", summary, "", "INDEX AUDIT"]
     text_lines.extend(
         f"- {item['status']}: {item['url']} — {item['detail']}; last crawl {item.get('last_crawl', 'unknown')}; rich results {item.get('rich_results', 'unknown')}"
-        for item in inspections[:MAX_INSPECTIONS]
+        for item in inspections[:MAX_REPORT_INSPECTIONS]
     )
     if not inspections:
         text_lines.append("- No URL was inspected.")
@@ -606,7 +614,7 @@ def render_report(
         text_lines.append("- Search Console has not accumulated enough eligible data yet.")
     text_lines.extend(["", "PRIVACY", "Raw queries and performance baselines remain in the private workflow/email. No customer identity or private total is committed to the public repository."])
 
-    issue_rows = "".join(f"<tr><td>{escape(item['status'])}</td><td>{escape(item['url'])}</td><td>{escape(item['detail'])}</td><td>{escape(item.get('last_crawl', 'unknown'))}</td><td>{escape(item.get('rich_results', 'unknown'))}</td></tr>" for item in inspections[:MAX_INSPECTIONS]) or "<tr><td colspan='5'>No URL was inspected.</td></tr>"
+    issue_rows = "".join(f"<tr><td>{escape(item['status'])}</td><td>{escape(item['url'])}</td><td>{escape(item['detail'])}</td><td>{escape(item.get('last_crawl', 'unknown'))}</td><td>{escape(item.get('rich_results', 'unknown'))}</td></tr>" for item in inspections[:MAX_REPORT_INSPECTIONS]) or "<tr><td colspan='5'>No URL was inspected.</td></tr>"
     opportunity_rows = "".join(f"<tr><td>{escape(str(item['query']))}</td><td>{item['position']}</td><td>{item['impressions']}</td><td>{item['estimated_click_gap']}</td><td>{'Revenue' if item['commercial'] else 'Audience'}</td></tr>" for item in opportunities[:20]) or "<tr><td colspan='5'>Not enough eligible data yet.</td></tr>"
     action_rows = "".join(f"<li>{escape(item)}</li>" for item in actions) or "<li>No experiment changed today.</li>"
     style = "border-collapse:collapse;width:100%;font-size:13px"
@@ -663,7 +671,7 @@ def main() -> int:
         actions.extend(update_content_priority(opportunities, public, private, date.today()))
         actions.extend(update_demand_pages(rows, public, private, date.today()))
         actions.extend(update_observed_pages(rows, public, date.today()))
-        inspections = inspect_urls(session, site_property, inspection_targets(args.origin, weights))
+        inspections = inspect_urls(session, site_property, inspection_targets(args.origin, weights, monetized_paths))
         actions.extend(update_crawl_priority(inspections, public, date.today()))
         current_issues = inspection_signature(inspections)
         if current_issues != private.get("last_index_issues", []):

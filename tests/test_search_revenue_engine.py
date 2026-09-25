@@ -113,8 +113,13 @@ class SearchRevenueEngineTests(unittest.TestCase):
             engine.resolve_site_property(session)
 
     def test_inspection_targets_always_use_public_origin(self):
-        targets = engine.inspection_targets("https://artificial.one", {})
+        targets = engine.inspection_targets(
+            "https://artificial.one", {"/partner-offers/priority.html": 2.0},
+            {"/partner-offers/priority.html", "/appsumo-guides/other.html"},
+        )
         self.assertTrue(all(item.startswith("https://artificial.one/") for item in targets))
+        self.assertEqual(len(targets), 2)
+        self.assertTrue(targets[0].endswith("/partner-offers/priority.html"))
 
     def test_revenue_weight_changes_priority(self):
         rows = [
@@ -207,6 +212,7 @@ class SearchRevenueEngineTests(unittest.TestCase):
             {"/partner-offers/useful.html"}, date(2026, 8, 1), date(2026, 8, 28), previous,
         )
         self.assertEqual(snapshot["indexing"]["indexed"], 1)
+        self.assertEqual(snapshot["indexing"]["affiliate_pages"], 1)
         self.assertEqual(len(snapshot["indexing"]["newly_indexed"]), 1)
         self.assertEqual(len(snapshot["indexing"]["lost_indexing"]), 1)
         self.assertEqual(snapshot["commercial_search"]["pages_with_impressions"], 1)
