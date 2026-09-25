@@ -85,21 +85,6 @@
       ]
     },
     {
-      "offer_id": "omniseo",
-      "name": "AO Generic Intent - OmniSEO",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/omniseo-search-optimization.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-omniseo",
-      "keywords": [
-        "seo visibility",
-        "find seo improvement opportunities",
-        "organize content optimization work"
-      ],
-      "negative_keywords": [
-        "OmniSEO"
-      ]
-    },
-    {
       "offer_id": "brkox",
       "name": "AO Generic Intent - brkox",
       "eligible": false,
@@ -115,18 +100,33 @@
       ]
     },
     {
-      "offer_id": "rank-prompt",
-      "name": "AO Generic Intent - Rank Prompt",
+      "offer_id": "omniseo",
+      "name": "AO Generic Intent - OmniSEO",
       "eligible": false,
       "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/rank-prompt-ai-visibility.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-rank-prompt",
+      "landing_url": "https://artificial.one/partner-offers/omniseo-search-optimization.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-omniseo",
       "keywords": [
         "seo visibility",
-        "monitor brand mentions in ai answers",
-        "compare ai search visibility with competitors"
+        "find seo improvement opportunities",
+        "organize content optimization work"
       ],
       "negative_keywords": [
-        "Rank Prompt"
+        "OmniSEO"
+      ]
+    },
+    {
+      "offer_id": "pinecone",
+      "name": "AO Generic Intent - Pinecone",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/pinecone-vector-database.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-pinecone",
+      "keywords": [
+        "developer infrastructure",
+        "build retrieval augmented generation",
+        "add semantic search to an application"
+      ],
+      "negative_keywords": [
+        "Pinecone"
       ]
     }
   ],
