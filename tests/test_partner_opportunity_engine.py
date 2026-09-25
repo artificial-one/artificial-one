@@ -189,6 +189,52 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
             finally:
                 scout.partnerstack_links = original
 
+    def test_dashboard_confirmed_partnerstack_link_is_published(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "data").mkdir()
+            (root / "data/partner_offers.json").write_text('{"version":1,"offers":[]}', encoding="utf-8")
+            (root / "data/partnerstack_program_audit.json").write_text('{"version":1,"programs":[],"summary":{}}', encoding="utf-8")
+            (root / "data/partnerstack_confirmed_links.json").write_text(json.dumps({"programs": [{
+                "name": "Confirmed AI", "slug": "confirmed-ai", "status": "active",
+                "tracking_url": "https://partner.example/ref/artificial-one",
+            }]}), encoding="utf-8")
+            opportunity = {
+                "network": "partnerstack", "name": "Confirmed AI", "slug": "confirmed-ai",
+                "approved": True, "authenticated_relationship": True,
+                "source": "https://dash.partnerstack.com/home", "policy": {"status": "missing"},
+                "tags": ["Software"],
+            }
+            added = scout.merge_auto_offers(
+                root, [opportunity], {"confirmedai": {"key": "part_confirmed", "status": "active"}}, "partner-key"
+            )
+            self.assertEqual(added, ["Confirmed AI"])
+            registry = json.loads((root / "data/partner_offers.json").read_text(encoding="utf-8"))
+            self.assertEqual(registry["offers"][0]["tracking_url"], "https://partner.example/ref/artificial-one")
+
+    def test_paused_partnerstack_program_is_not_reported_as_waiting_for_link(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "data").mkdir()
+            (root / "data/partner_offers.json").write_text('{"version":1,"offers":[]}', encoding="utf-8")
+            (root / "data/partnerstack_program_audit.json").write_text('{"version":1,"programs":[],"summary":{}}', encoding="utf-8")
+            (root / "data/partnerstack_confirmed_links.json").write_text(json.dumps({"programs": [{
+                "name": "Paused AI", "slug": "paused-ai", "status": "paused",
+                "note": "Program paused.",
+            }]}), encoding="utf-8")
+            opportunity = {
+                "network": "partnerstack", "name": "Paused AI", "slug": "paused-ai",
+                "approved": True, "authenticated_relationship": True,
+                "source": "https://dash.partnerstack.com/home", "policy": {"status": "missing"},
+                "tags": ["Software"],
+            }
+            added = scout.merge_auto_offers(
+                root, [opportunity], {"pausedai": {"key": "part_paused", "status": "active"}}, "partner-key"
+            )
+            self.assertEqual(added, [])
+            self.assertEqual(opportunity["state"], "program_paused")
+            self.assertEqual(opportunity["relationship_state"], "inactive")
+
     def test_connected_network_record_replaces_unmonetized_direct_duplicate(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

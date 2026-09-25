@@ -11,6 +11,7 @@ on:
       - scripts/partner_opportunity_engine.py
       - scripts/affiliate_network_connectors.py
       - scripts/affiliate_source_reconciliation.py
+      - data/partnerstack_confirmed_links.json
       - tests/test_partner_opportunity_engine.py
       - tests/test_affiliate_network_connectors.py
       - tests/test_affiliate_source_reconciliation.py

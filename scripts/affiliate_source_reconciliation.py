@@ -89,7 +89,7 @@ def opportunity_rows(root: Path) -> list[dict[str, Any]]:
             state = "published"
         elif access in {"external_account_required", "terms_required"}:
             state = "terms_required" if access == "terms_required" else "active_link_pending"
-        elif explicit in {"pending", "terms_required", "active_link_pending", "publishable", "published"}:
+        elif explicit in {"inactive", "pending", "terms_required", "active_link_pending", "publishable", "published"}:
             state = explicit
         elif item.get("terms_required") or item.get("state") == "terms_required":
             state = "terms_required"
@@ -161,7 +161,7 @@ def reconcile(root: Path) -> dict[str, Any]:
         "version": 1,
         "updated_at": date.today().isoformat(),
         "contract": {
-            "states": ["pending", "terms_required", "active_link_pending", "publishable", "published"],
+            "states": ["inactive", "pending", "terms_required", "active_link_pending", "publishable", "published"],
             "rule": "Every approved relationship with a usable tracking URL must have a public page containing that exact URL.",
             "future_sources": "Any connector represented in partner_opportunities.json is reconciled automatically.",
         },

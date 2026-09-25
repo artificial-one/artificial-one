@@ -50,9 +50,14 @@ jobs:
       - name: Restore private Google Search Console summary
         uses: actions/cache/restore@v5
         with:
-          path: .search-growth/executive-snapshot.json
+          # This list must exactly match growth-engine.yml. Cache versions include paths.
+          path: |
+            .search-growth/private-state.json
+            .search-growth/executive-snapshot.json
+            .indexnow/private-state.json
           key: search-growth-private-${{ github.run_id }}
-          restore-keys: search-growth-private-
+          restore-keys: |
+            search-growth-private-
 
       - name: Refresh the business outcomes diary
         run: python scripts/build_business_activity_diary.py

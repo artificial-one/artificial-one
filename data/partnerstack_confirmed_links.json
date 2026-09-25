@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "verified_at": "2026-09-25",
+  "source": "authenticated PartnerStack partner dashboard",
+  "programs": [
+    {
+      "name": "Breezy HR",
+      "slug": "breezyhr",
+      "status": "active",
+      "tracking_url": "https://breezyhr.partnerlinks.io/n5sgbrz7ybl4"
+    },
+    {
+      "name": "Close",
+      "slug": "close",
+      "status": "active",
+      "tracking_url": "https://refer.close.com/jcz4neaz74qq"
+    },
+    {
+      "name": "MindStudio",
+      "slug": "mindstudio",
+      "status": "active",
+      "tracking_url": "https://get.mindstudio.ai/eobgeb638nnc-8drt"
+    },
+    {
+      "name": "Plesk",
+      "slug": "webpros",
+      "status": "active",
+      "tracking_url": "https://try.plesk.com/5491i707p1yy-z4f5m7"
+    },
+    {
+      "name": "Reply.io",
+      "slug": "reply",
+      "status": "active",
+      "tracking_url": "https://get.reply.io/awaa6y0hrv2p"
+    },
+    {
+      "name": "Amplitude",
+      "slug": "amplitude",
+      "status": "paused",
+      "tracking_url": "",
+      "note": "PartnerStack states that the program paused on 2026-08-01 and commissions stopped after that date."
+    }
+  ]
+}

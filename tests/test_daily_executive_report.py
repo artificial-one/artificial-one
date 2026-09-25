@@ -169,6 +169,17 @@ class DailyExecutiveReportTests(unittest.TestCase):
         self.assertIn("publish automatically", work[0]["detail"])
         self.assertNotIn("API", work[0]["detail"])
         self.assertNotIn("UTC", work[0]["detail"])
+        self.assertNotIn("partner provides", work[0]["detail"])
+
+    def test_daily_report_restores_the_same_search_cache_paths_as_search_growth(self):
+        root = Path(__file__).resolve().parents[1]
+        report_workflow = (root / ".github/workflows/daily-executive-report.yml").read_text(encoding="utf-8")
+        for path in (
+            ".search-growth/private-state.json",
+            ".search-growth/executive-snapshot.json",
+            ".indexnow/private-state.json",
+        ):
+            self.assertIn(path, report_workflow)
 
     def test_social_section_lists_every_post_for_report_day_with_links_and_metrics(self):
         receipts = {"receipts": [

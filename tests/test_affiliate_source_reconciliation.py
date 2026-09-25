@@ -75,6 +75,17 @@ class AffiliateSourceReconciliationTests(unittest.TestCase):
         self.assertEqual(payload["networks"]["partnerstack"]["published"], 1)
         self.assertEqual(payload["activation_blockers"], [])
 
+    def test_paused_program_is_inactive_not_waiting_for_a_link(self):
+        root = self.make_root()
+        (root / "data/partner_offers.json").write_text('{"version":1,"offers":[]}', encoding="utf-8")
+        (root / "data/partner_opportunities.json").write_text(json.dumps({"opportunities": [{
+            "id": "partnerstack:paused", "network": "partnerstack", "name": "Paused AI",
+            "approved": True, "relationship_state": "inactive", "state": "program_paused",
+        }]}), encoding="utf-8")
+        payload = reconciliation.reconcile(root)
+        self.assertEqual(payload["networks"]["partnerstack"]["inactive"], 1)
+        self.assertEqual(payload["activation_blockers"], [])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -37,6 +37,7 @@ OUTPUT_PATH = ROOT / "data" / "partner_opportunities.json"
 QUEUE_PAGE_PATH = ROOT / "partner-opportunities.html"
 OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 INTELLIGENCE_PATH = ROOT / "data" / "tool_intelligence.json"
+PARTNERSTACK_CONFIRMATIONS_PATH = ROOT / "data" / "partnerstack_confirmed_links.json"
 RESEND_URL = "https://api.resend.com/emails"
 USER_AGENT = "artificial.one-partner-scout/1.1 (+https://artificial.one/)"
 APPLICATION_PROFILE = (
@@ -363,25 +364,57 @@ def merge_authenticated_partnerstack(
     return discovered
 
 
-def partnerstack_links(api_key: str, partnership: dict[str, Any]) -> list[str]:
-    identifier = str(partnership.get("key") or partnership.get("partnership_key") or "")
-    if not identifier:
-        return []
-    url = f"{ps.API_BASE}/links/partnership/{quote(identifier)}?limit=250"
-    request = Request(url, headers={"Accept": "application/json", "Authorization": f"Bearer {api_key}", "User-Agent": USER_AGENT})
-    try:
-        with urlopen(request, timeout=30) as response:
-            payload = json.load(response)
-    except Exception:
-        return []
-    items, _ = ps._items_from_payload(payload)
-    result: list[str] = []
-    for item in items:
-        for key in ("url", "link", "tracking_url", "share_url"):
-            value = https_url(item.get(key))
-            if value and value not in result:
-                result.append(value)
+def partnerstack_confirmations(root: Path) -> dict[str, dict[str, Any]]:
+    """Load links verified in the authenticated partner dashboard.
+
+    PartnerStack's partner API exposes relationship status, but its documented
+    partnership-links endpoint is vendor-only.  Keeping dashboard-confirmed
+    referral URLs in a public-safe registry prevents a failed vendor endpoint
+    from being mistaken for "the partner has not supplied a link".
+    """
+    payload = load_json(root / "data" / "partnerstack_confirmed_links.json", {"programs": []})
+    result: dict[str, dict[str, Any]] = {}
+    for item in payload.get("programs", []):
+        if not isinstance(item, dict):
+            continue
+        for value in (item.get("name"), item.get("slug")):
+            key = normalized_name(str(value or ""))
+            if key:
+                result[key] = item
     return result
+
+
+def _embedded_partnerstack_links(partnership: dict[str, Any]) -> list[str]:
+    """Read only unambiguous referral-link fields returned by the partner API."""
+    link_keys = {"tracking_url", "referral_url", "share_url", "partner_link", "default_link"}
+    result: list[str] = []
+    queue: list[Any] = [partnership]
+    while queue:
+        current = queue.pop(0)
+        if isinstance(current, dict):
+            for key, raw in current.items():
+                if key.casefold() in link_keys:
+                    value = https_url(raw)
+                    if value and value not in result:
+                        result.append(value)
+                elif isinstance(raw, (dict, list)):
+                    queue.append(raw)
+        elif isinstance(current, list):
+            queue.extend(current)
+    return result
+
+
+def partnerstack_links(
+    api_key: str,
+    partnership: dict[str, Any],
+    confirmation: dict[str, Any] | None = None,
+) -> list[str]:
+    """Return verified partner links without calling PartnerStack's vendor API."""
+    del api_key  # Retained in the signature for existing callers and tests.
+    confirmed = https_url((confirmation or {}).get("tracking_url"))
+    if confirmed:
+        return [confirmed]
+    return _embedded_partnerstack_links(partnership)
 
 
 def category_for(item: dict[str, Any]) -> str:
@@ -515,7 +548,12 @@ def merge_auto_offers(root: Path, opportunities: list[dict[str, Any]], partnersh
     audit_path = root / "data/partnerstack_program_audit.json"
     audit = load_json(audit_path, {"version": 1, "programs": [], "summary": {}})
     registry_changed = refresh_auto_offers(registry, opportunities)
-    existing = {normalized_name(str(item.get("name") or "")) for item in registry.get("offers", []) if isinstance(item, dict)}
+    existing_offers = {
+        normalized_name(str(item.get("name") or "")): item
+        for item in registry.get("offers", []) if isinstance(item, dict)
+    }
+    existing = set(existing_offers)
+    confirmations = partnerstack_confirmations(root)
     added: list[str] = []
     for item in opportunities:
         key = normalized_name(str(item["name"]))
@@ -523,10 +561,23 @@ def merge_auto_offers(root: Path, opportunities: list[dict[str, Any]], partnersh
         # field and are PartnerStack records by definition.
         is_partnerstack = item.get("network", "partnerstack") == "partnerstack"
         partnership = partnerships.get(key) or partnerships.get(normalized_name(str(item.get("slug") or ""))) if is_partnerstack else None
+        confirmation = (
+            confirmations.get(key) or confirmations.get(normalized_name(str(item.get("slug") or "")))
+            if is_partnerstack else None
+        )
         approved = (
             str((partnership or {}).get("approved_status") or (partnership or {}).get("status") or "").casefold() in {"approved", "active"}
             if is_partnerstack else bool(item.get("approved"))
         )
+        if confirmation and str(confirmation.get("status") or "").casefold() == "paused":
+            item["state"] = "program_paused"
+            item["relationship_state"] = "inactive"
+            item["status_note"] = clean_text(confirmation.get("note"), 300)
+            offer = existing_offers.get(key)
+            if offer and offer.get("status") != "paused":
+                offer["status"] = "paused"
+                registry_changed = True
+            continue
         if key in existing:
             if approved:
                 item["relationship_state"] = "published"
@@ -540,7 +591,10 @@ def merge_auto_offers(root: Path, opportunities: list[dict[str, Any]], partnersh
         authenticated = bool(item.get("authenticated_relationship")) or not is_partnerstack
         if not authenticated and item.get("policy", {}).get("status") != "reviewed":
             continue
-        links = partnerstack_links(api_key, partnership) if is_partnerstack and partnership else [https_url(item.get("tracking_url"))]
+        links = (
+            partnerstack_links(api_key, partnership, confirmation)
+            if is_partnerstack and partnership else [https_url(item.get("tracking_url"))]
+        )
         links = [link for link in links if link]
         if not links:
             item["state"] = "approved_link_pending"

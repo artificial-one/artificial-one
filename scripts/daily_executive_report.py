@@ -140,8 +140,8 @@ def system_work(reconciliation: dict[str, Any], opportunities: dict[str, Any]) -
         work.append({
             "title": name,
             "detail": (
-                "The partnership is approved, but its referral link is not available yet. "
-                "The product page will publish automatically as soon as the partner provides the link."
+                "The partnership is approved, but no referral link has been confirmed for publishing yet. "
+                "The product page will publish automatically once a usable link is confirmed."
             ),
         })
     return sorted(work, key=lambda item: item["title"].casefold())
