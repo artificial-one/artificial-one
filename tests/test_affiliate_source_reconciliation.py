@@ -53,6 +53,28 @@ class AffiliateSourceReconciliationTests(unittest.TestCase):
         self.assertEqual(payload["networks"]["impact-appsumo"]["published"], 1)
         self.assertEqual(payload["failures"], [])
 
+    def test_partnerstack_company_alias_matches_existing_public_offer(self):
+        root = self.make_root()
+        offer = {
+            "id": "elevenlabs", "slug": "elevenlabs-ai-voice", "name": "ElevenLabs",
+            "status": "published", "tracking_url": "https://try.elevenlabs.io/ref",
+        }
+        (root / "data/partner_offers.json").write_text(
+            json.dumps({"version": 1, "offers": [offer]}), encoding="utf-8",
+        )
+        (root / "data/partner_opportunities.json").write_text(json.dumps({"opportunities": [{
+            "id": "partnerstack:elevenlabsinc", "network": "partnerstack",
+            "name": "Eleven Labs Inc.", "slug": "elevenlabsinc", "approved": True,
+            "relationship_state": "active_link_pending",
+        }]}), encoding="utf-8")
+        (root / "partner-offers").mkdir()
+        (root / "partner-offers/elevenlabs-ai-voice.html").write_text(
+            '<a href="https://try.elevenlabs.io/ref">Open</a>', encoding="utf-8",
+        )
+        payload = reconciliation.reconcile(root)
+        self.assertEqual(payload["networks"]["partnerstack"]["published"], 1)
+        self.assertEqual(payload["activation_blockers"], [])
+
 
 if __name__ == "__main__":
     unittest.main()

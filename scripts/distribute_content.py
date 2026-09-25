@@ -669,7 +669,7 @@ def create_bluesky_post(session: dict[str, Any], record: dict[str, Any]) -> dict
     )
 
 
-def post_bluesky(handle: str, password: str, item: dict[str, Any]) -> str:
+def post_bluesky(handle: str, password: str, item: dict[str, Any]) -> dict[str, str]:
     login = Request("https://bsky.social/xrpc/com.atproto.server.createSession", data=json.dumps({"identifier": handle, "password": password}).encode(), headers={"Content-Type": "application/json"}, method="POST")
     with urlopen(login, timeout=30) as response:
         session = json.load(response)
@@ -693,7 +693,16 @@ def post_bluesky(handle: str, password: str, item: dict[str, Any]) -> str:
             # duplicate it tomorrow merely because a supporting reply failed.
             reply_error = f"; reply delivery stopped after {replies}: {type(exc).__name__}"
             break
-    return f"visual thread posted ({result.get('uri', 'record created')}; {replies} replies); profile branded={str(profile_branded).lower()}{reply_error}"
+    urn = str(result["uri"])
+    rkey = urn.rsplit("/", 1)[-1]
+    return {
+        "urn": urn,
+        "url": f"https://bsky.app/profile/{handle}/post/{rkey}",
+        "note": (
+            f"visual thread posted ({urn}; {replies} replies); "
+            f"profile branded={str(profile_branded).lower()}{reply_error}"
+        ),
+    }
 
 
 def delete_bluesky_post(handle: str, password: str, rkey: str) -> str:
@@ -885,6 +894,10 @@ def run(state_path: Path, as_of: date | None = None) -> str:
                     bool(linkedin_delivery.get("used_ai")),
                 )
                 delivery_notes.append(f"LinkedIn image post published ({result['url']})")
+            elif name == "bluesky":
+                prepared = channel_item(item, "bluesky")
+                append_receipt(RECEIPTS_PATH, name, prepared, result)
+                delivery_notes.append(str(result["note"]))
             elif result:
                 delivery_notes.append(str(result))
             progress["sent"].append(digest)

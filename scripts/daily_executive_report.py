@@ -136,7 +136,12 @@ def system_work(reconciliation: dict[str, Any], opportunities: dict[str, Any]) -
         name = str(item.get("name") or source_id.partition(":")[2].replace("-", " ").title())
         work.append({
             "title": name,
-            "detail": "Approved relationship detected. The system is obtaining or verifying its affiliate link; after that it will create and publish the product page.",
+            "detail": (
+                "PartnerStack has approved the relationship but has not exposed a usable referral link to the API. "
+                "The next automatic check runs daily at 05:41 UTC (currently 07:41 Prague time). If a valid link "
+                "appears, the page is built, checked and pushed in that same run, normally within 20 minutes. "
+                "There is no guaranteed completion date while the network has not issued the link."
+            ),
         })
     return sorted(work, key=lambda item: item["title"].casefold())
 
@@ -162,12 +167,17 @@ def receipt_urn(receipt: dict[str, Any]) -> str:
 
 
 def local_receipt_date(receipt: dict[str, Any]) -> date | None:
+    parsed = local_receipt_datetime(receipt)
+    return parsed.date() if parsed else None
+
+
+def local_receipt_datetime(receipt: dict[str, Any]) -> datetime | None:
     value = str(receipt.get("published_at") or "")
     try:
         parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
         if parsed.tzinfo is None:
             parsed = parsed.replace(tzinfo=timezone.utc)
-        return parsed.astimezone(PRAGUE).date()
+        return parsed.astimezone(PRAGUE)
     except (ValueError, TypeError):
         return None
 
@@ -257,20 +267,54 @@ def social_posts_for_day(
     return grouped
 
 
-def social_performance(root: Path, report_date: date) -> dict[str, list[dict[str, Any]]]:
+def social_posts_for_window(
+    receipts: dict[str, Any], window_end: datetime,
+    metrics: dict[str, dict[str, Any]] | None = None, hours: int = 24,
+) -> dict[str, list[dict[str, Any]]]:
+    """Group every post from a rolling reporting window."""
+    metrics = metrics or {}
+    if window_end.tzinfo is None:
+        window_end = window_end.replace(tzinfo=PRAGUE)
+    window_end = window_end.astimezone(PRAGUE)
+    window_start = window_end - timedelta(hours=hours)
+    grouped: dict[str, list[dict[str, Any]]] = {platform: [] for platform in SOCIAL_PLATFORMS}
+    for receipt in receipts.get("receipts", []):
+        if not isinstance(receipt, dict):
+            continue
+        published = local_receipt_datetime(receipt)
+        if published is None or published <= window_start or published > window_end:
+            continue
+        platform = str(receipt.get("platform") or "").casefold()
+        grouped.setdefault(platform, [])
+        urn = receipt_urn(receipt)
+        grouped[platform].append({
+            "title": str(receipt.get("title") or receipt.get("item_id") or "Artificial.One post"),
+            "url": str(receipt.get("url") or ""),
+            "published_at": str(receipt.get("published_at") or ""),
+            "metrics": metrics.get(urn),
+        })
+    for posts in grouped.values():
+        posts.sort(key=lambda item: item["published_at"])
+    return grouped
+
+
+def social_performance(root: Path, window_end: datetime) -> dict[str, list[dict[str, Any]]]:
     receipts = load_json(root / "data" / "distribution_receipts.json", {"receipts": []})
-    todays = [
+    window_start = window_end - timedelta(hours=24)
+    recent = [
         item for item in receipts.get("receipts", [])
-        if isinstance(item, dict) and local_receipt_date(item) == report_date
+        if isinstance(item, dict)
+        and (published := local_receipt_datetime(item)) is not None
+        and window_start < published <= window_end
     ]
     metrics: dict[str, dict[str, Any]] = {}
-    metrics.update(bluesky_metrics(todays))
+    metrics.update(bluesky_metrics(recent))
     metrics.update(linkedin_metrics(
-        todays,
+        recent,
         os.environ.get("LINKEDIN_ACCESS_TOKEN", "").strip(),
         os.environ.get("LINKEDIN_AUTHOR_URN", "").strip(),
     ))
-    return social_posts_for_day(receipts, report_date, metrics)
+    return social_posts_for_window(receipts, window_end, metrics)
 
 
 def github_health(token: str, repository: str, now: datetime) -> dict[str, Any]:
@@ -338,7 +382,7 @@ def github_health(token: str, repository: str, now: datetime) -> dict[str, Any]:
 
 def report_model(
     root: Path, snapshot_path: Path, report_date: date, health: dict[str, Any],
-    marketplace_status_path: Path | None = None,
+    marketplace_status_path: Path | None = None, report_time: datetime | None = None,
 ) -> dict[str, Any]:
     diary = load_json(root / "data" / "business_activity_diary.json", {"entries": []})
     reconciliation = load_json(root / "data" / "affiliate_source_reconciliation.json", {})
@@ -361,7 +405,8 @@ def report_model(
     published = live_affiliate_destinations(partner_offers, appsumo)
     actions = owner_actions(reconciliation, opportunities, marketplace)
     work_queue = system_work(reconciliation, opportunities)
-    social = social_performance(root, report_date)
+    report_time = report_time or datetime.combine(report_date, datetime.max.time(), tzinfo=PRAGUE)
+    social = social_performance(root, report_time)
     revenue_text = f"USD {ps_revenue:.2f} + {impact_revenue}" if impact_revenue != "USD 0.00" else f"USD {ps_revenue:.2f}"
     commission_text = f"USD {ps_commission:.2f} + {impact_commission}" if impact_commission != "USD 0.00" else f"USD {ps_commission:.2f}"
     return {
@@ -440,9 +485,9 @@ def render_social(social: dict[str, list[dict[str, Any]]]) -> tuple[str, str]:
         if not posts:
             platform_html.append(
                 f"<div style='margin:0 0 16px'><strong>{names[platform]}</strong>"
-                "<div style='color:#667085;font-size:13px;margin-top:4px'>No automated post was published today.</div></div>"
+                "<div style='color:#667085;font-size:13px;margin-top:4px'>No automated post was published during the last 24 hours.</div></div>"
             )
-            platform_text.append("- No automated post was published today.")
+            platform_text.append("- No automated post was published during the last 24 hours.")
             continue
         rows = []
         for post in posts:
@@ -458,7 +503,7 @@ def render_social(social: dict[str, list[dict[str, Any]]]) -> tuple[str, str]:
         platform_html.append(f"<div style='margin:0 0 18px'><strong>{names[platform]}</strong>{''.join(rows)}</div>")
     html = (
         '<tr><td style="padding:12px 30px"><div style="background:#f1edff;border-radius:18px;padding:22px">'
-        '<h2 style="font-size:18px;margin:0 0 14px">Social media published today</h2>'
+        '<h2 style="font-size:18px;margin:0 0 14px">Social media published in the last 24 hours</h2>'
         '<p style="font-size:13px;color:#667085;margin:0 0 16px">Open any post directly and compare its live engagement.</p>'
         + "".join(platform_html) + "</div></td></tr>"
     )
@@ -580,7 +625,7 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         f"PartnerStack confirmed paying customers (since tracking began): {model['paying_customers']}",
         f"PartnerStack recorded transactions (since tracking began): {model.get('partnerstack_transactions', 0)}",
         f"Impact tracked lead or sale events (since tracking began): {model['impact_actions']}", "",
-        "DELIVERED TODAY", highlights_text, "", "SOCIAL MEDIA PUBLISHED TODAY", social_text, "", "YOUR ACTIONS", action_text, "",
+        "DELIVERED TODAY", highlights_text, "", "SOCIAL MEDIA PUBLISHED IN THE LAST 24 HOURS", social_text, "", "YOUR ACTIONS", action_text, "",
         "APPROVED PARTNERSHIPS BEING PUBLISHED", work_text, "",
         "AUTOMATION STATUS", health_title, health_detail,
     ]) + "\n"
@@ -616,7 +661,7 @@ def main() -> int:
         print(f"Daily executive report already sent for {report_date.isoformat()}.")
         return 0
     health = github_health(os.environ.get("GITHUB_TOKEN", ""), os.environ.get("GITHUB_REPOSITORY", ""), now)
-    model = report_model(ROOT, args.snapshot, report_date, health, args.marketplace_status)
+    model = report_model(ROOT, args.snapshot, report_date, health, args.marketplace_status, now)
     subject, text, html = render(model)
     if args.output_html:
         args.output_html.parent.mkdir(parents=True, exist_ok=True)

@@ -1,11 +1,11 @@
 import tempfile
 import unittest
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 from scripts.daily_executive_report import (
     daily_activity, live_affiliate_destinations, owner_actions, render,
-    social_posts_for_day, system_work,
+    social_posts_for_day, social_posts_for_window, system_work, PRAGUE,
 )
 
 
@@ -99,7 +99,10 @@ class DailyExecutiveReportTests(unittest.TestCase):
             {"id": "partnerstack:one", "name": "One"},
             {"id": "partnerstack:two", "name": "Two"},
         ]}
-        self.assertEqual([item["title"] for item in system_work(reconciliation, opportunities)], ["One", "Two"])
+        work = system_work(reconciliation, opportunities)
+        self.assertEqual([item["title"] for item in work], ["One", "Two"])
+        self.assertIn("07:41 Prague time", work[0]["detail"])
+        self.assertIn("no guaranteed completion date", work[0]["detail"].casefold())
 
     def test_social_section_lists_every_post_for_report_day_with_links_and_metrics(self):
         receipts = {"receipts": [
@@ -125,6 +128,22 @@ class DailyExecutiveReportTests(unittest.TestCase):
         self.assertEqual([item["title"] for item in result["linkedin"]], ["Linked post"])
         self.assertEqual(result["linkedin"][0]["metrics"]["views"], 80)
         self.assertEqual(result["bluesky"][0]["url"], "https://bsky.app/post/one")
+
+    def test_social_rolling_window_includes_previous_calendar_day(self):
+        receipts = {"receipts": [
+            {
+                "id": "linkedin:urn:li:share:recent", "platform": "linkedin", "title": "Recent",
+                "published_at": "2026-09-24T20:00:00Z", "url": "https://linkedin.example/recent",
+            },
+            {
+                "id": "linkedin:urn:li:share:old", "platform": "linkedin", "title": "Old",
+                "published_at": "2026-09-23T20:00:00Z", "url": "https://linkedin.example/old",
+            },
+        ]}
+        result = social_posts_for_window(
+            receipts, datetime(2026, 9, 25, 3, 0, tzinfo=PRAGUE), {},
+        )
+        self.assertEqual([item["title"] for item in result["linkedin"]], ["Recent"])
 
 
 if __name__ == "__main__":

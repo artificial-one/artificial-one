@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-24",
+  "updated_at": "2026-09-25",
   "contract": {
     "states": [
       "pending",
@@ -14,11 +14,11 @@
   },
   "summary": {
     "total": 726,
-    "active_link_pending": 16,
+    "active_link_pending": 14,
     "pending": 433,
-    "published": 277,
+    "published": 279,
     "blocking_failures": 0,
-    "activation_blockers": 16
+    "activation_blockers": 14
   },
   "networks": {
     "awin": {
@@ -35,9 +35,9 @@
     },
     "partnerstack": {
       "total": 422,
-      "active_link_pending": 16,
+      "active_link_pending": 14,
       "pending": 386,
-      "published": 20
+      "published": 22
     }
   },
   "activation_blockers": [
@@ -55,10 +55,6 @@
     },
     {
       "source_id": "partnerstack:close",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:elevenlabsinc",
       "reason": "active_link_pending"
     },
     {
@@ -99,10 +95,6 @@
     },
     {
       "source_id": "partnerstack:breezyhr",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:genesisdigital",
       "reason": "active_link_pending"
     }
   ],

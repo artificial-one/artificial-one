@@ -22,6 +22,14 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "affiliate_source_reconciliation.json"
 
+# PartnerStack sometimes exposes a company slug that differs from the public
+# product name used by the reviewed offer registry. These aliases keep
+# already-published products out of the "link pending" queue.
+PROGRAM_OFFER_ALIASES = {
+    "elevenlabsinc": "elevenlabs",
+    "genesisdigital": "kartra",
+}
+
 
 def load_json(path: Path, fallback: Any) -> Any:
     try:
@@ -53,6 +61,10 @@ def offer_indexes(root: Path) -> tuple[dict[str, dict[str, Any]], dict[str, dict
                 by_name[normalized(value)] = offer
         if offer.get("id"):
             by_id[str(offer["id"])] = offer
+    for program_key, offer_key in PROGRAM_OFFER_ALIASES.items():
+        offer = by_name.get(offer_key)
+        if offer:
+            by_name[program_key] = offer
     return by_name, by_id
 
 
