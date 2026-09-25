@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_on": "2026-09-25",
+      "id": "56c61de7431c1841",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://runwayml.com",
+      "tool_id": "runway",
+      "tool_name": "Runway"
+    },
+    {
+      "detected_on": "2026-09-25",
+      "id": "91abef74b9412a76",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://unriddle.ai",
+      "tool_id": "unriddle",
+      "tool_name": "Unriddle"
+    },
+    {
       "detected_on": "2026-09-24",
       "id": "50ad35c7502b7513",
       "kind": "pricing or plan",
@@ -386,7 +404,7 @@
     }
   ],
   "stats": {
-    "changes": 11,
+    "changes": 13,
     "monetized": 284,
     "recipes": 8,
     "reviewed": 29,
