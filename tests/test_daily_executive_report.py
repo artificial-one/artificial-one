@@ -75,20 +75,22 @@ class DailyExecutiveReportTests(unittest.TestCase):
             "social": {},
         }
         subject, text, html = render(model)
-        self.assertIn("daily business brief", subject)
-        self.assertIn("No action required", text)
-        self.assertIn("#f4f1fb", html)
-        self.assertIn("senior-management", html)
+        self.assertIn("daily pulse", subject)
+        self.assertIn("Nothing needs your attention", text)
+        self.assertIn("#f3f0f8", html)
+        self.assertIn("Growth &amp; revenue pulse", html)
+        self.assertIn("images/social/artificial-one-logo.png", html)
+        self.assertNotIn("senior-management", html)
         self.assertNotIn("workflow run", text.casefold())
         self.assertNotIn("cache", text.casefold())
         self.assertIn("last 28 days", text)
-        self.assertIn("PartnerStack referred sign-ups (since tracking began)", text)
-        self.assertIn("inventory and traffic", html)
-        self.assertIn("Impact tracked lead or sale events", text)
+        self.assertIn("Referred sign-ups", text)
+        self.assertIn("Live partner destinations", text)
+        self.assertIn("Tracked leads or sales", text)
         self.assertNotIn("attributed actions", text)
         self.assertNotIn("monetized offers under coverage", text)
         self.assertNotIn("All catalogues stayed current", text)
-        self.assertIn("GOOGLE SEARCH AND INDEXING", text)
+        self.assertIn("GOOGLE VISIBILITY", text)
 
     def test_report_explains_google_indexing_with_period_and_issues(self):
         model = {
@@ -113,12 +115,14 @@ class DailyExecutiveReportTests(unittest.TestCase):
             },
         }
         _, text, html = render(model)
-        self.assertIn("Sitemap indexed/submitted: 87 / 120", text)
-        self.assertIn("Affiliate pages checked: 40/40", text)
-        self.assertIn("Are our affiliate pages indexed and healthy?", html)
-        self.assertIn("2026-08-25 to 2026-09-21", html)
+        self.assertIn("Affiliate pages indexed: 38/40", text)
+        self.assertIn("Can customers find our affiliate pages?", html)
+        self.assertIn("2026-08-25", html)
+        self.assertIn("2026-09-21", html)
         self.assertIn("Crawled - currently not indexed", html)
-        self.assertIn("Open Google Search Console", html)
+        self.assertIn("Explore Google performance", html)
+        self.assertNotIn("API checks", html)
+        self.assertNotIn("Sitemap", html)
 
     def test_every_owner_decision_is_rendered_without_grouping(self):
         actions = [
@@ -162,8 +166,9 @@ class DailyExecutiveReportTests(unittest.TestCase):
         ]}
         work = system_work(reconciliation, opportunities)
         self.assertEqual([item["title"] for item in work], ["One", "Two"])
-        self.assertIn("07:41 Prague time", work[0]["detail"])
-        self.assertIn("no guaranteed completion date", work[0]["detail"].casefold())
+        self.assertIn("publish automatically", work[0]["detail"])
+        self.assertNotIn("API", work[0]["detail"])
+        self.assertNotIn("UTC", work[0]["detail"])
 
     def test_social_section_lists_every_post_for_report_day_with_links_and_metrics(self):
         receipts = {"receipts": [

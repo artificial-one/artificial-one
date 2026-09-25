@@ -140,10 +140,8 @@ def system_work(reconciliation: dict[str, Any], opportunities: dict[str, Any]) -
         work.append({
             "title": name,
             "detail": (
-                "PartnerStack has approved the relationship but has not exposed a usable referral link to the API. "
-                "The next automatic check runs daily at 05:41 UTC (currently 07:41 Prague time). If a valid link "
-                "appears, the page is built, checked and pushed in that same run, normally within 20 minutes. "
-                "There is no guaranteed completion date while the network has not issued the link."
+                "The partnership is approved, but its referral link is not available yet. "
+                "The product page will publish automatically as soon as the partner provides the link."
             ),
         })
     return sorted(work, key=lambda item: item["title"].casefold())
@@ -449,25 +447,27 @@ def management_summary(model: dict[str, Any]) -> str:
         pieces.append(f"improved {activity['pages_updated']} existing page{'s' if activity['pages_updated'] != 1 else ''}")
     if activity["social_posts"]:
         pieces.append(f"published {activity['social_posts']} social post{'s' if activity['social_posts'] != 1 else ''}")
-    completed = ", ".join(pieces) if pieces else "made no new public website or social-media publication"
+    completed = ", ".join(pieces) if pieces else "no new public content was released"
+    action_count = len(model.get("owner_actions") or [])
+    action_note = (
+        f" {action_count} decision{'s' if action_count != 1 else ''} {'need' if action_count != 1 else 'needs'} your attention."
+        if action_count else " Nothing needs your attention today."
+    )
     return (
-        f"Today the automated system {completed}. "
-        f"The website currently publishes {model['published_offers']} different live, tracked affiliate destination links. "
-        f"During the last {model.get('visit_window_days', 28)} days it received {model['visits']} visits, and during the last "
-        f"{model.get('click_window_days', 28)} days visitors clicked an affiliate link {model['clicks']} times. "
-        f"Since partner tracking began, PartnerStack reports {model['signups']} referred sign-up{'s' if model['signups'] != 1 else ''}, "
-        f"including {model['paying_customers']} confirmed paying customer{'s' if model['paying_customers'] != 1 else ''}; "
-        f"Impact reports {model['impact_actions']} tracked lead or sale event{'s' if model['impact_actions'] != 1 else ''}. "
-        f"Sponsored-content orders: {model.get('content_fulfilling', 0)} in fulfilment and {model.get('content_completed', 0)} completed."
+        f"Today: {completed}. The site has {model['published_offers']} live partner destinations and recorded "
+        f"{model['clicks']} affiliate clicks in the last {model.get('click_window_days', 28)} days."
+        f"{action_note}"
     )
 
 
-def metric_card(label: str, value: str, background: str) -> str:
+def metric_card(label: str, value: str, background: str, note: str = "") -> str:
     return (
-        f"<td width='25%' style='padding:6px;vertical-align:top'><div style='background:{background};"
-        "border-radius:16px;padding:18px;min-height:82px'>"
-        f"<div style='font-size:12px;color:#667085;text-transform:uppercase;letter-spacing:.6px'>{escape(label)}</div>"
-        f"<div style='font-size:24px;font-weight:800;color:#182230;margin-top:8px'>{escape(value)}</div></div></td>"
+        f"<td class='metric-cell' width='50%' style='padding:6px;vertical-align:top'><div style='background:{background};"
+        "border:1px solid rgba(81,60,133,.08);border-radius:18px;padding:20px;min-height:104px'>"
+        f"<div style='font-size:12px;color:#6f6585;font-weight:800;text-transform:uppercase;letter-spacing:.8px'>{escape(label)}</div>"
+        f"<div style='font-size:29px;line-height:1;font-weight:900;color:#211a35;margin-top:11px'>{escape(value)}</div>"
+        + (f"<div style='font-size:12px;color:#776f87;margin-top:9px;line-height:1.4'>{escape(note)}</div>" if note else "")
+        + "</div></td>"
     )
 
 
@@ -489,20 +489,12 @@ def trend_text(current: float, previous: float, *, lower_is_better: bool = False
 
 def render_search(search: dict[str, Any]) -> tuple[str, str]:
     if not search:
-        html = (
-            '<tr><td style="padding:12px 30px"><div style="background:#eaf3ff;border-radius:18px;padding:22px">'
-            '<h2 style="font-size:18px;margin:0 0 8px">Google search and indexing</h2>'
-            '<div style="color:#667085;font-size:13px">The next Search Console collection has not completed yet.</div>'
-            '</div></td></tr>'
-        )
-        return html, "Google Search Console data is awaiting its next collection."
+        return "", "Google visibility data is not available yet."
 
     period = search.get("period") or {}
     performance = search.get("performance") or {}
     current = performance.get("current") or {}
-    previous = performance.get("previous") or {}
     indexing = search.get("indexing") or {}
-    sitemap = search.get("sitemap") or {}
     commercial = search.get("commercial_search") or {}
     clicks = integer(current.get("clicks"))
     impressions = integer(current.get("impressions"))
@@ -512,67 +504,50 @@ def render_search(search: dict[str, Any]) -> tuple[str, str]:
     inspected = integer(indexing.get("inspected"))
     affiliate_pages = integer(indexing.get("affiliate_pages")) or inspected
     index_issues = integer(indexing.get("issues"))
-    api_errors = integer(indexing.get("api_errors"))
     healthy_percent = (indexed / affiliate_pages * 100) if affiliate_pages else 0
-
-    if sitemap.get("counts_available"):
-        sitemap_value = f"{integer(sitemap.get('indexed'))} / {integer(sitemap.get('submitted'))}"
-        sitemap_note = "pages Google reports indexed / submitted in the sitemap"
-    else:
-        sitemap_value = "Not reported"
-        sitemap_note = "Google did not return a sitewide sitemap index count"
 
     issue_details = indexing.get("issue_details") or []
     if issue_details:
         issue_html = "".join(
-            "<li style='margin:7px 0'>"
-            f"<a href='{escape(str(item.get('url') or ''))}' style='color:#4737a8;text-decoration:none;font-weight:700'>"
-            f"{escape(str(item.get('url') or 'Unknown page'))}</a> — {escape(str(item.get('detail') or item.get('status') or 'needs attention'))}"
-            "</li>" for item in issue_details
+            "<div style='background:#fff8e8;border:1px solid #f3dfae;border-radius:12px;padding:12px 14px;margin-top:8px'>"
+            f"<a href='{escape(str(item.get('url') or ''))}' style='color:#5540aa;text-decoration:none;font-weight:800'>"
+            f"{escape(str(item.get('url') or 'Affiliate page'))}</a>"
+            f"<div style='font-size:12px;color:#7b6653;margin-top:4px'>{escape(str(item.get('detail') or item.get('status') or 'Needs attention'))}</div>"
+            "</div>" for item in issue_details
         )
-        issue_block = f"<div style='margin-top:16px'><strong>Pages needing attention</strong><ul style='padding-left:20px;margin:6px 0 0'>{issue_html}</ul></div>"
+        issue_block = f"<div style='margin-top:18px'><strong style='color:#4a3b2d'>Pages to watch</strong>{issue_html}</div>"
         issue_text = "\n".join(f"- {item.get('url')}: {item.get('detail') or item.get('status')}" for item in issue_details)
     else:
-        issue_block = "<div style='margin-top:16px;color:#315c49'><strong>No inspected priority page currently has an indexing problem.</strong></div>"
-        issue_text = "- No inspected priority page currently has an indexing problem."
+        issue_block = "<div style='margin-top:16px;background:#e9f8f1;border-radius:12px;padding:12px 14px;color:#27614a'><strong>All checked affiliate pages look healthy.</strong></div>"
+        issue_text = "- All checked affiliate pages look healthy."
 
     top_pages = commercial.get("top_pages") or []
     top_html = "".join(
-        "<div style='background:#fff;border:1px solid #dce9f7;border-radius:12px;padding:11px 13px;margin-top:8px'>"
-        f"<a href='https://artificial.one{escape(str(item.get('path') or '/'))}' style='color:#4737a8;text-decoration:none;font-weight:700'>{escape(str(item.get('path') or '/'))}</a>"
-        f"<div style='font-size:12px;color:#667085;margin-top:4px'>{integer(item.get('clicks'))} Google clicks · {integer(item.get('impressions'))} appearances · average position {float(item.get('position') or 0):.1f}</div></div>"
-        for item in top_pages
-    ) or "<div style='font-size:13px;color:#667085;margin-top:8px'>No affiliate page has recorded a Google impression in this reporting period yet.</div>"
+        "<div style='background:#ffffff;border:1px solid #dce8f7;border-radius:12px;padding:12px 14px;margin-top:8px'>"
+        f"<a href='https://artificial.one{escape(str(item.get('path') or '/'))}' style='color:#5540aa;text-decoration:none;font-weight:800'>{escape(str(item.get('path') or '/'))}</a>"
+        f"<div style='font-size:12px;color:#776f87;margin-top:5px'>{integer(item.get('clicks'))} visits from Google · {integer(item.get('impressions'))} search appearances</div></div>"
+        for item in top_pages[:3]
+    ) or "<div style='font-size:13px;color:#776f87;margin-top:8px'>Affiliate pages have not appeared in Google results yet.</div>"
 
-    newly = len(indexing.get("newly_indexed") or [])
-    lost = len(indexing.get("lost_indexing") or [])
     search_console_url = "https://search.google.com/search-console?resource_id=" + quote("https://artificial.one/", safe="")
-    html = f'''<tr><td style="padding:12px 30px"><div style="background:#eaf3ff;border-radius:18px;padding:22px">
-      <h2 style="font-size:18px;margin:0 0 5px">Are our affiliate pages indexed and healthy?</h2>
-      <p style="font-size:13px;color:#667085;margin:0 0 14px">Final Google data for {escape(str(period.get('start') or '?'))} to {escape(str(period.get('end') or '?'))}; Search Console normally has a {integer(period.get('data_lag_days'))}-day delay.</p>
+    html = f'''<tr><td class="section-pad" style="padding:14px 28px"><div style="background:#edf6ff;border:1px solid #dceaf8;border-radius:22px;padding:24px">
+      <div style="font-size:11px;font-weight:900;letter-spacing:1.2px;color:#4875a8;text-transform:uppercase">Google visibility</div>
+      <h2 style="font-size:22px;color:#211a35;margin:7px 0 5px">Can customers find our affiliate pages?</h2>
+      <p style="font-size:13px;color:#6f6880;margin:0 0 16px">Results for {escape(str(period.get('start') or '?'))} &ndash; {escape(str(period.get('end') or '?'))}</p>
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
-        {metric_card('Affiliate pages checked', f'{inspected} / {affiliate_pages}', '#f1edff')}
-        {metric_card('Indexed and healthy', f'{indexed} · {healthy_percent:.1f}%', '#e9f8f1')}
-        {metric_card('Need indexing attention', str(index_issues), '#fff3df')}
-        {metric_card('Appearing in Google', str(integer(commercial.get('pages_with_impressions'))), '#f7f5fd')}
+        <td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#28644d">{indexed}/{affiliate_pages}</div><div style="font-size:12px;color:#706880;margin-top:6px">affiliate pages indexed &middot; {healthy_percent:.0f}%</div></div></td>
+        <td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#5540aa">{impressions}</div><div style="font-size:12px;color:#706880;margin-top:6px">search appearances</div></div></td>
+        <td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#b45b3d">{clicks}</div><div style="font-size:12px;color:#706880;margin-top:6px">visits from Google</div></div></td>
       </tr></table>
-      <div style="font-size:13px;color:#475467;line-height:1.6;margin-top:12px">
-        Audit coverage: <strong>{'complete' if indexing.get('complete') else 'incomplete'}</strong> · API checks that could not complete: <strong>{api_errors}</strong>.<br>
-        Clicks: {escape(trend_text(clicks, integer(previous.get('clicks'))))}. Impressions: {escape(trend_text(impressions, integer(previous.get('impressions'))))}.<br>
-        Google clicks: <strong>{clicks}</strong> · search appearances: <strong>{impressions}</strong> · click-through rate: <strong>{ctr * 100:.2f}%</strong> · average position: <strong>{position:.1f}</strong>.<br>
-        Changes since the previous audit: <strong>{newly}</strong> newly indexed · <strong>{lost}</strong> lost indexing. Sitemap: <strong>{sitemap_value}</strong> indexed/submitted · errors <strong>{integer(sitemap.get('errors'))}</strong> · warnings <strong>{integer(sitemap.get('warnings'))}</strong>.<br>
-        <span style="color:#667085">{escape(sitemap_note)}. Ranking data is delayed by Google, while the URL health check runs daily.</span>
-      </div>
+      <div style="font-size:12px;color:#6f6880;margin:12px 5px 0">Click-through rate <strong>{ctr * 100:.2f}%</strong> &middot; average search position <strong>{position:.1f}</strong> &middot; <strong>{index_issues}</strong> page{'s' if index_issues != 1 else ''} to watch</div>
       {issue_block}
-      <div style="margin-top:17px"><strong>Affiliate pages getting the most Google visibility</strong>{top_html}</div>
-      <div style="margin-top:16px"><a href="{search_console_url}" style="display:inline-block;background:#5b57d9;color:white;text-decoration:none;font-weight:700;border-radius:10px;padding:9px 14px">Open Google Search Console</a></div>
+      <div style="margin-top:18px"><strong style="color:#2e2840">Most visible affiliate pages</strong>{top_html}</div>
+      <div style="margin-top:18px"><a href="{search_console_url}" style="display:inline-block;background:#5540aa;color:white;text-decoration:none;font-weight:800;border-radius:12px;padding:11px 16px">Explore Google performance &rarr;</a></div>
     </div></td></tr>'''
     text = "\n".join([
-        f"Period: {period.get('start')} to {period.get('end')} ({period.get('data_lag_days', 3)}-day data delay)",
+        f"Period: {period.get('start')} to {period.get('end')}",
         f"Google clicks: {clicks}; search appearances: {impressions}; CTR: {ctr * 100:.2f}%; average position: {position:.1f}",
-        f"Affiliate pages checked: {inspected}/{affiliate_pages}; indexed and healthy: {indexed}; need attention: {index_issues}; API errors: {api_errors}",
-        f"Sitemap indexed/submitted: {sitemap_value}; sitemap errors: {integer(sitemap.get('errors'))}; warnings: {integer(sitemap.get('warnings'))}",
-        f"Newly indexed: {newly}; lost indexing: {lost}",
+        f"Affiliate pages indexed: {indexed}/{affiliate_pages}; pages to watch: {index_issues}",
         f"Affiliate pages with Google impressions: {integer(commercial.get('pages_with_impressions'))}",
         issue_text,
     ])
@@ -581,7 +556,7 @@ def render_search(search: dict[str, Any]) -> tuple[str, str]:
 
 def readable_social_metrics(values: dict[str, Any] | None) -> str:
     if values is None:
-        return "Engagement metrics are not available from the platform with the current API permission."
+        return "Open the post to see live engagement"
     labels = (
         ("likes", "likes"), ("comments", "comments"), ("reposts", "reposts/shares"),
         ("quotes", "quotes"), ("views", "views"), ("clicks", "post clicks"),
@@ -591,34 +566,51 @@ def readable_social_metrics(values: dict[str, Any] | None) -> str:
 
 def render_social(social: dict[str, list[dict[str, Any]]]) -> tuple[str, str]:
     names = {"linkedin": "LinkedIn", "bluesky": "Bluesky", "x": "X"}
+    colors = {
+        "linkedin": ("#eaf3ff", "#2367a7", "in"),
+        "bluesky": ("#eaf8ff", "#1673b8", "&#129419;"),
+        "x": ("#f0eef8", "#302846", ""),
+    }
     platform_html: list[str] = []
     platform_text: list[str] = []
     for platform in SOCIAL_PLATFORMS:
         posts = social.get(platform, [])
         platform_text.append(names[platform])
+        background, accent, icon = colors[platform]
+        platform_label = f"{icon}&nbsp;&nbsp;{names[platform]}" if icon else names[platform]
         if not posts:
             platform_html.append(
-                f"<div style='margin:0 0 16px'><strong>{names[platform]}</strong>"
-                "<div style='color:#667085;font-size:13px;margin-top:4px'>No automated post was published during the last 24 hours.</div></div>"
+                f"<div style='background:{background};border-radius:15px;padding:14px 16px;margin:0 0 10px'>"
+                f"<strong style='color:{accent}'>{platform_label}</strong>"
+                "<div style='color:#706880;font-size:12px;margin-top:5px'>No new post in the last 24 hours.</div></div>"
             )
-            platform_text.append("- No automated post was published during the last 24 hours.")
+            platform_text.append("- No new post in the last 24 hours.")
             continue
         rows = []
         for post in posts:
             title = escape(post["title"])
             url = escape(post["url"])
             metrics = escape(readable_social_metrics(post.get("metrics")))
+            metrics_html = (
+                f"<div style='font-size:12px;color:#706880;margin:7px 0 11px'>{metrics}</div>"
+                if post.get("metrics") is not None else "<div style='height:8px'></div>"
+            )
             rows.append(
-                "<div style='background:#fff;border:1px solid #e8e3f3;border-radius:13px;padding:13px 15px;margin-top:9px'>"
-                f"<a href='{url}' style='font-weight:800;color:#4737a8;text-decoration:none'>{title} →</a>"
-                f"<div style='font-size:12px;color:#667085;margin-top:7px'>{metrics}</div></div>"
+                "<div style='background:#fff;border:1px solid #e7e1f2;border-radius:14px;padding:14px 16px;margin-top:10px'>"
+                f"<div style='font-size:14px;font-weight:800;color:#28213a;line-height:1.4;overflow-wrap:anywhere;word-break:break-word'>{title}</div>"
+                f"{metrics_html}"
+                f"<a href='{url}' style='display:inline-block;color:{accent};text-decoration:none;font-size:12px;font-weight:900'>View post &rarr;</a></div>"
             )
             platform_text.append(f"- {post['title']}: {post['url']} — {readable_social_metrics(post.get('metrics'))}")
-        platform_html.append(f"<div style='margin:0 0 18px'><strong>{names[platform]}</strong>{''.join(rows)}</div>")
+        platform_html.append(
+            f"<div style='background:{background};border-radius:17px;padding:16px 17px;margin:0 0 12px'>"
+            f"<strong style='color:{accent}'>{platform_label} &middot; {len(posts)} new</strong>{''.join(rows)}</div>"
+        )
     html = (
-        '<tr><td style="padding:12px 30px"><div style="background:#f1edff;border-radius:18px;padding:22px">'
-        '<h2 style="font-size:18px;margin:0 0 14px">Social media published in the last 24 hours</h2>'
-        '<p style="font-size:13px;color:#667085;margin:0 0 16px">Open any post directly and compare its live engagement.</p>'
+        '<tr><td class="section-pad" style="padding:14px 28px"><div style="background:#f6f2ff;border:1px solid #e9e1f7;border-radius:22px;padding:24px">'
+        '<div style="font-size:11px;font-weight:900;letter-spacing:1.2px;color:#7151bd;text-transform:uppercase">Audience growth</div>'
+        '<h2 style="font-size:22px;color:#211a35;margin:7px 0 5px">Social pulse &middot; last 24 hours</h2>'
+        '<p style="font-size:13px;color:#706880;margin:0 0 16px">Every new post and its live engagement, in one place.</p>'
         + "".join(platform_html) + "</div></td></tr>"
     )
     return html, "\n".join(platform_text)
@@ -627,7 +619,7 @@ def render_social(social: dict[str, list[dict[str, Any]]]) -> tuple[str, str]:
 def render(model: dict[str, Any]) -> tuple[str, str, str]:
     day = model["date"]
     pretty_date = day.strftime("%d %B %Y")
-    subject = f"Artificial.One daily business brief — {pretty_date}"
+    subject = f"Artificial.One daily pulse — {pretty_date}"
     action_count = len(model["owner_actions"])
     summary = management_summary(model)
     social_html, social_text = render_social(model.get("social") or {})
@@ -635,115 +627,135 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
     highlights = model["activity"]["highlights"]
     if highlights:
         highlight_html = "".join(
-            "<li style='margin:0 0 10px'>" +
-            (f"<a href='{escape(item['url'])}' style='color:#4737a8;text-decoration:none;font-weight:700'>{escape(item['text'])}</a>" if item["url"] else escape(item["text"])) +
-            "</li>" for item in highlights
+            "<div style='background:#ffffff;border:1px solid #e9e2f3;border-radius:14px;padding:14px 16px;margin-top:9px'>"
+            "<span style='color:#6e49c6;font-weight:900'>&#10003;</span>&nbsp;&nbsp;" +
+            (f"<a href='{escape(item['url'])}' style='color:#302545;text-decoration:none;font-weight:800'>{escape(item['text'])}</a>" if item["url"] else f"<strong style='color:#302545'>{escape(item['text'])}</strong>") +
+            "</div>" for item in highlights
         )
         highlights_text = "\n".join(f"- {item['text']}" for item in highlights)
+        wins_html = f'''<tr><td class="section-pad" style="padding:14px 28px"><div style="background:#fbf9ff;border:1px solid #ece6f5;border-radius:22px;padding:24px">
+          <div style="font-size:11px;font-weight:900;letter-spacing:1.2px;color:#7151bd;text-transform:uppercase">Fresh today</div>
+          <h2 style="font-size:22px;color:#211a35;margin:7px 0 10px">What moved forward</h2>{highlight_html}
+        </div></td></tr>'''
     else:
-        highlight_html = "<li>No new public webpage or social-media post was published today.</li>"
-        highlights_text = "- No new public webpage or social-media post was published today."
+        highlights_text = "- No new public content today."
+        wins_html = ""
 
     if action_count:
         shown = model["owner_actions"]
         action_html = "".join(
-            "<tr><td style='padding:12px 0;border-bottom:1px solid #f1d7b7'>"
-            f"<div style='font-weight:800;color:#7a3f00'>{escape(action['title'])}</div>"
-            f"<div style='font-size:13px;color:#7b6653;margin:5px 0 10px'>{escape(action['detail'])}</div>"
-            f"<a href='{escape(action['url'])}' style='display:inline-block;background:#7c5cff;color:white;text-decoration:none;"
-            "font-weight:700;border-radius:10px;padding:9px 14px'>Open the exact program</a></td></tr>"
+            "<div style='background:#ffffff;border:1px solid #f2d9b5;border-radius:15px;padding:16px 17px;margin-top:10px'>"
+            f"<div style='font-weight:900;color:#53351e;overflow-wrap:anywhere;word-break:break-word'>{escape(action['title'])}</div>"
+            f"<div style='font-size:13px;color:#7a6858;margin:6px 0 12px;line-height:1.45;overflow-wrap:anywhere;word-break:break-word'>{escape(action['detail'])}</div>"
+            f"<a href='{escape(action['url'])}' style='display:inline-block;background:#ec6f55;color:white;text-decoration:none;"
+            "font-weight:900;border-radius:12px;padding:11px 16px'>Review and decide &rarr;</a></div>"
             for action in shown
         )
-        action_intro = f"{action_count} decision{'s' if action_count != 1 else ''} need your approval"
+        action_intro = f"{action_count} decision{'s' if action_count != 1 else ''} for you"
         action_text = "\n".join(f"- {item['title']}: {item['url']}" for item in shown)
+        action_section = f'''<tr><td class="section-pad" style="padding:14px 28px"><div style="background:#fff4e5;border:1px solid #f1ddbd;border-radius:22px;padding:24px">
+          <div style="display:inline-block;background:#ffe0ca;color:#8c3f25;border-radius:20px;padding:6px 10px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.8px">Your attention</div>
+          <h2 style="font-size:22px;color:#3d2a1d;margin:10px 0 4px">{escape(action_intro)}</h2>
+          <p style="font-size:13px;color:#7a6858;margin:0 0 4px">Quick choices that require a person.</p>{action_html}
+        </div></td></tr>'''
     else:
-        action_intro = "No action required from you today"
-        action_html = "<tr><td style='padding:8px 0;color:#315c49'>No decisions are waiting for you.</td></tr>"
-        action_text = "- No action required from you today. No decisions are waiting for you."
-
-    health = model["health"]
-    issues = health.get("issues") or []
-    if issues:
-        issue_rows = "".join(
-            f"<li style='margin-bottom:8px'><strong>{escape(item['name'])}</strong>: {escape(item.get('failed_work') or item['result'])}. "
-            + (f"<a href='{escape(item['url'])}' style='color:#4737a8'>Open details</a>" if item.get("url") else "")
-            + " The system will retry; no action from you is currently required.</li>"
-            for item in issues
-        )
-        health_title = "Automated work that did not finish"
-        health_detail = "; ".join(f"{item['name']}: {item.get('failed_work') or item['result']}" for item in issues)
-        health_html = f"<div style='background:#fff3df;border-radius:18px;padding:20px'><div style='font-weight:800'>{health_title}</div><ul style='color:#52606d;font-size:13px'>{issue_rows}</ul></div>"
-    else:
-        health_title = "All business automations finished normally"
-        health_detail = "No automated business process needs attention."
-        health_html = f"<div style='background:#e9f8f1;border-radius:18px;padding:20px'><div style='font-weight:800'>{health_title}</div></div>"
+        action_intro = "Nothing needs your attention"
+        action_text = "- Nothing needs your attention today."
+        action_section = '''<tr><td class="section-pad" style="padding:14px 28px"><div style="background:#e9f8f1;border:1px solid #cfeadd;border-radius:18px;padding:16px 19px;color:#28614a"><strong>&#10003; Nothing needs your attention today.</strong></div></td></tr>'''
 
     work = model.get("system_work") or []
     if work:
         work_rows = "".join(
-            f"<li style='margin-bottom:10px'><strong>{escape(item['title'])}</strong> — {escape(item['detail'])}</li>"
+            "<span style='display:inline-block;background:#ffffff;border:1px solid #dfe7f4;border-radius:20px;"
+            f"padding:8px 12px;margin:5px 5px 0 0;font-size:12px;font-weight:800;color:#2c3150'>{escape(item['title'])}</span>"
             for item in work
         )
-        work_html = f'''<tr><td style="padding:12px 30px"><div style="background:#eef3ff;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 12px">Approved partnerships being published</h2><ul style="padding-left:20px;margin:0;color:#475467">{work_rows}</ul></div></td></tr>'''
-        work_text = "\n".join(f"- {item['title']}: {item['detail']}" for item in work)
+        work_html = f'''<tr><td class="section-pad" style="padding:14px 28px"><div style="background:#f0f5ff;border:1px solid #dfe8f7;border-radius:22px;padding:24px">
+          <div style="font-size:11px;font-weight:900;letter-spacing:1.2px;color:#4e6fa7;text-transform:uppercase">Partner pipeline</div>
+          <h2 style="font-size:22px;color:#211a35;margin:7px 0 5px">Approved and waiting for a link</h2>
+          <p style="font-size:13px;color:#70758a;margin:0 0 8px">These pages will appear automatically when their referral links become available.</p>{work_rows}
+        </div></td></tr>'''
+        work_text = (
+            "Approved; pages will publish when referral links become available: "
+            + ", ".join(item["title"] for item in work)
+        )
     else:
         work_html = ""
         work_text = "- None."
 
+    attention_label = f"{action_count} decision{'s' if action_count != 1 else ''}" if action_count else "No action needed"
     html = f"""<!doctype html>
-<html><body style="margin:0;background:#f4f1fb;font-family:Arial,Helvetica,sans-serif;color:#182230">
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f4f1fb"><tr><td align="center" style="padding:28px 12px">
-<table role="presentation" width="760" cellspacing="0" cellpadding="0" style="width:100%;max-width:760px;background:#ffffff;border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(55,35,110,.08)">
-<tr><td style="padding:32px;background:linear-gradient(135deg,#eee7ff,#e5f8ef)">
-  <div style="font-size:13px;font-weight:800;letter-spacing:1px;color:#6448c8">ARTIFICIAL.ONE</div>
-  <h1 style="margin:10px 0 5px;font-size:30px;line-height:1.15">Daily business brief</h1>
-  <div style="color:#667085">{escape(pretty_date)} · one report, only business outcomes</div>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+@media only screen and (max-width:600px){{
+  body,table,tbody,tr,td,div,p,h1,h2,a{{box-sizing:border-box!important;max-width:100%!important;overflow-wrap:anywhere!important;word-break:break-word!important}}
+  table{{table-layout:fixed!important}}
+  img{{max-width:100%!important}}
+  .email-shell{{width:100%!important;max-width:100%!important;border-radius:0!important}}
+  .outer-pad{{padding:0!important}}
+  .hero-pad{{padding:22px 16px!important}}
+  .hero-badge{{display:none!important;width:0!important}}
+  .hero-logo-cell{{width:58px!important}}
+  .hero-logo{{width:50px!important;height:50px!important}}
+  .hero-title{{font-size:23px!important}}
+  .section-pad{{padding-left:12px!important;padding-right:12px!important}}
+  .metric-cell{{display:block!important;width:100%!important;box-sizing:border-box!important}}
+  .journey-cell{{display:block!important;width:100%!important;border-left:0!important;border-top:1px solid #e5deec!important;box-sizing:border-box!important}}
+}}
+</style></head><body style="margin:0;background:#f3f0f8;font-family:Arial,Helvetica,sans-serif;color:#211a35">
+<div style="display:none;max-height:0;overflow:hidden;color:transparent">Revenue, traffic, partnerships, Google visibility and social performance &mdash; beautifully brief.</div>
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f3f0f8"><tr><td class="outer-pad" align="center" style="padding:26px 10px">
+<table class="email-shell" role="presentation" width="100%" cellspacing="0" cellpadding="0" style="width:100%;max-width:700px;background:#ffffff;border-radius:28px;overflow:hidden;box-shadow:0 18px 50px rgba(57,42,91,.12)">
+<tr><td class="hero-pad" style="padding:30px;background-color:#33254e;background-image:linear-gradient(135deg,#33254e 0%,#6651a5 55%,#4c8d86 100%);color:#ffffff">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
+    <td class="hero-logo-cell" width="76" valign="middle"><img class="hero-logo" src="https://artificial.one/images/social/artificial-one-logo.png" width="64" height="64" alt="Artificial.One elephant" style="display:block;border-radius:17px;border:2px solid rgba(255,255,255,.25)"></td>
+    <td valign="middle"><div style="font-size:12px;font-weight:900;letter-spacing:1.3px;color:#d9f8ad">ARTIFICIAL.ONE</div><h1 class="hero-title" style="margin:5px 0 0;font-size:29px;line-height:1.1">Growth &amp; revenue pulse</h1></td>
+    <td class="hero-badge" align="right" valign="middle"><span style="display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:7px 10px;font-size:11px;font-weight:800">{escape(attention_label)}</span></td>
+  </tr></table>
+  <div style="font-size:13px;color:#e7e2f2;margin-top:18px">{escape(pretty_date)}</div>
+  <p style="font-size:16px;line-height:1.55;margin:10px 0 0;color:#ffffff">{escape(summary)}</p>
 </td></tr>
-<tr><td style="padding:28px 30px 10px"><h2 style="font-size:19px;margin:0 0 10px">Executive summary</h2><p style="margin:0;color:#475467;line-height:1.65">{escape(summary)}</p></td></tr>
-<tr><td style="padding:14px 24px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
-  {metric_card('Revenue', model['revenue'], '#f1edff')}
-  {metric_card('Commissions', model['commissions'], '#fff3df')}
-  {metric_card(f"Site visits · last {model.get('visit_window_days', 28)} days", str(model['visits']), '#e9f8f1')}
-  {metric_card(f"Affiliate clicks · last {model.get('click_window_days', 28)} days", str(model['clicks']), '#eaf3ff')}
-</tr></table></td></tr>
-<tr><td style="padding:12px 30px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
-  <td style="background:#f7f5fd;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 13px">What the system delivered today</h2><ul style="padding-left:20px;margin:0;color:#475467;line-height:1.5">{highlight_html}</ul></td>
-</tr></table></td></tr>
+{action_section}
+<tr><td class="section-pad" style="padding:14px 22px 4px"><div style="font-size:11px;font-weight:900;letter-spacing:1.2px;color:#7151bd;text-transform:uppercase;margin:0 12px 5px">At a glance</div>
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
+    {metric_card('Revenue', model['revenue'], '#eee8ff', 'Confirmed partner sales')}
+    {metric_card('Commission earned', model['commissions'], '#fff0dc', 'Recorded by partner networks')}
+  </tr><tr>
+    {metric_card('Website visits', str(model['visits']), '#e7f8f0', f"Last {model.get('visit_window_days', 28)} days")}
+    {metric_card('Affiliate link clicks', str(model['clicks']), '#e8f3ff', f"Last {model.get('click_window_days', 28)} days")}
+  </tr></table>
+</td></tr>
+<tr><td class="section-pad" style="padding:14px 28px"><div style="background:#f8f5fc;border:1px solid #ebe4f2;border-radius:22px;padding:23px">
+  <div style="font-size:11px;font-weight:900;letter-spacing:1.2px;color:#7151bd;text-transform:uppercase">Revenue journey</div>
+  <h2 style="font-size:22px;color:#211a35;margin:7px 0 16px">From choice to customer</h2>
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
+    <td class="journey-cell" width="25%" align="center" style="padding:8px"><div style="font-size:25px;font-weight:900;color:#5540aa">{model['published_offers']}</div><div style="font-size:11px;color:#706880;margin-top:5px">live partner destinations</div></td>
+    <td class="journey-cell" width="25%" align="center" style="padding:8px;border-left:1px solid #e5deec"><div style="font-size:25px;font-weight:900;color:#5540aa">{model['signups']}</div><div style="font-size:11px;color:#706880;margin-top:5px">referred sign-ups</div></td>
+    <td class="journey-cell" width="25%" align="center" style="padding:8px;border-left:1px solid #e5deec"><div style="font-size:25px;font-weight:900;color:#28644d">{model['paying_customers']}</div><div style="font-size:11px;color:#706880;margin-top:5px">paying customers</div></td>
+    <td class="journey-cell" width="25%" align="center" style="padding:8px;border-left:1px solid #e5deec"><div style="font-size:25px;font-weight:900;color:#b45b3d">{model['impact_actions'] + model.get('partnerstack_transactions', 0)}</div><div style="font-size:11px;color:#706880;margin-top:5px">tracked leads or sales</div></td>
+  </tr></table>
+</div></td></tr>
+{wins_html}
 {search_html}
 {social_html}
-<tr><td style="padding:12px 30px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
-  <td style="background:#fff8ea;border-radius:18px;padding:22px"><h2 style="font-size:18px;margin:0 0 4px">{escape(action_intro)}</h2>
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0">{action_html}</table></td>
-</tr></table></td></tr>
-<tr><td style="padding:0 30px 12px"><div style="background:#eef3ff;border-radius:14px;padding:14px 18px;color:#475467;font-size:13px;line-height:1.5">
-  <strong style="color:#26324a">How to read these numbers:</strong> {model['published_offers']} is the number of different tracked affiliate destinations currently available on the website. {model['clicks']} is how many times visitors clicked any of those links during the last {model.get('click_window_days', 28)} days. These numbers measure inventory and traffic, so they are not expected to match.
-</div></td></tr>
-<tr><td style="padding:0 30px 12px"><div style="background:#e9f8f1;border-radius:14px;padding:14px 18px;color:#315c49;font-size:13px;line-height:1.55">
-  <strong>Results reported by affiliate networks · since tracking began</strong><br>
-  PartnerStack referred sign-ups: <strong>{model['signups']}</strong> · confirmed paying customers: <strong>{model['paying_customers']}</strong> · recorded transactions: <strong>{model.get('partnerstack_transactions', 0)}</strong><br>
-  Impact tracked lead or sale events: <strong>{model['impact_actions']}</strong>
-</div></td></tr>
 {work_html}
-<tr><td style="padding:12px 30px 30px">{health_html}</td></tr>
-<tr><td style="background:#26203b;color:#d9d3eb;padding:22px 30px;font-size:12px;line-height:1.6">
-  Prepared automatically for senior-management review. Financial figures are aggregate and contain no customer identities.<br>
-  <a href="https://artificial.one/" style="color:#bba8ff">Open artificial.one</a>
+<tr><td align="center" style="background:#29213d;color:#ddd6ea;padding:24px 28px;font-size:12px;line-height:1.6">
+  <strong style="color:#ffffff">Artificial.One</strong> &middot; independent AI-tool decisions<br>
+  <a href="https://artificial.one/" style="color:#c8ff84;text-decoration:none;font-weight:800">Visit the website &rarr;</a>
 </td></tr></table></td></tr></table></body></html>"""
 
     text = "\n".join([
-        "ARTIFICIAL.ONE — DAILY BUSINESS BRIEF", pretty_date, "", "EXECUTIVE SUMMARY", summary, "",
-        "KEY NUMBERS",
+        "ARTIFICIAL.ONE — DAILY GROWTH & REVENUE PULSE", pretty_date, "", summary, "",
+        "AT A GLANCE",
         f"Revenue: {model['revenue']}", f"Commissions: {model['commissions']}",
         f"Site visits (last {model.get('visit_window_days', 28)} days): {model['visits']}",
-        f"Outbound affiliate clicks (last {model.get('click_window_days', 28)} days): {model['clicks']}",
-        f"Different live tracked affiliate destinations currently on the website: {model['published_offers']}",
-        f"PartnerStack referred sign-ups (since tracking began): {model['signups']}",
-        f"PartnerStack confirmed paying customers (since tracking began): {model['paying_customers']}",
-        f"PartnerStack recorded transactions (since tracking began): {model.get('partnerstack_transactions', 0)}",
-        f"Impact tracked lead or sale events (since tracking began): {model['impact_actions']}", "",
-        "DELIVERED TODAY", highlights_text, "", "GOOGLE SEARCH AND INDEXING", search_text, "", "SOCIAL MEDIA PUBLISHED IN THE LAST 24 HOURS", social_text, "", "YOUR ACTIONS", action_text, "",
-        "APPROVED PARTNERSHIPS BEING PUBLISHED", work_text, "",
-        "AUTOMATION STATUS", health_title, health_detail,
+        f"Affiliate link clicks (last {model.get('click_window_days', 28)} days): {model['clicks']}",
+        f"Live partner destinations: {model['published_offers']}",
+        f"Referred sign-ups: {model['signups']}",
+        f"Paying customers: {model['paying_customers']}",
+        f"Tracked leads or sales: {model['impact_actions'] + model.get('partnerstack_transactions', 0)}", "",
+        "WHAT MOVED FORWARD", highlights_text, "", "YOUR DECISIONS", action_text, "",
+        "GOOGLE VISIBILITY", search_text, "", "SOCIAL PULSE — LAST 24 HOURS", social_text, "",
+        "APPROVED PARTNERSHIPS WAITING FOR LINKS", work_text,
     ]) + "\n"
     return subject, text, html
 
