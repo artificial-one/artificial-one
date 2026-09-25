@@ -92,6 +92,11 @@ class AppSumoImpactTests(unittest.TestCase):
         self.assertIn('data-placement="homepage-deal-pulse"', rendered)
         self.assertIn('rel="nofollow sponsored noopener"', rendered)
 
+    def test_decision_engine_homepage_is_left_compact(self):
+        source = '<main><section data-home-picks></section></main>'
+        registry = {"offers": []}
+        self.assertEqual(appsumo.update_homepage(source, registry), source)
+
     def test_impact_subids_and_runtime_expiry_guard_are_installed(self):
         script = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
         self.assertIn('url.searchParams.set("subId1"', script)

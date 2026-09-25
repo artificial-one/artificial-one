@@ -11,6 +11,9 @@ on:
       - .github/workflows/tool-intelligence.yml
       - scripts/build_tool_intelligence.py
       - scripts/monitor_tool_intelligence.py
+      - scripts/build_elephant_experience.py
+      - assets/elephant-experience.js
+      - assets/elephant-share.js
       - scripts/indexing_recovery.py
       - data/partner_offers.json
       - data/appsumo_offers.json
@@ -59,6 +62,9 @@ jobs:
             python scripts/monitor_tool_intelligence.py --state .tool-intelligence/private-state.json --batch-size 75
           fi
 
+      - name: Rebuild the Elephant decision experience
+        run: python scripts/build_elephant_experience.py
+
       - name: Refresh crawl discovery and notify participating search engines
         env:
           INDEXNOW_SUBMIT_ENABLED: "true"
@@ -69,12 +75,17 @@ jobs:
           python -m unittest tests.test_tool_intelligence -v
           python scripts/build_tool_intelligence.py --check
           python scripts/monitor_tool_intelligence.py --check
+          python scripts/build_elephant_experience.py --check
           python scripts/indexing_recovery.py --check
+          node --check assets/elephant-experience.js
+          node --check assets/elephant-share.js
+          node --check api/tool-catalog.js
+          node --check api/watchlist-subscribe.js
 
       - name: Commit only public, privacy-safe intelligence assets
         shell: bash
         run: |
-          git add -- data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json data/indexing_recovery.json ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html index.html buyers-guides.html sitemap.xml
+          git add -- data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json data/elephant_experience.json data/indexing_recovery.json ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html ask-elephant.html ai-stack-studio.html ai-tool-observatory.html workflow-recipes.html workflow-recipes developers.html watchlist-confirmed.html index.html buyers-guides.html sitemap.xml
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

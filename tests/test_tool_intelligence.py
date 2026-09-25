@@ -72,6 +72,10 @@ class ToolIntelligenceTests(unittest.TestCase):
         self.assertEqual(first_map.count("tool-intelligence:start"), 1)
         self.assertEqual(first_map.count("ai-tool-database.html"), 1)
 
+    def test_compact_decision_engine_homepage_skips_legacy_database_block(self):
+        source = '<main><section data-home-picks></section></main>'
+        self.assertEqual(intelligence.update_homepage(source, self.catalog), source)
+
     def test_change_monitor_requires_same_changed_signal_twice(self):
         tool = {
             "id": "sample",

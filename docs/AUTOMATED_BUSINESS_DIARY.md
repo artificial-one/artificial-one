@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-23T03:25:32+02:00
+**Latest recorded activity:** 2026-09-25T01:04:52+02:00
 
 ## Daily productive system
 
@@ -19,7 +19,7 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 - **Revenue optimization and distribution — 08:13 UTC daily:** ranks offers, improves conversion routes, refreshes decision tools and creatives, publishes one confirmed item to each connected social channel, and updates RSS and the web newsletter.
 - **Playful Bluesky elephant — 10:37 and 17:47 UTC daily:** publishes one extra visual elephant-persona post, answers recent mentions, joins at most one relevant AI-tool question, appreciates useful posts, and selectively follows back relevant people within strict anti-spam limits.
 - **Playful LinkedIn edition — 14:43 UTC Monday–Friday:** publishes a second original visual post with a conversational hook and a genuine discussion question. Together with the daily edition, LinkedIn receives twelve posts per week.
-- **Business diary — after productive workflows plus a 23:55 UTC fallback:** records the verified outcomes below.
+- **Business diary — 20:15 UTC daily:** records the verified outcomes below in one consolidated roll-up.
 
 ### Connected versus prepared channels
 
@@ -28,8 +28,413 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 
 ## Diary
 
+### 2026-09-25
+
+- **01:04** — Discovered 1 new affiliate opportunities for evaluation.
+  - Wegic
+
+### 2026-09-24
+
+- **23:46** — Added 7 new AI-news items to the live briefing.
+  - Gemini 3.8 Live with Live Avatar gives Google’s AI a face
+  - Top AI experts badly underestimated how fast the field is moving, study finds
+  - PrismML brings its tiny LLMs to Qualcomm-powered smart glasses
+  - Sakana AI hires Jürgen Schmidhuber, inventor of deep learning, world models, and your next ChatGPT update
+  - Jensen Huang talks about AI and climate change like a supervillain
+  - Meta is going to let you build games with AI right on your phone
+  - Google's Suncatcher project aims to put AI data centers in orbit powered by solar energy
+- **23:46** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **23:46** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **20:41** — [Published LinkedIn post: The expensive AI tool is the one nobody actually uses. Volza review and pricing guide](https://www.linkedin.com/feed/update/urn:li:share:7508958764864016385/)
+- **19:31** — Added 18 new AI-news items to the live briefing.
+  - Black Forest Labs launches FLUX 3 Action, an open robotics AI model
+  - 20 minutes with the CEO of ElevenLabs, now reportedly valued at $22B
+  - Gemini can now call businesses for you so you don’t have to wait on hold
+  - Anthropic says Claude discovered a new enzyme system, but CRISPR researchers call it routine genome mining
+  - AI performance costs are falling faster than those of any previous technology
+  - Google tests letting Gemini call businesses for you
+  - It’s sinister that Meta’s Muse AI mascot is so cute
+  - Shield AI, Waabi, and General Motors on building AI when failure is not an option at TechCrunch Disrupt 2026
+  - Google is sending an AI satellite into space next week
+  - U.S. bill proposes permanent ban on artificial superintelligence and creation of new federal AI agency
+  - Meta’s Muse AI Charms can interact with each other
+  - Ando wants to take on Slack with a team messaging app that lets humans and agents work together
+  - TechCrunch Disrupt 2026: Cal AI’s Zach Yadegari on how to create viral growth and capitalize on it
+  - Accelerating vision-language models with LFM2.5-VL-DSpark
+  - OpenAI's agents went after government and university sites months before Hugging Face
+  - Deepmind was built to chase AGI, but its new chief just wants Gemini 4 out the door
+  - Meta gives its Muse AI agent video avatars, email addresses, and Mac control
+  - Australia to investigate if OpenAI hack of government health website broke the law
+- **19:31** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **19:31** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **17:29** — [Published Bluesky post: Elephant trunk check: Trainual review and pricing guide](https://bsky.app/profile/artificial-one.bsky.social/post/3mwbl445qfi2x)
+- **15:33** — Created or refreshed 15 social-media creative assets.
+  - images/social-cards/adcreative.jpg
+  - images/social-cards/alison-us-ca.jpg
+  - images/social-cards/carepatron.jpg
+  - images/social-cards/descript.jpg
+  - images/social-cards/easyclaw.jpg
+  - images/social-cards/elevenlabs.jpg
+  - images/social-cards/everleakproof-us.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/lensmor.jpg
+  - images/social-cards/mrpeasy.jpg
+  - images/social-cards/omniseo.jpg
+  - images/social-cards/pinecone.jpg
+  - images/social-cards/quicksigner.jpg
+  - images/social-cards/unbounce.jpg
+  - images/social-cards/whatconverts.jpg
+- **15:33** — Published an updated RSS feed for content distribution.
+- **15:33** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **15:33** — [Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/turn-recordings-into-content.html)
+- **15:33** — [Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/ship-an-ai-powered-product.html)
+- **15:33** — [Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/onboard-a-growing-team.html)
+- **15:33** — [Updated webpage: Launch and measure a converting campaign — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/launch-a-converting-campaign.html)
+- **15:33** — [Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/build-a-business-website.html)
+- **15:33** — [Updated webpage: LearnWorlds for Launch a paid online course: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html)
+- **15:33** — [Updated webpage: Best LearnWorlds Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-alternatives.html)
+- **15:33** — [Updated webpage: Foxit for Edit and convert PDF documents: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html)
+- **15:33** — [Updated webpage: Best Foxit Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-alternatives.html)
+- **15:33** — [Updated webpage: Wegic: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/wegic-ai-website-builder.html)
+- **15:33** — [Updated webpage: Seamless.AI: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html)
+- **15:33** — [Updated webpage: LearnWorlds: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/learnworlds-course-platform.html)
+- **15:33** — [Updated webpage: Foxit: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/foxit-pdf-software.html)
+- **15:33** — [Updated webpage: brkox: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/brkox-software.html)
+- **15:33** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **15:33** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **15:33** — [Updated webpage: PDF Workflow Cost Calculator | Free Tool | artificial.one](https://artificial.one/calculators/pdf-workflow-cost-calculator.html)
+- **15:33** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **15:33** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **15:33** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **15:33** — [Retired webpage: LearnWorlds vs Alison US CA: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-vs-alison-us-ca-software.html)
+- **15:33** — [Published webpage: LearnWorlds vs Turbotic: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-vs-turbotic-enterprise-automation.html)
+- **15:33** — [Published webpage: Foxit vs eSign: Sign PDF DOCX Documents (iOS only): Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html)
+- **15:33** — [Published LinkedIn post: Before you buy Rewarx Studio AI](https://www.linkedin.com/feed/update/urn:li:share:7508881283092172801/)
+- **15:33** — [Published Bluesky post: Buyer checklist · Sep 24 Confirm current pricing, regional availability, plan limits and partner terms before purchasing. Read the independent fit guide ↓ #AITools](https://bsky.app/profile/artificial-one.bsky.social/post/3mwbem64juo2x)
+- **14:47** — [Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/turn-recordings-into-content.html)
+- **14:47** — [Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/ship-an-ai-powered-product.html)
+- **14:47** — [Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/onboard-a-growing-team.html)
+- **14:47** — [Updated webpage: Launch and measure a converting campaign — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/launch-a-converting-campaign.html)
+- **14:47** — [Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/build-a-business-website.html)
+- **14:47** — [Updated webpage: AppSumo AI Deals Available Today | artificial.one](https://artificial.one/appsumo-ai-tools.html)
+- **14:10** — Added 1 new AI-news items to the live briefing.
+  - Gemini 4 is almost ready, says new Google DeepMind chief
+- **14:10** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **14:10** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **13:45** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **11:28** — Published 2 confirmed vendor pricing, plan, or availability changes.
+  - Krisp
+  - Postly
+- **11:28** — [Updated webpage: AI Tool Price & Product Changes | artificial.one](https://artificial.one/ai-tool-observatory.html)
+- **11:28** — [Updated webpage: AI Tool Pricing & Feature Change History | artificial.one](https://artificial.one/ai-tool-changes.html)
+- **07:20** — Added 2 new AI-news items to the live briefing.
+  - Everything new coming to Meta’s AI agent Muse
+  - ChatGPT Ads expands to Southeast Asia and Taiwan
+- **07:20** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **07:20** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **03:15** — Created or refreshed 6 social-media creative assets.
+  - images/social-cards/elevenlabs.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/omniseo.jpg
+  - images/social-cards/rank-prompt.jpg
+  - images/social-cards/seamless.jpg
+  - images/social-cards/volza.jpg
+- **03:15** — Published an updated RSS feed for content distribution.
+- **03:15** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **03:15** — [Updated webpage: Best WhatConverts Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/whatconverts-lead-attribution-alternatives.html)
+- **03:15** — [Updated webpage: Best Unbounce Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/unbounce-landing-pages-alternatives.html)
+- **03:15** — [Updated webpage: Best Kit Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/kit-creator-email-marketing-alternatives.html)
+- **03:15** — [Updated webpage: Best Kartra Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/kartra-marketing-platform-alternatives.html)
+- **03:15** — [Updated webpage: Seamless.AI: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html)
+- **03:15** — [Updated webpage: Rank Prompt: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/rank-prompt-ai-visibility.html)
+- **03:15** — [Updated webpage: Kartra: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/kartra-marketing-platform.html)
+- **03:15** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **03:15** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **03:15** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **03:15** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **03:15** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **02:58** — Created or refreshed 11 social-media creative assets.
+  - images/social-cards/beautiful-ai.jpg
+  - images/social-cards/daily-editorial-vertical.jpg
+  - images/social-cards/daily-editorial.jpg
+  - images/social-cards/descript.jpg
+  - images/social-cards/elevenlabs.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/omniseo.jpg
+  - images/social-cards/unbounce.jpg
+  - images/social-cards/volza.jpg
+  - images/social-cards/wegic.jpg
+  - images/social-cards/whatconverts.jpg
+- **02:58** — Published an updated RSS feed for content distribution.
+- **02:58** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **02:58** — [Updated webpage: Volza: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/volza-trade-intelligence.html)
+- **02:58** — [Updated webpage: Seamless.AI: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html)
+- **02:58** — [Updated webpage: Rank Prompt: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/rank-prompt-ai-visibility.html)
+- **02:58** — [Updated webpage: Pinecone: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/pinecone-vector-database.html)
+- **02:58** — [Updated webpage: LearnWorlds: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/learnworlds-course-platform.html)
+- **02:58** — [Updated webpage: EverLeakProof US: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/everleakproof-us-software.html)
+- **02:58** — [Updated webpage: ElevenLabs: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/elevenlabs-ai-voice.html)
+- **02:58** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **02:58** — [Updated webpage: AI Tool Pricing and Plan Updates | artificial.one](https://artificial.one/offer-updates.html)
+- **02:58** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **02:58** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **02:58** — [Updated webpage: Landing Page ROI Calculator | Free Tool | artificial.one](https://artificial.one/calculators/landing-page-roi-calculator.html)
+- **02:58** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **02:58** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **02:57** — Added 3 new AI-news items to the live briefing.
+  - Meta made a Tamagotchi-like wearable for its Muse AI agent
+  - Meta is making a standalone Muse AI gadget
+  - AI bots "Timmy," "Ren," and "Jackie" are flooding social media with slop
+- **02:57** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **02:57** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **02:57** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **02:14** — Added 2 new AI-news items to the live briefing.
+  - Meta introduces camera-free AI glasses
+  - Anthropic says its biology lab has already found something big
+- **02:14** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **02:14** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **02:12** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
+- **01:41** — [Updated webpage: AI Tool Observatory: Pricing, Availability and Product Changes | artificial.one](https://artificial.one/ai-tool-observatory.html)
+- **01:40** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
+
 ### 2026-09-23
 
+- **23:45** — Added 10 new AI-news items to the live briefing.
+  - Enveda secures $311M to bring more nature-derived AI drugs into clinical trials
+  - Meta’s AI agent is a cute little guy who’s great at spending my money
+  - ChatGPT Voice gets closer to "Her" with email, calendar, and Slack access
+  - Google's new Flash TTS models let you design AI voices from scratch using text descriptions
+  - Anthropic’s biolab made a discovery it’s comparing to Crispr
+  - ChatGPT mobile app gets voice-based agentic features
+  - Airbnb widens access to GPT-6 Astra and OpenAI frontier models
+  - Building AI to accelerate science and improve lives
+  - AI for everyone in every language
+  - New insights from Google’s AI & Economy ATLAS
+- **23:45** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **23:45** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **23:28** — Created or refreshed 7 social-media creative assets.
+  - images/social-cards/adcreative.jpg
+  - images/social-cards/daily-editorial-vertical.jpg
+  - images/social-cards/daily-editorial.jpg
+  - images/social-cards/kit.jpg
+  - images/social-cards/rank-prompt.jpg
+  - images/social-cards/seamless.jpg
+  - images/social-cards/unbounce.jpg
+- **23:28** — Published an updated RSS feed for content distribution.
+- **23:28** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **23:28** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **23:28** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **23:28** — [Updated webpage: Landing Page ROI Calculator | Free Tool | artificial.one](https://artificial.one/calculators/landing-page-roi-calculator.html)
+- **23:28** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **23:28** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **19:26** — Added 15 new AI-news items to the live briefing.
+  - Ringg’s AI agents resolve up to 65% of customer calls with OpenAI
+  - Even Americans who use AI every day are worried about it
+  - YouTube adds AI tools to Creator Studio with script coaching, smart thumbnails, and Gemini editing
+  - Two years of OpenAI Academy
+  - YouTube Music gets more conversational with new AI features
+  - Anthropic engineer explains why Claude's writing got worse although the model got smarter
+  - Meta's AI agent Muse draws 500,000 users in a week along with claims it copied OpenClaw
+  - YouTube will let you build your own algorithm with AI
+  - YouTube releases new AI features for creators within its Studio app
+  - Inside Basecamp Research, the AI startup turning evolution into training data
+  - YouTube is building AI creator tools that do almost everything for them
+  - **Know Who Spoke When: Build Real-Time, Multi-Speaker AI with NVIDIA Nemotron 3 Diarization**
+  - OpenAI extends cyber access to Ukraine for civilian defense
+  - Alibaba launches Qwen Audio 3.1 with new models and slashes AI audio prices by up to 95 percent
+  - Ema raises $77M as AI starts eating into enterprise software and services
+- **19:26** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **19:26** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **17:11** — [Published Bluesky post: Elephant trunk check: Carepatron review and pricing guide](https://bsky.app/profile/artificial-one.bsky.social/post/3mw6zmhbvsg2w)
+- **15:38** — Created or refreshed 23 social-media creative assets.
+  - images/social-cards/adcreative.jpg
+  - images/social-cards/alison-us-ca.jpg
+  - images/social-cards/beautiful-ai.jpg
+  - images/social-cards/brkox.jpg
+  - images/social-cards/carepatron.jpg
+  - images/social-cards/daily-editorial-vertical.jpg
+  - images/social-cards/daily-editorial.jpg
+  - images/social-cards/descript.jpg
+  - images/social-cards/easyclaw.jpg
+  - images/social-cards/elevenlabs.jpg
+  - images/social-cards/esign-sign-pdf-docx-documents-ios-only.jpg
+  - images/social-cards/everleakproof-us.jpg
+  - images/social-cards/hubstaff.jpg
+  - images/social-cards/kartra.jpg
+  - images/social-cards/kit.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/omniseo.jpg
+  - images/social-cards/rewarx-studio-ai.jpg
+  - images/social-cards/turbotic.jpg
+  - images/social-cards/unbounce.jpg
+  - images/social-cards/volza.jpg
+  - images/social-cards/wegic.jpg
+  - images/social-cards/whatconverts.jpg
+- **15:38** — Published an updated RSS feed for content distribution.
+- **15:38** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **15:38** — [Updated webpage: LearnWorlds for Launch a paid online course: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html)
+- **15:38** — [Updated webpage: Best LearnWorlds Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-alternatives.html)
+- **15:38** — [Updated webpage: Foxit for Edit and convert PDF documents: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html)
+- **15:38** — [Updated webpage: Best Foxit Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-alternatives.html)
+- **15:38** — [Updated webpage: Volza: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/volza-trade-intelligence.html)
+- **15:38** — [Updated webpage: Seamless.AI: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html)
+- **15:38** — [Updated webpage: Rank Prompt: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/rank-prompt-ai-visibility.html)
+- **15:38** — [Updated webpage: Kit: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/kit-creator-email-marketing.html)
+- **15:38** — [Updated webpage: Foxit: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/foxit-pdf-software.html)
+- **15:38** — [Updated webpage: EverLeakProof US: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/everleakproof-us-software.html)
+- **15:38** — [Updated webpage: ElevenLabs: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/elevenlabs-ai-voice.html)
+- **15:38** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **15:38** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **15:38** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **15:38** — [Updated webpage: PDF Workflow Cost Calculator | Free Tool | artificial.one](https://artificial.one/calculators/pdf-workflow-cost-calculator.html)
+- **15:38** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **15:38** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **15:38** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **15:38** — [Retired webpage: Foxit vs eSign: Sign PDF DOCX Documents (iOS only): Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html)
+- **15:38** — [Published LinkedIn post: One practical way to use Unbounce](https://www.linkedin.com/feed/update/urn:li:share:7508520084819267585/)
+- **15:38** — [Published Bluesky post: Workflow Wednesday · Sep 23 Test page variants for conversion improvement. Check the fit, limitations and current pricing before you buy ↓ #AITools #Productivity](https://bsky.app/profile/artificial-one.bsky.social/post/3mw6ufyqsl32n)
+- **14:05** — Added 3 new AI-news items to the live briefing.
+  - OpenAI nabs key Patreon execs ahead of upcoming announcement
+  - OpenAI hires Patreon co-founder Sam Yam to lead a new Creator Product division
+  - Grab and OpenAI bring practical AI skills to Southeast Asia
+- **14:05** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **14:05** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **13:31** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **13:31** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **12:16** — Discovered 1 new affiliate opportunities for evaluation.
+  - EverLeakProof US
+- **12:16** — Activated 1 new tracked affiliate offers.
+  - EverLeakProof US
+- **12:16** — [Updated webpage: LearnWorlds vs Alison US CA: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-vs-alison-us-ca-software.html)
+- **12:16** — [Updated webpage: LearnWorlds for Launch a paid online course: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html)
+- **12:16** — [Updated webpage: Best LearnWorlds Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-alternatives.html)
+- **12:16** — [Updated webpage: Foxit vs eSign: Sign PDF DOCX Documents (iOS only): Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html)
+- **12:16** — [Updated webpage: Foxit for Edit and convert PDF documents: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html)
+- **12:16** — [Updated webpage: Best Foxit Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-alternatives.html)
+- **12:16** — [Updated webpage: Rewarx Studio AI: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/rewarx-studio-ai-software.html)
+- **12:16** — [Updated webpage: lensmor: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/lensmor-software.html)
+- **12:16** — [Updated webpage: LearnWorlds: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/learnworlds-course-platform.html)
+- **12:16** — [Updated webpage: eSign: Sign PDF DOCX Documents (iOS only): Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/esign-sign-pdf-docx-documents-ios-only-software.html)
+- **12:16** — [Updated webpage: EasyClaw: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/easyclaw-software.html)
+- **12:16** — [Updated webpage: brkox: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/brkox-software.html)
+- **12:16** — [Updated webpage: Alison US CA: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/alison-us-ca-software.html)
+- **12:16** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **12:16** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **12:16** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **12:16** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
+- **12:16** — [Updated webpage: AI Tool Alternatives & Migration Wizard | artificial.one](https://artificial.one/ai-tool-alternatives.html)
+- **12:16** — [Retired webpage: Best Online Learning Tools: Reviews, Use Cases & Pricing | artificial.one](https://artificial.one/search-intent/best-online-learning-tools.html)
+- **12:16** — [Published webpage: EverLeakProof US: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/everleakproof-us-software.html)
+- **11:30** — Published 1 confirmed vendor pricing, plan, or availability changes.
+  - Submagic
+- **11:30** — [Updated webpage: AI Tool Pricing & Feature Change History | artificial.one](https://artificial.one/ai-tool-changes.html)
+- **09:16** — Published an updated RSS feed for content distribution.
+- **09:04** — [Updated webpage: AppSumo AI Deals Available Today | artificial.one](https://artificial.one/appsumo-ai-tools.html)
+- **09:01** — Created or refreshed 9 social-media creative assets.
+  - images/social-cards/elevenlabs.jpg
+  - images/social-cards/kartra.jpg
+  - images/social-cards/kit.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/seamless.jpg
+  - images/social-cards/unbounce.jpg
+  - images/social-cards/volza.jpg
+  - images/social-cards/wegic.jpg
+  - images/social-cards/whatconverts.jpg
+- **09:01** — Published an updated RSS feed for content distribution.
+- **09:01** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **09:01** — [Updated webpage: Sponsor artificial.one | AI Software Audience](https://artificial.one/sponsor.html)
+- **09:01** — [Updated webpage: Sponsorship intake | artificial.one](https://artificial.one/sponsor-success.html)
+- **09:01** — [Updated webpage: WhatConverts vs Unbounce: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/whatconverts-lead-attribution-vs-unbounce-landing-pages.html)
+- **09:01** — [Updated webpage: WhatConverts Pricing: Plans, Limits & Fit | artificial.one](https://artificial.one/search-intent/whatconverts-lead-attribution-pricing.html)
+- **09:01** — [Updated webpage: WhatConverts for Attribute calls and forms to campaigns: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/whatconverts-lead-attribution-for-attribute-calls-and-forms-to-campaigns.html)
+- **09:01** — [Updated webpage: Best WhatConverts Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/whatconverts-lead-attribution-alternatives.html)
+- **09:01** — [Updated webpage: Wegic vs Beautiful.ai: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/wegic-ai-website-builder-vs-beautiful-ai-presentations.html)
+- **09:01** — [Updated webpage: Wegic Pricing: Plans, Limits & Fit | artificial.one](https://artificial.one/search-intent/wegic-ai-website-builder-pricing.html)
+- **09:01** — [Updated webpage: Wegic for Launch a small-business website: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/wegic-ai-website-builder-for-launch-a-small-business-website.html)
+- **09:01** — [Updated webpage: Best Wegic Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/wegic-ai-website-builder-alternatives.html)
+- **09:01** — [Updated webpage: Unbounce vs WhatConverts: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/unbounce-landing-pages-vs-whatconverts-lead-attribution.html)
+- **09:01** — [Updated webpage: Unbounce Pricing: Plans, Limits & Fit | artificial.one](https://artificial.one/search-intent/unbounce-landing-pages-pricing.html)
+- **09:01** — [Updated webpage: Unbounce for Build campaign landing pages: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/unbounce-landing-pages-for-build-campaign-landing-pages.html)
+- **09:01** — [Updated webpage: Best Unbounce Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/unbounce-landing-pages-alternatives.html)
+- **09:01** — [Updated webpage: Trainual vs Hubstaff: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/trainual-team-training-vs-hubstaff-time-tracking.html)
+- **09:01** — [Updated webpage: OmniSEO vs Rank Prompt: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/omniseo-search-optimization-vs-rank-prompt-ai-visibility.html)
+- **09:01** — [Updated webpage: LearnWorlds vs Alison US CA: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-vs-alison-us-ca-software.html)
+- **09:01** — [Updated webpage: LearnWorlds Pricing: Plans, Limits & Fit | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-pricing.html)
+- **09:01** — [Updated webpage: LearnWorlds for Launch a paid online course: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-for-launch-a-paid-online-course.html)
+- **09:01** — [Updated webpage: Best LearnWorlds Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/learnworlds-course-platform-alternatives.html)
+- **09:01** — [Updated webpage: Kit vs Unbounce: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/kit-creator-email-marketing-vs-unbounce-landing-pages.html)
+- **09:01** — [Updated webpage: Kit Pricing: Plans, Limits & Fit | artificial.one](https://artificial.one/search-intent/kit-creator-email-marketing-pricing.html)
+- **09:01** — [Updated webpage: Kit for Launch and grow a newsletter: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/kit-creator-email-marketing-for-launch-and-grow-a-newsletter.html)
+- **09:01** — [Updated webpage: Best Kit Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/kit-creator-email-marketing-alternatives.html)
+- **09:01** — [Updated webpage: Kartra vs Unbounce: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/kartra-marketing-platform-vs-unbounce-landing-pages.html)
+- **09:01** — [Updated webpage: Kartra Pricing: Plans, Limits & Fit | artificial.one](https://artificial.one/search-intent/kartra-marketing-platform-pricing.html)
+- **09:01** — [Updated webpage: Kartra for Build a marketing funnel: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/kartra-marketing-platform-for-build-a-marketing-funnel.html)
+- **09:01** — [Updated webpage: Best Kartra Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/kartra-marketing-platform-alternatives.html)
+- **09:01** — [Updated webpage: Foxit vs QuickSigner: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-vs-quicksigner-electronic-signatures.html)
+- **09:01** — [Updated webpage: Foxit vs eSign: Sign PDF DOCX Documents (iOS only): Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-vs-esign-sign-pdf-docx-documents-ios-only-software.html)
+- **09:01** — [Updated webpage: Foxit Pricing: Plans, Limits & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-pricing.html)
+- **09:01** — [Updated webpage: Foxit for Edit and convert PDF documents: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-for-edit-and-convert-pdf-documents.html)
+- **09:01** — [Updated webpage: Best Foxit Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/foxit-pdf-software-alternatives.html)
+- **09:01** — [Updated webpage: Best SEO & Visibility Tools: Reviews, Use Cases & Pricing | artificial.one](https://artificial.one/search-intent/best-seo-visibility-tools.html)
+- **09:01** — [Updated webpage: Best Productivity & Business Tools: Reviews, Use Cases & Pricing | artificial.one](https://artificial.one/search-intent/best-productivity-business-tools.html)
+- **09:01** — [Updated webpage: Best Documents & PDF Tools: Reviews, Use Cases & Pricing | artificial.one](https://artificial.one/search-intent/best-documents-pdf-tools.html)
+- **09:01** — [Updated webpage: Beautiful.ai vs Wegic: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/beautiful-ai-presentations-vs-wegic-ai-website-builder.html)
+- **09:01** — [Updated webpage: Beautiful.ai Pricing: Plans, Limits & Fit | artificial.one](https://artificial.one/search-intent/beautiful-ai-presentations-pricing.html)
+- **09:01** — [Updated webpage: Beautiful.ai for Draft sales and investor presentations: Fit, Limits & Alternatives | artificial.one](https://artificial.one/search-intent/beautiful-ai-presentations-for-draft-sales-and-investor-presentations.html)
+- **09:01** — [Updated webpage: Best Beautiful.ai Alternatives: Compare Features & Fit | artificial.one](https://artificial.one/search-intent/beautiful-ai-presentations-alternatives.html)
+- **09:01** — [Updated webpage: WhatConverts: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/whatconverts-lead-attribution.html)
+- **09:01** — [Updated webpage: Wegic: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/wegic-ai-website-builder.html)
+- **09:01** — [Updated webpage: Unbounce: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/unbounce-landing-pages.html)
+- **09:01** — [Updated webpage: Seamless.AI: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/seamless-ai-sales-intelligence.html)
+- **09:01** — [Updated webpage: Rank Prompt: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/rank-prompt-ai-visibility.html)
+- **09:01** — [Updated webpage: Pinecone: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/pinecone-vector-database.html)
+- **09:01** — [Updated webpage: OmniSEO: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/omniseo-search-optimization.html)
+- **09:01** — [Updated webpage: LearnWorlds: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/learnworlds-course-platform.html)
+- **09:01** — [Updated webpage: Kit: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/kit-creator-email-marketing.html)
+- **09:01** — [Updated webpage: Kartra: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/kartra-marketing-platform.html)
+- **09:01** — [Updated webpage: Beautiful.ai: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/beautiful-ai-presentations.html)
+- **09:01** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **09:01** — [Updated webpage: AI Tool Pricing and Plan Updates | artificial.one](https://artificial.one/offer-updates.html)
+- **09:01** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **09:01** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **09:01** — [Updated webpage: Free AI Tool Calculators and Stack Builder | artificial.one](https://artificial.one/decision-tools.html)
+- **09:01** — [Updated webpage: WhatConverts ROI Calculator: Estimate Monthly Value | artificial.one](https://artificial.one/calculators/whatconverts-lead-attribution-value-calculator.html)
+- **09:01** — [Updated webpage: Wegic ROI Calculator: Estimate Monthly Value | artificial.one](https://artificial.one/calculators/wegic-ai-website-builder-value-calculator.html)
+- **09:01** — [Updated webpage: AI Voice Production Cost Calculator | Free Tool | artificial.one](https://artificial.one/calculators/voice-production-cost-calculator.html)
+- **09:01** — [Updated webpage: Unbounce ROI Calculator: Estimate Monthly Value | artificial.one](https://artificial.one/calculators/unbounce-landing-pages-value-calculator.html)
+- **09:01** — [Updated webpage: PDF Workflow Cost Calculator | Free Tool | artificial.one](https://artificial.one/calculators/pdf-workflow-cost-calculator.html)
+- **09:01** — [Updated webpage: LearnWorlds ROI Calculator: Estimate Monthly Value | artificial.one](https://artificial.one/calculators/learnworlds-course-platform-value-calculator.html)
+- **09:01** — [Updated webpage: Landing Page ROI Calculator | Free Tool | artificial.one](https://artificial.one/calculators/landing-page-roi-calculator.html)
+- **09:01** — [Updated webpage: Kit ROI Calculator: Estimate Monthly Value | artificial.one](https://artificial.one/calculators/kit-creator-email-marketing-value-calculator.html)
+- **09:01** — [Updated webpage: Kartra ROI Calculator: Estimate Monthly Value | artificial.one](https://artificial.one/calculators/kartra-marketing-platform-value-calculator.html)
+- **09:01** — [Updated webpage: Foxit ROI Calculator: Estimate Monthly Value | artificial.one](https://artificial.one/calculators/foxit-pdf-software-value-calculator.html)
+- **09:01** — [Updated webpage: Beautiful.ai ROI Calculator: Estimate Monthly Value | artificial.one](https://artificial.one/calculators/beautiful-ai-presentations-value-calculator.html)
+- **09:01** — [Updated webpage: AI Software ROI Calculator | Free Tool | artificial.one](https://artificial.one/calculators/ai-software-roi-calculator.html)
+- **09:01** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **09:01** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **09:01** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **09:01** — [Published webpage: Best Online Learning Tools: Reviews, Use Cases & Pricing | artificial.one](https://artificial.one/search-intent/best-online-learning-tools.html)
+- **08:54** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **08:54** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
+- **08:54** — [Updated webpage: AI Tool Pricing & Feature Change History | artificial.one](https://artificial.one/ai-tool-changes.html)
+- **08:54** — [Updated webpage: AI Tool Alternatives & Migration Wizard | artificial.one](https://artificial.one/ai-tool-alternatives.html)
+- **07:08** — Added 5 new AI-news items to the live briefing.
+  - “We’re already fighting yesterday’s battle”: Greece’s prime minister gets candid about AI
+  - OpenAI wants to consult elite mathematicians about how to not fumble again
+  - TechCrunch Founder Summit’s agenda revealed: Unlock fundraising, hiring, and AI insights in Boston on November 4
+  - Snorkel AI triples valuation to $3.5B as demand for AI training data booms
+  - Rabbit’s new AI agent doesn’t need an R1 to run
+- **07:08** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **07:08** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **07:08** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **03:58** — Created or refreshed 3 social-media creative assets.
+  - images/social-cards/pinecone.jpg
+  - images/social-cards/seamless.jpg
+  - images/social-cards/volza.jpg
+- **03:58** — Published an updated RSS feed for content distribution.
+- **03:58** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **03:58** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **03:58** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
 - **03:25** — Created or refreshed 26 social-media creative assets.
   - images/social-cards/adcreative.jpg
   - images/social-cards/alison-us-ca.jpg

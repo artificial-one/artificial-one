@@ -14,5 +14,17 @@
       }
     }
   },
+  "cards": {
+    "mode": "experiment",
+    "winner": null,
+    "variants": {
+      "a": {
+        "cta": "See {name} plans"
+      },
+      "b": {
+        "cta": "Try {name} on your workflow"
+      }
+    }
+  },
   "privacy": "Only the selected conversion variant is public; raw interaction totals remain private."
 }

@@ -20,11 +20,13 @@ This system automates the six revenue-growth loops for artificial.one. It runs i
 
 ## 5. Distribution engine
 
-`scripts/distribute_content.py` refreshes `feed.xml` and `data/distribution_queue.json` with campaign-attributed links. Its self-renewing seven-day editorial calendar creates a fresh post every day from current site data: free tools, monitored AI news, partner use cases, buyer cautions, confirmed offer changes, workflow tips and a weekly roundup. It requires no model API or attended computer. The main daily schedule publishes one dated visual item to every connected social channel. A separate weekday LinkedIn schedule publishes a second, playful discussion post, bringing LinkedIn to twelve original visual posts per week.
+`scripts/distribute_content.py` refreshes `feed.xml` and `data/distribution_queue.json` with campaign-attributed links. Its self-renewing seven-day editorial calendar creates a fresh post every day from current site data: free tools, monitored AI news, partner use cases, buyer cautions, confirmed offer changes, workflow tips and a weekly roundup. It requires no hosted-model API or attended computer. The main daily schedule publishes one dated visual item to every connected social channel. A separate weekday LinkedIn schedule publishes a second, playful discussion post, bringing LinkedIn to twelve original visual posts per week. LinkedIn hooks, elephant commentary and closing questions are drafted by the same checksum-verified local Qwen model used by the Bluesky elephant. Product facts, imagery, URLs, attribution and hashtags remain deterministic, and invalid model output falls back to the reviewed template.
 
 `scripts/bluesky_elephant.py` adds a clearly disclosed automated elephant persona on Bluesky. It publishes one additional playful visual post each day and performs two guarded engagement passes. Daily limits are one bonus post, three contextual replies, five likes, and two follows. Replies favor direct mentions and replies; at most one unsolicited reply may join a recent, relevant, non-promotional AI-tool question. Follows require an inbound follow or repeated engagement plus a topical profile. The agent recognizes opt-outs, avoids blocked/muted/labeled accounts, never sends DMs, and never inserts affiliate links into other people's conversations. Private deduplication memory is kept in the GitHub Actions cache and `BLUESKY_ELEPHANT_ENABLED` is the emergency stop control.
 
 Reply wording is produced locally by the official Apache-2.0 `Qwen/Qwen2.5-1.5B-Instruct-GGUF` Q4_K_M model through a pinned `llama.cpp` build. `scripts/setup_elephant_edge_ai.py` downloads the model into the private workflow cache and verifies its published SHA-256 before use. Social posts are treated as untrusted quoted data, and every generated reply passes length, link, identity, sensitive-advice and repetition checks. The deterministic ten-template system remains the automatic fallback whenever the model is missing, slow, invalid, or unavailable. No hosted-model API or paid inference tokens are used.
+
+`scripts/x_elephant.py` publishes three visual X posts per day. Its hooks and discussion questions use the same guarded local Qwen runtime, while reviewed topics, images, attribution and the single daily website route remain deterministic. Output is rejected for unsupported claims, unsafe language, links supplied by the model, repetition or X-length overflow, with the reviewed template used automatically. X mention replies remain behind their separate written-approval control.
 
 ## 6. Controlled paid acquisition
 
@@ -43,9 +45,11 @@ Eligible campaigns are checked daily. A campaign with no conversion is automatic
 
 `.github/workflows/revenue-optimizer.yml` runs daily after the PartnerStack audit. It ranks offers, evaluates conversion tests, rebuilds commercial pages, refreshes AI news, creates the newsletter/RSS/distribution/ad plans, runs the complete test suite, and commits only public generated artifacts. Private publishing state is cached and no personal customer data is committed.
 
-`.github/workflows/linkedin-publisher.yml` runs on weekday afternoons and publishes one additional visual, question-led LinkedIn post from reviewed website inventory. Together with the daily publisher, the cadence is two posts Monday–Friday and one post Saturday–Sunday.
+`.github/workflows/linkedin-publisher.yml` runs on weekday afternoons and publishes one additional visual, question-led LinkedIn post from reviewed website inventory. Together with the daily publisher, the cadence is two posts Monday–Friday and one post Saturday–Sunday. Manual runs are non-publishing by default; scheduled runs restore the private edge-AI cache, validate generated copy and retain the deterministic editorial fallback.
 
 `.github/workflows/bluesky-elephant.yml` runs at 10:37 and 17:47 UTC every day. Together with the main daily edition, Bluesky receives fourteen original visual posts per week plus selective, relevance-gated interaction. It uses the existing Bluesky app-password secrets; no laptop or model API is required.
+
+`.github/workflows/x-elephant.yml` runs three uneven daily posting slots. Scheduled runs restore the shared private edge-AI cache; manual runs are non-publishing by default.
 
 `.github/workflows/social-profile-sync.yml` applies the canonical `images/social/artificial-one-logo.png` asset to the Bluesky profile whenever that brand asset changes. This keeps the public profile synchronized from GitHub without an attended computer; the existing banner is preserved.
 

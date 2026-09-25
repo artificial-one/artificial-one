@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-09-23",
   "offers": [
     {
       "id": "volza",
@@ -719,7 +719,7 @@
       "name": "EasyClaw",
       "status": "published",
       "category": "AI productivity",
-      "summary": "Promote EasyClaw, an AI productivity platform that helps users work smarter and faster. Share AI workflow and productivity tools with your audience while earning commissions, exclusive offers, strong conversions, and affiliate support.",
+      "summary": "An AI productivity platform for organizing and accelerating everyday knowledge-work tasks and workflows.",
       "best_for": "Professionals comparing AI-assisted tools for everyday workflows.",
       "offer_label": "Explore EasyClaw",
       "pricing_note": "Pricing, eligibility and plan limits can change; verify current details with EasyClaw.",
@@ -760,7 +760,7 @@
       "name": "Rewarx Studio AI",
       "status": "published",
       "category": "AI product photography",
-      "summary": "Partner with Rewarx Studio AI to help e-commerce brands create stunning AI product photos without expensive shoots. Earn up to 50% commission for 12 months ! We offer free test accounts and dedicated support for all our affiliates.",
+      "summary": "An AI product-photography platform for creating ecommerce visuals without arranging a traditional studio shoot.",
       "best_for": "E-commerce teams that need product imagery without a traditional photo shoot.",
       "offer_label": "Explore Rewarx Studio AI",
       "pricing_note": "Pricing, eligibility and plan limits can change; verify current details with Rewarx Studio AI.",
@@ -883,7 +883,7 @@
       "name": "eSign: Sign PDF DOCX Documents (iOS only)",
       "status": "published",
       "category": "Document signing",
-      "summary": "Affiliate terms Model: RevShare Payout: from 20% lifetime You earn from 20% of the profit from every subscription for every user you refer, for the entire lifetime of that customer (including all renewals). Platform: iOS only GEO: Worldwide WW",
+      "summary": "An iOS document-signing app for preparing, signing and managing PDF and DOCX files on iPhone or iPad.",
       "best_for": "iPhone and iPad users who need to sign and manage PDF or DOCX documents.",
       "offer_label": "Explore eSign: Sign PDF DOCX Documents (iOS only)",
       "pricing_note": "Pricing, eligibility and plan limits can change; verify current details with eSign: Sign PDF DOCX Documents (iOS only).",
@@ -924,7 +924,7 @@
       "name": "lensmor",
       "status": "published",
       "category": "Trade show technology",
-      "summary": "Lensmor is a strong fit for affiliates and partners whose audience includes exhibitors and B2B teams preparing for high-value trade shows.",
+      "summary": "A visual-production tool for exhibitors and B2B teams preparing branded assets for trade shows.",
       "best_for": "Exhibitors and B2B teams preparing visual assets for trade shows.",
       "offer_label": "Explore lensmor",
       "pricing_note": "Pricing, eligibility and plan limits can change; verify current details with lensmor.",
@@ -957,6 +957,47 @@
         "discovered_by": "partner-opportunity-engine",
         "network": "awin",
         "opportunity_id": "awin:128865"
+      }
+    },
+    {
+      "id": "everleakproof-us",
+      "slug": "everleakproof-us-software",
+      "name": "EverLeakProof US",
+      "status": "published",
+      "category": "Software",
+      "summary": "EverLeakProof is a women's health brand for period care and bladder leak protection. AOV $75 and 20% base commission, with higher approved content-partner terms available.",
+      "best_for": "Teams and professionals evaluating software for a defined business workflow.",
+      "offer_label": "Explore EverLeakProof US",
+      "pricing_note": "Pricing, eligibility and plan limits can change; verify current details with EverLeakProof US.",
+      "tracking_url": "https://www.awin1.com/cread.php?awinmid=121298&awinaffid=2733180&ued=https%3A%2F%2Feverleakproof.com",
+      "cta_label": "Explore EverLeakProof US",
+      "featured": false,
+      "sponsored": true,
+      "approved_at": "2026-09-23",
+      "terms_verified_at": "2026-09-23",
+      "expires_at": null,
+      "why_consider": "EverLeakProof US may fit buyers actively evaluating software options.",
+      "watch_out": "Confirm current pricing, regional availability, plan limits and partner terms before purchasing.",
+      "use_cases": [
+        "Evaluate EverLeakProof US for a relevant business workflow",
+        "Compare EverLeakProof US with other software options"
+      ],
+      "evidence": [
+        {
+          "label": "EverLeakProof US product website",
+          "url": "https://everleakproof.com"
+        },
+        {
+          "label": "EverLeakProof US partner terms",
+          "url": "https://www.awin.com/gb/publisher-terms"
+        }
+      ],
+      "automation": {
+        "source": "https://developer.awin.com/apidocs/for-publishers",
+        "network": "awin",
+        "opportunity_id": "awin:121298",
+        "policy_status": "reviewed",
+        "discovered_by": "partner-opportunity-engine"
       }
     }
   ]

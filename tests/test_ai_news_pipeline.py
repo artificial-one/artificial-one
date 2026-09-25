@@ -80,9 +80,14 @@ class AiNewsPipelineTests(unittest.TestCase):
         }
         rendered = news.render_news_page([item], "2026-09-15", [])
         self.assertIn("data-content-route", rendered)
-        self.assertLess(rendered.index('class="route"'), rendered.index('class="source"'))
+        self.assertIn('class="story-link"', rendered)
+        self.assertIn('class="story-visual"', rendered)
+        self.assertIn('class="news-page"', rendered)
+        self.assertIn('images/branding/artificial-one-elephant-mark.png', rendered)
         self.assertIn('meta name="affiliate-event-endpoint" content="/api/affiliate-event"', rendered)
         self.assertIn('script src="assets/affiliate-tracking.js" defer', rendered)
+        self.assertIn('.card h2{font-size:1.25rem;line-height:1.35;margin:13px 0;color:#0f172a}', rendered)
+        self.assertIn('.pick strong{font-size:1.15rem;margin:8px 0;color:#0f172a}', rendered)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial.One Public AI Tool Data API</title>
+  <meta name="description" content="Query Artificial.One&#x27;s privacy-safe normalized AI software catalogue and confirmed change events.">
+  <link rel="canonical" href="https://artificial.one/developers.html">
+  <meta property="og:title" content="Artificial.One Public AI Tool Data API">
+  <meta property="og:description" content="Query Artificial.One&#x27;s privacy-safe normalized AI software catalogue and confirmed change events.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://artificial.one/developers.html">
+  <meta property="og:image" content="https://artificial.one/images/og-homepage.jpg">
+  <meta property="og:image:alt" content="Artificial.One Public AI Tool Data API">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="affiliate-event-endpoint" content="/api/affiliate-event">
+  <link rel="alternate" type="application/rss+xml" title="artificial.one AI tool guides" href="feed.xml">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebAPI","name":"Artificial.One Tool API","documentation":"https://artificial.one/developers.html","provider":{"@type":"Organization","name":"Artificial.One"}}</script>
+  <link rel="preload" href="images/social/artificial-one-logo.png" as="image">
+  <link rel="stylesheet" href="assets/decision-engine.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <!-- GENERATED: partner-offer-pipeline -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><img src="images/social/artificial-one-logo.png" alt="Artificial.One elephant"><span>artificial<span class="brand-dot">.</span>one</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="ask-elephant.html">Ask Elephant</a>
+        <a href="ai-tool-finder.html">Find Tools</a>
+        <a href="workflow-recipes.html">Recipes</a>
+        <a href="partner-offers.html">Deals</a>
+        <a href="news.html">What’s New</a>
+        <button class="stack-trigger" type="button" data-open-stack>My Stack</button>
+        <details class="more-menu"><summary>Explore ▾</summary><div class="more-links"><a href="ai-stack-studio.html">Stack Studio</a><a href="ai-tool-observatory.html">Tool Observatory</a><a href="ai-tool-finder.html?compare=">Compare</a><a href="reviews.html">All reviews</a><a href="decision-tools.html">Free tools</a><a href="buyers-guides.html">Buyer guides</a><a href="developers.html">Public API</a><a href="about.html">How we evaluate</a><a href="partners.html">For partners</a></div></details>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content"><section class="elephant-hero"><div class="container"><p class="eyebrow">Public, privacy-safe data</p><h1>Artificial.One Tool API</h1><p class="hero-copy">Query 635 normalized software records and confirmed change events. The public API contains no customer, click or affiliate-performance data.</p><div class="button-row"><a class="btn" href="/api/tool-catalog?limit=5">Try the API</a><a class="btn btn-secondary" href="data/tool_intelligence.json">Download the full dataset</a></div></div></section><section class="container section api-docs"><h2>Endpoints</h2><div class="surface"><code>GET /api/tool-catalog?q=video&amp;category=Marketing&amp;free=true&amp;limit=20&amp;offset=0</code><p>Returns compact tool records, filters and pagination metadata. Maximum page size: 100.</p></div><div class="surface"><code>GET /api/tool-catalog?changes=true&amp;limit=20</code><p>Returns confirmed public change events from the repeated-observation monitor.</p></div><h2>Fair-use policy</h2><p>Responses are cached and designed for prototypes, research and attribution-friendly integrations. Bulk users should use the versioned JSON or CSV downloads. Do not infer product claims beyond the included evidence status and source links.</p></section></main>
+  <footer class="site-footer"><div class="container footer-grid">
+    <div><a class="brand" href="index.html"><img src="images/social/artificial-one-logo.png" alt=""><span>artificial<span class="brand-dot">.</span>one</span></a><p>Independent AI-tool decisions, built around your job—not a wall of logos.</p><p class="disclosure">We may earn a commission from marked links at no extra cost to you. Payment never guarantees a positive verdict.</p></div>
+    <div><h4>Decide</h4><a href="ask-elephant.html">Ask the Elephant</a><a href="ai-stack-studio.html">Stack Studio</a><a href="partner-offers.html">Verified deals</a><a href="decision-tools.html">Free calculators</a></div>
+    <div><h4>Learn</h4><a href="workflow-recipes.html">Workflow recipes</a><a href="ai-tool-observatory.html">Tool Observatory</a><a href="news.html">AI radar</a><a href="developers.html">Public API</a><a href="about.html">Methodology</a></div>
+    <div><h4>Company</h4><a href="partners.html">For partners</a><a href="privacy.html">Privacy</a><a href="mailto:hello@artificial.one">hello@artificial.one</a></div>
+  </div></footer>
+  <aside class="stack-panel" data-stack-panel aria-label="My AI Stack"><div class="panel-head"><h2>My AI Stack</h2><button class="close-btn" type="button" data-close-panel aria-label="Close">×</button></div><p>Tools, watched deals and recent decisions saved on this device. No account required.</p><div class="saved-list" data-stack-list></div><div class="panel-actions"><button class="btn btn-secondary btn-small" type="button" data-share-stack>Copy shareable stack</button></div><section class="panel-section"><h3>Deal alerts</h3><div data-watch-alerts><p class="empty compact">The elephant is listening for pricing changes.</p></div></section><section class="panel-section"><h3>Recent comparisons</h3><div data-comparison-history><p class="empty compact">Run a match to build your decision history.</p></div></section></aside>
+  <div class="compare-drawer" data-compare-drawer><div class="compare-bar"><strong>Compare</strong><div class="compare-items" data-compare-items></div><button class="btn btn-small" type="button" data-open-compare>Compare now</button><button class="icon-btn" type="button" data-clear-compare aria-label="Clear comparison">×</button></div></div>
+  <div class="modal-backdrop" data-compare-modal role="dialog" aria-modal="true" aria-label="Tool comparison"><div class="compare-modal"><div class="panel-head"><h2>Side-by-side decision</h2><button class="close-btn" type="button" data-close-panel aria-label="Close">×</button></div><div class="comparison-grid" data-comparison-grid></div><div class="loop-actions"><button class="btn btn-secondary btn-small" type="button" data-share-compare>Copy share link</button></div></div></div>
+  <script src="assets/decision-engine.js" defer></script>
+  <script src="assets/affiliate-tracking.js" defer></script>
+</body>
+</html>

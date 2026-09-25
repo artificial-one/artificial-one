@@ -30,7 +30,7 @@ def load(path: Path) -> dict[str, Any]:
     return value
 
 
-def ranked_offers(limit: int = 3) -> list[dict[str, Any]]:
+def ranked_offers(limit: int = 5) -> list[dict[str, Any]]:
     offers = [item for item in load(OFFERS_PATH).get("offers", []) if item.get("status") == "published"]
     ranking = [str(item) for item in load(STRATEGY_PATH).get("ranking", [])]
     position = {offer_id: index for index, offer_id in enumerate(ranking)}
@@ -40,7 +40,7 @@ def ranked_offers(limit: int = 3) -> list[dict[str, Any]]:
 def build_edition(today: date | None = None) -> tuple[str, str, str]:
     today = today or date.today()
     news = [item for item in load(NEWS_PATH).get("items", []) if isinstance(item, dict)][:5]
-    offers = ranked_offers(3)
+    offers = ranked_offers(5)
     try:
         alerts = [item for item in load(ALERTS_PATH).get("alerts", []) if isinstance(item, dict)][:3]
     except (OSError, json.JSONDecodeError, ValueError):
@@ -67,7 +67,7 @@ def build_edition(today: date | None = None) -> tuple[str, str, str]:
       <h2>What changed in AI</h2><ul>{news_html}</ul>
       <p><a href="https://artificial.one/news.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools">Browse the continuously updated AI news feed →</a></p>
       <p><a href="https://artificial.one/ai-stack-builder.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools"><strong>Build a personalized three-tool AI shortlist →</strong></a></p>
-      {alert_section}<h2>Three tools to evaluate</h2>{offer_html}
+      {alert_section}<h2>Five tools to evaluate</h2>{offer_html}
       <p style="font-size:12px;color:#667085">Some tool links are affiliate links. artificial.one may earn a commission at no extra cost to you. Recommendations are not guaranteed endorsements.</p>'''
     digest = sha256((title + body).encode("utf-8")).hexdigest()
     return title, body, digest

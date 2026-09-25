@@ -366,7 +366,10 @@ def update_homepage(source: str, registry: dict[str, Any], on_date: date | None 
         return re.sub(re.escape(HOMEPAGE_START) + r".*?" + re.escape(HOMEPAGE_END), block, source, flags=re.S)
     marker = "      {/* Featured Tools */}"
     if marker not in source:
-        raise ValueError("Homepage Featured Tools marker is missing")
+        # The decision-engine homepage intentionally omits the legacy deal grid.
+        # AppSumo still refreshes its hub, guides and availability data without
+        # re-introducing a competing homepage section.
+        return source
     return source.replace(marker, block + "\n\n" + marker, 1)
 
 

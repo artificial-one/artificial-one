@@ -187,11 +187,29 @@
     });
   }
 
+  function enableAffiliateCardNavigation() {
+    var cardSelector = ".tool-card,.tool,.recipe-tool,.comparison-column,.studio-item,.elephant-result";
+    document.querySelectorAll("a[data-affiliate-offer]").forEach(function (link) {
+      var card = link.closest(cardSelector);
+      if (!card || card.dataset.affiliateCardReady === "1") return;
+      card.dataset.affiliateCardReady = "1";
+      card.classList.add("is-affiliate-card");
+      card.title = "Open the partner website";
+      card.addEventListener("click", function (event) {
+        if (event.defaultPrevented || link.dataset.affiliateUnavailable === "1") return;
+        if (event.target.closest("a,button,input,select,textarea,label,summary,[role='button']")) return;
+        if (window.getSelection && String(window.getSelection()).trim()) return;
+        link.click();
+      });
+    });
+  }
+
   function observeDynamicRecommendations() {
     if (!("MutationObserver" in window)) return;
     new MutationObserver(function () {
       trackVisibleRecommendations();
       trackVisibleRoutes();
+      enableAffiliateCardNavigation();
     }).observe(document.body, { childList: true, subtree: true });
   }
 
@@ -219,6 +237,50 @@
     } catch (_) {
       // Tracking must never prevent the visitor from reaching the partner.
     }
+  }
+
+  function installUnifiedShell() {
+    if (document.querySelector(".site-header")) return;
+    var stylesheet = Array.prototype.find.call(document.styleSheets || [], function (sheet) { return /decision-engine\.css/.test(sheet.href || ""); });
+    if (!stylesheet) {
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "/assets/decision-engine.css";
+      document.head.appendChild(link);
+    }
+    var legacy = document.querySelector("body > header, body > nav");
+    var header = document.createElement("header");
+    header.className = "site-header";
+    header.innerHTML = '<div class="nav-wrap"><a class="brand" href="/"><img src="/images/social/artificial-one-logo.png" alt="Artificial.One elephant" width="43" height="43"><span>artificial<span class="brand-dot">.</span>one</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button><nav class="primary-nav" aria-label="Primary navigation"><a href="/ask-elephant.html">Ask Elephant</a><a href="/ai-tool-finder.html">Find Tools</a><a href="/workflow-recipes.html">Recipes</a><a href="/partner-offers.html">Deals</a><a href="/news.html">What’s New</a><a class="stack-trigger" href="/ai-stack-studio.html">My Stack</a><details class="more-menu"><summary>Explore ▾</summary><div class="more-links"><a href="/ai-stack-studio.html">Stack Studio</a><a href="/ai-tool-observatory.html">Tool Observatory</a><a href="/ai-tool-finder.html?compare=">Compare</a><a href="/reviews.html">All reviews</a><a href="/decision-tools.html">Free tools</a><a href="/buyers-guides.html">Buyer guides</a><a href="/developers.html">Public API</a><a href="/about.html">How we evaluate</a></div></details></nav></div>';
+    if (legacy) legacy.replaceWith(header); else document.body.insertBefore(header, document.body.firstChild);
+    var toggle = header.querySelector(".nav-toggle");
+    var nav = header.querySelector(".primary-nav");
+    toggle.addEventListener("click", function () { var open = nav.classList.toggle("is-open"); toggle.setAttribute("aria-expanded", String(open)); });
+  }
+
+  function trackWebVitals() {
+    if (!("PerformanceObserver" in window)) return;
+    var lcp = 0;
+    try {
+      new PerformanceObserver(function (list) {
+        list.getEntries().forEach(function (entry) { lcp = Math.max(lcp, entry.startTime || 0); });
+      }).observe({ type: "largest-contentful-paint", buffered: true });
+      var cls = 0;
+      new PerformanceObserver(function (list) {
+        list.getEntries().forEach(function (entry) { if (!entry.hadRecentInput) cls += entry.value || 0; });
+      }).observe({ type: "layout-shift", buffered: true });
+      window.addEventListener("pagehide", function () {
+        sendToConfiguredEndpoint(Object.assign(eventPayload(null, "web_vital"), { metric: "lcp", value: Math.round(lcp) }));
+        sendToConfiguredEndpoint(Object.assign(eventPayload(null, "web_vital"), { metric: "cls", value: Math.round(cls * 1000) }));
+      }, { once: true });
+    } catch (_) {}
+  }
+
+  function trackReturningVisitor() {
+    try {
+      if (window.localStorage.getItem("ai1_seen_before")) sendToConfiguredEndpoint(eventPayload(null, "returning_visit"));
+      window.localStorage.setItem("ai1_seen_before", new Date().toISOString());
+    } catch (_) {}
   }
 
   function hashBucket(value) {
@@ -406,6 +468,10 @@
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
+      installUnifiedShell();
+      enableAffiliateCardNavigation();
+      trackReturningVisitor();
+      trackWebVitals();
       loadConversionStrategy().then(function (strategy) {
         sendToConfiguredEndpoint(eventPayload(null, "site_visit"));
         applyAppSumoAvailability();
@@ -417,6 +483,10 @@
       });
     });
   } else {
+    installUnifiedShell();
+    enableAffiliateCardNavigation();
+    trackReturningVisitor();
+    trackWebVitals();
     loadConversionStrategy().then(function (strategy) {
       sendToConfiguredEndpoint(eventPayload(null, "site_visit"));
       applyAppSumoAvailability();

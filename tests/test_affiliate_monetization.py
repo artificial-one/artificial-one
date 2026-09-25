@@ -43,6 +43,16 @@ class AffiliateMonetizationTests(unittest.TestCase):
         self.assertIn('data-affiliate-offer=""', result)
         self.assertIn('data-offer-id="descript"', result)
 
+    def test_boolean_affiliate_marker_is_normalized_without_duplication(self):
+        source = (
+            '<a href="https://get.descript.com/new" data-affiliate-offer '
+            'data-offer-id="descript">Try it</a>'
+        )
+        result, found = monetize.normalize_links(source, self.offers)
+        self.assertEqual(found, {"descript"})
+        self.assertEqual(result.count("data-affiliate-offer"), 1)
+        self.assertIn('data-affiliate-offer data-offer-id="descript"', result)
+
     def test_ordinary_external_link_is_unchanged(self):
         source = '<a href="https://example.com">Example</a>'
         result, found = monetize.normalize_links(source, self.offers)

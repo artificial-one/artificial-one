@@ -7,6 +7,48 @@ from scripts import partner_opportunity_engine as scout
 
 
 class PartnerOpportunityEngineTests(unittest.TestCase):
+    def test_authenticated_partnership_missing_from_marketplace_is_synthesized(self):
+        rows = scout.merge_authenticated_partnerstack([], [{
+            "key": "part_123", "status": "active",
+            "company": {"name": "API Only AI", "slug": "api-only-ai", "website": "https://example.com"},
+        }])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["name"], "API Only AI")
+        self.assertTrue(rows[0]["approved"])
+        self.assertTrue(rows[0]["authenticated_relationship"])
+
+    def test_partnerstack_tos_acceptance_pending_is_terms_required(self):
+        rows = scout.merge_authenticated_partnerstack([], [{
+            "key": "part_terms", "status": "tos-acceptance-pending",
+            "company": {"name": "Terms Pending AI", "slug": "terms-pending-ai"},
+        }])
+        self.assertTrue(rows[0]["terms_required"])
+        self.assertFalse(rows[0]["approved"])
+
+    def test_authenticated_partnership_enriches_public_record(self):
+        public = [{"network": "partnerstack", "name": "Example AI", "slug": "example", "description": "Rich public description"}]
+        rows = scout.merge_authenticated_partnerstack(public, [{
+            "key": "part_1", "approved_status": "approved", "company": {"name": "Example AI"},
+        }])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["description"], "Rich public description")
+        self.assertTrue(rows[0]["approved"])
+
+    def test_explicit_terms_gate_is_not_published(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "data").mkdir()
+            (root / "data/partner_offers.json").write_text('{"version":1,"offers":[]}', encoding="utf-8")
+            (root / "data/partnerstack_program_audit.json").write_text('{"version":1,"programs":[],"summary":{}}', encoding="utf-8")
+            item = {
+                "network": "partnerstack", "name": "Terms AI", "slug": "terms-ai", "approved": True,
+                "authenticated_relationship": True, "terms_required": True, "source": "https://partnerstack.com/",
+                "policy": {"status": "not_reviewed"},
+            }
+            added = scout.merge_auto_offers(root, [item], {"termsai": {"key": "part_1", "status": "active"}}, "key")
+            self.assertEqual(added, [])
+            self.assertEqual(item["relationship_state"], "terms_required")
+
     def test_public_reference_strips_bearer_style_parameters(self):
         self.assertEqual(
             scout.public_reference_url("https://example.com/terms?token=private&locale=en#part"),
@@ -88,6 +130,20 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
         self.assertEqual(html.count("data-card "), 25)
         self.assertIn("https://example.com/24", html)
 
+    def test_latest_report_email_links_to_the_complete_queue(self):
+        payload = {
+            "summary": {},
+            "opportunities": [
+                {"state": "ready_for_owner_application"},
+                {"state": "policy_review_required"},
+                {"state": "not_qualified"},
+            ],
+        }
+        subject, text, html = scout.render_email(payload, [], "https://github.com/example/run")
+        self.assertIn("2 require review", subject)
+        self.assertIn("https://artificial.one/partner-opportunities.html", text)
+        self.assertIn("Open the complete opportunity queue", html)
+
     def test_approved_partner_with_link_enters_offer_pipeline(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
@@ -108,6 +164,28 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
                 self.assertEqual(registry["offers"][0]["status"], "published")
                 audit = json.loads((root / "data/partnerstack_program_audit.json").read_text(encoding="utf-8"))
                 self.assertEqual(audit["summary"]["trackable_links_confirmed"], 1)
+            finally:
+                scout.partnerstack_links = original
+
+    def test_authenticated_partner_with_link_does_not_depend_on_public_policy_page(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "data").mkdir()
+            (root / "data/partner_offers.json").write_text('{"version":1,"offers":[]}', encoding="utf-8")
+            (root / "data/partnerstack_program_audit.json").write_text('{"version":1,"programs":[],"summary":{}}', encoding="utf-8")
+            opportunity = {
+                "network": "partnerstack", "name": "API Only AI", "slug": "api-only-ai",
+                "approved": True, "authenticated_relationship": True,
+                "source": "https://dash.partnerstack.com/home", "application_url": "https://dash.partnerstack.com/home",
+                "policy": {"status": "missing"}, "tags": ["Software"],
+            }
+            original = scout.partnerstack_links
+            try:
+                scout.partnerstack_links = lambda *_args: ["https://example.com/ref/artificial-one"]
+                added = scout.merge_auto_offers(root, [opportunity], {"apionlyai": {"key": "part_1", "status": "active"}}, "key")
+                self.assertEqual(added, ["API Only AI"])
+                registry = json.loads((root / "data/partner_offers.json").read_text(encoding="utf-8"))
+                self.assertEqual(registry["offers"][0]["tracking_url"], "https://example.com/ref/artificial-one")
             finally:
                 scout.partnerstack_links = original
 

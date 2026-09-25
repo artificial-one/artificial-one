@@ -12,6 +12,21 @@ const EVENT_STREAMS = {
   site_visit: "visits",
   content_route_click: "route_clicks",
   content_route_impression: "route_impressions",
+  matcher_start: "matcher_starts",
+  matcher_complete: "matcher_completions",
+  recommendation_impression: "recommendation_impressions",
+  compare_add: "compare_adds",
+  compare_remove: "compare_removes",
+  compare_open: "compare_opens",
+  compare_share: "compare_shares",
+  stack_save: "stack_saves",
+  stack_remove: "stack_removes",
+  stack_share: "stack_shares",
+  watchlist_add: "watchlist_adds",
+  email_opt_in: "email_opt_ins",
+  returning_visit: "returning_visits",
+  web_vital: "web_vitals",
+  use_case_tab: "use_case_tabs",
 };
 
 function clean(value, pattern, fallback) {
@@ -58,6 +73,12 @@ async function persistAggregate(event) {
     ["EXPIRE", key, 63072000],
     ["EXPIRE", `${key}:sessions`, 63072000],
   ];
+  if (event.event === "web_vital" && event.metric !== "unknown") {
+    commands.splice(commands.length - 2, 0,
+      ["HINCRBY", key, `metric:${event.metric}:count`, 1],
+      ["HINCRBYFLOAT", key, `metric:${event.metric}:sum`, event.value]
+    );
+  }
   const response = await fetch(`${redis.url}/pipeline`, {
     method: "POST",
     headers: {
@@ -134,6 +155,8 @@ module.exports = async function handler(req, res) {
     medium: clean(body.medium, SAFE_CHANNEL, "unknown"),
     campaign: clean(body.campaign, SAFE_CHANNEL, "organic"),
     landing_path: clean(body.landing_path, SAFE_PATH, "/"),
+    metric: clean(body.metric, /^[a-z0-9_-]{1,40}$/i, "unknown"),
+    value: Number.isFinite(Number(body.value)) ? Math.max(0, Math.min(60000, Number(body.value))) : 0,
   };
 
   const results = await Promise.allSettled([

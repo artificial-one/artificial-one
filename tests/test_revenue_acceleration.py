@@ -30,6 +30,7 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertEqual(first[2], second[2])
         self.assertIn("affiliate", first[1].casefold())
         self.assertIn("utm_source=newsletter", first[1])
+        self.assertIn("Five tools to evaluate", first[1])
 
     def test_distribution_queue_uses_attributed_site_links(self):
         items = distribution.queue(date(2026, 9, 15))
@@ -146,6 +147,30 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertIn("Tiny game", first["linkedin_copy"])
         self.assertEqual(first["id"], "linkedin-play-2026-09-23")
         self.assertIsNone(distribution.linkedin_bonus_item(date(2026, 9, 26)))
+
+    def test_linkedin_edge_copy_prefers_ai_and_remembers_only_accepted_copy(self):
+        item = distribution.linkedin_bonus_item(date(2026, 9, 23))
+        original_generate = distribution.elephant_edge_ai.generate_linkedin_post
+        original_enabled = os.environ.get("ELEPHANT_EDGE_AI_ENABLED")
+        generated = (
+            "🐘 A useful workflow should remove a repeated step before it earns another "
+            "monthly seat at the software table.\n\nWhich step would you make it prove first?"
+        )
+        distribution.elephant_edge_ai.generate_linkedin_post = lambda *_args, **_kwargs: generated
+        os.environ["ELEPHANT_EDGE_AI_ENABLED"] = "true"
+        state = {"recent_linkedin_ai_copy": []}
+        try:
+            copy, used_ai = distribution.linkedin_edge_copy(item, state)
+            distribution.remember_linkedin_ai_copy(state, copy, used_ai)
+        finally:
+            distribution.elephant_edge_ai.generate_linkedin_post = original_generate
+            if original_enabled is None:
+                os.environ.pop("ELEPHANT_EDGE_AI_ENABLED", None)
+            else:
+                os.environ["ELEPHANT_EDGE_AI_ENABLED"] = original_enabled
+        self.assertTrue(used_ai)
+        self.assertEqual(copy, generated)
+        self.assertEqual(state["recent_linkedin_ai_copy"], [generated])
 
     def test_configured_linkedin_author_avoids_profile_lookup(self):
         self.assertEqual(
