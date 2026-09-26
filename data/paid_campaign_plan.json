@@ -85,6 +85,36 @@
       ]
     },
     {
+      "offer_id": "800-com",
+      "name": "AO Generic Intent - 800.com",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/800-com-software.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-800-com",
+      "keywords": [
+        "collaboration productivity",
+        "evaluate for a relevant business workflow",
+        "compare with other collaboration productivity options"
+      ],
+      "negative_keywords": [
+        "800.com"
+      ]
+    },
+    {
+      "offer_id": "amplemarket",
+      "name": "AO Generic Intent - Amplemarket",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/amplemarket-software.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-amplemarket",
+      "keywords": [
+        "artificial intelligence",
+        "evaluate for a relevant business workflow",
+        "compare with other artificial intelligence options"
+      ],
+      "negative_keywords": [
+        "Amplemarket"
+      ]
+    },
+    {
       "offer_id": "breezy-hr",
       "name": "AO Generic Intent - Breezy HR",
       "eligible": false,
@@ -96,35 +126,6 @@
       ],
       "negative_keywords": [
         "Breezy HR"
-      ]
-    },
-    {
-      "offer_id": "close",
-      "name": "AO Generic Intent - Close",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/close-software.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-close",
-      "keywords": [
-        "evaluate for a relevant business workflow",
-        "compare with other analytics options"
-      ],
-      "negative_keywords": [
-        "Close"
-      ]
-    },
-    {
-      "offer_id": "mindstudio",
-      "name": "AO Generic Intent - MindStudio",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/mindstudio-software.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-mindstudio",
-      "keywords": [
-        "artificial intelligence",
-        "evaluate for a relevant business workflow",
-        "compare with other artificial intelligence options"
-      ],
-      "negative_keywords": [
-        "MindStudio"
       ]
     }
   ],

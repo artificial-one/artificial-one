@@ -157,6 +157,30 @@
   "methodology": "Catalogue-grounded browser-side recommendations; monetization is a one-point tie-break only.",
   "news": [
     {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Insurers claim AI is already increasing healthcare costs",
+      "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Two-thirds of IT leaders report AI results, but few would interrupt the CEO's vacation over them",
+      "url": "https://the-decoder.com/two-thirds-of-it-leaders-report-ai-results-but-few-would-interrupt-the-ceos-vacation-over-them/"
+    },
+    {
+      "category": "Research",
+      "published": "",
+      "title": "AI access makes people almost entirely unwilling to say \"I don't know,\" study finds",
+      "url": "https://the-decoder.com/ai-access-makes-people-almost-entirely-unwilling-to-say-i-dont-know-study-finds/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI pauses training of its ‘most capable models’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause"
+    },
+    {
       "category": "Models & LLMs",
       "published": "",
       "title": "Nvidia's SoL-Pi system cuts coding agent token usage nearly in half by optimizing the harness",
@@ -185,6 +209,12 @@
       "published": "",
       "title": "Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge",
       "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Can Cloudflare CEO Matthew Prince save the web from AI?",
+      "url": "https://www.theverge.com/podcast/1000344/cloudflare-matthew-prince-google-zero-ai-web-advertising"
     },
     {
       "category": "Policy & Safety",
@@ -237,38 +267,14 @@
     {
       "category": "AI Tools & Products",
       "published": "",
-      "title": "Meta is putting its muscle behind Muse as the AI app takes off",
-      "url": "https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
       "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
       "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot"
     },
     {
       "category": "Models & LLMs",
       "published": "",
-      "title": "Meta's Muse agent gives every user a full cloud computer running Ubuntu Linux",
-      "url": "https://the-decoder.com/metas-muse-agent-gives-every-user-a-full-cloud-computer-running-ubuntu-linux/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Intelligence doesn't come cheap as AI drives up costs for the NSA, hospitals, and insurers",
-      "url": "https://the-decoder.com/intelligence-doesnt-come-cheap-as-ai-drives-up-costs-for-the-nsa-hospitals-and-insurers/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
       "title": "Gemini 3.8 Live with Live Avatar gives Google’s AI a face",
       "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Jensen Huang talks about AI and climate change like a supervillain",
-      "url": "https://www.theverge.com/tech/1000140/jensen-huang-nvidia-ai-energy-climate-change-supervillain"
     },
     {
       "category": "Models & LLMs",
@@ -293,12 +299,6 @@
       "published": "",
       "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
       "url": "https://openai.com/index/ringg"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
-      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan"
     }
   ],
   "recipes": [
@@ -315,8 +315,8 @@
       "tools": [
         "adcreative-ai",
         "unbounce",
-        "close",
-        "reply-io"
+        "capsule-and-transpond",
+        "close"
       ]
     },
     {
@@ -416,9 +416,9 @@
       "title": "Onboard and operate a growing team",
       "tools": [
         "trainual",
+        "800-com",
         "hubstaff",
-        "social-media-canva",
-        "approvethis"
+        "social-media-canva"
       ]
     },
     {
@@ -441,12 +441,33 @@
   ],
   "stats": {
     "changes": 17,
-    "monetized": 289,
+    "monetized": 296,
     "recipes": 8,
-    "reviewed": 34,
-    "tools": 640
+    "reviewed": 42,
+    "tools": 647
   },
   "tools": [
+    {
+      "affiliate": "https://try.800.com/0u2gtd5cdwiz",
+      "best_for": "Teams and professionals evaluating collaboration & productivity for a defined business workflow.",
+      "category": "Collaboration & Productivity",
+      "checked": "2026-09-27",
+      "features": [
+        "Evaluate 800.com for a relevant business workflow",
+        "Compare 800.com with other collaboration & productivity options"
+      ],
+      "free": false,
+      "id": "800-com",
+      "monetized": true,
+      "name": "800.com",
+      "offer_id": "800-com",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with 800.com.",
+      "profile": "partner-offers/800-com-software.html",
+      "source": "https://docs.google.com/document/d/1_5ijv1YvfGuaH1aK23sKJIsggcoI3M0i/edit?usp=sharing&ouid=107000634641946659270&rtpof=true&sd=true",
+      "status": "reviewed",
+      "summary": "800.com - Toll-Free and Local Business Number Separate your business and personal numbers. Build stronger customer relationships while tracking your business communications."
+    },
     {
       "affiliate": "https://free-trial.adcreative.ai/havjqc5l6jho",
       "best_for": "Performance marketers, ecommerce teams and agencies producing many ad variations.",
@@ -490,6 +511,27 @@
       "source": "https://alison.com/",
       "status": "reviewed",
       "summary": "Founded in 2007, Alison is the world’s largest free online empowerment platform for education and skills training. We offer over 6000 CPD accredited courses and a range of impactful career development tools."
+    },
+    {
+      "affiliate": "https://grow.amplemarket.com/esbu4wurg0b4",
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "category": "Artificial Intelligence",
+      "checked": "2026-09-27",
+      "features": [
+        "Evaluate Amplemarket for a relevant business workflow",
+        "Compare Amplemarket with other artificial intelligence options"
+      ],
+      "free": false,
+      "id": "amplemarket",
+      "monetized": true,
+      "name": "Amplemarket",
+      "offer_id": "amplemarket",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with Amplemarket.",
+      "profile": "partner-offers/amplemarket-software.html",
+      "source": "https://www.amplemarket.com",
+      "status": "reviewed",
+      "summary": "Amplemarket's mission is to help companies grow and do business smarter. Amplemarket offers an unrivaled all-in-one compound solution that leverages cutting-edge AI and machine learning to streamline B2B sales processes and turn sales reps into super reps."
     },
     {
       "affiliate": "https://beautifulai.partnerlinks.io/maqaao71cuuy",
@@ -555,6 +597,48 @@
       "summary": "BRKOX creates premium display frames and cases for LEGO® collectors, helping enthusiasts turn their builds into stunning home displays."
     },
     {
+      "affiliate": "https://partners.callrail.com/omoblag0xt3a",
+      "best_for": "Teams and professionals evaluating agencies for a defined business workflow.",
+      "category": "Agencies",
+      "checked": "2026-09-27",
+      "features": [
+        "Evaluate CallRail for a relevant business workflow",
+        "Compare CallRail with other agencies options"
+      ],
+      "free": false,
+      "id": "callrail",
+      "monetized": true,
+      "name": "CallRail",
+      "offer_id": "callrail",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with CallRail.",
+      "profile": "partner-offers/callrail-software.html",
+      "source": "https://www.callrail.com/legal/",
+      "status": "reviewed",
+      "summary": "CallRail's AI-powered lead intelligence platform helps 220,000+ businesses attract and convert more customers. We attribute every call, text, chat, and form to your marketing, provide conversation insights, and use AI to capture every opportunity 24/7."
+    },
+    {
+      "affiliate": "https://get.capsulenow.io/ob4zvftn9pbk",
+      "best_for": "Teams and professionals evaluating analytics for a defined business workflow.",
+      "category": "Analytics",
+      "checked": "2026-09-27",
+      "features": [
+        "Evaluate Capsule and Transpond for a relevant business workflow",
+        "Compare Capsule and Transpond with other analytics options"
+      ],
+      "free": false,
+      "id": "capsule-and-transpond",
+      "monetized": true,
+      "name": "Capsule and Transpond",
+      "offer_id": "capsule-and-transpond",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with Capsule and Transpond.",
+      "profile": "partner-offers/capsule-and-transpond-software.html",
+      "source": "https://capsulecrm.com/affiliate/terms/",
+      "status": "reviewed",
+      "summary": "Help your customers and audience grow their small businesses with a complete CRM and Marketing solution. Capsule is an easy-to-implement and use CRM, and Transpond is the perfect companion for it."
+    },
+    {
       "affiliate": "https://get.carepatron.com/5czvsttw99e5",
       "best_for": "Independent healthcare and wellness practitioners evaluating an integrated practice workspace.",
       "category": "Healthcare Software",
@@ -576,6 +660,27 @@
       "summary": "Practice-management software for scheduling, client records, documentation, billing and telehealth workflows."
     },
     {
+      "affiliate": "https://appsumo.8odi.net/c/6870305/1745453/7443",
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "category": "Artificial Intelligence",
+      "checked": "2026-09-27",
+      "features": [
+        "Evaluate Castmagic for a relevant business workflow",
+        "Compare Castmagic with other artificial intelligence options"
+      ],
+      "free": false,
+      "id": "castmagic",
+      "monetized": true,
+      "name": "Castmagic",
+      "offer_id": "impact-ad-1745453",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with Castmagic.",
+      "profile": "partner-offers/castmagic-software.html",
+      "source": "https://www.castmagic.io/affiliate-terms",
+      "status": "reviewed",
+      "summary": "Castmagic helps creators turn any form of audio into content, fast."
+    },
+    {
       "affiliate": "https://refer.close.com/jcz4neaz74qq",
       "best_for": "Teams and professionals evaluating analytics for a defined business workflow.",
       "category": "Analytics",
@@ -595,6 +700,27 @@
       "source": "https://www.close.com/partners/partner-program-agreement",
       "status": "reviewed",
       "summary": "Close is a GTM platform built to help small and medium size businesses grow faster. We combine the power of a CRM with built-in communication, automation, coaching and reporting tools to help customer facing teams quickly acquire, manage, engage, and win more deals, faster."
+    },
+    {
+      "affiliate": "https://join.databox.com/dmy5zqb6gqor",
+      "best_for": "Teams and professionals evaluating analytics for a defined business workflow.",
+      "category": "Analytics",
+      "checked": "2026-09-27",
+      "features": [
+        "Evaluate Databox for a relevant business workflow",
+        "Compare Databox with other analytics options"
+      ],
+      "free": false,
+      "id": "databox",
+      "monetized": true,
+      "name": "Databox",
+      "offer_id": "databox",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with Databox.",
+      "profile": "partner-offers/databox-software.html",
+      "source": "https://www.databox.com/",
+      "status": "reviewed",
+      "summary": "Databox is an AI-powered analytics platform used by 20,000+ teams and agencies. It offers the best of BI, without the complicated setup, steep price, or long learning curve. It provides a blend of powerful, but easy-to-use features - from data prep, visualization, automated reporting, goal-setting, to advanced AI analytics - making Databox one of the easiest BI tools to promote. As an affiliate you'll earn 20% comission for 12 months (up to $1,200/customer)."
     },
     {
       "affiliate": "https://get.descript.com/artificial-one-video-editing",
@@ -732,6 +858,27 @@
       "summary": "PDF software for viewing, editing, converting, organizing and signing documents."
     },
     {
+      "affiliate": "https://try.fullenrich.com/ajpyoev2os41",
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "category": "Artificial Intelligence",
+      "checked": "2026-09-27",
+      "features": [
+        "Evaluate FullEnrich for a relevant business workflow",
+        "Compare FullEnrich with other artificial intelligence options"
+      ],
+      "free": false,
+      "id": "fullenrich",
+      "monetized": true,
+      "name": "FullEnrich",
+      "offer_id": "fullenrich",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with FullEnrich.",
+      "profile": "partner-offers/fullenrich-software.html",
+      "source": "https://dash.partnerstack.com/marketplace/all/details/fullenrich?company=fullenrich&gref=marketplace",
+      "status": "reviewed",
+      "summary": "FullEnrich is the #1 B2B waterfall enrichment platform. Instead of relying on a single data source, it cascades through 20+ premium providers to find verified emails and mobile phone numbers — delivering 80%+ find rates. Use it as a data infrastructure layer to enrich and clean your CRM. Pay only for results."
+    },
+    {
       "affiliate": "https://affiliate.hubstaff.com/1zy1p373xc04",
       "best_for": "Remote teams, agencies and field-service businesses that need time and activity records.",
       "category": "Productivity & Business",
@@ -795,6 +942,27 @@
       "source": "https://kit.com/",
       "status": "reviewed",
       "summary": "An email marketing platform for creators, with forms, landing pages, broadcasts, automations and commerce tools."
+    },
+    {
+      "affiliate": "https://try.leadpages.com/y8douy4ew3jq",
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "category": "Artificial Intelligence",
+      "checked": "2026-09-27",
+      "features": [
+        "Evaluate Leadpages for a relevant business workflow",
+        "Compare Leadpages with other artificial intelligence options"
+      ],
+      "free": false,
+      "id": "leadpages",
+      "monetized": true,
+      "name": "Leadpages",
+      "offer_id": "leadpages",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with Leadpages.",
+      "profile": "partner-offers/leadpages-software.html",
+      "source": "https://www.leadpages.com",
+      "status": "reviewed",
+      "summary": "Tell your audience about Leadpages. Leadpages helps you create high-converting landing pages, capture leads, and optimize with A/B testing and AI-powered insights. Whether you’re scaling a business or launching a campaign, we put CRO at your fingertips."
     },
     {
       "affiliate": "https://get.learnworlds.com/5nkgupm98stb",
@@ -2049,24 +2217,6 @@
       "source": "",
       "status": "destination-checked",
       "summary": "Complete CapitalConnector.ai review covering features, pricing, and exclusive AppSumo lifetime deal. CapitalConnector.ai offers data or analytics. Get lifetime access on AppSumo"
-    },
-    {
-      "affiliate": "https://appsumo.8odi.net/c/6870305/1745453/7443",
-      "best_for": "Buyers evaluating a currently available AI or automation offer.",
-      "category": "AI audio",
-      "checked": "2026-09-26",
-      "features": [],
-      "free": false,
-      "id": "castmagic",
-      "monetized": true,
-      "name": "Castmagic",
-      "offer_id": "impact-ad-1745453",
-      "platforms": [],
-      "price": "Check current AppSumo price and terms",
-      "profile": "appsumo-guides/castmagic.html",
-      "source": "",
-      "status": "destination-checked",
-      "summary": "AI-relevant AppSumo catalogue record for Castmagic; verify current features and terms on the destination."
     },
     {
       "affiliate": "https://appsumo.8odi.net/c/6870305/1567575/7443",
