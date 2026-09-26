@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_on": "2026-09-26",
+      "id": "ae870329603cbb2b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://read.ai",
+      "tool_id": "read-ai",
+      "tool_name": "Read AI"
+    },
+    {
+      "detected_on": "2026-09-26",
+      "id": "c531b3dbc17701f3",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://speechify.com",
+      "tool_id": "speechify",
+      "tool_name": "Speechify"
+    },
+    {
+      "detected_on": "2026-09-26",
+      "id": "fe0149b4e4a1adf6",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://timelyapp.com",
+      "tool_id": "timely",
+      "tool_name": "Timely"
+    },
+    {
+      "detected_on": "2026-09-26",
+      "id": "584285f89b81d766",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://tabnine.com",
+      "tool_id": "tabnine",
+      "tool_name": "Tabnine"
+    },
+    {
       "detected_on": "2026-09-25",
       "id": "56c61de7431c1841",
       "kind": "pricing or plan",
@@ -121,6 +157,84 @@
   "methodology": "Catalogue-grounded browser-side recommendations; monetization is a one-point tie-break only.",
   "news": [
     {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
+      "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/"
+    },
+    {
+      "category": "Research",
+      "published": "",
+      "title": "Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge",
+      "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "Can Apple Home’s AI camera features outsmart Amazon’s and Google’s? I put them to the test",
+      "url": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
+      "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "Pentagon was right to slap Anthropic with a security supply chain risk label, federal court says",
+      "url": "https://the-decoder.com/pentagon-was-right-to-slap-anthropic-with-a-security-supply-chain-risk-label-federal-court-says/"
+    },
+    {
+      "category": "AI Business",
+      "published": "",
+      "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
+      "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Meta’s Muse just stole the AI spotlight from OpenAI and Anthropic",
+      "url": "https://techcrunch.com/podcast/metas-muse-just-stole-the-ai-spotlight-from-openai-and-anthropic/"
+    },
+    {
+      "category": "Research",
+      "published": "",
+      "title": "Another Google Deepmind researcher quits, says building superintelligent AI soon is \"inherently irresponsible\"",
+      "url": "https://the-decoder.com/another-google-deepmind-researcher-quits-says-building-superintelligent-ai-soon-is-inherently-irresponsible/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "One company is at the center of a wave of rogue AI attacks",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Microsoft gives Copilot another makeover, adding an Autopilot agent and usage-based billing",
+      "url": "https://the-decoder.com/microsoft-gives-copilot-another-makeover-adding-an-autopilot-agent-and-usage-based-billing/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Meta is putting its muscle behind Muse as the AI app takes off",
+      "url": "https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
+      "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Meta's Muse agent gives every user a full cloud computer running Ubuntu Linux",
+      "url": "https://the-decoder.com/metas-muse-agent-gives-every-user-a-full-cloud-computer-running-ubuntu-linux/"
+    },
+    {
       "category": "Models & LLMs",
       "published": "",
       "title": "Intelligence doesn't come cheap as AI drives up costs for the NSA, hospitals, and insurers",
@@ -133,12 +247,6 @@
       "url": "https://the-decoder.com/googles-call-for-me-lets-gemini-phone-businesses-for-you/"
     },
     {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
-      "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot"
-    },
-    {
       "category": "AI Business",
       "published": "",
       "title": "Anthropic signs $11.6 billion cloud deal with Akamai, pushing its compute spending past $500 billion in under a year",
@@ -147,98 +255,14 @@
     {
       "category": "Models & LLMs",
       "published": "",
-      "title": "White House tells OpenAI and Anthropic to let U.S. review new models before sharing them with British testers",
-      "url": "https://the-decoder.com/white-house-tells-openai-and-anthropic-to-let-u-s-review-new-models-before-sharing-them-with-british-testers/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Lightspeed targets $250M for new India fund, focusing on early-stage AI",
-      "url": "https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
       "title": "Gemini 3.8 Live with Live Avatar gives Google’s AI a face",
       "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face"
-    },
-    {
-      "category": "Research",
-      "published": "",
-      "title": "Top AI experts badly underestimated how fast the field is moving, study finds",
-      "url": "https://the-decoder.com/top-ai-experts-badly-underestimated-how-fast-the-field-is-moving-study-finds/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "PrismML brings its tiny LLMs to Qualcomm-powered smart glasses",
-      "url": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Sakana AI hires Jürgen Schmidhuber, inventor of deep learning, world models, and your next ChatGPT update",
-      "url": "https://the-decoder.com/sakana-ai-hires-jurgen-schmidhuber-inventor-of-deep-learning-world-models-and-your-next-chatgpt-update/"
     },
     {
       "category": "AI Tools & Products",
       "published": "",
       "title": "Jensen Huang talks about AI and climate change like a supervillain",
       "url": "https://www.theverge.com/tech/1000140/jensen-huang-nvidia-ai-energy-climate-change-supervillain"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Meta is going to let you build games with AI right on your phone",
-      "url": "https://www.theverge.com/games/999972/meta-horizon-create-studio-ai-games"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Google's Suncatcher project aims to put AI data centers in orbit powered by solar energy",
-      "url": "https://the-decoder.com/googles-suncatcher-project-aims-to-put-ai-data-centers-in-orbit-powered-by-solar-energy/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "ElevenLabs’ CEO on margins, IPO timing, and telling customers they’re talking to a bot",
-      "url": "https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Gemini can now call businesses for you so you don’t have to wait on hold",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1000116/google-gemini-business-phone-calls"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Google tests letting Gemini call businesses for you",
-      "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "It’s sinister that Meta’s Muse AI mascot is so cute",
-      "url": "https://www.theverge.com/column/999999/optimizer-meta-muse-ai-cute"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Shield AI, Waabi, and General Motors on building AI when failure is not an option at TechCrunch Disrupt 2026",
-      "url": "https://techcrunch.com/2026/09/24/shield-ai-waabi-and-general-motors-on-building-ai-when-failure-is-not-an-option-at-techcrunch-disrupt-2026/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Google is sending an AI satellite into space next week",
-      "url": "https://www.theverge.com/tech/1000015/google-ai-satellite-space-project-suncatcher"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Ando wants to take on Slack with a team messaging app that lets humans and agents work together",
-      "url": "https://techcrunch.com/2026/09/24/ando-eyes-slack-as-it-builds-team-messaging-platform-for-humans-and-agents-to-work-together/"
     },
     {
       "category": "Models & LLMs",
@@ -263,6 +287,18 @@
       "published": "",
       "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
       "url": "https://openai.com/index/ringg"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
+      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
+      "url": "https://openai.com/index/airbnb-gpt-6-astra"
     }
   ],
   "recipes": [
@@ -279,8 +315,8 @@
       "tools": [
         "adcreative-ai",
         "unbounce",
-        "whatconverts",
-        "capitalconnector-ai"
+        "close",
+        "reply-io"
       ]
     },
     {
@@ -399,16 +435,16 @@
         "pinecone",
         "apiway",
         "capitalconnector-ai",
-        "kartra"
+        "plesk"
       ]
     }
   ],
   "stats": {
-    "changes": 13,
-    "monetized": 284,
+    "changes": 17,
+    "monetized": 289,
     "recipes": 8,
-    "reviewed": 29,
-    "tools": 635
+    "reviewed": 34,
+    "tools": 640
   },
   "tools": [
     {
@@ -477,6 +513,27 @@
       "summary": "Presentation software with AI-assisted drafting and adaptive slide layouts."
     },
     {
+      "affiliate": "https://breezyhr.partnerlinks.io/n5sgbrz7ybl4",
+      "best_for": "Teams and professionals evaluating hr for a defined business workflow.",
+      "category": "HR",
+      "checked": "2026-09-25",
+      "features": [
+        "Evaluate Breezy HR for a relevant business workflow",
+        "Compare Breezy HR with other hr options"
+      ],
+      "free": false,
+      "id": "breezy-hr",
+      "monetized": true,
+      "name": "Breezy HR",
+      "offer_id": "breezy-hr",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with Breezy HR.",
+      "profile": "partner-offers/breezy-hr-software.html",
+      "source": "https://breezy.hr/terms",
+      "status": "reviewed",
+      "summary": "Modernize your recruiting process with Breezy! End-to-end recruiting software to attract & hire great employees with less effort."
+    },
+    {
       "affiliate": "https://www.awin1.com/cread.php?awinmid=129093&awinaffid=2733180&ued=https%3A%2F%2Fbrkox.com%2F",
       "best_for": "Collectors looking for purpose-built display frames and protective cases.",
       "category": "Collectibles & display",
@@ -517,6 +574,27 @@
       "source": "https://www.carepatron.com/",
       "status": "reviewed",
       "summary": "Practice-management software for scheduling, client records, documentation, billing and telehealth workflows."
+    },
+    {
+      "affiliate": "https://refer.close.com/jcz4neaz74qq",
+      "best_for": "Teams and professionals evaluating analytics for a defined business workflow.",
+      "category": "Analytics",
+      "checked": "2026-09-25",
+      "features": [
+        "Evaluate Close for a relevant business workflow",
+        "Compare Close with other analytics options"
+      ],
+      "free": false,
+      "id": "close",
+      "monetized": true,
+      "name": "Close",
+      "offer_id": "close",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with Close.",
+      "profile": "partner-offers/close-software.html",
+      "source": "https://www.close.com/partners/partner-program-agreement",
+      "status": "reviewed",
+      "summary": "Close is a GTM platform built to help small and medium size businesses grow faster. We combine the power of a CRM with built-in communication, automation, coaching and reporting tools to help customer facing teams quickly acquire, manage, engage, and win more deals, faster."
     },
     {
       "affiliate": "https://get.descript.com/artificial-one-video-editing",
@@ -763,6 +841,27 @@
       "summary": "A visual-production tool for exhibitors and B2B teams preparing branded assets for trade shows."
     },
     {
+      "affiliate": "https://get.mindstudio.ai/eobgeb638nnc-8drt",
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "category": "Artificial Intelligence",
+      "checked": "2026-09-25",
+      "features": [
+        "Evaluate MindStudio for a relevant business workflow",
+        "Compare MindStudio with other artificial intelligence options"
+      ],
+      "free": false,
+      "id": "mindstudio",
+      "monetized": true,
+      "name": "MindStudio",
+      "offer_id": "mindstudio",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with MindStudio.",
+      "profile": "partner-offers/mindstudio-software.html",
+      "source": "https://www.mindstudio.ai",
+      "status": "reviewed",
+      "summary": "Rapidly build AI agents with MindStudio's flexible and secure no-code platform."
+    },
+    {
       "affiliate": "https://try.mrpeasy.com/5uzzn1nj6by6",
       "best_for": "Small and midsize manufacturers moving planning and inventory out of spreadsheets.",
       "category": "Manufacturing",
@@ -828,6 +927,29 @@
       "summary": "A managed vector database for semantic search, retrieval-augmented generation and AI application memory."
     },
     {
+      "affiliate": "https://try.plesk.com/5491i707p1yy-z4f5m7",
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "category": "Artificial Intelligence",
+      "checked": "2026-09-25",
+      "features": [
+        "Evaluate Plesk for a relevant business workflow",
+        "Compare Plesk with other artificial intelligence options"
+      ],
+      "free": false,
+      "id": "plesk",
+      "monetized": true,
+      "name": "Plesk",
+      "offer_id": "plesk",
+      "platforms": [
+        "Web"
+      ],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with Plesk.",
+      "profile": "partner-offers/plesk-software.html",
+      "source": "https://www.plesk.com/",
+      "status": "reviewed",
+      "summary": "Plesk is a leading web hosting control panel that helps hosting providers, agencies and developers easily manage websites, WordPress, email, DNS and databases from one dashboard. It runs on most clouds and servers, automates updates, backups and security, and offers 100+ extensions so users can sell, bundle and scale hosting services faster with less technical overhead."
+    },
+    {
       "affiliate": "https://get.quicksigner.com/xcvf3ts5q20c",
       "best_for": "Freelancers and small teams that need a straightforward digital document-signing workflow.",
       "category": "Documents & PDF",
@@ -870,6 +992,27 @@
       "source": "https://help.rankprompt.com/",
       "status": "reviewed",
       "summary": "A visibility platform for tracking how brands appear in answers from AI search and assistant products."
+    },
+    {
+      "affiliate": "https://get.reply.io/awaa6y0hrv2p",
+      "best_for": "Teams and professionals evaluating analytics for a defined business workflow.",
+      "category": "Analytics",
+      "checked": "2026-09-25",
+      "features": [
+        "Evaluate Reply.io for a relevant business workflow",
+        "Compare Reply.io with other analytics options"
+      ],
+      "free": false,
+      "id": "reply-io",
+      "monetized": true,
+      "name": "Reply.io",
+      "offer_id": "reply-io",
+      "platforms": [],
+      "price": "Pricing, eligibility and plan limits can change; verify current details with Reply.io.",
+      "profile": "partner-offers/reply-io-software.html",
+      "source": "https://reply.io/terms-of-service/",
+      "status": "reviewed",
+      "summary": "Reply is an AI Sales Engagement platform, combining lead generation, email warm-up, email validation, data scraping, multichannel outreach and much more. It's an an one-stop shop designed to automate your personalized outreach at scale."
     },
     {
       "affiliate": "https://www.awin1.com/cread.php?awinmid=129153&awinaffid=2733180&ued=https%3A%2F%2Fwww.rewarx.com%2F",
@@ -13804,6 +13947,6 @@
       "summary": "Complete Zenler review covering features, pricing, and exclusive lifetime deal. See if this tool is worth it for your business"
     }
   ],
-  "updated_at": "2026-09-25",
+  "updated_at": "2026-09-26",
   "version": 1
 }
