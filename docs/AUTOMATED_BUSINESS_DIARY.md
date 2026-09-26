@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-25T23:48:39+02:00
+**Latest recorded activity:** 2026-09-26T23:31:37+02:00
 
 ## Daily productive system
 
@@ -27,6 +27,110 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 - **Prepared but not currently sending:** Beehiiv newsletter delivery (credentials absent) and Google paid advertising (live controls absent). The generated web newsletter and paid-campaign plan are recorded only as website/planning assets, never as sent campaigns.
 
 ## Diary
+
+### 2026-09-26
+
+- **23:31** — Added 3 new AI-news items to the live briefing.
+  - Insurers claim AI is already increasing healthcare costs
+  - Two-thirds of IT leaders report AI results, but few would interrupt the CEO's vacation over them
+  - AI access makes people almost entirely unwilling to say "I don't know," study finds
+- **23:31** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **23:31** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **18:44** — Added 2 new AI-news items to the live briefing.
+  - OpenAI pauses training of its ‘most capable models’
+  - Can Cloudflare CEO Matthew Prince save the web from AI?
+- **18:44** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **18:44** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **16:43** — [Published Bluesky post: Elephant trunk check: Volza review and pricing guide](https://bsky.app/profile/artificial-one.bsky.social/post/3mwgjgug6fo2n)
+- **15:05** — Created or refreshed 32 social-media creative assets.
+  - images/social-cards/adcreative.jpg
+  - images/social-cards/alison-us-ca.jpg
+  - images/social-cards/beautiful-ai.jpg
+  - images/social-cards/breezy-hr.jpg
+  - images/social-cards/brkox.jpg
+  - images/social-cards/carepatron.jpg
+  - images/social-cards/close.jpg
+  - images/social-cards/daily-editorial-vertical.jpg
+  - images/social-cards/daily-editorial.jpg
+  - images/social-cards/easyclaw.jpg
+  - images/social-cards/esign-sign-pdf-docx-documents-ios-only.jpg
+  - images/social-cards/everleakproof-us.jpg
+  - images/social-cards/hubstaff.jpg
+  - images/social-cards/kit.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/lensmor.jpg
+  - images/social-cards/mindstudio.jpg
+  - images/social-cards/mrpeasy.jpg
+  - images/social-cards/omniseo.jpg
+  - images/social-cards/pinecone.jpg
+  - images/social-cards/plesk.jpg
+  - images/social-cards/quicksigner.jpg
+  - images/social-cards/rank-prompt.jpg
+  - images/social-cards/reply-io.jpg
+  - images/social-cards/rewarx-studio-ai.jpg
+  - images/social-cards/seamless.jpg
+  - images/social-cards/trainual.jpg
+  - images/social-cards/turbotic.jpg
+  - images/social-cards/unbounce.jpg
+  - images/social-cards/volza.jpg
+  - images/social-cards/wegic.jpg
+  - images/social-cards/whatconverts.jpg
+- **15:05** — Published an updated RSS feed for content distribution.
+- **15:05** — Published 1 confirmed change alerts for monetized offers.
+  - turbotic
+- **15:05** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **15:05** — [Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/turn-recordings-into-content.html)
+- **15:05** — [Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/ship-an-ai-powered-product.html)
+- **15:05** — [Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/onboard-a-growing-team.html)
+- **15:05** — [Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/build-a-business-website.html)
+- **15:05** — [Updated webpage: Trainual: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/trainual-team-training.html)
+- **15:05** — [Updated webpage: OmniSEO: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/omniseo-search-optimization.html)
+- **15:05** — [Updated webpage: MindStudio: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/mindstudio-software.html)
+- **15:05** — [Updated webpage: Close: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/close-software.html)
+- **15:05** — [Updated webpage: brkox: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/brkox-software.html)
+- **15:05** — [Updated webpage: Breezy HR: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/breezy-hr-software.html)
+- **15:05** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **15:05** — [Updated webpage: AI Tool Pricing and Plan Updates | artificial.one](https://artificial.one/offer-updates.html)
+- **15:05** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **15:05** — [Updated webpage: Landing Page ROI Calculator | Free Tool | artificial.one](https://artificial.one/calculators/landing-page-roi-calculator.html)
+- **15:05** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **15:05** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **15:05** — [Published LinkedIn post: One practical way to use Seamless.AI](https://www.linkedin.com/feed/update/urn:li:share:7509598919346040832/)
+- **15:04** — [Published Bluesky post: One practical way to use Seamless.AI](https://bsky.app/profile/artificial-one.bsky.social/post/3mwgdxcijbp2x)
+- **14:19** — [Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/turn-recordings-into-content.html)
+- **14:19** — [Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/ship-an-ai-powered-product.html)
+- **14:19** — [Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/onboard-a-growing-team.html)
+- **14:19** — [Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/build-a-business-website.html)
+- **14:19** — [Updated webpage: AppSumo AI Deals Available Today | artificial.one](https://artificial.one/appsumo-ai-tools.html)
+- **13:44** — Added 3 new AI-news items to the live briefing.
+  - Nvidia's SoL-Pi system cuts coding agent token usage nearly in half by optimizing the harness
+  - OpenAI's GPT-6 Astra can now tell you exactly where you screwed up your IKEA shelf
+  - OpenAI pauses its "most capable models" after agents exploit loopholes and leak data
+- **13:44** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **13:44** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **13:28** — [Updated webpage: AI Software Buying Guides and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **11:56** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **11:30** — Published 4 confirmed vendor pricing, plan, or availability changes.
+  - Read AI
+  - Speechify
+  - Timely
+  - Tabnine
+- **11:30** — [Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/turn-recordings-into-content.html)
+- **11:30** — [Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/ship-an-ai-powered-product.html)
+- **11:30** — [Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/onboard-a-growing-team.html)
+- **11:30** — [Updated webpage: Launch and measure a converting campaign — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/launch-a-converting-campaign.html)
+- **11:30** — [Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/build-a-business-website.html)
+- **11:30** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
+- **11:30** — [Updated webpage: Artificial.One Public AI Tool Data API](https://artificial.one/developers.html)
+- **11:30** — [Updated webpage: Ask the Elephant: AI Tool Decision Assistant | artificial.one](https://artificial.one/ask-elephant.html)
+- **11:30** — [Updated webpage: AI Tool Price & Product Changes | artificial.one](https://artificial.one/ai-tool-observatory.html)
+- **11:30** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
+- **11:30** — [Updated webpage: AI Tool Pricing & Feature Change History | artificial.one](https://artificial.one/ai-tool-changes.html)
+- **07:25** — Added 2 new AI-news items to the live briefing.
+  - Crusoe abandons $1.25B plan to use Boom turbines at AI data centers
+  - Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge
+- **07:25** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **07:25** — [Updated webpage: Find AI Tools Worth Paying For | Artificial.One](https://artificial.one/)
 
 ### 2026-09-25
 
