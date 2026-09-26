@@ -6,13 +6,49 @@
     "verification_rule": "Reviewed means evidence-backed partner data; destination-checked means the public offer destination responded; legacy records remain explicitly unverified."
   },
   "stats": {
-    "destination_checked": 255,
-    "monetized": 289,
-    "reviewed": 34,
-    "source_monitored": 232,
-    "tools": 640
+    "destination_checked": 254,
+    "monetized": 296,
+    "reviewed": 42,
+    "source_monitored": 240,
+    "tools": 647
   },
   "tools": [
+    {
+      "best_for": "Teams and professionals evaluating collaboration & productivity for a defined business workflow.",
+      "category": "Collaboration & Productivity",
+      "features": [
+        "Evaluate 800.com for a relevant business workflow",
+        "Compare 800.com with other collaboration & productivity options"
+      ],
+      "id": "800-com",
+      "links": {
+        "affiliate": "https://try.800.com/0u2gtd5cdwiz",
+        "partner_guide": "partner-offers/800-com-software.html",
+        "profile": "partner-offers/800-com-software.html",
+        "source": "https://docs.google.com/document/d/1_5ijv1YvfGuaH1aK23sKJIsggcoI3M0i/edit?usp=sharing&ouid=107000634641946659270&rtpof=true&sd=true"
+      },
+      "monetization": {
+        "active": true,
+        "network": "partnerstack",
+        "offer_id": "800-com"
+      },
+      "name": "800.com",
+      "platforms": [],
+      "pricing": {
+        "confidence": "reviewed-source-note",
+        "has_free_plan": false,
+        "label": "Pricing, eligibility and plan limits can change; verify current details with 800.com.",
+        "verified_at": "2026-09-27"
+      },
+      "search_text": "800.com collaboration & productivity 800.com - toll-free and local business number separate your business and personal numbers. build stronger customer relationships while tracking your business communications. teams and professionals evaluating collaboration & productivity for a defined business workflow. evaluate 800.com for a relevant business workflow compare 800.com with other collaboration & productivity options",
+      "slug": "800-com",
+      "summary": "800.com - Toll-Free and Local Business Number Separate your business and personal numbers. Build stronger customer relationships while tracking your business communications.",
+      "verification": {
+        "last_checked": "2026-09-27",
+        "source_count": 1,
+        "status": "reviewed"
+      }
+    },
     {
       "best_for": "Performance marketers, ecommerce teams and agencies producing many ad variations.",
       "category": "Marketing & Creative",
@@ -84,6 +120,42 @@
       "verification": {
         "last_checked": "2026-09-22",
         "source_count": 2,
+        "status": "reviewed"
+      }
+    },
+    {
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "category": "Artificial Intelligence",
+      "features": [
+        "Evaluate Amplemarket for a relevant business workflow",
+        "Compare Amplemarket with other artificial intelligence options"
+      ],
+      "id": "amplemarket",
+      "links": {
+        "affiliate": "https://grow.amplemarket.com/esbu4wurg0b4",
+        "partner_guide": "partner-offers/amplemarket-software.html",
+        "profile": "partner-offers/amplemarket-software.html",
+        "source": "https://www.amplemarket.com"
+      },
+      "monetization": {
+        "active": true,
+        "network": "affiliate-partner",
+        "offer_id": "amplemarket"
+      },
+      "name": "Amplemarket",
+      "platforms": [],
+      "pricing": {
+        "confidence": "reviewed-source-note",
+        "has_free_plan": false,
+        "label": "Pricing, eligibility and plan limits can change; verify current details with Amplemarket.",
+        "verified_at": "2026-09-27"
+      },
+      "search_text": "amplemarket artificial intelligence amplemarket's mission is to help companies grow and do business smarter. amplemarket offers an unrivaled all-in-one compound solution that leverages cutting-edge ai and machine learning to streamline b2b sales processes and turn sales reps into super reps. teams and professionals evaluating artificial intelligence for a defined business workflow. evaluate amplemarket for a relevant business workflow compare amplemarket with other artificial intelligence options",
+      "slug": "amplemarket",
+      "summary": "Amplemarket's mission is to help companies grow and do business smarter. Amplemarket offers an unrivaled all-in-one compound solution that leverages cutting-edge AI and machine learning to streamline B2B sales processes and turn sales reps into super reps.",
+      "verification": {
+        "last_checked": "2026-09-27",
+        "source_count": 1,
         "status": "reviewed"
       }
     },
@@ -196,6 +268,78 @@
       }
     },
     {
+      "best_for": "Teams and professionals evaluating agencies for a defined business workflow.",
+      "category": "Agencies",
+      "features": [
+        "Evaluate CallRail for a relevant business workflow",
+        "Compare CallRail with other agencies options"
+      ],
+      "id": "callrail",
+      "links": {
+        "affiliate": "https://partners.callrail.com/omoblag0xt3a",
+        "partner_guide": "partner-offers/callrail-software.html",
+        "profile": "partner-offers/callrail-software.html",
+        "source": "https://www.callrail.com/legal/"
+      },
+      "monetization": {
+        "active": true,
+        "network": "partnerstack",
+        "offer_id": "callrail"
+      },
+      "name": "CallRail",
+      "platforms": [],
+      "pricing": {
+        "confidence": "reviewed-source-note",
+        "has_free_plan": false,
+        "label": "Pricing, eligibility and plan limits can change; verify current details with CallRail.",
+        "verified_at": "2026-09-27"
+      },
+      "search_text": "callrail agencies callrail's ai-powered lead intelligence platform helps 220,000+ businesses attract and convert more customers. we attribute every call, text, chat, and form to your marketing, provide conversation insights, and use ai to capture every opportunity 24/7. teams and professionals evaluating agencies for a defined business workflow. evaluate callrail for a relevant business workflow compare callrail with other agencies options",
+      "slug": "callrail",
+      "summary": "CallRail's AI-powered lead intelligence platform helps 220,000+ businesses attract and convert more customers. We attribute every call, text, chat, and form to your marketing, provide conversation insights, and use AI to capture every opportunity 24/7.",
+      "verification": {
+        "last_checked": "2026-09-27",
+        "source_count": 1,
+        "status": "reviewed"
+      }
+    },
+    {
+      "best_for": "Teams and professionals evaluating analytics for a defined business workflow.",
+      "category": "Analytics",
+      "features": [
+        "Evaluate Capsule and Transpond for a relevant business workflow",
+        "Compare Capsule and Transpond with other analytics options"
+      ],
+      "id": "capsule-and-transpond",
+      "links": {
+        "affiliate": "https://get.capsulenow.io/ob4zvftn9pbk",
+        "partner_guide": "partner-offers/capsule-and-transpond-software.html",
+        "profile": "partner-offers/capsule-and-transpond-software.html",
+        "source": "https://capsulecrm.com/affiliate/terms/"
+      },
+      "monetization": {
+        "active": true,
+        "network": "partnerstack",
+        "offer_id": "capsule-and-transpond"
+      },
+      "name": "Capsule and Transpond",
+      "platforms": [],
+      "pricing": {
+        "confidence": "reviewed-source-note",
+        "has_free_plan": false,
+        "label": "Pricing, eligibility and plan limits can change; verify current details with Capsule and Transpond.",
+        "verified_at": "2026-09-27"
+      },
+      "search_text": "capsule and transpond analytics help your customers and audience grow their small businesses with a complete crm and marketing solution. capsule is an easy-to-implement and use crm, and transpond is the perfect companion for it. teams and professionals evaluating analytics for a defined business workflow. evaluate capsule and transpond for a relevant business workflow compare capsule and transpond with other analytics options",
+      "slug": "capsule-and-transpond",
+      "summary": "Help your customers and audience grow their small businesses with a complete CRM and Marketing solution. Capsule is an easy-to-implement and use CRM, and Transpond is the perfect companion for it.",
+      "verification": {
+        "last_checked": "2026-09-27",
+        "source_count": 1,
+        "status": "reviewed"
+      }
+    },
+    {
       "best_for": "Independent healthcare and wellness practitioners evaluating an integrated practice workspace.",
       "category": "Healthcare Software",
       "features": [
@@ -227,6 +371,42 @@
       "summary": "Practice-management software for scheduling, client records, documentation, billing and telehealth workflows.",
       "verification": {
         "last_checked": "2026-09-14",
+        "source_count": 1,
+        "status": "reviewed"
+      }
+    },
+    {
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "category": "Artificial Intelligence",
+      "features": [
+        "Evaluate Castmagic for a relevant business workflow",
+        "Compare Castmagic with other artificial intelligence options"
+      ],
+      "id": "castmagic",
+      "links": {
+        "affiliate": "https://appsumo.8odi.net/c/6870305/1745453/7443",
+        "partner_guide": "appsumo-guides/castmagic.html",
+        "profile": "partner-offers/castmagic-software.html",
+        "source": "https://www.castmagic.io/affiliate-terms"
+      },
+      "monetization": {
+        "active": true,
+        "network": "impact-appsumo",
+        "offer_id": "impact-ad-1745453"
+      },
+      "name": "Castmagic",
+      "platforms": [],
+      "pricing": {
+        "confidence": "reviewed-source-note",
+        "has_free_plan": false,
+        "label": "Pricing, eligibility and plan limits can change; verify current details with Castmagic.",
+        "verified_at": "2026-09-27"
+      },
+      "search_text": "castmagic artificial intelligence castmagic helps creators turn any form of audio into content, fast. teams and professionals evaluating artificial intelligence for a defined business workflow. evaluate castmagic for a relevant business workflow compare castmagic with other artificial intelligence options",
+      "slug": "castmagic",
+      "summary": "Castmagic helps creators turn any form of audio into content, fast.",
+      "verification": {
+        "last_checked": "2026-09-27",
         "source_count": 1,
         "status": "reviewed"
       }
@@ -264,6 +444,42 @@
       "verification": {
         "last_checked": "2026-09-25",
         "source_count": 1,
+        "status": "reviewed"
+      }
+    },
+    {
+      "best_for": "Teams and professionals evaluating analytics for a defined business workflow.",
+      "category": "Analytics",
+      "features": [
+        "Evaluate Databox for a relevant business workflow",
+        "Compare Databox with other analytics options"
+      ],
+      "id": "databox",
+      "links": {
+        "affiliate": "https://join.databox.com/dmy5zqb6gqor",
+        "partner_guide": "partner-offers/databox-software.html",
+        "profile": "partner-offers/databox-software.html",
+        "source": "https://www.databox.com/"
+      },
+      "monetization": {
+        "active": true,
+        "network": "affiliate-partner",
+        "offer_id": "databox"
+      },
+      "name": "Databox",
+      "platforms": [],
+      "pricing": {
+        "confidence": "reviewed-source-note",
+        "has_free_plan": false,
+        "label": "Pricing, eligibility and plan limits can change; verify current details with Databox.",
+        "verified_at": "2026-09-27"
+      },
+      "search_text": "databox analytics databox is an ai-powered analytics platform used by 20,000+ teams and agencies. it offers the best of bi, without the complicated setup, steep price, or long learning curve. it provides a blend of powerful, but easy-to-use features - from data prep, visualization, automated reporting, goal-setting, to advanced ai analytics - making databox one of the easiest bi tools to promote. as an affiliate you'll earn 20% comission for 12 months (up to $1,200/customer). teams and professionals evaluating analytics for a defined business workflow. evaluate databox for a relevant business workflow compare databox with other analytics options",
+      "slug": "databox",
+      "summary": "Databox is an AI-powered analytics platform used by 20,000+ teams and agencies. It offers the best of BI, without the complicated setup, steep price, or long learning curve. It provides a blend of powerful, but easy-to-use features - from data prep, visualization, automated reporting, goal-setting, to advanced AI analytics - making Databox one of the easiest BI tools to promote. As an affiliate you'll earn 20% comission for 12 months (up to $1,200/customer).",
+      "verification": {
+        "last_checked": "2026-09-27",
+        "source_count": 2,
         "status": "reviewed"
       }
     },
@@ -493,6 +709,42 @@
       }
     },
     {
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "category": "Artificial Intelligence",
+      "features": [
+        "Evaluate FullEnrich for a relevant business workflow",
+        "Compare FullEnrich with other artificial intelligence options"
+      ],
+      "id": "fullenrich",
+      "links": {
+        "affiliate": "https://try.fullenrich.com/ajpyoev2os41",
+        "partner_guide": "partner-offers/fullenrich-software.html",
+        "profile": "partner-offers/fullenrich-software.html",
+        "source": "https://dash.partnerstack.com/marketplace/all/details/fullenrich?company=fullenrich&gref=marketplace"
+      },
+      "monetization": {
+        "active": true,
+        "network": "partnerstack",
+        "offer_id": "fullenrich"
+      },
+      "name": "FullEnrich",
+      "platforms": [],
+      "pricing": {
+        "confidence": "reviewed-source-note",
+        "has_free_plan": false,
+        "label": "Pricing, eligibility and plan limits can change; verify current details with FullEnrich.",
+        "verified_at": "2026-09-27"
+      },
+      "search_text": "fullenrich artificial intelligence fullenrich is the #1 b2b waterfall enrichment platform. instead of relying on a single data source, it cascades through 20+ premium providers to find verified emails and mobile phone numbers — delivering 80%+ find rates. use it as a data infrastructure layer to enrich and clean your crm. pay only for results. teams and professionals evaluating artificial intelligence for a defined business workflow. evaluate fullenrich for a relevant business workflow compare fullenrich with other artificial intelligence options",
+      "slug": "fullenrich",
+      "summary": "FullEnrich is the #1 B2B waterfall enrichment platform. Instead of relying on a single data source, it cascades through 20+ premium providers to find verified emails and mobile phone numbers — delivering 80%+ find rates. Use it as a data infrastructure layer to enrich and clean your CRM. Pay only for results.",
+      "verification": {
+        "last_checked": "2026-09-27",
+        "source_count": 1,
+        "status": "reviewed"
+      }
+    },
+    {
       "best_for": "Remote teams, agencies and field-service businesses that need time and activity records.",
       "category": "Productivity & Business",
       "features": [
@@ -599,6 +851,42 @@
       "verification": {
         "last_checked": "2026-09-14",
         "source_count": 1,
+        "status": "reviewed"
+      }
+    },
+    {
+      "best_for": "Teams and professionals evaluating artificial intelligence for a defined business workflow.",
+      "category": "Artificial Intelligence",
+      "features": [
+        "Evaluate Leadpages for a relevant business workflow",
+        "Compare Leadpages with other artificial intelligence options"
+      ],
+      "id": "leadpages",
+      "links": {
+        "affiliate": "https://try.leadpages.com/y8douy4ew3jq",
+        "partner_guide": "partner-offers/leadpages-software.html",
+        "profile": "partner-offers/leadpages-software.html",
+        "source": "https://www.leadpages.com"
+      },
+      "monetization": {
+        "active": true,
+        "network": "partnerstack",
+        "offer_id": "leadpages"
+      },
+      "name": "Leadpages",
+      "platforms": [],
+      "pricing": {
+        "confidence": "reviewed-source-note",
+        "has_free_plan": false,
+        "label": "Pricing, eligibility and plan limits can change; verify current details with Leadpages.",
+        "verified_at": "2026-09-27"
+      },
+      "search_text": "leadpages artificial intelligence tell your audience about leadpages. leadpages helps you create high-converting landing pages, capture leads, and optimize with a/b testing and ai-powered insights. whether you’re scaling a business or launching a campaign, we put cro at your fingertips. teams and professionals evaluating artificial intelligence for a defined business workflow. evaluate leadpages for a relevant business workflow compare leadpages with other artificial intelligence options",
+      "slug": "leadpages",
+      "summary": "Tell your audience about Leadpages. Leadpages helps you create high-converting landing pages, capture leads, and optimize with A/B testing and AI-powered insights. Whether you’re scaling a business or launching a campaign, we put CRO at your fingertips.",
+      "verification": {
+        "last_checked": "2026-09-27",
+        "source_count": 2,
         "status": "reviewed"
       }
     },
@@ -2825,39 +3113,6 @@
       "search_text": "capitalconnector.ai data & analytics complete capitalconnector.ai review covering features, pricing, and exclusive appsumo lifetime deal. capitalconnector.ai offers data or analytics. get lifetime access on appsumo  lifetime deal data features no subscription",
       "slug": "capitalconnector-ai",
       "summary": "Complete CapitalConnector.ai review covering features, pricing, and exclusive AppSumo lifetime deal. CapitalConnector.ai offers data or analytics. Get lifetime access on AppSumo",
-      "verification": {
-        "last_checked": "2026-09-26",
-        "source_count": 1,
-        "status": "destination-checked"
-      }
-    },
-    {
-      "best_for": "Buyers evaluating a currently available AI or automation offer.",
-      "category": "AI audio",
-      "features": [],
-      "id": "castmagic",
-      "links": {
-        "affiliate": "https://appsumo.8odi.net/c/6870305/1745453/7443",
-        "partner_guide": "appsumo-guides/castmagic.html",
-        "profile": "appsumo-guides/castmagic.html",
-        "source": ""
-      },
-      "monetization": {
-        "active": true,
-        "network": "impact-appsumo",
-        "offer_id": "impact-ad-1745453"
-      },
-      "name": "Castmagic",
-      "platforms": [],
-      "pricing": {
-        "confidence": "destination-only",
-        "has_free_plan": false,
-        "label": "Check current AppSumo price and terms",
-        "verified_at": null
-      },
-      "search_text": "castmagic ai audio ai-relevant appsumo catalogue record for castmagic; verify current features and terms on the destination. buyers evaluating a currently available ai or automation offer.",
-      "slug": "castmagic",
-      "summary": "AI-relevant AppSumo catalogue record for Castmagic; verify current features and terms on the destination.",
       "verification": {
         "last_checked": "2026-09-26",
         "source_count": 1,
@@ -23113,6 +23368,6 @@
       }
     }
   ],
-  "updated_at": "2026-09-26",
+  "updated_at": "2026-09-27",
   "version": 1
 }

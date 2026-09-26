@@ -1,8 +1,20 @@
 {
   "version": 1,
-  "verified_at": "2026-09-25",
+  "verified_at": "2026-09-27",
   "source": "authenticated PartnerStack partner dashboard",
   "programs": [
+    {
+      "name": "800.com",
+      "slug": "800",
+      "status": "active",
+      "tracking_url": "https://try.800.com/0u2gtd5cdwiz"
+    },
+    {
+      "name": "Amplemarket",
+      "slug": "amplemarket",
+      "status": "active",
+      "tracking_url": "https://grow.amplemarket.com/esbu4wurg0b4"
+    },
     {
       "name": "Breezy HR",
       "slug": "breezyhr",
@@ -10,10 +22,46 @@
       "tracking_url": "https://breezyhr.partnerlinks.io/n5sgbrz7ybl4"
     },
     {
+      "name": "CallRail",
+      "slug": "callrail",
+      "status": "active",
+      "tracking_url": "https://partners.callrail.com/omoblag0xt3a"
+    },
+    {
+      "name": "Capsule and Transpond",
+      "slug": "capsule",
+      "status": "active",
+      "tracking_url": "https://get.capsulenow.io/ob4zvftn9pbk"
+    },
+    {
+      "name": "Castmagic",
+      "slug": "castmagic",
+      "status": "active",
+      "tracking_url": "https://get.castmagic.io/0b5i0r0dd6mo"
+    },
+    {
       "name": "Close",
       "slug": "close",
       "status": "active",
       "tracking_url": "https://refer.close.com/jcz4neaz74qq"
+    },
+    {
+      "name": "Databox",
+      "slug": "databox",
+      "status": "active",
+      "tracking_url": "https://join.databox.com/dmy5zqb6gqor"
+    },
+    {
+      "name": "FullEnrich",
+      "slug": "fullenrich",
+      "status": "active",
+      "tracking_url": "https://try.fullenrich.com/ajpyoev2os41"
+    },
+    {
+      "name": "Leadpages",
+      "slug": "leadpages",
+      "status": "active",
+      "tracking_url": "https://try.leadpages.com/y8douy4ew3jq"
     },
     {
       "name": "MindStudio",

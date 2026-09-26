@@ -245,6 +245,70 @@ def linkedin_metrics(receipts: list[dict[str, Any]], token: str, author_urn: str
     return result
 
 
+def bluesky_comments_made(
+    window_end: datetime, handle: str = "artificial-one.bsky.social", hours: int = 24,
+) -> list[dict[str, Any]]:
+    """Read public replies written by our Bluesky account in the reporting window."""
+    if window_end.tzinfo is None:
+        window_end = window_end.replace(tzinfo=PRAGUE)
+    window_end = window_end.astimezone(PRAGUE)
+    window_start = window_end - timedelta(hours=hours)
+    url = (
+        "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed"
+        f"?actor={quote(handle, safe='')}&filter=posts_with_replies&limit=100"
+    )
+    try:
+        with urlopen(Request(url, headers={
+            "Accept": "application/json", "User-Agent": "artificial.one-daily-report/1.0",
+        }), timeout=30) as response:
+            feed = json.load(response).get("feed", [])
+    except Exception:
+        return []
+    comments: list[dict[str, Any]] = []
+    for item in feed:
+        post = item.get("post") if isinstance(item, dict) and isinstance(item.get("post"), dict) else {}
+        record = post.get("record") if isinstance(post.get("record"), dict) else {}
+        reply = record.get("reply") if isinstance(record.get("reply"), dict) else {}
+        if not reply:
+            continue
+        created = str(record.get("createdAt") or "")
+        try:
+            published = datetime.fromisoformat(created.replace("Z", "+00:00"))
+            if published.tzinfo is None:
+                published = published.replace(tzinfo=timezone.utc)
+            published = published.astimezone(PRAGUE)
+        except (TypeError, ValueError):
+            continue
+        if not (window_start < published <= window_end):
+            continue
+        uri = str(post.get("uri") or "")
+        author = post.get("author") if isinstance(post.get("author"), dict) else {}
+        parent = reply.get("parent") if isinstance(reply.get("parent"), dict) else {}
+        parent_uri = str(parent.get("uri") or "")
+        own_did = str(author.get("did") or "")
+        if own_did and parent_uri.startswith(f"at://{own_did}/"):
+            # A multi-part post thread is content publishing, not engagement
+            # with another person's post, so do not inflate the comment count.
+            continue
+        post_handle = str(author.get("handle") or handle)
+        rkey = uri.rsplit("/", 1)[-1] if uri else ""
+        comments.append({
+            "title": str(record.get("text") or "Artificial.One reply").strip()[:180],
+            "url": f"https://bsky.app/profile/{quote(post_handle)}/post/{quote(rkey)}" if rkey else "",
+            "published_at": published.isoformat(),
+        })
+    return sorted(comments, key=lambda item: item["published_at"])
+
+
+def social_comments_for_window(window_end: datetime) -> dict[str, list[dict[str, Any]]]:
+    """Return outbound comments; channels without comment automation remain zero."""
+    return {
+        "linkedin": [],
+        "bluesky": bluesky_comments_made(window_end),
+        "x": [],
+    }
+
+
 def social_posts_for_day(
     receipts: dict[str, Any], report_date: date, metrics: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, list[dict[str, Any]]]:
@@ -410,6 +474,7 @@ def report_model(
     work_queue = system_work(reconciliation, opportunities)
     report_time = report_time or datetime.combine(report_date, datetime.max.time(), tzinfo=PRAGUE)
     social = social_performance(root, report_time)
+    social_comments = social_comments_for_window(report_time)
     revenue_text = f"USD {ps_revenue:.2f} + {impact_revenue}" if impact_revenue != "USD 0.00" else f"USD {ps_revenue:.2f}"
     commission_text = f"USD {ps_commission:.2f} + {impact_commission}" if impact_commission != "USD 0.00" else f"USD {ps_commission:.2f}"
     return {
@@ -429,6 +494,7 @@ def report_model(
         "owner_actions": actions,
         "system_work": work_queue,
         "social": social,
+        "social_comments": social_comments,
         "search": search,
         "blocking_failures": integer(summary.get("blocking_failures")),
         "health": health,
@@ -564,7 +630,11 @@ def readable_social_metrics(values: dict[str, Any] | None) -> str:
     return " · ".join(f"{integer(values.get(key))} {label}" for key, label in labels if key in values)
 
 
-def render_social(social: dict[str, list[dict[str, Any]]]) -> tuple[str, str]:
+def render_social(
+    social: dict[str, list[dict[str, Any]]],
+    comments: dict[str, list[dict[str, Any]]] | None = None,
+) -> tuple[str, str]:
+    comments = comments or {}
     names = {"linkedin": "LinkedIn", "bluesky": "Bluesky", "x": "X"}
     colors = {
         "linkedin": ("#eaf3ff", "#2367a7", "in"),
@@ -575,13 +645,17 @@ def render_social(social: dict[str, list[dict[str, Any]]]) -> tuple[str, str]:
     platform_text: list[str] = []
     for platform in SOCIAL_PLATFORMS:
         posts = social.get(platform, [])
-        platform_text.append(names[platform])
+        outbound_comments = comments.get(platform, [])
+        platform_text.append(
+            f"{names[platform]} — {len(posts)} post{'s' if len(posts) != 1 else ''}; "
+            f"{len(outbound_comments)} comment{'s' if len(outbound_comments) != 1 else ''} made by Artificial.One"
+        )
         background, accent, icon = colors[platform]
         platform_label = f"{icon}&nbsp;&nbsp;{names[platform]}" if icon else names[platform]
         if not posts:
             platform_html.append(
                 f"<div style='background:{background};border-radius:15px;padding:14px 16px;margin:0 0 10px'>"
-                f"<strong style='color:{accent}'>{platform_label}</strong>"
+                f"<strong style='color:{accent}'>{platform_label} &middot; 0 posts &middot; {len(outbound_comments)} comments made</strong>"
                 "<div style='color:#706880;font-size:12px;margin-top:5px'>No new post in the last 24 hours.</div></div>"
             )
             platform_text.append("- No new post in the last 24 hours.")
@@ -604,13 +678,13 @@ def render_social(social: dict[str, list[dict[str, Any]]]) -> tuple[str, str]:
             platform_text.append(f"- {post['title']}: {post['url']} — {readable_social_metrics(post.get('metrics'))}")
         platform_html.append(
             f"<div style='background:{background};border-radius:17px;padding:16px 17px;margin:0 0 12px'>"
-            f"<strong style='color:{accent}'>{platform_label} &middot; {len(posts)} new</strong>{''.join(rows)}</div>"
+            f"<strong style='color:{accent}'>{platform_label} &middot; {len(posts)} posts &middot; {len(outbound_comments)} comments made</strong>{''.join(rows)}</div>"
         )
     html = (
         '<tr><td class="section-pad" style="padding:14px 28px"><div style="background:#f6f2ff;border:1px solid #e9e1f7;border-radius:22px;padding:24px">'
         '<div style="font-size:11px;font-weight:900;letter-spacing:1.2px;color:#7151bd;text-transform:uppercase">Audience growth</div>'
         '<h2 style="font-size:22px;color:#211a35;margin:7px 0 5px">Social pulse &middot; last 24 hours</h2>'
-        '<p style="font-size:13px;color:#706880;margin:0 0 16px">Every new post and its live engagement, in one place.</p>'
+        '<p style="font-size:13px;color:#706880;margin:0 0 16px">New posts, comments made by Artificial.One, and engagement received.</p>'
         + "".join(platform_html) + "</div></td></tr>"
     )
     return html, "\n".join(platform_text)
@@ -622,7 +696,9 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
     subject = f"Artificial.One daily pulse — {pretty_date}"
     action_count = len(model["owner_actions"])
     summary = management_summary(model)
-    social_html, social_text = render_social(model.get("social") or {})
+    social_html, social_text = render_social(
+        model.get("social") or {}, model.get("social_comments") or {},
+    )
     search_html, search_text = render_search(model.get("search") or {})
     highlights = model["activity"]["highlights"]
     if highlights:

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-26",
+  "updated_at": "2026-09-27",
   "contract": {
     "states": [
       "inactive",
@@ -15,12 +15,12 @@
   },
   "summary": {
     "total": 726,
-    "active_link_pending": 10,
+    "active_link_pending": 2,
     "inactive": 1,
     "pending": 431,
-    "published": 284,
+    "published": 292,
     "blocking_failures": 0,
-    "activation_blockers": 10
+    "activation_blockers": 2
   },
   "networks": {
     "awin": {
@@ -37,41 +37,13 @@
     },
     "partnerstack": {
       "total": 422,
-      "active_link_pending": 10,
+      "active_link_pending": 2,
       "inactive": 1,
       "pending": 384,
-      "published": 27
+      "published": 35
     }
   },
   "activation_blockers": [
-    {
-      "source_id": "partnerstack:amplemarket",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:callrail",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:capsule",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:castmagic",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:databox",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:fullenrich",
-      "reason": "active_link_pending"
-    },
-    {
-      "source_id": "partnerstack:leadpages",
-      "reason": "active_link_pending"
-    },
     {
       "source_id": "partnerstack:quillbot",
       "reason": "active_link_pending"
@@ -79,10 +51,6 @@
     {
       "source_id": "partnerstack:runpod",
       "reason": "external_account_required"
-    },
-    {
-      "source_id": "partnerstack:800",
-      "reason": "active_link_pending"
     }
   ],
   "failures": []

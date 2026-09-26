@@ -222,6 +222,25 @@ class DailyExecutiveReportTests(unittest.TestCase):
         )
         self.assertEqual([item["title"] for item in result["linkedin"]], ["Recent"])
 
+    def test_social_section_counts_comments_made_by_our_accounts(self):
+        model = {
+            "date": date(2026, 9, 25),
+            "activity": {"pages_created": 0, "pages_updated": 0, "social_posts": 0, "highlights": []},
+            "published_offers": 2, "visits": 0, "clicks": 0, "signups": 0,
+            "impact_actions": 0, "paying_customers": 0, "partnerstack_transactions": 0,
+            "revenue": "USD 0.00", "commissions": "USD 0.00", "owner_actions": [],
+            "system_work": [], "health": {"status": "healthy", "healthy": 1, "attention": 0},
+            "social": {"linkedin": [], "bluesky": [], "x": []},
+            "social_comments": {
+                "linkedin": [],
+                "bluesky": [{"title": "Reply one"}, {"title": "Reply two"}],
+                "x": [],
+            },
+        }
+        _, text, html = render(model)
+        self.assertIn("Bluesky — 0 posts; 2 comments made by Artificial.One", text)
+        self.assertIn("Bluesky &middot; 0 posts &middot; 2 comments made", html)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "audited_at": "2026-09-25",
+  "audited_at": "2026-09-27",
   "source": "PartnerStack authenticated partner dashboard",
   "summary": {
-    "active_programs": 37,
+    "active_programs": 45,
     "terms_action_required": 0,
-    "trackable_links_confirmed": 34,
+    "trackable_links_confirmed": 42,
     "external_account_required": 1,
     "no_usable_link": 2
   },
@@ -277,6 +277,70 @@
       "name": "Breezy HR",
       "slug": "breezyhr",
       "category": "HR",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "Amplemarket",
+      "slug": "amplemarket",
+      "category": "Artificial Intelligence",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "CallRail",
+      "slug": "callrail",
+      "category": "Agencies",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "Capsule and Transpond",
+      "slug": "capsule",
+      "category": "Analytics",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "Castmagic",
+      "slug": "castmagic",
+      "category": "Artificial Intelligence",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "Databox",
+      "slug": "databox",
+      "category": "Analytics",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "FullEnrich",
+      "slug": "fullenrich",
+      "category": "Artificial Intelligence",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "Leadpages",
+      "slug": "leadpages",
+      "category": "Artificial Intelligence",
+      "access": "usable",
+      "website_status": "published",
+      "source": "partner-opportunity-engine:partnerstack"
+    },
+    {
+      "name": "800.com",
+      "slug": "800",
+      "category": "Collaboration & Productivity",
       "access": "usable",
       "website_status": "published",
       "source": "partner-opportunity-engine:partnerstack"
