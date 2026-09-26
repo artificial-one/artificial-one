@@ -252,7 +252,7 @@ def fetch_affiliate_events(
 ) -> dict[str, Any]:
     if stream not in {
         "clicks", "impressions", "visits", "route_clicks", "route_impressions",
-        "matcher_starts", "matcher_completions", "recommendation_impressions",
+        "matcher_starts", "matcher_completions", "setup_plan_completions", "setup_plan_shares", "recommendation_impressions",
         "email_opt_ins", "watchlist_adds", "returning_visits", "web_vitals",
         "stack_shares",
     }:

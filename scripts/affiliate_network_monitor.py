@@ -174,9 +174,9 @@ def render_dashboard(
     route_ctr_goal = 15.0
     funnel = funnel or {}
     matcher_starts = int(funnel.get("matcher_starts", {}).get("total") or 0)
-    matcher_completions = int(funnel.get("matcher_completions", {}).get("total") or 0)
+    matcher_completions = int(funnel.get("matcher_completions", {}).get("total") or 0) + int(funnel.get("setup_plan_completions", {}).get("total") or 0)
     recommendation_views = int(funnel.get("recommendation_impressions", {}).get("total") or 0)
-    matcher_clicks = int(clicks.get("by_placement", {}).get("matcher-result") or 0)
+    matcher_clicks = int(clicks.get("by_placement", {}).get("matcher-result") or 0) + int(clicks.get("by_placement", {}).get("setup-plan") or 0)
     matcher_start_rate = matcher_starts / max(1, int(visits.get("total") or 0)) * 100
     matcher_completion_rate = matcher_completions / max(1, matcher_starts) * 100
     results_ctr = matcher_clicks / max(1, recommendation_views) * 100
@@ -283,7 +283,7 @@ def main(argv: list[str] | None = None) -> int:
     route_clicks = ps.fetch_affiliate_events(redis_url, redis_token, "route_clicks") if redis_url and redis_token else {}
     route_impressions = ps.fetch_affiliate_events(redis_url, redis_token, "route_impressions") if redis_url and redis_token else {}
     funnel_streams = (
-        "matcher_starts", "matcher_completions", "recommendation_impressions",
+        "matcher_starts", "matcher_completions", "setup_plan_completions", "setup_plan_shares", "recommendation_impressions",
         "email_opt_ins", "watchlist_adds", "returning_visits", "web_vitals",
     )
     funnel = {stream: ps.fetch_affiliate_events(redis_url, redis_token, stream) for stream in funnel_streams} if redis_url and redis_token else {}

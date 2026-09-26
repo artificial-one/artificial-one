@@ -14,6 +14,8 @@ const EVENT_STREAMS = {
   content_route_impression: "route_impressions",
   matcher_start: "matcher_starts",
   matcher_complete: "matcher_completions",
+  setup_plan_complete: "setup_plan_completions",
+  setup_plan_shared: "setup_plan_shares",
   recommendation_impression: "recommendation_impressions",
   compare_add: "compare_adds",
   compare_remove: "compare_removes",

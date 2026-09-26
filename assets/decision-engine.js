@@ -82,8 +82,14 @@
   }
 
   function words(value) {
-    var stop = { a:1, an:1, and:1, for:1, from:1, i:1, in:1, my:1, of:1, the:1, to:1, tool:1, use:1, want:1, with:1 };
+    var stop = { a:1, an:1, and:1, for:1, from:1, get:1, i:1, in:1, into:1, me:1, my:1, need:1, of:1, one:1, our:1, run:1, the:1, to:1, tool:1, turn:1, use:1, want:1, with:1, you:1, your:1 };
     return String(value || "").toLowerCase().split(/[^a-z0-9]+/).filter(function (word) { return word.length > 2 && !stop[word]; });
+  }
+
+  function hasWord(sourceWords, token) {
+    return sourceWords.some(function (word) {
+      return word === token || (token.length > 4 && word.indexOf(token) === 0) || (word.length > 4 && token.indexOf(word) === 0);
+    });
   }
 
   var missionTerms = {
@@ -94,6 +100,17 @@
     build: ["code","developer","development","hosting","website","web","database"]
   };
 
+  function inferMission(query) {
+    var sourceWords = words(query);
+    var winner = "";
+    var winnerScore = 0;
+    Object.keys(missionTerms).forEach(function (mission) {
+      var value = missionTerms[mission].filter(function (term) { return hasWord(sourceWords, term); }).length;
+      if (value > winnerScore) { winner = mission; winnerScore = value; }
+    });
+    return winner;
+  }
+
   function haystack(item) {
     return [item.name,item.category,item.summary,item.best,item.why,item.limit,item.offer,(item.useCases || []).join(" ")].join(" ").toLowerCase();
   }
@@ -101,14 +118,17 @@
   function score(item, query, mission, index) {
     var source = haystack(item);
     var tokens = words(query);
+    var sourceWords = words(source);
+    var nameWords = words(item.name);
+    var categoryWords = words(item.category);
     var scoreValue = Math.max(12, 61 - Math.min(index, 22));
     tokens.forEach(function (token) {
-      if (String(item.name || "").toLowerCase().indexOf(token) >= 0) scoreValue += 22;
-      if (String(item.category || "").toLowerCase().indexOf(token) >= 0) scoreValue += 16;
-      if (source.indexOf(token) >= 0) scoreValue += 9;
+      if (hasWord(nameWords, token)) scoreValue += 22;
+      if (hasWord(categoryWords, token)) scoreValue += 16;
+      if (hasWord(sourceWords, token)) scoreValue += 9;
     });
     (missionTerms[mission] || []).forEach(function (token) {
-      if (source.indexOf(token) >= 0) scoreValue += 5;
+      if (hasWord(sourceWords, token)) scoreValue += 5;
     });
     if (item.featured) scoreValue += 3;
     return Math.min(98, Math.max(tokens.length || mission ? 54 : 71, scoreValue));
@@ -142,14 +162,104 @@
       '<a class="details link-subtle" href="' + text(item.url) + '">Full verdict</a></div></article>';
   }
 
-  function showMatches(query, mission) {
-    var ranked = catalog.map(function (item, index) {
+  function setupSelection(query, mission) {
+    mission = mission || inferMission(query);
+    var all = catalog.map(function (item, index) {
       return { item: item, score: score(item, query, mission, index) };
-    }).sort(function (a,b) { return b.score - a.score; }).slice(0,3);
+    }).sort(function (a,b) { return b.score - a.score; });
+    var chosen = [];
+    var categories = {};
+    all.forEach(function (entry) {
+      var category = String(entry.item.category || "other").toLowerCase();
+      if (chosen.length < 3 && !categories[category]) {
+        chosen.push(entry);
+        categories[category] = true;
+      }
+    });
+    all.forEach(function (entry) {
+      if (chosen.length < 3 && chosen.indexOf(entry) < 0) chosen.push(entry);
+    });
+    return chosen.slice(0, 3);
+  }
+
+  function currentToolMatches(value) {
+    var source = String(value || "").toLowerCase();
+    if (!source) return [];
+    return catalog.filter(function (item) {
+      var name = String(item.name || "").toLowerCase();
+      return name.length > 2 && source.indexOf(name) >= 0;
+    });
+  }
+
+  function planDecision(item, position, currentTools) {
+    var exact = currentTools.find(function (existing) { return String(existing.id) === String(item.id); });
+    if (exact) return { label: "Keep", note: "You already use this. Keep it unless the limitation below blocks the job." };
+    var overlap = currentTools.find(function (existing) {
+      return String(existing.category || "").toLowerCase() === String(item.category || "").toLowerCase();
+    });
+    if (overlap) return { label: "Compare first", note: "Compare it with " + overlap.name + " before replacing anything." };
+    if (position === 0) return { label: "Start here", note: "This is the strongest first move for the result you described." };
+    if (position === 1) return { label: "Add if needed", note: "Add this only when the first tool cannot complete this part of the workflow." };
+    return { label: "Consider later", note: "Keep this as the expansion step once the core workflow proves useful." };
+  }
+
+  function planCardMarkup(item, fit, position, currentTools) {
+    var decision = planDecision(item, position, currentTools);
+    var brand = item.color || "#8b5cf6";
+    return '<article class="plan-card" style="--brand:' + text(brand) + '">' +
+      '<div class="plan-card-top"><span class="plan-step">' + (position + 1) + '</span><span class="plan-action">' + text(decision.label) + '</span><span class="plan-fit">' + fit + '% fit</span></div>' +
+      imageMarkup(item, "plan") +
+      '<p class="category">' + text(item.category) + '</p><h3>' + text(item.name) + '</h3>' +
+      '<p class="plan-role">' + text(decision.note) + '</p>' +
+      '<p class="outcome"><strong>Its job:</strong> ' + text((item.useCases || [])[0] || item.best || item.summary) + '</p>' +
+      '<p class="limitation"><strong>Check before paying:</strong> ' + text(item.limit || item.offer || "Confirm the current plan and limits.") + '</p>' +
+      '<div class="plan-cost"><span>Current pricing signal</span><strong>' + text(item.price || item.offer || "Check current plans") + '</strong></div>' +
+      '<div class="plan-actions"><a class="btn btn-small" href="' + text(item.affiliateUrl) + '" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="' + text(item.id) + '" data-placement="setup-plan">' + text(item.cta || ("Open " + item.name)) + ' →</a><a class="details link-subtle" href="' + text(item.url) + '">Read the evidence</a></div></article>';
+  }
+
+  function setupOptions(form) {
+    var team = form.querySelector("[data-setup-team]");
+    var budget = form.querySelector("[data-setup-budget]");
+    var current = form.querySelector("[data-setup-current]");
+    return {
+      team: team ? team.value : "",
+      budget: budget ? budget.value : "",
+      current: current ? current.value.trim() : ""
+    };
+  }
+
+  function showMatches(query, mission, options) {
+    options = options || {};
     var grid = document.querySelector("[data-matcher-results-grid]");
     var area = document.querySelector("[data-matcher-results]");
     if (!grid || !area) return;
-    grid.innerHTML = ranked.map(function (entry, position) { return cardMarkup(entry.item, entry.score, "matcher-result", position); }).join("");
+    var setupMode = area.hasAttribute("data-setup-plan");
+    var ranked = setupMode ? setupSelection(query, mission) : catalog.map(function (item, index) {
+      return { item: item, score: score(item, query, mission, index) };
+    }).sort(function (a,b) { return b.score - a.score; }).slice(0,3);
+    var currentTools = currentToolMatches(options.current);
+    grid.innerHTML = setupMode ? ranked.map(function (entry, position) {
+      return planCardMarkup(entry.item, entry.score, position, currentTools);
+    }).join("") : ranked.map(function (entry, position) {
+      return cardMarkup(entry.item, entry.score, "matcher-result", position);
+    }).join("");
+    if (setupMode) {
+      var title = area.querySelector("[data-plan-title]");
+      var meta = area.querySelector("[data-plan-meta]");
+      var budget = area.querySelector("[data-plan-budget]");
+      if (title) title.textContent = "Your setup for “" + query + "”";
+      if (meta) {
+        var teamLabels = { solo: "Built for one person", small: "Built for a 2–10 person team", growing: "Built for an 11–50 person team", large: "Built for a 51+ person team" };
+        meta.textContent = (teamLabels[options.team] || "Built around the job") + ". " + (currentTools.length ? "Existing tools were checked for overlap." : "Each tool has one clear role.");
+      }
+      if (budget) budget.textContent = options.budget ? "$" + options.budget + "/month target — verify prices" : "Confirm current plans";
+      var params = new URLSearchParams();
+      params.set("task", query);
+      if (options.team) params.set("team", options.team);
+      if (options.budget) params.set("budget", options.budget);
+      if (options.current) params.set("current", options.current);
+      if (window.history && window.history.replaceState) window.history.replaceState(null, "", location.pathname + "?" + params.toString() + "#build");
+    }
     area.classList.add("is-visible");
     area.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
     bindDynamic(area);
@@ -157,9 +267,9 @@
     ranked.forEach(function (entry, position) {
       send("recommendation_impression", { offer_id: entry.item.id, position: position + 1, score: entry.score, mission: mission, query: query });
     });
-    send("matcher_complete", { query: query, mission: mission, result_ids: ranked.map(function (entry) { return entry.item.id; }).join(",") });
+    send(setupMode ? "setup_plan_complete" : "matcher_complete", { query: query, mission: mission, team: options.team || "", budget: options.budget || "", result_ids: ranked.map(function (entry) { return entry.item.id; }).join(",") });
     var history = read(STORE.history, []);
-    history.unshift({ at: new Date().toISOString(), query: query, mission: mission, ids: ranked.map(function (entry) { return entry.item.id; }) });
+    history.unshift({ at: new Date().toISOString(), query: query, mission: mission, team: options.team || "", budget: options.budget || "", current: options.current || "", ids: ranked.map(function (entry) { return entry.item.id; }) });
     write(STORE.history, history.slice(0,12));
     renderHistory();
   }
@@ -167,8 +277,15 @@
   function initMatcher() {
     var form = document.querySelector("[data-matcher-form]");
     if (!form) return;
-    var input = form.querySelector("input");
+    var input = form.querySelector("[data-setup-goal], input[type='search'], input");
     var mission = "";
+    Array.prototype.forEach.call(form.querySelectorAll("[data-example-prompt]"), function (button) {
+      button.addEventListener("click", function () {
+        if (!input) return;
+        input.value = button.dataset.examplePrompt || "";
+        input.focus();
+      });
+    });
     Array.prototype.forEach.call(document.querySelectorAll("[data-mission]"), function (button) {
       button.addEventListener("click", function () {
         mission = button.dataset.mission;
@@ -180,11 +297,26 @@
     });
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+      if (!input || !input.value.trim()) { if (input) input.focus(); return; }
       send("matcher_start", { mission: mission, source: "query" });
-      showMatches(input ? input.value.trim() : "", mission);
+      showMatches(input.value.trim(), mission, setupOptions(form));
     });
     var params = new URLSearchParams(location.search);
-    if (params.get("task") && input) { input.value = params.get("task"); showMatches(input.value, params.get("mission") || ""); }
+    var team = form.querySelector("[data-setup-team]");
+    var budget = form.querySelector("[data-setup-budget]");
+    var current = form.querySelector("[data-setup-current]");
+    if (team && params.get("team")) team.value = params.get("team");
+    if (budget && params.get("budget")) budget.value = params.get("budget");
+    if (current && params.get("current")) current.value = params.get("current");
+    if (params.get("task") && input) { input.value = params.get("task"); showMatches(input.value, params.get("mission") || "", setupOptions(form)); }
+    var share = document.querySelector("[data-share-plan]");
+    if (share) share.addEventListener("click", function () {
+      var url = location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).catch(function () {});
+      share.textContent = "Plan link copied ✓";
+      setTimeout(function () { share.textContent = "Copy this plan"; }, 1800);
+      send("setup_plan_shared", { method: "copy_link" });
+    });
   }
 
   function updateSavedButtons() {

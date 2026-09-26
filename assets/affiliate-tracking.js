@@ -188,7 +188,7 @@
   }
 
   function enableAffiliateCardNavigation() {
-    var cardSelector = ".tool-card,.tool,.recipe-tool,.comparison-column,.studio-item,.elephant-result";
+    var cardSelector = ".tool-card,.tool,.recipe-tool,.comparison-column,.studio-item,.elephant-result,.plan-card";
     document.querySelectorAll("a[data-affiliate-offer]").forEach(function (link) {
       var card = link.closest(cardSelector);
       if (!card || card.dataset.affiliateCardReady === "1") return;
@@ -240,7 +240,12 @@
   }
 
   function installUnifiedShell() {
-    if (document.querySelector(".site-header")) return;
+    var existingHeader = document.querySelector(".site-header");
+    if (existingHeader) {
+      var existingNav = existingHeader.querySelector(".primary-nav");
+      if (existingNav) existingNav.innerHTML = '<a href="/#how-it-works">How it works</a><a class="flagship-nav-cta" href="/#build">Build my AI setup</a>';
+      return;
+    }
     var stylesheet = Array.prototype.find.call(document.styleSheets || [], function (sheet) { return /decision-engine\.css/.test(sheet.href || ""); });
     if (!stylesheet) {
       var link = document.createElement("link");
@@ -251,7 +256,7 @@
     var legacy = document.querySelector("body > header, body > nav");
     var header = document.createElement("header");
     header.className = "site-header";
-    header.innerHTML = '<div class="nav-wrap"><a class="brand" href="/"><img src="/images/social/artificial-one-logo.png" alt="Artificial.One elephant" width="43" height="43"><span>artificial<span class="brand-dot">.</span>one</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button><nav class="primary-nav" aria-label="Primary navigation"><a href="/ask-elephant.html">Ask Elephant</a><a href="/ai-tool-finder.html">Find Tools</a><a href="/workflow-recipes.html">Recipes</a><a href="/partner-offers.html">Deals</a><a href="/news.html">What’s New</a><a class="stack-trigger" href="/ai-stack-studio.html">My Stack</a><details class="more-menu"><summary>Explore ▾</summary><div class="more-links"><a href="/ai-stack-studio.html">Stack Studio</a><a href="/ai-tool-observatory.html">Tool Observatory</a><a href="/ai-tool-finder.html?compare=">Compare</a><a href="/reviews.html">All reviews</a><a href="/decision-tools.html">Free tools</a><a href="/buyers-guides.html">Buyer guides</a><a href="/developers.html">Public API</a><a href="/about.html">How we evaluate</a></div></details></nav></div>';
+    header.innerHTML = '<div class="nav-wrap"><a class="brand" href="/"><img src="/images/social/artificial-one-logo.png" alt="Artificial.One elephant" width="43" height="43"><span>artificial<span class="brand-dot">.</span>one</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button><nav class="primary-nav" aria-label="Primary navigation"><a href="/#how-it-works">How it works</a><a class="flagship-nav-cta" href="/#build">Build my AI setup</a></nav></div>';
     if (legacy) legacy.replaceWith(header); else document.body.insertBefore(header, document.body.firstChild);
     var toggle = header.querySelector(".nav-toggle");
     var nav = header.querySelector(".primary-nav");

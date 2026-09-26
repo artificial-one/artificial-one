@@ -104,6 +104,7 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         text = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
         self.assertIn("function enableAffiliateCardNavigation()", text)
         self.assertIn('a[data-affiliate-offer]', text)
+        self.assertIn(".plan-card", text)
         self.assertIn("link.click();", text)
         self.assertIn("event.target.closest(\"a,button,input,select,textarea,label,summary,[role='button']\")", text)
         self.assertGreaterEqual(text.count("enableAffiliateCardNavigation();"), 3)
@@ -113,27 +114,41 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         engine = (ROOT / "assets" / "decision-engine.js").read_text(encoding="utf-8")
         self.assertNotIn("cdn.tailwindcss.com", homepage)
         self.assertNotIn("babel.min.js", homepage)
-        self.assertIn("Show my best 3", homepage)
+        self.assertIn("Build my AI setup", homepage)
+        self.assertIn("data-setup-builder", homepage)
+        self.assertIn("data-setup-plan", homepage)
         self.assertIn("matcher-catalog:start", homepage)
         for event in (
-            "matcher_start", "matcher_complete", "recommendation_impression",
+            "matcher_start", "matcher_complete", "setup_plan_complete", "setup_plan_shared", "recommendation_impression",
             "compare_add", "stack_save", "stack_share", "watchlist_add", "email_opt_in",
         ):
             self.assertIn(event, engine)
         endpoint = (ROOT / "api" / "affiliate-event.js").read_text(encoding="utf-8")
         self.assertIn('matcher_complete: "matcher_completions"', endpoint)
+        self.assertIn('setup_plan_complete: "setup_plan_completions"', endpoint)
         self.assertIn('watchlist_add: "watchlist_adds"', endpoint)
         self.assertIn('web_vital: "web_vitals"', endpoint)
 
     def test_homepage_exposes_complete_decision_and_return_loop(self):
         homepage = (ROOT / "index.html").read_text(encoding="utf-8")
         engine = (ROOT / "assets" / "decision-engine.js").read_text(encoding="utf-8")
-        self.assertIn("Compare two tools", homepage)
-        self.assertIn("pricing checks", homepage)
-        self.assertIn("data-new-since-list", homepage)
+        self.assertIn("Start → add → scale", homepage)
+        self.assertIn("data-plan-budget", homepage)
+        self.assertIn("data-share-plan", homepage)
         self.assertIn("data-share-stack", homepage)
         self.assertIn("Recommended winner", engine)
+        self.assertIn("Start here", engine)
+        self.assertIn("Compare first", engine)
+        self.assertIn("Keep", engine)
         self.assertIn("offer_change_alerts.json", engine)
+
+    def test_homepage_has_one_primary_product_action(self):
+        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        header = homepage.split("</header>", 1)[0]
+        self.assertIn("Build my AI setup", header)
+        self.assertIn("How it works", header)
+        for competing_action in ("Find Tools", "Recipes", "Deals", "What’s New", "My Stack", "Explore"):
+            self.assertNotIn(competing_action, header)
 
     def test_imported_offer_copy_is_buyer_facing(self):
         serialized = json.dumps(self.registry).casefold()
