@@ -1,18 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-09-25",
+  "updated_at": "2026-09-26",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
     "total": 476,
-    "active_auto_onboarded": 5,
     "approved_link_pending": 14,
-    "existing_active": 25,
+    "existing_active": 30,
     "not_qualified": 14,
-    "policy_review_required": 23,
+    "policy_review_required": 22,
     "program_paused": 1,
-    "ready_for_owner_application": 394
+    "ready_for_owner_application": 395
   },
   "opportunities": [
     {
@@ -900,21 +899,12 @@
       ],
       "already_active": true,
       "relationship_state": "published",
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
-      },
-      "tracking_url": "https://refer.close.com/jcz4neaz74qq"
+      }
     },
     {
       "id": "partnerstack:closely",
@@ -2186,21 +2176,12 @@
       ],
       "already_active": true,
       "relationship_state": "published",
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": true,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
-      },
-      "tracking_url": "https://get.mindstudio.ai/eobgeb638nnc-8drt"
+      }
     },
     {
       "id": "partnerstack:miroaffiliate",
@@ -2501,21 +2482,12 @@
       ],
       "already_active": true,
       "relationship_state": "published",
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
-      },
-      "tracking_url": "https://try.plesk.com/5491i707p1yy-z4f5m7"
+      }
     },
     {
       "id": "partnerstack:quartile",
@@ -2628,21 +2600,12 @@
       ],
       "already_active": true,
       "relationship_state": "published",
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
-      },
-      "tracking_url": "https://get.reply.io/awaa6y0hrv2p"
+      }
     },
     {
       "id": "partnerstack:respondio",
@@ -3438,62 +3401,6 @@
         "customer service",
         "marketing",
         "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:usewhale",
-      "network": "partnerstack",
-      "name": "Whale",
-      "slug": "usewhale",
-      "description": "Give your customers the power to seamlessly create and manage their SOPs and internal processes. Whale is the single source of truth for company knowledge and the process improvement professional’s best friend.",
-      "offer": "Give your customers the power to seamlessly create and manage their SOPs and internal processes. Whale is the single source of truth for company knowledge and the process improvement professional’s best friend.",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Content Management",
-        "HR",
-        "HR Software",
-        "Hot",
-        "Influencers",
-        "Publishers",
-        "Referral Partners",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/usewhale?company=usewhale&gref=marketplace",
-      "terms_url": "https://usewhale.io/terms-and-conditions/",
-      "website": "https://www.usewhale.io",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 15,
-      "source": "https://market.partnerstack.com/",
-      "score": 85,
-      "relevance_matches": [
-        "artificial intelligence",
-        "content",
-        "productivity",
-        "software"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -5186,6 +5093,60 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:usewhale",
+      "network": "partnerstack",
+      "name": "Whale",
+      "slug": "usewhale",
+      "description": "Give your customers the power to seamlessly create and manage their SOPs and internal processes. Whale is the single source of truth for company knowledge and the process improvement professional’s best friend.",
+      "offer": "Give your customers the power to seamlessly create and manage their SOPs and internal processes. Whale is the single source of truth for company knowledge and the process improvement professional’s best friend.",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Content Management",
+        "HR",
+        "HR Software",
+        "Influencers",
+        "Publishers",
+        "Referral Partners"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/usewhale?company=usewhale&gref=marketplace",
+      "terms_url": "https://usewhale.io/terms-and-conditions/",
+      "website": "https://www.usewhale.io",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 15,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "artificial intelligence",
+        "content",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -8481,7 +8442,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -11142,63 +11103,6 @@
       }
     },
     {
-      "id": "partnerstack:ninjaone",
-      "network": "partnerstack",
-      "name": "NinjaOne",
-      "slug": "ninjaone",
-      "description": "Become a NinjaOne affiliate partner and empower your clients to streamline their IT operations! NinjaOne's RMM platform offers visibility, security & control, boosting client productivity & reducing IT costs. #1 for support, Ninja is a proven solution.",
-      "offer": "Join our affiliate network and earn on clicks, leads, and demos! We personalize based on your advertisement portfolio. Visit our website to learn more about NinjaOne and apply today!",
-      "tags": [
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Development",
-        "Hot",
-        "IT Infrastructure",
-        "IT Management",
-        "IoT Management",
-        "Office Software",
-        "Other",
-        "Publishers",
-        "Security",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ninjaone?company=ninjaone&gref=marketplace",
-      "terms_url": "https://www.ninjaone.com/affiliate-program-terms/",
-      "website": "https://www.ninjaone.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "customer service",
-        "development",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:notifyme",
       "network": "partnerstack",
       "name": "Notify Me!",
@@ -12498,11 +12402,9 @@
         "Affiliates",
         "Agencies",
         "E-Commerce",
-        "Hot",
         "Marketing",
         "Publishers",
         "Shopify integrated",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/stampedio?company=stampedio&gref=marketplace",
@@ -12907,62 +12809,6 @@
         "marketing",
         "sales",
         "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:revenueroll",
-      "network": "partnerstack",
-      "name": "Tie (previously Revenue Roll)",
-      "slug": "revenueroll",
-      "description": "Tie's real-time B2C identity resolution and enrichment platform instantly reveals names, contact details, demographic data and psychographics for over 50% of website visitors—without requiring form submissions or purchases.",
-      "offer": "Earn 20%+ Of Recurring Revenue - Average Of $5K Per Referral",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Analytics",
-        "Commerce",
-        "Hot",
-        "Hubspot integrated",
-        "Influencers",
-        "Marketing",
-        "Sales",
-        "Salesforce integrated",
-        "Shopify integrated",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/revenueroll?company=revenueroll&gref=marketplace",
-      "terms_url": "https://meettie.com/partner-terms",
-      "website": "https://www.meettie.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 25,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "analytics",
-        "data",
-        "marketing",
-        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -15787,21 +15633,12 @@
       ],
       "already_active": true,
       "relationship_state": "published",
-      "state": "active_auto_onboarded",
+      "state": "existing_active",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
-      },
-      "tracking_url": "https://breezyhr.partnerlinks.io/n5sgbrz7ybl4"
+      }
     },
     {
       "id": "partnerstack:cognism",
@@ -17921,54 +17758,6 @@
       }
     },
     {
-      "id": "partnerstack:heard",
-      "network": "partnerstack",
-      "name": "Heard",
-      "slug": "heard",
-      "description": "Heard is the only accounting platform built for mental health and wellness providers, combining bookkeeping, taxes, and payroll in one place. Providers using Heard save an average of 60 hours a year and $5,000 in taxes. We handle monthly bookkeeping, deliver clear financial reports, estimate quarterly taxes, file personal and business returns, support S Corp setup, and respond to questions within one business day.",
-      "offer": "Earn $100 per new paid account referral on Heard.",
-      "tags": [
-        "Accounting",
-        "Collaboration & Productivity",
-        "Hot",
-        "Office Software",
-        "Payroll",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/heard?company=heard&gref=marketplace",
-      "terms_url": "https://www.joinheard.com/affiliate-terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 21,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
-        "cookie_days": 90
-      }
-    },
-    {
       "id": "partnerstack:later",
       "network": "partnerstack",
       "name": "Later",
@@ -18212,6 +18001,61 @@
       "relevance_matches": [
         "customer service",
         "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:ninjaone",
+      "network": "partnerstack",
+      "name": "NinjaOne",
+      "slug": "ninjaone",
+      "description": "Become a NinjaOne affiliate partner and empower your clients to streamline their IT operations! NinjaOne's RMM platform offers visibility, security & control, boosting client productivity & reducing IT costs. #1 for support, Ninja is a proven solution.",
+      "offer": "Join our affiliate network and earn on clicks, leads, and demos! We personalize based on your advertisement portfolio. Visit our website to learn more about NinjaOne and apply today!",
+      "tags": [
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Development",
+        "IT Infrastructure",
+        "IT Management",
+        "IoT Management",
+        "Office Software",
+        "Other",
+        "Publishers",
+        "Security"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ninjaone?company=ninjaone&gref=marketplace",
+      "terms_url": "https://www.ninjaone.com/affiliate-program-terms/",
+      "website": "https://www.ninjaone.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "customer service",
+        "development",
+        "productivity",
+        "software"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -18734,6 +18578,60 @@
       "score": 62,
       "relevance_matches": [
         "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:revenueroll",
+      "network": "partnerstack",
+      "name": "Tie (previously Revenue Roll)",
+      "slug": "revenueroll",
+      "description": "Tie's real-time B2C identity resolution and enrichment platform instantly reveals names, contact details, demographic data and psychographics for over 50% of website visitors—without requiring form submissions or purchases.",
+      "offer": "Earn 20%+ Of Recurring Revenue - Average Of $5K Per Referral",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Analytics",
+        "Commerce",
+        "Hubspot integrated",
+        "Influencers",
+        "Marketing",
+        "Sales",
+        "Salesforce integrated",
+        "Shopify integrated"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/revenueroll?company=revenueroll&gref=marketplace",
+      "terms_url": "https://meettie.com/partner-terms",
+      "website": "https://www.meettie.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 25,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "analytics",
+        "data",
+        "marketing",
+        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -19814,7 +19712,6 @@
         "Affiliates",
         "B2B Marketplaces",
         "E-Commerce",
-        "Hot",
         "Other",
         "Publishers",
         "Referral Partners",
@@ -19842,14 +19739,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -20864,62 +20761,6 @@
       }
     },
     {
-      "id": "partnerstack:finaleinventory",
-      "network": "partnerstack",
-      "name": "Finale Inventory",
-      "slug": "finaleinventory",
-      "description": "Finale Inventory is the top inventory management solution for applications involving high volume, multichannel eCommerce and warehouse management.",
-      "offer": "Earn 15% every month for a paid customer's first year",
-      "tags": [
-        "Affiliates",
-        "B2B Marketplaces",
-        "Commerce",
-        "E-Commerce",
-        "ERP",
-        "Hot",
-        "Office Software",
-        "Publishers",
-        "Referral Partners",
-        "Sales",
-        "Shopify integrated",
-        "Supply Chain & Logistics",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/finaleinventory?company=finaleinventory&gref=marketplace",
-      "terms_url": "https://www.finaleinventory.com/terms-of-service",
-      "website": "https://www.finaleinventory.com/",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 7,
-      "source": "https://market.partnerstack.com/",
-      "score": 57,
-      "relevance_matches": [
-        "e-commerce",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:freshbooksusa",
       "network": "partnerstack",
       "name": "FreshBooks",
@@ -20962,6 +20803,52 @@
           "disclosure_required": false
         },
         "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:heard",
+      "network": "partnerstack",
+      "name": "Heard",
+      "slug": "heard",
+      "description": "Heard is the only accounting platform built for mental health and wellness providers, combining bookkeeping, taxes, and payroll in one place. Providers using Heard save an average of 60 hours a year and $5,000 in taxes. We handle monthly bookkeeping, deliver clear financial reports, estimate quarterly taxes, file personal and business returns, support S Corp setup, and respond to questions within one business day.",
+      "offer": "Earn $100 per new paid account referral on Heard.",
+      "tags": [
+        "Accounting",
+        "Collaboration & Productivity",
+        "Office Software",
+        "Payroll"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/heard?company=heard&gref=marketplace",
+      "terms_url": "https://www.joinheard.com/affiliate-terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 21,
+      "source": "https://market.partnerstack.com/",
+      "score": 57,
+      "relevance_matches": [
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": 90
       }
     },
     {
@@ -21717,10 +21604,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -22515,6 +22410,60 @@
       }
     },
     {
+      "id": "partnerstack:finaleinventory",
+      "network": "partnerstack",
+      "name": "Finale Inventory",
+      "slug": "finaleinventory",
+      "description": "Finale Inventory is the top inventory management solution for applications involving high volume, multichannel eCommerce and warehouse management.",
+      "offer": "Earn 15% every month for a paid customer's first year",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Commerce",
+        "E-Commerce",
+        "ERP",
+        "Office Software",
+        "Publishers",
+        "Referral Partners",
+        "Sales",
+        "Shopify integrated",
+        "Supply Chain & Logistics"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/finaleinventory?company=finaleinventory&gref=marketplace",
+      "terms_url": "https://www.finaleinventory.com/terms-of-service",
+      "website": "https://www.finaleinventory.com/",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 7,
+      "source": "https://market.partnerstack.com/",
+      "score": 52,
+      "relevance_matches": [
+        "e-commerce",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:cloudtask",
       "network": "partnerstack",
       "name": "CloudTask",
@@ -23075,7 +23024,6 @@
       "tags": [
         "Accounting",
         "Affiliates",
-        "Hot",
         "Publishers",
         "Trusted"
       ],
