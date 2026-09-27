@@ -58,6 +58,12 @@ class IntelligentNewsTests(unittest.TestCase):
         self.assertIn("--simple-io", command)
         self.assertEqual(result, {"ok": True})
 
+    def test_editorial_prompts_use_qwen3_fast_mode_for_free_runner_throughput(self):
+        with patch.object(intelligent, "run_model", return_value=good_draft()) as writer:
+            intelligent.draft_article(ITEM, EVIDENCE)
+        self.assertTrue(writer.call_args.args[1].startswith("/no_think"))
+        self.assertEqual(writer.call_args.kwargs["tokens"], 900)
+
     def test_model_json_parser_uses_final_object_after_an_echoed_prompt(self):
         raw = 'system example {"wrong": true}\nassistant\n<think>private reasoning</think>\n{"approved": true, "score": 91, "issues": []}\nExiting...'
         self.assertEqual(intelligent.parse_model_json(raw)["score"], 91)
