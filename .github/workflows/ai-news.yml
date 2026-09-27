@@ -9,7 +9,11 @@ on:
     paths:
       - data/ai_news_sources.json
       - scripts/build_ai_news.py
+      - scripts/publish_intelligent_news.py
+      - scripts/setup_elephant_edge_ai.py
+      - scripts/elephant_edge_ai.py
       - tests/test_ai_news_pipeline.py
+      - tests/test_intelligent_news.py
 
 permissions:
   contents: write
@@ -21,6 +25,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,11 +36,31 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Cache the local open model and inference runtime
+        uses: actions/cache@v5
+        with:
+          path: .edge-ai
+          key: elephant-edge-ai-qwen3-4b-q4km-llama-b10982-v1
+
       - name: Test news safety rules
-        run: python -m unittest tests.test_ai_news_pipeline -v
+        run: python -m unittest tests.test_ai_news_pipeline tests.test_intelligent_news -v
 
       - name: Refresh allowlisted news feeds
         run: python scripts/build_ai_news.py
+
+      - name: Prepare the free local Elephant model
+        run: python scripts/setup_elephant_edge_ai.py
+
+      - name: Publish evidence-gated Elephant news briefings
+        env:
+          ELEPHANT_MODEL_PATH: .edge-ai/qwen3-4b-q4_k_m.gguf
+          LLAMA_CLI_PATH: .edge-ai/llama.cpp/build/bin/llama-cli
+          AI_NEWS_MAX_NEW: "4"
+          AI_NEWS_TIME_BUDGET: "2100"
+        run: python scripts/publish_intelligent_news.py
+
+      - name: Connect the news index to newly published briefings
+        run: python scripts/build_ai_news.py --cached
 
       - name: Refresh crawl discovery and notify participating search engines
         env:
@@ -50,7 +75,7 @@ jobs:
       - name: Commit material news changes
         shell: bash
         run: |
-          git add -- data/ai_news.json data/indexing_recovery.json index.html news.html buyers-guides.html sitemap.xml
+          git add -- data/ai_news.json data/ai_news_archive.json data/indexing_recovery.json index.html news.html news-sitemap.xml news robots.txt buyers-guides.html sitemap.xml
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

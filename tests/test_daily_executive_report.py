@@ -1,3 +1,4 @@
+import json
 import tempfile
 import unittest
 from datetime import date, datetime
@@ -7,12 +8,26 @@ from urllib.error import HTTPError
 
 from scripts.daily_executive_report import (
     daily_activity, live_affiliate_destinations, owner_actions, render,
-    social_posts_for_day, social_posts_for_window, system_work, verified_sender,
+    news_pages_for_day, social_posts_for_day, social_posts_for_window, system_work, verified_sender,
     wait_for_delivery, PRAGUE,
 )
 
 
 class DailyExecutiveReportTests(unittest.TestCase):
+    def test_news_page_count_uses_prague_report_day(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "data").mkdir()
+            (root / "data" / "ai_news_archive.json").write_text(json.dumps({
+                "articles": [
+                    {"path": "news/one.html", "created_at": "2026-09-26T22:30:00+00:00", "article": {"headline": "One"}},
+                    {"path": "news/old.html", "created_at": "2026-09-25T10:00:00+00:00", "article": {"headline": "Old"}},
+                ]
+            }), encoding="utf-8")
+            pages, total = news_pages_for_day(root, date(2026, 9, 27))
+        self.assertEqual(total, 2)
+        self.assertEqual([item["title"] for item in pages], ["One"])
+
     def test_verified_sender_prefers_artificial_one_domain(self):
         with patch("scripts.daily_executive_report.resend_json", return_value={"data": [
             {"name": "other.example", "status": "verified"},
@@ -87,6 +102,7 @@ class DailyExecutiveReportTests(unittest.TestCase):
         self.assertIn("Referred sign-ups", text)
         self.assertIn("Live partner destinations", text)
         self.assertIn("Tracked leads or sales", text)
+        self.assertIn("New permanent Elephant news pages today", text)
         self.assertNotIn("attributed actions", text)
         self.assertNotIn("monetized offers under coverage", text)
         self.assertNotIn("All catalogues stayed current", text)
