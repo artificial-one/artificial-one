@@ -100,6 +100,16 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         self.assertIn('url.searchParams.set("sid3"', text)
         self.assertIn("affiliate_impression", text)
 
+    def test_homepage_does_not_show_the_sticky_partner_banner(self):
+        text = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
+        self.assertIn('if (/^\\/(?:index\\.html)?$/.test(window.location.pathname)) return;', text)
+
+    def test_shared_navigation_does_not_restore_the_removed_how_it_works_link(self):
+        text = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
+        generator = (ROOT / "scripts" / "build_partner_offers.py").read_text(encoding="utf-8")
+        self.assertNotIn('/#how-it-works', text)
+        self.assertNotIn('index.html#how-it-works', generator)
+
     def test_monetized_cards_open_their_existing_affiliate_link(self):
         text = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
         self.assertIn("function enableAffiliateCardNavigation()", text)
@@ -118,6 +128,11 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         self.assertIn("data-setup-builder", homepage)
         self.assertIn("data-setup-plan", homepage)
         self.assertIn("matcher-catalog:start", homepage)
+        self.assertNotIn('href="#how-it-works"', homepage)
+        self.assertNotIn('class="container section how-it-works"', homepage)
+        self.assertNotIn('class="container section plan-explainer"', homepage)
+        self.assertNotIn('class="container section final-cta"', homepage)
+        self.assertNotIn('class="container faq-strip"', homepage)
         for event in (
             "matcher_start", "matcher_complete", "setup_plan_complete", "setup_plan_shared", "recommendation_impression",
             "compare_add", "stack_save", "stack_share", "watchlist_add", "email_opt_in",
@@ -146,8 +161,7 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         homepage = (ROOT / "index.html").read_text(encoding="utf-8")
         header = homepage.split("</header>", 1)[0]
         self.assertIn("Build my AI setup", header)
-        self.assertIn("How it works", header)
-        for competing_action in ("Find Tools", "Recipes", "Deals", "What’s New", "My Stack", "Explore"):
+        for competing_action in ("How it works", "Find Tools", "Recipes", "Deals", "What’s New", "My Stack", "Explore"):
             self.assertNotIn(competing_action, header)
 
     def test_imported_offer_copy_is_buyer_facing(self):

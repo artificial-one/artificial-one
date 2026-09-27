@@ -243,7 +243,7 @@
     var existingHeader = document.querySelector(".site-header");
     if (existingHeader) {
       var existingNav = existingHeader.querySelector(".primary-nav");
-      if (existingNav) existingNav.innerHTML = '<a href="/#how-it-works">How it works</a><a class="flagship-nav-cta" href="/#build">Build my AI setup</a>';
+      if (existingNav) existingNav.innerHTML = '<a class="flagship-nav-cta" href="/#build">Build my AI setup</a>';
       return;
     }
     var stylesheet = Array.prototype.find.call(document.styleSheets || [], function (sheet) { return /decision-engine\.css/.test(sheet.href || ""); });
@@ -256,7 +256,7 @@
     var legacy = document.querySelector("body > header, body > nav");
     var header = document.createElement("header");
     header.className = "site-header";
-    header.innerHTML = '<div class="nav-wrap"><a class="brand" href="/"><img src="/images/social/artificial-one-logo.png" alt="Artificial.One elephant" width="43" height="43"><span>artificial<span class="brand-dot">.</span>one</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button><nav class="primary-nav" aria-label="Primary navigation"><a href="/#how-it-works">How it works</a><a class="flagship-nav-cta" href="/#build">Build my AI setup</a></nav></div>';
+    header.innerHTML = '<div class="nav-wrap"><a class="brand" href="/"><img src="/images/social/artificial-one-logo.png" alt="Artificial.One elephant" width="43" height="43"><span>artificial<span class="brand-dot">.</span>one</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button><nav class="primary-nav" aria-label="Primary navigation"><a class="flagship-nav-cta" href="/#build">Build my AI setup</a></nav></div>';
     if (legacy) legacy.replaceWith(header); else document.body.insertBefore(header, document.body.firstChild);
     var toggle = header.querySelector(".nav-toggle");
     var nav = header.querySelector(".primary-nav");
@@ -384,6 +384,7 @@
   }
 
   function installStickyRecommendation(strategy) {
+    if (/^\/(?:index\.html)?$/.test(window.location.pathname)) return;
     var source = document.querySelector("a[data-affiliate-offer]");
     if (!source || document.getElementById("affiliate-sticky-recommendation")) return;
 

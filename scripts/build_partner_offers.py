@@ -274,7 +274,6 @@ def shell(
       <a class="brand" href="{prefix}index.html"><img src="{prefix}images/social/artificial-one-logo.png" alt="Artificial.One elephant"><span>artificial<span class="brand-dot">.</span>one</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button>
       <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="{prefix}index.html#how-it-works">How it works</a>
         <a class="flagship-nav-cta" href="{prefix}index.html#build">Build my AI setup</a>
       </nav>
     </div>
