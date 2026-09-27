@@ -1,5 +1,8 @@
 import unittest
 from datetime import datetime, timezone
+from pathlib import Path
+import tempfile
+from unittest.mock import patch
 
 from scripts import publish_intelligent_news as intelligent
 
@@ -39,6 +42,22 @@ def good_draft():
 
 
 class IntelligentNewsTests(unittest.TestCase):
+    def test_model_runner_is_noninteractive_single_turn(self):
+        with tempfile.TemporaryDirectory() as directory:
+            model = Path(directory) / "model.gguf"
+            cli = Path(directory) / "llama-cli"
+            model.touch()
+            cli.touch()
+            completed = type("Completed", (), {"returncode": 0, "stdout": '{"ok": true}'})()
+            with patch.object(intelligent, "configured_paths", return_value=(model, cli)), patch.object(
+                intelligent.subprocess, "run", return_value=completed,
+            ) as invoked:
+                result = intelligent.run_model("system", "prompt", tokens=10)
+        command = invoked.call_args.args[0]
+        self.assertIn("--single-turn", command)
+        self.assertIn("--simple-io", command)
+        self.assertEqual(result, {"ok": True})
+
     def test_model_json_parser_uses_final_object_after_an_echoed_prompt(self):
         raw = 'system example {"wrong": true}\nassistant\n<think>private reasoning</think>\n{"approved": true, "score": 91, "issues": []}\nExiting...'
         self.assertEqual(intelligent.parse_model_json(raw)["score"], 91)

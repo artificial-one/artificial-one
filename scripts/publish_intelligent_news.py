@@ -139,6 +139,8 @@ def run_model(system: str, prompt: str, *, tokens: int = 1300, timeout: int = 42
         str(cli), "-m", str(model), "--jinja", "-ngl", "0", "-t", "2", "-c", "8192",
         "-n", str(tokens), "--temp", "0.25", "--top-p", "0.85", "--repeat-penalty", "1.08",
         "--system-prompt", system, "-p", prompt,
+        "--no-display-prompt", "--no-show-timings", "--no-warmup",
+        "--simple-io", "--single-turn", "--log-disable",
     ]
     result = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=timeout, check=False)
     if result.returncode:
