@@ -71,6 +71,7 @@ class IntelligentNewsTests(unittest.TestCase):
             (root / "data" / "ai_news.json").write_text('{"version":1,"items":[]}', encoding="utf-8")
             archive = {"version": 1, "articles": [], "last_failures": [{
                 "url": ITEM["url"], "reason": "quality gate", "at": "2026-09-27T08:00:00+00:00",
+                "pipeline_version": intelligent.PIPELINE_VERSION,
             }]}
             (root / "data" / "ai_news_archive.json").write_text(__import__("json").dumps(archive), encoding="utf-8")
             with patch.object(intelligent, "ROOT", root), patch.object(intelligent, "FEED_PATH", root / "data" / "ai_news.json"), patch.object(
@@ -80,6 +81,22 @@ class IntelligentNewsTests(unittest.TestCase):
             ), patch.object(intelligent, "fetch_evidence") as fetch:
                 intelligent.process(max_new=4, max_attempts=6, time_budget=60, now=datetime(2026, 9, 27, 12, tzinfo=timezone.utc))
         fetch.assert_not_called()
+
+    def test_new_pipeline_retries_rejections_from_an_older_quality_gate(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "data").mkdir()
+            archive = {"version": 1, "articles": [], "last_failures": [{
+                "url": ITEM["url"], "reason": "old parser", "at": "2026-09-27T08:00:00+00:00",
+            }]}
+            (root / "data" / "ai_news_archive.json").write_text(__import__("json").dumps(archive), encoding="utf-8")
+            with patch.object(intelligent, "ROOT", root), patch.object(intelligent, "FEED_PATH", root / "data" / "ai_news.json"), patch.object(
+                intelligent, "ARCHIVE_PATH", root / "data" / "ai_news_archive.json",
+            ), patch.object(intelligent, "NEWS_SITEMAP_PATH", root / "news-sitemap.xml"), patch.object(
+                intelligent, "load_json", side_effect=lambda path: archive if path.name == "ai_news_archive.json" else {"version": 1, "items": [ITEM], "sources": []},
+            ), patch.object(intelligent, "fetch_evidence", side_effect=intelligent.NewsBuildError("stop after selection")) as fetch:
+                intelligent.process(max_new=1, max_attempts=1, time_budget=60, now=datetime(2026, 9, 27, 12, tzinfo=timezone.utc))
+        fetch.assert_called_once()
 
     def test_model_json_parser_uses_final_object_after_an_echoed_prompt(self):
         raw = 'system example {"wrong": true}\nassistant\n<think>private reasoning</think>\n{"approved": true, "score": 91, "issues": []}\nExiting...'
@@ -103,6 +120,17 @@ class IntelligentNewsTests(unittest.TestCase):
         self.assertEqual(intelligent.validate_draft(ITEM, EVIDENCE, draft), [])
         draft["facts"][0]["evidence"] = "a passage that does not appear in the source at all"
         self.assertIn("a fact has no exact source evidence", intelligent.validate_draft(ITEM, EVIDENCE, draft))
+
+    def test_mechanical_repair_normalizes_marker_sensitivity_and_near_exact_citations(self):
+        draft = good_draft()
+        draft["elephant_take"] = draft["elephant_take"].removeprefix("🐘 ")
+        draft["sensitive"] = True
+        draft["facts"][0]["evidence"] = "published its model weights under the Apache license for commercial use"
+        repaired = intelligent.repair_mechanical_fields(ITEM, EVIDENCE, draft)
+        self.assertTrue(repaired["elephant_take"].startswith("🐘"))
+        self.assertFalse(repaired["sensitive"])
+        self.assertIn(intelligent.normalized(repaired["facts"][0]["evidence"]), intelligent.normalized(EVIDENCE))
+        self.assertEqual(intelligent.validate_draft(ITEM, EVIDENCE, repaired), [])
 
     def test_rendered_page_has_news_schema_source_and_three_decision_routes(self):
         record = {
