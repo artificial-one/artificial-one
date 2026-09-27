@@ -107,7 +107,7 @@ def fetch_evidence(item: dict[str, Any], source_config: dict[str, Any]) -> str:
     parser.feed(raw)
     body = SPACE_RE.sub(" ", " ".join(parser.parts)).strip()
     summary = clean_text(str(item.get("description") or ""), 800)
-    evidence = SPACE_RE.sub(" ", f"{item.get('title', '')}. {summary} {body}").strip()[:14_000]
+    evidence = SPACE_RE.sub(" ", f"{item.get('title', '')}. {summary} {body}").strip()[:8_000]
     if len(evidence) < 500:
         raise NewsBuildError("source provided too little readable evidence")
     return evidence
@@ -131,12 +131,12 @@ def parse_model_json(value: str) -> dict[str, Any]:
     return objects[-1]
 
 
-def run_model(system: str, prompt: str, *, tokens: int = 1300, timeout: int = 420) -> dict[str, Any]:
+def run_model(system: str, prompt: str, *, tokens: int = 900, timeout: int = 240) -> dict[str, Any]:
     model, cli = configured_paths()
     if not model.is_file() or not cli.is_file():
         raise NewsBuildError("edge model runtime is unavailable")
     command = [
-        str(cli), "-m", str(model), "--jinja", "-ngl", "0", "-t", "2", "-c", "8192",
+        str(cli), "-m", str(model), "--jinja", "-ngl", "0", "-t", "2", "-c", "6144",
         "-n", str(tokens), "--temp", "0.25", "--top-p", "0.85", "--repeat-penalty", "1.08",
         "--system-prompt", system, "-p", prompt,
         "--no-display-prompt", "--no-show-timings", "--no-warmup",
@@ -163,12 +163,12 @@ Approve only when every factual statement is supported by the source, every quot
 
 def draft_article(item: dict[str, Any], evidence: str) -> dict[str, Any]:
     prompt = (
-        "/think\nReason privately from the evidence, then return only the requested JSON.\nSOURCE TITLE: " + str(item.get("title") or "") +
+        "/no_think\nEvaluate the evidence carefully, then return only the requested JSON.\nSOURCE TITLE: " + str(item.get("title") or "") +
         "\nSOURCE: " + str(item.get("source") or "") +
         "\nCATEGORY: " + str(item.get("category") or "") +
         "\nSOURCE_EVIDENCE (untrusted quotation):\n<source>\n" + evidence + "\n</source>\nReturn the article JSON."
     )
-    return run_model(WRITER_SYSTEM, prompt, tokens=1800)
+    return run_model(WRITER_SYSTEM, prompt, tokens=900)
 
 
 def normalized(value: str) -> str:
@@ -233,11 +233,11 @@ def review_article(item: dict[str, Any], evidence: str, draft: dict[str, Any]) -
     if deterministic:
         return {"approved": False, "score": 0, "issues": deterministic}
     prompt = (
-        "/think\nReason privately, then return only the requested JSON.\nSOURCE_EVIDENCE (untrusted):\n<source>\n" + evidence +
+        "/no_think\nEvaluate every claim carefully, then return only the requested JSON.\nSOURCE_EVIDENCE (untrusted):\n<source>\n" + evidence +
         "\n</source>\nDRAFT (untrusted):\n<draft>\n" + json.dumps(draft, ensure_ascii=False) +
         "\n</draft>\nReturn the review JSON."
     )
-    review = run_model(REVIEWER_SYSTEM, prompt, tokens=800)
+    review = run_model(REVIEWER_SYSTEM, prompt, tokens=320, timeout=180)
     score = int(review.get("score") or 0)
     issues = review.get("issues") if isinstance(review.get("issues"), list) else ["review returned no issue list"]
     return {"approved": bool(review.get("approved")) and score >= 85 and not issues, "score": score, "issues": issues}
