@@ -1,6 +1,42 @@
 {
   "changes": [
     {
+      "detected_on": "2026-09-27",
+      "id": "336363df739a990f",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.quicksigner.com/",
+      "tool_id": "quicksigner",
+      "tool_name": "QuickSigner"
+    },
+    {
+      "detected_on": "2026-09-27",
+      "id": "92606c878bb9026f",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.learnworlds.com/",
+      "tool_id": "learnworlds",
+      "tool_name": "LearnWorlds"
+    },
+    {
+      "detected_on": "2026-09-27",
+      "id": "24b39724ed6c1dd8",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://bluewillow.ai",
+      "tool_id": "bluewillow",
+      "tool_name": "BlueWillow"
+    },
+    {
+      "detected_on": "2026-09-27",
+      "id": "5d35930116cbf034",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://clickup.com",
+      "tool_id": "clickup-ai",
+      "tool_name": "ClickUp AI"
+    },
+    {
       "detected_on": "2026-09-26",
       "id": "ae870329603cbb2b",
       "kind": "pricing or plan",
@@ -440,7 +476,7 @@
     }
   ],
   "stats": {
-    "changes": 17,
+    "changes": 21,
     "monetized": 296,
     "recipes": 8,
     "reviewed": 42,
