@@ -23,6 +23,7 @@ DATA_PATH = ROOT / "data" / "ai_news.json"
 INDEX_PATH = ROOT / "index.html"
 NEWS_PATH = ROOT / "news.html"
 SITEMAP_PATH = ROOT / "sitemap.xml"
+ARCHIVE_PATH = ROOT / "data" / "ai_news_archive.json"
 PARTNER_OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 REVENUE_STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 DATA_START = "// AI_NEWS_DATA_START"
@@ -157,6 +158,7 @@ def parse_feed(xml_bytes: bytes, source: dict[str, Any]) -> list[dict[str, str]]
                 "published_at": published.isoformat(),
                 "display_date": published.strftime("%b %d, %Y"),
                 "category": categorize(title, description),
+                "description": description,
             }
         )
     return items
@@ -265,11 +267,28 @@ def add_related_routes(items: list[dict[str, str]]) -> list[dict[str, Any]]:
         for offer in registry.get("offers", [])
         if isinstance(offer, dict) and offer.get("status") == "published" and offer.get("id") and offer.get("slug")
     }
-    return [{**item, "related": related_route(item, offers)} for item in items]
+    archive_urls: dict[str, str] = {}
+    if ARCHIVE_PATH.exists():
+        try:
+            archive = load_json(ARCHIVE_PATH)
+            archive_urls = {
+                str(record.get("source", {}).get("url") or ""): str(record.get("path") or "")
+                for record in archive.get("articles", []) if isinstance(record, dict)
+            }
+        except NewsBuildError:
+            archive_urls = {}
+    enriched: list[dict[str, Any]] = []
+    for item in items:
+        value: dict[str, Any] = {**item, "related": related_route(item, offers)}
+        archive_url = archive_urls.get(str(item.get("url") or ""), "")
+        if archive_url:
+            value["archive_url"] = archive_url
+        enriched.append(value)
+    return enriched
 
 
 def news_identity(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    return [{key: value for key, value in item.items() if key != "related"} for item in items]
+    return [{key: value for key, value in item.items() if key not in {"related", "archive_url"}} for item in items]
 
 
 def aggregate_news(config: dict[str, Any], now: datetime) -> tuple[list[dict[str, str]], list[str]]:
@@ -330,16 +349,16 @@ def render_news_page(
 ) -> str:
     cards = "\n".join(
         f'''      <article class="card">
-        <a class="story-link" href="{html.escape(item["url"], quote=True)}" target="_blank" rel="noopener noreferrer">
+        <a class="story-link" href="{html.escape(str(item.get('archive_url') or item['url']), quote=True)}"{'' if item.get('archive_url') else ' target="_blank" rel="noopener noreferrer"'}>
           <div class="story-visual"><span>{html.escape(item["category"])}</span><strong>{html.escape(item["source"])}</strong></div>
-          <div class="story-copy"><div class="meta"><time datetime="{html.escape(item["published_at"], quote=True)}">{html.escape(item["display_date"])}</time><b>Open story ↗</b></div><h2>{html.escape(item["title"])}</h2></div>
+          <div class="story-copy"><div class="meta"><time datetime="{html.escape(item["published_at"], quote=True)}">{html.escape(item["display_date"])}</time><b>{'Read the Elephant briefing →' if item.get('archive_url') else 'Open story ↗'}</b></div><h2>{html.escape(item["title"])}</h2></div>
         </a>
         <div class="route"><small>RELATED DECISION GUIDE</small><a href="{html.escape(str(item.get('related', {}).get('url', 'ai-tool-finder.html')), quote=True)}" data-content-route data-related-offer-id="{html.escape(str(item.get('related', {}).get('offer_id', '')), quote=True)}" data-placement="news-card-related">{html.escape(str(item.get('related', {}).get('title', 'Find the right AI tool')))} →</a></div>
       </article>'''
         for item in items
     )
     item_list = [
-        {"@type": "ListItem", "position": index, "url": item["url"], "name": item["title"]}
+        {"@type": "ListItem", "position": index, "url": "https://artificial.one/" + item["archive_url"] if item.get("archive_url") else item["url"], "name": item["title"]}
         for index, item in enumerate(items, 1)
     ]
     structured = safe_json_for_script({"@context": "https://schema.org", "@type": "ItemList", "itemListElement": item_list})
@@ -377,12 +396,23 @@ def render_news_page(
 
 
 def update_sitemap(source: str) -> str:
-    if "https://artificial.one/news.html" in source:
+    entries: list[str] = []
+    if "https://artificial.one/news.html" not in source:
+        entries.append("  <url><loc>https://artificial.one/news.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>\n")
+    if ARCHIVE_PATH.exists():
+        try:
+            archive = load_json(ARCHIVE_PATH)
+            for record in archive.get("articles", []):
+                url = "https://artificial.one/" + str(record.get("path") or "")
+                if record.get("path") and url not in source:
+                    entries.append(f"  <url><loc>{html.escape(url)}</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>\n")
+        except NewsBuildError:
+            pass
+    if not entries:
         return source
-    entry = "  <url><loc>https://artificial.one/news.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>\n"
     if "</urlset>" not in source:
         raise NewsBuildError("sitemap.xml has no closing urlset element")
-    return source.replace("</urlset>", entry + "</urlset>", 1)
+    return source.replace("</urlset>", "".join(entries) + "</urlset>", 1)
 
 
 def main() -> int:

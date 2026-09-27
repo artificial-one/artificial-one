@@ -14,12 +14,12 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_DIR = ROOT / ".edge-ai"
-MODEL_PATH = CACHE_DIR / "qwen2.5-1.5b-instruct-q4_k_m.gguf"
+MODEL_PATH = CACHE_DIR / "qwen3-4b-q4_k_m.gguf"
 MODEL_URL = (
-    "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/"
-    "qwen2.5-1.5b-instruct-q4_k_m.gguf?download=true"
+    "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/"
+    "Qwen3-4B-Q4_K_M.gguf?download=true"
 )
-MODEL_SHA256 = "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e"
+MODEL_SHA256 = "7485fe6f11af29433bc51cab58009521f205840f5b4ae3a32fa7f92e8534fdf5"
 LLAMA_REPOSITORY = "https://github.com/ggml-org/llama.cpp.git"
 LLAMA_REF = "b10982"
 LLAMA_COMMIT_PREFIX = "fc82583"
@@ -110,7 +110,7 @@ def main() -> int:
         download_model()
         build_llama()
     runtime = "model verified" if args.model_only else f"model and llama.cpp {LLAMA_REF} ready"
-    print(f"Edge AI {runtime}: Qwen2.5 1.5B Q4_K_M ({MODEL_SHA256[:12]}…)")
+    print(f"Edge AI {runtime}: Qwen3 4B Q4_K_M ({MODEL_SHA256[:12]}…)")
     return 0
 
 

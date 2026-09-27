@@ -183,6 +183,28 @@ def local_receipt_datetime(receipt: dict[str, Any]) -> datetime | None:
         return None
 
 
+def news_pages_for_day(root: Path, report_date: date) -> tuple[list[dict[str, str]], int]:
+    """Return permanent Elephant news pages created on the local report day."""
+    archive = load_json(root / "data" / "ai_news_archive.json", {"articles": []})
+    all_articles = [item for item in archive.get("articles", []) if isinstance(item, dict) and item.get("path")]
+    today: list[dict[str, str]] = []
+    for record in all_articles:
+        try:
+            created = datetime.fromisoformat(str(record.get("created_at") or "").replace("Z", "+00:00"))
+            if created.tzinfo is None:
+                created = created.replace(tzinfo=timezone.utc)
+        except (ValueError, TypeError):
+            continue
+        if created.astimezone(PRAGUE).date() != report_date:
+            continue
+        article = record.get("article") if isinstance(record.get("article"), dict) else {}
+        today.append({
+            "title": str(article.get("headline") or record.get("source", {}).get("title") or "AI news briefing"),
+            "url": "https://artificial.one/" + str(record["path"]),
+        })
+    return today, len(all_articles)
+
+
 def bluesky_metrics(receipts: list[dict[str, Any]]) -> dict[str, dict[str, int]]:
     wanted = [receipt_urn(item) for item in receipts if item.get("platform") == "bluesky"]
     if not wanted:
@@ -475,6 +497,7 @@ def report_model(
     report_time = report_time or datetime.combine(report_date, datetime.max.time(), tzinfo=PRAGUE)
     social = social_performance(root, report_time)
     social_comments = social_comments_for_window(report_time)
+    new_news_pages, permanent_news_pages = news_pages_for_day(root, report_date)
     revenue_text = f"USD {ps_revenue:.2f} + {impact_revenue}" if impact_revenue != "USD 0.00" else f"USD {ps_revenue:.2f}"
     commission_text = f"USD {ps_commission:.2f} + {impact_commission}" if impact_commission != "USD 0.00" else f"USD {ps_commission:.2f}"
     return {
@@ -495,6 +518,8 @@ def report_model(
         "system_work": work_queue,
         "social": social,
         "social_comments": social_comments,
+        "new_news_pages": new_news_pages,
+        "permanent_news_pages": permanent_news_pages,
         "search": search,
         "blocking_failures": integer(summary.get("blocking_failures")),
         "health": health,
@@ -513,6 +538,9 @@ def management_summary(model: dict[str, Any]) -> str:
         pieces.append(f"improved {activity['pages_updated']} existing page{'s' if activity['pages_updated'] != 1 else ''}")
     if activity["social_posts"]:
         pieces.append(f"published {activity['social_posts']} social post{'s' if activity['social_posts'] != 1 else ''}")
+    news_count = len(model.get("new_news_pages") or [])
+    if news_count:
+        pieces.append(f"created {news_count} permanent Elephant news page{'s' if news_count != 1 else ''}")
     completed = ", ".join(pieces) if pieces else "no new public content was released"
     action_count = len(model.get("owner_actions") or [])
     action_note = (
@@ -701,6 +729,20 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
     )
     search_html, search_text = render_search(model.get("search") or {})
     highlights = model["activity"]["highlights"]
+    news_pages = model.get("new_news_pages") or []
+    if news_pages:
+        news_rows = "".join(
+            f"<a href='{escape(item['url'])}' style='display:block;background:#fff;border:1px solid #eadff3;border-radius:14px;padding:13px 15px;margin-top:9px;color:#35244f;text-decoration:none;font-weight:850'>{escape(item['title'])} &rarr;</a>"
+            for item in news_pages
+        )
+        news_section = f'''<tr><td class="section-pad" style="padding:14px 28px"><div style="background:#fff3f7;border:1px solid #f0dce7;border-radius:22px;padding:24px">
+          <div style="font-size:11px;font-weight:900;letter-spacing:1.2px;color:#a14c78;text-transform:uppercase">Elephant news desk</div>
+          <h2 style="font-size:22px;color:#211a35;margin:7px 0 4px">{len(news_pages)} permanent news page{'s' if len(news_pages) != 1 else ''} published today</h2>
+          <p style="font-size:13px;color:#706880;margin:0 0 8px">Open the new evidence-checked briefings.</p>{news_rows}</div></td></tr>'''
+        news_text = "\n".join(f"- {item['title']}: {item['url']}" for item in news_pages)
+    else:
+        news_section = ""
+        news_text = "- No permanent Elephant news page was published today."
     if highlights:
         highlight_html = "".join(
             "<div style='background:#ffffff;border:1px solid #e9e2f3;border-radius:14px;padding:14px 16px;margin-top:9px'>"
@@ -798,6 +840,9 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
   </tr><tr>
     {metric_card('Website visits', str(model['visits']), '#e7f8f0', f"Last {model.get('visit_window_days', 28)} days")}
     {metric_card('Affiliate link clicks', str(model['clicks']), '#e8f3ff', f"Last {model.get('click_window_days', 28)} days")}
+  </tr><tr>
+    {metric_card('New news pages today', str(len(model.get('new_news_pages') or [])), '#fff3f7', 'Permanent Elephant briefings published today')}
+    {metric_card('Permanent news library', str(model.get('permanent_news_pages', 0)), '#f0f8ff', 'All durable Elephant news pages')}
   </tr></table>
 </td></tr>
 <tr><td class="section-pad" style="padding:14px 28px"><div style="background:#f8f5fc;border:1px solid #ebe4f2;border-radius:22px;padding:23px">
@@ -811,6 +856,7 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
   </tr></table>
 </div></td></tr>
 {wins_html}
+{news_section}
 {search_html}
 {social_html}
 {work_html}
@@ -825,11 +871,13 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         f"Revenue: {model['revenue']}", f"Commissions: {model['commissions']}",
         f"Site visits (last {model.get('visit_window_days', 28)} days): {model['visits']}",
         f"Affiliate link clicks (last {model.get('click_window_days', 28)} days): {model['clicks']}",
+        f"New permanent Elephant news pages today: {len(model.get('new_news_pages') or [])}",
+        f"Permanent news library: {model.get('permanent_news_pages', 0)} pages",
         f"Live partner destinations: {model['published_offers']}",
         f"Referred sign-ups: {model['signups']}",
         f"Paying customers: {model['paying_customers']}",
         f"Tracked leads or sales: {model['impact_actions'] + model.get('partnerstack_transactions', 0)}", "",
-        "WHAT MOVED FORWARD", highlights_text, "", "YOUR DECISIONS", action_text, "",
+        "WHAT MOVED FORWARD", highlights_text, "", "ELEPHANT NEWS PAGES PUBLISHED TODAY", news_text, "", "YOUR DECISIONS", action_text, "",
         "GOOGLE VISIBILITY", search_text, "", "SOCIAL PULSE — LAST 24 HOURS", social_text, "",
         "APPROVED PARTNERSHIPS WAITING FOR LINKS", work_text,
     ]) + "\n"

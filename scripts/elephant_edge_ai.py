@@ -13,7 +13,7 @@ from typing import Iterable
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_MODEL = ROOT / ".edge-ai" / "qwen2.5-1.5b-instruct-q4_k_m.gguf"
+DEFAULT_MODEL = ROOT / ".edge-ai" / "qwen3-4b-q4_k_m.gguf"
 DEFAULT_LLAMA_CLI = ROOT / ".edge-ai" / "llama.cpp" / "build" / "bin" / "llama-cli"
 MAX_REPLY_CHARS = 260
 MAX_LINKEDIN_CHARS = 1200
