@@ -344,53 +344,95 @@ def update_homepage(items: list[dict[str, str]]) -> str:
     return pattern.sub(replacement, source, count=1)
 
 
+def reader_excerpt(item: dict[str, Any], limit: int = 220) -> str:
+    value = clean_text(str(item.get("description") or ""), 520)
+    if " appeared first on " in value.casefold() and "The article " in value:
+        value = value.split("The article ", 1)[0].strip()
+    if not value:
+        value = f"The latest reporting from {item.get('source', 'a trusted technology source')}."
+    if len(value) > limit:
+        value = value[:limit].rsplit(" ", 1)[0].rstrip(" ,;:") + "…"
+    return value
+
+
+def story_destination(item: dict[str, Any]) -> tuple[str, str]:
+    if item.get("archive_url"):
+        return str(item["archive_url"]), "Read the briefing"
+    return str(item["url"]), "Read the story"
+
+
+def story_visual(item: dict[str, Any]) -> tuple[str, str, str]:
+    palettes = {
+        "Models & LLMs": ("#5b21b6", "#8b5cf6", "LLM"),
+        "Research": ("#0369a1", "#22d3ee", "LAB"),
+        "Policy & Safety": ("#be123c", "#fb7185", "SAFE"),
+        "AI Business": ("#b45309", "#fbbf24", "BIZ"),
+        "AI Tools & Products": ("#047857", "#84cc16", "AI"),
+    }
+    return palettes.get(str(item.get("category") or ""), ("#4338ca", "#c084fc", "AI"))
+
+
 def render_news_page(
     items: list[dict[str, str]], updated_at: str, picks: list[dict[str, str]] | None = None
 ) -> str:
-    cards = "\n".join(
-        f'''      <article class="card">
-        <a class="story-link" href="{html.escape(str(item.get('archive_url') or item['url']), quote=True)}"{'' if item.get('archive_url') else ' target="_blank" rel="noopener noreferrer"'}>
-          <div class="story-visual"><span>{html.escape(item["category"])}</span><strong>{html.escape(item["source"])}</strong></div>
-          <div class="story-copy"><div class="meta"><time datetime="{html.escape(item["published_at"], quote=True)}">{html.escape(item["display_date"])}</time><b>{'Read the Elephant briefing →' if item.get('archive_url') else 'Open story ↗'}</b></div><h2>{html.escape(item["title"])}</h2></div>
-        </a>
-        <div class="route"><small>RELATED DECISION GUIDE</small><a href="{html.escape(str(item.get('related', {}).get('url', 'ai-tool-finder.html')), quote=True)}" data-content-route data-related-offer-id="{html.escape(str(item.get('related', {}).get('offer_id', '')), quote=True)}" data-placement="news-card-related">{html.escape(str(item.get('related', {}).get('title', 'Find the right AI tool')))} →</a></div>
-      </article>'''
-        for item in items
+    if not items:
+        raise NewsBuildError("The news page needs at least one story")
+
+    def link_attributes(item: dict[str, Any]) -> str:
+        return "" if item.get("archive_url") else ' target="_blank" rel="noopener noreferrer"'
+
+    featured = items[0]
+    featured_url, featured_cta = story_destination(featured)
+    featured_c1, featured_c2, featured_mark = story_visual(featured)
+    featured_search = clean_text(f"{featured.get('title', '')} {featured.get('source', '')} {featured.get('description', '')}", 700).casefold()
+    featured_markup = f'''<article class="lead-story" data-news-card data-category="{html.escape(featured['category'], quote=True)}" data-search="{html.escape(featured_search, quote=True)}" style="--c1:{featured_c1};--c2:{featured_c2}">
+      <a class="story-link" href="{html.escape(featured_url, quote=True)}"{link_attributes(featured)}>
+        <div class="lead-copy"><div class="story-meta"><span>{html.escape(featured['category'])}</span><time datetime="{html.escape(featured['published_at'], quote=True)}">{html.escape(featured['display_date'])}</time></div><h2>{html.escape(featured['title'])}</h2><p>{html.escape(reader_excerpt(featured, 300))}</p><strong>{html.escape(featured_cta)} <span aria-hidden="true">→</span></strong></div>
+        <div class="lead-art" aria-hidden="true"><b>{featured_mark}</b><span></span></div>
+      </a>
+    </article>'''
+
+    cards: list[str] = []
+    for item in items[1:]:
+        destination, cta = story_destination(item)
+        c1, c2, mark = story_visual(item)
+        searchable = clean_text(f"{item.get('title', '')} {item.get('source', '')} {item.get('description', '')}", 700).casefold()
+        cards.append(f'''<article class="story-card" data-news-card data-category="{html.escape(item['category'], quote=True)}" data-search="{html.escape(searchable, quote=True)}" style="--c1:{c1};--c2:{c2}">
+          <a class="story-link" href="{html.escape(destination, quote=True)}"{link_attributes(item)}>
+            <div class="story-art" aria-hidden="true"><span>{mark}</span><i></i></div>
+            <div class="story-body"><div class="story-meta"><span>{html.escape(item['category'])}</span><time datetime="{html.escape(item['published_at'], quote=True)}">{html.escape(item['display_date'])}</time></div><h2>{html.escape(item['title'])}</h2><p>{html.escape(reader_excerpt(item))}</p><div class="story-foot"><span>{html.escape(item['source'])}</span><strong>{html.escape(cta)} →</strong></div></div>
+          </a>
+        </article>''')
+    cards_markup = "\n".join(cards)
+    categories = list(dict.fromkeys(str(item.get("category") or "AI News") for item in items))
+    filters = "".join(
+        f'<button type="button" data-news-filter="{html.escape(category, quote=True)}">{html.escape(category)}</button>'
+        for category in categories
     )
     item_list = [
         {"@type": "ListItem", "position": index, "url": "https://artificial.one/" + item["archive_url"] if item.get("archive_url") else item["url"], "name": item["title"]}
         for index, item in enumerate(items, 1)
     ]
     structured = safe_json_for_script({"@context": "https://schema.org", "@type": "ItemList", "itemListElement": item_list})
-    pick_cards = "".join(
-        f'''<a class="pick" href="partner-offers/{html.escape(pick['slug'], quote=True)}.html"><small>{html.escape(pick['category'])}</small><strong>{html.escape(pick['name'])}</strong><span>{html.escape(pick['summary'])}</span><b>See fit &amp; current offer →</b></a>'''
-        for pick in (picks or [])
-    )
-    picks_section = (
-        f'''<section class="picks"><div><small>EDITOR'S PARTNER PICKS</small><h2>Tools worth evaluating now</h2><p>Current, verified partner destinations with clear use cases and limitations.</p></div><div class="pick-grid">{pick_cards}</div><p class="disclosure">Marked offer pages contain affiliate links. We may earn a commission at no extra cost to you.</p></section>'''
-        if pick_cards
-        else ""
-    )
     return f'''<!doctype html>
 <html lang="en"><head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Latest AI, LLM &amp; AI Tools News | artificial.one</title>
-  <meta name="description" content="An automatically refreshed feed of AI, LLM and AI tool headlines from official labs and established technology publications.">
+  <meta name="description" content="The AI stories worth knowing today—clear summaries, useful context and memorable Elephant commentary.">
   <link rel="canonical" href="https://artificial.one/news.html">
-  <meta name="affiliate-event-endpoint" content="/api/affiliate-event">
   <meta property="og:title" content="Latest AI, LLM &amp; AI Tools News | artificial.one">
-  <meta property="og:description" content="Recent AI headlines, linked directly to their original sources.">
+  <meta property="og:description" content="The AI stories worth knowing today, presented clearly and without the noise.">
   <meta property="og:type" content="website"><meta property="og:url" content="https://artificial.one/news.html">
   <script type="application/ld+json">{structured}</script>
   <style>
-    *{{box-sizing:border-box}} body{{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#0f172a;background:#090914}} a{{color:inherit}} header{{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid #e2e8f0;z-index:5}} nav{{max-width:1120px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}} nav img{{height:48px}} nav div{{display:flex;gap:22px;font-weight:650}} .news-page .hero{{min-height:0!important;background:radial-gradient(circle at 86% 10%,rgba(156,255,59,.18),transparent 18rem),linear-gradient(120deg,#17112c,#101827);text-align:left;padding:30px 22px 32px}} .hero>*{{display:block;max-width:1120px;margin-left:auto;margin-right:auto}} .hero small{{font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:#9cff3b}} .hero h1{{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1;margin-top:8px;margin-bottom:10px;color:#fff}} .hero p{{max-width:1120px;color:#cbd5e1;font-size:1rem;line-height:1.55;margin-top:0;margin-bottom:0}} main{{max-width:1120px;margin:auto;padding:22px 22px 80px}} .notice{{padding:12px 15px;border:1px solid rgba(156,255,59,.3);background:rgba(156,255,59,.08);border-radius:12px;color:#d9f99d;margin-bottom:22px}} .picks{{margin:0 0 32px;padding:26px;border-radius:22px;background:linear-gradient(135deg,#eef2ff,#faf5ff);border:1px solid #c7d2fe}} .picks>div:first-child>small,.pick small{{font-weight:900;letter-spacing:.1em;color:#4f46e5}} .picks h2{{margin:8px 0 4px;color:#0f172a}} .picks p{{color:#475569}} .pick-grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px}} .pick{{display:flex;flex-direction:column;padding:19px;border-radius:16px;background:linear-gradient(145deg,#fff,#f4f0ff);border:1px solid #ddd6fe;text-decoration:none;box-shadow:0 8px 24px rgba(79,70,229,.08);transition:transform .2s ease,box-shadow .2s ease}} .pick:nth-child(2){{background:linear-gradient(145deg,#ecfeff,#fff)}} .pick:nth-child(3){{background:linear-gradient(145deg,#f7fee7,#fff)}} .pick:hover{{transform:translateY(-4px);box-shadow:0 14px 32px rgba(79,70,229,.18)}} .pick strong{{font-size:1.15rem;margin:8px 0;color:#0f172a}} .pick span{{color:#64748b;font-size:.9rem;line-height:1.5}} .pick b{{color:#4338ca;margin-top:auto;padding-top:15px;font-size:.9rem}} .picks .disclosure{{font-size:.75rem;margin-bottom:0}} .grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}} .card{{--c1:#7c3aed;--c2:#ec4899;display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid rgba(255,255,255,.16);border-radius:20px;box-shadow:0 16px 42px rgba(0,0,0,.28);transition:transform .2s ease,box-shadow .2s ease}} .card:nth-child(6n+2){{--c1:#0f766e;--c2:#22d3ee}} .card:nth-child(6n+3){{--c1:#c2410c;--c2:#fbbf24}} .card:nth-child(6n+4){{--c1:#1d4ed8;--c2:#8b5cf6}} .card:nth-child(6n+5){{--c1:#be123c;--c2:#fb7185}} .card:nth-child(6n+6){{--c1:#166534;--c2:#84cc16}} .card:hover{{transform:translateY(-6px);box-shadow:0 24px 56px rgba(0,0,0,.4)}} .story-link{{display:block;text-decoration:none}} .story-visual{{position:relative;min-height:142px;overflow:hidden;padding:18px;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff}} .story-visual::after{{content:"";position:absolute;right:-4px;bottom:-18px;width:148px;height:148px;background:url("images/branding/artificial-one-elephant-mark.png") center/contain no-repeat;opacity:.48;filter:drop-shadow(0 10px 20px rgba(0,0,0,.35))}} .story-visual span,.story-visual strong{{position:relative;z-index:1;display:block;max-width:64%}} .story-visual span{{font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}} .story-visual strong{{margin-top:8px;font-size:.9rem}} .story-copy{{padding:20px 20px 8px}} .meta{{display:flex;justify-content:space-between;gap:12px;color:#64748b;font-size:.72rem;text-transform:uppercase;font-weight:800;letter-spacing:.04em}} .meta b{{color:var(--c1)}} .card h2{{font-size:1.25rem;line-height:1.35;margin:13px 0;color:#0f172a}} .route{{margin:auto 16px 16px;padding:14px;border-radius:13px;background:linear-gradient(135deg,#eef2ff,#f5f3ff)}} .route small{{display:block;color:#6366f1;font-weight:900;letter-spacing:.08em}} .route a{{display:block;margin-top:7px;color:#4338ca;font-weight:800;text-decoration:none}} footer{{border-top:1px solid rgba(255,255,255,.12);background:#080812;padding:34px 22px;text-align:center;color:#94a3b8}} footer a{{color:#c4b5fd}} @media(max-width:900px){{.grid,.pick-grid{{grid-template-columns:repeat(2,minmax(0,1fr))}}}} @media(max-width:620px){{nav div{{gap:12px;font-size:.85rem}} .grid,.pick-grid{{grid-template-columns:1fr}} .news-page .hero{{padding:24px 18px}}}}
+    *{{box-sizing:border-box}}html{{scroll-behavior:smooth}}body{{margin:0;background:#fff;color:#111827;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}a{{color:inherit}}.site-header{{position:sticky;top:0;z-index:20;background:rgba(9,9,20,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}}nav{{max-width:1180px;margin:auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}}.brand{{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:900;font-size:1.03rem}}.brand img{{width:43px;height:43px;object-fit:contain}}.brand em{{font-style:normal;color:#9cff3b}}.nav-links{{display:flex;gap:22px;align-items:center}}.nav-links a{{color:#e5e7eb;text-decoration:none;font-weight:750;font-size:.92rem}}.nav-links a:hover{{color:#9cff3b}}.masthead{{max-width:1180px;margin:auto;padding:66px 24px 34px}}.kicker{{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;color:#6d28d9;font-size:.78rem;font-weight:950;letter-spacing:.14em;text-transform:uppercase}}.kicker::before{{content:"";width:28px;height:4px;border-radius:99px;background:linear-gradient(90deg,#8b5cf6,#9cff3b)}}.masthead h1{{max-width:860px;margin:0;font-size:clamp(3rem,7vw,6.5rem);line-height:.92;letter-spacing:-.065em}}.masthead h1 span{{color:#7c3aed}}.masthead>p:last-child{{max-width:720px;margin:22px 0 0;color:#4b5563;font-size:1.16rem;line-height:1.7}}main{{max-width:1180px;margin:auto;padding:0 24px 90px}}.lead-story{{margin:12px 0 58px;border-radius:30px;overflow:hidden;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 24px 70px rgba(76,29,149,.19)}}.lead-story[hidden],.story-card[hidden]{{display:none}}.lead-story .story-link{{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);min-height:410px;color:#fff;text-decoration:none}}.lead-copy{{padding:48px}}.lead-copy h2{{max-width:760px;margin:18px 0 16px;font-size:clamp(2.15rem,4.4vw,4.25rem);line-height:1.01;letter-spacing:-.045em}}.lead-copy p{{max-width:700px;color:rgba(255,255,255,.88);font-size:1.08rem;line-height:1.65}}.lead-copy>strong{{display:inline-block;margin-top:18px;padding:13px 18px;border-radius:99px;background:#fff;color:#17112c}}.story-meta{{display:flex;align-items:center;gap:12px;font-size:.73rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}}.story-meta span{{padding:7px 10px;border-radius:99px;background:rgba(255,255,255,.18)}}.lead-art{{position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 60%)}}.lead-art::before,.lead-art::after,.story-art::before{{content:"";position:absolute;border:1px solid rgba(255,255,255,.24);border-radius:50%}}.lead-art::before{{width:340px;height:340px}}.lead-art::after{{width:230px;height:230px}}.lead-art b{{position:relative;z-index:2;font-size:5rem;letter-spacing:-.12em;text-shadow:0 18px 40px rgba(0,0,0,.24)}}.lead-art span{{position:absolute;right:-25px;bottom:-28px;width:270px;height:270px;background:url("images/branding/artificial-one-elephant-mark.png") center/contain no-repeat;opacity:.48;filter:drop-shadow(0 18px 35px rgba(0,0,0,.3))}}.section-head{{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:22px}}.section-head h2{{margin:0;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.04em}}.section-head p{{max-width:470px;margin:0;color:#6b7280;line-height:1.6}}.news-tools{{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 28px}}.news-search{{position:relative;flex:1 1 270px}}.news-search input{{width:100%;min-height:48px;padding:0 17px 0 44px;border:1px solid #d1d5db;border-radius:14px;background:#fff;color:#111827;font:inherit;box-shadow:0 5px 18px rgba(15,23,42,.05)}}.news-search::before{{content:"⌕";position:absolute;left:16px;top:9px;color:#7c3aed;font-size:1.35rem}}.filters{{display:flex;flex-wrap:wrap;gap:8px}}.filters button{{border:1px solid #ddd6fe;border-radius:99px;background:#faf5ff;color:#5b21b6;padding:10px 13px;font:inherit;font-size:.8rem;font-weight:850;cursor:pointer}}.filters button:hover,.filters button.active{{background:#5b21b6;color:#fff;border-color:#5b21b6}}.story-grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}}.story-card{{overflow:hidden;border:1px solid #e5e7eb;border-radius:23px;background:#fff;box-shadow:0 12px 36px rgba(15,23,42,.08);transition:transform .22s ease,box-shadow .22s ease}}.story-card:hover{{transform:translateY(-6px);box-shadow:0 23px 55px rgba(15,23,42,.14)}}.story-card .story-link{{display:flex;flex-direction:column;height:100%;text-decoration:none}}.story-art{{position:relative;display:grid;place-items:center;min-height:160px;overflow:hidden;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff}}.story-art::before{{width:170px;height:170px}}.story-art::after{{content:"";position:absolute;right:-25px;bottom:-34px;width:145px;height:145px;background:url("images/branding/artificial-one-elephant-mark.png") center/contain no-repeat;opacity:.42}}.story-art span{{position:relative;z-index:2;font-size:2.7rem;font-weight:950;letter-spacing:-.06em}}.story-art i{{position:absolute;left:24px;top:24px;width:48px;height:8px;border-radius:99px;background:#9cff3b;transform:rotate(-9deg)}}.story-body{{display:flex;flex-direction:column;flex:1;padding:23px}}.story-body .story-meta{{color:#6b7280}}.story-body .story-meta span{{color:var(--c1);background:#f5f3ff}}.story-body h2{{margin:16px 0 12px;font-size:1.35rem;line-height:1.25;letter-spacing:-.025em}}.story-body>p{{margin:0;color:#5b6472;line-height:1.58;font-size:.94rem}}.story-foot{{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-top:auto;padding-top:22px;color:#6b7280;font-size:.79rem;font-weight:750}}.story-foot strong{{color:var(--c1);text-align:right}}.empty{{padding:40px;border:1px dashed #c4b5fd;border-radius:20px;color:#6b7280;text-align:center}}footer{{border-top:1px solid #e5e7eb;background:#fff;padding:34px 24px;color:#6b7280}}.footer-inner{{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:24px;align-items:center}}footer a{{color:#5b21b6;font-weight:800;text-decoration:none}}@media(max-width:900px){{.lead-story .story-link{{grid-template-columns:1fr}}.lead-art{{min-height:230px}}.story-grid{{grid-template-columns:repeat(2,minmax(0,1fr))}}}}@media(max-width:650px){{.nav-links a:not(:last-child){{display:none}}.masthead{{padding-top:46px}}.lead-copy{{padding:29px}}.lead-story .story-link{{min-height:0}}.section-head{{display:block}}.section-head p{{margin-top:10px}}.story-grid{{grid-template-columns:1fr}}.footer-inner{{display:block}}}}
   </style>
 </head><body class="news-page">
-<header><nav><a href="index.html"><img src="artificial-one-logo-large.svg" alt="artificial.one"></a><div><a href="reviews.html">Reviews</a><a href="partner-offers.html">Partner offers</a></div></nav></header>
-<section class="hero"><small>Fresh stories, useful routes</small><h1>What changed in AI today</h1><p>Open the original reporting, then jump straight to a related tool guide when the story affects something you may buy.</p></section>
-<main><div class="notice">Last material update: {html.escape(updated_at)} · Sources are allowlisted and feed content is treated as untrusted data.</div>{picks_section}<div class="grid">{cards}</div></main>
-<footer>© {datetime.now(timezone.utc).year} artificial.one · <a href="about.html">About</a> · <a href="partner-offers.html">Partner offers</a></footer>
-<script src="assets/affiliate-tracking.js" defer></script>
+<header class="site-header"><nav><a class="brand" href="index.html"><img src="images/social/artificial-one-logo.png" alt="Artificial.One elephant"><span>artificial<em>.</em>one</span></a><div class="nav-links"><a href="index.html">Ask Elephant</a><a href="buyers-guides.html">Buyer guides</a><a href="news.html">AI news</a></div></nav></header>
+<section class="masthead"><p class="kicker">The Elephant Wire</p><h1>AI news <span>worth knowing.</span></h1><p>Fresh stories about models, tools, research, business and safety—summarized clearly, with enough context to understand why they matter.</p></section>
+<main>{featured_markup}<section aria-labelledby="latest-title"><div class="section-head"><div><p class="kicker">Latest stories</p><h2 id="latest-title">Keep up without the noise.</h2></div><p>Browse the newest developments or jump straight to the topic you care about.</p></div><div class="news-tools"><label class="news-search"><span hidden>Search stories</span><input type="search" data-news-search placeholder="Search AI news…"></label><div class="filters"><button class="active" type="button" data-news-filter="">All</button>{filters}</div></div><div class="story-grid">{cards_markup}</div><p class="empty" data-news-empty hidden>No stories match that search yet.</p></section></main>
+<footer><div class="footer-inner"><span>© {datetime.now(timezone.utc).year} artificial.one</span><span><a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:hello@artificial.one">Contact</a></span></div></footer>
+<script>(function(){{var search=document.querySelector('[data-news-search]'),buttons=[].slice.call(document.querySelectorAll('[data-news-filter]')),stories=[].slice.call(document.querySelectorAll('[data-news-card]')),empty=document.querySelector('[data-news-empty]'),selected='';function update(){{var q=(search.value||'').trim().toLowerCase(),shown=0;stories.forEach(function(story){{var match=(!selected||story.dataset.category===selected)&&(!q||(story.dataset.search||'').indexOf(q)>-1);story.hidden=!match;if(match)shown++;}});empty.hidden=shown!==0;}}buttons.forEach(function(button){{button.addEventListener('click',function(){{selected=button.dataset.newsFilter||'';buttons.forEach(function(value){{value.classList.toggle('active',value===button);}});update();}});}});search.addEventListener('input',update);}})();</script>
 </body></html>
 '''
 
@@ -440,7 +482,7 @@ def main() -> int:
         desired = {
             DATA_PATH: json.dumps(data, ensure_ascii=False, indent=2) + "\n",
             INDEX_PATH: update_homepage(items),
-            NEWS_PATH: render_news_page(items, updated_at, partner_picks()),
+            NEWS_PATH: render_news_page(items, updated_at),
             SITEMAP_PATH: update_sitemap(SITEMAP_PATH.read_text(encoding="utf-8")),
         }
         changed = [path for path, text in desired.items() if not path.exists() or path.read_text(encoding="utf-8") != text]
@@ -450,8 +492,8 @@ def main() -> int:
                 print(f"- {path.relative_to(ROOT)}", file=sys.stderr)
             return 1
         if not args.check:
-            for path, text in desired.items():
-                path.write_text(text, encoding="utf-8")
+            for path in changed:
+                path.write_text(desired[path], encoding="utf-8")
         for failure in failures:
             print(f"warning: {failure}", file=sys.stderr)
         print(f"AI news feed contains {len(items)} items; updated {len(changed)} file(s).")

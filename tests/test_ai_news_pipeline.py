@@ -72,22 +72,27 @@ class AiNewsPipelineTests(unittest.TestCase):
         self.assertEqual(route["offer_id"], "elevenlabs")
         self.assertEqual(route["url"], "partner-offers/elevenlabs-ai-voice.html")
 
-    def test_news_page_places_internal_decision_link_before_source(self):
+    def test_news_page_is_reader_first_white_and_free_of_internal_status_banners(self):
         item = {
             "title": "AI voice update", "url": "https://example.com/news", "source": "Example AI",
             "published_at": "2026-09-13T09:00:00+00:00", "display_date": "Sep 13, 2026",
             "category": "Models & LLMs", "related": {"title": "Evaluate ElevenLabs", "url": "partner-offers/elevenlabs.html", "offer_id": "elevenlabs"},
         }
         rendered = news.render_news_page([item], "2026-09-15", [])
-        self.assertIn("data-content-route", rendered)
         self.assertIn('class="story-link"', rendered)
-        self.assertIn('class="story-visual"', rendered)
+        self.assertIn('class="lead-story"', rendered)
         self.assertIn('class="news-page"', rendered)
         self.assertIn('images/branding/artificial-one-elephant-mark.png', rendered)
-        self.assertIn('meta name="affiliate-event-endpoint" content="/api/affiliate-event"', rendered)
-        self.assertIn('script src="assets/affiliate-tracking.js" defer', rendered)
-        self.assertIn('.card h2{font-size:1.25rem;line-height:1.35;margin:13px 0;color:#0f172a}', rendered)
-        self.assertIn('.pick strong{font-size:1.15rem;margin:8px 0;color:#0f172a}', rendered)
+        self.assertNotIn('meta name="affiliate-event-endpoint"', rendered)
+        self.assertNotIn('assets/affiliate-tracking.js', rendered)
+        self.assertIn('body{margin:0;background:#fff', rendered)
+        self.assertIn("The Elephant Wire", rendered)
+        self.assertIn("AI news <span>worth knowing.</span>", rendered)
+        self.assertIn("data-news-search", rendered)
+        self.assertNotIn("Last material update", rendered)
+        self.assertNotIn("Sources are allowlisted", rendered)
+        self.assertNotIn("EDITOR'S PARTNER PICKS", rendered)
+        self.assertNotIn("RELATED DECISION GUIDE", rendered)
 
 
 if __name__ == "__main__":
