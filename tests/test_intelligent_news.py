@@ -150,9 +150,13 @@ class IntelligentNewsTests(unittest.TestCase):
         self.assertIn("The Elephant take", page)
         self.assertIn("Read the original reporting", page)
         self.assertIn("BUYER GUIDE", page)
-        self.assertIn("PARTNER REVIEW", page)
+        self.assertIn("RELATED TOOL", page)
         self.assertIn("ASK THE ELEPHANT", page)
-        self.assertIn("locally run open model", page)
+        self.assertIn("background:#fff", page)
+        self.assertIn("AI news worth knowing", page)
+        self.assertNotIn("affiliate-tracking.js", page)
+        self.assertNotIn("locally run open model", page)
+        self.assertNotIn("quality gates", page)
 
     def test_news_sitemap_contains_only_recent_pages(self):
         recent = {
