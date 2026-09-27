@@ -3,84 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="AI Tool Reviews - Honest Reviews of 283+ Tools | artificial.one" />
-    <meta property="og:description" content="In-depth reviews of ChatGPT, Claude, Midjourney, and 280 more AI tools." />
+    <meta property="og:title" content="AI Tool Reviews: Find the Right Tool | artificial.one" />
+    <meta property="og:description" content="Search and compare 360+ readable AI software reviews, with clear strengths, limitations, pricing and best-fit guidance." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://artificial.one/reviews.html" />
     <meta property="og:image" content="https://artificial.one/images/og-default.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="AI Tool Reviews - Honest Reviews of 283+ Tools | artificial.one" />
+    <meta property="og:image:alt" content="The Artificial.One AI tool review library" />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Tool Reviews - Honest Reviews of 283+ Tools | artificial.one">
-    <meta name="twitter:description" content="In-depth reviews of ChatGPT, Claude, Midjourney, and 280 more AI tools.">
+    <meta name="twitter:title" content="AI Tool Reviews: Find the Right Tool | artificial.one">
+    <meta name="twitter:description" content="Search and compare 360+ readable AI software reviews, with clear strengths, limitations, pricing and best-fit guidance.">
     <meta name="twitter:image" content="https://artificial.one/images/og-default.jpg">
     <link rel="canonical" href="https://artificial.one/reviews.html" />
-    <title>AI Tool Reviews - Honest Reviews of 283+ Tools | artificial.one</title>
-    <meta name="description" content="In-depth reviews of ChatGPT, Claude, Midjourney, and 280 more AI tools.">
+    <title>AI Tool Reviews: Find the Right Tool | artificial.one</title>
+    <meta name="description" content="Search and compare 360+ readable AI software reviews, with clear strengths, limitations, pricing and best-fit guidance.">
     <meta name="affiliate-event-endpoint" content="/api/affiliate-event">
+    <meta name="ai1-clean-editorial" content="true">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-                body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
-        .tool-card { transition: all 0.3s ease; border: 1px solid #e5e7eb; }
-        .tool-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
-        .filter-btn { transition: all 0.2s ease; }
-        .filter-btn.active { background: #7c3aed; color: white; }
-        .cat-btn { transition: all 0.2s ease; }
-        .cat-btn.active { background: #2563eb; color: white; }
-        .dropdown { position: relative; display: inline-block; }
-        .dropdown .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 240px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            z-index: 100;
-            top: calc(100% + 5px);
-            left: -15px;
-            padding: 12px 0;
-        }
-        .dropdown:hover .dropdown-content,
-        .dropdown .dropdown-content:hover {
-            display: block;
-            animation: fadeIn 0.2s ease-in;
-        }
-        .dropdown::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: -15px;
-            right: -15px;
-            height: 15px;
-            display: none;
-        }
-        .dropdown:hover::after {
-            display: block;
-        }
-        .dropdown-content a {
-            color: #4b5563;
-            padding: 14px 20px;
-            text-decoration: none;
-            display: block;
-            transition: all 0.2s;
-            font-size: 15px;
-        }
-        .dropdown-content a:hover {
-            background-color: #f3f4f6;
-            color: #6366f1;
-            padding-left: 24px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        #mobile-menu { border-top: 1px solid #e5e7eb; margin-top: 1rem; }
-        .mobile-dropdown-content { overflow: hidden; transition: max-height 0.3s ease; }
-        .mobile-dropdown-btn svg { transition: transform 0.3s ease; }
-        .mobile-dropdown-btn.active svg { transform: rotate(180deg); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        :root { --ink:#111827; --muted:#65718a; --violet:#6937e8; --lime:#8dfc38; --paper:#fff; --soft:#f5f3ff; }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body.review-library { margin:0; background:#fff; color:var(--ink); font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+        body.review-library > .legacy-directory-nav, body.review-library > .legacy-directory-hero, body.review-library > .legacy-directory-filters, body.review-library > .legacy-directory-footer { display:none !important; }
+        .review-header { position:sticky; top:0; z-index:100; background:rgba(8,8,18,.96); backdrop-filter:blur(18px); border-bottom:1px solid rgba(255,255,255,.09); }
+        .review-header-inner { width:min(1180px,calc(100% - 36px)); height:72px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+        .review-brand { display:inline-flex; align-items:center; gap:11px; color:#fff; text-decoration:none; font-weight:900; letter-spacing:-.04em; }
+        .review-brand img { width:43px; height:43px; object-fit:contain; }
+        .review-brand span { font-size:1.05rem; }
+        .review-brand b { color:var(--lime); }
+        .review-nav { display:flex; align-items:center; gap:26px; }
+        .review-nav a { color:#e8e7f0; text-decoration:none; font-size:.91rem; font-weight:750; }
+        .review-nav a:hover, .review-nav a[aria-current="page"] { color:var(--lime); }
+        .review-hero { position:relative; overflow:hidden; background:linear-gradient(125deg,#0a0a13 0%,#17102e 52%,#382080 100%); color:#fff; }
+        .review-hero::before { content:""; position:absolute; width:430px; height:430px; border-radius:50%; right:-90px; top:-220px; background:radial-gradient(circle,rgba(141,252,56,.28),rgba(141,252,56,0) 68%); }
+        .review-hero-inner { position:relative; width:min(1180px,calc(100% - 36px)); margin:auto; padding:74px 0 62px; display:grid; grid-template-columns:minmax(0,1.2fr) minmax(290px,.8fr); gap:68px; align-items:end; }
+        .review-kicker { margin:0 0 17px; color:var(--lime); font-size:.76rem; font-weight:900; letter-spacing:.16em; text-transform:uppercase; }
+        .review-hero h1 { max-width:790px; margin:0; font-size:clamp(3rem,6.3vw,5.8rem); line-height:.92; letter-spacing:-.068em; font-weight:950; }
+        .review-hero h1 em { color:#c9a9ff; font-style:normal; }
+        .review-hero-copy { max-width:650px; margin:24px 0 0; color:#d7d4e3; font-size:1.09rem; line-height:1.65; }
+        .review-promise { border:1px solid rgba(255,255,255,.15); border-radius:24px; padding:24px; background:rgba(255,255,255,.075); box-shadow:0 22px 70px rgba(0,0,0,.22); }
+        .review-promise strong { display:block; margin-bottom:14px; font-size:1rem; }
+        .review-promise ul { list-style:none; margin:0; padding:0; display:grid; gap:12px; color:#dbd7e7; font-size:.92rem; }
+        .review-promise li { display:flex; gap:10px; align-items:flex-start; }
+        .review-promise li::before { content:"✓"; flex:0 0 auto; color:var(--lime); font-weight:950; }
+        .review-explorer { width:min(1180px,calc(100% - 36px)); margin:-1px auto 0; padding:38px 0 22px; }
+        .review-search-wrap { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:center; }
+        .review-search { position:relative; }
+        .review-search svg { position:absolute; left:20px; top:50%; width:22px; height:22px; transform:translateY(-50%); color:#7c65b4; pointer-events:none; }
+        .review-search input { width:100%; min-height:64px; padding:0 54px; border:2px solid #ded7f4; border-radius:18px; background:#fff; color:#151127; font:700 1rem/1.2 inherit; outline:none; box-shadow:0 14px 36px rgba(60,36,119,.08); }
+        .review-search input:focus { border-color:#7c4dff; box-shadow:0 0 0 5px rgba(124,77,255,.12); }
+        .review-result-count { min-width:150px; text-align:right; color:#5c4a85; font-size:.91rem; font-weight:800; }
+        .review-filter-group { margin-top:22px; }
+        .review-filter-label { display:block; margin:0 0 10px; color:#6c6280; font-size:.73rem; font-weight:900; letter-spacing:.11em; text-transform:uppercase; }
+        .review-filter-row { display:flex; flex-wrap:wrap; gap:9px; }
+        .filter-btn, .cat-btn { appearance:none; border:1px solid #e5e0ef; border-radius:999px; padding:10px 15px; background:#fff; color:#4f465f; font-size:.85rem; font-weight:780; cursor:pointer; transition:.18s ease; }
+        .filter-btn:hover, .cat-btn:hover { border-color:#9f7aea; color:#5b25c8; transform:translateY(-1px); }
+        .filter-btn.active, .cat-btn.active { border-color:#171222; background:#171222; color:#fff; box-shadow:0 7px 17px rgba(23,18,34,.18); }
+        .review-grid-section { background:linear-gradient(#fff,#fbfaff); }
+        #tools-container { width:min(1180px,calc(100% - 36px)); margin:auto; padding:24px 0 72px; }
+        .review-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+        .review-card { --card-a:#6338de; --card-b:#28144f; position:relative; overflow:hidden; display:flex; min-height:500px; flex-direction:column; border:1px solid #e8e3f0; border-radius:25px; background:#fff; box-shadow:0 12px 42px rgba(34,25,59,.075); transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease; }
+        .review-card:hover { transform:translateY(-6px); border-color:#cfc0f1; box-shadow:0 24px 58px rgba(51,31,96,.15); }
+        .review-card-art { position:relative; min-height:140px; padding:22px; background:linear-gradient(135deg,var(--card-a),var(--card-b)); color:#fff; overflow:hidden; }
+        .review-card-art::after { content:""; position:absolute; inset:auto -25px -75px auto; width:180px; height:180px; border-radius:50%; background:rgba(255,255,255,.12); }
+        .review-card-mark { position:absolute; right:13px; bottom:-12px; width:126px; opacity:.27; filter:saturate(1.35); transform:rotate(-4deg); }
+        .review-card-category { position:relative; z-index:1; display:inline-flex; padding:7px 10px; border:1px solid rgba(255,255,255,.25); border-radius:999px; background:rgba(12,9,28,.2); color:#fff; font-size:.7rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+        .review-card-score { position:absolute; z-index:2; left:22px; bottom:18px; font-size:1.05rem; font-weight:950; }
+        .review-card-score small { color:rgba(255,255,255,.75); font-size:.7rem; font-weight:700; }
+        .review-card-body { display:flex; flex:1; flex-direction:column; padding:23px; }
+        .review-card-type { color:#7046d5; font-size:.71rem; font-weight:900; letter-spacing:.11em; text-transform:uppercase; }
+        .review-card h2 { margin:8px 0 11px; color:#171222; font-size:1.58rem; line-height:1.08; letter-spacing:-.035em; }
+        .review-card-summary { margin:0 0 17px; color:#65718a; font-size:.93rem; line-height:1.55; }
+        .review-card-fit { margin:0 0 14px; padding:12px 13px; border-radius:13px; background:#f6f3ff; color:#43376a; font-size:.84rem; line-height:1.4; }
+        .review-card-points { list-style:none; margin:0 0 17px; padding:0; display:grid; gap:8px; color:#374151; font-size:.84rem; }
+        .review-card-points li { display:flex; gap:8px; }
+        .review-card-points li::before { content:"+"; color:#5fba18; font-weight:950; }
+        .review-card-caution { margin:auto 0 18px; color:#7a6673; font-size:.79rem; line-height:1.45; }
+        .review-card-caution strong { color:#ad4264; }
+        .review-card-actions { display:grid; grid-template-columns:1fr auto; gap:10px; }
+        .review-card-actions a { display:flex; min-height:45px; align-items:center; justify-content:center; border-radius:12px; padding:10px 13px; text-decoration:none; font-size:.82rem; font-weight:850; }
+        .review-card-actions .read-review { background:#171222; color:#fff; }
+        .review-card-actions .read-review:hover { background:#5e28d4; }
+        .review-card-actions .visit-tool { border:1px solid #ded6ed; color:#553a8d; }
+        .review-card-actions .visit-tool:hover { border-color:#805ad5; background:#f7f3ff; }
+        .review-more-wrap { display:flex; flex-direction:column; align-items:center; gap:12px; padding-top:34px; }
+        .review-load-more { border:0; border-radius:999px; padding:15px 25px; background:#8dfc38; color:#13220a; font-size:.92rem; font-weight:950; cursor:pointer; box-shadow:0 10px 25px rgba(95,186,24,.22); }
+        .review-load-more:hover { transform:translateY(-2px); }
+        .review-empty { grid-column:1/-1; padding:72px 24px; border:2px dashed #ddd4ed; border-radius:24px; text-align:center; color:#695c7d; }
+        .review-footer { border-top:1px solid #ece8f2; background:#faf9fc; }
+        .review-footer-inner { width:min(1180px,calc(100% - 36px)); margin:auto; padding:32px 0; display:flex; justify-content:space-between; gap:24px; color:#716a7c; font-size:.82rem; line-height:1.55; }
+        .review-footer a { color:#5835b7; font-weight:800; text-decoration:none; }
+        body.review-library #contextual-revenue-route, body.review-library #affiliate-sticky-recommendation { display:none !important; }
+        @media (max-width:980px) { .review-hero-inner { grid-template-columns:1fr; gap:30px; } .review-promise { max-width:620px; } .review-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+        @media (max-width:700px) { .review-header-inner { height:64px; } .review-brand img { width:38px; height:38px; } .review-nav a:not([aria-current="page"]) { display:none; } .review-hero-inner { padding:54px 0 45px; } .review-hero h1 { font-size:clamp(2.7rem,14vw,4rem); } .review-search-wrap { grid-template-columns:1fr; } .review-result-count { text-align:left; } .review-grid { grid-template-columns:1fr; } .review-card { min-height:0; } .review-footer-inner { flex-direction:column; } }
     </style>
     <script type="application/ld+json">
 {
@@ -104,8 +121,14 @@
     </script>
 
 </head>
-<body class="bg-white">
-            <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+<body class="review-library bg-white">
+    <header class="site-header review-header">
+        <div class="review-header-inner">
+            <a class="review-brand" href="/" aria-label="Artificial.One home"><img src="images/branding/artificial-one-elephant-mark.png" alt="" width="43" height="43"><span>artificial<b>.</b>one</span></a>
+            <nav class="review-nav" aria-label="Review library navigation"><a href="reviews.html" aria-current="page">Reviews</a><a href="buyers-guides.html">Buyer guides</a><a href="news.html">AI news</a></nav>
+        </div>
+    </header>
+            <nav class="legacy-directory-nav bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
                 <a href="index.html"><img src="images/social/artificial-one-logo.png" alt="artificial.one" class="h-16 sm:h-20 md:h-24"></a>
@@ -206,14 +229,14 @@
         </div>
     </nav>
 
-    <section class="py-12 sm:py-16 bg-gradient-to-b from-purple-50 to-white">
+    <section class="legacy-directory-hero py-12 sm:py-16 bg-gradient-to-b from-purple-50 to-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Honest AI Tool Reviews</h1>
             <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8">Compare source-backed AI-tool profiles with visible pros, limitations and pricing notes. Confirm live terms before buying.</p>
         </div>
     </section>
 
-    <section class="py-6 sm:py-8 bg-white border-b border-gray-200">
+    <section class="legacy-directory-filters py-6 sm:py-8 bg-white border-b border-gray-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-6">
                 <h3 class="text-sm font-semibold text-gray-700 mb-3">Filter by Type:</h3>
@@ -242,9 +265,60 @@
         </div>
     </section>
 
-    <div id="tools-container" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"></div>
+    <section class="review-hero" aria-labelledby="review-library-title">
+        <div class="review-hero-inner">
+            <div>
+                <p class="review-kicker">The AI tool library</p>
+                <h1 id="review-library-title">Reviews that help you <em>decide.</em></h1>
+                <p class="review-hero-copy">Skip the feature-list fog. Find what a tool does well, where it falls short, who it suits and what it costs—then read the full verdict when something looks promising.</p>
+            </div>
+            <aside class="review-promise" aria-label="What every review covers">
+                <strong>Every review gets to the useful bits</strong>
+                <ul><li>A clear best-fit recommendation</li><li>Strengths and limitations side by side</li><li>Current pricing context before you click</li></ul>
+            </aside>
+        </div>
+    </section>
 
-    <footer class="bg-gray-50 border-t border-gray-200 py-8 mt-16">
+    <main class="review-grid-section">
+        <div class="review-explorer">
+            <div class="review-search-wrap">
+                <label class="review-search" aria-label="Search the review library">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+                    <input type="search" data-review-search placeholder="Search by tool, job or category…" autocomplete="off">
+                </label>
+                <p class="review-result-count" data-review-result-count aria-live="polite">Loading reviews…</p>
+            </div>
+            <div class="review-filter-group">
+                <span class="review-filter-label">Access &amp; pricing</span>
+                <div class="review-filter-row">
+                    <button type="button" data-type="all" onclick="filterByType('all')" class="filter-btn active">All reviews</button>
+                    <button type="button" data-type="free" onclick="filterByType('free')" class="filter-btn">Free to start</button>
+                    <button type="button" data-type="deal" onclick="filterByType('deal')" class="filter-btn">Lifetime deals</button>
+                    <button type="button" data-type="subscription" onclick="filterByType('subscription')" class="filter-btn">Subscriptions</button>
+                </div>
+            </div>
+            <div class="review-filter-group">
+                <span class="review-filter-label">What are you working on?</span>
+                <div class="review-filter-row">
+                    <button type="button" data-category="all" onclick="filterByCategory('all', this)" class="cat-btn active">Everything</button>
+                    <button type="button" data-category="writing" onclick="filterByCategory('writing', this)" class="cat-btn">Writing</button>
+                    <button type="button" data-category="design" onclick="filterByCategory('design', this)" class="cat-btn">Design</button>
+                    <button type="button" data-category="video" onclick="filterByCategory('video', this)" class="cat-btn">Video</button>
+                    <button type="button" data-category="coding" onclick="filterByCategory('coding', this)" class="cat-btn">Development</button>
+                    <button type="button" data-category="productivity" onclick="filterByCategory('productivity', this)" class="cat-btn">Productivity</button>
+                    <button type="button" data-category="voice" onclick="filterByCategory('voice', this)" class="cat-btn">Audio</button>
+                    <button type="button" data-category="research" onclick="filterByCategory('research', this)" class="cat-btn">Research</button>
+                    <button type="button" data-category="marketing" onclick="filterByCategory('marketing', this)" class="cat-btn">Marketing</button>
+                    <button type="button" data-category="data" onclick="filterByCategory('data', this)" class="cat-btn">Data</button>
+                </div>
+            </div>
+        </div>
+        <div id="tools-container"></div>
+    </main>
+
+    <footer class="review-footer"><div class="review-footer-inner"><span>Independent tool guidance for finding software that fits the job.</span><span>Some links are affiliate links. We may earn a commission at no extra cost to you. <a href="/#methodology">How we review</a></span></div></footer>
+
+    <footer class="legacy-directory-footer bg-gray-50 border-t border-gray-200 py-8 mt-16">
         <div class="max-w-4xl mx-auto px-4 text-center text-gray-600">
             <p class="mb-2">© 2026 artificial.one - AI tools reviewed by AI</p>
             <p class="text-sm text-gray-500 max-w-xl mx-auto">We use affiliate links. We may earn a commission if you buy through our links (no extra cost to you).</p>
@@ -1020,7 +1094,7 @@ function getInitialTypeFilter() {
         if (f === 'free') return 'free';
         if (f === 'paid' || f === 'subscription') return 'subscription';
     } catch (_) {}
-    return 'deal';
+    return 'all';
 }
 let currentTypeFilter = getInitialTypeFilter();
 let currentCategoryFilter = 'all';
@@ -1191,6 +1265,129 @@ window.addEventListener('DOMContentLoaded', function() {
     if (activeBtn) activeBtn.classList.add('active');
     console.log('Page loaded, rendering...');
     renderTools();
+});
+</script>
+
+<script>
+let reviewVisibleCount = 24;
+let reviewSearchTerm = '';
+const reviewBatchSize = 24;
+const reviewPalette = {
+    writing: ['#7442e8', '#32165f'], design: ['#db3d8e', '#5d1747'], video: ['#ff6747', '#7f2440'],
+    coding: ['#156ee8', '#173b82'], productivity: ['#16a672', '#105546'], voice: ['#8f48ef', '#431a75'],
+    research: ['#087fa7', '#143f70'], marketing: ['#f05572', '#732c66'], data: ['#2b80dc', '#18426c'], other: ['#6942d6', '#2d1a59']
+};
+const affiliateOfferByUrl = {
+    "https://get.descript.com/951y7htioj6v": "descript",
+    "https://try.elevenlabs.io/v5gy7s0nd0ty": "elevenlabs"
+};
+
+function reviewEscape(value) {
+    return String(value == null ? '' : value).replace(/[&<>'"]/g, function (char) {
+        return ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' })[char];
+    });
+}
+
+function reviewSlug(name) {
+    return String(name).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+function reviewScore(tool) {
+    const value = parseFloat(tool.rating) || 0;
+    return String(tool.rating).indexOf('/10') !== -1 ? value / 2 : value;
+}
+
+function reviewTypeLabel(type) {
+    if (type === 'free') return 'Free to start';
+    if (type === 'deal') return 'Lifetime deal';
+    return 'Paid plan';
+}
+
+function filteredReviews() {
+    const needle = reviewSearchTerm.trim().toLowerCase();
+    return tools.filter(function (tool) {
+        const category = getCategorySlug(tool.cat);
+        const matchesType = currentTypeFilter === 'all' || tool.type === currentTypeFilter;
+        const matchesCategory = currentCategoryFilter === 'all' || category === currentCategoryFilter;
+        const searchable = [tool.name, tool.cat, tool.desc, tool.bestFor, tool.pricing].concat(tool.pros || [], tool.cons || []).join(' ').toLowerCase();
+        return matchesType && matchesCategory && (!needle || searchable.indexOf(needle) !== -1);
+    }).sort(function (a, b) { return reviewScore(b) - reviewScore(a) || a.name.localeCompare(b.name); });
+}
+
+function reviewCard(tool) {
+    const category = getCategorySlug(tool.cat);
+    const colors = reviewPalette[category] || reviewPalette.other;
+    const slug = reviewSlug(tool.name);
+    const reviewUrl = `tools/${slug}-review.html`;
+    const offerId = affiliateOfferByUrl[tool.link] || (tool.type === 'deal' ? slug : '');
+    const affiliateAttrs = offerId
+        ? `rel="nofollow sponsored noopener" data-affiliate-offer="" data-offer-id="${reviewEscape(offerId)}" data-placement="reviews-directory"`
+        : 'rel="noopener"';
+    const pros = (tool.pros || []).slice(0, 2).map(function (point) { return `<li>${reviewEscape(point)}</li>`; }).join('');
+    const caution = tool.cons && tool.cons.length ? `<p class="review-card-caution"><strong>Worth knowing:</strong> ${reviewEscape(tool.cons[0])}</p>` : '';
+    const score = reviewScore(tool).toFixed(1).replace('.0', '');
+    return `<article class="review-card" style="--card-a:${colors[0]};--card-b:${colors[1]}">
+        <div class="review-card-art">
+            <span class="review-card-category">${reviewEscape(tool.cat)}</span>
+            <img class="review-card-mark" src="images/branding/artificial-one-elephant-mark.png" alt="" loading="lazy" width="126" height="126">
+            <span class="review-card-score">${score}<small> / 5</small></span>
+        </div>
+        <div class="review-card-body">
+            <span class="review-card-type">${reviewTypeLabel(tool.type)} · ${reviewEscape(tool.pricing)}</span>
+            <h2>${reviewEscape(tool.name)}</h2>
+            <p class="review-card-summary">${reviewEscape(tool.desc)}</p>
+            <p class="review-card-fit"><strong>Best for:</strong> ${reviewEscape(tool.bestFor)}</p>
+            <ul class="review-card-points">${pros}</ul>
+            ${caution}
+            <div class="review-card-actions">
+                <a class="read-review" href="${reviewUrl}">Read the review →</a>
+                <a class="visit-tool" href="${reviewEscape(tool.link)}" target="_blank" ${affiliateAttrs} aria-label="Visit ${reviewEscape(tool.name)}">Visit</a>
+            </div>
+        </div>
+    </article>`;
+}
+
+function renderTools() {
+    const container = document.getElementById('tools-container');
+    if (!container) return;
+    const matches = filteredReviews();
+    const visible = matches.slice(0, reviewVisibleCount);
+    const grid = visible.length
+        ? `<div class="review-grid">${visible.map(reviewCard).join('')}</div>`
+        : '<div class="review-grid"><div class="review-empty"><h2>No matching reviews yet</h2><p>Try a broader phrase or clear one of the filters.</p></div></div>';
+    const more = visible.length < matches.length
+        ? `<div class="review-more-wrap"><button class="review-load-more" type="button" data-load-more>Show ${Math.min(reviewBatchSize, matches.length - visible.length)} more reviews</button><span>${matches.length - visible.length} still waiting in the library</span></div>`
+        : '';
+    container.innerHTML = grid + more;
+    const count = document.querySelector('[data-review-result-count]');
+    if (count) count.textContent = `${matches.length} ${matches.length === 1 ? 'review' : 'reviews'} found`;
+    const loadMore = container.querySelector('[data-load-more]');
+    if (loadMore) loadMore.addEventListener('click', function () { reviewVisibleCount += reviewBatchSize; renderTools(); });
+}
+
+function filterByType(type) {
+    currentTypeFilter = type;
+    reviewVisibleCount = reviewBatchSize;
+    document.querySelectorAll('.filter-btn').forEach(function (button) { button.classList.toggle('active', button.dataset.type === type); });
+    renderTools();
+}
+
+function filterByCategory(category, source) {
+    currentCategoryFilter = category;
+    reviewVisibleCount = reviewBatchSize;
+    document.querySelectorAll('.cat-btn').forEach(function (button) { button.classList.toggle('active', button === source || button.dataset.category === category); });
+    renderTools();
+}
+
+function updateCounts() {}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const search = document.querySelector('[data-review-search]');
+    if (search) search.addEventListener('input', function () {
+        reviewSearchTerm = search.value;
+        reviewVisibleCount = reviewBatchSize;
+        renderTools();
+    });
 });
 </script>
 
