@@ -56,6 +56,30 @@ class VisualContractTests(unittest.TestCase):
             self.assertIn("legacy-tool-pages.css", source, path.name)
             self.assertIn("affiliate-tracking.js", source, path.name)
 
+    def test_review_library_is_reader_first_and_progressive(self):
+        source = (ROOT / "reviews.html").read_text(encoding="utf-8")
+        self.assertIn('name="ai1-clean-editorial" content="true"', source)
+        self.assertIn("Reviews that help you <em>decide.</em>", source)
+        self.assertIn("data-review-search", source)
+        self.assertIn("data-load-more", source)
+        self.assertIn("const reviewBatchSize = 24", source)
+        self.assertIn("return 'all';", source)
+
+    def test_detailed_reviews_use_a_light_reading_surface(self):
+        css = (ROOT / "assets" / "legacy-tool-pages.css").read_text(encoding="utf-8")
+        self.assertIn("background: #fff !important", css)
+        self.assertIn('[data-beehiiv-form="newsletter"] { display: none !important; }', css)
+        self.assertIn("body.legacy-tool-page .pros {", css)
+        self.assertIn("body.legacy-tool-page .cons {", css)
+
+    def test_review_reading_avoids_injected_promotional_clutter(self):
+        directory = (ROOT / "reviews.html").read_text(encoding="utf-8")
+        detail_css = (ROOT / "assets" / "legacy-tool-pages.css").read_text(encoding="utf-8")
+        self.assertIn("#contextual-revenue-route", directory)
+        self.assertIn("#affiliate-sticky-recommendation", directory)
+        self.assertIn("#contextual-revenue-route", detail_css)
+        self.assertIn("#affiliate-sticky-recommendation", detail_css)
+
 
 if __name__ == "__main__":
     unittest.main()
