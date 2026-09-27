@@ -1,7 +1,65 @@
 {
   "version": 1,
-  "updated_at": "2026-09-27T17:16:20.729433+00:00",
+  "updated_at": "2026-09-27T21:35:38.716541+00:00",
   "items": [
+    {
+      "title": "Engram is a sampler that turns broken AI hallucinations into music",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music",
+      "source": "The Verge AI",
+      "published_at": "2026-09-27T20:46:36+00:00",
+      "display_date": "Sep 27, 2026",
+      "category": "AI Business",
+      "description": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram. It's a sampler and groovebox that uses AI to mangle incoming audio and even hallucinate completely new sounds. This isn't Suno in a box, though. This isn't a \"push-button, get-song\" device, aimed at creating something that sounds ready for top-40 […]",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/09/27/engram-is-a-sampler-that-turns-broken-ai-hallucinations-into-music.html"
+    },
+    {
+      "title": "Anthropic’s CEO is about to have dinner with President Trump",
+      "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-27T20:34:28+00:00",
+      "display_date": "Sep 27, 2026",
+      "category": "AI Tools & Products",
+      "description": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/09/27/anthropic-s-ceo-is-about-to-have-dinner-with-president-trump.html"
+    },
+    {
+      "title": "OpenAI agents tried to ‘bruteforce’ a UN website",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website",
+      "source": "The Verge AI",
+      "published_at": "2026-09-27T17:21:07+00:00",
+      "display_date": "Sep 27, 2026",
+      "category": "Research",
+      "description": "Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and June. While the incident doesn't quite rise to the level of the Hugging Face hack, or the recent attacks on US government sites, it's yet another concerning example of AI […]",
+      "related": {
+        "title": "Evaluate Unbounce for this workflow",
+        "url": "partner-offers/unbounce-landing-pages.html",
+        "offer_id": "unbounce"
+      }
+    },
+    {
+      "title": "Anthropic’s Dario Amodei gets the SNL treatment",
+      "url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-27T16:30:00+00:00",
+      "display_date": "Sep 27, 2026",
+      "category": "AI Tools & Products",
+      "description": "\"AI is the devil and I its maker.\"",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
     {
       "title": "AI agents do more of the work in model development, but humans still make the decisions",
       "url": "https://the-decoder.com/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decisions/",
@@ -206,50 +264,6 @@
       "archive_url": "news/2026/09/25/can-apple-home-s-ai-camera-features-outsmart-amazon-s-and-google-s-i-put-them-to-t.html"
     },
     {
-      "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
-      "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-09-25T19:13:38+00:00",
-      "display_date": "Sep 25, 2026",
-      "category": "AI Tools & Products",
-      "description": "Anthropic has committed $11.6 billion over seven years to Akamai's cloud infrastructure, a bet on CPUs that could grow to about $20 billion, and in an unusual arrangement, Akamai is giving Anthropic a potential stake of up to 5% of its stock that grows as Anthropic spends more.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
-      "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-09-25T18:33:59+00:00",
-      "display_date": "Sep 25, 2026",
-      "category": "AI Business",
-      "description": "The funding, which comes from Third Point, Nvidia, and others, will fuel the company's massive AI data center buildout.",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/09/25/ahead-of-us-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-financing.html"
-    },
-    {
-      "title": "Meta’s Muse just stole the AI spotlight from OpenAI and Anthropic",
-      "url": "https://techcrunch.com/podcast/metas-muse-just-stole-the-ai-spotlight-from-openai-and-anthropic/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-09-25T18:22:47+00:00",
-      "display_date": "Sep 25, 2026",
-      "category": "Models & LLMs",
-      "description": "When AI leaders at OpenAI and Anthropic started talking about “pacing the frontier,” maybe someone should have asked: what pace? Now it’s turned into model drop week for both companies as Anthropic rolled out Opus 5.5, followed by OpenAI’s GPT-6 model updates just 90 minutes later. But the company that stole the spotlight was Meta, whose personal AI agent Muse is reportedly outpacing ChatGPT’s early numbers and is headed for smart glasses and […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/09/25/meta-s-muse-just-stole-the-ai-spotlight-from-openai-and-anthropic.html"
-    },
-    {
       "title": "One company is at the center of a wave of rogue AI attacks",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google",
       "source": "The Verge AI",
@@ -257,34 +271,6 @@
       "display_date": "Sep 25, 2026",
       "category": "Models & LLMs",
       "description": "In July, OpenAI revealed that its AI agents had attacked Hugging Face without permission, sparking widespread concerns about AI safety. Since then, a string of similar incidents involving agents from Meta, Anthropic, Google, and other companies has fueled further fears about rogue AI. As disclosures implicating numerous AI models trickled out over the past few […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
-      "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
-      "source": "The Verge AI",
-      "published_at": "2026-09-25T13:14:27+00:00",
-      "display_date": "Sep 25, 2026",
-      "category": "AI Tools & Products",
-      "description": "After teasing its new Copilot \"super app\" last month, Microsoft is officially unveiling it today. The redesigned Copilot app bundles three AI capabilities into a single interface of chat, coding, and agents. As part of the launch, Microsoft is also rebranding Scout, the AI personal assistant it unveiled at Build earlier this year, as Autopilot. […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Gemini 3.8 Live with Live Avatar gives Google’s AI a face",
-      "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face",
-      "source": "The Verge AI",
-      "published_at": "2026-09-24T20:00:34+00:00",
-      "display_date": "Sep 24, 2026",
-      "category": "Models & LLMs",
-      "description": "Google's new Gemini 3.8 Live update lets users have conversations with the model while watching an animated AI persona respond in real time. The \"Live Avatar\" will lip-sync and show different facial expressions during conversations, but it's currently only available to Gemini Enterprise customers. As noted by Google, Live Avatar can transition between the 97 […]",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -510,6 +496,20 @@
       "display_date": "Sep 15, 2026",
       "category": "AI Tools & Products",
       "description": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Building AI to accelerate science and improve lives",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+      "source": "Google AI",
+      "published_at": "2026-09-15T16:00:00+00:00",
+      "display_date": "Sep 15, 2026",
+      "category": "AI Tools & Products",
+      "description": "B-roll showing diverse environments and people, including a teacher and students in a classroom and a patient with a doctor",
       "related": {
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
