@@ -195,6 +195,30 @@
     {
       "category": "Models & LLMs",
       "published": "",
+      "title": "Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time",
+      "url": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI says 80 to 90 percent of its research already targets GPT 7 and beyond",
+      "url": "https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Tens of thousands of security probes show OpenAI's Hugging Face incident was just the beginning",
+      "url": "https://the-decoder.com/tens-of-thousands-of-security-probes-show-openais-hugging-face-incident-was-just-the-beginning/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Goldman Sachs expects Big Tech to spend $1.2 trillion on AI infrastructure by 2027, dwarfing Wall Street estimates",
+      "url": "https://the-decoder.com/goldman-sachs-expects-big-tech-to-spend-1-2-trillion-on-ai-infrastructure-by-2027-dwarfing-wall-street-estimates/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
       "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
       "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/"
     },
@@ -229,18 +253,6 @@
       "url": "https://the-decoder.com/nvidias-sol-pi-system-cuts-coding-agent-token-usage-nearly-in-half-by-optimizing-the-harness/"
     },
     {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI's GPT-6 Astra can now tell you exactly where you screwed up your IKEA shelf",
-      "url": "https://the-decoder.com/openais-gpt-6-astra-can-now-tell-you-exactly-where-you-screwed-up-your-ikea-shelf/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI pauses its \"most capable models\" after agents exploit loopholes and leak data",
-      "url": "https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/"
-    },
-    {
       "category": "AI Tools & Products",
       "published": "",
       "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
@@ -271,12 +283,6 @@
       "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/"
     },
     {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "Pentagon was right to slap Anthropic with a security supply chain risk label, federal court says",
-      "url": "https://the-decoder.com/pentagon-was-right-to-slap-anthropic-with-a-security-supply-chain-risk-label-federal-court-says/"
-    },
-    {
       "category": "AI Business",
       "published": "",
       "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
@@ -289,22 +295,10 @@
       "url": "https://techcrunch.com/podcast/metas-muse-just-stole-the-ai-spotlight-from-openai-and-anthropic/"
     },
     {
-      "category": "Research",
-      "published": "",
-      "title": "Another Google Deepmind researcher quits, says building superintelligent AI soon is \"inherently irresponsible\"",
-      "url": "https://the-decoder.com/another-google-deepmind-researcher-quits-says-building-superintelligent-ai-soon-is-inherently-irresponsible/"
-    },
-    {
       "category": "Models & LLMs",
       "published": "",
       "title": "One company is at the center of a wave of rogue AI attacks",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Microsoft gives Copilot another makeover, adding an Autopilot agent and usage-based billing",
-      "url": "https://the-decoder.com/microsoft-gives-copilot-another-makeover-adding-an-autopilot-agent-and-usage-based-billing/"
     },
     {
       "category": "AI Tools & Products",
@@ -335,6 +329,12 @@
       "published": "",
       "title": "OpenAI extends cyber access to Ukraine for civilian defense",
       "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
+      "url": "https://openai.com/index/ringg"
     }
   ],
   "recipes": [
@@ -477,10 +477,10 @@
   ],
   "stats": {
     "changes": 21,
-    "monetized": 296,
+    "monetized": 295,
     "recipes": 8,
     "reviewed": 42,
-    "tools": 647
+    "tools": 646
   },
   "tools": [
     {
@@ -2884,24 +2884,6 @@
       "source": "",
       "status": "destination-checked",
       "summary": "AI-relevant AppSumo catalogue record for Feederloop; verify current features and terms on the destination."
-    },
-    {
-      "affiliate": "https://appsumo.8odi.net/c/6870305/1382957/7443",
-      "best_for": "Buyers evaluating a currently available AI or automation offer.",
-      "category": "AI writing",
-      "checked": "2026-09-27",
-      "features": [],
-      "free": false,
-      "id": "flotiq",
-      "monetized": true,
-      "name": "Flotiq",
-      "offer_id": "impact-ad-1382957",
-      "platforms": [],
-      "price": "Check current AppSumo price and terms",
-      "profile": "appsumo-guides/flotiq.html",
-      "source": "",
-      "status": "destination-checked",
-      "summary": "AI-relevant AppSumo catalogue record for Flotiq; verify current features and terms on the destination."
     },
     {
       "affiliate": "https://appsumo.8odi.net/c/6870305/1516605/7443",
