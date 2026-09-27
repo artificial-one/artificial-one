@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 from datetime import datetime, timedelta, timezone
+from difflib import SequenceMatcher
 import html
 from html.parser import HTMLParser
 import json
@@ -31,6 +32,7 @@ ARCHIVE_PATH = ROOT / "data" / "ai_news_archive.json"
 OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 NEWS_SITEMAP_PATH = ROOT / "news-sitemap.xml"
 SITE_URL = "https://artificial.one/"
+PIPELINE_VERSION = "2"
 SPACE_RE = re.compile(r"\s+")
 WORD_RE = re.compile(r"[a-z0-9][a-z0-9.+-]*", re.I)
 SENSITIVE_RE = re.compile(r"\b(?:death|killed|suicide|abuse|war|attack|victim|disease|medical|layoff|lawsuit)\b", re.I)
@@ -195,6 +197,46 @@ def copied_phrase_too_long(draft: dict[str, Any], evidence: str) -> bool:
     return False
 
 
+def closest_evidence_fragment(value: str, evidence: str) -> str:
+    """Recover a near-verbatim model citation from the source without inventing text."""
+    target = normalized(value).split()
+    source = normalized(evidence).split()
+    if not 5 <= len(target) <= 18 or len(source) < 5:
+        return value
+    best_score = 0.0
+    best = ""
+    for size in range(max(5, len(target) - 2), min(18, len(target) + 2) + 1):
+        for start in range(0, len(source) - size + 1):
+            candidate_words = source[start:start + size]
+            score = SequenceMatcher(None, target, candidate_words, autojunk=False).ratio()
+            if score > best_score:
+                best_score = score
+                best = " ".join(candidate_words)
+    # This only repairs the quoted citation. The resulting claim still has to
+    # pass the deterministic checks and the separate model critic.
+    return best if best_score >= 0.70 else value
+
+
+def repair_mechanical_fields(item: dict[str, Any], evidence: str, draft: dict[str, Any]) -> dict[str, Any]:
+    """Repair formatting only; factual acceptance remains with both quality gates."""
+    repaired = json.loads(json.dumps(draft, ensure_ascii=False))
+    elephant = str(repaired.get("elephant_take") or "").strip()
+    if elephant and not elephant.startswith("🐘"):
+        repaired["elephant_take"] = "🐘 " + elephant
+    repaired["sensitive"] = bool(SENSITIVE_RE.search(f"{item.get('title', '')} {evidence[:2000]}"))
+    facts = repaired.get("facts")
+    if isinstance(facts, list):
+        normalized_evidence = normalized(evidence)
+        for fact in facts:
+            if not isinstance(fact, dict):
+                continue
+            fragment = str(fact.get("evidence") or "").strip()
+            normalized_fragment = normalized(fragment)
+            if not (5 <= len(normalized_fragment.split()) <= 18 and normalized_fragment in normalized_evidence):
+                fact["evidence"] = closest_evidence_fragment(fragment, evidence)
+    return repaired
+
+
 def validate_draft(item: dict[str, Any], evidence: str, draft: dict[str, Any]) -> list[str]:
     issues: list[str] = []
     ranges = {"headline": (35, 120), "summary": (120, 600), "why_it_matters": (140, 900), "elephant_take": (90, 700), "caveat": (55, 500)}
@@ -329,7 +371,7 @@ def process(*, max_new: int, max_attempts: int, time_budget: int, now: datetime,
     cooldown_urls: set[str] = set()
     for failure in prior_failures:
         failed_at = parse_date(str(failure.get("at") or ""))
-        if failed_at and failed_at >= now - timedelta(hours=18):
+        if str(failure.get("pipeline_version") or "") == PIPELINE_VERSION and failed_at and failed_at >= now - timedelta(hours=18):
             cooldown_urls.add(str(failure.get("url") or ""))
     attempted = 0
     if not check:
@@ -341,7 +383,7 @@ def process(*, max_new: int, max_attempts: int, time_budget: int, now: datetime,
             attempted += 1
             try:
                 evidence = fetch_evidence(item, sources)
-                draft = draft_article(item, evidence)
+                draft = repair_mechanical_fields(item, evidence, draft_article(item, evidence))
                 review = review_article(item, evidence, draft)
                 if not review["approved"]:
                     raise NewsBuildError("quality gate rejected draft: " + "; ".join(review["issues"][:3]))
@@ -354,7 +396,7 @@ def process(*, max_new: int, max_attempts: int, time_budget: int, now: datetime,
                 known.add(str(item["url"]))
                 created.append(page)
             except Exception as exc:
-                failures.append({"url": str(item.get("url") or ""), "reason": clean_text(str(exc), 240), "at": now.isoformat()})
+                failures.append({"url": str(item.get("url") or ""), "reason": clean_text(str(exc), 240), "at": now.isoformat(), "pipeline_version": PIPELINE_VERSION})
     records.sort(key=lambda record: str(record.get("created_at") or ""), reverse=True)
     retained_failures = [item for item in prior_failures if str(item.get("url") or "") not in {str(value.get("url") or "") for value in failures} and str(item.get("url") or "") not in known]
     archive = {"version": 1, "updated_at": now.isoformat() if created else archive.get("updated_at", ""), "articles": records, "last_failures": (failures + retained_failures)[:40]}
