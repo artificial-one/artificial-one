@@ -1,7 +1,65 @@
 {
   "version": 1,
-  "updated_at": "2026-09-27T02:31:35.205441+00:00",
+  "updated_at": "2026-09-27T12:25:09.707593+00:00",
   "items": [
+    {
+      "title": "Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time",
+      "url": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/",
+      "source": "The Decoder",
+      "published_at": "2026-09-27T11:01:13+00:00",
+      "display_date": "Sep 27, 2026",
+      "category": "Models & LLMs",
+      "description": "Nvidia released Nemotron 3 Diarization, an AI model that identifies which speaker is talking at any given moment in a conversation. The article Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "OpenAI says 80 to 90 percent of its research already targets GPT 7 and beyond",
+      "url": "https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/",
+      "source": "The Decoder",
+      "published_at": "2026-09-27T10:36:29+00:00",
+      "display_date": "Sep 27, 2026",
+      "category": "Models & LLMs",
+      "description": "Boris Power, OpenAI's Head of Applied Research, says 80 to 90 percent of the company's research goes toward GPT 7, GPT 8, and beyond. Improvements within a single generation are intentionally short-term bets. But Power doesn't see model performance as the biggest problem. Most users don't even know what they can do with AI. The article OpenAI says 80 to 90 percent of its research already targets GPT 7 and beyond appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "Tens of thousands of security probes show OpenAI's Hugging Face incident was just the beginning",
+      "url": "https://the-decoder.com/tens-of-thousands-of-security-probes-show-openais-hugging-face-incident-was-just-the-beginning/",
+      "source": "The Decoder",
+      "published_at": "2026-09-27T09:23:36+00:00",
+      "display_date": "Sep 27, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI and Anthropic are investigating tens of thousands of incidents in which their AI agents independently hacked websites, used stolen login credentials, or tried to evade monitoring systems. US government agencies like the SEC and the Census Bureau were among the targets. OpenAI has paused training on its most capable internal models, but the problem extends across the entire industry. The article Tens of thousands of security probes show OpenAI's Hugging Face incident was just the beginning",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/09/27/tens-of-thousands-of-security-probes-show-openai-s-hugging-face-incident-was-just.html"
+    },
+    {
+      "title": "Goldman Sachs expects Big Tech to spend $1.2 trillion on AI infrastructure by 2027, dwarfing Wall Street estimates",
+      "url": "https://the-decoder.com/goldman-sachs-expects-big-tech-to-spend-1-2-trillion-on-ai-infrastructure-by-2027-dwarfing-wall-street-estimates/",
+      "source": "The Decoder",
+      "published_at": "2026-09-27T08:17:47+00:00",
+      "display_date": "Sep 27, 2026",
+      "category": "AI Tools & Products",
+      "description": "Goldman Sachs projects that Amazon, Alphabet, Microsoft, Oracle, and Meta will pour a combined $1.2 trillion into AI infrastructure in 2027, more than 50 percent above this year's levels. Measured against GDP, it would be the biggest investment cycle since railroad construction in the 19th century. Bottlenecks in power, labor, and memory chips could slow the pace, though. The article Goldman Sachs expects Big Tech to spend $1.2 trillion on AI infrastructure by 2027, dwarfing Wall Street estimate",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/09/27/goldman-sachs-expects-big-tech-to-spend-1-2-trillion-on-ai-infrastructure-by-2027.html"
+    },
     {
       "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
       "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
@@ -92,35 +150,6 @@
       "archive_url": "news/2026/09/26/nvidia-s-sol-pi-system-cuts-coding-agent-token-usage-nearly-in-half-by-optimizing.html"
     },
     {
-      "title": "OpenAI's GPT-6 Astra can now tell you exactly where you screwed up your IKEA shelf",
-      "url": "https://the-decoder.com/openais-gpt-6-astra-can-now-tell-you-exactly-where-you-screwed-up-your-ikea-shelf/",
-      "source": "The Decoder",
-      "published_at": "2026-09-26T09:44:54+00:00",
-      "display_date": "Sep 26, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI's GPT-6 Astra can look at a photo and tell whether an IKEA furniture piece was assembled incorrectly, hitting an 80 percent accuracy rate. Back in November 2025, the best model managed just 28 percent. According to Epoch AI, the speed isn't quite fast enough yet for real-time assembly guidance, but the gap is closing quickly. The article OpenAI's GPT-6 Astra can now tell you exactly where you screwed up your IKEA shelf appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "OpenAI pauses its \"most capable models\" after agents exploit loopholes and leak data",
-      "url": "https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/",
-      "source": "The Decoder",
-      "published_at": "2026-09-26T09:06:36+00:00",
-      "display_date": "Sep 26, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI has shared new details from its ongoing AI safety investigation. One research model exploited a DNS loophole to reach the internet from a locked-down environment, while another deliberately leaked a GitHub token and twice ignored a researcher's direct instructions. OpenAI has paused tool-based training, evaluation, and inference for its most capable models. With government and university sites among those affected, the question of who's liable when AI agents hack is getting harder to igno",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/09/26/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data.html"
-    },
-    {
       "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
       "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
       "source": "TechCrunch AI",
@@ -192,20 +221,6 @@
       }
     },
     {
-      "title": "Pentagon was right to slap Anthropic with a security supply chain risk label, federal court says",
-      "url": "https://the-decoder.com/pentagon-was-right-to-slap-anthropic-with-a-security-supply-chain-risk-label-federal-court-says/",
-      "source": "The Decoder",
-      "published_at": "2026-09-25T18:40:22+00:00",
-      "display_date": "Sep 25, 2026",
-      "category": "Policy & Safety",
-      "description": "A federal appeals court has upheld the Pentagon's decision to bar Anthropic from military contracts. Defense Secretary Hegseth argues the company's safety restrictions could jeopardize military operations. Anthropic says the designation has already cost it billions. The article Pentagon was right to slap Anthropic with a security supply chain risk label, federal court says appeared first on The Decoder .",
-      "related": {
-        "title": "Browse independent AI software buying guides",
-        "url": "buyers-guides.html",
-        "offer_id": ""
-      }
-    },
-    {
       "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
       "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
       "source": "TechCrunch AI",
@@ -236,20 +251,6 @@
       "archive_url": "news/2026/09/25/meta-s-muse-just-stole-the-ai-spotlight-from-openai-and-anthropic.html"
     },
     {
-      "title": "Another Google Deepmind researcher quits, says building superintelligent AI soon is \"inherently irresponsible\"",
-      "url": "https://the-decoder.com/another-google-deepmind-researcher-quits-says-building-superintelligent-ai-soon-is-inherently-irresponsible/",
-      "source": "The Decoder",
-      "published_at": "2026-09-25T17:55:51+00:00",
-      "display_date": "Sep 25, 2026",
-      "category": "Research",
-      "description": "Google Deepmind researcher Robert O'Callahan has quit, saying AI's \"current rate of change is far too high.\" He worked on chip design tools that helped make AI cheaper and faster, a contribution he can no longer justify. Many colleagues share his concerns but rarely speak out, he says. The article Another Google Deepmind researcher quits, says building superintelligent AI soon is \"inherently irresponsible\" appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
       "title": "One company is at the center of a wave of rogue AI attacks",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google",
       "source": "The Verge AI",
@@ -257,20 +258,6 @@
       "display_date": "Sep 25, 2026",
       "category": "Models & LLMs",
       "description": "In July, OpenAI revealed that its AI agents had attacked Hugging Face without permission, sparking widespread concerns about AI safety. Since then, a string of similar incidents involving agents from Meta, Anthropic, Google, and other companies has fueled further fears about rogue AI. As disclosures implicating numerous AI models trickled out over the past few […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Microsoft gives Copilot another makeover, adding an Autopilot agent and usage-based billing",
-      "url": "https://the-decoder.com/microsoft-gives-copilot-another-makeover-adding-an-autopilot-agent-and-usage-based-billing/",
-      "source": "The Decoder",
-      "published_at": "2026-09-25T16:30:57+00:00",
-      "display_date": "Sep 25, 2026",
-      "category": "Models & LLMs",
-      "description": "Microsoft is splitting its Copilot app into three sections: Home, Code, and a new agent called \"Autopilot.\" Built on OpenClaw, the agent runs continuously in the cloud, where it can monitor Teams channels and complete tasks on its own, according to Microsoft. For Autopilot and Code, the company is also switching to usage-based billing instead of flat-rate pricing, moving further away from its AI subsidy model. The article Microsoft gives Copilot another makeover, adding an Autopilot agent and us",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -513,6 +500,20 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "AI for Societal Impact",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+      "source": "Google AI",
+      "published_at": "2026-09-15T16:00:00+00:00",
+      "display_date": "Sep 15, 2026",
+      "category": "AI Tools & Products",
+      "description": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
       }
     }
   ]
