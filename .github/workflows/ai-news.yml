@@ -56,6 +56,7 @@ jobs:
           ELEPHANT_MODEL_PATH: .edge-ai/qwen3-4b-q4_k_m.gguf
           LLAMA_CLI_PATH: .edge-ai/llama.cpp/build/bin/llama-cli
           AI_NEWS_MAX_NEW: "4"
+          AI_NEWS_MAX_ATTEMPTS: "6"
           AI_NEWS_TIME_BUDGET: "2100"
         run: python scripts/publish_intelligent_news.py
 

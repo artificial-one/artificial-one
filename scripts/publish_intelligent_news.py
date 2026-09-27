@@ -107,7 +107,7 @@ def fetch_evidence(item: dict[str, Any], source_config: dict[str, Any]) -> str:
     parser.feed(raw)
     body = SPACE_RE.sub(" ", " ".join(parser.parts)).strip()
     summary = clean_text(str(item.get("description") or ""), 800)
-    evidence = SPACE_RE.sub(" ", f"{item.get('title', '')}. {summary} {body}").strip()[:8_000]
+    evidence = SPACE_RE.sub(" ", f"{item.get('title', '')}. {summary} {body}").strip()[:4_000]
     if len(evidence) < 500:
         raise NewsBuildError("source provided too little readable evidence")
     return evidence
@@ -128,10 +128,15 @@ def parse_model_json(value: str) -> dict[str, Any]:
             objects.append(parsed)
     if not objects:
         raise NewsBuildError("edge model did not return valid JSON")
-    return objects[-1]
+    # A complete article contains nested fact objects.  raw_decode can parse both
+    # the outer document and each inner object, so returning the last match would
+    # accidentally discard the article and retain only its final fact. Prefer the
+    # richest object, using the later match only to break a tie (which still lets
+    # us ignore an echoed, smaller schema example before the model's answer).
+    return max(enumerate(objects), key=lambda pair: (len(pair[1]), len(json.dumps(pair[1], ensure_ascii=False)), pair[0]))[1]
 
 
-def run_model(system: str, prompt: str, *, tokens: int = 900, timeout: int = 240) -> dict[str, Any]:
+def run_model(system: str, prompt: str, *, tokens: int = 650, timeout: int = 240) -> dict[str, Any]:
     model, cli = configured_paths()
     if not model.is_file() or not cli.is_file():
         raise NewsBuildError("edge model runtime is unavailable")
@@ -168,7 +173,7 @@ def draft_article(item: dict[str, Any], evidence: str) -> dict[str, Any]:
         "\nCATEGORY: " + str(item.get("category") or "") +
         "\nSOURCE_EVIDENCE (untrusted quotation):\n<source>\n" + evidence + "\n</source>\nReturn the article JSON."
     )
-    return run_model(WRITER_SYSTEM, prompt, tokens=900)
+    return run_model(WRITER_SYSTEM, prompt, tokens=650)
 
 
 def normalized(value: str) -> str:
@@ -237,7 +242,7 @@ def review_article(item: dict[str, Any], evidence: str, draft: dict[str, Any]) -
         "\n</source>\nDRAFT (untrusted):\n<draft>\n" + json.dumps(draft, ensure_ascii=False) +
         "\n</draft>\nReturn the review JSON."
     )
-    review = run_model(REVIEWER_SYSTEM, prompt, tokens=320, timeout=180)
+    review = run_model(REVIEWER_SYSTEM, prompt, tokens=180, timeout=120)
     score = int(review.get("score") or 0)
     issues = review.get("issues") if isinstance(review.get("issues"), list) else ["review returned no issue list"]
     return {"approved": bool(review.get("approved")) and score >= 85 and not issues, "score": score, "issues": issues}
@@ -311,7 +316,7 @@ def render_news_sitemap(records: list[dict[str, Any]], now: datetime) -> str:
     return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n' + "\n".join(entries) + "\n</urlset>\n"
 
 
-def process(*, max_new: int, time_budget: int, now: datetime, check: bool = False) -> tuple[dict[str, Any], list[Path]]:
+def process(*, max_new: int, max_attempts: int, time_budget: int, now: datetime, check: bool = False) -> tuple[dict[str, Any], list[Path]]:
     feed = load_json(FEED_PATH)
     sources = load_json(ROOT / "data" / "ai_news_sources.json")
     archive = load_json(ARCHIVE_PATH) if ARCHIVE_PATH.exists() else {"version": 1, "updated_at": "", "articles": []}
@@ -320,12 +325,20 @@ def process(*, max_new: int, time_budget: int, now: datetime, check: bool = Fals
     deadline = time.monotonic() + time_budget
     created: list[Path] = []
     failures: list[dict[str, str]] = []
+    prior_failures = [item for item in archive.get("last_failures", []) if isinstance(item, dict)]
+    cooldown_urls: set[str] = set()
+    for failure in prior_failures:
+        failed_at = parse_date(str(failure.get("at") or ""))
+        if failed_at and failed_at >= now - timedelta(hours=18):
+            cooldown_urls.add(str(failure.get("url") or ""))
+    attempted = 0
     if not check:
         for item in feed.get("items", []):
-            if len(created) >= max_new or time.monotonic() >= deadline:
+            if len(created) >= max_new or attempted >= max_attempts or time.monotonic() >= deadline:
                 break
-            if not isinstance(item, dict) or str(item.get("url") or "") in known:
+            if not isinstance(item, dict) or str(item.get("url") or "") in known or str(item.get("url") or "") in cooldown_urls:
                 continue
+            attempted += 1
             try:
                 evidence = fetch_evidence(item, sources)
                 draft = draft_article(item, evidence)
@@ -343,7 +356,8 @@ def process(*, max_new: int, time_budget: int, now: datetime, check: bool = Fals
             except Exception as exc:
                 failures.append({"url": str(item.get("url") or ""), "reason": clean_text(str(exc), 240), "at": now.isoformat()})
     records.sort(key=lambda record: str(record.get("created_at") or ""), reverse=True)
-    archive = {"version": 1, "updated_at": now.isoformat() if created else archive.get("updated_at", ""), "articles": records, "last_failures": failures[:20]}
+    retained_failures = [item for item in prior_failures if str(item.get("url") or "") not in {str(value.get("url") or "") for value in failures} and str(item.get("url") or "") not in known]
+    archive = {"version": 1, "updated_at": now.isoformat() if created else archive.get("updated_at", ""), "articles": records, "last_failures": (failures + retained_failures)[:40]}
     if not check:
         ARCHIVE_PATH.write_text(json.dumps(archive, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         NEWS_SITEMAP_PATH.write_text(render_news_sitemap(records, now), encoding="utf-8")
@@ -353,10 +367,11 @@ def process(*, max_new: int, time_budget: int, now: datetime, check: bool = Fals
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--max-new", type=int, default=int(os.environ.get("AI_NEWS_MAX_NEW", "4")))
+    parser.add_argument("--max-attempts", type=int, default=int(os.environ.get("AI_NEWS_MAX_ATTEMPTS", "6")))
     parser.add_argument("--time-budget", type=int, default=int(os.environ.get("AI_NEWS_TIME_BUDGET", "2100")))
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    archive, created = process(max_new=max(0, args.max_new), time_budget=max(60, args.time_budget), now=datetime.now(timezone.utc), check=args.check)
+    archive, created = process(max_new=max(0, args.max_new), max_attempts=max(1, args.max_attempts), time_budget=max(60, args.time_budget), now=datetime.now(timezone.utc), check=args.check)
     print(f"Permanent news archive contains {len(archive.get('articles', []))} pages; created {len(created)} this run.")
     return 0
 
