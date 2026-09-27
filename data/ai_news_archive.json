@@ -1,7 +1,133 @@
 {
   "version": 1,
-  "updated_at": "2026-09-27T12:25:14.210649+00:00",
+  "updated_at": "2026-09-27T17:16:24.739220+00:00",
   "articles": [
+    {
+      "path": "news/2026/09/27/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decis.html",
+      "created_at": "2026-09-27T17:16:24.739220+00:00",
+      "source": {
+        "title": "AI agents do more of the work in model development, but humans still make the decisions",
+        "url": "https://the-decoder.com/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decisions/",
+        "source": "The Decoder",
+        "published_at": "2026-09-27T15:18:39+00:00",
+        "display_date": "Sep 27, 2026",
+        "category": "Models & LLMs",
+        "description": "A research team analyzed 769 task logs from building its own AI model. AI agents supplied up to 55 percent of method proposals, but humans made more than 85 percent of final decisions. A third of the tasks wouldn't have been attempted without AI. The authors warn that more agent activity doesn't mean more autonomy. The article AI agents do more of the work in model development, but humans still make the decisions appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "AI Takes More Work in Model Development, But Humans Still Decide",
+        "summary": "A study shows AI agents contribute to 55% of tasks in model development, but humans make 85% of final decisions. The research highlights that while AI can propose methods, human oversight remains critical for decisions.",
+        "facts": [
+          {
+            "statement": "AI agents contribute to 55% of tasks in model development",
+            "evidence": "AI agents supplied up to 55 percent of method proposals"
+          },
+          {
+            "statement": "Humans make 85% of final decisions in model development",
+            "evidence": "humans made more than 85 percent of final decisions"
+          },
+          {
+            "statement": "AI enables tasks that would not have been attempted without it",
+            "evidence": "a third of the tasks wouldn't have been attempted without AI"
+          }
+        ],
+        "why_it_matters": "This study challenges assumptions about AI autonomy in model development, showing that human oversight remains essential. It also highlights how AI can enable new possibilities while still requiring human judgment.",
+        "elephant_take": "🐘 🦘 The study shows AI is a tool, not a decision-maker. Humans still hold the reins, even as AI does more of the work. It's a reminder that technology is only as smart as the people using it.",
+        "caveat": "The study focuses on a specific project and may not reflect broader trends in AI development.",
+        "who_should_care": [
+          "AI researchers",
+          "Developers",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Evaluate AI's role in your workflow",
+          "Maintain human oversight in critical decisions",
+          "Assess AI's impact on new possibilities",
+          "Monitor how AI is used in development processes"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20AI%20agents%20do%20more%20of%20the%20work%20in%20model%20development%2C%20but%20humans%20still%20make%20the%20decisions%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/09/24/accelerating-vision-language-models-with-lfm2-5-vl-dspark.html",
+      "created_at": "2026-09-27T17:16:24.739220+00:00",
+      "source": {
+        "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
+        "source": "Hugging Face",
+        "published_at": "2026-09-24T14:08:57+00:00",
+        "display_date": "Sep 24, 2026",
+        "category": "Models & LLMs",
+        "description": "",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "New Method Speeds Up Vision-Language Models",
+        "summary": "A new method called LFM2.5-VL-DSpark accelerates vision-language models by improving inference speed and reducing memory usage, with support for multiple frameworks.",
+        "facts": [
+          {
+            "statement": "The method improves inference speed significantly.",
+            "evidence": "decode speedups up to 3.13x on device and 2.66x on an H100"
+          },
+          {
+            "statement": "The method has a small memory footprint.",
+            "evidence": "the drafter adds 280M parameters, 8.9% on top of the 3B target"
+          },
+          {
+            "statement": "The method is supported by multiple frameworks.",
+            "evidence": "for llama.cpp, mlx-vlm, and sglang"
+          }
+        ],
+        "why_it_matters": "This new method could revolutionize how vision-language models are used, making them faster and more efficient. With support for multiple frameworks, it's a step towards more widespread adoption.",
+        "elephant_take": "🐘 鼋 The LFM2.5-VL-DSpark method is a promising advancement in accelerating vision-language models, but its effectiveness may be limited by the time spent on prefill stages. It's a step forward, but not a complete solution.",
+        "caveat": "The method's speed gains are limited by the time spent on prefill stages, which are compute-bound and can't be accelerated.",
+        "who_should_care": [
+          "AI researchers",
+          "Developers",
+          "Data scientists"
+        ],
+        "what_to_do": [
+          "Explore the method for accelerating vision-language models",
+          "Evaluate its performance on your specific use cases"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Accelerating%20vision-language%20models%20with%20LFM2.5-VL-DSpark%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/09/27/tens-of-thousands-of-security-probes-show-openai-s-hugging-face-incident-was-just.html",
       "created_at": "2026-09-27T12:25:14.210649+00:00",
@@ -699,6 +825,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
+      "at": "2026-09-27T17:16:24.739220+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-09-27T17:16:24.739220+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/two-years-of-openai-academy",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-09-27T17:16:24.739220+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-09-27T17:16:24.739220+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/",
       "reason": "quality gate rejected draft: hype language is present",
       "at": "2026-09-27T12:25:14.210649+00:00",
@@ -773,16 +923,6 @@
     {
       "url": "https://the-decoder.com/microsoft-gives-copilot-another-makeover-adding-an-autopilot-agent-and-usage-based-billing/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-09-27T02:31:39.951979+00:00"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-09-27T02:31:39.951979+00:00"
-    },
-    {
-      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
-      "reason": "quality gate rejected draft: Elephant commentary has no disclosed persona marker",
       "at": "2026-09-27T02:31:39.951979+00:00"
     }
   ]
