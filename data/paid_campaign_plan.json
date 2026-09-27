@@ -85,6 +85,21 @@
       ]
     },
     {
+      "offer_id": "pinecone",
+      "name": "AO Generic Intent - Pinecone",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/pinecone-vector-database.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-pinecone",
+      "keywords": [
+        "developer infrastructure",
+        "build retrieval augmented generation",
+        "add semantic search to an application"
+      ],
+      "negative_keywords": [
+        "Pinecone"
+      ]
+    },
+    {
       "offer_id": "800-com",
       "name": "AO Generic Intent - 800.com",
       "eligible": false,
@@ -112,20 +127,6 @@
       ],
       "negative_keywords": [
         "Amplemarket"
-      ]
-    },
-    {
-      "offer_id": "breezy-hr",
-      "name": "AO Generic Intent - Breezy HR",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/breezy-hr-software.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-breezy-hr",
-      "keywords": [
-        "evaluate for a relevant business workflow",
-        "compare with other options"
-      ],
-      "negative_keywords": [
-        "Breezy HR"
       ]
     }
   ],
