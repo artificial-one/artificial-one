@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="AI Tool Reviews: Find the Right Tool | artificial.one" />
-    <meta property="og:description" content="Search and compare 360+ readable AI software reviews, with clear strengths, limitations, pricing and best-fit guidance." />
+    <meta property="og:description" content="Search and compare 340+ readable AI software reviews, with clear strengths, limitations, pricing and best-fit guidance." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://artificial.one/reviews.html" />
     <meta property="og:image" content="https://artificial.one/images/og-default.jpg" />
@@ -13,11 +13,11 @@
     <meta property="og:image:alt" content="The Artificial.One AI tool review library" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI Tool Reviews: Find the Right Tool | artificial.one">
-    <meta name="twitter:description" content="Search and compare 360+ readable AI software reviews, with clear strengths, limitations, pricing and best-fit guidance.">
+    <meta name="twitter:description" content="Search and compare 340+ readable AI software reviews, with clear strengths, limitations, pricing and best-fit guidance.">
     <meta name="twitter:image" content="https://artificial.one/images/og-default.jpg">
     <link rel="canonical" href="https://artificial.one/reviews.html" />
     <title>AI Tool Reviews: Find the Right Tool | artificial.one</title>
-    <meta name="description" content="Search and compare 360+ readable AI software reviews, with clear strengths, limitations, pricing and best-fit guidance.">
+    <meta name="description" content="Search and compare 340+ readable AI software reviews, with clear strengths, limitations, pricing and best-fit guidance.">
     <meta name="affiliate-event-endpoint" content="/api/affiliate-event">
     <meta name="ai1-clean-editorial" content="true">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -1281,6 +1281,7 @@ const affiliateOfferByUrl = {
     "https://get.descript.com/951y7htioj6v": "descript",
     "https://try.elevenlabs.io/v5gy7s0nd0ty": "elevenlabs"
 };
+const unpublishedReviewSlugs = new Set(/* review-availability:start */["capitalconnector-ai","columns","dodgeprint","editor-do","flowyteam","img-upscaler","nichesss","nodeland","personeo-ai","rtila","subpage","trebble","updf-pdf-editor","vizologi","webability-io"]/* review-availability:end */);
 
 function reviewEscape(value) {
     return String(value == null ? '' : value).replace(/[&<>'"]/g, function (char) {
@@ -1294,7 +1295,8 @@ function reviewSlug(name) {
 
 function reviewScore(tool) {
     const value = parseFloat(tool.rating) || 0;
-    return String(tool.rating).indexOf('/10') !== -1 ? value / 2 : value;
+    const normalized = String(tool.rating).indexOf('/10') !== -1 || value > 5 ? value / 2 : value;
+    return Math.round((normalized + Number.EPSILON) * 10) / 10;
 }
 
 function reviewTypeLabel(type) {
@@ -1305,13 +1307,21 @@ function reviewTypeLabel(type) {
 
 function filteredReviews() {
     const needle = reviewSearchTerm.trim().toLowerCase();
-    return tools.filter(function (tool) {
+    const matching = tools.filter(function (tool) {
         const category = getCategorySlug(tool.cat);
         const matchesType = currentTypeFilter === 'all' || tool.type === currentTypeFilter;
         const matchesCategory = currentCategoryFilter === 'all' || category === currentCategoryFilter;
         const searchable = [tool.name, tool.cat, tool.desc, tool.bestFor, tool.pricing].concat(tool.pros || [], tool.cons || []).join(' ').toLowerCase();
-        return matchesType && matchesCategory && (!needle || searchable.indexOf(needle) !== -1);
-    }).sort(function (a, b) { return reviewScore(b) - reviewScore(a) || a.name.localeCompare(b.name); });
+        const hasDetailedReview = !unpublishedReviewSlugs.has(reviewSlug(tool.name));
+        return hasDetailedReview && matchesType && matchesCategory && (!needle || searchable.indexOf(needle) !== -1);
+    });
+    const canonical = new Map();
+    matching.forEach(function (tool) {
+        const slug = reviewSlug(tool.name);
+        const current = canonical.get(slug);
+        if (!current || reviewScore(tool) > reviewScore(current)) canonical.set(slug, tool);
+    });
+    return Array.from(canonical.values()).sort(function (a, b) { return reviewScore(b) - reviewScore(a) || a.name.localeCompare(b.name); });
 }
 
 function reviewCard(tool) {
@@ -1325,7 +1335,7 @@ function reviewCard(tool) {
         : 'rel="noopener"';
     const pros = (tool.pros || []).slice(0, 2).map(function (point) { return `<li>${reviewEscape(point)}</li>`; }).join('');
     const caution = tool.cons && tool.cons.length ? `<p class="review-card-caution"><strong>Worth knowing:</strong> ${reviewEscape(tool.cons[0])}</p>` : '';
-    const score = reviewScore(tool).toFixed(1).replace('.0', '');
+    const score = reviewScore(tool).toFixed(1);
     return `<article class="review-card" style="--card-a:${colors[0]};--card-b:${colors[1]}">
         <div class="review-card-art">
             <span class="review-card-category">${reviewEscape(tool.cat)}</span>

@@ -24,6 +24,9 @@ on:
       - assets/decision-engine.css
       - assets/legacy-tool-pages.css
       - scripts/normalize_legacy_brand.py
+      - scripts/sync_review_scores.mjs
+      - reviews.html
+      - tools/*.html
       - tests/test_visual_contracts.py
       - api/affiliate-event.js
       - tests/test_revenue_optimizer.py
@@ -128,6 +131,7 @@ jobs:
           python scripts/build_tool_intelligence.py
           python scripts/build_elephant_experience.py
           python scripts/normalize_legacy_brand.py
+          node scripts/sync_review_scores.mjs
 
       - name: Monitor first-party offer changes
         run: python scripts/monitor_offer_changes.py --state .offer-monitor/private-state.json
@@ -189,6 +193,7 @@ jobs:
           python scripts/build_tool_intelligence.py --check
           python scripts/build_elephant_experience.py --check
           python scripts/normalize_legacy_brand.py --check
+          node scripts/sync_review_scores.mjs --check
           python scripts/monitor_tool_intelligence.py --check
           python scripts/consolidate_legacy_index.py --check
           python scripts/indexing_recovery.py --check

@@ -1,4 +1,5 @@
 import importlib.util
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -64,6 +65,19 @@ class VisualContractTests(unittest.TestCase):
         self.assertIn("data-load-more", source)
         self.assertIn("const reviewBatchSize = 24", source)
         self.assertIn("return 'all';", source)
+        self.assertIn("const canonical = new Map();", source)
+        self.assertIn("const unpublishedReviewSlugs = new Set(", source)
+
+    def test_review_card_and_detail_scores_cannot_drift(self):
+        result = subprocess.run(
+            ["node", str(ROOT / "scripts" / "sync_review_scores.mjs"), "--check"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            check=False,
+        )
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
 
     def test_detailed_reviews_use_a_light_reading_surface(self):
         css = (ROOT / "assets" / "legacy-tool-pages.css").read_text(encoding="utf-8")

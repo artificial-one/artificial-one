@@ -10,7 +10,17 @@ Script to optimize all HTML review files with:
 
 import os
 import re
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
+
+def normalize_five_point_rating(value):
+    """Return one decimal on a five-point scale, including legacy /10 values."""
+    raw = str(value or "4.5")
+    match = re.search(r"\d+(?:\.\d+)?", raw)
+    numeric = Decimal(match.group(0) if match else "4.5")
+    if "/10" in raw or numeric > 5:
+        numeric /= 2
+    return str(numeric.quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
 
 def get_template_content():
     """Get the base template from triplo-ai-review.html"""
@@ -93,7 +103,7 @@ def extract_info_from_file(filepath):
 def create_optimized_html(filepath, info):
     """Create optimized HTML content"""
     product = info.get('product', 'Product')
-    rating = info.get('rating', '4.5')
+    rating = normalize_five_point_rating(info.get('rating', '4.5'))
     price = info.get('price', '69')
     affiliate = info.get('affiliate', 'https://appsumo.8odi.net/example')
     verdict = info.get('verdict', f'{product} is a great tool.')
@@ -214,7 +224,7 @@ def create_optimized_html(filepath, info):
 def create_fallback_html(filepath, info, title, meta_desc, color1, color2):
     """Create HTML from scratch if template not available"""
     product = info.get('product', 'Product')
-    rating = info.get('rating', '4.5')
+    rating = normalize_five_point_rating(info.get('rating', '4.5'))
     price = info.get('price', '69')
     affiliate = info.get('affiliate', 'https://appsumo.8odi.net/example')
     features = info.get('features', [])
