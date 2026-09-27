@@ -28,12 +28,12 @@
         body.review-library { margin:0; background:#fff; color:var(--ink); font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
         body.review-library > .legacy-directory-nav, body.review-library > .legacy-directory-hero, body.review-library > .legacy-directory-filters, body.review-library > .legacy-directory-footer { display:none !important; }
         .review-header { position:sticky; top:0; z-index:100; background:rgba(8,8,18,.96); backdrop-filter:blur(18px); border-bottom:1px solid rgba(255,255,255,.09); }
-        .review-header-inner { width:min(1180px,calc(100% - 36px)); height:72px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+        .review-header-inner { width:min(1180px,calc(100% - 36px)) !important; height:72px; margin:auto !important; display:flex !important; align-items:center !important; justify-content:space-between !important; gap:28px; }
         .review-brand { display:inline-flex; align-items:center; gap:11px; color:#fff; text-decoration:none; font-weight:900; letter-spacing:-.04em; }
         .review-brand img { width:43px; height:43px; object-fit:contain; }
         .review-brand span { font-size:1.05rem; }
         .review-brand b { color:var(--lime); }
-        .review-nav { display:flex; align-items:center; gap:26px; }
+        .review-nav { display:flex; align-items:center; gap:26px; margin-left:auto !important; }
         .review-nav a { color:#e8e7f0; text-decoration:none; font-size:.91rem; font-weight:750; }
         .review-nav a:hover, .review-nav a[aria-current="page"] { color:var(--lime); }
         .review-hero { position:relative; overflow:hidden; background:linear-gradient(125deg,#0a0a13 0%,#17102e 52%,#382080 100%); color:#fff; }
