@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-26",
+  "updated_at": "2026-09-27",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -3009,7 +3009,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -5452,7 +5452,6 @@
         "Content Management",
         "Design",
         "Digital Advertising",
-        "Hot",
         "Marketing",
         "Referral Partners",
         "Trusted"
@@ -5685,7 +5684,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6170,6 +6169,60 @@
           "coupon_restricted": false,
           "email_restricted": true,
           "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:aisdrinc",
+      "network": "partnerstack",
+      "name": "AiSDR, Inc.",
+      "slug": "aisdrinc",
+      "description": "AiSDR is the first AI sales agent that can take care of the entire outreach end-to-end and have a meaningful conversation with prospects through emails, LinkedIn, and text messages that sound like you wrote them. Pick between a reseller and referral options and earn commission from each subscription you bring. Either manage the entire sales process for 30% lifetime, or introduce new prospects to us for 20% commission for 1 year.",
+      "offer": "Earn 20% commissions for the first year!",
+      "tags": [
+        "Affiliates",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Hot",
+        "Marketing",
+        "Publishers",
+        "Referral Partners",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/aisdrinc?company=aisdrinc&gref=marketplace",
+      "terms_url": "https://aisdr.com/terms/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 76,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -7758,6 +7811,54 @@
       }
     },
     {
+      "id": "partnerstack:softsyncaiinc",
+      "network": "partnerstack",
+      "name": "SoftSync",
+      "slug": "softsyncaiinc",
+      "description": "Lifetime recurring commission up to 50%. SoftSync AI is the CRM that works inside Claude and ChatGPT, so follow-ups and data entry run on their own. Earn on every payment, for life, no cap: 1 paying customer: 30% 5: 35% 10: 40% 20: 50% Each level applies to all your customers. Your audience gets 30% off plus a 30-day trial. Swipe file and demos in Resources. Daily post ideas: x.com/celinehaverstad Demos: youtube.com/@SoftSyncCRM Questions: marketing@softsync.ai",
+      "offer": "Lifetime earnings up to 50%. Become a Softsync affiliate!",
+      "tags": [
+        "ERP",
+        "Hot",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/softsyncaiinc?company=softsyncaiinc&gref=marketplace",
+      "terms_url": "https://www.softsync.ai/terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 73,
+      "relevance_matches": [
+        "ai",
+        "data",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:zenzap",
       "network": "partnerstack",
       "name": "Zenzap",
@@ -7770,7 +7871,6 @@
         "Development",
         "Governance, Risk, & Compliance",
         "HR Software",
-        "Hot",
         "Hubspot integrated",
         "IT Infrastructure",
         "IT Management",
@@ -8296,58 +8396,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:aisdrinc",
-      "network": "partnerstack",
-      "name": "AiSDR, Inc.",
-      "slug": "aisdrinc",
-      "description": "AiSDR is the first AI sales agent that can take care of the entire outreach end-to-end and have a meaningful conversation with prospects through emails, LinkedIn, and text messages that sound like you wrote them. Pick between a reseller and referral options and earn commission from each subscription you bring. Either manage the entire sales process for 30% lifetime, or introduce new prospects to us for 20% commission for 1 year.",
-      "offer": "Earn 20% commissions for the first year!",
-      "tags": [
-        "Affiliates",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Marketing",
-        "Publishers",
-        "Referral Partners",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/aisdrinc?company=aisdrinc&gref=marketplace",
-      "terms_url": "https://aisdr.com/terms/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 71,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -9108,7 +9156,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 77,
+      "review_days": 83,
       "source": "https://market.partnerstack.com/",
       "score": 68,
       "relevance_matches": [
@@ -9257,52 +9305,6 @@
         "automation",
         "data",
         "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:softsyncaiinc",
-      "network": "partnerstack",
-      "name": "SoftSync",
-      "slug": "softsyncaiinc",
-      "description": "Lifetime recurring commission up to 50%. SoftSync AI is the CRM that works inside Claude and ChatGPT, so follow-ups and data entry run on their own. Earn on every payment, for life, no cap: 1 paying customer: 30% 5: 35% 10: 40% 20: 50% Each level applies to all your customers. Your audience gets 30% off plus a 30-day trial. Swipe file and demos in Resources. Daily post ideas: x.com/celinehaverstad Demos: youtube.com/@SoftSyncCRM Questions: marketing@softsync.ai",
-      "offer": "Lifetime earnings up to 50%. Become a Softsync affiliate!",
-      "tags": [
-        "ERP",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/softsyncaiinc?company=softsyncaiinc&gref=marketplace",
-      "terms_url": "https://www.softsync.ai/terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 68,
-      "relevance_matches": [
-        "ai",
-        "data",
-        "marketing",
-        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -10619,61 +10621,6 @@
       "policy": {
         "status": "not_reviewed",
         "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:icontact",
-      "network": "partnerstack",
-      "name": "iContact",
-      "slug": "icontact",
-      "description": "iContact’s email marketing tools help small businesses grow their audience and design and automate beautiful, personalized emails. Trusted by thousands of small and independent businesses since 2003 to send billions of emails each month.",
-      "offer": "Earn up to 35% of our customers' monthly subscription for 12 months.",
-      "tags": [
-        "Affiliates",
-        "B2B Marketplaces",
-        "Commerce",
-        "Coupon Partners",
-        "Digital Advertising",
-        "Hot",
-        "Hubspot integrated",
-        "Marketing",
-        "Publishers",
-        "Referral Partners",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/icontact?company=icontact&gref=marketplace",
-      "terms_url": "https://www.icontact.com/partner-agreement/",
-      "website": "https://www.icontact.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "design",
-        "marketing",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
         "cookie_days": null
       }
     },
@@ -12300,7 +12247,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 118,
+      "review_days": 121,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12473,62 +12420,6 @@
           "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
           "coupon_restricted": true,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:superfiliate",
-      "network": "partnerstack",
-      "name": "Superfiliate",
-      "slug": "superfiliate",
-      "description": "Superfiliate is the creator-led growth platform for D2C brands focused on measurable revenue growth. Get unified affiliate and creator management, automated gifting workflows, creator storefronts, built-in discovery tooling in one place, with full visibility into which creators and programs are driving results.",
-      "offer": "Earn 25% Revenue share for the first year of customer purchases + early adoption bonus of $250",
-      "tags": [
-        "Affiliates",
-        "B2B Marketplaces",
-        "Commerce",
-        "Content Management",
-        "E-Commerce",
-        "Hot",
-        "Influencers",
-        "Marketing",
-        "Media Partners",
-        "Publishers",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/superfiliate?company=superfiliate&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1nCSCwBekXP2VpP_UDfhSaMJUw6eG-rIe/view?usp=sharing",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 2,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "content",
-        "e-commerce",
-        "marketing",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
           "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
@@ -13316,7 +13207,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 66,
       "relevance_matches": [
@@ -17694,6 +17585,59 @@
       }
     },
     {
+      "id": "partnerstack:icontact",
+      "network": "partnerstack",
+      "name": "iContact",
+      "slug": "icontact",
+      "description": "iContact’s email marketing tools help small businesses grow their audience and design and automate beautiful, personalized emails. Trusted by thousands of small and independent businesses since 2003 to send billions of emails each month.",
+      "offer": "Earn up to 35% of our customers' monthly subscription for 12 months.",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Commerce",
+        "Coupon Partners",
+        "Digital Advertising",
+        "Hubspot integrated",
+        "Marketing",
+        "Publishers",
+        "Referral Partners",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/icontact?company=icontact&gref=marketplace",
+      "terms_url": "https://www.icontact.com/partner-agreement/",
+      "website": "https://www.icontact.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "design",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:later",
       "network": "partnerstack",
       "name": "Later",
@@ -18371,6 +18315,60 @@
           "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": true
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:superfiliate",
+      "network": "partnerstack",
+      "name": "Superfiliate",
+      "slug": "superfiliate",
+      "description": "Superfiliate is the creator-led growth platform for D2C brands focused on measurable revenue growth. Get unified affiliate and creator management, automated gifting workflows, creator storefronts, built-in discovery tooling in one place, with full visibility into which creators and programs are driving results.",
+      "offer": "Earn 25% Revenue share for the first year of customer purchases + early adoption bonus of $250",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Commerce",
+        "Content Management",
+        "E-Commerce",
+        "Influencers",
+        "Marketing",
+        "Media Partners",
+        "Publishers",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/superfiliate?company=superfiliate&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/1nCSCwBekXP2VpP_UDfhSaMJUw6eG-rIe/view?usp=sharing",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 2,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "content",
+        "e-commerce",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
         },
         "cookie_days": null
       }
@@ -19456,7 +19454,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 19,
+      "review_days": 20,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19675,14 +19673,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -21003,7 +21001,6 @@
         "ERP",
         "HR",
         "HR Software",
-        "Hot",
         "Payroll",
         "Referral Partners",
         "Trusted",
@@ -21440,7 +21437,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21924,15 +21921,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": true,
+          "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
       }
     },
     {
@@ -23139,50 +23136,6 @@
       }
     },
     {
-      "id": "partnerstack:workwisecompliance",
-      "network": "partnerstack",
-      "name": "WorkWise Compliance",
-      "slug": "workwisecompliance",
-      "description": "WorkWise Compliance helps businesses simplify HR & Safety Compliance through dedicated experts and technology-backed solutions. Our channel partners earn competitive referral bonuses, recurring commissions, and gain a trusted resource to better serve their clients. Together, we help businesses reduce risk, stay compliant, and grow with confidence.",
-      "offer": "Refer and earn 25% of initial order and 10% renewal revenue. Resell with 50% profit share!",
-      "tags": [
-        "B2B Marketplaces",
-        "Governance, Risk, & Compliance",
-        "Hosting Providers",
-        "Hot",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/workwisecompliance?company=workwisecompliance&gref=marketplace",
-      "terms_url": "https://s3.us-west-2.amazonaws.com/catsy.840/Affiliate-Marketing-Program+-Terms-and-Conditions.pdf",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 43,
-      "relevance_matches": [],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:1password",
       "network": "partnerstack",
       "name": "1Password",
@@ -23695,6 +23648,48 @@
       "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 39,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:workwisecompliance",
+      "network": "partnerstack",
+      "name": "WorkWise Compliance",
+      "slug": "workwisecompliance",
+      "description": "WorkWise Compliance helps businesses simplify HR & Safety Compliance through dedicated experts and technology-backed solutions. Our channel partners earn competitive referral bonuses, recurring commissions, and gain a trusted resource to better serve their clients. Together, we help businesses reduce risk, stay compliant, and grow with confidence.",
+      "offer": "Refer and earn 25% of initial order and 10% renewal revenue. Resell with 50% profit share!",
+      "tags": [
+        "B2B Marketplaces",
+        "Governance, Risk, & Compliance",
+        "Hosting Providers"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/workwisecompliance?company=workwisecompliance&gref=marketplace",
+      "terms_url": "https://s3.us-west-2.amazonaws.com/catsy.840/Affiliate-Marketing-Program+-Terms-and-Conditions.pdf",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 38,
       "relevance_matches": [],
       "already_active": false,
       "relationship_state": "pending",
