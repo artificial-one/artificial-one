@@ -102,7 +102,8 @@ class AffiliateSiteOutputTests(unittest.TestCase):
 
     def test_homepage_does_not_show_the_sticky_partner_banner(self):
         text = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
-        self.assertIn('if (/^\\/(?:index\\.html)?$/.test(window.location.pathname)) return;', text)
+        homepage_guard = 'if (/^\\/(?:index\\.html)?$/.test(window.location.pathname)) return;'
+        self.assertEqual(text.count(homepage_guard), 2)
 
     def test_shared_navigation_does_not_restore_the_removed_how_it_works_link(self):
         text = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")

@@ -325,6 +325,7 @@
   }
 
   function installContextualRevenueRoute(catalog) {
+    if (/^\/(?:index\.html)?$/.test(window.location.pathname)) return;
     if (document.getElementById("contextual-revenue-route")) return;
     if (/^\/(partner-offers|search-intent|calculators)\//.test(window.location.pathname)) return;
     var text = String(document.body && document.body.innerText || "").toLowerCase();
