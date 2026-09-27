@@ -62,11 +62,35 @@ class IntelligentNewsTests(unittest.TestCase):
         with patch.object(intelligent, "run_model", return_value=good_draft()) as writer:
             intelligent.draft_article(ITEM, EVIDENCE)
         self.assertTrue(writer.call_args.args[1].startswith("/no_think"))
-        self.assertEqual(writer.call_args.kwargs["tokens"], 900)
+        self.assertEqual(writer.call_args.kwargs["tokens"], 650)
+
+    def test_recent_rejections_rotate_out_of_the_next_run(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "data").mkdir()
+            (root / "data" / "ai_news.json").write_text('{"version":1,"items":[]}', encoding="utf-8")
+            archive = {"version": 1, "articles": [], "last_failures": [{
+                "url": ITEM["url"], "reason": "quality gate", "at": "2026-09-27T08:00:00+00:00",
+            }]}
+            (root / "data" / "ai_news_archive.json").write_text(__import__("json").dumps(archive), encoding="utf-8")
+            with patch.object(intelligent, "ROOT", root), patch.object(intelligent, "FEED_PATH", root / "data" / "ai_news.json"), patch.object(
+                intelligent, "ARCHIVE_PATH", root / "data" / "ai_news_archive.json",
+            ), patch.object(intelligent, "NEWS_SITEMAP_PATH", root / "news-sitemap.xml"), patch.object(
+                intelligent, "load_json", side_effect=lambda path: archive if path.name == "ai_news_archive.json" else {"version": 1, "items": [ITEM], "sources": []},
+            ), patch.object(intelligent, "fetch_evidence") as fetch:
+                intelligent.process(max_new=4, max_attempts=6, time_budget=60, now=datetime(2026, 9, 27, 12, tzinfo=timezone.utc))
+        fetch.assert_not_called()
 
     def test_model_json_parser_uses_final_object_after_an_echoed_prompt(self):
         raw = 'system example {"wrong": true}\nassistant\n<think>private reasoning</think>\n{"approved": true, "score": 91, "issues": []}\nExiting...'
         self.assertEqual(intelligent.parse_model_json(raw)["score"], 91)
+
+    def test_model_json_parser_keeps_complete_article_instead_of_nested_fact(self):
+        article = good_draft()
+        raw = "assistant\n" + __import__("json").dumps(article, ensure_ascii=False) + "\nExiting..."
+        parsed = intelligent.parse_model_json(raw)
+        self.assertEqual(parsed["headline"], article["headline"])
+        self.assertEqual(len(parsed["facts"]), 2)
 
     def test_permanent_path_is_stable_and_date_scoped(self):
         self.assertEqual(
