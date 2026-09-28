@@ -264,7 +264,7 @@ def shell(
   <link rel="alternate" type="application/rss+xml" title="artificial.one AI tool guides" href="{prefix}feed.xml">
   {json_ld(structured_data) if structured_data else ""}
   <link rel="preload" href="{prefix}images/social/artificial-one-logo.png" as="image">
-  <link rel="stylesheet" href="{prefix}assets/decision-engine.css">
+  <link rel="stylesheet" href="{prefix}assets/decision-engine.css?v=20260928b">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -350,7 +350,7 @@ def offer_card(offer: dict[str, Any], placement: str = "offer-hub") -> str:
     mark = "".join(word[:1] for word in str(offer["name"]).split()[:2]).upper()
     search = " ".join([str(offer["name"]), str(offer["category"]), str(offer["best_for"]), *offer["use_cases"]]).casefold()
     return f'''<article class="tool-card" data-tool-card data-id="{esc(offer['id'])}" data-category="{esc(offer['category'])}" data-search="{esc(search)}" data-new-date="{esc(offer['terms_verified_at'])}" style="--brand:{data['color']}">
-      <div class="product-visual product-visual-card"><img src="{esc(data['screenshotUrl'])}" alt="{esc(offer['name'])} product website preview" width="1000" height="563" loading="lazy" decoding="async"><span class="product-logo"><img src="{esc(data['logoUrl'])}" alt="{esc(offer['name'])} logo" width="48" height="48" loading="lazy" decoding="async"><b aria-hidden="true">{esc(mark)}</b></span></div>
+      <div class="product-visual product-visual-card" data-product="{esc(offer['name'])}"><img src="{esc(data['screenshotUrl'])}" alt="{esc(offer['name'])} product website preview" width="1000" height="563" loading="lazy" decoding="async"><span class="product-logo"><img src="{esc(data['logoUrl'])}" alt="{esc(offer['name'])} logo" width="48" height="48" loading="lazy" decoding="async"><b aria-hidden="true">{esc(mark)}</b></span></div>
       <div class="card-top"><span class="new-badge" hidden>New since your last visit</span><span class="fit-score">Verified<small>{esc(offer['terms_verified_at'])}</small></span></div>
       <p class="category">{esc(offer['category'])}</p><h2>{esc(offer['name'])}</h2>
       <p class="summary">{esc(offer['summary'])}</p><p class="reason"><strong>Best for:</strong> {esc(offer['best_for'])}</p><p class="outcome"><strong>Outcome:</strong> {esc(data['useCases'][0])}</p>
@@ -535,19 +535,19 @@ def _intent_cluster(category: str) -> str:
 def search_links_for(offer: dict[str, Any], offers: list[dict[str, Any]]) -> list[tuple[str, str]]:
     """Link review pages into the deterministic commercial-intent cluster."""
     links: list[tuple[str, str]] = []
-    if offer in offers[:8]:
+    cluster_alternatives = [
+        item for item in offers
+        if item.get("id") != offer.get("id") and _intent_cluster(str(item.get("category", ""))) == _intent_cluster(str(offer.get("category", "")))
+    ]
+    if offer in offers[:8] and cluster_alternatives:
         links.append((f"../search-intent/{offer['slug']}-alternatives.html", f"Best {offer['name']} alternatives"))
     if offer in offers[:6]:
         links.append((f"../search-intent/{offer['slug']}-pricing.html", f"{offer['name']} pricing guide"))
         use_cases = [str(item) for item in offer.get("use_cases", []) if str(item).strip()]
         if use_cases:
             links.append((f"../search-intent/{offer['slug']}-for-{_search_slug(use_cases[0])}.html", f"{offer['name']} for {use_cases[0]}"))
-        alternatives = [
-            item for item in offers
-            if item.get("id") != offer.get("id") and _intent_cluster(str(item.get("category", ""))) == _intent_cluster(str(offer.get("category", "")))
-        ]
-        if alternatives:
-            links.append((f"../search-intent/{offer['slug']}-vs-{alternatives[0]['slug']}.html", f"{offer['name']} vs {alternatives[0]['name']}"))
+        if cluster_alternatives:
+            links.append((f"../search-intent/{offer['slug']}-vs-{cluster_alternatives[0]['slug']}.html", f"{offer['name']} vs {cluster_alternatives[0]['name']}"))
     members = [item for item in offers if item.get("category") == offer.get("category")]
     if len(members) >= 2:
         category_slug = _search_slug(str(offer["category"]))
@@ -771,7 +771,7 @@ def render_offer(
     ]
     faq_html = "".join(f'<details><summary>{esc(question)}</summary><p>{esc(answer)}</p></details>' for question, answer in faq)
     content = f'''
-    <section class="offer-hero"><div class="container offer-grid"><div><p class="eyebrow">{esc(offer['category'])} · independent fit check</p><div class="offer-product-visual product-visual"><img src="{esc(data['screenshotUrl'])}" alt="{esc(offer['name'])} product website screenshot" width="1000" height="563" loading="lazy" decoding="async"><span class="product-logo"><img src="{esc(data['logoUrl'])}" alt="{esc(offer['name'])} logo" width="56" height="56" decoding="async"><b aria-hidden="true">{esc(offer['name'][:2])}</b></span></div><h1>{esc(offer['name'])}: <span class="gradient-text">is it right for your job?</span></h1><p class="lead">{esc(offer['summary'])}</p><div class="verdict"><strong>One-line verdict</strong><p>{esc(offer['why_consider'])}</p></div><div class="loop-actions"><button class="btn btn-secondary compare-add" type="button" data-id="{esc(offer['id'])}">⇄ Add to comparison</button><button class="btn btn-secondary stack-add" type="button" data-id="{esc(offer['id'])}">＋ Save to My Stack</button><button class="btn btn-secondary" type="button" data-watch-offer="{esc(offer['id'])}">Watch this deal</button></div></div>
+    <section class="offer-hero"><div class="container offer-grid"><div><p class="eyebrow">{esc(offer['category'])} · independent fit check</p><div class="offer-product-visual product-visual" data-product="{esc(offer['name'])}"><img src="{esc(data['screenshotUrl'])}" alt="{esc(offer['name'])} product website screenshot" width="1000" height="563" loading="lazy" decoding="async"><span class="product-logo"><img src="{esc(data['logoUrl'])}" alt="{esc(offer['name'])} logo" width="56" height="56" decoding="async"><b aria-hidden="true">{esc(offer['name'][:2])}</b></span></div><h1>{esc(offer['name'])}: <span class="gradient-text">is it right for your job?</span></h1><p class="lead">{esc(offer['summary'])}</p><div class="verdict"><strong>One-line verdict</strong><p>{esc(offer['why_consider'])}</p></div><div class="loop-actions"><button class="btn btn-secondary compare-add" type="button" data-id="{esc(offer['id'])}">⇄ Add to comparison</button><button class="btn btn-secondary stack-add" type="button" data-id="{esc(offer['id'])}">＋ Save to My Stack</button><button class="btn btn-secondary" type="button" data-watch-offer="{esc(offer['id'])}">Watch this deal</button></div></div>
       <aside class="surface offer-aside"><p class="eyebrow">Current buying facts</p><h2>{esc(data['price'])}</h2><dl class="buying-facts"><div><dt>Trial</dt><dd>{esc(data['trial'])}</dd></div><div><dt>Last verified</dt><dd>{esc(offer['terms_verified_at'])}</dd></div></dl><p class="price-note">{esc(offer['pricing_note'])}</p><a class="btn btn-acid" href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer['id'])}" data-placement="offer-page-primary">{esc(data['cta'])} →</a><p class="verified-line">✓ Product, destination and terms checked {esc(offer['terms_verified_at'])}</p><p class="disclosure">Affiliate link. We may earn a commission; your price does not increase.</p></aside>
     </div></section>
     <section class="container section-tight"><div class="content-grid">

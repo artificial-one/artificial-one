@@ -10,7 +10,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = (ROOT / "about.html", ROOT / "reviews.html", ROOT / "blog.html")
 TOOL_PAGES = tuple(sorted((ROOT / "tools").glob("*.html")))
+GUIDE_PAGES = tuple(sorted((ROOT / "guides").glob("*.html")))
+COMPARE_PAGES = tuple(sorted((ROOT / "compare").glob("*.html")))
+EDITORIAL_PAGES = (
+    ROOT / "sitemap.html",
+    ROOT / "blog-57-new-appsumo-deals-2026.html",
+    ROOT / "blog-appsumo-writers-designers-2026.html",
+)
 TOOL_STYLE_MARKER = "<!-- AI1 LEGACY TOOL SHELL -->"
+LEGACY_TOOL_STYLE = "../assets/legacy-tool-pages.css?v=20260928a"
+EDITORIAL_HEADER_MARKER = "<!-- AI1 LEGACY EDITORIAL SHELL -->"
 
 
 def normalize(source: str) -> str:
@@ -56,15 +65,97 @@ def normalize(source: str) -> str:
     return source
 
 
+def normalize_guide_page(source: str) -> str:
+    """Repair legacy guide-relative links and preserve usable mobile layout."""
+    source = source.replace('href="guides/', 'href="')
+    if 'name="viewport"' not in source and "</head>" in source:
+        source = source.replace(
+            "</head>",
+            '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n</head>',
+            1,
+        )
+    if not re.search(r"<style\b|<link[^>]+rel=[\"']stylesheet[\"']|cdn\.tailwindcss", source, re.I):
+        source = source.replace(
+            "</head>",
+            '    <link rel="stylesheet" href="../assets/legacy-editorial-pages.css">\n</head>',
+            1,
+        )
+        source = re.sub(r"<body([^>]*)>", r'<body\1 class="legacy-editorial-page">', source, count=1, flags=re.I)
+    if "legacy-editorial-pages.css" in source:
+        source = ensure_editorial_shell(source, "../")
+    return source
+
+
+def normalize_compare_page(source: str) -> str:
+    source = source.replace(
+        'href="/best-lifetime-deal-software-2026/"',
+        'href="../guides/best-lifetime-deal-software-2026.html"',
+    )
+    if 'name="viewport"' not in source and "</head>" in source:
+        source = source.replace(
+            "</head>",
+            '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n</head>',
+            1,
+        )
+    if not re.search(r"<style\b|<link[^>]+rel=[\"']stylesheet[\"']|cdn\.tailwindcss", source, re.I):
+        source = source.replace(
+            "</head>",
+            '    <link rel="stylesheet" href="../assets/legacy-editorial-pages.css">\n</head>',
+            1,
+        )
+        source = re.sub(r"<body([^>]*)>", r'<body\1 class="legacy-editorial-page">', source, count=1, flags=re.I)
+    if "legacy-editorial-pages.css" in source:
+        source = ensure_editorial_shell(source, "../")
+    return source
+
+
+def ensure_editorial_shell(source: str, prefix: str) -> str:
+    source = source.replace(
+        "images/artificial-one-elephant-mark.png",
+        "images/branding/artificial-one-elephant-mark.png",
+    )
+    if EDITORIAL_HEADER_MARKER in source:
+        return source
+    header = f'''{EDITORIAL_HEADER_MARKER}<header class="legacy-editorial-header">
+      <a class="legacy-editorial-brand" href="{prefix}index.html"><img src="{prefix}images/branding/artificial-one-elephant-mark.png" alt=""><span>artificial.one</span></a>
+      <nav class="legacy-editorial-nav" aria-label="Primary navigation"><a href="{prefix}ask-elephant.html">Ask Elephant</a><a href="{prefix}reviews.html">Reviews</a><a href="{prefix}buyers-guides.html">Buyer Guides</a><a href="{prefix}news.html">News</a></nav>
+    </header>'''
+    return re.sub(r"(<body[^>]*>)", rf"\1{header}", source, count=1, flags=re.I)
+
+
+def normalize_editorial_page(source: str) -> str:
+    if 'name="viewport"' not in source and "</head>" in source:
+        source = source.replace(
+            "</head>",
+            '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n</head>',
+            1,
+        )
+    if "legacy-editorial-pages.css" not in source and "</head>" in source:
+        source = source.replace(
+            "</head>",
+            '    <link rel="stylesheet" href="assets/legacy-editorial-pages.css">\n</head>',
+            1,
+        )
+    if "legacy-editorial-page" not in source:
+        source = re.sub(r"<body([^>]*)>", r'<body\1 class="legacy-editorial-page">', source, count=1, flags=re.I)
+    return ensure_editorial_shell(source, "")
+
+
 def normalize_tool_page(source: str) -> str:
     """Apply the current shell without rewriting a legacy review's content."""
     source = source.replace('<body class="bg-white">', '<body class="bg-white legacy-tool-page">', 1)
     source = source.replace("<body>", '<body class="legacy-tool-page">', 1)
+    source = source.replace('href="guides/', 'href="../guides/')
+    source = re.sub(
+        r"\.\./assets/legacy-tool-pages\.css(?:\?v=[^\"']+)?",
+        LEGACY_TOOL_STYLE,
+        source,
+    )
     if TOOL_STYLE_MARKER not in source and "</head>" in source:
         styles = (
             f"    {TOOL_STYLE_MARKER}\n"
             '    <link rel="stylesheet" href="../assets/decision-engine.css">\n'
-            '    <link rel="stylesheet" href="../assets/legacy-tool-pages.css">\n'
+            f'    <link rel="stylesheet" href="{LEGACY_TOOL_STYLE}">\n'
         )
         source = source.replace("</head>", styles + "</head>", 1)
     if "assets/affiliate-tracking.js" not in source and "</body>" in source:
@@ -81,10 +172,39 @@ def main(check: bool = False) -> int:
     for path in PAGES:
         current = path.read_text(encoding="utf-8")
         expected = normalize(current)
+        if path.name == "blog.html":
+            expected = expected.replace("blog-midjourney-dalle.html", "blog-midjourney-vs-dalle.html")
         if current == expected:
             continue
         if check:
             stale.append(path.name)
+        else:
+            path.write_text(expected, encoding="utf-8")
+    for path in GUIDE_PAGES:
+        current = path.read_text(encoding="utf-8")
+        expected = normalize_guide_page(current)
+        if current == expected:
+            continue
+        if check:
+            stale.append(path.relative_to(ROOT).as_posix())
+        else:
+            path.write_text(expected, encoding="utf-8")
+    for path in COMPARE_PAGES:
+        current = path.read_text(encoding="utf-8")
+        expected = normalize_compare_page(current)
+        if current == expected:
+            continue
+        if check:
+            stale.append(path.relative_to(ROOT).as_posix())
+        else:
+            path.write_text(expected, encoding="utf-8")
+    for path in EDITORIAL_PAGES:
+        current = path.read_text(encoding="utf-8")
+        expected = normalize_editorial_page(current)
+        if current == expected:
+            continue
+        if check:
+            stale.append(path.relative_to(ROOT).as_posix())
         else:
             path.write_text(expected, encoding="utf-8")
     for path in TOOL_PAGES:

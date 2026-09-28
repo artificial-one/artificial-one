@@ -112,6 +112,55 @@ def restore_sitemap(source: str, restored_urls: set[str]) -> str:
     return source.rsplit("</urlset>", 1)[0].rstrip() + "\n" + "\n".join(rows) + "\n</urlset>\n"
 
 
+def repair_sitemap_tool_urls(source: str, root: Path) -> str:
+    """Point legacy tool aliases at an existing canonical file or drop them.
+
+    Older catalogue builders removed punctuation from product names while the
+    current filenames keep word boundaries (``copyai`` vs ``copy-ai``).  A
+    missing sitemap target should never survive merely because the public
+    deployment once happened to contain an older artefact.
+    """
+    tools = root / "tools"
+    by_key: dict[str, list[Path]] = {}
+    for page in tools.glob("*.html"):
+        key = re.sub(r"[^a-z0-9]", "", page.stem.casefold())
+        by_key.setdefault(key, []).append(page)
+
+    def replace(match: re.Match[str]) -> str:
+        row = match.group(0)
+        loc = LOC_RE.search(row)
+        if not loc:
+            return row
+        url = unescape(loc.group(1).strip())
+        parsed = urlparse(url)
+        if not parsed.path.startswith("/tools/") or not parsed.path.endswith(".html"):
+            return row
+        relative = parsed.path.lstrip("/")
+        if (root / relative).is_file():
+            return row
+        key = re.sub(r"[^a-z0-9]", "", Path(relative).stem.casefold())
+        candidates = by_key.get(key, [])
+        if len(candidates) != 1:
+            return ""
+        canonical = f"{SITE}/{candidates[0].relative_to(root).as_posix()}"
+        return row[: loc.start(1)] + canonical + row[loc.end(1) :]
+
+    repaired = URL_ROW_RE.sub(replace, source)
+    seen: set[str] = set()
+
+    def deduplicate(match: re.Match[str]) -> str:
+        loc = LOC_RE.search(match.group(0))
+        if not loc:
+            return match.group(0)
+        key = unescape(loc.group(1).strip()).rstrip("/")
+        if key in seen:
+            return ""
+        seen.add(key)
+        return match.group(0)
+
+    return URL_ROW_RE.sub(deduplicate, repaired)
+
+
 def plan(root: Path) -> tuple[list[dict[str, Any]], set[str]]:
     catalog = load_json(root / CATALOG_PATH, {})
     records = catalog.get("tools", []) if isinstance(catalog, dict) else []
@@ -177,7 +226,9 @@ def desired_outputs(root: Path) -> tuple[dict[Path, str], dict[str, Any]]:
         outputs[page] = desired
 
     sitemap_path = root / SITEMAP_PATH
-    sitemap = sitemap_path.read_text(encoding="utf-8", errors="ignore")
+    sitemap = repair_sitemap_tool_urls(
+        sitemap_path.read_text(encoding="utf-8", errors="ignore"), root
+    )
     excluded_urls = {
         canonical_for(root, relative, outputs.get(root / relative) or (root / relative).read_text(encoding="utf-8", errors="ignore")).rstrip("/")
         for relative in selected

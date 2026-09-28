@@ -85,6 +85,30 @@ class VisualContractTests(unittest.TestCase):
         self.assertIn('[data-beehiiv-form="newsletter"] { display: none !important; }', css)
         self.assertIn("body.legacy-tool-page .pros {", css)
         self.assertIn("body.legacy-tool-page .cons {", css)
+        self.assertIn("article > header > h1", css)
+        self.assertIn("color: #fff !important", css)
+
+    def test_partner_media_is_branded_even_when_remote_capture_is_blank(self):
+        css = (ROOT / "assets" / "decision-engine.css").read_text(encoding="utf-8")
+        builder = (ROOT / "scripts" / "build_partner_offers.py").read_text(encoding="utf-8")
+        self.assertIn('content: attr(data-product)', css)
+        self.assertIn(".offer-product-visual > img", css)
+        self.assertIn('data-product="{esc(offer[\'name\'])}"', builder)
+
+    def test_legacy_relative_links_are_normalized(self):
+        guide = '<html><head></head><body><a href="guides/example.html">Guide</a></body></html>'
+        tool = '<html><head></head><body><a href="guides/example.html">Guide</a></body></html>'
+        self.assertIn('href="example.html"', normalizer.normalize_guide_page(guide))
+        self.assertIn('name="viewport"', normalizer.normalize_guide_page(guide))
+        self.assertIn('href="../guides/example.html"', normalizer.normalize_tool_page(tool))
+
+    def test_unstyled_legacy_editorial_pages_receive_a_readable_shell(self):
+        source = '<html><head><title>Guide</title></head><body><h1>Guide</h1></body></html>'
+        normalized = normalizer.normalize_editorial_page(source)
+        self.assertIn("legacy-editorial-pages.css", normalized)
+        self.assertIn("legacy-editorial-page", normalized)
+        self.assertIn('name="viewport"', normalized)
+        self.assertIn("legacy-editorial-header", normalized)
 
     def test_review_reading_avoids_injected_promotional_clutter(self):
         directory = (ROOT / "reviews.html").read_text(encoding="utf-8")

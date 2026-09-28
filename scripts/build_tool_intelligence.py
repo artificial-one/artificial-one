@@ -479,7 +479,15 @@ def update_sitemap(source: str, updated_at: str) -> str:
         rows.extend(["  <url>", f"    <loc>https://artificial.one/{path}</loc>", f"    <lastmod>{updated_at}</lastmod>", f"    <changefreq>{frequency}</changefreq>", f"    <priority>{priority}</priority>", "  </url>"])
     rows.append(SITEMAP_END)
     block = "\n".join(rows)
-    source = re.sub(r"\s*" + re.escape(SITEMAP_START) + r".*?" + re.escape(SITEMAP_END), "", source, flags=re.S)
+    existing_block = re.compile(
+        r"\s*" + re.escape(SITEMAP_START) + r".*?" + re.escape(SITEMAP_END),
+        flags=re.S,
+    )
+    if existing_block.search(source):
+        # Replace the generated block where it already lives. Moving it to the
+        # end on every run made this builder fight with independently appended
+        # news URLs, leaving an otherwise clean checkout dirty in CI.
+        return existing_block.sub("\n" + block, source, count=1)
     source = re.sub(r"\s*<url>\s*<loc>https://artificial\.one/(?:ai-tool-database|ai-tool-alternatives|ai-tool-changes)\.html</loc>.*?</url>", "", source, flags=re.S)
     if "</urlset>" not in source:
         raise ValueError("sitemap.xml has no closing urlset")

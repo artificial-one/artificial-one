@@ -70,6 +70,25 @@ class LegacyIndexConsolidationTests(unittest.TestCase):
         self.assertEqual(report["summary"]["restored"], 1)
         self.assertNotIn(subject.MARKER_START, (self.root / "tools/weak.html").read_text(encoding="utf-8"))
 
+    def test_repairs_stale_tool_aliases_and_drops_unmatched_urls(self):
+        (self.root / "tools/copy-ai-review.html").write_text(page("Copy AI"), encoding="utf-8")
+        sitemap = """<urlset>
+        <url><loc>https://artificial.one/tools/copyai-review.html</loc></url>
+        <url><loc>https://artificial.one/tools/vanished-review.html</loc></url>
+        </urlset>"""
+        repaired = subject.repair_sitemap_tool_urls(sitemap, self.root)
+        self.assertIn("tools/copy-ai-review.html", repaired)
+        self.assertNotIn("tools/copyai-review.html", repaired)
+        self.assertNotIn("tools/vanished-review.html", repaired)
+
+    def test_removes_duplicate_sitemap_rows(self):
+        sitemap = """<urlset>
+        <url><loc>https://artificial.one/tools/sourced.html</loc></url>
+        <url><loc>https://artificial.one/tools/sourced.html</loc></url>
+        </urlset>"""
+        repaired = subject.repair_sitemap_tool_urls(sitemap, self.root)
+        self.assertEqual(1, repaired.count("tools/sourced.html"))
+
 
 if __name__ == "__main__":
     unittest.main()

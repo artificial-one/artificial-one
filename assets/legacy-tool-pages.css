@@ -255,6 +255,31 @@ body.legacy-tool-page footer {
   color: #716a7d !important;
 }
 
+/* Keep the review hero readable even when legacy utility classes carry a
+   higher class count than the shell's original header rules.  Limit these
+   overrides to direct hero copy so pricing/rating badges retain their own
+   foreground colours. */
+body.legacy-tool-page article > header > h1,
+body.legacy-tool-page article > header > h1.text-gray-900,
+body.legacy-tool-page main > header > h1,
+body.legacy-tool-page main > header > h1.text-gray-900 {
+  color: #fff !important;
+}
+
+body.legacy-tool-page article > header > p,
+body.legacy-tool-page article > header > p.text-gray-600,
+body.legacy-tool-page article > header > p.text-gray-700,
+body.legacy-tool-page main > header > p,
+body.legacy-tool-page main > header > p.text-gray-600,
+body.legacy-tool-page main > header > p.text-gray-700 {
+  color: #e9e5f2 !important;
+}
+
+body.legacy-tool-page article > header > div:first-child,
+body.legacy-tool-page main > header > div:first-child {
+  color: #b8ff65 !important;
+}
+
 @media (max-width: 650px) {
   body.legacy-tool-page > article,
   body.legacy-tool-page > main,
