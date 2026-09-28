@@ -63,7 +63,11 @@ class VisualContractTests(unittest.TestCase):
     def test_every_html_page_has_one_primary_content_landmark(self):
         pages = [
             path for path in ROOT.rglob("*.html")
-            if ".git" not in path.parts and "node_modules" not in path.parts
+            if "node_modules" not in path.parts
+            and not any(
+                part.startswith(".")
+                for part in path.relative_to(ROOT).parts[:-1]
+            )
         ]
         self.assertGreater(len(pages), 1000)
         missing = []
