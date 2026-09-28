@@ -1,10 +1,37 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 62,
+    "successful_checks": 63,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-09-28",
+      "id": "65248e7f8b6556e5",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://elicit.org",
+      "tool_id": "elicit",
+      "tool_name": "Elicit"
+    },
+    {
+      "detected_on": "2026-09-28",
+      "id": "ceb8bc6f602c3436",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://iris.ai",
+      "tool_id": "iris-ai",
+      "tool_name": "Iris.ai"
+    },
+    {
+      "detected_on": "2026-09-28",
+      "id": "5356b234913daa5a",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://opus.pro",
+      "tool_id": "opus-clip",
+      "tool_name": "Opus Clip"
+    },
     {
       "detected_on": "2026-09-27",
       "id": "336363df739a990f",
@@ -196,6 +223,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-09-27",
+  "updated_at": "2026-09-28",
   "version": 1
 }
