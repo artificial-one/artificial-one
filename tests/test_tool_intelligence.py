@@ -72,6 +72,15 @@ class ToolIntelligenceTests(unittest.TestCase):
         self.assertEqual(first_map.count("tool-intelligence:start"), 1)
         self.assertEqual(first_map.count("ai-tool-database.html"), 1)
 
+    def test_sitemap_update_preserves_entries_after_generated_block(self):
+        trailing = "  <url><loc>https://artificial.one/news/example.html</loc></url>"
+        source = intelligence.update_sitemap('<?xml version="1.0"?><urlset>\n</urlset>\n', "2026-09-16")
+        source = source.replace("</urlset>", trailing + "\n</urlset>")
+        updated = intelligence.update_sitemap(source, "2026-09-28")
+        self.assertIn(trailing, updated)
+        self.assertLess(updated.index("tool-intelligence:end"), updated.index(trailing))
+        self.assertEqual(updated, intelligence.update_sitemap(updated, "2026-09-28"))
+
     def test_compact_decision_engine_homepage_skips_legacy_database_block(self):
         source = '<main><section data-home-picks></section></main>'
         self.assertEqual(intelligence.update_homepage(source, self.catalog), source)
