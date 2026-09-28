@@ -165,6 +165,21 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         for competing_action in ("How it works", "Find Tools", "Recipes", "Deals", "What’s New", "My Stack", "Explore"):
             self.assertNotIn(competing_action, header)
 
+    def test_homepage_command_center_is_complete_and_footerless(self):
+        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        engine = (ROOT / "assets" / "decision-engine.js").read_text(encoding="utf-8")
+        tracking = (ROOT / "assets" / "affiliate-tracking.js").read_text(encoding="utf-8")
+        header = homepage.split("</header>", 1)[0]
+        for destination in ("reviews.html", "buyers-guides.html", "news.html", "about.html", "partners.html", "privacy.html", "mailto:hello@artificial.one"):
+            self.assertIn(destination, header)
+        self.assertNotIn('class="site-footer"', homepage)
+        self.assertIn("data-home-news-track", homepage)
+        self.assertIn("data-home-tool-search", homepage)
+        self.assertIn("data-home-tool-results", homepage)
+        self.assertIn("initHomeNewsTicker", engine)
+        self.assertIn("initHomeToolSearch", engine)
+        self.assertIn('!document.body.classList.contains("home-page")', tracking)
+
     def test_imported_offer_copy_is_buyer_facing(self):
         serialized = json.dumps(self.registry).casefold()
         for phrase in ("earn up to 50%", "affiliate support", "affiliate terms model", "strong fit for affiliates"):

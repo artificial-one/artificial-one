@@ -408,7 +408,7 @@
       var item = itemById(id);
       return item ? '<span class="compare-chip">' + text(item.name) + '</span>' : "";
     }).join("");
-    drawer.classList.toggle("is-open", compareItems.length > 0);
+    drawer.classList.toggle("is-open", compareItems.length > 0 && !document.body.classList.contains("home-page"));
   }
 
   function toggleCompare(id) {
@@ -643,6 +643,54 @@
     }).catch(function () {});
   }
 
+  function homeToolMarkup(item) {
+    var logo = item.logoUrl ? '<img src="' + text(item.logoUrl) + '" alt="" width="39" height="39" loading="eager" decoding="async">' : text(initials(item.name));
+    return '<a class="home-tool-result" style="--result-color:' + text(item.color || "#8b5cf6") + '" href="' + text(item.affiliateUrl) + '" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="' + text(item.id) + '" data-placement="homepage-search">' +
+      '<span class="home-tool-logo">' + logo + '</span><span class="home-tool-copy"><strong>' + text(item.name) + '</strong><small>' + text(item.category) + ' · ' + text(item.summary) + '</small></span><span aria-hidden="true">↗</span></a>';
+  }
+
+  function initHomeToolSearch() {
+    var input = document.querySelector("[data-home-tool-search]");
+    var target = document.querySelector("[data-home-tool-results]");
+    var meta = document.querySelector("[data-home-search-meta]");
+    if (!input || !target || !catalog.length) return;
+    var ordered = catalog.slice().sort(function (a,b) {
+      if (!!a.featured !== !!b.featured) return a.featured ? -1 : 1;
+      return String(b.verified || "").localeCompare(String(a.verified || ""));
+    });
+    function render() {
+      var query = input.value.trim().toLowerCase();
+      var tokens = words(query);
+      var matches = ordered.filter(function (item) {
+        if (!tokens.length) return true;
+        var source = haystack(item);
+        return tokens.every(function (token) { return source.indexOf(token) >= 0; });
+      });
+      target.innerHTML = matches.length ? matches.slice(0,4).map(homeToolMarkup).join("") : '<div class="home-tool-empty">No exact match. Try a task such as <strong>video</strong>, <strong>sales</strong> or <strong>PDF</strong>.</div>';
+      if (meta) meta.textContent = query ? matches.length + " relevant tool" + (matches.length === 1 ? "" : "s") + " found" : catalog.length + " verified partner tools—popular picks first";
+      bindDynamic(target);
+    }
+    input.addEventListener("input", render);
+    document.addEventListener("keydown", function (event) {
+      var active = document.activeElement && document.activeElement.tagName;
+      if (event.key === "/" && active !== "INPUT" && active !== "TEXTAREA" && active !== "SELECT") {
+        event.preventDefault(); input.focus();
+      }
+    });
+    render();
+  }
+
+  function initHomeNewsTicker() {
+    var target = document.querySelector("[data-home-news-track]");
+    var items = window.AI1_NEWS_ITEMS;
+    if (!target || !Array.isArray(items) || !items.length) return;
+    var stories = items.slice(0,8).map(function (item) {
+      var href = item.archive_url || item.url || "news.html";
+      return '<a class="ticker-story" href="' + text(href) + '"><small>' + text(item.category || item.source || "AI news") + '</small><span>' + text(item.title) + '</span></a>';
+    }).join("");
+    target.innerHTML = stories + stories;
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     parseCatalog();
     previousVisit = read(STORE.visit, "");
@@ -651,7 +699,7 @@
     if (queryCompare) write(STORE.compare, queryCompare.split(",").filter(Boolean).slice(0,2));
     var queryStack = params.get("stack");
     if (queryStack) write(STORE.stack, queryStack.split(",").filter(function (id) { return !!itemById(id); }).slice(0,20));
-    initNav(); initMatcher(); initHomePicks(); initCatalogFilters(); initPanels(); initNews(); initCalculator(); initTabs(); initWatch(); initNewVisit(); initOptIns(); initCardCtaExperiment();
+    initNav(); initMatcher(); initHomePicks(); initHomeToolSearch(); initHomeNewsTicker(); initCatalogFilters(); initPanels(); initNews(); initCalculator(); initTabs(); initWatch(); initNewVisit(); initOptIns(); initCardCtaExperiment();
     bindDynamic(document); renderStack(); renderHistory(); renderCompareDrawer();
   });
 })();

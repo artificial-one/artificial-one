@@ -243,7 +243,7 @@
     var existingHeader = document.querySelector(".site-header");
     if (existingHeader) {
       var existingNav = existingHeader.querySelector(".primary-nav");
-      if (existingNav) existingNav.innerHTML = '<a class="flagship-nav-cta" href="/#build">Build my AI setup</a>';
+      if (existingNav && !document.body.classList.contains("home-page")) existingNav.innerHTML = '<a class="flagship-nav-cta" href="/#build">Build my AI setup</a>';
       return;
     }
     var stylesheet = Array.prototype.find.call(document.styleSheets || [], function (sheet) { return /decision-engine\.css/.test(sheet.href || ""); });
