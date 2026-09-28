@@ -193,6 +193,42 @@
   "methodology": "Catalogue-grounded browser-side recommendations; monetization is a one-point tie-break only.",
   "news": [
     {
+      "category": "AI Business",
+      "published": "",
+      "title": "Engram is a sampler that turns broken AI hallucinations into music",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Anthropic’s CEO is about to have dinner with President Trump",
+      "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/"
+    },
+    {
+      "category": "Research",
+      "published": "",
+      "title": "OpenAI agents tried to ‘bruteforce’ a UN website",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Anthropic’s Dario Amodei gets the SNL treatment",
+      "url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "AI agents do more of the work in model development, but humans still make the decisions",
+      "url": "https://the-decoder.com/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decisions/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Some Anthropic veterans are reportedly buying remote land in case \"AI goes awry\"",
+      "url": "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/"
+    },
+    {
       "category": "Models & LLMs",
       "published": "",
       "title": "Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time",
@@ -235,22 +271,10 @@
       "url": "https://the-decoder.com/two-thirds-of-it-leaders-report-ai-results-but-few-would-interrupt-the-ceos-vacation-over-them/"
     },
     {
-      "category": "Research",
-      "published": "",
-      "title": "AI access makes people almost entirely unwilling to say \"I don't know,\" study finds",
-      "url": "https://the-decoder.com/ai-access-makes-people-almost-entirely-unwilling-to-say-i-dont-know-study-finds/"
-    },
-    {
       "category": "Models & LLMs",
       "published": "",
       "title": "OpenAI pauses training of its ‘most capable models’",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Nvidia's SoL-Pi system cuts coding agent token usage nearly in half by optimizing the harness",
-      "url": "https://the-decoder.com/nvidias-sol-pi-system-cuts-coding-agent-token-usage-nearly-in-half-by-optimizing-the-harness/"
     },
     {
       "category": "AI Tools & Products",
@@ -277,40 +301,10 @@
       "url": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review"
     },
     {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
-      "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/"
-    },
-    {
-      "category": "AI Business",
-      "published": "",
-      "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
-      "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Meta’s Muse just stole the AI spotlight from OpenAI and Anthropic",
-      "url": "https://techcrunch.com/podcast/metas-muse-just-stole-the-ai-spotlight-from-openai-and-anthropic/"
-    },
-    {
       "category": "Models & LLMs",
       "published": "",
       "title": "One company is at the center of a wave of rogue AI attacks",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
-      "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Gemini 3.8 Live with Live Avatar gives Google’s AI a face",
-      "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face"
     },
     {
       "category": "Models & LLMs",
@@ -335,6 +329,12 @@
       "published": "",
       "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
       "url": "https://openai.com/index/ringg"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
+      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan"
     }
   ],
   "recipes": [
@@ -14115,6 +14115,6 @@
       "summary": "Complete Zenler review covering features, pricing, and exclusive lifetime deal. See if this tool is worth it for your business"
     }
   ],
-  "updated_at": "2026-09-27",
+  "updated_at": "2026-09-28",
   "version": 1
 }
