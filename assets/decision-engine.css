@@ -606,6 +606,7 @@ button { color: inherit; }
   color: #5b21b6;
   background: #f7f2fc;
 }
+.home-page .nav-toggle { border-color: #ded4e8; color: #fff; background: #211a31; }
 .home-page .flagship-nav-cta {
   padding: 9px 15px;
   border: 0;
@@ -761,7 +762,8 @@ button { color: inherit; }
   .home-workspace { grid-template-columns: minmax(0,1fr) minmax(350px,.84fr); }
 }
 @media (max-width: 960px) {
-  .home-page { overflow-y: auto; }
+  .home-page { max-width: 100%; overflow-x: clip; overflow-y: auto; }
+  .home-page main,.home-page .home-news-ticker { max-width: 100%; overflow-x: clip; }
   .home-page .primary-nav { background: #fff; border-bottom-color: #e4ddec; box-shadow: 0 24px 50px rgba(48,28,83,.12); }
   .home-page .more-links { box-shadow: none; }
   .home-command { height: auto; min-height: calc(100dvh - 110px); overflow: visible; }
