@@ -1,13 +1,114 @@
 {
   "version": 1,
-  "updated_at": "2026-09-27T21:35:38.716541+00:00",
+  "updated_at": "2026-09-28T14:26:42.771106+00:00",
   "items": [
+    {
+      "title": "Nvidia says its new AI safety platform can contain rogue agents within ‘milliseconds’",
+      "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
+      "source": "The Verge AI",
+      "published_at": "2026-09-28T14:15:22+00:00",
+      "display_date": "Sep 28, 2026",
+      "category": "Policy & Safety",
+      "description": "Nvidia is launching a new safety platform designed to contain and monitor AI agents, a move that comes in response to a wave of rogue hacking incidents, as reported earlier by Reuters. In an announcement on Monday, Nvidia says its new Open Agent Safety Platform can quarantine agents that attempt to escape their boundaries within […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Modulate raises $25M for its voice models and analysis suite",
+      "url": "https://techcrunch.com/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-28T14:05:00+00:00",
+      "display_date": "Sep 28, 2026",
+      "category": "Models & LLMs",
+      "description": "Modulate deploys its models to detect deepfake, fraud and scam",
+      "related": {
+        "title": "Evaluate ElevenLabs for this workflow",
+        "url": "partner-offers/elevenlabs-ai-voice.html",
+        "offer_id": "elevenlabs"
+      },
+      "archive_url": "news/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite.html"
+    },
+    {
+      "title": "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
+      "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-28T13:38:48+00:00",
+      "display_date": "Sep 28, 2026",
+      "category": "AI Tools & Products",
+      "description": "Instinct has raised a $1 billion Series C, saying 'we're just getting started.' The company is now valued at $10 billion.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Every AI lab thinks it's the responsible one, and safety researcher Ryan Greenblatt says that's what keeps the arms race going",
+      "url": "https://the-decoder.com/every-ai-lab-thinks-its-the-responsible-one-and-safety-researcher-ryan-greenblatt-says-thats-what-keeps-the-arms-race-going/",
+      "source": "The Decoder",
+      "published_at": "2026-09-28T12:11:27+00:00",
+      "display_date": "Sep 28, 2026",
+      "category": "Research",
+      "description": "Ryan Greenblatt, chief scientist at Redwood Research, puts the risk of an AI takeover at 50 to 60 percent if development stays on its current path. Sam Harris says that doesn't square with how fast the industry is moving, since Manhattan Project scientists would have called things off at 10 percent. Greenblatt blames the race dynamics at Anthropic and OpenAI and is counting on an international agreement. The article Every AI lab thinks it's the responsible one, and safety researcher Ryan Greenbl",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "OpenAI pauses training of its ‘most capable models’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause",
+      "source": "The Verge AI",
+      "published_at": "2026-09-28T11:33:50+00:00",
+      "display_date": "Sep 28, 2026",
+      "category": "Models & LLMs",
+      "description": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most powerful models. The decision was made after a model being tested within a sandbox exploited a loophole to gain internet access. The incident happened on September […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/09/26/openai-pauses-training-of-its-most-capable-models.html"
+    },
+    {
+      "title": "A Wuhan court just made AI production costs a legal factor in copyright infringement cases",
+      "url": "https://the-decoder.com/a-wuhan-court-just-made-ai-production-costs-a-legal-factor-in-copyright-infringement-cases/",
+      "source": "The Decoder",
+      "published_at": "2026-09-28T10:39:52+00:00",
+      "display_date": "Sep 28, 2026",
+      "category": "Policy & Safety",
+      "description": "A court in Wuhan, China has factored token usage and AI tool licensing fees into a copyright damages calculation for the first time. The ruling is part of China's broader push to build out copyright protections for AI-generated works. The article A Wuhan court just made AI production costs a legal factor in copyright infringement cases appeared first on The Decoder .",
+      "related": {
+        "title": "Browse independent AI software buying guides",
+        "url": "buyers-guides.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/09/28/a-wuhan-court-just-made-ai-production-costs-a-legal-factor-in-copyright-infringeme.html"
+    },
+    {
+      "title": "OpenAI agents tried to ‘bruteforce’ a UN website",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website",
+      "source": "The Verge AI",
+      "published_at": "2026-09-28T10:01:10+00:00",
+      "display_date": "Sep 28, 2026",
+      "category": "Research",
+      "description": "Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and June. While the incident doesn't quite rise to the level of the Hugging Face hack, or the recent attacks on US government sites, it's yet another concerning example of AI […]",
+      "related": {
+        "title": "Evaluate Unbounce for this workflow",
+        "url": "partner-offers/unbounce-landing-pages.html",
+        "offer_id": "unbounce"
+      }
+    },
     {
       "title": "Engram is a sampler that turns broken AI hallucinations into music",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music",
       "source": "The Verge AI",
-      "published_at": "2026-09-27T20:46:36+00:00",
-      "display_date": "Sep 27, 2026",
+      "published_at": "2026-09-28T09:59:36+00:00",
+      "display_date": "Sep 28, 2026",
       "category": "AI Business",
       "description": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram. It's a sampler and groovebox that uses AI to mangle incoming audio and even hallucinate completely new sounds. This isn't Suno in a box, though. This isn't a \"push-button, get-song\" device, aimed at creating something that sounds ready for top-40 […]",
       "related": {
@@ -16,6 +117,20 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/09/27/engram-is-a-sampler-that-turns-broken-ai-hallucinations-into-music.html"
+    },
+    {
+      "title": "Holo4: powering generalist computer-use agents",
+      "url": "https://huggingface.co/blog/Hcompany/holo4",
+      "source": "Hugging Face",
+      "published_at": "2026-09-28T09:44:05+00:00",
+      "display_date": "Sep 28, 2026",
+      "category": "AI Tools & Products",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
     },
     {
       "title": "Anthropic’s CEO is about to have dinner with President Trump",
@@ -31,20 +146,6 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/09/27/anthropic-s-ceo-is-about-to-have-dinner-with-president-trump.html"
-    },
-    {
-      "title": "OpenAI agents tried to ‘bruteforce’ a UN website",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website",
-      "source": "The Verge AI",
-      "published_at": "2026-09-27T17:21:07+00:00",
-      "display_date": "Sep 27, 2026",
-      "category": "Research",
-      "description": "Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and June. While the incident doesn't quite rise to the level of the Hugging Face hack, or the recent attacks on US government sites, it's yet another concerning example of AI […]",
-      "related": {
-        "title": "Evaluate Unbounce for this workflow",
-        "url": "partner-offers/unbounce-landing-pages.html",
-        "offer_id": "unbounce"
-      }
     },
     {
       "title": "Anthropic’s Dario Amodei gets the SNL treatment",
@@ -133,21 +234,6 @@
       "archive_url": "news/2026/09/27/tens-of-thousands-of-security-probes-show-openai-s-hugging-face-incident-was-just.html"
     },
     {
-      "title": "Goldman Sachs expects Big Tech to spend $1.2 trillion on AI infrastructure by 2027, dwarfing Wall Street estimates",
-      "url": "https://the-decoder.com/goldman-sachs-expects-big-tech-to-spend-1-2-trillion-on-ai-infrastructure-by-2027-dwarfing-wall-street-estimates/",
-      "source": "The Decoder",
-      "published_at": "2026-09-27T08:17:47+00:00",
-      "display_date": "Sep 27, 2026",
-      "category": "AI Tools & Products",
-      "description": "Goldman Sachs projects that Amazon, Alphabet, Microsoft, Oracle, and Meta will pour a combined $1.2 trillion into AI infrastructure in 2027, more than 50 percent above this year's levels. Measured against GDP, it would be the biggest investment cycle since railroad construction in the 19th century. Bottlenecks in power, labor, and memory chips could slow the pace, though. The article Goldman Sachs expects Big Tech to spend $1.2 trillion on AI infrastructure by 2027, dwarfing Wall Street estimate",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/09/27/goldman-sachs-expects-big-tech-to-spend-1-2-trillion-on-ai-infrastructure-by-2027.html"
-    },
-    {
       "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
       "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
       "source": "TechCrunch AI",
@@ -176,63 +262,6 @@
         "offer_id": "carepatron"
       },
       "archive_url": "news/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs.html"
-    },
-    {
-      "title": "Two-thirds of IT leaders report AI results, but few would interrupt the CEO's vacation over them",
-      "url": "https://the-decoder.com/two-thirds-of-it-leaders-report-ai-results-but-few-would-interrupt-the-ceos-vacation-over-them/",
-      "source": "The Decoder",
-      "published_at": "2026-09-26T17:27:52+00:00",
-      "display_date": "Sep 26, 2026",
-      "category": "AI Tools & Products",
-      "description": "Speaking to 160 IT vice presidents in Las Vegas, tech entrepreneur Azeem Azhar asked who had measurable AI results. Two-thirds raised their hands. Then he asked who had results good enough to interrupt the CEO's summer vacation. Only eight did. Whether that slow pace of progress justifies the massive investments is one of the key questions in the AI bubble debate. The article Two-thirds of IT leaders report AI results, but few would interrupt the CEO's vacation over them appeared first on The De",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "OpenAI pauses training of its ‘most capable models’",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause",
-      "source": "The Verge AI",
-      "published_at": "2026-09-26T16:34:59+00:00",
-      "display_date": "Sep 26, 2026",
-      "category": "Models & LLMs",
-      "description": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most powerful models. The decision was made after a model being tested within a sandbox exploited a loophole to gain internet access. The incident happened on September […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/09/26/openai-pauses-training-of-its-most-capable-models.html"
-    },
-    {
-      "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
-      "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-09-25T23:11:10+00:00",
-      "display_date": "Sep 25, 2026",
-      "category": "AI Tools & Products",
-      "description": "Boom Supersonic CEO Blake Scholl said the company's new stationary power plants were no longer in Crusoe's near-term plans.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge",
-      "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-09-25T22:20:47+00:00",
-      "display_date": "Sep 25, 2026",
-      "category": "Research",
-      "description": "AI agents operating in OpenAI's research environment posted user images on public image-hosting sites without the lab's knowledge.",
-      "related": {
-        "title": "Evaluate AdCreative.ai for this workflow",
-        "url": "partner-offers/adcreative-ai-ad-design.html",
-        "offer_id": "adcreative"
-      }
     },
     {
       "title": "Can Cloudflare CEO Matthew Prince save the web from AI?",
@@ -489,34 +518,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "AI for Societal Impact",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
-      "source": "Google AI",
-      "published_at": "2026-09-15T16:00:00+00:00",
-      "display_date": "Sep 15, 2026",
-      "category": "AI Tools & Products",
-      "description": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Building AI to accelerate science and improve lives",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
-      "source": "Google AI",
-      "published_at": "2026-09-15T16:00:00+00:00",
-      "display_date": "Sep 15, 2026",
-      "category": "AI Tools & Products",
-      "description": "B-roll showing diverse environments and people, including a teacher and students in a classroom and a patient with a doctor",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
       }
     }
   ]

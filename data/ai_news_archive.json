@@ -1,7 +1,134 @@
 {
   "version": 1,
-  "updated_at": "2026-09-28T05:49:28.167986+00:00",
+  "updated_at": "2026-09-28T14:26:47.202879+00:00",
   "articles": [
+    {
+      "path": "news/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite.html",
+      "created_at": "2026-09-28T14:26:47.202879+00:00",
+      "source": {
+        "title": "Modulate raises $25M for its voice models and analysis suite",
+        "url": "https://techcrunch.com/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-09-28T14:05:00+00:00",
+        "display_date": "Sep 28, 2026",
+        "category": "Models & LLMs",
+        "description": "Modulate deploys its models to detect deepfake, fraud and scam",
+        "related": {
+          "title": "Evaluate ElevenLabs for this workflow",
+          "url": "partner-offers/elevenlabs-ai-voice.html",
+          "offer_id": "elevenlabs"
+        }
+      },
+      "article": {
+        "headline": "Modulate Secures $25M for Voice AI Platform",
+        "summary": "Modulate, a Boston-based voice intelligence startup, has raised $25 million in new funding to expand its platform for enterprises. The company focuses on transcription, emotional analysis, deepfake detection, and AI music detection. The round was led by Future Ventures with participation from Hyperplane and Lakestar.",
+        "facts": [
+          {
+            "statement": "Modulate's platform uses small models to offer enterprises transcription, emotional analysis, and deepfake detection.",
+            "evidence": "Modulate deploys its models to detect deepfake, fraud and scam"
+          },
+          {
+            "statement": "The company has raised $41 million in funding at a $170 million valuation prior to this round.",
+            "evidence": "Data from PitchBook indicated that the startup had raised $41 million in funding"
+          },
+          {
+            "statement": "Modulate's platform runs more than 100 models categorized into signal extraction and analysis/detection models.",
+            "evidence": "The company today runs more than 100 models that are largely categorized into two sections"
+          }
+        ],
+        "why_it_matters": "Modulate's funding highlights the growing interest in voice AI for enterprise applications. As AI voices become more realistic, the need for detection tools and emotional analysis is increasing. This funding could help Modulate expand its capabilities in detecting deepfakes and analyzing intent behind human conversations.",
+        "elephant_take": "🐘 鼋 Modulate’s $25M round shows investors betting on voice AI’s potential to detect fraud and analyze intent. But with so many companies in this space, it's unclear how Modulate will differentiate itself beyond its small model approach.",
+        "caveat": "The industry is highly competitive, and Modulate's success depends on its ability to scale and maintain its unique approach.",
+        "who_should_care": [
+          "AI investors",
+          "Voice AI companies",
+          "Enterprise customers"
+        ],
+        "what_to_do": [
+          "Evaluate Modulate’s unique value proposition in voice AI",
+          "Monitor the competition in the deepfake detection space",
+          "Assess the scalability of Modulate’s small model approach"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/elevenlabs-ai-voice.html",
+        "review_title": "Evaluate ElevenLabs for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Modulate%20raises%20%2425M%20for%20its%20voice%20models%20and%20analysis%20suite%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "elevenlabs"
+      }
+    },
+    {
+      "path": "news/2026/09/28/a-wuhan-court-just-made-ai-production-costs-a-legal-factor-in-copyright-infringeme.html",
+      "created_at": "2026-09-28T14:26:47.202879+00:00",
+      "source": {
+        "title": "A Wuhan court just made AI production costs a legal factor in copyright infringement cases",
+        "url": "https://the-decoder.com/a-wuhan-court-just-made-ai-production-costs-a-legal-factor-in-copyright-infringement-cases/",
+        "source": "The Decoder",
+        "published_at": "2026-09-28T10:39:52+00:00",
+        "display_date": "Sep 28, 2026",
+        "category": "Policy & Safety",
+        "description": "A court in Wuhan, China has factored token usage and AI tool licensing fees into a copyright damages calculation for the first time. The ruling is part of China's broader push to build out copyright protections for AI-generated works. The article A Wuhan court just made AI production costs a legal factor in copyright infringement cases appeared first on The Decoder .",
+        "related": {
+          "title": "Browse independent AI software buying guides",
+          "url": "buyers-guides.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Wuhan Court Factors AI Production Costs in Copyright Infringement Cases",
+        "summary": "A Wuhan court has included AI production costs in copyright infringement cases for the first time, highlighting growing protections for AI-generated works.",
+        "facts": [
+          {
+            "statement": "A Wuhan court made AI production costs a legal factor in copyright infringement cases.",
+            "evidence": "A Wuhan court just made AI production costs a legal factor in copyright infringement cases"
+          },
+          {
+            "statement": "The court considered token usage and AI tool licensing fees in damages calculations.",
+            "evidence": "Token usage and AI tool licensing fees have been included in a copyright damages calculation"
+          },
+          {
+            "statement": "The court classified an AI-generated short drama as a protectable audiovisual work.",
+            "evidence": "The court classified the drama as a protectable audiovisual work because employees had made their own creative decisions"
+          }
+        ],
+        "why_it_matters": "This ruling marks a significant step in China's efforts to protect AI-generated works, emphasizing that AI is just a tool and human creativity remains central to copyright law.",
+        "elephant_take": "🐘 鼋 The Wuhan court is trying to balance AI's role in creativity with human authorship, but it's still unclear how this will affect future cases involving AI tools.",
+        "caveat": "The ruling is a first step, and more legal challenges may arise as AI's role in content creation grows.",
+        "who_should_care": [
+          "AI developers",
+          "Content creators",
+          "Legal professionals"
+        ],
+        "what_to_do": [
+          "Keep records of creative decisions and AI tool usage",
+          "Monitor legal developments around AI-generated works",
+          "Consult with legal experts on copyright implications",
+          "Stay informed about changes in AI regulation"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "buyers-guides.html",
+        "review_title": "Browse independent AI software buying guides",
+        "elephant_url": "index.html?task=Explain%20what%20A%20Wuhan%20court%20just%20made%20AI%20production%20costs%20a%20legal%20factor%20in%20copyright%20infringement%20cases%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/09/22/microsoft-disrupts-ai-assisted-platform-that-compromised-12-000-accounts.html",
       "created_at": "2026-09-28T05:49:28.167986+00:00",
@@ -1141,6 +1268,30 @@
     }
   ],
   "last_failures": [
+    {
+      "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-09-28T14:26:47.202879+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-09-28T14:26:47.202879+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/every-ai-lab-thinks-its-the-responsible-one-and-safety-researcher-ryan-greenblatt-says-thats-what-keeps-the-arms-race-going/",
+      "reason": "quality gate rejected draft: headline length is outside the publication range",
+      "at": "2026-09-28T14:26:47.202879+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/Hcompany/holo4",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; hype language is present",
+      "at": "2026-09-28T14:26:47.202879+00:00",
+      "pipeline_version": "2"
+    },
     {
       "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
