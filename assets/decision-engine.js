@@ -684,10 +684,10 @@
     var target = document.querySelector("[data-home-news-track]");
     var items = window.AI1_NEWS_ITEMS;
     if (!target || !Array.isArray(items) || !items.length) return;
-    var stories = items.slice(0,8).map(function (item) {
-      var href = item.archive_url || item.url || "news.html";
-      return '<a class="ticker-story" href="' + text(href) + '"><small>' + text(item.category || item.source || "AI news") + '</small><span>' + text(item.title) + '</span></a>';
+    var stories = items.filter(function (item) { return Boolean(item.archive_url); }).slice(0,8).map(function (item) {
+      return '<a class="ticker-story" href="' + text(item.archive_url) + '"><small>' + text(item.category || item.source || "AI news") + '</small><span>' + text(item.title) + '</span></a>';
     }).join("");
+    if (!stories) return;
     target.innerHTML = stories + stories;
   }
 

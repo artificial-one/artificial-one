@@ -273,7 +273,8 @@ def add_related_routes(items: list[dict[str, str]]) -> list[dict[str, Any]]:
             archive = load_json(ARCHIVE_PATH)
             archive_urls = {
                 str(record.get("source", {}).get("url") or ""): str(record.get("path") or "")
-                for record in archive.get("articles", []) if isinstance(record, dict)
+                for record in archive.get("articles", [])
+                if isinstance(record, dict) and archive_record_is_publishable(record)
             }
         except NewsBuildError:
             archive_urls = {}
@@ -285,6 +286,40 @@ def add_related_routes(items: list[dict[str, str]]) -> list[dict[str, Any]]:
             value["archive_url"] = archive_url
         enriched.append(value)
     return enriched
+
+
+def archive_record_is_publishable(record: dict[str, Any]) -> bool:
+    """Only expose briefings that passed every publication gate and exist on disk."""
+    source = record.get("source") if isinstance(record.get("source"), dict) else {}
+    quality = record.get("quality") if isinstance(record.get("quality"), dict) else {}
+    path = str(record.get("path") or "").strip().replace("\\", "/")
+    if not source.get("url") or not path.startswith("news/") or not path.endswith(".html"):
+        return False
+    if not quality.get("approved") or int(quality.get("score") or 0) < 85 or quality.get("issues"):
+        return False
+    try:
+        page = (ROOT / path).resolve()
+        page.relative_to(ROOT.resolve())
+    except (OSError, ValueError):
+        return False
+    return page.is_file()
+
+
+def public_news_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Return only stories with a live, same-site Artificial.One briefing."""
+    published: list[dict[str, Any]] = []
+    for item in items:
+        path = str(item.get("archive_url") or "").strip().replace("\\", "/")
+        if not path.startswith("news/") or not path.endswith(".html"):
+            continue
+        try:
+            page = (ROOT / path).resolve()
+            page.relative_to(ROOT.resolve())
+        except (OSError, ValueError):
+            continue
+        if page.is_file():
+            published.append(item)
+    return published
 
 
 def news_identity(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -336,6 +371,7 @@ def safe_json_for_script(value: Any) -> str:
 
 
 def update_homepage(items: list[dict[str, str]]) -> str:
+    items = public_news_items(items)
     source = INDEX_PATH.read_text(encoding="utf-8")
     pattern = re.compile(re.escape(DATA_START) + r".*?" + re.escape(DATA_END), re.S)
     replacement = f"{DATA_START}\nconst aiNewsItems = {safe_json_for_script(items[:12])};\n{DATA_END}"
@@ -356,9 +392,10 @@ def reader_excerpt(item: dict[str, Any], limit: int = 220) -> str:
 
 
 def story_destination(item: dict[str, Any]) -> tuple[str, str]:
-    if item.get("archive_url"):
-        return str(item["archive_url"]), "Read the briefing"
-    return str(item["url"]), "Read the story"
+    archive_url = str(item.get("archive_url") or "")
+    if not archive_url:
+        raise NewsBuildError("A public news story has no Artificial.One briefing")
+    return archive_url, "Read the briefing"
 
 
 def story_visual(item: dict[str, Any]) -> tuple[str, str, str]:
@@ -375,18 +412,16 @@ def story_visual(item: dict[str, Any]) -> tuple[str, str, str]:
 def render_news_page(
     items: list[dict[str, str]], updated_at: str, picks: list[dict[str, str]] | None = None
 ) -> str:
+    items = public_news_items(items)
     if not items:
-        raise NewsBuildError("The news page needs at least one story")
-
-    def link_attributes(item: dict[str, Any]) -> str:
-        return "" if item.get("archive_url") else ' target="_blank" rel="noopener noreferrer"'
+        raise NewsBuildError("The news page needs at least one validated Artificial.One briefing")
 
     featured = items[0]
     featured_url, featured_cta = story_destination(featured)
     featured_c1, featured_c2, featured_mark = story_visual(featured)
     featured_search = clean_text(f"{featured.get('title', '')} {featured.get('source', '')} {featured.get('description', '')}", 700).casefold()
     featured_markup = f'''<article class="lead-story" data-news-card data-category="{html.escape(featured['category'], quote=True)}" data-search="{html.escape(featured_search, quote=True)}" style="--c1:{featured_c1};--c2:{featured_c2}">
-      <a class="story-link" href="{html.escape(featured_url, quote=True)}"{link_attributes(featured)}>
+      <a class="story-link" href="{html.escape(featured_url, quote=True)}">
         <div class="lead-copy"><div class="story-meta"><span>{html.escape(featured['category'])}</span><time datetime="{html.escape(featured['published_at'], quote=True)}">{html.escape(featured['display_date'])}</time></div><h2>{html.escape(featured['title'])}</h2><p>{html.escape(reader_excerpt(featured, 300))}</p><strong>{html.escape(featured_cta)} <span aria-hidden="true">→</span></strong></div>
         <div class="lead-art" aria-hidden="true"><b>{featured_mark}</b><span></span></div>
       </a>
@@ -398,7 +433,7 @@ def render_news_page(
         c1, c2, mark = story_visual(item)
         searchable = clean_text(f"{item.get('title', '')} {item.get('source', '')} {item.get('description', '')}", 700).casefold()
         cards.append(f'''<article class="story-card" data-news-card data-category="{html.escape(item['category'], quote=True)}" data-search="{html.escape(searchable, quote=True)}" style="--c1:{c1};--c2:{c2}">
-          <a class="story-link" href="{html.escape(destination, quote=True)}"{link_attributes(item)}>
+          <a class="story-link" href="{html.escape(destination, quote=True)}">
             <div class="story-art" aria-hidden="true"><span>{mark}</span><i></i></div>
             <div class="story-body"><div class="story-meta"><span>{html.escape(item['category'])}</span><time datetime="{html.escape(item['published_at'], quote=True)}">{html.escape(item['display_date'])}</time></div><h2>{html.escape(item['title'])}</h2><p>{html.escape(reader_excerpt(item))}</p><div class="story-foot"><span>{html.escape(item['source'])}</span><strong>{html.escape(cta)} →</strong></div></div>
           </a>
@@ -410,7 +445,7 @@ def render_news_page(
         for category in categories
     )
     item_list = [
-        {"@type": "ListItem", "position": index, "url": "https://artificial.one/" + item["archive_url"] if item.get("archive_url") else item["url"], "name": item["title"]}
+        {"@type": "ListItem", "position": index, "url": "https://artificial.one/" + item["archive_url"], "name": item["title"]}
         for index, item in enumerate(items, 1)
     ]
     structured = safe_json_for_script({"@context": "https://schema.org", "@type": "ItemList", "itemListElement": item_list})
@@ -496,7 +531,8 @@ def main() -> int:
                 path.write_text(desired[path], encoding="utf-8")
         for failure in failures:
             print(f"warning: {failure}", file=sys.stderr)
-        print(f"AI news feed contains {len(items)} items; updated {len(changed)} file(s).")
+        public_count = len(public_news_items(items))
+        print(f"AI news feed contains {len(items)} candidates and {public_count} published briefings; updated {len(changed)} file(s).")
         return 0
     except NewsBuildError as exc:
         print(f"error: {exc}", file=sys.stderr)
