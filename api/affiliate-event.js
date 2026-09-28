@@ -29,6 +29,9 @@ const EVENT_STREAMS = {
   returning_visit: "returning_visits",
   web_vital: "web_vitals",
   use_case_tab: "use_case_tabs",
+  outcome_helpful: "outcome_helpful",
+  outcome_chosen: "outcome_chosen",
+  outcome_result: "outcome_results",
 };
 
 function clean(value, pattern, fallback) {
