@@ -691,6 +691,17 @@
     target.innerHTML = stories + stories;
   }
 
+  function initHomeWorkspaceTabs() {
+    var workspace = document.querySelector(".home-workspace");
+    if (!workspace) return;
+    var tabs = document.createElement("div");
+    tabs.className = "home-mobile-tabs";
+    tabs.setAttribute("role", "group");
+    tabs.setAttribute("aria-label", "Homepage tools");
+    tabs.innerHTML = '<label><input type="radio" name="home-mode" value="ask" checked><span>Ask the Elephant</span></label><label><input type="radio" name="home-mode" value="search"><span>Search tools</span></label>';
+    workspace.parentNode.insertBefore(tabs, workspace);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     parseCatalog();
     previousVisit = read(STORE.visit, "");
@@ -699,7 +710,7 @@
     if (queryCompare) write(STORE.compare, queryCompare.split(",").filter(Boolean).slice(0,2));
     var queryStack = params.get("stack");
     if (queryStack) write(STORE.stack, queryStack.split(",").filter(function (id) { return !!itemById(id); }).slice(0,20));
-    initNav(); initMatcher(); initHomePicks(); initHomeToolSearch(); initHomeNewsTicker(); initCatalogFilters(); initPanels(); initNews(); initCalculator(); initTabs(); initWatch(); initNewVisit(); initOptIns(); initCardCtaExperiment();
+    initNav(); initMatcher(); initHomePicks(); initHomeToolSearch(); initHomeNewsTicker(); initHomeWorkspaceTabs(); initCatalogFilters(); initPanels(); initNews(); initCalculator(); initTabs(); initWatch(); initNewVisit(); initOptIns(); initCardCtaExperiment();
     bindDynamic(document); renderStack(); renderHistory(); renderCompareDrawer();
   });
 })();
