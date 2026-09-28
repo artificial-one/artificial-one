@@ -54,18 +54,19 @@
       ]
     },
     {
-      "offer_id": "pinecone",
-      "name": "AO Generic Intent - Pinecone",
+      "offer_id": "volza",
+      "name": "AO Generic Intent - Volza",
       "eligible": false,
       "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/pinecone-vector-database.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-pinecone",
+      "landing_url": "https://artificial.one/partner-offers/volza-trade-intelligence.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-volza",
       "keywords": [
-        "developer infrastructure",
-        "build retrieval augmented generation",
-        "add semantic search to an application"
+        "research data",
+        "find and compare potential international buyers or suppliers",
+        "research shipment activity for a product or market",
+        "support sourcing market entry and b2b prospecting decisions"
       ],
       "negative_keywords": [
-        "Pinecone"
+        "Volza"
       ]
     },
     {
@@ -84,19 +85,18 @@
       ]
     },
     {
-      "offer_id": "volza",
-      "name": "AO Generic Intent - Volza",
+      "offer_id": "pinecone",
+      "name": "AO Generic Intent - Pinecone",
       "eligible": false,
       "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/volza-trade-intelligence.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-volza",
+      "landing_url": "https://artificial.one/partner-offers/pinecone-vector-database.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-pinecone",
       "keywords": [
-        "research data",
-        "find and compare potential international buyers or suppliers",
-        "research shipment activity for a product or market",
-        "support sourcing market entry and b2b prospecting decisions"
+        "developer infrastructure",
+        "build retrieval augmented generation",
+        "add semantic search to an application"
       ],
       "negative_keywords": [
-        "Volza"
+        "Pinecone"
       ]
     },
     {
