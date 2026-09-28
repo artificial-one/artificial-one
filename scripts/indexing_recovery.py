@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 from collections import Counter
 from datetime import date
+from html import unescape
 import json
 import os
 from pathlib import Path
@@ -62,7 +63,7 @@ def page_title(path: Path) -> str:
     text = path.read_text(encoding="utf-8", errors="ignore")
     match = re.search(r"<h1[^>]*>(.*?)</h1>", text, re.I | re.S) or re.search(r"<title[^>]*>(.*?)</title>", text, re.I | re.S)
     value = re.sub(r"<[^>]+>", " ", match.group(1) if match else path.stem)
-    return re.sub(r"\s+", " ", value).strip()
+    return unescape(re.sub(r"\s+", " ", value).strip())
 
 
 def crawl_priority_paths(paths: list[Path]) -> list[Path]:
@@ -88,22 +89,161 @@ def render_hub(paths: list[Path], crawl_priority: list[Path] | None = None) -> s
             groups["Comparisons and buying guides"].append(path)
         else:
             groups["Decision tools"].append(path)
-    sections: list[str] = []
+
+    metadata = {
+        "Decision tools": {
+            "kind": "plan",
+            "label": "Plan & calculate",
+            "icon": "◇",
+            "description": "Turn a fuzzy software decision into a shortlist, stack or simple cost calculation.",
+        },
+        "Partner reviews": {
+            "kind": "review",
+            "label": "Tool fit guides",
+            "icon": "✓",
+            "description": "See who a tool suits, what to check and where its limits may matter before you buy.",
+        },
+        "Comparisons and buying guides": {
+            "kind": "compare",
+            "label": "Compare & price",
+            "icon": "⇄",
+            "description": "Compare alternatives, use cases and pricing questions side by side.",
+        },
+    }
+
+    def card_description(label: str, title: str) -> str:
+        lowered = title.casefold()
+        if "calculator" in lowered or "worth the cost" in lowered:
+            return "Put your own numbers in and see whether the software can justify its cost."
+        if " vs " in lowered:
+            return "Compare the two options around the decision that matters, not just their feature lists."
+        if "pricing" in lowered:
+            return "Understand the pricing questions and plan limits worth checking before you commit."
+        if label == "Partner reviews":
+            return "A practical look at fit, limitations and the current path to the product."
+        if label == "Comparisons and buying guides":
+            return "A focused guide for choosing the better route for this particular job."
+        return "A practical decision tool that helps turn your requirements into a clearer next step."
+
+    ordered_by_group: dict[str, list[Path]] = {}
     for label, members in groups.items():
-        members.sort(key=lambda item: (priority_position.get(item, len(priority_position)), page_title(item).casefold()))
-        links = "".join(f'<li><a class="font-semibold text-indigo-700 hover:underline" href="{esc(item.relative_to(ROOT).as_posix())}">{esc(page_title(item))}</a></li>' for item in members)
-        sections.append(f'<section class="rounded-2xl border border-slate-200 bg-white p-6"><h2 class="text-2xl font-black">{esc(label)}</h2><ul class="mt-4 space-y-3">{links}</ul></section>')
-    priority_cards = "".join(
-        f'<a class="rounded-xl border border-indigo-200 bg-white p-4 font-semibold text-indigo-800 shadow-sm hover:border-indigo-400" href="{esc(item.relative_to(ROOT).as_posix())}">{esc(page_title(item))} →</a>'
-        for item in priority[:40]
+        ordered_by_group[label] = sorted(
+            members,
+            key=lambda item: (priority_position.get(item, len(priority_position)), page_title(item).casefold()),
+        )
+
+    featured_preferences = {
+        "Decision tools": ["ai-tool-finder.html", "calculators/ai-software-roi-calculator.html"],
+        "Partner reviews": ["partner-offers/elevenlabs-ai-voice.html", "partner-offers/descript-ai-video-editing.html"],
+        "Comparisons and buying guides": ["search-intent/best-artificial-intelligence-tools.html", "search-intent/best-productivity-business-tools.html"],
+    }
+    featured: list[tuple[str, Path]] = []
+    for label in groups:
+        by_relative = {item.relative_to(ROOT).as_posix(): item for item in ordered_by_group[label]}
+        selected = [by_relative[value] for value in featured_preferences[label] if value in by_relative]
+        fallback = [item for item in priority if item in ordered_by_group[label] and item not in selected]
+        fallback.extend(item for item in ordered_by_group[label] if item not in selected and item not in fallback)
+        selected.extend(fallback[: 2 - len(selected)])
+        featured.extend((label, item) for item in selected[:2])
+    if len(featured) < 6:
+        used = {item for _, item in featured}
+        for item in priority:
+            if item in used:
+                continue
+            label = next((name for name, members in ordered_by_group.items() if item in members), "Decision tools")
+            featured.append((label, item))
+            used.add(item)
+            if len(featured) == 6:
+                break
+
+    def render_card(label: str, item: Path, *, featured_card: bool = False) -> str:
+        info = metadata[label]
+        title = page_title(item)
+        relative = item.relative_to(ROOT).as_posix()
+        search = f"{title} {label} {info['description']}".casefold()
+        classes = "buyer-card buyer-card-featured" if featured_card else "buyer-card"
+        return (
+            f'<a class="{classes}" href="{esc(relative)}" data-guide-card '
+            f'data-guide-kind="{esc(info["kind"])}" data-guide-search="{esc(search)}">'
+            f'<span class="guide-card-top"><span class="guide-card-icon" aria-hidden="true">{info["icon"]}</span>'
+            f'<span class="guide-card-type">{esc(info["label"])}</span></span>'
+            f'<strong>{esc(title)}</strong><span class="guide-card-copy">{esc(card_description(label, title))}</span>'
+            f'<span class="guide-card-link">Open guide <span aria-hidden="true">→</span></span></a>'
+        )
+
+    featured_cards = "".join(render_card(label, item, featured_card=True) for label, item in featured)
+    all_cards = "".join(
+        render_card(label, item)
+        for label, members in ordered_by_group.items()
+        for item in members
     )
-    priority_section = (
-        f'''<section class="mx-auto max-w-6xl px-5 pt-10"><div class="rounded-2xl border border-indigo-200 bg-indigo-50 p-6"><p class="text-xs font-bold uppercase tracking-widest text-indigo-600">Priority guides</p><h2 class="mt-2 text-2xl font-black">Useful pages being surfaced now</h2><div class="mt-5 grid gap-3 md:grid-cols-2">{priority_cards}</div></div></section>'''
-        if priority_cards
-        else ""
+    total = sum(len(members) for members in groups.values())
+    plan_count = len(groups["Decision tools"])
+    review_count = len(groups["Partner reviews"])
+    compare_count = len(groups["Comparisons and buying guides"])
+
+    content = f'''<div class="buyer-library">
+<section class="buyer-hero"><div class="buyer-shell buyer-hero-grid"><div class="buyer-hero-copy"><p class="buyer-eyebrow">The AI buyer's library</p><h1>Make a smarter software choice.</h1><p class="buyer-intro">Start with the decision in front of you—not a wall of product logos. Find clear tool-fit guides, honest comparisons and calculators built to answer one useful question at a time.</p><div class="buyer-hero-actions"><a class="buyer-primary-action" href="#find-a-guide">Find my guide <span aria-hidden="true">↓</span></a><a class="buyer-secondary-action" href="index.html#build">Ask the Elephant</a></div><div class="buyer-stats" aria-label="Library contents"><span><strong>{total}</strong> useful guides</span><span><strong>{review_count}</strong> tool-fit checks</span><span><strong>{compare_count}</strong> comparisons</span></div></div><div class="buyer-hero-art" aria-hidden="true"><span class="buyer-orbit buyer-orbit-one">Fit?</span><span class="buyer-orbit buyer-orbit-two">Cost?</span><span class="buyer-orbit buyer-orbit-three">Better?</span><img src="images/branding/artificial-one-elephant-mark.png" alt=""></div></div></section>
+
+<section class="buyer-route-section" aria-labelledby="buyer-route-title"><div class="buyer-shell"><div class="buyer-section-heading"><div><p class="buyer-eyebrow">Choose your route</p><h2 id="buyer-route-title">What are you trying to decide?</h2></div><p>Pick the question closest to yours. You can always search the complete library below.</p></div><div class="buyer-route-grid"><button class="buyer-route buyer-route-plan" type="button" data-route-kind="plan"><span class="buyer-route-number">01</span><span class="buyer-route-icon" aria-hidden="true">◇</span><strong>What should I use?</strong><small>Shortlists, stack builders and calculators</small><span class="buyer-route-link">Explore {plan_count} tools →</span></button><button class="buyer-route buyer-route-review" type="button" data-route-kind="review"><span class="buyer-route-number">02</span><span class="buyer-route-icon" aria-hidden="true">✓</span><strong>Is this tool right for me?</strong><small>Fit, limitations and buying checks</small><span class="buyer-route-link">Explore {review_count} fit guides →</span></button><button class="buyer-route buyer-route-compare" type="button" data-route-kind="compare"><span class="buyer-route-number">03</span><span class="buyer-route-icon" aria-hidden="true">⇄</span><strong>Which option is better?</strong><small>Comparisons, pricing and use cases</small><span class="buyer-route-link">Explore {compare_count} comparisons →</span></button></div></div></section>
+
+<section class="buyer-featured" aria-labelledby="buyer-featured-title"><div class="buyer-shell"><div class="buyer-section-heading"><div><p class="buyer-eyebrow">Editor's shortlist</p><h2 id="buyer-featured-title">Good places to start</h2></div><p>A balanced selection of decision tools, product-fit guides and comparisons worth opening first.</p></div><div class="buyer-featured-grid">{featured_cards}</div></div></section>
+
+<section class="buyer-catalog" id="find-a-guide" aria-labelledby="buyer-catalog-title"><div class="buyer-shell"><div class="buyer-section-heading buyer-catalog-heading"><div><p class="buyer-eyebrow">Browse the library</p><h2 id="buyer-catalog-title">Find the guide for your decision</h2></div><p>Search by product, job or question. Every result opens a practical guide—not another directory.</p></div><div class="buyer-controls"><label class="buyer-search"><span class="sr-only">Search buyer guides</span><span aria-hidden="true">⌕</span><input type="search" placeholder="Try “video editing”, “pricing” or a product name…" data-guide-search-input autocomplete="off"></label><div class="buyer-filter-row" role="group" aria-label="Filter guides"><button type="button" class="is-active" data-guide-filter="all" aria-pressed="true">All guides</button><button type="button" data-guide-filter="plan" aria-pressed="false">Plan &amp; calculate</button><button type="button" data-guide-filter="review" aria-pressed="false">Tool fit</button><button type="button" data-guide-filter="compare" aria-pressed="false">Compare &amp; price</button></div></div><p class="buyer-result-count" data-guide-result-count>Showing {min(18, total)} of {total} guides</p><div class="buyer-card-grid" data-guide-grid>{all_cards}</div><div class="buyer-empty" data-guide-empty hidden><span aria-hidden="true">🐘</span><h3>No guide matches that search yet.</h3><p>Try a broader job or product name—or ask the Elephant to build a shortlist for you.</p><a href="index.html#build">Ask the Elephant →</a></div><div class="buyer-more-wrap"><button class="buyer-more" type="button" data-guide-more>Show more guides <span aria-hidden="true">↓</span></button></div></div></section>
+</div>''' + '''
+<script>
+(function() {
+  var root = document.querySelector('.buyer-library');
+  if (!root) return;
+  var input = root.querySelector('[data-guide-search-input]');
+  var cards = Array.prototype.slice.call(root.querySelectorAll('[data-guide-grid] [data-guide-card]'));
+  var filters = Array.prototype.slice.call(root.querySelectorAll('[data-guide-filter]'));
+  var routes = Array.prototype.slice.call(root.querySelectorAll('[data-route-kind]'));
+  var count = root.querySelector('[data-guide-result-count]');
+  var empty = root.querySelector('[data-guide-empty]');
+  var more = root.querySelector('[data-guide-more]');
+  var limit = 18;
+  var active = 'all';
+  root.classList.add('is-ready');
+  function apply(reset) {
+    if (reset) limit = 18;
+    var query = (input.value || '').trim().toLowerCase();
+    var matches = cards.filter(function(card) {
+      return (active === 'all' || card.dataset.guideKind === active) && (!query || card.dataset.guideSearch.indexOf(query) !== -1);
+    });
+    cards.forEach(function(card) { card.hidden = true; });
+    matches.slice(0, limit).forEach(function(card) { card.hidden = false; });
+    count.textContent = matches.length ? 'Showing ' + Math.min(limit, matches.length) + ' of ' + matches.length + ' guide' + (matches.length === 1 ? '' : 's') : 'No matching guides';
+    empty.hidden = matches.length !== 0;
+    more.hidden = matches.length <= limit;
+  }
+  input.addEventListener('input', function() { apply(true); });
+  filters.forEach(function(button) {
+    button.addEventListener('click', function() {
+      active = button.dataset.guideFilter;
+      filters.forEach(function(item) { var selected = item === button; item.classList.toggle('is-active', selected); item.setAttribute('aria-pressed', String(selected)); });
+      apply(true);
+    });
+  });
+  routes.forEach(function(button) {
+    button.addEventListener('click', function() {
+      active = button.dataset.routeKind;
+      var selected = filters.find(function(item) { return item.dataset.guideFilter === active; });
+      if (selected) selected.click();
+      document.getElementById('find-a-guide').scrollIntoView({behavior: 'smooth'});
+    });
+  });
+  more.addEventListener('click', function() { limit += 18; apply(false); });
+  apply(false);
+})();
+</script>'''
+    return shell(
+        title="AI Software Buying Guides, Comparisons and Calculators | artificial.one",
+        description="Find practical AI software buying guides, product-fit checks, comparisons and calculators built around the decision you need to make.",
+        canonical_path="buyers-guides.html",
+        content=content,
+        structured_data={"@context": "https://schema.org", "@type": "CollectionPage", "name": "AI software buyer's library"},
     )
-    content = f'''<section class="bg-white"><div class="mx-auto max-w-6xl px-5 py-16"><p class="text-sm font-bold uppercase tracking-widest text-indigo-600">Buyer resource library</p><h1 class="mt-4 text-4xl font-black md:text-6xl">AI software decision guides</h1><p class="mt-5 max-w-3xl text-lg text-slate-600">Browse free calculators, structured comparisons and reviewed partner offers by the decision you need to make.</p></div></section>{priority_section}<section class="mx-auto grid max-w-6xl gap-6 px-5 py-10 lg:grid-cols-3">{''.join(sections)}</section>'''
-    return shell(title="AI Software Buying Guides and Calculators | artificial.one", description="Browse artificial.one AI software calculators, comparisons and partner decision guides.", canonical_path="buyers-guides.html", content=content, structured_data={"@context": "https://schema.org", "@type": "CollectionPage", "name": "AI software decision guides"})
 
 
 def _local_path(source: Path, href: str) -> str | None:

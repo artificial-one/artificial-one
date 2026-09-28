@@ -82,7 +82,10 @@ class GrowthExpansionTests(unittest.TestCase):
     def test_buyer_hub_highlights_crawl_priority(self):
         page = indexing.ROOT / "partner-offers" / "foxit-pdf-software.html"
         rendered = indexing.render_hub([page], [page])
-        self.assertIn("Priority guides", rendered)
+        self.assertIn("Editor's shortlist", rendered)
+        self.assertIn("What are you trying to decide?", rendered)
+        self.assertIn('data-guide-search-input', rendered)
+        self.assertIn('data-guide-filter="review"', rendered)
         self.assertGreaterEqual(rendered.count("partner-offers/foxit-pdf-software.html"), 2)
 
     def test_demand_gate_publishes_only_reviewed_concept_id(self):
