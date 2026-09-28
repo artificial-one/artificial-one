@@ -1,7 +1,135 @@
 {
   "version": 1,
-  "updated_at": "2026-09-28T04:07:56.203770+00:00",
+  "updated_at": "2026-09-28T05:49:28.167986+00:00",
   "articles": [
+    {
+      "path": "news/2026/09/22/microsoft-disrupts-ai-assisted-platform-that-compromised-12-000-accounts.html",
+      "created_at": "2026-09-28T05:49:28.167986+00:00",
+      "source": {
+        "title": "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts",
+        "url": "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/",
+        "source": "Ars Technica AI",
+        "published_at": "2026-09-22T19:45:47+00:00",
+        "display_date": "Sep 22, 2026",
+        "category": "AI Tools & Products",
+        "description": "EvilTokens provided an end-to-end platform that makes mass compromises faster and easier.",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Microsoft Disrupts AI-Driven Scam Platform Compromising 12,000 Accounts",
+        "summary": "Microsoft disrupted an AI-assisted platform that compromised 12,000 accounts, with the highest concentration in the US. The platform used AI to automate fraud strategies and target vulnerable organizations.",
+        "facts": [
+          {
+            "statement": "The platform used AI to analyze victim inboxes and recommend fraud strategies.",
+            "evidence": "AI-style chatbot that could analyze a victim’s inbox and help criminals identify trusted relationships"
+          },
+          {
+            "statement": "The platform automated the sending of spam emails to compromise accounts.",
+            "evidence": "provided a single service for streamlining most steps required to compromise email accounts"
+          },
+          {
+            "statement": "Microsoft disrupted the platform using legal processes and partnerships.",
+            "evidence": "Microsoft said Tuesday that it led an industry-wide disruption of a subscription-based scam platform"
+          }
+        ],
+        "why_it_matters": "The AI-driven platform exploited vulnerabilities in Microsoft's authentication system to compromise thousands of accounts, highlighting the need for stronger security measures against sophisticated cyber threats.",
+        "elephant_take": "🐘 鼋 The AI-powered fraud tool is a chilling reminder that even legitimate systems can be weaponized. Microsoft’s swift action is crucial, but the breach shows how easily trust can be manipulated in the digital age.",
+        "caveat": "The incident underscores the importance of continuous security audits and user education to prevent similar breaches.",
+        "who_should_care": [
+          "Cybersecurity professionals",
+          "Organizations protecting sensitive data",
+          "Users concerned about account security"
+        ],
+        "what_to_do": [
+          "Regularly update software and systems to patch vulnerabilities",
+          "Monitor accounts for suspicious activity and logins from unfamiliar devices",
+          "Use multi-factor authentication for critical accounts"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Microsoft%20disrupts%20AI-assisted%20platform%20that%20compromised%2012%2C000%20accounts%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/09/18/new-experts-join-google-s-ai-economy-team.html",
+      "created_at": "2026-09-28T05:49:28.167986+00:00",
+      "source": {
+        "title": "New experts join Google’s AI & Economy team",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+        "source": "Google AI",
+        "published_at": "2026-09-18T14:00:00+00:00",
+        "display_date": "Sep 18, 2026",
+        "category": "Research",
+        "description": "Text \"AI & Economy Research Program\" all over a green grid background, with the Google G logo in the bottom right corner",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Google Expands AI & Economy Research Team",
+        "summary": "Google is expanding its AI & Economy research program by hiring top economists to study how AI impacts jobs and productivity globally.",
+        "facts": [
+          {
+            "statement": "Google is expanding its AI & Economy research program.",
+            "evidence": "Google is expanding its AI & Economy research program"
+          },
+          {
+            "statement": "New directors are leading the effort to analyze AI's impact on productivity and global growth.",
+            "evidence": "New directors Anu Madgavkar and Daniel Rock will lead this effort"
+          },
+          {
+            "statement": "World-class economists are joining the team to study how AI changes jobs and the economy.",
+            "evidence": "google is hiring world-class economists to study how ai changes jobs and the"
+          }
+        ],
+        "why_it_matters": "Understanding how AI affects jobs and productivity is crucial as technology continues to reshape industries. Google's expansion of its research team aims to provide insights that can help workers, policymakers, and businesses navigate these changes effectively.",
+        "elephant_take": "🐘 鼋 Google is trying to make sense of AI’s messy impact on work and money. With Nobel laureates and top economists, they’re aiming to predict how AI will reshape economies globally—though it’s unclear if their models will keep up with the speed of change.",
+        "caveat": "The research is still in its early stages and may not fully capture the complexity of AI's impact on jobs and productivity.",
+        "who_should_care": [
+          "Workers",
+          "Policymakers",
+          "Business leaders",
+          "Researchers"
+        ],
+        "what_to_do": [
+          "Stay informed about AI developments",
+          "Engage with policy discussions on AI's economic impacts",
+          "Monitor how AI is adopted in your industry",
+          "Support research into AI's long-term effects"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20New%20experts%20join%20Google%E2%80%99s%20AI%20%26%20Economy%20team%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "path": "news/2026/09/25/can-cloudflare-ceo-matthew-prince-save-the-web-from-ai.html",
       "created_at": "2026-09-28T04:07:56.203770+00:00",
@@ -1013,6 +1141,30 @@
     }
   ],
   "last_failures": [
+    {
+      "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
+      "at": "2026-09-28T05:49:28.167986+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/omlx",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-09-28T05:49:28.167986+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-09-28T05:49:28.167986+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an",
+      "reason": "quality gate rejected draft: headline length is outside the publication range; a fact has no exact source evidence",
+      "at": "2026-09-28T05:49:28.167986+00:00",
+      "pipeline_version": "2"
+    },
     {
       "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
