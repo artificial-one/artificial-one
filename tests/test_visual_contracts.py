@@ -48,6 +48,40 @@ class VisualContractTests(unittest.TestCase):
         self.assertIn("legacy-tool-pages.css", once)
         self.assertIn("affiliate-tracking.js", once)
 
+    def test_semantic_landmark_normalizer_preserves_existing_layout_classes(self):
+        article_page = '<body><nav>Site</nav><article class="reader-card"><h1>Guide</h1></article><footer>End</footer></body>'
+        normalized = normalizer.ensure_main_landmark(article_page)
+        self.assertIn('<main class="reader-card" id="main-content">', normalized)
+        self.assertNotIn("<article", normalized)
+        self.assertEqual(normalized, normalizer.ensure_main_landmark(normalized))
+
+        section_page = '<body><nav>Site</nav><header><h1>Tool</h1></header><section>Details</section><footer>End</footer></body>'
+        normalized = normalizer.ensure_main_landmark(section_page)
+        self.assertLess(normalized.index("</nav>"), normalized.index('<main id="main-content"'))
+        self.assertLess(normalized.index("</main>"), normalized.index("<footer>"))
+
+    def test_every_html_page_has_one_primary_content_landmark(self):
+        pages = [
+            path for path in ROOT.rglob("*.html")
+            if ".git" not in path.parts and "node_modules" not in path.parts
+        ]
+        self.assertGreater(len(pages), 1000)
+        missing = []
+        duplicates = []
+        for path in pages:
+            source = path.read_text(encoding="utf-8", errors="ignore").lower()
+            # Google verification tokens use an .html suffix but are not
+            # documents and intentionally contain no body element.
+            if "<body" not in source:
+                continue
+            landmarks = source.count("<main") + source.count('role="main"') + source.count("role='main'")
+            if landmarks == 0:
+                missing.append(path.relative_to(ROOT).as_posix())
+            elif landmarks > 1:
+                duplicates.append(path.relative_to(ROOT).as_posix())
+        self.assertEqual([], missing)
+        self.assertEqual([], duplicates)
+
     def test_every_tool_page_uses_the_current_shell_contract(self):
         pages = list((ROOT / "tools").glob("*.html"))
         self.assertGreater(len(pages), 500)

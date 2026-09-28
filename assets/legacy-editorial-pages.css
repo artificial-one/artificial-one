@@ -31,17 +31,27 @@ body.legacy-editorial-page > nav:not([aria-label]) { display: none !important; }
 .legacy-editorial-nav a { color: #e9e5f2 !important; font-size: .9rem; text-decoration: none; }
 .legacy-editorial-nav a:hover { color: #9cff3b !important; }
 body.legacy-editorial-page > article,
+body.legacy-editorial-page > main:not(.semantic-main-landmark),
 body.legacy-editorial-page > nav[aria-label],
 body.legacy-editorial-page > h1,
 body.legacy-editorial-page > h2,
 body.legacy-editorial-page > p,
 body.legacy-editorial-page > ul,
-body.legacy-editorial-page > div:not([id="mobile-menu"]) {
+body.legacy-editorial-page > div:not([id="mobile-menu"]),
+body.legacy-editorial-page > main.semantic-main-landmark > article,
+body.legacy-editorial-page > main.semantic-main-landmark > nav[aria-label],
+body.legacy-editorial-page > main.semantic-main-landmark > h1,
+body.legacy-editorial-page > main.semantic-main-landmark > h2,
+body.legacy-editorial-page > main.semantic-main-landmark > p,
+body.legacy-editorial-page > main.semantic-main-landmark > ul,
+body.legacy-editorial-page > main.semantic-main-landmark > div:not([id="mobile-menu"]) {
   width: min(100%,920px);
   margin-right: auto !important;
   margin-left: auto !important;
 }
-body.legacy-editorial-page > article {
+body.legacy-editorial-page > article,
+body.legacy-editorial-page > main:not(.semantic-main-landmark),
+body.legacy-editorial-page > main.semantic-main-landmark > article {
   margin-top: 54px !important;
   padding: clamp(28px,5vw,64px) !important;
   border: 1px solid #ebe7f3;
@@ -50,6 +60,8 @@ body.legacy-editorial-page > article {
   box-shadow: 0 24px 70px rgba(59,35,102,.1);
 }
 body.legacy-editorial-page > h1,
+body.legacy-editorial-page > main:not(.semantic-main-landmark) h1,
+body.legacy-editorial-page > main.semantic-main-landmark > h1,
 body.legacy-editorial-page article h1 {
   margin-top: 56px;
   color: #151124;
@@ -80,5 +92,7 @@ body.legacy-editorial-page footer { margin-top: 54px; color: #82798f !important;
   .legacy-editorial-header { width: calc(100% + 28px); margin-left: -14px; padding: 10px 16px; }
   .legacy-editorial-nav { gap: 10px; }
   .legacy-editorial-nav a { font-size: .78rem; }
-  body.legacy-editorial-page > article { margin-top: 28px !important; padding: 24px 20px !important; border-radius: 20px; }
+  body.legacy-editorial-page > article,
+  body.legacy-editorial-page > main:not(.semantic-main-landmark),
+  body.legacy-editorial-page > main.semantic-main-landmark > article { margin-top: 28px !important; padding: 24px 20px !important; border-radius: 20px; }
 }
