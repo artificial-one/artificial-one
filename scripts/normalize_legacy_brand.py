@@ -22,6 +22,63 @@ LEGACY_TOOL_STYLE = "../assets/legacy-tool-pages.css?v=20260928a"
 EDITORIAL_HEADER_MARKER = "<!-- AI1 LEGACY EDITORIAL SHELL -->"
 
 
+def ensure_main_landmark(source: str) -> str:
+    """Give a legacy document one explicit primary-content landmark.
+
+    A single article is promoted to ``main`` without changing its classes, so
+    its rendered layout is identical. Older layouts made from several sibling
+    sections receive a wrapper between the site navigation and footer.
+    """
+    if re.search(r"<main\b|\brole=[\"']main[\"']", source, re.I):
+        return source
+
+    articles = list(re.finditer(r"<article\b[^>]*>", source, re.I))
+    article_closes = list(re.finditer(r"</article\s*>", source, re.I))
+    if len(articles) == 1 and len(article_closes) == 1:
+        opening = articles[0]
+        tag = opening.group(0)
+        tag = re.sub(r"^<article\b", "<main", tag, count=1, flags=re.I)
+        if not re.search(r"\bid=[\"']", tag, re.I):
+            tag = tag[:-1] + ' id="main-content">'
+        closing = article_closes[0]
+        return (
+            source[: opening.start()]
+            + tag
+            + source[opening.end() : closing.start()]
+            + "</main>"
+            + source[closing.end() :]
+        )
+
+    body = re.search(r"<body\b[^>]*>", source, re.I)
+    body_close = source.lower().rfind("</body>")
+    if not body or body_close < body.end():
+        return source
+
+    start = body.end()
+    # Keep global site chrome outside the primary-content landmark. The source
+    # pages use one top-level nav or a clearly named injected site header.
+    for pattern in (
+        r"\s*(?:<!--.*?-->\s*)*<header\b[^>]*class=[\"'][^\"']*(?:site-header|legacy-editorial-header)[^\"']*[\"'][^>]*>.*?</header\s*>",
+        r"\s*<nav\b[^>]*>.*?</nav\s*>",
+    ):
+        match = re.match(pattern, source[start:], re.I | re.S)
+        if match:
+            start += match.end()
+
+    footer = re.search(r"<footer\b", source[start:body_close], re.I)
+    end = start + footer.start() if footer else body_close
+    content = source[start:end].rstrip()
+    if not content.strip():
+        return source
+    return (
+        source[:start]
+        + '\n    <main id="main-content" class="semantic-main-landmark">\n'
+        + content
+        + "\n    </main>\n"
+        + source[end:]
+    )
+
+
 def normalize(source: str) -> str:
     source = source.replace("artificial-one-logo-large.svg", "images/social/artificial-one-logo.png")
     source = source.replace(
@@ -214,6 +271,23 @@ def main(check: bool = False) -> int:
             continue
         if check:
             stale.append(path.relative_to(ROOT).as_posix())
+        else:
+            path.write_text(expected, encoding="utf-8")
+    semantic_pages = tuple(
+        sorted(
+            path
+            for path in ROOT.rglob("*.html")
+            if ".git" not in path.parts and "node_modules" not in path.parts
+        )
+    )
+    for path in semantic_pages:
+        current = path.read_text(encoding="utf-8")
+        expected = ensure_main_landmark(current)
+        if current == expected:
+            continue
+        relative = path.relative_to(ROOT).as_posix()
+        if check:
+            stale.append(relative)
         else:
             path.write_text(expected, encoding="utf-8")
     if stale:

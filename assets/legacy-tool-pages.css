@@ -54,7 +54,8 @@ body.legacy-tool-page > .container {
   color: #172033 !important;
 }
 
-body.legacy-tool-page > header:not(.site-header) {
+body.legacy-tool-page > header:not(.site-header),
+body.legacy-tool-page > main.semantic-main-landmark > header:not(.site-header) {
   position: relative !important;
   overflow: hidden !important;
   margin: 0 !important;
@@ -65,7 +66,8 @@ body.legacy-tool-page > header:not(.site-header) {
   text-align: center !important;
 }
 
-body.legacy-tool-page > header:not(.site-header)::after {
+body.legacy-tool-page > header:not(.site-header)::after,
+body.legacy-tool-page > main.semantic-main-landmark > header:not(.site-header)::after {
   content: "";
   position: absolute;
   right: -80px;
@@ -76,10 +78,14 @@ body.legacy-tool-page > header:not(.site-header)::after {
   background: radial-gradient(circle,rgba(141,252,56,.27),rgba(141,252,56,0) 68%);
 }
 
-body.legacy-tool-page > header:not(.site-header) > * { position: relative; z-index: 1; }
-body.legacy-tool-page > header:not(.site-header) h1 { max-width: 1000px; margin-inline: auto !important; color: #fff !important; font-size:clamp(2.55rem,6vw,4.5rem) !important; }
-body.legacy-tool-page > header:not(.site-header) p { color: #d9d5e5 !important; }
-body.legacy-tool-page > header:not(.site-header) .rating-box { margin-top: 14px !important; padding: 14px 20px !important; }
+body.legacy-tool-page > header:not(.site-header) > *,
+body.legacy-tool-page > main.semantic-main-landmark > header:not(.site-header) > * { position: relative; z-index: 1; }
+body.legacy-tool-page > header:not(.site-header) h1,
+body.legacy-tool-page > main.semantic-main-landmark > header:not(.site-header) h1 { max-width: 1000px; margin-inline: auto !important; color: #fff !important; font-size:clamp(2.55rem,6vw,4.5rem) !important; }
+body.legacy-tool-page > header:not(.site-header) p,
+body.legacy-tool-page > main.semantic-main-landmark > header:not(.site-header) p { color: #d9d5e5 !important; }
+body.legacy-tool-page > header:not(.site-header) .rating-box,
+body.legacy-tool-page > main.semantic-main-landmark > header:not(.site-header) .rating-box { margin-top: 14px !important; padding: 14px 20px !important; }
 
 body.legacy-tool-page article > header,
 body.legacy-tool-page main > header {
@@ -280,10 +286,30 @@ body.legacy-tool-page main > header > div:first-child {
   color: #b8ff65 !important;
 }
 
+/* Multi-section legacy reviews need a wrapper landmark. Keep that wrapper
+   layout-neutral and retain the original readable width on its content body. */
+body.legacy-tool-page > main.semantic-main-landmark {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.legacy-tool-page > main.semantic-main-landmark > .container {
+  width: min(860px,calc(100% - 36px)) !important;
+  max-width: 860px !important;
+  margin-inline: auto !important;
+  padding: 54px 0 78px !important;
+  background: #fff !important;
+  color: #172033 !important;
+}
+
 @media (max-width: 650px) {
   body.legacy-tool-page > article,
   body.legacy-tool-page > main,
   body.legacy-tool-page > .container { padding-top: 28px !important; }
+  body.legacy-tool-page > main.semantic-main-landmark { padding-top: 0 !important; }
+  body.legacy-tool-page > main.semantic-main-landmark > .container { padding-top: 28px !important; }
   body.legacy-tool-page .pros-cons { grid-template-columns: 1fr !important; }
   body.legacy-tool-page table { display: block; overflow-x: auto; }
 }
