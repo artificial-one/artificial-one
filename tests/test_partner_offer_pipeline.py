@@ -126,6 +126,12 @@ class PartnerOfferPipelineTests(unittest.TestCase):
         self.assertIn("../search-intent/best-productivity-tools.html", page)
         self.assertIn("../search-intent/first-vs-second.html", page)
 
+    def test_review_does_not_link_to_unbuilt_alternatives_page(self):
+        first = published_offer(id="first", slug="first", name="First", category="Developer Infrastructure")
+        second = published_offer(id="second", slug="second", name="Second", category="Marketing")
+        links = pipeline.search_links_for(first, [first, second])
+        self.assertNotIn("../search-intent/first-alternatives.html", [url for url, _label in links])
+
     def test_published_offer_requires_approval(self):
         data = {"version": 1, "updated_at": "2026-09-14", "offers": [published_offer(approved_at=None)]}
         with self.assertRaises(pipeline.OfferValidationError):
