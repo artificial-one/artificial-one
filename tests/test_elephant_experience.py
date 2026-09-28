@@ -39,7 +39,13 @@ class ElephantExperienceTests(unittest.TestCase):
             self.assertIn("affiliate-tracking.js", source, path.name)
             self.assertIn("https://artificial.one/", source, path.name)
         self.assertIn("data-elephant-form", first[ROOT / "ask-elephant.html"])
+        self.assertIn("data-decision-stamp", first[ROOT / "ask-elephant.html"])
+        self.assertIn("data-elephant-workflow", first[ROOT / "ask-elephant.html"])
+        self.assertIn("data-outcome-signals", first[ROOT / "ask-elephant.html"])
         self.assertIn("data-studio-form", first[ROOT / "ai-stack-studio.html"])
+        self.assertIn("data-studio-annual", first[ROOT / "ai-stack-studio.html"])
+        self.assertIn("data-stack-watch-form", first[ROOT / "ai-stack-studio.html"])
+        self.assertIn("data-comparison-form", first[ROOT / "comparison-lab.html"])
         self.assertIn("data-watch-email-form", first[ROOT / "ai-tool-observatory.html"])
 
     def test_public_api_excludes_affiliate_destinations(self):
@@ -57,9 +63,16 @@ class ElephantExperienceTests(unittest.TestCase):
         self.assertIn("last_event_id", sender)
         self.assertIn("unsubscribe", sender.casefold())
 
+    def test_outcomes_are_anonymous_deduplicated_aggregates(self):
+        endpoint = (ROOT / "api" / "outcome-signals.js").read_text(encoding="utf-8")
+        self.assertIn("outcome:dedupe:", endpoint)
+        self.assertIn("outcome:aggregate:", endpoint)
+        self.assertIn("responses < 3", endpoint)
+        self.assertNotIn("email", endpoint.casefold())
+
     def test_sitemap_contains_the_full_experience(self):
         sitemap = experience.outputs()[ROOT / "sitemap.xml"]
-        for path in ("ask-elephant.html", "ai-stack-studio.html", "workflow-recipes.html", "ai-tool-observatory.html", "developers.html"):
+        for path in ("ask-elephant.html", "ai-stack-studio.html", "comparison-lab.html", "workflow-recipes.html", "ai-tool-observatory.html", "developers.html"):
             self.assertIn(path, sitemap)
         for recipe in experience.RECIPES:
             self.assertIn(f"workflow-recipes/{recipe['id']}.html", sitemap)
