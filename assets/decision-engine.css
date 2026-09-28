@@ -671,6 +671,7 @@ button { color: inherit; }
 .home-proof span { white-space: nowrap; }
 .home-proof strong { color: #1c1527; font-size: .92rem; }
 .home-workspace { display: grid; grid-template-columns: minmax(0,1.08fr) minmax(390px,.92fr); gap: 16px; }
+.home-mobile-tabs { display: none; }
 .home-page .flagship-builder,
 .home-tool-browser {
   min-height: 0;
@@ -762,23 +763,45 @@ button { color: inherit; }
   .home-workspace { grid-template-columns: minmax(0,1fr) minmax(350px,.84fr); }
 }
 @media (max-width: 960px) {
-  .home-page { max-width: 100%; overflow-x: clip; overflow-y: auto; }
+  .home-page { width: 100%; max-width: 100%; height: 100dvh; overflow: hidden; }
   .home-page main,.home-page .home-news-ticker { max-width: 100%; overflow-x: clip; }
   .home-page .primary-nav { background: #fff; border-bottom-color: #e4ddec; box-shadow: 0 24px 50px rgba(48,28,83,.12); }
   .home-page .more-links { box-shadow: none; }
-  .home-command { height: auto; min-height: calc(100dvh - 110px); overflow: visible; }
+  .home-command { height: calc(100dvh - 110px); min-height: 0; padding: 12px 0; overflow: hidden; }
   .home-intro,.home-workspace { grid-template-columns: 1fr; }
+  .home-intro { gap: 7px; margin-bottom: 9px; }
+  .home-intro .eyebrow { display: none; }
+  .home-intro h1 { font-size: clamp(2.45rem,8vw,3.5rem); }
+  .home-intro p:not(.eyebrow) { display: none; }
   .home-proof { grid-template-columns: repeat(4,auto); justify-content: start; }
-  .home-page .flagship-builder,.home-tool-browser { height: auto; max-height: none; overflow: visible; }
+  .home-mobile-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: 8px; padding: 4px; border: 1px solid #ded4e8; border-radius: 13px; background: #f5f0fa; }
+  .home-mobile-tabs label { display: block; cursor: pointer; }
+  .home-mobile-tabs input { position: absolute; opacity: 0; pointer-events: none; }
+  .home-mobile-tabs span { min-height: 36px; display: grid; place-items: center; border-radius: 9px; color: #655a72; background: transparent; font-size: .78rem; font-weight: 900; }
+  .home-mobile-tabs label:has(input:focus-visible) span { outline: 3px solid var(--acid); outline-offset: 2px; }
+  .home-mobile-tabs label:has(input:checked) span { color: #fff; background: #6d28d9; box-shadow: 0 7px 18px rgba(109,40,217,.2); }
+  .home-page .flagship-builder,.home-tool-browser { height: calc(100dvh - 255px); min-height: 0; max-height: none; overflow-x: hidden; overflow-y: auto; }
+  .home-workspace>.home-tool-browser { display: none; }
+  .home-mobile-tabs:has(input[value="search"]:checked)+.home-workspace>.flagship-builder { display: none; }
+  .home-mobile-tabs:has(input[value="search"]:checked)+.home-workspace>.home-tool-browser { display: flex; }
+  .home-page:has(.setup-plan.is-visible) { height: auto; overflow-x: clip; overflow-y: auto; }
+  .home-page:has(.setup-plan.is-visible) .home-command { height: auto; min-height: calc(100dvh - 110px); overflow: visible; }
 }
 @media (max-width: 650px) {
   .home-news-ticker { grid-template-columns: auto minmax(0,1fr); }
   .ticker-label { padding-inline: 14px; }
   .ticker-all { display: none; }
-  .home-command { padding-top: 15px; }
-  .home-intro { gap: 15px; }
-  .home-intro h1 { font-size: clamp(2.7rem,13vw,4rem); }
+  .home-command { padding-top: 10px; }
+  .home-intro { gap: 6px; }
+  .home-intro h1 { font-size: clamp(2.35rem,11vw,3.15rem); }
   .home-proof { grid-template-columns: repeat(2,auto); gap: 5px 16px; }
-  .home-page .flagship-builder,.home-tool-browser { padding: 18px; border-radius: 20px; }
+  .home-page .flagship-builder,.home-tool-browser { height: calc(100dvh - 285px); padding: 14px 16px; border-radius: 20px; }
+  .home-page .builder-title { margin-bottom: 8px; }
+  .home-page .builder-elephant { width: 43px; height: 43px; }
+  .home-page .goal-field textarea { min-height: 74px; padding: 13px 14px; }
+  .home-page .example-prompts,.home-page .matcher-note { display: none; }
+  .home-page .setup-details { margin-top: 7px; }
+  .home-page .builder-submit { min-height: 43px; margin-top: 8px; }
   .home-tool-result { grid-template-columns: 38px minmax(0,1fr) auto; }
+  .home-tool-results .home-tool-result:nth-child(4) { display: none; }
 }

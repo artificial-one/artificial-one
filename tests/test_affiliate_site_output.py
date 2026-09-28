@@ -178,6 +178,7 @@ class AffiliateSiteOutputTests(unittest.TestCase):
         self.assertIn("data-home-tool-results", homepage)
         self.assertIn("initHomeNewsTicker", engine)
         self.assertIn("initHomeToolSearch", engine)
+        self.assertIn("initHomeWorkspaceTabs", engine)
         self.assertIn('!document.body.classList.contains("home-page")', tracking)
 
     def test_imported_offer_copy_is_buyer_facing(self):
