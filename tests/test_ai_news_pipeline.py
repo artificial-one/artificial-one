@@ -53,13 +53,18 @@ class AiNewsPipelineTests(unittest.TestCase):
     def test_homepage_markers_are_required_and_replaced(self):
         source = "// AI_NEWS_DATA_START\nconst aiNewsItems = [];\n// AI_NEWS_DATA_END"
         with tempfile.TemporaryDirectory() as directory:
-            path = Path(directory) / "index.html"
+            root = Path(directory)
+            path = root / "index.html"
+            article = root / "news" / "2026" / "09" / "13" / "safe-headline.html"
+            article.parent.mkdir(parents=True)
+            article.write_text("published", encoding="utf-8")
             path.write_text(source, encoding="utf-8")
-            with patch.object(news, "INDEX_PATH", path):
+            with patch.object(news, "ROOT", root), patch.object(news, "INDEX_PATH", path):
                 updated = news.update_homepage([{
                     "title": "Safe headline", "url": "https://example.com/news",
                     "source": "Example AI", "published_at": "2026-09-13T09:00:00+00:00",
                     "display_date": "Sep 13, 2026", "category": "Research",
+                    "archive_url": "news/2026/09/13/safe-headline.html",
                 }])
         self.assertIn("Safe headline", updated)
         self.assertEqual(updated.count(news.DATA_START), 1)
@@ -73,12 +78,19 @@ class AiNewsPipelineTests(unittest.TestCase):
         self.assertEqual(route["url"], "partner-offers/elevenlabs-ai-voice.html")
 
     def test_news_page_is_reader_first_white_and_free_of_internal_status_banners(self):
-        item = {
-            "title": "AI voice update", "url": "https://example.com/news", "source": "Example AI",
-            "published_at": "2026-09-13T09:00:00+00:00", "display_date": "Sep 13, 2026",
-            "category": "Models & LLMs", "related": {"title": "Evaluate ElevenLabs", "url": "partner-offers/elevenlabs.html", "offer_id": "elevenlabs"},
-        }
-        rendered = news.render_news_page([item], "2026-09-15", [])
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            article = root / "news" / "2026" / "09" / "13" / "ai-voice-update.html"
+            article.parent.mkdir(parents=True)
+            article.write_text("published", encoding="utf-8")
+            item = {
+                "title": "AI voice update", "url": "https://example.com/news", "source": "Example AI",
+                "published_at": "2026-09-13T09:00:00+00:00", "display_date": "Sep 13, 2026",
+                "category": "Models & LLMs", "archive_url": "news/2026/09/13/ai-voice-update.html",
+                "related": {"title": "Evaluate ElevenLabs", "url": "partner-offers/elevenlabs.html", "offer_id": "elevenlabs"},
+            }
+            with patch.object(news, "ROOT", root):
+                rendered = news.render_news_page([item], "2026-09-15", [])
         self.assertIn('class="story-link"', rendered)
         self.assertIn('class="lead-story"', rendered)
         self.assertIn('class="news-page"', rendered)
@@ -93,6 +105,36 @@ class AiNewsPipelineTests(unittest.TestCase):
         self.assertNotIn("Sources are allowlisted", rendered)
         self.assertNotIn("EDITOR'S PARTNER PICKS", rendered)
         self.assertNotIn("RELATED DECISION GUIDE", rendered)
+
+    def test_public_news_excludes_external_only_and_missing_briefings(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            live = root / "news" / "2026" / "09" / "13" / "live.html"
+            live.parent.mkdir(parents=True)
+            live.write_text("published", encoding="utf-8")
+            items = [
+                {"title": "External only", "url": "https://example.com/external"},
+                {"title": "Missing page", "archive_url": "news/2026/09/13/missing.html"},
+                {"title": "Live briefing", "archive_url": "news/2026/09/13/live.html"},
+            ]
+            with patch.object(news, "ROOT", root):
+                published = news.public_news_items(items)
+        self.assertEqual([item["title"] for item in published], ["Live briefing"])
+
+    def test_publishable_archive_record_requires_quality_gate_and_live_file(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            article = root / "news" / "2026" / "09" / "13" / "approved.html"
+            article.parent.mkdir(parents=True)
+            article.write_text("published", encoding="utf-8")
+            record = {
+                "path": "news/2026/09/13/approved.html",
+                "source": {"url": "https://example.com/source"},
+                "quality": {"approved": True, "score": 90, "issues": []},
+            }
+            with patch.object(news, "ROOT", root):
+                self.assertTrue(news.archive_record_is_publishable(record))
+                self.assertFalse(news.archive_record_is_publishable({**record, "quality": {"approved": True, "score": 84, "issues": []}}))
 
 
 if __name__ == "__main__":
