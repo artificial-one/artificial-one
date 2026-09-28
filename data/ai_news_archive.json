@@ -1,7 +1,70 @@
 {
   "version": 1,
-  "updated_at": "2026-09-27T21:35:42.590614+00:00",
+  "updated_at": "2026-09-28T04:07:56.203770+00:00",
   "articles": [
+    {
+      "path": "news/2026/09/25/can-cloudflare-ceo-matthew-prince-save-the-web-from-ai.html",
+      "created_at": "2026-09-28T04:07:56.203770+00:00",
+      "source": {
+        "title": "Can Cloudflare CEO Matthew Prince save the web from AI?",
+        "url": "https://www.theverge.com/podcast/1000344/cloudflare-matthew-prince-google-zero-ai-web-advertising",
+        "source": "The Verge AI",
+        "published_at": "2026-09-25T22:13:20+00:00",
+        "display_date": "Sep 25, 2026",
+        "category": "AI Tools & Products",
+        "description": "Today, I’m talking with Matthew Prince, who is CEO of Cloudflare. This episode is part of a two-part series on the future of business. Matthew last joined us on the show about two and a half years ago, at what we thought then was a wild pivot point for the internet — and now it […]",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Cloudflare CEO Matthew Prince and the AI crisis",
+        "summary": "Cloudflare CEO Matthew Prince discusses the impact of AI on the web, including bot traffic and company layoffs. He is at the forefront of efforts to manage AI's influence on the internet.",
+        "facts": [
+          {
+            "statement": "AI is causing a significant increase in bot traffic on the web.",
+            "evidence": "bots made up more than half of internet traffic"
+          },
+          {
+            "statement": "Cloudflare is at the forefront of managing AI's impact on the web.",
+            "evidence": "right at the center of it"
+          },
+          {
+            "statement": "AI is causing significant changes in Cloudflare's operations.",
+            "evidence": "company laid off more than a thousand people"
+          }
+        ],
+        "why_it_matters": "The intersection of AI and the web is creating unprecedented challenges for companies like Cloudflare. As AI agents increasingly interact with the internet, the need for solutions to manage bot traffic and protect website owners becomes more urgent.",
+        "elephant_take": "🐘 🦘 Matthew Prince is trying to save the web from AI, but it's a tough job. The more AI does, the more bots flood the web, and the more Cloudflare has to adapt. It's a race against the tide of automation.",
+        "caveat": "The situation is complex and rapidly evolving, with no clear solutions yet.",
+        "who_should_care": [
+          "AI developers",
+          "Website owners",
+          "Internet infrastructure providers"
+        ],
+        "what_to_do": [
+          "Monitor bot traffic trends",
+          "Implement AI detection systems",
+          "Stay informed about AI's impact on the web"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Can%20Cloudflare%20CEO%20Matthew%20Prince%20save%20the%20web%20from%20AI%3F%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/09/27/engram-is-a-sampler-that-turns-broken-ai-hallucinations-into-music.html",
       "created_at": "2026-09-27T21:35:42.590614+00:00",
@@ -951,6 +1014,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-09-28T04:07:56.203770+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-09-28T04:07:56.203770+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-09-28T04:07:56.203770+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/airbnb-gpt-6-astra",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-09-28T04:07:56.203770+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-09-28T04:07:56.203770+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-09-27T21:35:42.590614+00:00",
@@ -1043,24 +1136,6 @@
     {
       "url": "https://the-decoder.com/openais-gpt-6-astra-can-now-tell-you-exactly-where-you-screwed-up-your-ikea-shelf/",
       "reason": "quality gate rejected draft: hype language is present",
-      "at": "2026-09-27T04:28:34.908718+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-09-27T04:28:34.908718+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-09-27T04:28:34.908718+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/podcast/1000344/cloudflare-matthew-prince-google-zero-ai-web-advertising",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-09-27T04:28:34.908718+00:00",
       "pipeline_version": "2"
     },
