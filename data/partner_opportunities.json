@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-27",
+  "updated_at": "2026-09-28",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -176,7 +176,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 29,
+      "review_days": 30,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -1929,7 +1929,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1955,64 +1955,6 @@
           "paid_search_restricted": true,
           "coupon_restricted": true,
           "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:marketing360",
-      "network": "partnerstack",
-      "name": "Marketing 360®",
-      "slug": "marketing360",
-      "description": "Marketing 360® delivers an all-in-one platform for digital marketing and marketing services to help small businesses grow their brand. Trusted by over 15,000 SMBs, we are excited to work with you to help small businesses grow and local communities glow!",
-      "offer": "Earn 10% on every customer purchase!",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Artificial Intelligence",
-        "Digital Advertising",
-        "Hot",
-        "Marketing",
-        "Office Software",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/marketing360?company=marketing360&gref=marketplace",
-      "terms_url": "https://www.marketing360.com/marketing-360-referral-partner-revenue-share-agreement",
-      "website": "https://www.marketing360.com/",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "approved": false,
-      "authenticated_relationship": true,
-      "relationship_status": "application-pending",
-      "terms_required": false,
-      "partnership_key": "part_IvU53CXerqa84r",
-      "score": 85,
-      "relevance_matches": [
-        "artificial intelligence",
-        "marketing",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -2410,7 +2352,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 89,
+      "review_days": 86,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -3413,7 +3355,7 @@
           "content_approval_required": true,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -3946,7 +3888,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 22,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -4232,6 +4174,62 @@
       "policy": {
         "status": "unreachable",
         "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:marketing360",
+      "network": "partnerstack",
+      "name": "Marketing 360®",
+      "slug": "marketing360",
+      "description": "Marketing 360® delivers an all-in-one platform for digital marketing and marketing services to help small businesses grow their brand. Trusted by over 15,000 SMBs, we are excited to work with you to help small businesses grow and local communities glow!",
+      "offer": "Earn 10% on every customer purchase!",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Artificial Intelligence",
+        "Digital Advertising",
+        "Marketing",
+        "Office Software",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/marketing360?company=marketing360&gref=marketplace",
+      "terms_url": "https://www.marketing360.com/marketing-360-referral-partner-revenue-share-agreement",
+      "website": "https://www.marketing360.com/",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_IvU53CXerqa84r",
+      "score": 80,
+      "relevance_matches": [
+        "artificial intelligence",
+        "marketing",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -5072,7 +5070,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 15,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5912,7 +5910,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 34,
+      "review_days": 35,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6029,7 +6027,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 27,
+      "review_days": 28,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -7815,7 +7813,7 @@
       "network": "partnerstack",
       "name": "SoftSync",
       "slug": "softsyncaiinc",
-      "description": "Lifetime recurring commission up to 50%. SoftSync AI is the CRM that works inside Claude and ChatGPT, so follow-ups and data entry run on their own. Earn on every payment, for life, no cap: 1 paying customer: 30% 5: 35% 10: 40% 20: 50% Each level applies to all your customers. Your audience gets 30% off plus a 30-day trial. Swipe file and demos in Resources. Daily post ideas: x.com/celinehaverstad Demos: youtube.com/@SoftSyncCRM Questions: marketing@softsync.ai",
+      "description": "Up to 50% lifetime commission + $50 first-sale bonus + $1,000 monthly prize. SoftSync AI is the CRM that works inside Claude and ChatGPT, so follow-ups and data entry run on their own. Lifetime recurring, no cap: 30% from your first paying customer, 35% at 5, 40% at 10, 50% at 20. Each level applies to all customers. Your audience: 30% off + 30-day trial. Creators: your own 50% code. Reviewers: free test workspace. 4-min demo: youtube.com/watch?v=8AFw6PMrNN8 Ideas: x.com/celinehaverstad",
       "offer": "Lifetime earnings up to 50%. Become a Softsync affiliate!",
       "tags": [
         "ERP",
@@ -7838,7 +7836,6 @@
       "relevance_matches": [
         "ai",
         "data",
-        "marketing",
         "sales"
       ],
       "already_active": false,
@@ -9338,7 +9335,6 @@
         "Collaboration & Productivity",
         "Commerce",
         "Customer Service",
-        "Hot",
         "Hubspot integrated",
         "Influencers",
         "Marketing",
@@ -9455,7 +9451,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10914,7 +10910,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -11216,62 +11212,6 @@
       }
     },
     {
-      "id": "partnerstack:pixelunion",
-      "network": "partnerstack",
-      "name": "Pixel Union Partner Program",
-      "slug": "pixelunion",
-      "description": "Promote industry leading premium Shopify themes and Shopify store management apps from Pixel Union & Out of the Sandbox today. Trusted by over 100,000 merchants and counting!",
-      "offer": "10% for aspirational affiliates",
-      "tags": [
-        "Affiliates",
-        "Commerce",
-        "Content Management",
-        "Design",
-        "E-Commerce",
-        "Hot",
-        "Marketing",
-        "Office Software",
-        "Publishers",
-        "Shopify integrated",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/pixelunion?company=pixelunion&gref=marketplace",
-      "terms_url": "https://pixelunion.net/pages/pixel-union-partner-program-terms-and-conditions",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 3,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "content",
-        "design",
-        "e-commerce",
-        "marketing",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:postscript",
       "network": "partnerstack",
       "name": "Postscript",
@@ -11300,7 +11240,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11778,7 +11718,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12247,7 +12187,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 121,
+      "review_days": 123,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12456,7 +12396,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12740,55 +12680,6 @@
         "data",
         "productivity",
         "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:truckstop",
-      "network": "partnerstack",
-      "name": "TRUCKSTOP",
-      "slug": "truckstop",
-      "description": "We develop and deliver technology solutions and services that empower freight professionals—carriers, brokers, and shippers of all sizes—to run their businesses from start to finish.",
-      "offer": "Earn up to 20% per active customer you refer!",
-      "tags": [
-        "Affiliates",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Hot",
-        "Other",
-        "Referral Partners",
-        "Supply Chain & Logistics",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/truckstop?company=truckstop&gref=marketplace",
-      "terms_url": "https://truckstop.com/partner-referral-program-agreement-terms-of-service",
-      "website": "https://www.truckstop.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 38,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "productivity"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -13137,7 +13028,6 @@
       "tags": [
         "Affiliates",
         "Analytics",
-        "Hot",
         "Marketing",
         "Publishers",
         "Referral Partners",
@@ -15301,7 +15191,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 50,
+      "review_days": 53,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16315,7 +16205,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 14,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -18092,7 +17982,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18109,6 +17999,60 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:pixelunion",
+      "network": "partnerstack",
+      "name": "Pixel Union Partner Program",
+      "slug": "pixelunion",
+      "description": "Promote industry leading premium Shopify themes and Shopify store management apps from Pixel Union & Out of the Sandbox today. Trusted by over 100,000 merchants and counting!",
+      "offer": "10% for aspirational affiliates",
+      "tags": [
+        "Affiliates",
+        "Commerce",
+        "Content Management",
+        "Design",
+        "E-Commerce",
+        "Marketing",
+        "Office Software",
+        "Publishers",
+        "Shopify integrated"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/pixelunion?company=pixelunion&gref=marketplace",
+      "terms_url": "https://pixelunion.net/pages/pixel-union-partner-program-terms-and-conditions",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 3,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "content",
+        "design",
+        "e-commerce",
+        "marketing",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
           "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
@@ -18210,60 +18154,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:shoeboxedinc",
-      "network": "partnerstack",
-      "name": "Shoeboxed",
-      "slug": "shoeboxedinc",
-      "description": "Join over one million businesses scanning & organizing receipts, creating expense reports, and more with Shoeboxed.",
-      "offer": "Earn 20% for every customer purchase in their first year and more!",
-      "tags": [
-        "Accounting",
-        "Affiliates",
-        "Ambassadors",
-        "Analytics",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Hot",
-        "Office Software",
-        "Salesforce integrated",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shoeboxedinc?company=shoeboxedinc&gref=marketplace",
-      "terms_url": "https://www.shoeboxed.com/terms/",
-      "website": "https://www.shoeboxed.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 6,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "analytics",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -18585,6 +18475,53 @@
       }
     },
     {
+      "id": "partnerstack:truckstop",
+      "network": "partnerstack",
+      "name": "TRUCKSTOP",
+      "slug": "truckstop",
+      "description": "We develop and deliver technology solutions and services that empower freight professionals—carriers, brokers, and shippers of all sizes—to run their businesses from start to finish.",
+      "offer": "Earn up to 20% per active customer you refer!",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Other",
+        "Referral Partners",
+        "Supply Chain & Logistics"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/truckstop?company=truckstop&gref=marketplace",
+      "terms_url": "https://truckstop.com/partner-referral-program-agreement-terms-of-service",
+      "website": "https://www.truckstop.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 38,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:unitelvoice",
       "network": "partnerstack",
       "name": "Unitel Voice",
@@ -18648,7 +18585,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "Earn 10% on every referral",
+      "offer": "5% on year 2 renewal",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -18671,7 +18608,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -19555,7 +19492,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 20,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19673,14 +19610,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": true,
-          "coupon_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 180
+        "cookie_days": null
       }
     },
     {
@@ -21153,7 +21090,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 27,
+      "review_days": 26,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21268,6 +21205,58 @@
           "coupon_restricted": false,
           "email_restricted": true,
           "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:shoeboxedinc",
+      "network": "partnerstack",
+      "name": "Shoeboxed",
+      "slug": "shoeboxedinc",
+      "description": "Join over one million businesses scanning & organizing receipts, creating expense reports, and more with Shoeboxed.",
+      "offer": "Earn 20% for every customer purchase in their first year and more!",
+      "tags": [
+        "Accounting",
+        "Affiliates",
+        "Ambassadors",
+        "Analytics",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Office Software",
+        "Salesforce integrated"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shoeboxedinc?company=shoeboxedinc&gref=marketplace",
+      "terms_url": "https://www.shoeboxed.com/terms/",
+      "website": "https://www.shoeboxed.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 4,
+      "source": "https://market.partnerstack.com/",
+      "score": 57,
+      "relevance_matches": [
+        "analytics",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -21765,7 +21754,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 25,
+      "review_days": 26,
       "source": "https://market.partnerstack.com/",
       "score": 55,
       "relevance_matches": [
@@ -22703,7 +22692,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 48,
       "relevance_matches": [
@@ -22723,7 +22712,7 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
       }
     },
     {
@@ -22880,7 +22869,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 25,
+      "review_days": 27,
       "source": "https://market.partnerstack.com/",
       "score": 47,
       "relevance_matches": [
@@ -23645,7 +23634,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 6,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 39,
       "relevance_matches": [],
