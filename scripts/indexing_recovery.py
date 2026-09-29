@@ -59,7 +59,7 @@ CURATED_CORE = (
     "about.html",
     "partners.html",
 )
-PRIORITY_FOLDERS = ("partner-offers", "search-intent", "calculators", "workflow-recipes", "news")
+PRIORITY_FOLDERS = ("partner-offers", "appsumo-guides", "search-intent", "calculators", "workflow-recipes", "news")
 
 
 def priority_pages() -> list[Path]:
@@ -126,7 +126,7 @@ def quality_reasons(path: Path, incoming: Counter[str] | None = None, source: st
     minimum_words = 90 if core else 180
     if words < minimum_words:
         reasons.append(f"thin_content:{words}")
-    if relative.startswith(("partner-offers/", "search-intent/")):
+    if relative.startswith(("partner-offers/", "appsumo-guides/", "search-intent/")):
         lowered = text.casefold()
         useful_signals = sum(
             signal in lowered

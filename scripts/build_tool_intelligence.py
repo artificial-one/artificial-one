@@ -280,11 +280,12 @@ def merge_appsumo(records: dict[str, dict[str, Any]], offer: dict[str, Any]) -> 
     record = next((item for item in records.values() if name_key(str(item["name"])) == key), None)
     if record is None:
         slug = slugify(str(offer["name"]))
+        description = str(offer.get("description") or "").strip()
         record = {
             "id": slug, "name": str(offer["name"]), "slug": slug,
             "category": str(offer.get("category") or "AI Software"),
-            "summary": f"AI-relevant AppSumo catalogue record for {offer['name']}; verify current features and terms on the destination.",
-            "best_for": "Buyers evaluating a currently available AI or automation offer.",
+            "summary": description or f"AI-relevant AppSumo catalogue record for {offer['name']}; verify current features and terms on the destination.",
+            "best_for": f"Buyers evaluating {str(offer.get('category') or 'AI software').casefold()} for a defined workflow.",
             "features": [], "platforms": [],
             "pricing": {"label": "Check current AppSumo price and terms", "has_free_plan": False, "confidence": "destination-only", "verified_at": None},
             "links": {"profile": str(offer.get("editorial_url") or "appsumo-ai-tools.html"), "partner_guide": str(offer.get("editorial_url") or ""), "affiliate": "", "source": ""},
@@ -298,6 +299,10 @@ def merge_appsumo(records: dict[str, dict[str, Any]], offer: dict[str, Any]) -> 
             "last_checked": str(offer.get("last_checked_at") or "")[:10] or None,
             "source_count": 1,
         }
+        description = str(offer.get("description") or "").strip()
+        if description and not description.startswith("AppSumo product asset"):
+            record["summary"] = description
+            record["best_for"] = f"Buyers evaluating {str(offer.get('category') or record['category']).casefold()} for a defined workflow."
     record["links"]["affiliate"] = str(offer["tracking_url"])
     record["links"]["partner_guide"] = str(offer.get("editorial_url") or record["links"].get("partner_guide") or "")
     if not record["links"].get("profile"):
