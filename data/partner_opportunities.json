@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-28",
+  "updated_at": "2026-09-29",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -8,10 +8,11 @@
     "total": 476,
     "approved_link_pending": 6,
     "existing_active": 38,
-    "not_qualified": 14,
-    "policy_review_required": 22,
+    "not_qualified": 15,
+    "policy_review_required": 21,
     "program_paused": 1,
-    "ready_for_owner_application": 395
+    "ready_for_owner_application": 394,
+    "terms_required": 1
   },
   "opportunities": [
     {
@@ -546,8 +547,8 @@
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
-      "relationship_status": "application-pending",
-      "terms_required": false,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": true,
       "partnership_key": "part_JOMIgzBYCUZMfe",
       "score": 85,
       "relevance_matches": [
@@ -561,19 +562,11 @@
         "software"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -1295,63 +1288,6 @@
       }
     },
     {
-      "id": "partnerstack:distance",
-      "network": "partnerstack",
-      "name": "Distance",
-      "slug": "distance",
-      "description": "Distance is the AI Sales Platform built for service businesses. Capture more leads and book more jobs across channels 24/7.",
-      "offer": "Earn 20% commission for an entire year on every referral (ACV $525 USD/month)",
-      "tags": [
-        "AR/VR",
-        "Artificial Intelligence",
-        "Customer Service",
-        "Hubspot integrated",
-        "Sales",
-        "Salesforce integrated",
-        "Shopify integrated",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/distance?company=distance&gref=marketplace",
-      "terms_url": "https://distance.so/affiliate-referral-agreement",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "approved": false,
-      "authenticated_relationship": true,
-      "relationship_status": "application-pending",
-      "terms_required": false,
-      "partnership_key": "part_xYONIW8XSvwLGd",
-      "score": 85,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "customer service",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:elevenlabsinc",
       "network": "partnerstack",
       "name": "Eleven Labs Inc.",
@@ -1875,7 +1811,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 40,
+      "review_days": 44,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1990,7 +1926,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 23,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2468,7 +2404,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 52,
+      "review_days": 54,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2951,7 +2887,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -3540,53 +3476,6 @@
       }
     },
     {
-      "id": "partnerstack:expertiseai",
-      "network": "partnerstack",
-      "name": "Expertise AI",
-      "slug": "expertiseai",
-      "description": "AI sales agent that replaces traditional stone age chatbots for HubSpot first businesses",
-      "offer": "20% revenue share for 3 years if the referral converts (≈$18K total on a $30K deal)",
-      "tags": [
-        "Artificial Intelligence",
-        "Hot",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/expertiseai?company=expertiseai&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/126UCKu1m-dGJp8GyaDAmixnhPPPpU5RL/view?usp=sharing",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 81,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:ngram",
       "network": "partnerstack",
       "name": "ngram",
@@ -3845,6 +3734,62 @@
         "ai",
         "artificial intelligence",
         "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:distance",
+      "network": "partnerstack",
+      "name": "Distance",
+      "slug": "distance",
+      "description": "Distance is the AI Sales Platform built for service businesses. Capture more leads and book more jobs across channels 24/7.",
+      "offer": "Earn 20% commission for an entire year on every referral (ACV $525 USD/month)",
+      "tags": [
+        "AR/VR",
+        "Artificial Intelligence",
+        "Customer Service",
+        "Hubspot integrated",
+        "Sales",
+        "Salesforce integrated",
+        "Shopify integrated"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/distance?company=distance&gref=marketplace",
+      "terms_url": "https://distance.so/affiliate-referral-agreement",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_xYONIW8XSvwLGd",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "customer service",
+        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -6010,6 +5955,7 @@
         "HR Software",
         "Hosting Providers",
         "Hot",
+        "Internal Pick",
         "Marketing",
         "Office Software",
         "Publishers",
@@ -6027,7 +5973,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 28,
+      "review_days": 27,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6167,60 +6113,6 @@
           "coupon_restricted": false,
           "email_restricted": true,
           "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:aisdrinc",
-      "network": "partnerstack",
-      "name": "AiSDR, Inc.",
-      "slug": "aisdrinc",
-      "description": "AiSDR is the first AI sales agent that can take care of the entire outreach end-to-end and have a meaningful conversation with prospects through emails, LinkedIn, and text messages that sound like you wrote them. Pick between a reseller and referral options and earn commission from each subscription you bring. Either manage the entire sales process for 30% lifetime, or introduce new prospects to us for 20% commission for 1 year.",
-      "offer": "Earn 20% commissions for the first year!",
-      "tags": [
-        "Affiliates",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Hot",
-        "Marketing",
-        "Publishers",
-        "Referral Partners",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/aisdrinc?company=aisdrinc&gref=marketplace",
-      "terms_url": "https://aisdr.com/terms/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 76,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -6393,11 +6285,56 @@
       }
     },
     {
+      "id": "partnerstack:expertiseai",
+      "network": "partnerstack",
+      "name": "Expertise AI",
+      "slug": "expertiseai",
+      "description": "AI sales agent that replaces traditional stone age chatbots for HubSpot first businesses",
+      "offer": "20% revenue share for 3 years if the referral converts (≈$18K total on a $30K deal)",
+      "tags": [
+        "Artificial Intelligence",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/expertiseai?company=expertiseai&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/126UCKu1m-dGJp8GyaDAmixnhPPPpU5RL/view?usp=sharing",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 76,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:feedvisor",
       "network": "partnerstack",
       "name": "Feedvisor",
       "slug": "feedvisor",
-      "description": "The Fastest, Smartest Inventory-Aware Pricing Optimization Ever Introducing an award-winning solution for private label brands and sellers.",
+      "description": "The first agentic commerce platform for brands and large sellers on Amazon, Walmart, and other e-marketplaces. Agentis' unified engine connects advertising, pricing, inventory, and demand to make continuous, real-time decisions powered by AI that maximize profit and growth.",
       "offer": "Earn 10% commission for every qualified customer",
       "tags": [
         "Affiliates",
@@ -6420,6 +6357,7 @@
       "source": "https://market.partnerstack.com/",
       "score": 76,
       "relevance_matches": [
+        "ai",
         "analytics",
         "artificial intelligence",
         "e-commerce",
@@ -7429,10 +7367,8 @@
         "Collaboration & Productivity",
         "Customer Service",
         "Development",
-        "Hot",
         "Publishers",
         "Salesforce integrated",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/cometchat?company=cometchat&gref=marketplace",
@@ -7444,7 +7380,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 17,
+      "review_days": 18,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -7667,7 +7603,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -7705,7 +7641,6 @@
       "tags": [
         "Affiliate",
         "Affiliates",
-        "Hot",
         "Hubspot integrated",
         "Marketing Professional",
         "Referral Partners",
@@ -7714,7 +7649,6 @@
         "Sales Professional",
         "Salesforce integrated",
         "Shopify integrated",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/salesflare?company=salesflare&gref=marketplace",
@@ -8393,6 +8327,58 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:aisdrinc",
+      "network": "partnerstack",
+      "name": "AiSDR, Inc.",
+      "slug": "aisdrinc",
+      "description": "AiSDR is the first AI sales agent that can take care of the entire outreach end-to-end and have a meaningful conversation with prospects through emails, LinkedIn, and text messages that sound like you wrote them. Pick between a reseller and referral options and earn commission from each subscription you bring. Either manage the entire sales process for 30% lifetime, or introduce new prospects to us for 20% commission for 1 year.",
+      "offer": "Earn 20% commissions for the first year!",
+      "tags": [
+        "Affiliates",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Marketing",
+        "Publishers",
+        "Referral Partners",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/aisdrinc?company=aisdrinc&gref=marketplace",
+      "terms_url": "https://aisdr.com/terms/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 71,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -10039,7 +10025,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -10231,7 +10217,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10982,6 +10968,63 @@
       }
     },
     {
+      "id": "partnerstack:ninjaone",
+      "network": "partnerstack",
+      "name": "NinjaOne",
+      "slug": "ninjaone",
+      "description": "Become a NinjaOne affiliate partner and empower your clients to streamline their IT operations! NinjaOne's RMM platform offers visibility, security & control, boosting client productivity & reducing IT costs. #1 for support, Ninja is a proven solution.",
+      "offer": "Join our affiliate network and earn on clicks, leads, and demos! We personalize based on your advertisement portfolio. Visit our website to learn more about NinjaOne and apply today!",
+      "tags": [
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Development",
+        "Hot",
+        "IT Infrastructure",
+        "IT Management",
+        "IoT Management",
+        "Office Software",
+        "Other",
+        "Publishers",
+        "Security",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ninjaone?company=ninjaone&gref=marketplace",
+      "terms_url": "https://www.ninjaone.com/affiliate-program-terms/",
+      "website": "https://www.ninjaone.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "customer service",
+        "development",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:notifyme",
       "network": "partnerstack",
       "name": "Notify Me!",
@@ -11395,7 +11438,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11549,7 +11592,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 17,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12239,7 +12282,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12619,7 +12662,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 38,
+      "review_days": 39,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12991,7 +13034,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -15191,7 +15234,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 56,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -15288,7 +15331,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 16,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16924,7 +16967,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 58,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17238,7 +17281,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -17502,7 +17545,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 61,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -17609,7 +17652,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -17771,61 +17814,6 @@
       "relevance_matches": [
         "customer service",
         "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:ninjaone",
-      "network": "partnerstack",
-      "name": "NinjaOne",
-      "slug": "ninjaone",
-      "description": "Become a NinjaOne affiliate partner and empower your clients to streamline their IT operations! NinjaOne's RMM platform offers visibility, security & control, boosting client productivity & reducing IT costs. #1 for support, Ninja is a proven solution.",
-      "offer": "Join our affiliate network and earn on clicks, leads, and demos! We personalize based on your advertisement portfolio. Visit our website to learn more about NinjaOne and apply today!",
-      "tags": [
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Development",
-        "IT Infrastructure",
-        "IT Management",
-        "IoT Management",
-        "Office Software",
-        "Other",
-        "Publishers",
-        "Security"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ninjaone?company=ninjaone&gref=marketplace",
-      "terms_url": "https://www.ninjaone.com/affiliate-program-terms/",
-      "website": "https://www.ninjaone.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "customer service",
-        "development",
-        "productivity",
-        "software"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -18585,7 +18573,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "5% on year 2 renewal",
+      "offer": "Earn 10% on every referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -19455,10 +19443,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -19610,14 +19606,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -20214,7 +20210,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 48,
       "source": "https://market.partnerstack.com/",
       "score": 58,
       "relevance_matches": [
@@ -20561,7 +20557,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 6,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -20964,6 +20960,59 @@
       "policy": {
         "status": "unreachable",
         "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:parimworkforcesoftware",
+      "network": "partnerstack",
+      "name": "Parim Workforce Software",
+      "slug": "parimworkforcesoftware",
+      "description": "Parim is a modern workforce management platform for shift-based industries, combining scheduling, time & attendance, compliance, communication and payroll-ready data in one system. It’s scalable, easy to deploy, mobile-first and API-ready—giving partners a powerful, high-retention solution to bring to their customers. The system offers extra bolt on features for Events; Security; Healthcare inc Lone Worker Check Calls, Checkpoints, Incident Reporting and Asset Management",
+      "offer": "Earn 25% commission on year 1 revenue (average customer value $550-$750/mo)",
+      "tags": [
+        "Collaboration & Productivity",
+        "HR",
+        "HR Software",
+        "Office Software",
+        "Payroll",
+        "Resellers",
+        "Security",
+        "System Integrator",
+        "Value Added Reseller",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/parimworkforcesoftware?company=parimworkforcesoftware&gref=marketplace",
+      "terms_url": "https://www.parim.co/company/terms-conditions",
+      "website": "https://www.parim.co",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 27,
+      "source": "https://market.partnerstack.com/",
+      "score": 57,
+      "relevance_matches": [
+        "data",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": true,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -22437,6 +22486,51 @@
       }
     },
     {
+      "id": "partnerstack:samsara",
+      "network": "partnerstack",
+      "name": "Samsara",
+      "slug": "samsara",
+      "description": "Samsara is the pioneer of the Connected Operations Cloud, helping businesses that depend on physical operations turn IoT data into actionable insights that improve their operations.",
+      "offer": "Earn a $150 flat fee for every paying customer you refer",
+      "tags": [
+        "Hot",
+        "IoT Management",
+        "Supply Chain & Logistics",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/samsara?company=samsara&gref=marketplace",
+      "terms_url": "https://www.samsara.com/pdf/affiliate-programt-terms-and-conditions.pdf",
+      "website": "https://www.samsara.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 51,
+      "relevance_matches": [
+        "data"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:acceleratedgrowthstudio",
       "network": "partnerstack",
       "name": "Accelerated Growth Studio",
@@ -22712,7 +22806,7 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -22836,59 +22930,6 @@
           "email_restricted": true,
           "incentive_restricted": true,
           "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:parimworkforcesoftware",
-      "network": "partnerstack",
-      "name": "Parim Workforce Software",
-      "slug": "parimworkforcesoftware",
-      "description": "Parim is a modern workforce management platform for shift-based industries, combining scheduling, time & attendance, compliance, communication and payroll-ready data in one system. It’s scalable, easy to deploy, mobile-first and API-ready—giving partners a powerful, high-retention solution to bring to their customers. The system offers extra bolt on features for Events; Security; Healthcare inc Lone Worker Check Calls, Checkpoints, Incident Reporting and Asset Management",
-      "offer": "Earn 25% commission on year 1 revenue (average customer value $550-$750/mo)",
-      "tags": [
-        "Collaboration & Productivity",
-        "HR",
-        "HR Software",
-        "Office Software",
-        "Payroll",
-        "Resellers",
-        "Security",
-        "System Integrator",
-        "Value Added Reseller",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/parimworkforcesoftware?company=parimworkforcesoftware&gref=marketplace",
-      "terms_url": "https://www.parim.co/company/terms-conditions",
-      "website": "https://www.parim.co",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": false,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 27,
-      "source": "https://market.partnerstack.com/",
-      "score": 47,
-      "relevance_matches": [
-        "data",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": true,
           "disclosure_required": false
         },
         "cookie_days": null
@@ -23025,49 +23066,6 @@
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": true
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:samsara",
-      "network": "partnerstack",
-      "name": "Samsara",
-      "slug": "samsara",
-      "description": "Samsara is the pioneer of the Connected Operations Cloud, helping businesses that depend on physical operations turn IoT data into actionable insights that improve their operations.",
-      "offer": "Earn a $150 flat fee for every paying customer you refer",
-      "tags": [
-        "IoT Management",
-        "Supply Chain & Logistics"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/samsara?company=samsara&gref=marketplace",
-      "terms_url": "https://cdn.prod.website-files.com/682ca9c504ed71f87e6503b0/695bdfb1feb507224e946dc0_Samsara%20Affiliate%20Program%20Terms%20%26%20Conditions.pdf",
-      "website": "https://www.samsara.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 46,
-      "relevance_matches": [
-        "data"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
         },
         "cookie_days": null
       }
@@ -23363,7 +23361,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 41,
       "relevance_matches": [
@@ -23570,47 +23568,6 @@
       }
     },
     {
-      "id": "partnerstack:healthie",
-      "network": "partnerstack",
-      "name": "Healthie",
-      "slug": "healthie",
-      "description": "Industry-leading EMR, Scheduling, and Client Engagement platform for modern healthcare delivery.",
-      "offer": "Earn $150 for each new eligible paid account on Healthie! Bonus commissions available through challenges and tier structure.",
-      "tags": [
-        "Hot",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/healthie?company=healthie&gref=marketplace",
-      "terms_url": "https://help.gethealthie.com/article/1227-healthie-affiliate-program-terms-of-service",
-      "website": "https://www.gethealthie.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 3,
-      "source": "https://market.partnerstack.com/",
-      "score": 39,
-      "relevance_matches": [],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:melio",
       "network": "partnerstack",
       "name": "Melio",
@@ -23634,7 +23591,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 39,
       "relevance_matches": [],
@@ -23714,7 +23671,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 37,
       "relevance_matches": [],
@@ -23839,7 +23796,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 44,
+      "review_days": 42,
       "source": "https://market.partnerstack.com/",
       "score": 35,
       "relevance_matches": [
@@ -23884,6 +23841,36 @@
       "sub_id_enabled": false,
       "revenue_share": false,
       "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 34,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:healthie",
+      "network": "partnerstack",
+      "name": "Healthie",
+      "slug": "healthie",
+      "description": "Industry-leading EMR, Scheduling, and Client Engagement platform for modern healthcare delivery.",
+      "offer": "Earn $150 for each new eligible paid account on Healthie! Bonus commissions available through challenges and tier structure.",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/healthie?company=healthie&gref=marketplace",
+      "terms_url": "https://help.gethealthie.com/article/1227-healthie-affiliate-program-terms-of-service",
+      "website": "https://www.gethealthie.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 34,
       "relevance_matches": [],

@@ -17,10 +17,11 @@
     "total": 725,
     "active_link_pending": 2,
     "inactive": 1,
-    "pending": 431,
+    "pending": 430,
     "published": 291,
+    "terms_required": 1,
     "blocking_failures": 0,
-    "activation_blockers": 2
+    "activation_blockers": 3
   },
   "networks": {
     "awin": {
@@ -39,11 +40,16 @@
       "total": 422,
       "active_link_pending": 2,
       "inactive": 1,
-      "pending": 384,
-      "published": 35
+      "pending": 383,
+      "published": 35,
+      "terms_required": 1
     }
   },
   "activation_blockers": [
+    {
+      "source_id": "partnerstack:browseai",
+      "reason": "terms_required"
+    },
     {
       "source_id": "partnerstack:quillbot",
       "reason": "active_link_pending"
