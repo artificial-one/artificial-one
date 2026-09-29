@@ -1,7 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-09-28T23:30:15.662546+00:00",
+  "updated_at": "2026-09-29T06:11:00.238692+00:00",
   "items": [
+    {
+      "title": "Anthropic’s prospectus details losses, growth, and, yes, a warning that its AI could end humanity",
+      "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-29T05:13:43+00:00",
+      "display_date": "Sep 29, 2026",
+      "category": "AI Tools & Products",
+      "description": "In its prospectus, Anthropic just told investors it's losing tens of billions of dollars a year, but also growing like crazy, and — oh yeah — its own AI might pose an existential risk to humanity.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/09/29/anthropic-s-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-e.html"
+    },
+    {
+      "title": "OpenAI reportedly ditches model over safety concerns",
+      "url": "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-28T23:39:20+00:00",
+      "display_date": "Sep 28, 2026",
+      "category": "Models & LLMs",
+      "description": "A top executive at the AI lab told the Wall Street Journal that the model in question had displayed a poor aptitude for following orders.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns.html"
+    },
     {
       "title": "AMD is acquiring AI company World Labs in a deal worth more than $8 billion",
       "url": "https://www.theverge.com/tech/1001749/amd-world-labs-ai-acquisition-deal",
@@ -46,6 +76,21 @@
       }
     },
     {
+      "title": "The AI boom took over Climate Week and not everyone is happy about it",
+      "url": "https://techcrunch.com/2026/09/28/the-ai-boom-took-over-climate-week-and-not-everyone-is-happy-about-it/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-28T19:21:59+00:00",
+      "display_date": "Sep 28, 2026",
+      "category": "AI Tools & Products",
+      "description": "Just like the rest of the U.S., data centers and AI are dividing climate tech founders and investors.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/09/28/the-ai-boom-took-over-climate-week-and-not-everyone-is-happy-about-it.html"
+    },
+    {
       "title": "Florida seeks a ban on ChatGPT acting like a person",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1001527/chatgpt-florida-ban-first-person-human-attributes-kids",
       "source": "The Verge AI",
@@ -82,7 +127,7 @@
       "published_at": "2026-09-28T18:31:23+00:00",
       "display_date": "Sep 28, 2026",
       "category": "Policy & Safety",
-      "description": "As the debate rages over whether the recent spate of rogue AI agents is a step toward AGI or a more conventional engineering problem, Nvidia is offering its own answer to problem. Nvidia CEO Jensen Huang on Monday introduced a toolkit of software and hardware products that add independent security layers around AI agents to […]",
+      "description": "Nvidia CEO Jensen Huang on Monday introduced a toolkit of software and hardware products that add independent security layers around AI agents to ensure they stay within their test environments even if they attempt to break out.",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -138,25 +183,11 @@
       "published_at": "2026-09-28T17:29:50+00:00",
       "display_date": "Sep 28, 2026",
       "category": "Models & LLMs",
-      "description": "As all-in-one AI agents like Meta's Muse and Instinct take off, Google is opting to end a feature which built task-specific agents.",
+      "description": "As all-in-one AI agents like Meta's Muse and Instinct take off, Google is opting to end a feature that built task-specific agents.",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "OpenAI still doesn’t seem to have a handle on all of its rogue AI activity",
-      "url": "https://techcrunch.com/2026/09/28/openai-still-doesnt-seem-to-have-a-handle-on-all-of-its-rogue-ai-activity/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-09-28T17:09:02+00:00",
-      "display_date": "Sep 28, 2026",
-      "category": "AI Tools & Products",
-      "description": "On Friday, OpenAI published a new site devoted to “misalignment reports” and the breadth of the incidents is alarming.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
       }
     },
     {
@@ -188,20 +219,6 @@
       }
     },
     {
-      "title": "Meta launches enterprise AI platform, hires MongoDB CEO to lead new initiative",
-      "url": "https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-09-28T16:52:38+00:00",
-      "display_date": "Sep 28, 2026",
-      "category": "AI Business",
-      "description": "Meta says it will focus on bringing its full technology stack, including Muse, Meta Business Agent, Muse API, Muse Code, and more to businesses and developers.",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
-      }
-    },
-    {
       "title": "Harvard psychologist calls for sober AI safety engineering over doomsday rhetoric",
       "url": "https://the-decoder.com/harvard-psychologist-calls-for-sober-ai-safety-engineering-over-doomsday-rhetoric/",
       "source": "The Decoder",
@@ -212,20 +229,6 @@
       "related": {
         "title": "Browse independent AI software buying guides",
         "url": "buyers-guides.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Anthropic, Gamma, and Clay share what happens when enterprises actually deploy AI at TechCrunch Disrupt 2026",
-      "url": "https://techcrunch.com/2026/09/28/anthropic-gamma-and-clay-share-what-happens-when-enterprises-actually-deploy-ai-at-techcrunch-disrupt-2026/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-09-28T15:30:00+00:00",
-      "display_date": "Sep 28, 2026",
-      "category": "AI Business",
-      "description": "Anthropic, Clay, and Gamma on what it takes for an AI product to go beyond the demo at the AI Stage at TechCrunchDisrupt 2026. Register to join and get 50% off a second pass.",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
         "offer_id": ""
       }
     },
@@ -429,20 +432,6 @@
       }
     },
     {
-      "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
-      "url": "https://openai.com/index/airbnb-gpt-6-astra",
-      "source": "OpenAI",
-      "published_at": "2026-09-23T01:00:00+00:00",
-      "display_date": "Sep 23, 2026",
-      "category": "Models & LLMs",
-      "description": "Learn how Airbnb is expanding access to GPT-6 Astra and OpenAI frontier models to help engineering teams solve bugs, design systems, and ship faster.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts",
       "url": "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/",
       "source": "Ars Technica AI",
@@ -512,6 +501,21 @@
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       }
+    },
+    {
+      "title": "New experts join Google’s AI & Economy team",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "source": "Google AI",
+      "published_at": "2026-09-18T14:00:00+00:00",
+      "display_date": "Sep 18, 2026",
+      "category": "Research",
+      "description": "Text \"AI & Economy Research Program\" all over a green grid background, with the Google G logo in the bottom right corner",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      },
+      "archive_url": "news/2026/09/18/new-experts-join-google-s-ai-economy-team.html"
     }
   ]
 }
