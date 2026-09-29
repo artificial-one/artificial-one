@@ -86,7 +86,7 @@ jobs:
       - name: Commit only public, privacy-safe intelligence assets
         shell: bash
         run: |
-          git add -- data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json data/elephant_experience.json data/indexing_recovery.json ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html ask-elephant.html ai-stack-studio.html comparison-lab.html ai-tool-observatory.html workflow-recipes.html workflow-recipes developers.html watchlist-confirmed.html index.html buyers-guides.html sitemap.xml assets/elephant-experience.js api/outcome-signals.js api/affiliate-event.js
+          git add -- data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json data/elephant_experience.json data/indexing_recovery.json data/indexing_priority.json ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html ask-elephant.html ai-stack-studio.html comparison-lab.html ai-tool-observatory.html workflow-recipes.html workflow-recipes developers.html watchlist-confirmed.html index.html buyers-guides.html news-archive.html sitemap.xml sitemap-priority.xml robots.txt assets/elephant-experience.js api/outcome-signals.js api/affiliate-event.js
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

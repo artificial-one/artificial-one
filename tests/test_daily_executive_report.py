@@ -131,7 +131,7 @@ class DailyExecutiveReportTests(unittest.TestCase):
             },
         }
         _, text, html = render(model)
-        self.assertIn("Affiliate pages indexed: 38/40", text)
+        self.assertIn("Priority affiliate pages indexed: 38/40", text)
         self.assertIn("Can customers find our affiliate pages?", html)
         self.assertIn("2026-08-25", html)
         self.assertIn("2026-09-21", html)

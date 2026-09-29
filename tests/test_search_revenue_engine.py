@@ -68,6 +68,16 @@ class SummarySession:
         })
 
 
+class SitemapMutationSession:
+    def __init__(self, status_code=204):
+        self.status_code = status_code
+        self.deleted = []
+
+    def delete(self, endpoint, **_kwargs):
+        self.deleted.append(endpoint)
+        return type("Response", (), {"status_code": self.status_code})()
+
+
 class PropertyResponse:
     status_code = 200
 
@@ -195,6 +205,28 @@ class SearchRevenueEngineTests(unittest.TestCase):
         self.assertEqual(sitemap["submitted"], 120)
         self.assertEqual(sitemap["indexed"], 87)
         self.assertEqual(sitemap["warnings"], 1)
+
+    def test_priority_affiliate_paths_follow_priority_sitemap_only(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "partner-offers").mkdir()
+            (root / "appsumo-guides").mkdir()
+            (root / "partner-offers" / "kept.html").write_text("data-affiliate-offer", encoding="utf-8")
+            (root / "appsumo-guides" / "excluded.html").write_text("data-affiliate-offer", encoding="utf-8")
+            sitemap = root / "sitemap-priority.xml"
+            sitemap.write_text(
+                "<urlset><url><loc>https://artificial.one/partner-offers/kept.html</loc></url></urlset>",
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                engine.priority_affiliate_paths(root, sitemap),
+                {"/partner-offers/kept.html"},
+            )
+
+    def test_legacy_sitemap_removal_is_idempotent(self):
+        session = SitemapMutationSession(404)
+        engine.remove_sitemap(session, "sc-domain:artificial.one", "https://artificial.one/sitemap.xml")
+        self.assertEqual(len(session.deleted), 1)
 
     def test_executive_snapshot_tracks_index_changes_and_money_pages(self):
         inspections = [

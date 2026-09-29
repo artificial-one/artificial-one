@@ -23,6 +23,7 @@ try:
         build_opportunities,
         load_service_account,
         query_search_analytics,
+        remove_sitemap,
         resolve_site_property,
         send_email,
         submit_sitemap,
@@ -35,6 +36,7 @@ except ModuleNotFoundError:  # Direct execution
         build_opportunities,
         load_service_account,
         query_search_analytics,
+        remove_sitemap,
         resolve_site_property,
         send_email,
         submit_sitemap,
@@ -45,6 +47,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 REVENUE_STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 PUBLIC_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
+PRIORITY_SITEMAP_PATH = ROOT / "sitemap-priority.xml"
 INSPECTION_API = "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect"
 SEARCH_API = "https://searchconsole.googleapis.com/webmasters/v3"
 MIN_QUERY_IMPRESSIONS = 20
@@ -70,6 +73,25 @@ def load_json(path: Path, default: dict[str, Any]) -> dict[str, Any]:
     except (OSError, json.JSONDecodeError):
         return dict(default)
     return value if isinstance(value, dict) else dict(default)
+
+
+def priority_paths(path: Path = PRIORITY_SITEMAP_PATH) -> set[str]:
+    """Read the intentionally limited set submitted to Google."""
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError:
+        return set()
+    result: set[str] = set()
+    for url in re.findall(r"<loc>(.*?)</loc>", text, flags=re.I | re.S):
+        parsed = urlparse(url.strip())
+        if parsed.netloc.casefold().removeprefix("www.") == "artificial.one":
+            result.add(parsed.path or "/")
+    return result
+
+
+def priority_affiliate_paths(root: Path = ROOT, sitemap_path: Path = PRIORITY_SITEMAP_PATH) -> set[str]:
+    """Limit the daily URL Inspection quota to monetized pages we actually ask Google to index."""
+    return affiliate_paths(root) & priority_paths(sitemap_path)
 
 
 def page_path(url: str) -> str:
@@ -217,6 +239,7 @@ def build_executive_snapshot(
         "sitemap": sitemap,
         "indexing": {
             "affiliate_pages": len(monetized_paths),
+            "scope": "google_priority_affiliate_pages",
             "inspected": len(inspections),
             "indexed": sum(item.get("status") == "PASS" for item in inspections),
             "issues": len(issues),
@@ -643,7 +666,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--site", default=os.environ.get("GSC_SITE_URL") or "")
     parser.add_argument("--origin", default="https://artificial.one")
-    parser.add_argument("--sitemap", default="https://artificial.one/sitemap.xml")
+    parser.add_argument("--sitemap", default="https://artificial.one/sitemap-priority.xml")
+    parser.add_argument("--legacy-sitemap", default="https://artificial.one/sitemap.xml")
     parser.add_argument("--email-to", default="hello@artificial.one")
     parser.add_argument("--email-from", default="Artificial.One Growth <onboarding@resend.dev>")
     parser.add_argument("--days", type=int, default=28)
@@ -663,7 +687,7 @@ def main() -> int:
         current_summary = query_site_summary(session, site_property, start, end)
         previous_summary = query_site_summary(session, site_property, previous_start, previous_end)
         weights = revenue_weights()
-        monetized_paths = affiliate_paths()
+        monetized_paths = priority_affiliate_paths()
         opportunities = revenue_weighted_opportunities(rows, monetized_paths, weights)
         public = load_public_strategy(args.public_strategy)
         private = load_json(args.private_state, {"version": 1, "experiments": {}, "last_index_issues": []})
@@ -686,6 +710,7 @@ def main() -> int:
         public_changed = write_if_changed(args.public_strategy, public)
         write_if_changed(args.private_state, private)
         write_if_changed(args.executive_snapshot, executive_snapshot)
+        remove_sitemap(session, site_property, args.legacy_sitemap)
         submit_sitemap(session, site_property, args.sitemap)
         github_output = os.environ.get("GITHUB_OUTPUT", "")
         if github_output:
