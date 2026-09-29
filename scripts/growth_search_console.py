@@ -145,6 +145,17 @@ def submit_sitemap(session, site_url: str, sitemap_url: str) -> None:
         raise GrowthError(f"Sitemap submission failed with HTTP {response.status_code}")
 
 
+def remove_sitemap(session, site_url: str, sitemap_url: str) -> None:
+    """Remove a superseded sitemap from Search Console without failing if absent."""
+    endpoint = (
+        f"{SEARCH_API}/sites/{quote(site_url, safe='')}/sitemaps/"
+        f"{quote(sitemap_url, safe='')}"
+    )
+    response = session.delete(endpoint, timeout=30)
+    if response.status_code not in {200, 204, 404}:
+        raise GrowthError(f"Legacy sitemap removal failed with HTTP {response.status_code}")
+
+
 def affiliate_paths(root: Path = ROOT) -> set[str]:
     paths: set[str] = set()
     for page in root.rglob("*.html"):

@@ -25,15 +25,41 @@ except ModuleNotFoundError:
 
 ROOT = Path(__file__).resolve().parents[1]
 SITEMAP_PATH = ROOT / "sitemap.xml"
+PRIORITY_SITEMAP_PATH = ROOT / "sitemap-priority.xml"
 REPORT_PATH = ROOT / "data" / "indexing_recovery.json"
+PRIORITY_REPORT_PATH = ROOT / "data" / "indexing_priority.json"
 SEARCH_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
 HUB_PATH = ROOT / "buyers-guides.html"
+NEWS_ARCHIVE_PATH = ROOT / "news-archive.html"
 SITE = "https://artificial.one"
 INDEXNOW_KEY = "a10e20260915d74b93c2f18e7a45c901"
 SITEMAP_START = "  <!-- indexing-recovery:start -->"
 SITEMAP_END = "  <!-- indexing-recovery:end -->"
 HREF_RE = re.compile(r'<a\b[^>]*\bhref=["\']([^"\']+)', re.I)
 CANONICAL_RE = re.compile(r'<link\b[^>]*\brel=["\']canonical["\'][^>]*\bhref=["\']([^"\']+)', re.I)
+TITLE_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.I | re.S)
+DESCRIPTION_RE = re.compile(r'<meta\b[^>]*\bname=["\']description["\'][^>]*\bcontent=["\']([^"\']+)', re.I)
+H1_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.I | re.S)
+NOINDEX_RE = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex', re.I)
+CURATED_CORE = (
+    "index.html",
+    "ask-elephant.html",
+    "reviews.html",
+    "buyers-guides.html",
+    "news.html",
+    "news-archive.html",
+    "ai-tool-finder.html",
+    "ai-stack-builder.html",
+    "ai-stack-studio.html",
+    "comparison-lab.html",
+    "workflow-recipes.html",
+    "partner-offers.html",
+    "decision-tools.html",
+    "offer-updates.html",
+    "about.html",
+    "partners.html",
+)
+PRIORITY_FOLDERS = ("partner-offers", "search-intent", "calculators", "workflow-recipes", "news")
 
 
 def priority_pages() -> list[Path]:
@@ -57,6 +83,119 @@ def priority_pages() -> list[Path]:
     for folder in ("partner-offers", "search-intent", "calculators"):
         paths.extend(sorted((ROOT / folder).glob("*.html")))
     return [path for path in paths if path.exists()]
+
+
+def indexing_candidates() -> list[Path]:
+    """Return deliberate Google candidates, never the entire generated catalogue."""
+    paths = [ROOT / relative for relative in CURATED_CORE]
+    for folder in PRIORITY_FOLDERS:
+        paths.extend(sorted((ROOT / folder).rglob("*.html")))
+    return sorted({path for path in paths if path.exists()})
+
+
+def expected_url(path: Path) -> str:
+    relative = path.relative_to(ROOT).as_posix()
+    return SITE + "/" if relative == "index.html" else f"{SITE}/{relative}"
+
+
+def _visible_words(text: str) -> list[str]:
+    text = re.sub(r"<(script|style|template)\b.*?</\1>", " ", text, flags=re.I | re.S)
+    text = re.sub(r"<!--.*?-->", " ", text, flags=re.S)
+    text = unescape(re.sub(r"<[^>]+>", " ", text))
+    return re.findall(r"[A-Za-z0-9][A-Za-z0-9'’-]*", text)
+
+
+def quality_reasons(path: Path, incoming: Counter[str] | None = None, source: str | None = None) -> list[str]:
+    """Explain why a candidate is not strong enough for Google's priority queue."""
+    text = source if source is not None else path.read_text(encoding="utf-8", errors="ignore")
+    relative = path.relative_to(ROOT).as_posix()
+    core = relative in CURATED_CORE
+    reasons: list[str] = []
+    if NOINDEX_RE.search(text):
+        reasons.append("noindex")
+    canonical = CANONICAL_RE.search(text)
+    if not canonical or canonical.group(1).rstrip("/") != expected_url(path).rstrip("/"):
+        reasons.append("canonical")
+    if not TITLE_RE.search(text):
+        reasons.append("missing_title")
+    if not DESCRIPTION_RE.search(text):
+        reasons.append("missing_description")
+    if not H1_RE.search(text):
+        reasons.append("missing_h1")
+    words = len(_visible_words(text))
+    minimum_words = 90 if core else 180
+    if words < minimum_words:
+        reasons.append(f"thin_content:{words}")
+    if relative.startswith(("partner-offers/", "search-intent/")):
+        lowered = text.casefold()
+        useful_signals = sum(
+            signal in lowered
+            for signal in ("best for", "not ideal", "limitation", "verdict", "source", "pricing", "compare")
+        )
+        if useful_signals < 2:
+            reasons.append("weak_decision_support")
+    if incoming is not None and relative != "index.html" and incoming[relative] == 0:
+        reasons.append("no_internal_link")
+    return reasons
+
+
+def incoming_links(virtual: dict[Path, str] | None = None) -> Counter[str]:
+    virtual = virtual or {}
+    incoming: Counter[str] = Counter()
+    all_pages = sorted({path for path in ROOT.rglob("*.html") if ".git" not in path.parts} | set(virtual))
+    for source in all_pages:
+        text = virtual.get(source) or source.read_text(encoding="utf-8", errors="ignore")
+        for href in HREF_RE.findall(text):
+            target = _local_path(source, href)
+            if target:
+                incoming[target] += 1
+    return incoming
+
+
+def select_priority_pages(
+    candidates: list[Path], virtual: dict[Path, str] | None = None,
+) -> tuple[list[Path], list[dict[str, Any]], Counter[str]]:
+    incoming = incoming_links(virtual)
+    accepted: list[Path] = []
+    rejected: list[dict[str, Any]] = []
+    for path in candidates:
+        text = (virtual or {}).get(path)
+        reasons = quality_reasons(path, incoming, text)
+        if reasons:
+            rejected.append({
+                "path": path.relative_to(ROOT).as_posix(),
+                "reasons": reasons,
+                "words": len(_visible_words(text if text is not None else path.read_text(encoding="utf-8", errors="ignore"))),
+            })
+        else:
+            accepted.append(path)
+    return accepted, rejected, incoming
+
+
+def render_priority_sitemap(paths: list[Path]) -> str:
+    lastmod = content_lastmod()
+    rows = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    rows.extend(f"  <url><loc>{expected_url(path)}</loc><lastmod>{lastmod}</lastmod></url>" for path in paths)
+    rows.append("</urlset>")
+    return "\n".join(rows) + "\n"
+
+
+def render_news_archive(paths: list[Path]) -> str:
+    cards = []
+    for path in sorted(paths, reverse=True):
+        relative = path.relative_to(ROOT).as_posix()
+        title = page_title(path)
+        date_parts = path.parts[-4:-1]
+        published = "-".join(date_parts) if len(date_parts) == 3 else "Elephant briefing"
+        cards.append(
+            f'<a class="story" href="{esc(relative)}"><span>{esc(published)}</span>'
+            f'<strong>{esc(title)}</strong><em>Read the Elephant briefing →</em></a>'
+        )
+    body = "".join(cards)
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI News Archive | artificial.one</title><meta name="description" content="Browse every permanent Artificial.One AI news briefing, with practical context and Elephant commentary.">
+<link rel="canonical" href="{SITE}/news-archive.html"><style>*{{box-sizing:border-box}}body{{margin:0;background:#fff;color:#111827;font-family:Inter,system-ui,sans-serif}}header{{background:#090914;color:#fff}}nav,main{{max-width:1120px;margin:auto;padding:18px 24px}}nav{{display:flex;justify-content:space-between;align-items:center}}nav a{{color:#fff;text-decoration:none;font-weight:850}}nav span{{color:#9cff3b}}.hero{{padding:70px 0 36px}}h1{{font-size:clamp(2.8rem,7vw,5.8rem);line-height:.95;letter-spacing:-.06em;margin:0 0 20px}}.hero p{{max-width:720px;color:#5b6472;font-size:1.1rem;line-height:1.7}}.grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-bottom:80px}}.story{{display:flex;min-height:230px;flex-direction:column;padding:25px;border:1px solid #e5e7eb;border-radius:24px;background:linear-gradient(145deg,#fff,#f5f3ff);color:#111827;text-decoration:none;box-shadow:0 12px 34px rgba(15,23,42,.07);transition:.2s}}.story:hover{{transform:translateY(-5px);box-shadow:0 22px 48px rgba(76,29,149,.15)}}.story span{{color:#6d28d9;font-size:.75rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}}.story strong{{font-size:1.25rem;line-height:1.28;margin:20px 0}}.story em{{margin-top:auto;color:#5b21b6;font-style:normal;font-weight:850}}@media(max-width:850px){{.grid{{grid-template-columns:repeat(2,1fr)}}}}@media(max-width:560px){{.grid{{grid-template-columns:1fr}}}}</style></head>
+<body><header><nav><a href="index.html">artificial<span>.</span>one</a><a href="news.html">Latest AI news</a></nav></header><main><section class="hero"><p>THE ELEPHANT WIRE</p><h1>Every story,<br>kept useful.</h1><p>Permanent briefings on the AI developments worth understanding. Each page adds clear context, a practical takeaway and links to the decisions the story may affect.</p></section><section class="grid" aria-label="All permanent AI news briefings">{body}</section></main></body></html>'''
 
 
 def page_title(path: Path) -> str:
@@ -259,41 +398,63 @@ def _local_path(source: Path, href: str) -> str | None:
 
 def audit(paths: list[Path], virtual: dict[Path, str] | None = None, sitemap_text: str | None = None) -> dict[str, Any]:
     virtual = virtual or {}
-    incoming: Counter[str] = Counter()
-    all_pages = sorted({path for path in ROOT.rglob("*.html") if ".git" not in path.parts} | set(virtual))
-    for source in all_pages:
-        text = virtual.get(source) or source.read_text(encoding="utf-8", errors="ignore")
-        for href in HREF_RE.findall(text):
-            target = _local_path(source, href)
-            if target:
-                incoming[target] += 1
-    sitemap = sitemap_text if sitemap_text is not None else SITEMAP_PATH.read_text(encoding="utf-8", errors="ignore")
+    incoming = incoming_links(virtual)
+    sitemap = sitemap_text if sitemap_text is not None else PRIORITY_SITEMAP_PATH.read_text(encoding="utf-8", errors="ignore")
     issues: list[dict[str, str]] = []
     depths: Counter[str] = Counter()
     for path in paths:
         relative = path.relative_to(ROOT).as_posix()
         text = virtual.get(path) or path.read_text(encoding="utf-8", errors="ignore")
-        expected = f"{SITE}/{relative}"
+        expected = expected_url(path)
         canonical = CANONICAL_RE.search(text)
         if not canonical or canonical.group(1).rstrip("/") != expected.rstrip("/"):
             issues.append({"path": relative, "issue": "canonical"})
-        if re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex', text, re.I):
+        if NOINDEX_RE.search(text):
             issues.append({"path": relative, "issue": "noindex"})
-        if expected not in sitemap and path != HUB_PATH:
+        if expected not in sitemap:
             issues.append({"path": relative, "issue": "sitemap"})
         count = incoming[relative]
         depths["0" if count == 0 else "1" if count < 3 else "3+"] += 1
         if count == 0 and path != HUB_PATH:
             issues.append({"path": relative, "issue": "no_internal_link"})
     return {
-        "version": 1,
+        "version": 2,
         "updated_at": content_lastmod(),
-        "method": "static-commercial-indexability-audit",
+        "method": "quality-gated-google-priority-audit",
         "priority_pages": len(paths),
         "issues": issues,
         "incoming_link_distribution": dict(depths),
         "indexnow": {"key_location": f"{SITE}/{INDEXNOW_KEY}.txt", "submission_enabled": True},
-        "note": "This report covers static crawl signals. Google indexing verdicts remain private in the Search Console monitor.",
+        "note": "This report covers the deliberately limited Google priority set. Live indexing verdicts remain private in the Search Console monitor.",
+    }
+
+
+def priority_report(
+    candidates: list[Path], accepted: list[Path], rejected: list[dict[str, Any]], incoming: Counter[str],
+) -> dict[str, Any]:
+    reason_counts: Counter[str] = Counter()
+    for item in rejected:
+        reason_counts.update(str(reason).split(":", 1)[0] for reason in item["reasons"])
+    return {
+        "version": 1,
+        "updated_at": content_lastmod(),
+        "sitemap": "sitemap-priority.xml",
+        "candidates": len(candidates),
+        "included": len(accepted),
+        "excluded": len(rejected),
+        "included_paths": [path.relative_to(ROOT).as_posix() for path in accepted],
+        "excluded_pages": rejected,
+        "exclusion_reasons": dict(sorted(reason_counts.items())),
+        "incoming_link_distribution": {
+            "0": sum(incoming[path.relative_to(ROOT).as_posix()] == 0 for path in accepted),
+            "1-2": sum(0 < incoming[path.relative_to(ROOT).as_posix()] < 3 for path in accepted),
+            "3+": sum(incoming[path.relative_to(ROOT).as_posix()] >= 3 for path in accepted),
+        },
+        "policy": {
+            "included": "Curated hubs and substantive commercial, workflow and permanent news pages that pass the quality gate.",
+            "excluded": "Bulk legacy tool pages, thin deal templates, noindex pages and candidates lacking useful content or crawl signals.",
+            "google": "This priority sitemap is submitted to Search Console; inclusion is a request, not a guarantee of indexing.",
+        },
     }
 
 
@@ -377,26 +538,41 @@ def write_if_changed(path: Path, text: str) -> bool:
 
 
 def build(check: bool = False, submit: bool = False, state_path: Path = ROOT / ".indexnow" / "private-state.json") -> int:
-    pages = priority_pages()
-    priority = crawl_priority_paths(pages)
-    hub = render_hub(pages, priority)
-    virtual = {HUB_PATH: hub}
-    pages_with_hub = [*pages, HUB_PATH]
+    library_pages = priority_pages()
+    priority = crawl_priority_paths(library_pages)
+    hub = render_hub(library_pages, priority)
+    news_pages = sorted((ROOT / "news").rglob("*.html"))
+    news_archive = render_news_archive(news_pages)
+    virtual = {HUB_PATH: hub, NEWS_ARCHIVE_PATH: news_archive}
+    candidates = sorted(set(indexing_candidates()) | set(virtual))
+    accepted, rejected, incoming = select_priority_pages(candidates, virtual)
+    priority_sitemap = render_priority_sitemap(accepted)
     sitemap = SITEMAP_PATH.read_text(encoding="utf-8")
     expected_sitemap = update_sitemap(sitemap)
-    report = json.dumps(audit(pages_with_hub, virtual, expected_sitemap), indent=2, ensure_ascii=False, sort_keys=True) + "\n"
-    stale = (not HUB_PATH.exists() or HUB_PATH.read_text(encoding="utf-8") != hub or not REPORT_PATH.exists() or REPORT_PATH.read_text(encoding="utf-8") != report or sitemap != expected_sitemap)
+    report = json.dumps(audit(accepted, virtual, priority_sitemap), indent=2, ensure_ascii=False, sort_keys=True) + "\n"
+    selection_report = json.dumps(priority_report(candidates, accepted, rejected, incoming), indent=2, ensure_ascii=False, sort_keys=True) + "\n"
+    stale = (
+        not HUB_PATH.exists() or HUB_PATH.read_text(encoding="utf-8") != hub
+        or not NEWS_ARCHIVE_PATH.exists() or NEWS_ARCHIVE_PATH.read_text(encoding="utf-8") != news_archive
+        or not REPORT_PATH.exists() or REPORT_PATH.read_text(encoding="utf-8") != report
+        or not PRIORITY_REPORT_PATH.exists() or PRIORITY_REPORT_PATH.read_text(encoding="utf-8") != selection_report
+        or not PRIORITY_SITEMAP_PATH.exists() or PRIORITY_SITEMAP_PATH.read_text(encoding="utf-8") != priority_sitemap
+        or sitemap != expected_sitemap
+    )
     if check:
         if stale:
             print("Indexing recovery assets are stale.", file=sys.stderr)
             return 1
-        print(f"Indexing recovery assets are current ({len(pages_with_hub)} priority pages).")
+        print(f"Indexing recovery assets are current ({len(accepted)} Google-priority pages; {len(rejected)} excluded).")
         return 0
     write_if_changed(HUB_PATH, hub)
+    write_if_changed(NEWS_ARCHIVE_PATH, news_archive)
     write_if_changed(REPORT_PATH, report)
+    write_if_changed(PRIORITY_REPORT_PATH, selection_report)
+    write_if_changed(PRIORITY_SITEMAP_PATH, priority_sitemap)
     write_if_changed(SITEMAP_PATH, expected_sitemap)
     status = submit_indexnow(changed_urls(), state_path) if submit else "IndexNow not requested"
-    print(f"Audited {len(pages_with_hub)} priority pages; {status}.")
+    print(f"Published {len(accepted)} Google-priority pages; excluded {len(rejected)} candidates; {status}.")
     return 0
 
 

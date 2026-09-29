@@ -68,6 +68,29 @@ class GrowthExpansionTests(unittest.TestCase):
         self.assertIn("buyers-guides.html", updated)
         self.assertEqual(updated.count("indexing-recovery:start"), 1)
 
+    def test_google_candidates_exclude_bulk_legacy_catalogues(self):
+        candidates = {path.relative_to(indexing.ROOT).as_posix() for path in indexing.indexing_candidates()}
+        self.assertTrue(any(path.startswith("partner-offers/") for path in candidates))
+        self.assertTrue(any(path.startswith("news/") for path in candidates))
+        self.assertFalse(any(path.startswith("appsumo-guides/") for path in candidates))
+        self.assertFalse(any(path.startswith("tools/") for path in candidates))
+
+    def test_priority_sitemap_is_small_and_quality_gated(self):
+        candidates = indexing.indexing_candidates()
+        accepted, rejected, _incoming = indexing.select_priority_pages(candidates)
+        sitemap = indexing.render_priority_sitemap(accepted)
+        self.assertIn("partner-offers/foxit-pdf-software.html", sitemap)
+        self.assertNotIn("appsumo-guides/", sitemap)
+        self.assertNotIn("/tools/", sitemap)
+        self.assertLess(len(accepted), 250)
+        self.assertEqual(sitemap.count("<loc>"), len(accepted))
+        self.assertTrue(rejected or accepted)
+
+    def test_robots_advertises_google_priority_sitemap(self):
+        robots = (indexing.ROOT / "robots.txt").read_text(encoding="utf-8")
+        self.assertIn("Sitemap: https://artificial.one/sitemap-priority.xml", robots)
+        self.assertNotIn("Sitemap: https://artificial.one/sitemap.xml\n", robots)
+
     def test_index_issues_publish_paths_only_to_crawl_priority(self):
         public = {"version": 1, "experiments": {}, "crawl_priority": []}
         inspections = [

@@ -629,7 +629,7 @@ def render_search(search: dict[str, Any]) -> tuple[str, str]:
       <h2 style="font-size:22px;color:#211a35;margin:7px 0 5px">Can customers find our affiliate pages?</h2>
       <p style="font-size:13px;color:#6f6880;margin:0 0 16px">Results for {escape(str(period.get('start') or '?'))} &ndash; {escape(str(period.get('end') or '?'))}</p>
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
-        <td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#28644d">{indexed}/{affiliate_pages}</div><div style="font-size:12px;color:#706880;margin-top:6px">affiliate pages indexed &middot; {healthy_percent:.0f}%</div></div></td>
+<td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#28644d">{indexed}/{affiliate_pages}</div><div style="font-size:12px;color:#706880;margin-top:6px">priority affiliate pages indexed &middot; {healthy_percent:.0f}%</div></div></td>
         <td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#5540aa">{impressions}</div><div style="font-size:12px;color:#706880;margin-top:6px">search appearances</div></div></td>
         <td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#b45b3d">{clicks}</div><div style="font-size:12px;color:#706880;margin-top:6px">visits from Google</div></div></td>
       </tr></table>
@@ -641,7 +641,7 @@ def render_search(search: dict[str, Any]) -> tuple[str, str]:
     text = "\n".join([
         f"Period: {period.get('start')} to {period.get('end')}",
         f"Google clicks: {clicks}; search appearances: {impressions}; CTR: {ctr * 100:.2f}%; average position: {position:.1f}",
-        f"Affiliate pages indexed: {indexed}/{affiliate_pages}; pages to watch: {index_issues}",
+        f"Priority affiliate pages indexed: {indexed}/{affiliate_pages}; pages to watch: {index_issues}",
         f"Affiliate pages with Google impressions: {integer(commercial.get('pages_with_impressions'))}",
         issue_text,
     ])

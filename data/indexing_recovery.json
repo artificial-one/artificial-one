@@ -1,16 +1,16 @@
 {
   "incoming_link_distribution": {
-    "1": 45,
-    "3+": 62
+    "1": 73,
+    "3+": 65
   },
   "indexnow": {
     "key_location": "https://artificial.one/a10e20260915d74b93c2f18e7a45c901.txt",
     "submission_enabled": true
   },
   "issues": [],
-  "method": "static-commercial-indexability-audit",
-  "note": "This report covers static crawl signals. Google indexing verdicts remain private in the Search Console monitor.",
-  "priority_pages": 107,
+  "method": "quality-gated-google-priority-audit",
+  "note": "This report covers the deliberately limited Google priority set. Live indexing verdicts remain private in the Search Console monitor.",
+  "priority_pages": 138,
   "updated_at": "2026-09-28",
-  "version": 1
+  "version": 2
 }
