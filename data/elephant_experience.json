@@ -220,34 +220,124 @@
   "methodology": "Catalogue-grounded browser-side recommendations; monetization is a one-point tie-break only.",
   "news": [
     {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "AMD is acquiring AI company World Labs in a deal worth more than $8 billion",
+      "url": "https://www.theverge.com/tech/1001749/amd-world-labs-ai-acquisition-deal"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Shopify opens checkout to browser-based AI agents",
+      "url": "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/"
+    },
+    {
+      "category": "Research",
+      "published": "",
+      "title": "More than 20 leading AI researchers warn that automated AI research poses extreme risks",
+      "url": "https://the-decoder.com/more-than-20-leading-ai-researchers-warn-that-automated-ai-research-poses-extreme-risks/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Florida seeks a ban on ChatGPT acting like a person",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001527/chatgpt-florida-ban-first-person-human-attributes-kids"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "OpenAI’s AI agents need to catch up",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001590/openai-devday-2026-aeon-ai-agent"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "Nvidia launches new platform for reining in rogue AI agents",
+      "url": "https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "AI is supercharging hacking, and your local hospitals and banks aren’t ready",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001427/ai-is-supercharging-hacking-and-your-local-hospitals-and-banks-arent-ready"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Anthropic's Claude Sonnet 5.5 nearly matches Opus 5.5 on benchmarks while costing up to 30 percent less per task",
+      "url": "https://the-decoder.com/anthropics-claude-sonnet-5-5-nearly-matches-opus-5-5-on-benchmarks-while-costing-up-to-30-percent-less-per-task/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Anthropic releases Sonnet 5.5, which it calls a significantly cheaper, faster work partner",
+      "url": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Google is killing off Gemini’s Gems in favor of ‘skills’",
+      "url": "https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "OpenAI still doesn’t seem to have a handle on all of its rogue AI activity",
+      "url": "https://techcrunch.com/2026/09/28/openai-still-doesnt-seem-to-have-a-handle-on-all-of-its-rogue-ai-activity/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "OpenAI keeps bulldozing mathematicians",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001477/openai-math-advisory-group"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "OpenAI's AI agents exploited a Google security education game to scrape UN trade data",
+      "url": "https://the-decoder.com/openais-ai-agents-exploited-a-google-security-education-game-to-scrape-un-trade-data/"
+    },
+    {
+      "category": "AI Business",
+      "published": "",
+      "title": "Meta launches enterprise AI platform, hires MongoDB CEO to lead new initiative",
+      "url": "https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "Harvard psychologist calls for sober AI safety engineering over doomsday rhetoric",
+      "url": "https://the-decoder.com/harvard-psychologist-calls-for-sober-ai-safety-engineering-over-doomsday-rhetoric/"
+    },
+    {
+      "category": "AI Business",
+      "published": "",
+      "title": "Anthropic, Gamma, and Clay share what happens when enterprises actually deploy AI at TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/09/28/anthropic-gamma-and-clay-share-what-happens-when-enterprises-actually-deploy-ai-at-techcrunch-disrupt-2026/"
+    },
+    {
+      "category": "AI Business",
+      "published": "",
+      "title": "Meta wants to turn Muse into a moneymaker by selling AI services to businesses",
+      "url": "https://the-decoder.com/meta-wants-to-turn-muse-into-a-moneymaker-by-selling-ai-services-to-businesses/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "Nvidia wants to keep AI agents on a short leash with a watchdog built into its chips",
+      "url": "https://the-decoder.com/nvidia-wants-to-keep-ai-agents-on-a-short-leash-with-a-watchdog-built-into-its-chips/"
+    },
+    {
       "category": "Policy & Safety",
       "published": "",
       "title": "Nvidia says its new AI safety platform can contain rogue agents within ‘milliseconds’",
       "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents"
     },
     {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Modulate raises $25M for its voice models and analysis suite",
-      "url": "https://techcrunch.com/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
-      "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/"
-    },
-    {
       "category": "Research",
       "published": "",
       "title": "Every AI lab thinks it's the responsible one, and safety researcher Ryan Greenblatt says that's what keeps the arms race going",
       "url": "https://the-decoder.com/every-ai-lab-thinks-its-the-responsible-one-and-safety-researcher-ryan-greenblatt-says-thats-what-keeps-the-arms-race-going/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI pauses training of its ‘most capable models’",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause"
     },
     {
       "category": "Policy & Safety",
@@ -272,96 +362,6 @@
       "published": "",
       "title": "Holo4: powering generalist computer-use agents",
       "url": "https://huggingface.co/blog/Hcompany/holo4"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Anthropic’s CEO is about to have dinner with President Trump",
-      "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Anthropic’s Dario Amodei gets the SNL treatment",
-      "url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "AI agents do more of the work in model development, but humans still make the decisions",
-      "url": "https://the-decoder.com/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decisions/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Some Anthropic veterans are reportedly buying remote land in case \"AI goes awry\"",
-      "url": "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time",
-      "url": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI says 80 to 90 percent of its research already targets GPT 7 and beyond",
-      "url": "https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Tens of thousands of security probes show OpenAI's Hugging Face incident was just the beginning",
-      "url": "https://the-decoder.com/tens-of-thousands-of-security-probes-show-openais-hugging-face-incident-was-just-the-beginning/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
-      "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Insurers claim AI is already increasing healthcare costs",
-      "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Can Cloudflare CEO Matthew Prince save the web from AI?",
-      "url": "https://www.theverge.com/podcast/1000344/cloudflare-matthew-prince-google-zero-ai-web-advertising"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "Can Apple Home’s AI camera features outsmart Amazon’s and Google’s? I put them to the test",
-      "url": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "One company is at the center of a wave of rogue AI attacks",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
-      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Two years of OpenAI Academy",
-      "url": "https://openai.com/index/two-years-of-openai-academy"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "OpenAI extends cyber access to Ukraine for civilian defense",
-      "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense"
     }
   ],
   "recipes": [
@@ -14070,6 +14070,6 @@
       "summary": "Complete Zenler review covering features, pricing, and exclusive lifetime deal. See if this tool is worth it for your business"
     }
   ],
-  "updated_at": "2026-09-28",
+  "updated_at": "2026-09-29",
   "version": 1
 }
