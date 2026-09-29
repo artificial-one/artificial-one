@@ -1,7 +1,194 @@
 {
   "version": 1,
-  "updated_at": "2026-09-29T06:11:04.504240+00:00",
+  "updated_at": "2026-09-29T13:18:34.285570+00:00",
   "articles": [
+    {
+      "path": "news/2026/09/29/reco-raises-55m-as-ai-agent-security-startups-crowd-the-market.html",
+      "created_at": "2026-09-29T13:18:34.285570+00:00",
+      "source": {
+        "title": "Reco raises $55M as AI agent security startups crowd the market",
+        "url": "https://techcrunch.com/2026/09/29/reco-raises-55m-as-ai-agent-security-startups-crowd-the-market/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-09-29T12:30:00+00:00",
+        "display_date": "Sep 29, 2026",
+        "category": "Policy & Safety",
+        "description": "The round builds on a $30 million fundraise in February, taking the company's total funding to $140 million.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "AI Agent Security Startups Surge as Reco Raises $55M",
+        "summary": "Reco raises $55M in funding as AI agent security startups proliferate, addressing concerns over securing swarms of AI agents across networks.",
+        "facts": [
+          {
+            "statement": "Reco has raised $55 million in new funding.",
+            "evidence": "Reco raises $55M as AI agent security startups crowd the market"
+          },
+          {
+            "statement": "Reco's platform helps identify and secure AI agents across an organization.",
+            "evidence": "Reco’s platform found 21,000 agents the company didn’t know about"
+          },
+          {
+            "statement": "Security concerns around AI agent sprawl are growing among enterprises.",
+            "evidence": "CISOs worried about securing swarms of agents suddenly operating across networks"
+          }
+        ],
+        "why_it_matters": "The surge in AI agent security startups highlights a critical need for enterprise cybersecurity as companies deploy AI agents at scale. The market is responding to concerns over uncontrolled access and data exposure, with startups like Reco leading the charge in developing solutions to secure this new digital frontier.",
+        "elephant_take": "🐘 🦘 The AI agent security race is heating up, with companies racing to secure what's already out of control. Reco's $55M raise shows investors are betting on a market that's more about control than innovation.",
+        "caveat": "The market is crowded and the solutions vary widely, raising questions about which tools are actually effective in real-world scenarios.",
+        "who_should_care": [
+          "CISOs",
+          "Enterprise IT leaders",
+          "Investors",
+          "AI developers"
+        ],
+        "what_to_do": [
+          "Assess AI agent security needs",
+          "Evaluate vendor solutions for agent governance",
+          "Monitor for new security threats in the AI space",
+          "Stay informed on regulatory changes around AI use"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Reco%20raises%20%2455M%20as%20AI%20agent%20security%20startups%20crowd%20the%20market%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/09/29/anthropic-warns-of-catastrophic-ai-risks-in-its-own-ipo-filing.html",
+      "created_at": "2026-09-29T13:18:34.285570+00:00",
+      "source": {
+        "title": "Anthropic warns of ‘catastrophic’ AI risks in its own IPO filing",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1001838/anthropic-ipo-prospectus-ai-safety-threat",
+        "source": "The Verge AI",
+        "published_at": "2026-09-29T11:48:27+00:00",
+        "display_date": "Sep 29, 2026",
+        "category": "Models & LLMs",
+        "description": "As Anthropic gears up for its greatly anticipated public debut, a preview of the company's IPO filing reportedly details its mounting losses, leadership proposals to retain power, and how its AI development plans could \"further increase the risk that our models cause harm.\" These disclosures come as Anthropic eyes a $2 trillion valuation, more than […]",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Anthropic's IPO filing highlights AI risks and financial challenges",
+        "summary": "Anthropic's IPO filing reveals concerns about AI safety, financial losses, and a $2 trillion valuation despite mounting costs and revenue limitations.",
+        "facts": [
+          {
+            "statement": "Anthropic's IPO filing warns of catastrophic AI risks.",
+            "evidence": "Anthropic warns of ‘catastrophic’ AI risks in its own IPO filing"
+          },
+          {
+            "statement": "Anthropic reports significant financial losses despite revenue growth.",
+            "evidence": "reported a net loss of $42 billion the same"
+          },
+          {
+            "statement": "Anthropic's AI development plans could increase harm risks.",
+            "evidence": "how its ai development plans could \"further increase the risk that our models cause"
+          }
+        ],
+        "why_it_matters": "Anthropic's IPO filing highlights a stark contrast between its high valuation and financial struggles, while also raising alarms about the potential dangers of advanced AI. The company's warnings about AI risks are particularly concerning given its own claims about AI consciousness.",
+        "elephant_take": "🐘 鼋 Anthropic is trying to sell a $2 trillion AI dream while warning about catastrophic risks—this is the paradox of progress. Their concerns about AI harm are troubling, especially when they claim their models are conscious.",
+        "caveat": "The company's financial situation and AI safety claims are not independently verified.",
+        "who_should_care": [
+          "AI investors",
+          "Regulators",
+          "Tech analysts"
+        ],
+        "what_to_do": [
+          "Review Anthropic's IPO filing for more details",
+          "Monitor AI safety research developments",
+          "Assess the financial risks of large-scale AI ventures"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20warns%20of%20%E2%80%98catastrophic%E2%80%99%20AI%20risks%20in%20its%20own%20IPO%20filing%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/09/29/anthropic-s-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks.html",
+      "created_at": "2026-09-29T13:18:34.285570+00:00",
+      "source": {
+        "title": "Anthropic's IPO filing shows soaring revenue, mounting costs, and \"existential\" risks",
+        "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+        "source": "The Decoder",
+        "published_at": "2026-09-29T10:21:36+00:00",
+        "display_date": "Sep 29, 2026",
+        "category": "AI Business",
+        "description": "Anthropic warns in its own IPO prospectus that its AI technology could pose \"existential risks to humanity.\" Revenue grew twelvefold in 2025 to $4.6 billion, but the operating loss widened to $8.06 billion. Backers are aiming for a valuation above $2 trillion, and the IPO is expected to set the bar for the entire AI industry. The article Anthropic's IPO filing shows soaring revenue, mounting costs, and \"existential\" risks appeared first on The Decoder .",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Anthropic's IPO filing reveals revenue growth and existential risks",
+        "summary": "Anthropic's IPO filing highlights a twelvefold revenue increase and significant operating losses, while warning of potential existential risks from AI technology.",
+        "facts": [
+          {
+            "statement": "Anthropic's revenue grew twelvefold in 2025 to nearly $4.6 billion.",
+            "evidence": "Revenue grew twelvefold in 2025 to nearly $4.6 billion"
+          },
+          {
+            "statement": "Anthropic warns of existential risks from its AI technology.",
+            "evidence": "anthropic has formally warned potential investors that its own technology could pose \"existential risks to"
+          }
+        ],
+        "why_it_matters": "The IPO filing reveals the financial and ethical challenges facing AI companies, as they balance rapid growth with potential societal risks. The valuation benchmarks set by Anthropic could influence the entire AI industry's future.",
+        "elephant_take": "🐘 鼋 The existential risks warning is a bold move, but the numbers show that Anthropic is balancing a high-stakes bet on AI with a heavy financial burden. It's a reminder that the race for AI dominance comes at a cost.",
+        "caveat": "The valuation and revenue figures are subject to change and may not reflect long-term sustainability.",
+        "who_should_care": [
+          "AI investors",
+          "Tech industry analysts",
+          "Regulators"
+        ],
+        "what_to_do": [
+          "Monitor AI company valuations",
+          "Assess risks of emerging technologies",
+          "Stay informed on regulatory developments"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%27s%20IPO%20filing%20shows%20soaring%20revenue%2C%20mounting%20costs%2C%20and%20%22existential%22%20risks%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/09/29/anthropic-s-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-e.html",
       "created_at": "2026-09-29T06:11:04.504240+00:00",
@@ -1650,6 +1837,24 @@
     }
   ],
   "last_failures": [
+    {
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-09-29T13:18:34.285570+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/29/openai-apologizes-to-australia-after-its-ai-agents-breached-government-sites/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-09-29T13:18:34.285570+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/policy/1001767/khanna-ai-safety-china-treaty",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-09-29T13:18:34.285570+00:00",
+      "pipeline_version": "2"
+    },
     {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1001427/ai-is-supercharging-hacking-and-your-local-hospitals-and-banks-arent-ready",
       "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
