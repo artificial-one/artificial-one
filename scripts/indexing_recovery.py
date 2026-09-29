@@ -54,12 +54,13 @@ CURATED_CORE = (
     "comparison-lab.html",
     "workflow-recipes.html",
     "partner-offers.html",
+    "affiliate-categories.html",
     "decision-tools.html",
     "offer-updates.html",
     "about.html",
     "partners.html",
 )
-PRIORITY_FOLDERS = ("partner-offers", "appsumo-guides", "search-intent", "calculators", "workflow-recipes", "news")
+PRIORITY_FOLDERS = ("partner-offers", "appsumo-guides", "affiliate-categories", "search-intent", "calculators", "workflow-recipes", "news")
 
 
 def priority_pages() -> list[Path]:
@@ -78,9 +79,10 @@ def priority_pages() -> list[Path]:
         ROOT / "offer-updates.html",
         ROOT / "partner-offers.html",
         ROOT / "appsumo-ai-tools.html",
+        ROOT / "affiliate-categories.html",
         ROOT / "sponsor.html",
     ]
-    for folder in ("partner-offers", "search-intent", "calculators"):
+    for folder in ("partner-offers", "appsumo-guides", "affiliate-categories", "search-intent", "calculators"):
         paths.extend(sorted((ROOT / folder).glob("*.html")))
     return [path for path in paths if path.exists()]
 

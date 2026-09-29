@@ -262,7 +262,7 @@ def shell(
   <meta name="twitter:card" content="summary_large_image">
   <meta name="affiliate-event-endpoint" content="/api/affiliate-event">
   <link rel="alternate" type="application/rss+xml" title="artificial.one AI tool guides" href="{prefix}feed.xml">
-  {json_ld(structured_data) if structured_data else ""}
+{json_ld(structured_data) if structured_data else ""}
   <link rel="preload" href="{prefix}images/social/artificial-one-logo.png" as="image">
   <link rel="stylesheet" href="{prefix}assets/decision-engine.css?v=20260928b">
 </head>
@@ -274,6 +274,7 @@ def shell(
       <a class="brand" href="{prefix}index.html"><img src="{prefix}images/social/artificial-one-logo.png" alt="Artificial.One elephant"><span>artificial<span class="brand-dot">.</span>one</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button>
       <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="{prefix}affiliate-categories.html">Browse software</a>
         <a class="flagship-nav-cta" href="{prefix}index.html#build">Build my AI setup</a>
       </nav>
     </div>
@@ -539,15 +540,14 @@ def search_links_for(offer: dict[str, Any], offers: list[dict[str, Any]]) -> lis
         item for item in offers
         if item.get("id") != offer.get("id") and _intent_cluster(str(item.get("category", ""))) == _intent_cluster(str(offer.get("category", "")))
     ]
-    if offer in offers[:8] and cluster_alternatives:
+    if cluster_alternatives:
         links.append((f"../search-intent/{offer['slug']}-alternatives.html", f"Best {offer['name']} alternatives"))
-    if offer in offers[:6]:
-        links.append((f"../search-intent/{offer['slug']}-pricing.html", f"{offer['name']} pricing guide"))
-        use_cases = [str(item) for item in offer.get("use_cases", []) if str(item).strip()]
-        if use_cases:
-            links.append((f"../search-intent/{offer['slug']}-for-{_search_slug(use_cases[0])}.html", f"{offer['name']} for {use_cases[0]}"))
-        if cluster_alternatives:
-            links.append((f"../search-intent/{offer['slug']}-vs-{cluster_alternatives[0]['slug']}.html", f"{offer['name']} vs {cluster_alternatives[0]['name']}"))
+    links.append((f"../search-intent/{offer['slug']}-pricing.html", f"{offer['name']} pricing guide"))
+    use_cases = [str(item) for item in offer.get("use_cases", []) if str(item).strip()]
+    if use_cases:
+        links.append((f"../search-intent/{offer['slug']}-for-{_search_slug(use_cases[0])}.html", f"{offer['name']} for {use_cases[0]}"))
+    if cluster_alternatives:
+        links.append((f"../search-intent/{offer['slug']}-vs-{cluster_alternatives[0]['slug']}.html", f"{offer['name']} vs {cluster_alternatives[0]['name']}"))
     members = [item for item in offers if item.get("category") == offer.get("category")]
     if len(members) >= 2:
         category_slug = _search_slug(str(offer["category"]))
@@ -555,6 +555,12 @@ def search_links_for(offer: dict[str, Any], offers: list[dict[str, Any]]) -> lis
         left, right = members[:2]
         if offer in (left, right):
             links.append((f"../search-intent/{left['slug']}-vs-{right['slug']}.html", f"{left['name']} vs {right['name']}"))
+    try:
+        from scripts.affiliate_catalog import cluster_for
+    except ModuleNotFoundError:
+        from affiliate_catalog import cluster_for  # type: ignore
+    cluster_slug, cluster_label = cluster_for(offer.get("category"), offer.get("best_for"), offer.get("summary"))
+    links.append((f"../affiliate-categories/{cluster_slug}.html", f"Browse all {cluster_label} tools"))
     return links
 
 

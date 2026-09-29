@@ -1,154 +1,21 @@
 {
-  "candidates": 587,
-  "excluded": 20,
-  "excluded_pages": [
-    {
-      "path": "appsumo-guides/biq.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 332
-    },
-    {
-      "path": "appsumo-guides/brain-pod-ai-writer.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 342
-    },
-    {
-      "path": "appsumo-guides/bramework.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 327
-    },
-    {
-      "path": "appsumo-guides/cheat-layer.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 326
-    },
-    {
-      "path": "appsumo-guides/flotiq.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 321
-    },
-    {
-      "path": "appsumo-guides/getshow.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 321
-    },
-    {
-      "path": "appsumo-guides/hopscotch.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 323
-    },
-    {
-      "path": "appsumo-guides/instaminutes.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 319
-    },
-    {
-      "path": "appsumo-guides/lebesgue.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 321
-    },
-    {
-      "path": "appsumo-guides/luminar-ai-elements.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 317
-    },
-    {
-      "path": "appsumo-guides/missinglettr.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 325
-    },
-    {
-      "path": "appsumo-guides/neuronwriter.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 328
-    },
-    {
-      "path": "appsumo-guides/pixelied.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 328
-    },
-    {
-      "path": "appsumo-guides/robinize.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 326
-    },
-    {
-      "path": "appsumo-guides/subpage.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 328
-    },
-    {
-      "path": "appsumo-guides/supercopy-ai.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 327
-    },
-    {
-      "path": "appsumo-guides/supermachine.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 346
-    },
-    {
-      "path": "appsumo-guides/support-board.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 326
-    },
-    {
-      "path": "appsumo-guides/synthesys.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 321
-    },
-    {
-      "path": "appsumo-guides/vista-social.html",
-      "reasons": [
-        "no_internal_link"
-      ],
-      "words": 329
-    }
-  ],
-  "exclusion_reasons": {
-    "no_internal_link": 20
-  },
-  "included": 567,
+  "candidates": 597,
+  "excluded": 0,
+  "excluded_pages": [],
+  "exclusion_reasons": {},
+  "included": 597,
   "included_paths": [
     "about.html",
+    "affiliate-categories/audio-voice.html",
+    "affiliate-categories/automation-productivity.html",
+    "affiliate-categories/business-operations.html",
+    "affiliate-categories/content-writing.html",
+    "affiliate-categories/data-development.html",
+    "affiliate-categories/education-training.html",
+    "affiliate-categories/marketing-sales.html",
+    "affiliate-categories/seo-visibility.html",
+    "affiliate-categories/video-creative.html",
+    "affiliate-categories.html",
     "ai-stack-builder.html",
     "ai-stack-studio.html",
     "ai-tool-finder.html",
@@ -181,6 +48,7 @@
     "appsumo-guides/bhuman.html",
     "appsumo-guides/bigvu.html",
     "appsumo-guides/bingbangai.html",
+    "appsumo-guides/biq.html",
     "appsumo-guides/blitsai.html",
     "appsumo-guides/blixo.html",
     "appsumo-guides/blogassistant.html",
@@ -189,6 +57,8 @@
     "appsumo-guides/booltool.html",
     "appsumo-guides/boost.html",
     "appsumo-guides/bouncecast.html",
+    "appsumo-guides/brain-pod-ai-writer.html",
+    "appsumo-guides/bramework.html",
     "appsumo-guides/brandlens.html",
     "appsumo-guides/brandvox.html",
     "appsumo-guides/breakcold.html",
@@ -202,6 +72,7 @@
     "appsumo-guides/centered.html",
     "appsumo-guides/chatabc.html",
     "appsumo-guides/chatfluxio.html",
+    "appsumo-guides/cheat-layer.html",
     "appsumo-guides/chopcast.html",
     "appsumo-guides/circleboom-publish.html",
     "appsumo-guides/clay.html",
@@ -230,9 +101,11 @@
     "appsumo-guides/exposure.html",
     "appsumo-guides/feedblitz.html",
     "appsumo-guides/feederloop.html",
+    "appsumo-guides/flotiq.html",
     "appsumo-guides/formaloo.html",
     "appsumo-guides/fynzo-survey.html",
     "appsumo-guides/getgenie.html",
+    "appsumo-guides/getshow.html",
     "appsumo-guides/gozen-forms.html",
     "appsumo-guides/growmatik.html",
     "appsumo-guides/happyscribe.html",
@@ -240,6 +113,7 @@
     "appsumo-guides/hexospark.html",
     "appsumo-guides/hippovideo.html",
     "appsumo-guides/hollyfy.html",
+    "appsumo-guides/hopscotch.html",
     "appsumo-guides/how-to-sell-appsumo-product.html",
     "appsumo-guides/hypi.html",
     "appsumo-guides/icreate.html",
@@ -251,6 +125,7 @@
     "appsumo-guides/inboxpro.html",
     "appsumo-guides/influencersoft.html",
     "appsumo-guides/ingimage.html",
+    "appsumo-guides/instaminutes.html",
     "appsumo-guides/interacty.html",
     "appsumo-guides/juice-ai.html",
     "appsumo-guides/justreview.html",
@@ -265,12 +140,14 @@
     "appsumo-guides/kure.html",
     "appsumo-guides/laxis.html",
     "appsumo-guides/leadspot.html",
+    "appsumo-guides/lebesgue.html",
     "appsumo-guides/lets-connect.html",
     "appsumo-guides/linguix-turbo.html",
     "appsumo-guides/linguix.html",
     "appsumo-guides/live2social.html",
     "appsumo-guides/livewebinar.html",
     "appsumo-guides/louddoc.html",
+    "appsumo-guides/luminar-ai-elements.html",
     "appsumo-guides/luna.html",
     "appsumo-guides/marbleflows.html",
     "appsumo-guides/mark-copy-ai.html",
@@ -282,10 +159,12 @@
     "appsumo-guides/meettrics.html",
     "appsumo-guides/mieuxai.html",
     "appsumo-guides/million-dollar-email-templates-20.html",
+    "appsumo-guides/missinglettr.html",
     "appsumo-guides/mobiroller.html",
     "appsumo-guides/mojoauth.html",
     "appsumo-guides/mysignature.html",
     "appsumo-guides/nami.html",
+    "appsumo-guides/neuronwriter.html",
     "appsumo-guides/nexmind.html",
     "appsumo-guides/nolimit.html",
     "appsumo-guides/notetracks-pro.html",
@@ -304,6 +183,7 @@
     "appsumo-guides/persona-by-delve-ai.html",
     "appsumo-guides/pinchat.html",
     "appsumo-guides/pipio.html",
+    "appsumo-guides/pixelied.html",
     "appsumo-guides/poised.html",
     "appsumo-guides/popup-hero.html",
     "appsumo-guides/potion.html",
@@ -314,6 +194,7 @@
     "appsumo-guides/quoterules.html",
     "appsumo-guides/qwil-messenger.html",
     "appsumo-guides/reachoutai.html",
+    "appsumo-guides/robinize.html",
     "appsumo-guides/salesrobot.html",
     "appsumo-guides/schedulingkit.html",
     "appsumo-guides/scopa-shoppable-product-tagging.html",
@@ -345,9 +226,14 @@
     "appsumo-guides/sticker-mule-custom-t-shirts.html",
     "appsumo-guides/stori.html",
     "appsumo-guides/storydoc.html",
+    "appsumo-guides/subpage.html",
     "appsumo-guides/supapass-premium-website-builder.html",
     "appsumo-guides/superbuzz.html",
+    "appsumo-guides/supercopy-ai.html",
+    "appsumo-guides/supermachine.html",
+    "appsumo-guides/support-board.html",
     "appsumo-guides/swish.html",
+    "appsumo-guides/synthesys.html",
     "appsumo-guides/taskade.html",
     "appsumo-guides/testimonial-hunt.html",
     "appsumo-guides/textmetrics.html",
@@ -365,6 +251,7 @@
     "appsumo-guides/vidpopup.html",
     "appsumo-guides/vidpowr.html",
     "appsumo-guides/viloud.html",
+    "appsumo-guides/vista-social.html",
     "appsumo-guides/voila.html",
     "appsumo-guides/voiser.html",
     "appsumo-guides/voxpopme.html",
@@ -718,8 +605,8 @@
   ],
   "incoming_link_distribution": {
     "0": 0,
-    "1-2": 497,
-    "3+": 70
+    "1-2": 301,
+    "3+": 296
   },
   "policy": {
     "excluded": "Bulk legacy tool pages, thin deal templates, noindex pages and candidates lacking useful content or crawl signals.",

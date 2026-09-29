@@ -19,12 +19,14 @@ import re
 from typing import Any
 
 try:
+    from scripts.affiliate_catalog import monetized_tools
     from scripts.partnerstack_cloud_monitor import (
         PartnerStackError,
         fetch_affiliate_events,
         fetch_all,
     )
 except ModuleNotFoundError:  # Direct execution: python scripts/optimize_revenue.py
+    from affiliate_catalog import monetized_tools  # type: ignore
     from partnerstack_cloud_monitor import (  # type: ignore
         PartnerStackError,
         fetch_affiliate_events,
@@ -44,6 +46,23 @@ def _slug(value: Any) -> str:
 
 
 def published_offers(path: Path = OFFERS_PATH) -> list[dict[str, Any]]:
+    if path == OFFERS_PATH:
+        tools = monetized_tools()
+        if tools:
+            reviewed = json.loads(OFFERS_PATH.read_text(encoding="utf-8"))
+            featured_names = {
+                _slug(item.get("name"))
+                for item in reviewed.get("offers", [])
+                if isinstance(item, dict) and item.get("status") == "published" and item.get("featured")
+            }
+            return [
+                {
+                    "id": str(item["offer_id"]),
+                    "name": str(item.get("name") or item["offer_id"]),
+                    "featured": _slug(item.get("name")) in featured_names,
+                }
+                for item in tools
+            ]
     data = json.loads(path.read_text(encoding="utf-8"))
     return [
         item for item in data.get("offers", [])

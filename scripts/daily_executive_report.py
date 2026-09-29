@@ -22,6 +22,11 @@ from urllib.parse import quote
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
+try:
+    from scripts.affiliate_catalog import monetized_tools
+except ModuleNotFoundError:
+    from affiliate_catalog import monetized_tools  # type: ignore
+
 
 ROOT = Path(__file__).resolve().parents[1]
 PRAGUE = ZoneInfo("Europe/Prague")
@@ -491,7 +496,9 @@ def report_model(
     impact_revenue = money_map(impact.get("actions", {}).get("revenue", {}))
     impact_commission = money_map(impact.get("actions", {}).get("commissions", {}))
     summary = reconciliation.get("summary", {})
-    published = live_affiliate_destinations(partner_offers, appsumo)
+    unique_destinations = live_affiliate_destinations(partner_offers, appsumo)
+    monetized = monetized_tools(root / "data" / "tool_intelligence.json")
+    published = len(monetized) or unique_destinations
     actions = owner_actions(reconciliation, opportunities, marketplace)
     work_queue = system_work(reconciliation, opportunities)
     report_time = report_time or datetime.combine(report_date, datetime.max.time(), tzinfo=PRAGUE)
@@ -504,6 +511,7 @@ def report_model(
         "date": report_date,
         "activity": activity,
         "published_offers": published,
+        "unique_affiliate_destinations": unique_destinations,
         "visits": integer(visits.get("total")),
         "visit_window_days": integer(visits.get("window_days")) or 28,
         "clicks": integer(clicks.get("total")),
@@ -548,7 +556,7 @@ def management_summary(model: dict[str, Any]) -> str:
         if action_count else " Nothing needs your attention today."
     )
     return (
-        f"Today: {completed}. The site has {model['published_offers']} live partner destinations and recorded "
+        f"Today: {completed}. The site has {model['published_offers']} product guides with active affiliate links and recorded "
         f"{model['clicks']} affiliate clicks in the last {model.get('click_window_days', 28)} days."
         f"{action_note}"
     )
@@ -728,6 +736,21 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         model.get("social") or {}, model.get("social_comments") or {},
     )
     search_html, search_text = render_search(model.get("search") or {})
+    performance_block = (model.get("search") or {}).get("performance") or {}
+    search_performance = performance_block.get("current") or performance_block
+    journey_stages = (
+        ("Search appearances", integer(search_performance.get("impressions")), "#5540aa"),
+        ("Visits from Google", integer(search_performance.get("clicks")), "#5540aa"),
+        (f"Website visits · {model.get('visit_window_days', 28)}d", model["visits"], "#28644d"),
+        (f"Affiliate clicks · {model.get('click_window_days', 28)}d", model["clicks"], "#28644d"),
+        ("Referred sign-ups", model["signups"], "#b45b3d"),
+        ("Paying customers", model["paying_customers"], "#b45b3d"),
+    )
+    journey_cells = [
+        f'<td class="journey-cell" width="33%" align="center" style="padding:12px 7px;border:1px solid #e5deec"><div style="font-size:24px;font-weight:900;color:{color}">{value}</div><div style="font-size:11px;color:#706880;margin-top:5px">{escape(label)}</div></td>'
+        for label, value, color in journey_stages
+    ]
+    journey_html = "".join(f"<tr>{''.join(journey_cells[index:index + 3])}</tr>" for index in range(0, len(journey_cells), 3))
     highlights = model["activity"]["highlights"]
     news_pages = model.get("new_news_pages") or []
     if news_pages:
@@ -847,13 +870,9 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
 </td></tr>
 <tr><td class="section-pad" style="padding:14px 28px"><div style="background:#f8f5fc;border:1px solid #ebe4f2;border-radius:22px;padding:23px">
   <div style="font-size:11px;font-weight:900;letter-spacing:1.2px;color:#7151bd;text-transform:uppercase">Revenue journey</div>
-  <h2 style="font-size:22px;color:#211a35;margin:7px 0 16px">From choice to customer</h2>
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
-    <td class="journey-cell" width="25%" align="center" style="padding:8px"><div style="font-size:25px;font-weight:900;color:#5540aa">{model['published_offers']}</div><div style="font-size:11px;color:#706880;margin-top:5px">live partner destinations</div></td>
-    <td class="journey-cell" width="25%" align="center" style="padding:8px;border-left:1px solid #e5deec"><div style="font-size:25px;font-weight:900;color:#5540aa">{model['signups']}</div><div style="font-size:11px;color:#706880;margin-top:5px">referred sign-ups</div></td>
-    <td class="journey-cell" width="25%" align="center" style="padding:8px;border-left:1px solid #e5deec"><div style="font-size:25px;font-weight:900;color:#28644d">{model['paying_customers']}</div><div style="font-size:11px;color:#706880;margin-top:5px">paying customers</div></td>
-    <td class="journey-cell" width="25%" align="center" style="padding:8px;border-left:1px solid #e5deec"><div style="font-size:25px;font-weight:900;color:#b45b3d">{model['impact_actions'] + model.get('partnerstack_transactions', 0)}</div><div style="font-size:11px;color:#706880;margin-top:5px">tracked leads or sales</div></td>
-  </tr></table>
+  <h2 style="font-size:22px;color:#211a35;margin:7px 0 7px">From Google search to paying customer</h2>
+  <p style="font-size:12px;color:#706880;margin:0 0 14px">Each step shows exactly where growth is moving—and where visitors currently drop out.</p>
+  <table role="presentation" width="100%" cellspacing="6" cellpadding="0">{journey_html}</table>
 </div></td></tr>
 {wins_html}
 {news_section}
@@ -873,7 +892,10 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
         f"Affiliate link clicks (last {model.get('click_window_days', 28)} days): {model['clicks']}",
         f"New permanent Elephant news pages today: {len(model.get('new_news_pages') or [])}",
         f"Permanent news library: {model.get('permanent_news_pages', 0)} pages",
-        f"Live partner destinations: {model['published_offers']}",
+        f"Product guides with active affiliate links: {model['published_offers']}",
+        f"Unique affiliate destinations: {model.get('unique_affiliate_destinations', model['published_offers'])}",
+        f"Google search appearances: {integer(search_performance.get('impressions'))}",
+        f"Visits from Google: {integer(search_performance.get('clicks'))}",
         f"Referred sign-ups: {model['signups']}",
         f"Paying customers: {model['paying_customers']}",
         f"Tracked leads or sales: {model['impact_actions'] + model.get('partnerstack_transactions', 0)}", "",
