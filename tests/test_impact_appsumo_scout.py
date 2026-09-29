@@ -46,9 +46,12 @@ class ImpactAppSumoScoutTests(unittest.TestCase):
         self.assertEqual(offers[0]["tracking_url"], "https://appsumo.8odi.net/newlink")
 
     def test_generated_guide_is_disclosed_and_tracked(self):
-        offer = {"id": "impact-ad-1", "name": "Example AI", "slug": "example-ai", "description": "AI workflow software.", "category": "Business software", "tracking_url": "https://appsumo.8odi.net/example", "editorial_url": "appsumo-guides/example-ai.html"}
+        offer = {"id": "impact-ad-1", "name": "Example AI", "slug": "example-ai", "description": "AI workflow software.", "category": "Business software", "tracking_url": "https://appsumo.8odi.net/example", "product_url": "https://appsumo.com/products/example-ai/", "verified_at": "2026-09-29", "editorial_url": "appsumo-guides/example-ai.html"}
         page = scout.render_guide(offer)
-        self.assertIn("Source-based overview", page)
+        self.assertIn("source-based buying guide", page)
+        self.assertIn("A useful first test", page)
+        self.assertIn("Questions to answer before buying", page)
+        self.assertGreaterEqual(len(scout.re.findall(r"[A-Za-z0-9][A-Za-z0-9'’-]*", scout.re.sub(r"<[^>]+>", " ", page))), 180)
         self.assertIn('rel="nofollow sponsored noopener"', page)
         self.assertIn('data-affiliate-network="impact"', page)
         with tempfile.TemporaryDirectory() as folder:

@@ -46,10 +46,6 @@ SITEMAP_PATH = ROOT / "sitemap.xml"
 SEARCH_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
 SITEMAP_START = "  <!-- search-revenue:start -->"
 SITEMAP_END = "  <!-- search-revenue:end -->"
-MAX_ALTERNATIVE_PAGES = 8
-MAX_COMPARISON_PAGES = 8
-COLD_START_CLUSTER_SIZE = 8
-VALUE_CALCULATOR_COUNT = 8
 
 
 def intent_cluster(category: str) -> str:
@@ -213,7 +209,10 @@ def render_value_calculator(offer: dict[str, Any]) -> str:
 def route_catalog(offers: list[dict[str, Any]]) -> dict[str, Any]:
     stopwords = {"and", "for", "the", "with", "from", "into", "that", "this", "your", "teams", "tool", "tools", "software", "current", "workflow"}
     routes = []
-    for offer in offers[:COLD_START_CLUSTER_SIZE]:
+    # Every reviewed commercial entity is routable. Search demand still affects
+    # ordering, but it must never make the rest of the approved catalogue
+    # undiscoverable to the Elephant or other internal recommendation surfaces.
+    for offer in offers:
         source = " ".join([str(offer["name"]), str(offer["category"]), str(offer["best_for"]), *map(str, offer.get("use_cases", []))])
         words = [word for word in re.findall(r"[a-z0-9]+", source.casefold()) if len(word) >= 4 and word not in stopwords]
         keywords = list(dict.fromkeys(words))[:18]
@@ -274,7 +273,10 @@ def planned_pages(offers: list[dict[str, Any]]) -> dict[Path, str]:
     for offer in offers:
         by_category[str(offer["category"])].append(offer)
 
-    for primary in offers[:MAX_ALTERNATIVE_PAGES]:
+    # Page families are governed by the data required to make them useful, not
+    # by a fixed publication quota. This lets a newly approved, fully reviewed
+    # offer receive complete search coverage in the same automation run.
+    for primary in offers:
         primary_cluster = intent_cluster(str(primary["category"]))
         alternatives = [
             item for item in offers
@@ -283,35 +285,34 @@ def planned_pages(offers: list[dict[str, Any]]) -> dict[Path, str]:
         if alternatives:
             pages[OUTPUT_DIR / f"{primary['slug']}-alternatives.html"] = render_alternatives(primary, alternatives[:4])
 
-    # Cold-start clusters give the highest-priority offers complete commercial
-    # coverage before Search Console has accumulated enough impressions.
-    for primary in offers[:COLD_START_CLUSTER_SIZE]:
-        pages[OUTPUT_DIR / f"{primary['slug']}-pricing.html"] = render_pricing(primary)
+    for primary in offers:
+        if str(primary.get("pricing_note") or "").strip():
+            pages[OUTPUT_DIR / f"{primary['slug']}-pricing.html"] = render_pricing(primary)
         use_cases = [str(item) for item in primary.get("use_cases", []) if str(item).strip()]
         alternatives = [
             item for item in offers
             if item["id"] != primary["id"] and intent_cluster(str(item["category"])) == intent_cluster(str(primary["category"]))
         ]
-        if use_cases:
-            use_case = use_cases[0]
+        for use_case in use_cases:
             pages[OUTPUT_DIR / f"{primary['slug']}-for-{slugify(use_case)}.html"] = render_demand_use_case(primary, use_case, alternatives)
         if alternatives:
             competitor = alternatives[0]
+            # Direction is meaningful: "A vs B" starts from a different buyer
+            # question than "B vs A". Keeping both also preserves established
+            # URLs when search priority changes which product leads a cluster.
             pages[OUTPUT_DIR / f"{primary['slug']}-vs-{competitor['slug']}.html"] = render_comparison(primary, competitor)
 
-    for primary in offers[:VALUE_CALCULATOR_COUNT]:
-        pages[ROOT / "calculators" / f"{primary['slug']}-value-calculator.html"] = render_value_calculator(primary)
+    for primary in offers:
+        if str(primary.get("pricing_note") or "").strip() and primary.get("use_cases"):
+            pages[ROOT / "calculators" / f"{primary['slug']}-value-calculator.html"] = render_value_calculator(primary)
 
-    comparisons = 0
     for category, members in sorted(by_category.items()):
         if len(members) < 2:
             continue
         category_slug = slugify(category)
         pages[OUTPUT_DIR / f"best-{category_slug}-tools.html"] = render_use_case(category, members)
-        if comparisons < MAX_COMPARISON_PAGES:
-            left, right = members[:2]
-            pages[OUTPUT_DIR / f"{left['slug']}-vs-{right['slug']}.html"] = render_comparison(left, right)
-            comparisons += 1
+        left, right = members[:2]
+        pages[OUTPUT_DIR / f"{left['slug']}-vs-{right['slug']}.html"] = render_comparison(left, right)
     catalog = demand_catalog(offers)
     for concept_id in selected_demand_ids():
         concept = catalog.get(concept_id)

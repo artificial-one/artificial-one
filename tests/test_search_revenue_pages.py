@@ -64,12 +64,23 @@ class SearchRevenuePageTests(unittest.TestCase):
         self.assertIn("utm_source','shared-calculator", html)
 
     def test_context_routes_point_to_guides_and_calculators(self):
-        catalog = pages.route_catalog([offer(f"tool-{index}") for index in range(8)])
-        self.assertEqual(len(catalog["routes"]), pages.COLD_START_CLUSTER_SIZE)
+        offers = [offer(f"tool-{index}") for index in range(35)]
+        catalog = pages.route_catalog(offers)
+        self.assertEqual(len(catalog["routes"]), len(offers))
         self.assertTrue(all(route["url"].startswith("/partner-offers/") for route in catalog["routes"]))
         self.assertTrue(all(route["calculator_url"].startswith("/calculators/") for route in catalog["routes"]))
         self.assertTrue(all(route["strong_keywords"] for route in catalog["routes"]))
         self.assertTrue(all(route["keywords"] for route in catalog["routes"]))
+
+    def test_complete_reviewed_catalogue_has_no_fixed_publication_cap(self):
+        offers = [offer(f"tool-{index}") for index in range(35)]
+        generated = pages.planned_pages(offers)
+        names = {path.name for path in generated}
+        for item in offers:
+            self.assertIn(f"{item['slug']}-alternatives.html", names)
+            self.assertIn(f"{item['slug']}-pricing.html", names)
+            self.assertIn(f"{item['slug']}-value-calculator.html", names)
+            self.assertIn(f"{item['slug']}-for-automate-a-recurring-team-workflow.html", names)
 
     def test_sitemap_replaces_managed_block(self):
         source = '<?xml version="1.0"?><urlset>\n  <!-- search-revenue:start -->old  <!-- search-revenue:end -->\n</urlset>'

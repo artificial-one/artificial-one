@@ -199,8 +199,20 @@ def build_registry(previous: dict[str, Any] | None = None) -> dict[str, Any]:
             "availability": availability,
             "last_checked_at": prior.get("last_checked_at", ""),
             "source_status": source_status or "unknown",
+            "description": str(prior.get("description") or ""),
+            "creative_url": str(prior.get("creative_url") or ""),
         })
     imported = load_json(IMPACT_INVENTORY)
+    imported_by_slug = {
+        slugify(str(item.get("slug") or item.get("name") or "")): item
+        for item in imported.get("offers", []) if isinstance(item, dict)
+    }
+    for offer in offers:
+        source = imported_by_slug.get(str(offer.get("slug") or ""), {})
+        if source:
+            offer["description"] = str(source.get("description") or offer.get("description") or "")
+            offer["creative_url"] = str(source.get("creative_url") or offer.get("creative_url") or "")
+            offer["verified_at"] = str(source.get("verified_at") or imported.get("updated_at") or "")
     known_slugs = {str(item.get("slug") or "").casefold() for item in offers}
     known_names = {re.sub(r"[^a-z0-9]", "", str(item.get("name") or "").casefold()) for item in offers}
     known_links = {str(item.get("tracking_url") or "") for item in offers}
@@ -226,6 +238,9 @@ def build_registry(previous: dict[str, Any] | None = None) -> dict[str, Any]:
             "last_checked_at": str(prior.get("last_checked_at") or ""),
             "source_status": "impact-api",
             "impact_ad_id": str(item.get("impact_ad_id") or ""),
+            "description": str(item.get("description") or ""),
+            "creative_url": str(item.get("creative_url") or ""),
+            "verified_at": str(item.get("verified_at") or imported.get("updated_at") or ""),
         })
         known_links.add(tracking)
         known_slugs.add(slug.casefold())

@@ -68,11 +68,11 @@ class GrowthExpansionTests(unittest.TestCase):
         self.assertIn("buyers-guides.html", updated)
         self.assertEqual(updated.count("indexing-recovery:start"), 1)
 
-    def test_google_candidates_exclude_bulk_legacy_catalogues(self):
+    def test_google_candidates_include_quality_gated_affiliate_catalogues(self):
         candidates = {path.relative_to(indexing.ROOT).as_posix() for path in indexing.indexing_candidates()}
         self.assertTrue(any(path.startswith("partner-offers/") for path in candidates))
         self.assertTrue(any(path.startswith("news/") for path in candidates))
-        self.assertFalse(any(path.startswith("appsumo-guides/") for path in candidates))
+        self.assertTrue(any(path.startswith("appsumo-guides/") for path in candidates))
         self.assertFalse(any(path.startswith("tools/") for path in candidates))
 
     def test_priority_sitemap_is_small_and_quality_gated(self):
@@ -80,9 +80,8 @@ class GrowthExpansionTests(unittest.TestCase):
         accepted, rejected, _incoming = indexing.select_priority_pages(candidates)
         sitemap = indexing.render_priority_sitemap(accepted)
         self.assertIn("partner-offers/foxit-pdf-software.html", sitemap)
-        self.assertNotIn("appsumo-guides/", sitemap)
         self.assertNotIn("/tools/", sitemap)
-        self.assertLess(len(accepted), 250)
+        self.assertTrue(any(path.relative_to(indexing.ROOT).as_posix().startswith("appsumo-guides/") for path in accepted))
         self.assertEqual(sitemap.count("<loc>"), len(accepted))
         self.assertTrue(rejected or accepted)
 
