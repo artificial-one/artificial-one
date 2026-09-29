@@ -16,6 +16,7 @@ from typing import Any
 from urllib.parse import quote, urlparse
 
 try:
+    from scripts.affiliate_catalog import monetized_tools
     from scripts.growth_search_console import (
         GrowthError,
         affiliate_paths,
@@ -29,6 +30,7 @@ try:
         submit_sitemap,
     )
 except ModuleNotFoundError:  # Direct execution
+    from affiliate_catalog import monetized_tools  # type: ignore
     from growth_search_console import (  # type: ignore
         GrowthError,
         affiliate_paths,
@@ -45,6 +47,7 @@ except ModuleNotFoundError:  # Direct execution
 
 ROOT = Path(__file__).resolve().parents[1]
 OFFERS_PATH = ROOT / "data" / "partner_offers.json"
+DEFAULT_OFFERS_PATH = OFFERS_PATH
 REVENUE_STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 PUBLIC_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
 PRIORITY_SITEMAP_PATH = ROOT / "sitemap-priority.xml"
@@ -75,6 +78,21 @@ def load_json(path: Path, default: dict[str, Any]) -> dict[str, Any]:
     return value if isinstance(value, dict) else dict(default)
 
 
+def monetized_catalog() -> list[dict[str, Any]]:
+    """Use the unified catalogue in production while preserving fixture injection."""
+    if OFFERS_PATH == DEFAULT_OFFERS_PATH:
+        return monetized_tools()
+    registry = load_json(OFFERS_PATH, {"offers": []})
+    return [
+        {
+            "offer_id": str(item["id"]),
+            "profile_path": f"partner-offers/{item['slug']}.html",
+        }
+        for item in registry.get("offers", [])
+        if isinstance(item, dict) and item.get("status") == "published" and item.get("id") and item.get("slug")
+    ]
+
+
 def priority_paths(path: Path = PRIORITY_SITEMAP_PATH) -> set[str]:
     """Read the intentionally limited set submitted to Google."""
     try:
@@ -100,20 +118,17 @@ def page_path(url: str) -> str:
 
 
 def revenue_weights() -> dict[str, float]:
-    registry = load_json(OFFERS_PATH, {"offers": []})
     strategy = load_json(REVENUE_STRATEGY_PATH, {"ranking": []})
     ranking = [str(item) for item in strategy.get("ranking", [])]
     position = {offer_id: index for index, offer_id in enumerate(ranking)}
     result: dict[str, float] = {}
-    for offer in registry.get("offers", []):
-        if not isinstance(offer, dict) or offer.get("status") != "published":
-            continue
-        offer_id = str(offer.get("id", ""))
-        slug = str(offer.get("slug", ""))
+    for offer in monetized_catalog():
+        offer_id = str(offer.get("offer_id", ""))
+        path = "/" + str(offer.get("profile_path", "")).lstrip("/")
         rank = position.get(offer_id, len(position))
         # The daily revenue optimizer already blends anonymous impressions,
         # clicks, signups, customers, transaction value and commission value.
-        result[f"/partner-offers/{slug}.html"] = max(1.0, 2.6 - rank * 0.06)
+        result[path] = max(1.0, 2.6 - rank * 0.006)
     return result
 
 
@@ -307,7 +322,7 @@ def update_crawl_priority(
     inspections: list[dict[str, str]], public: dict[str, Any], today: date
 ) -> list[str]:
     """Expose only affected local paths so the site can strengthen discovery safely."""
-    eligible_prefixes = ("/partner-offers/", "/search-intent/", "/calculators/")
+    eligible_prefixes = ("/partner-offers/", "/appsumo-guides/", "/affiliate-categories/", "/search-intent/", "/calculators/")
     eligible_exact = {
         "/",
         "/ai-tool-finder.html",
@@ -316,6 +331,7 @@ def update_crawl_priority(
         "/buyers-guides.html",
         "/decision-tools.html",
         "/partner-offers.html",
+        "/affiliate-categories.html",
     }
     selected: list[str] = []
     for item in inspections:
@@ -399,22 +415,16 @@ def update_demand_pages(
 
 
 def offer_ids_by_path() -> dict[str, str]:
-    registry = load_json(OFFERS_PATH, {"offers": []})
     return {
-        f"/partner-offers/{item['slug']}.html": str(item["id"])
-        for item in registry.get("offers", [])
-        if isinstance(item, dict) and item.get("status") == "published" and item.get("slug") and item.get("id")
+        "/" + str(item["profile_path"]).lstrip("/"): str(item["offer_id"])
+        for item in monetized_catalog()
+        if item.get("profile_path") and item.get("offer_id")
     }
 
 
 def cold_start_priority(limit: int = 8) -> list[str]:
     """Seed money clusters from reviewed revenue ranking before search data matures."""
-    registry = load_json(OFFERS_PATH, {"offers": []})
-    published = {
-        str(item.get("id"))
-        for item in registry.get("offers", [])
-        if isinstance(item, dict) and item.get("status") == "published" and item.get("id")
-    }
+    published = {str(item["offer_id"]) for item in monetized_catalog()}
     strategy = load_json(REVENUE_STRATEGY_PATH, {})
     candidates = strategy.get("money_clusters") or strategy.get("featured") or strategy.get("ranking") or []
     return [str(item) for item in candidates if str(item) in published][:limit]

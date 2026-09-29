@@ -65,6 +65,7 @@ jobs:
           python scripts/build_search_revenue_pages.py
           python scripts/monetize_affiliate_links.py
           python scripts/build_tool_intelligence.py
+          python scripts/build_affiliate_growth_loop.py
           python scripts/consolidate_legacy_index.py
           python scripts/affiliate_source_reconciliation.py
           INDEXNOW_SUBMIT_ENABLED=true python scripts/indexing_recovery.py --submit --state .indexnow/private-state.json
@@ -76,6 +77,7 @@ jobs:
           python scripts/build_search_revenue_pages.py --check
           python scripts/monetize_affiliate_links.py --check
           python scripts/build_tool_intelligence.py --check
+          python scripts/build_affiliate_growth_loop.py --check
           python scripts/consolidate_legacy_index.py --check
           python scripts/affiliate_source_reconciliation.py --check
           python scripts/indexing_recovery.py --check
@@ -83,7 +85,7 @@ jobs:
       - name: Commit public-safe inventory and newly activated offers
         shell: bash
         run: |
-          git add -- data/partner_opportunities.json data/affiliate_network_status.json data/affiliate_source_reconciliation.json data/partner_offers.json data/partnerstack_program_audit.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/indexing_recovery.json data/indexing_priority.json data/legacy_index_consolidation.json partner-opportunities.html partner-offers.html partner-offers search-intent calculators ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html news-archive.html sitemap.xml sitemap-priority.xml robots.txt assets/affiliate-tracking.js ':(glob)tools/*.html'
+          git add -- data/partner_opportunities.json data/affiliate_network_status.json data/affiliate_source_reconciliation.json data/partner_offers.json data/partnerstack_program_audit.json data/tool_intelligence.json data/affiliate_growth_loop.json data/ai-tool-intelligence.csv data/indexing_recovery.json data/indexing_priority.json data/legacy_index_consolidation.json partner-opportunities.html partner-offers.html partner-offers affiliate-categories.html affiliate-categories search-intent calculators ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html news-archive.html sitemap.xml sitemap-priority.xml robots.txt assets/affiliate-tracking.js ':(glob)tools/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -63,7 +63,9 @@ jobs:
         run: python scripts/appsumo_impact.py --live-check --state .appsumo-monitor/availability.json
 
       - name: Refresh normalized tool intelligence
-        run: python scripts/build_tool_intelligence.py
+        run: |
+          python scripts/build_tool_intelligence.py
+          python scripts/build_affiliate_growth_loop.py
 
       - name: Reconcile every source with exact public affiliate links
         run: python scripts/affiliate_source_reconciliation.py
@@ -94,13 +96,14 @@ jobs:
           python scripts/appsumo_impact.py --check
           python scripts/affiliate_source_reconciliation.py --check
           python scripts/build_tool_intelligence.py --check
+          python scripts/build_affiliate_growth_loop.py --check
           python scripts/indexing_recovery.py --check
           node --check assets/affiliate-tracking.js
 
       - name: Commit public availability and generated site changes
         shell: bash
         run: |
-          git add -- data/appsumo_offers.json data/affiliate_source_reconciliation.json data/indexing_recovery.json data/indexing_priority.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json appsumo-ai-tools.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html news-archive.html index.html sitemap.xml sitemap-priority.xml robots.txt assets/affiliate-tracking.js ':(glob)**/*.html'
+          git add -- data/appsumo_offers.json data/affiliate_source_reconciliation.json data/indexing_recovery.json data/indexing_priority.json data/tool_intelligence.json data/affiliate_growth_loop.json data/ai-tool-intelligence.csv data/tool_change_history.json appsumo-ai-tools.html affiliate-categories.html affiliate-categories ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html news-archive.html index.html sitemap.xml sitemap-priority.xml robots.txt assets/affiliate-tracking.js ':(glob)**/*.html'
           if [ -e data/appsumo_impact_ads.json ]; then git add -- data/appsumo_impact_ads.json; fi
           if [ -d appsumo-guides ]; then git add -- appsumo-guides; fi
           if git diff --cached --quiet; then exit 0; fi

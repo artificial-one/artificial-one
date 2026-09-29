@@ -51,6 +51,8 @@ on:
       - scripts/consolidate_legacy_index.py
       - scripts/monitor_offer_changes.py
       - scripts/build_tool_intelligence.py
+      - scripts/build_affiliate_growth_loop.py
+      - scripts/affiliate_catalog.py
       - scripts/build_elephant_experience.py
       - assets/elephant-experience.js
       - assets/elephant-share.js
@@ -129,6 +131,7 @@ jobs:
           python scripts/build_sponsorship.py
           python scripts/build_social_media.py
           python scripts/build_tool_intelligence.py
+          python scripts/build_affiliate_growth_loop.py
           python scripts/build_elephant_experience.py
           python scripts/normalize_legacy_brand.py
           node scripts/sync_review_scores.mjs
@@ -191,6 +194,7 @@ jobs:
           python scripts/build_social_media.py --check
           python scripts/monitor_offer_changes.py --check
           python scripts/build_tool_intelligence.py --check
+          python scripts/build_affiliate_growth_loop.py --check
           python scripts/build_elephant_experience.py --check
           python scripts/normalize_legacy_brand.py --check
           node scripts/sync_review_scores.mjs --check
@@ -208,7 +212,7 @@ jobs:
       - name: Commit only public, privacy-safe optimization output
         shell: bash
         run: |
-          git add -- data/revenue_strategy.json data/conversion_strategy.json data/content_routes.json data/distribution_queue.json data/distribution_receipts.json data/paid_campaign_plan.json data/offer_change_alerts.json data/indexing_recovery.json data/indexing_priority.json data/legacy_index_consolidation.json data/tool_intelligence.json data/ai-tool-intelligence.csv data/tool_change_history.json data/elephant_experience.json ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html ask-elephant.html ai-stack-studio.html comparison-lab.html ai-tool-observatory.html workflow-recipes.html workflow-recipes developers.html watchlist-confirmed.html index.html news.html newsletter feed.xml partner-offers.html partner-offers search-intent calculators decision-tools.html ai-stack-builder.html buyers-guides.html offer-updates.html sponsor.html sponsor-success.html sitemap.xml sitemap-priority.xml robots.txt assets/affiliate-tracking.js assets/decision-engine.css assets/legacy-tool-pages.css assets/elephant-experience.js assets/elephant-share.js api/affiliate-event.js api/tool-catalog.js api/watchlist-subscribe.js api/outcome-signals.js a10e20260915d74b93c2f18e7a45c901.txt images/social images/social-cards ':(glob)**/*.html'
+          git add -- data/revenue_strategy.json data/conversion_strategy.json data/content_routes.json data/distribution_queue.json data/distribution_receipts.json data/paid_campaign_plan.json data/offer_change_alerts.json data/indexing_recovery.json data/indexing_priority.json data/legacy_index_consolidation.json data/tool_intelligence.json data/affiliate_growth_loop.json data/ai-tool-intelligence.csv data/tool_change_history.json data/elephant_experience.json ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html ask-elephant.html ai-stack-studio.html comparison-lab.html ai-tool-observatory.html workflow-recipes.html workflow-recipes developers.html watchlist-confirmed.html index.html news.html newsletter feed.xml partner-offers.html partner-offers affiliate-categories.html affiliate-categories search-intent calculators decision-tools.html ai-stack-builder.html buyers-guides.html offer-updates.html sponsor.html sponsor-success.html sitemap.xml sitemap-priority.xml robots.txt assets/affiliate-tracking.js assets/decision-engine.css assets/legacy-tool-pages.css assets/elephant-experience.js assets/elephant-share.js api/affiliate-event.js api/tool-catalog.js api/watchlist-subscribe.js api/outcome-signals.js a10e20260915d74b93c2f18e7a45c901.txt images/social images/social-cards ':(glob)**/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

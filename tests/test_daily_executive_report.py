@@ -100,7 +100,7 @@ class DailyExecutiveReportTests(unittest.TestCase):
         self.assertNotIn("cache", text.casefold())
         self.assertIn("last 28 days", text)
         self.assertIn("Referred sign-ups", text)
-        self.assertIn("Live partner destinations", text)
+        self.assertIn("Product guides with active affiliate links", text)
         self.assertIn("Tracked leads or sales", text)
         self.assertIn("New permanent Elephant news pages today", text)
         self.assertNotIn("attributed actions", text)
