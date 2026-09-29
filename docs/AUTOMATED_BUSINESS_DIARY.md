@@ -4,7 +4,7 @@ This is the evidence-based diary of productive work completed by artificial.one�
 
 **Timezone:** Europe/Prague  
 **History begins:** 2026-09-15  
-**Latest recorded activity:** 2026-09-27T23:47:56+02:00
+**Latest recorded activity:** 2026-09-29T02:08:11+02:00
 
 ## Daily productive system
 
@@ -27,6 +27,305 @@ GitHub schedules are stated in UTC; Prague local time is UTC+2 during summer and
 - **Prepared but not currently sending:** Beehiiv newsletter delivery (credentials absent) and Google paid advertising (live controls absent). The generated web newsletter and paid-campaign plan are recorded only as website/planning assets, never as sent campaigns.
 
 ## Diary
+
+### 2026-09-29
+
+- **02:08** — [Updated webpage: AI Software Buying Guides, Comparisons and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **02:04** — Created or refreshed 2 social-media creative assets.
+  - images/social-cards/daily-editorial-vertical.jpg
+  - images/social-cards/daily-editorial.jpg
+- **02:04** — Published an updated RSS feed for content distribution.
+- **02:04** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **02:04** — [Updated webpage: AI Tool Price & Product Changes | artificial.one](https://artificial.one/ai-tool-observatory.html)
+- **02:04** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
+- **01:45** — Added 19 new AI-news items to the live briefing.
+  - AMD is acquiring AI company World Labs in a deal worth more than $8 billion
+  - Shopify opens checkout to browser-based AI agents
+  - More than 20 leading AI researchers warn that automated AI research poses extreme risks
+  - Florida seeks a ban on ChatGPT acting like a person
+  - OpenAI’s AI agents need to catch up
+  - Nvidia launches new platform for reining in rogue AI agents
+  - AI is supercharging hacking, and your local hospitals and banks aren’t ready
+  - Anthropic's Claude Sonnet 5.5 nearly matches Opus 5.5 on benchmarks while costing up to 30 percent less per task
+  - Anthropic releases Sonnet 5.5, which it calls a significantly cheaper, faster work partner
+  - Google is killing off Gemini’s Gems in favor of ‘skills’
+  - OpenAI still doesn’t seem to have a handle on all of its rogue AI activity
+  - OpenAI keeps bulldozing mathematicians
+  - OpenAI's AI agents exploited a Google security education game to scrape UN trade data
+  - Meta launches enterprise AI platform, hires MongoDB CEO to lead new initiative
+  - Harvard psychologist calls for sober AI safety engineering over doomsday rhetoric
+  - Anthropic, Gamma, and Clay share what happens when enterprises actually deploy AI at TechCrunch Disrupt 2026
+  - Meta wants to turn Muse into a moneymaker by selling AI services to businesses
+  - Nvidia wants to keep AI agents on a short leash with a watchdog built into its chips
+  - The Lenfest Institute grows landmark program with expanded OpenAI support
+- **01:45** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **01:45** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **01:45** — [Published webpage: Shopify Expands AI Agent Capabilities for E-commerce | artificial.one](https://artificial.one/news/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents.html)
+- **01:45** — [Published webpage: OpenAI's AI agents face competition as Aeon may enter the market | artificial.one](https://artificial.one/news/2026/09/28/openai-s-ai-agents-need-to-catch-up.html)
+- **01:45** — [Published webpage: Florida seeks ban on ChatGPT pretending to be human | artificial.one](https://artificial.one/news/2026/09/28/florida-seeks-a-ban-on-chatgpt-acting-like-a-person.html)
+- **01:29** — Created or refreshed 34 social-media creative assets.
+  - images/social-cards/800-com.jpg
+  - images/social-cards/adcreative.jpg
+  - images/social-cards/alison-us-ca.jpg
+  - images/social-cards/amplemarket.jpg
+  - images/social-cards/beautiful-ai.jpg
+  - images/social-cards/breezy-hr.jpg
+  - images/social-cards/brkox.jpg
+  - images/social-cards/callrail.jpg
+  - images/social-cards/capsule-and-transpond.jpg
+  - images/social-cards/carepatron.jpg
+  - images/social-cards/castmagic.jpg
+  - images/social-cards/close.jpg
+  - images/social-cards/databox.jpg
+  - images/social-cards/easyclaw.jpg
+  - images/social-cards/elevenlabs.jpg
+  - images/social-cards/everleakproof-us.jpg
+  - images/social-cards/fullenrich.jpg
+  - images/social-cards/kit.jpg
+  - images/social-cards/leadpages.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/lensmor.jpg
+  - images/social-cards/mindstudio.jpg
+  - images/social-cards/omniseo.jpg
+  - images/social-cards/plesk.jpg
+  - images/social-cards/quicksigner.jpg
+  - images/social-cards/rank-prompt.jpg
+  - images/social-cards/reply-io.jpg
+  - images/social-cards/seamless.jpg
+  - images/social-cards/trainual.jpg
+  - images/social-cards/turbotic.jpg
+  - images/social-cards/unbounce.jpg
+  - images/social-cards/volza.jpg
+  - images/social-cards/wegic.jpg
+  - images/social-cards/whatconverts.jpg
+- **01:29** — Published an updated RSS feed for content distribution.
+- **01:29** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **01:29** — [Updated webpage: Best Artificial Intelligence Tools: Reviews, Use Cases & Pricing | artificial.one](https://artificial.one/search-intent/best-artificial-intelligence-tools.html)
+- **01:29** — [Updated webpage: Best Analytics Tools: Reviews, Use Cases & Pricing | artificial.one](https://artificial.one/search-intent/best-analytics-tools.html)
+- **01:29** — [Updated webpage: Wegic: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/wegic-ai-website-builder.html)
+- **01:29** — [Updated webpage: Reply.io: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/reply-io-software.html)
+- **01:29** — [Updated webpage: OmniSEO: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/omniseo-search-optimization.html)
+- **01:29** — [Updated webpage: lensmor: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/lensmor-software.html)
+- **01:29** — [Updated webpage: Databox: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/databox-software.html)
+- **01:29** — [Updated webpage: Capsule and Transpond: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/capsule-and-transpond-software.html)
+- **01:29** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **01:29** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **01:29** — [Updated webpage: Landing Page ROI Calculator | Free Tool | artificial.one](https://artificial.one/calculators/landing-page-roi-calculator.html)
+- **01:29** — [Updated webpage: AI Software Buying Guides, Comparisons and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **01:29** — [Updated webpage: AI Tool Price & Product Changes | artificial.one](https://artificial.one/ai-tool-observatory.html)
+- **01:29** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **01:29** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **01:29** — [Retired webpage: Capsule and Transpond vs Databox: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/capsule-and-transpond-software-vs-databox-software.html)
+- **01:29** — [Published webpage: Capsule and Transpond vs Reply.io: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/capsule-and-transpond-software-vs-reply-io-software.html)
+
+### 2026-09-28
+
+- **22:50** — [Published LinkedIn post: Monday confession: our software stack does not need another shiny tab. Unbounce review and pricing guide](https://www.linkedin.com/feed/update/urn:li:share:7510440883297632256/)
+- **20:15** — [Published Bluesky post: Elephant trunk check: Kartra review and pricing guide](https://bsky.app/profile/artificial-one.bsky.social/post/3mwlwb4rtcu2a)
+- **18:46** — Created or refreshed 4 social-media creative assets.
+  - images/social-cards/descript.jpg
+  - images/social-cards/pinecone.jpg
+  - images/social-cards/rewarx-studio-ai.jpg
+  - images/social-cards/volza.jpg
+- **18:46** — Published an updated RSS feed for content distribution.
+- **18:46** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **18:46** — [Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/turn-recordings-into-content.html)
+- **18:46** — [Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/ship-an-ai-powered-product.html)
+- **18:46** — [Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/onboard-a-growing-team.html)
+- **18:46** — [Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/build-a-business-website.html)
+- **18:46** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **18:46** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **18:46** — [Updated webpage: Artificial.One Public AI Tool Data API](https://artificial.one/developers.html)
+- **18:46** — [Updated webpage: Ask the Elephant: AI Tool Decision Assistant | artificial.one](https://artificial.one/ask-elephant.html)
+- **18:46** — [Updated webpage: AI Tool Price & Product Changes | artificial.one](https://artificial.one/ai-tool-observatory.html)
+- **18:46** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **18:46** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **18:46** — [Published LinkedIn post: Free PDF workflow cost calculator](https://www.linkedin.com/feed/update/urn:li:share:7510379402182934529/)
+- **18:45** — [Published Bluesky post: Free PDF workflow cost calculator](https://bsky.app/profile/artificial-one.bsky.social/post/3mwlracx5622v)
+- **17:41** — [Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/turn-recordings-into-content.html)
+- **17:41** — [Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/ship-an-ai-powered-product.html)
+- **17:41** — [Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/onboard-a-growing-team.html)
+- **17:41** — [Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/build-a-business-website.html)
+- **17:41** — [Updated webpage: AppSumo AI Deals Available Today | artificial.one](https://artificial.one/appsumo-ai-tools.html)
+- **17:41** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
+- **17:41** — [Updated webpage: AI Tool Alternatives & Migration Wizard | artificial.one](https://artificial.one/ai-tool-alternatives.html)
+- **16:41** — Added 6 new AI-news items to the live briefing.
+  - Nvidia says its new AI safety platform can contain rogue agents within ‘milliseconds’
+  - Modulate raises $25M for its voice models and analysis suite
+  - Viral AI agent Instinct raises $1B Series C at a $10B valuation
+  - Every AI lab thinks it's the responsible one, and safety researcher Ryan Greenblatt says that's what keeps the arms race going
+  - A Wuhan court just made AI production costs a legal factor in copyright infringement cases
+  - Holo4: powering generalist computer-use agents
+- **16:41** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **16:41** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **16:41** — [Published webpage: Modulate Secures $25M for Voice AI Platform | artificial.one](https://artificial.one/news/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite.html)
+- **16:41** — [Published webpage: Wuhan Court Factors AI Production Costs in Copyright Infringement Cases | artificial.one](https://artificial.one/news/2026/09/28/a-wuhan-court-just-made-ai-production-costs-a-legal-factor-in-copyright-infringeme.html)
+- **15:56** — [Updated webpage: AI Software Buying Guides, Comparisons and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **13:11** — Published 3 confirmed vendor pricing, plan, or availability changes.
+  - Elicit
+  - Iris.ai
+  - Opus Clip
+- **13:11** — [Updated webpage: AI Tool Price & Product Changes | artificial.one](https://artificial.one/ai-tool-observatory.html)
+- **13:11** — [Updated webpage: AI Tool Pricing & Feature Change History | artificial.one](https://artificial.one/ai-tool-changes.html)
+- **08:03** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **08:03** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **08:03** — [Published webpage: Microsoft Disrupts AI-Driven Scam Platform Compromising 12,000 Accounts | artificial.one](https://artificial.one/news/2026/09/22/microsoft-disrupts-ai-assisted-platform-that-compromised-12-000-accounts.html)
+- **08:03** — [Published webpage: Google Expands AI & Economy Research Team | artificial.one](https://artificial.one/news/2026/09/18/new-experts-join-google-s-ai-economy-team.html)
+- **07:29** — Created or refreshed 22 social-media creative assets.
+  - images/social-cards/800-com.jpg
+  - images/social-cards/amplemarket.jpg
+  - images/social-cards/beautiful-ai.jpg
+  - images/social-cards/breezy-hr.jpg
+  - images/social-cards/brkox.jpg
+  - images/social-cards/callrail.jpg
+  - images/social-cards/capsule-and-transpond.jpg
+  - images/social-cards/castmagic.jpg
+  - images/social-cards/close.jpg
+  - images/social-cards/databox.jpg
+  - images/social-cards/everleakproof-us.jpg
+  - images/social-cards/fullenrich.jpg
+  - images/social-cards/leadpages.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/mindstudio.jpg
+  - images/social-cards/omniseo.jpg
+  - images/social-cards/pinecone.jpg
+  - images/social-cards/plesk.jpg
+  - images/social-cards/reply-io.jpg
+  - images/social-cards/volza.jpg
+  - images/social-cards/wegic.jpg
+  - images/social-cards/whatconverts.jpg
+- **07:29** — Published an updated RSS feed for content distribution.
+- **07:29** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **07:29** — [Updated webpage: Sponsor artificial.one | AI Software Audience](https://artificial.one/sponsor.html)
+- **07:29** — [Updated webpage: Sponsorship intake | artificial.one](https://artificial.one/sponsor-success.html)
+- **07:29** — [Updated webpage: Best Artificial Intelligence Tools: Reviews, Use Cases & Pricing | artificial.one](https://artificial.one/search-intent/best-artificial-intelligence-tools.html)
+- **07:29** — [Updated webpage: OmniSEO: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/omniseo-search-optimization.html)
+- **07:29** — [Updated webpage: FullEnrich: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/fullenrich-software.html)
+- **07:29** — [Updated webpage: Castmagic: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/castmagic-software.html)
+- **07:29** — [Updated webpage: Amplemarket: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/amplemarket-software.html)
+- **07:29** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **07:29** — [Updated webpage: AI Tool Pricing and Plan Updates | artificial.one](https://artificial.one/offer-updates.html)
+- **07:29** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **07:29** — [Updated webpage: Free AI Tool Calculators and Stack Builder | artificial.one](https://artificial.one/decision-tools.html)
+- **07:29** — [Updated webpage: AI Voice Production Cost Calculator | Free Tool | artificial.one](https://artificial.one/calculators/voice-production-cost-calculator.html)
+- **07:29** — [Updated webpage: PDF Workflow Cost Calculator | Free Tool | artificial.one](https://artificial.one/calculators/pdf-workflow-cost-calculator.html)
+- **07:29** — [Updated webpage: Landing Page ROI Calculator | Free Tool | artificial.one](https://artificial.one/calculators/landing-page-roi-calculator.html)
+- **07:29** — [Updated webpage: AI Software ROI Calculator | Free Tool | artificial.one](https://artificial.one/calculators/ai-software-roi-calculator.html)
+- **07:29** — [Updated webpage: AI Software Buying Guides, Comparisons and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **07:29** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **07:29** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **07:29** — [Retired webpage: Castmagic vs FullEnrich: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/castmagic-software-vs-fullenrich-software.html)
+- **07:29** — [Published webpage: Amplemarket vs Castmagic: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/amplemarket-software-vs-castmagic-software.html)
+- **06:59** — [Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/turn-recordings-into-content.html)
+- **06:59** — [Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/ship-an-ai-powered-product.html)
+- **06:59** — [Updated webpage: Research and qualify B2B leads — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/research-and-qualify-leads.html)
+- **06:59** — [Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/onboard-a-growing-team.html)
+- **06:59** — [Updated webpage: Launch and measure a converting campaign — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/launch-a-converting-campaign.html)
+- **06:59** — [Updated webpage: Build and sell an online course — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/build-and-sell-an-online-course.html)
+- **06:59** — [Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/build-a-business-website.html)
+- **06:59** — [Updated webpage: Automate document review and approvals — AI Workflow Recipe | artificial.one](https://artificial.one/workflow-recipes/automate-document-approvals.html)
+- **06:59** — [Updated webpage: AI Workflow Recipes: Build a Practical Tool Stack | artificial.one](https://artificial.one/workflow-recipes.html)
+- **06:59** — [Updated webpage: Watchlist Confirmed | artificial.one](https://artificial.one/watchlist-confirmed.html)
+- **06:59** — [Updated webpage: Artificial.One Public AI Tool Data API](https://artificial.one/developers.html)
+- **06:59** — [Updated webpage: AI Software Buying Guides, Comparisons and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **06:59** — [Updated webpage: Ask the Elephant: AI Tool Decision Assistant | artificial.one](https://artificial.one/ask-elephant.html)
+- **06:59** — [Updated webpage: AI Tool Price & Product Changes | artificial.one](https://artificial.one/ai-tool-observatory.html)
+- **06:59** — [Updated webpage: AI Stack Studio: Build, Cost and Share Your AI Stack | artificial.one](https://artificial.one/ai-stack-studio.html)
+- **06:15** — [Updated webpage: Latest AI, LLM & AI Tools News | artificial.one](https://artificial.one/news.html)
+- **06:15** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **06:15** — [Published webpage: Cloudflare CEO Matthew Prince and the AI crisis | artificial.one](https://artificial.one/news/2026/09/25/can-cloudflare-ceo-matthew-prince-save-the-web-from-ai.html)
+- **05:54** — Created or refreshed 2 social-media creative assets.
+  - images/social-cards/adcreative.jpg
+  - images/social-cards/everleakproof-us.jpg
+- **05:54** — Published an updated RSS feed for content distribution.
+- **05:54** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **05:54** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **05:54** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **05:54** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **05:47** — Created or refreshed 3 social-media creative assets.
+  - images/social-cards/carepatron.jpg
+  - images/social-cards/descript.jpg
+  - images/social-cards/esign-sign-pdf-docx-documents-ios-only.jpg
+- **05:47** — Published an updated RSS feed for content distribution.
+- **05:47** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **05:47** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **05:47** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **05:47** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **05:45** — Created or refreshed 25 social-media creative assets.
+  - images/social-cards/800-com.jpg
+  - images/social-cards/alison-us-ca.jpg
+  - images/social-cards/amplemarket.jpg
+  - images/social-cards/breezy-hr.jpg
+  - images/social-cards/brkox.jpg
+  - images/social-cards/callrail.jpg
+  - images/social-cards/capsule-and-transpond.jpg
+  - images/social-cards/castmagic.jpg
+  - images/social-cards/databox.jpg
+  - images/social-cards/descript.jpg
+  - images/social-cards/easyclaw.jpg
+  - images/social-cards/fullenrich.jpg
+  - images/social-cards/hubstaff.jpg
+  - images/social-cards/kit.jpg
+  - images/social-cards/leadpages.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/lensmor.jpg
+  - images/social-cards/mindstudio.jpg
+  - images/social-cards/mrpeasy.jpg
+  - images/social-cards/omniseo.jpg
+  - images/social-cards/plesk.jpg
+  - images/social-cards/quicksigner.jpg
+  - images/social-cards/reply-io.jpg
+  - images/social-cards/rewarx-studio-ai.jpg
+  - images/social-cards/trainual.jpg
+- **05:45** — Published an updated RSS feed for content distribution.
+- **05:45** — [Updated webpage: Best Artificial Intelligence Tools: Reviews, Use Cases & Pricing | artificial.one](https://artificial.one/search-intent/best-artificial-intelligence-tools.html)
+- **05:45** — [Updated webpage: FullEnrich: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/fullenrich-software.html)
+- **05:45** — [Updated webpage: Castmagic: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/castmagic-software.html)
+- **05:45** — [Updated webpage: CallRail: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/callrail-software.html)
+- **05:45** — [Updated webpage: Breezy HR: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/breezy-hr-software.html)
+- **05:45** — [Updated webpage: Amplemarket: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/amplemarket-software.html)
+- **05:45** — [Updated webpage: 800.com: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/800-com-software.html)
+- **05:45** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **05:45** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **05:45** — [Updated webpage: AI Software Buying Guides, Comparisons and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **05:45** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **05:45** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **05:45** — [Retired webpage: Amplemarket vs Castmagic: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/amplemarket-software-vs-castmagic-software.html)
+- **05:45** — [Published webpage: Castmagic vs FullEnrich: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/castmagic-software-vs-fullenrich-software.html)
+- **05:23** — Created or refreshed 17 social-media creative assets.
+  - images/social-cards/brkox.jpg
+  - images/social-cards/close.jpg
+  - images/social-cards/daily-editorial-vertical.jpg
+  - images/social-cards/daily-editorial.jpg
+  - images/social-cards/databox.jpg
+  - images/social-cards/fullenrich.jpg
+  - images/social-cards/kit.jpg
+  - images/social-cards/leadpages.jpg
+  - images/social-cards/learnworlds.jpg
+  - images/social-cards/mindstudio.jpg
+  - images/social-cards/omniseo.jpg
+  - images/social-cards/plesk.jpg
+  - images/social-cards/rank-prompt.jpg
+  - images/social-cards/reply-io.jpg
+  - images/social-cards/seamless.jpg
+  - images/social-cards/trainual.jpg
+  - images/social-cards/whatconverts.jpg
+- **05:23** — Published an updated RSS feed for content distribution.
+- **05:23** — [Published a refreshed web newsletter edition (email sending is not currently connected).](https://artificial.one/newsletter/latest.html)
+- **05:23** — [Updated webpage: Best Analytics Tools: Reviews, Use Cases & Pricing | artificial.one](https://artificial.one/search-intent/best-analytics-tools.html)
+- **05:23** — [Updated webpage: Databox: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/databox-software.html)
+- **05:23** — [Updated webpage: Close: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/close-software.html)
+- **05:23** — [Updated webpage: Capsule and Transpond: Use Cases, Fit & Partner Offer | artificial.one](https://artificial.one/partner-offers/capsule-and-transpond-software.html)
+- **05:23** — [Updated webpage: Verified AI Partner Offers | artificial.one](https://artificial.one/partner-offers.html)
+- **05:23** — [Updated webpage: Build My AI Setup | Artificial.One](https://artificial.one/)
+- **05:23** — [Updated webpage: Landing Page ROI Calculator | Free Tool | artificial.one](https://artificial.one/calculators/landing-page-roi-calculator.html)
+- **05:23** — [Updated webpage: AI Software Buying Guides, Comparisons and Calculators | artificial.one](https://artificial.one/buyers-guides.html)
+- **05:23** — [Updated webpage: AI Tool Finder: Match Your Goal to the Right Tool | artificial.one](https://artificial.one/ai-tool-finder.html)
+- **05:23** — [Updated webpage: AI Stack Builder: Find the Right AI Tools | artificial.one](https://artificial.one/ai-stack-builder.html)
+- **05:23** — [Retired webpage: Capsule and Transpond vs Close: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/capsule-and-transpond-software-vs-close-software.html)
+- **05:23** — [Published webpage: Capsule and Transpond vs Databox: Features, Pricing & Fit | artificial.one](https://artificial.one/search-intent/capsule-and-transpond-software-vs-databox-software.html)
+- **05:22** — [Updated webpage: AI Tool Price & Product Changes | artificial.one](https://artificial.one/ai-tool-observatory.html)
+- **05:22** — [Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one](https://artificial.one/ai-tool-database.html)
 
 ### 2026-09-27
 
