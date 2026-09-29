@@ -1,10 +1,46 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 63,
+    "successful_checks": 61,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-09-29",
+      "id": "8bcb4f4a9a0006e1",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://surferseo.com",
+      "tool_id": "surfer-seo",
+      "tool_name": "Surfer SEO"
+    },
+    {
+      "detected_on": "2026-09-29",
+      "id": "7d3a6d003141a795",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://superhuman.com",
+      "tool_id": "superhuman",
+      "tool_name": "Superhuman"
+    },
+    {
+      "detected_on": "2026-09-29",
+      "id": "a6393586673e92a4",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://writer.com",
+      "tool_id": "writer",
+      "tool_name": "Writer"
+    },
+    {
+      "detected_on": "2026-09-29",
+      "id": "dee57b5f9e11da5d",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://zapier.com",
+      "tool_id": "zapier-ai",
+      "tool_name": "Zapier AI"
+    },
     {
       "detected_on": "2026-09-28",
       "id": "65248e7f8b6556e5",
@@ -223,6 +259,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-09-28",
+  "updated_at": "2026-09-29",
   "version": 1
 }
