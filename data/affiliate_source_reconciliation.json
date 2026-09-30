@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-29",
+  "updated_at": "2026-09-30",
   "contract": {
     "states": [
       "inactive",
@@ -17,11 +17,11 @@
     "total": 725,
     "active_link_pending": 2,
     "inactive": 1,
-    "pending": 430,
+    "pending": 428,
     "published": 291,
-    "terms_required": 1,
+    "terms_required": 3,
     "blocking_failures": 0,
-    "activation_blockers": 3
+    "activation_blockers": 5
   },
   "networks": {
     "awin": {
@@ -40,14 +40,22 @@
       "total": 422,
       "active_link_pending": 2,
       "inactive": 1,
-      "pending": 383,
+      "pending": 381,
       "published": 35,
-      "terms_required": 1
+      "terms_required": 3
     }
   },
   "activation_blockers": [
     {
       "source_id": "partnerstack:browseai",
+      "reason": "terms_required"
+    },
+    {
+      "source_id": "partnerstack:emergentlabsinc",
+      "reason": "terms_required"
+    },
+    {
+      "source_id": "partnerstack:softrplatformsgmbh",
       "reason": "terms_required"
     },
     {

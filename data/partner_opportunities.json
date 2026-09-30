@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-29",
+  "updated_at": "2026-09-30",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -11,8 +11,8 @@
     "not_qualified": 15,
     "policy_review_required": 21,
     "program_paused": 1,
-    "ready_for_owner_application": 394,
-    "terms_required": 1
+    "ready_for_owner_application": 392,
+    "terms_required": 3
   },
   "opportunities": [
     {
@@ -231,7 +231,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1010,7 +1010,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1395,8 +1395,8 @@
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
-      "relationship_status": "application-pending",
-      "terms_required": false,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": true,
       "partnership_key": "part_i4wFRarfjw7PAJ",
       "score": 85,
       "relevance_matches": [
@@ -1410,19 +1410,11 @@
         "software"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -1811,7 +1803,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 44,
+      "review_days": 50,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2034,7 +2026,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 29,
+      "review_days": 28,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2404,7 +2396,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 54,
+      "review_days": 53,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2458,7 +2450,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2696,8 +2688,8 @@
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
-      "relationship_status": "application-pending",
-      "terms_required": false,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": true,
       "partnership_key": "part_7n1xJG6wFvoXdE",
       "score": 85,
       "relevance_matches": [
@@ -2712,19 +2704,11 @@
         "software"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -2925,7 +2909,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 26,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3039,7 +3023,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -3439,7 +3423,6 @@
       "offer": "50.0% for every transaction, capped at $2,000",
       "tags": [
         "Artificial Intelligence",
-        "Hot",
         "Trusted"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/cloro?company=cloro&gref=marketplace",
@@ -4205,7 +4188,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 14,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -4543,59 +4526,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:shade",
-      "network": "partnerstack",
-      "name": "Shade",
-      "slug": "shade",
-      "description": "Shade is an intelligent cloud storage platform that transforms post-production workflows. It consolidates file streaming, review and approval, automated metadata, AI search all in one platform.",
-      "offer": "Earn 10% commission on all first year revenue (ACV $25,000/customer)",
-      "tags": [
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Design",
-        "Digital Advertising",
-        "Hot",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shade?company=shade&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/18dg3qEU0Uw2pqGQQKw_W1tL0molNftUk/edit?usp=sharing&ouid=116868290743095582619&rtpof=true&sd=true",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 8,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "design",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -5355,7 +5285,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 20,
+      "review_days": 18,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -5973,7 +5903,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 27,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6593,7 +6523,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -6957,6 +6887,57 @@
         "ai",
         "artificial intelligence",
         "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:shade",
+      "network": "partnerstack",
+      "name": "Shade",
+      "slug": "shade",
+      "description": "Shade is an intelligent cloud storage platform that transforms post-production workflows. It consolidates file streaming, review and approval, automated metadata, AI search all in one platform.",
+      "offer": "Earn 10% commission on all first year revenue (ACV $25,000/customer)",
+      "tags": [
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Design",
+        "Digital Advertising",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shade?company=shade&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/18dg3qEU0Uw2pqGQQKw_W1tL0molNftUk/edit?usp=sharing&ouid=116868290743095582619&rtpof=true&sd=true",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 8,
+      "source": "https://market.partnerstack.com/",
+      "score": 75,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "design",
+        "productivity",
+        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -7367,8 +7348,10 @@
         "Collaboration & Productivity",
         "Customer Service",
         "Development",
+        "Hot",
         "Publishers",
         "Salesforce integrated",
+        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/cometchat?company=cometchat&gref=marketplace",
@@ -7802,6 +7785,7 @@
         "Development",
         "Governance, Risk, & Compliance",
         "HR Software",
+        "Hot",
         "Hubspot integrated",
         "IT Infrastructure",
         "IT Management",
@@ -8527,7 +8511,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 31,
+      "review_days": 33,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -9540,7 +9524,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 8,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10721,11 +10705,13 @@
         "Collaboration & Productivity",
         "E-Commerce",
         "ERP",
+        "Hot",
         "Hubspot integrated",
         "Publishers",
         "Referral Partners",
         "Salesforce integrated",
         "Supply Chain & Logistics",
+        "Trusted",
         "Vertical Industry Software",
         "hot"
       ],
@@ -11247,6 +11233,62 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:pixelunion",
+      "network": "partnerstack",
+      "name": "Pixel Union Partner Program",
+      "slug": "pixelunion",
+      "description": "Promote industry leading premium Shopify themes and Shopify store management apps from Pixel Union & Out of the Sandbox today. Trusted by over 100,000 merchants and counting!",
+      "offer": "10% for aspirational affiliates",
+      "tags": [
+        "Affiliates",
+        "Commerce",
+        "Content Management",
+        "Design",
+        "E-Commerce",
+        "Hot",
+        "Marketing",
+        "Office Software",
+        "Publishers",
+        "Shopify integrated",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/pixelunion?company=pixelunion&gref=marketplace",
+      "terms_url": "https://pixelunion.net/pages/pixel-union-partner-program-terms-and-conditions",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 3,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "content",
+        "design",
+        "e-commerce",
+        "marketing",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -11789,61 +11831,6 @@
       }
     },
     {
-      "id": "partnerstack:servicem8",
-      "network": "partnerstack",
-      "name": "ServiceM8",
-      "slug": "servicem8",
-      "description": "The app for trade contractors & home services, with everything in one place — job cards, scheduling, time tracking, CRM, job history, invoicing & payments. ServiceM8 helps small businesses cut paperwork, get jobs done & provide amazing customer service.",
-      "offer": "Get 80% on the first 12 months for every referred subscriber.",
-      "tags": [
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Hot",
-        "Marketing",
-        "Office Software",
-        "Other",
-        "Sales",
-        "Trusted",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/servicem8?company=servicem8&gref=marketplace",
-      "terms_url": "https://www.servicem8.com/affiliate-program-agreement",
-      "website": "https://www.servicem8.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "customer service",
-        "marketing",
-        "productivity",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
-        "cookie_days": 90
-      }
-    },
-    {
       "id": "partnerstack:shippo",
       "network": "partnerstack",
       "name": "Shippo",
@@ -11968,7 +11955,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 28,
+      "review_days": 18,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12230,7 +12217,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 123,
+      "review_days": 125,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12268,9 +12255,11 @@
         "Affiliates",
         "Agencies",
         "E-Commerce",
+        "Hot",
         "Marketing",
         "Publishers",
         "Shopify integrated",
+        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/stampedio?company=stampedio&gref=marketplace",
@@ -12412,6 +12401,62 @@
       }
     },
     {
+      "id": "partnerstack:superfiliate",
+      "network": "partnerstack",
+      "name": "Superfiliate",
+      "slug": "superfiliate",
+      "description": "Superfiliate is the creator-led growth platform for D2C brands focused on measurable revenue growth. Get unified affiliate and creator management, automated gifting workflows, creator storefronts, built-in discovery tooling in one place, with full visibility into which creators and programs are driving results.",
+      "offer": "Earn 25% Revenue share for the first year of customer purchases + early adoption bonus of $250",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Commerce",
+        "Content Management",
+        "E-Commerce",
+        "Hot",
+        "Influencers",
+        "Marketing",
+        "Media Partners",
+        "Publishers",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/superfiliate?company=superfiliate&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/1nCSCwBekXP2VpP_UDfhSaMJUw6eG-rIe/view?usp=sharing",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 2,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "content",
+        "e-commerce",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:surveymonkey",
       "network": "partnerstack",
       "name": "SurveyMonkey",
@@ -12439,7 +12484,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 24,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13071,6 +13116,7 @@
       "tags": [
         "Affiliates",
         "Analytics",
+        "Hot",
         "Marketing",
         "Publishers",
         "Referral Partners",
@@ -16604,7 +16650,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 22,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17996,60 +18042,6 @@
       }
     },
     {
-      "id": "partnerstack:pixelunion",
-      "network": "partnerstack",
-      "name": "Pixel Union Partner Program",
-      "slug": "pixelunion",
-      "description": "Promote industry leading premium Shopify themes and Shopify store management apps from Pixel Union & Out of the Sandbox today. Trusted by over 100,000 merchants and counting!",
-      "offer": "10% for aspirational affiliates",
-      "tags": [
-        "Affiliates",
-        "Commerce",
-        "Content Management",
-        "Design",
-        "E-Commerce",
-        "Marketing",
-        "Office Software",
-        "Publishers",
-        "Shopify integrated"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/pixelunion?company=pixelunion&gref=marketplace",
-      "terms_url": "https://pixelunion.net/pages/pixel-union-partner-program-terms-and-conditions",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 3,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "content",
-        "design",
-        "e-commerce",
-        "marketing",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:planday",
       "network": "partnerstack",
       "name": "Planday",
@@ -18150,6 +18142,59 @@
       }
     },
     {
+      "id": "partnerstack:servicem8",
+      "network": "partnerstack",
+      "name": "ServiceM8",
+      "slug": "servicem8",
+      "description": "The app for trade contractors & home services, with everything in one place — job cards, scheduling, time tracking, CRM, job history, invoicing & payments. ServiceM8 helps small businesses cut paperwork, get jobs done & provide amazing customer service.",
+      "offer": "Get 80% on the first 12 months for every referred subscriber.",
+      "tags": [
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Marketing",
+        "Office Software",
+        "Other",
+        "Sales",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/servicem8?company=servicem8&gref=marketplace",
+      "terms_url": "https://www.servicem8.com/affiliate-program-agreement",
+      "website": "https://www.servicem8.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "customer service",
+        "marketing",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": 90
+      }
+    },
+    {
       "id": "partnerstack:staytuned",
       "network": "partnerstack",
       "name": "Staytuned Digital",
@@ -18193,60 +18238,6 @@
           "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": true
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:superfiliate",
-      "network": "partnerstack",
-      "name": "Superfiliate",
-      "slug": "superfiliate",
-      "description": "Superfiliate is the creator-led growth platform for D2C brands focused on measurable revenue growth. Get unified affiliate and creator management, automated gifting workflows, creator storefronts, built-in discovery tooling in one place, with full visibility into which creators and programs are driving results.",
-      "offer": "Earn 25% Revenue share for the first year of customer purchases + early adoption bonus of $250",
-      "tags": [
-        "Affiliates",
-        "B2B Marketplaces",
-        "Commerce",
-        "Content Management",
-        "E-Commerce",
-        "Influencers",
-        "Marketing",
-        "Media Partners",
-        "Publishers",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/superfiliate?company=superfiliate&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1nCSCwBekXP2VpP_UDfhSaMJUw6eG-rIe/view?usp=sharing",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 2,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "content",
-        "e-commerce",
-        "marketing",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
         },
         "cookie_days": null
       }
@@ -18693,6 +18684,7 @@
         "Design",
         "Digital Advertising",
         "E-Commerce",
+        "Hot",
         "Influencers",
         "Marketing",
         "Media Partners",
@@ -19096,7 +19088,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 94,
+      "review_days": 90,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19329,7 +19321,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 59,
+      "review_days": 58,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19606,14 +19598,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": true,
-          "coupon_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 180
+        "cookie_days": null
       }
     },
     {
@@ -21381,7 +21373,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 12,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21959,15 +21951,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
+          "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -22063,7 +22055,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 8,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 54,
       "relevance_matches": [
@@ -22806,7 +22798,7 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
       }
     },
     {
@@ -23796,7 +23788,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 42,
+      "review_days": 39,
       "source": "https://market.partnerstack.com/",
       "score": 35,
       "relevance_matches": [
