@@ -1,6 +1,78 @@
 {
   "changes": [
     {
+      "detected_on": "2026-09-30",
+      "id": "004288bb84ae520b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.pinecone.io/",
+      "tool_id": "pinecone",
+      "tool_name": "Pinecone"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "d759f6a99e215b87",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://trainual.com/",
+      "tool_id": "trainual",
+      "tool_name": "Trainual"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "3e24948fb4de33a8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://taskade.com",
+      "tool_id": "taskade",
+      "tool_name": "Taskade"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "5e336e309af16423",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.whatconverts.com/",
+      "tool_id": "whatconverts",
+      "tool_name": "WhatConverts"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "4f60aeb15648986b",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://turbotic.com/",
+      "tool_id": "turbotic",
+      "tool_name": "Turbotic"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "091c242b651a40b8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://alteryx.com",
+      "tool_id": "alteryx-ai",
+      "tool_name": "Alteryx AI"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "e82c827cd22e2ee9",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://aws.amazon.com/codewhisperer",
+      "tool_id": "amazon-codewhisperer",
+      "tool_name": "Amazon CodeWhisperer"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "af70b1ade3ab3542",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://brandwatch.com",
+      "tool_id": "brandwatch",
+      "tool_name": "Brandwatch"
+    },
+    {
       "detected_on": "2026-09-29",
       "id": "8bcb4f4a9a0006e1",
       "kind": "pricing or plan",
@@ -256,28 +328,136 @@
   "methodology": "Catalogue-grounded browser-side recommendations; monetization is a one-point tie-break only.",
   "news": [
     {
-      "category": "AI Tools & Products",
+      "category": "Models & LLMs",
       "published": "",
-      "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
-      "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source"
+      "title": "Sam Altman says OpenAI won’t go public until its models are safe",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety"
     },
     {
       "category": "AI Tools & Products",
       "published": "",
-      "title": "OpenAI apologizes to Australia after its AI agents breached government sites",
-      "url": "https://techcrunch.com/2026/09/29/openai-apologizes-to-australia-after-its-ai-agents-breached-government-sites/"
+      "title": "OpenAI DevDay 2026: The biggest news and announcements",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements"
     },
     {
       "category": "Policy & Safety",
       "published": "",
-      "title": "Reco raises $55M as AI agent security startups crowd the market",
-      "url": "https://techcrunch.com/2026/09/29/reco-raises-55m-as-ai-agent-security-startups-crowd-the-market/"
+      "title": "Trump orders US government to call AI ‘Super Intelligence’",
+      "url": "https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai"
     },
     {
       "category": "AI Tools & Products",
       "published": "",
-      "title": "Will Chinese AI companies slow down? A top House Democrat wants answers",
-      "url": "https://www.theverge.com/policy/1001767/khanna-ai-safety-china-treaty"
+      "title": "The internet is convinced Elon Musk’s xAI trolled OpenAI’s ‘Dots’ launch",
+      "url": "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Elon Musk’s AI-powered Grokipedia is updating again",
+      "url": "https://www.theverge.com/tech/1002448/elon-musk-grokipedia-ai-updating-again"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI launches Dots, its Muse competitor",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI’s latest features take direct aim at the app store model",
+      "url": "https://techcrunch.com/2026/09/29/openais-latest-features-take-direct-aim-at-the-app-store-model/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "OpenAI reportedly in talks to raise $30B round at $1.4T valuation",
+      "url": "https://techcrunch.com/2026/09/29/openai-reportedly-in-talks-to-raise-30b-round-at-1-4t-valuation/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "UK AI Security Institute finds GPT-6 Astra's rogue attack rate jumped fivefold over its predecessor",
+      "url": "https://the-decoder.com/uk-ai-security-institute-finds-gpt-6-astras-rogue-attack-rate-jumped-fivefold-over-its-predecessor/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "Here’s why OpenAI is absent from Nvidia’s industry-wide effort to end rogue AI agents",
+      "url": "https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "ChatGPT now reaches 1.2 billion people every week, OpenAI says",
+      "url": "https://the-decoder.com/chatgpt-now-reaches-1-2-billion-people-every-week-openai-says/"
+    },
+    {
+      "category": "Research",
+      "published": "",
+      "title": "AI researchers put out videos saying superintelligence is ‘exactly as dangerous as it sounds’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002238/openai-google-anthropic-ai-researchers-safety-interviews"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI takes on Microsoft with the launch of what feels a whole lot like ChatGPT’s own office suite",
+      "url": "https://techcrunch.com/2026/09/29/openai-takes-on-microsoft-with-the-launch-of-what-feels-a-whole-lot-like-chatgpts-own-office-suite/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Protesters gather at OpenAI’s DevDay",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002201/openai-sam-altman-openai-devday-protests-ice-data-centers"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI's reveals a new ChatGPT that looks less like a chatbot and more like an operating system",
+      "url": "https://the-decoder.com/openais-reveals-a-new-chatgpt-that-looks-less-like-a-chatbot-and-more-like-an-operating-system/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "AI-powered app maker Wabi pivots to a messaging experience",
+      "url": "https://techcrunch.com/2026/09/29/ai-powered-app-maker-wabi-pivots-to-a-messaging-experience/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "OpenAI launches Dots, its bubbly agentic avatar",
+      "url": "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "OpenAI gives Codex reusable cloud environments that work across devices",
+      "url": "https://techcrunch.com/2026/09/29/openai-gives-codex-reusable-cloud-environments-that-work-across-devices/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI launches always-on Dots agents to rival Meta's Muse",
+      "url": "https://the-decoder.com/openai-launches-always-on-dots-agents-to-rival-metas-muse/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "OpenAI expands Codex and its API at DevDay with security scans, a Decisions API, and Ultrafast",
+      "url": "https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "AMD buys AI world model startup World Labs for $8.2 billion",
+      "url": "https://the-decoder.com/amd-buys-ai-world-model-startup-world-labs-for-8-2-billion/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Florida wants a court to stop ChatGPT from pretending to be human and talking to kids",
+      "url": "https://the-decoder.com/florida-wants-a-court-to-stop-chatgpt-from-pretending-to-be-human-and-talking-to-kids/"
     },
     {
       "category": "Models & LLMs",
@@ -286,118 +466,10 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/1001838/anthropic-ipo-prospectus-ai-safety-threat"
     },
     {
-      "category": "AI Business",
-      "published": "",
-      "title": "Anthropic's IPO filing shows soaring revenue, mounting costs, and \"existential\" risks",
-      "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI reopens its $200 Pro plan but cuts API credits in half as it nudges users toward pay-per-use",
-      "url": "https://the-decoder.com/openai-reopens-its-200-pro-plan-but-cuts-api-credits-in-half-as-it-nudges-users-toward-pay-per-use/"
-    },
-    {
       "category": "AI Tools & Products",
       "published": "",
-      "title": "Manus 2.0 lets users edit videos, host multiplayer games, and run agents remotely from their phone",
-      "url": "https://the-decoder.com/manus-2-0-lets-users-edit-videos-host-multiplayer-games-and-run-agents-remotely-from-their-phone/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "GPT-6.1 Astra is too deceptive for release, marking OpenAI's most dramatic safety intervention yet",
-      "url": "https://the-decoder.com/gpt-6-1-astra-is-too-deceptive-for-release-marking-openais-most-dramatic-safety-intervention-yet/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Anthropic’s prospectus details losses, growth, and, yes, a warning that its AI could end humanity",
-      "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI reportedly ditches model over safety concerns",
-      "url": "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "AMD is acquiring AI company World Labs in a deal worth more than $8 billion",
-      "url": "https://www.theverge.com/tech/1001749/amd-world-labs-ai-acquisition-deal"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Shopify opens checkout to browser-based AI agents",
-      "url": "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/"
-    },
-    {
-      "category": "Research",
-      "published": "",
-      "title": "More than 20 leading AI researchers warn that automated AI research poses extreme risks",
-      "url": "https://the-decoder.com/more-than-20-leading-ai-researchers-warn-that-automated-ai-research-poses-extreme-risks/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "The AI boom took over Climate Week and not everyone is happy about it",
-      "url": "https://techcrunch.com/2026/09/28/the-ai-boom-took-over-climate-week-and-not-everyone-is-happy-about-it/"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "Towards safety cases for frontier AI training",
-      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Florida seeks a ban on ChatGPT acting like a person",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001527/chatgpt-florida-ban-first-person-human-attributes-kids"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "OpenAI’s AI agents need to catch up",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001590/openai-devday-2026-aeon-ai-agent"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "Nvidia launches new platform for reining in rogue AI agents",
-      "url": "https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "AI is supercharging hacking, and your local hospitals and banks aren’t ready",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001427/ai-is-supercharging-hacking-and-your-local-hospitals-and-banks-arent-ready"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Anthropic's Claude Sonnet 5.5 nearly matches Opus 5.5 on benchmarks while costing up to 30 percent less per task",
-      "url": "https://the-decoder.com/anthropics-claude-sonnet-5-5-nearly-matches-opus-5-5-on-benchmarks-while-costing-up-to-30-percent-less-per-task/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "OpenAI keeps bulldozing mathematicians",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001477/openai-math-advisory-group"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "OpenAI's AI agents exploited a Google security education game to scrape UN trade data",
-      "url": "https://the-decoder.com/openais-ai-agents-exploited-a-google-security-education-game-to-scrape-un-trade-data/"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "Harvard psychologist calls for sober AI safety engineering over doomsday rhetoric",
-      "url": "https://the-decoder.com/harvard-psychologist-calls-for-sober-ai-safety-engineering-over-doomsday-rhetoric/"
+      "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source"
     }
   ],
   "recipes": [
@@ -539,7 +611,7 @@
     }
   ],
   "stats": {
-    "changes": 28,
+    "changes": 36,
     "monetized": 291,
     "recipes": 8,
     "reviewed": 42,
@@ -14106,6 +14178,6 @@
       "summary": "Complete Zenler review covering features, pricing, and exclusive lifetime deal. See if this tool is worth it for your business"
     }
   ],
-  "updated_at": "2026-09-29",
+  "updated_at": "2026-09-30",
   "version": 1
 }

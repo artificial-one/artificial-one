@@ -1,10 +1,82 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 61,
+    "successful_checks": 64,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-09-30",
+      "id": "004288bb84ae520b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.pinecone.io/",
+      "tool_id": "pinecone",
+      "tool_name": "Pinecone"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "d759f6a99e215b87",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://trainual.com/",
+      "tool_id": "trainual",
+      "tool_name": "Trainual"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "3e24948fb4de33a8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://taskade.com",
+      "tool_id": "taskade",
+      "tool_name": "Taskade"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "5e336e309af16423",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.whatconverts.com/",
+      "tool_id": "whatconverts",
+      "tool_name": "WhatConverts"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "4f60aeb15648986b",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://turbotic.com/",
+      "tool_id": "turbotic",
+      "tool_name": "Turbotic"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "091c242b651a40b8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://alteryx.com",
+      "tool_id": "alteryx-ai",
+      "tool_name": "Alteryx AI"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "e82c827cd22e2ee9",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://aws.amazon.com/codewhisperer",
+      "tool_id": "amazon-codewhisperer",
+      "tool_name": "Amazon CodeWhisperer"
+    },
+    {
+      "detected_on": "2026-09-30",
+      "id": "af70b1ade3ab3542",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://brandwatch.com",
+      "tool_id": "brandwatch",
+      "tool_name": "Brandwatch"
+    },
     {
       "detected_on": "2026-09-29",
       "id": "8bcb4f4a9a0006e1",
@@ -259,6 +331,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-09-29",
+  "updated_at": "2026-09-30",
   "version": 1
 }
