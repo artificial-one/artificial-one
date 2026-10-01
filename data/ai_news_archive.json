@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updated_at": "2026-10-01T13:52:03.009978+00:00",
+  "updated_at": "2026-10-01T22:53:48.125968+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/01/ideogram-says-its-new-model-can-edit-part-of-an-image-without-messing-up-the-rest.html",
+      "created_at": "2026-10-01T22:53:48.125968+00:00",
+      "source": {
+        "title": "Ideogram says its new model can edit part of an image without messing up the rest",
+        "url": "https://the-decoder.com/ideogram-says-its-new-model-can-edit-part-of-an-image-without-messing-up-the-rest/",
+        "source": "The Decoder",
+        "published_at": "2026-10-01T17:33:03+00:00",
+        "display_date": "Oct 01, 2026",
+        "category": "Models & LLMs",
+        "description": "Ideogram's new model Ideogram 4.5 promises to edit only the areas you want while keeping the rest of the image intact. It ships with native 2K resolution starting at 0.8 cents per image, and partners like Runway, Pika, and Leonardo AI are already on board. An open-weight release is planned. The article Ideogram says its new model can edit part of an image without messing up the rest appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate AdCreative.ai for this workflow",
+          "url": "partner-offers/adcreative-ai-ad-design.html",
+          "offer_id": "adcreative"
+        }
+      },
+      "article": {
+        "headline": "Ideogram's New Model Offers Precise Image Editing",
+        "summary": "Ideogram introduces Ideogram 4.5, a model that edits images without affecting other areas. The model is available on the Ideogram platform and through APIs, with partners like Runway and Pika. It offers four quality tiers and native 2K resolution.",
+        "facts": [
+          {
+            "statement": "Ideogram's new model can edit part of an image without messing up the rest",
+            "evidence": "Ideogram says its new model can edit part of an image without messing up the rest"
+          },
+          {
+            "statement": "The model is available now on the Ideogram platform and through the API",
+            "evidence": "The model is available now on the Ideogram platform and through the API"
+          },
+          {
+            "statement": "Partners include Picsart, Runway, Pika, and Leonardo AI",
+            "evidence": "partners like runway, pika, and leonardo ai"
+          }
+        ],
+        "why_it_matters": "Ideogram's new model addresses a key challenge in image editing by allowing precise modifications without unintended side effects. This could improve efficiency in fields like product photography and interior design, where accuracy is crucial. The model's availability through APIs and partnerships suggests broad adoption potential.",
+        "elephant_take": "🐘 鼋 Ideogram's 4.5 model is a step forward in image editing precision, but the hype might overshadow its real-world utility. The 'no messing up' claim is promising, but early tests may not fully validate its claims.",
+        "caveat": "The model's effectiveness in real-world scenarios remains unproven despite early test results.",
+        "who_should_care": [
+          "Photographers",
+          "Designers",
+          "AI developers",
+          "Content creators"
+        ],
+        "what_to_do": [
+          "Test Ideogram 4.5 for image editing needs",
+          "Evaluate API costs and partnerships",
+          "Stay updated on open-weight release details",
+          "Compare with existing models like GPT-Image 2.5"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 90,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/adcreative-ai-ad-design.html",
+        "review_title": "Evaluate AdCreative.ai for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Ideogram%20says%20its%20new%20model%20can%20edit%20part%20of%20an%20image%20without%20messing%20up%20the%20rest%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "adcreative"
+      }
+    },
     {
       "path": "news/2026/10/01/security-startup-finds-more-than-13-000-internal-company-screenshots-that-ai-agent.html",
       "created_at": "2026-10-01T13:52:03.009978+00:00",
@@ -2916,6 +2981,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-01T22:53:48.125968+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-10-01T22:53:48.125968+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-01T22:53:48.125968+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/nearly-half-of-test-subjects-mistook-tavus-ai-video-avatar-for-a-real-person-on-a-one-minute-call/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-01T22:53:48.125968+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/01/opus-5-5-loves-to-tell-you-this-matters-and-other-ai-writing-tells/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-01T22:53:48.125968+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/ai-beats-strategos-greatest-player-ending-one-of-the-last-human-strongholds-in-board-games/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-01T13:52:03.009978+00:00",
@@ -3123,36 +3218,6 @@
       "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-09-28T04:07:56.203770+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-09-28T04:07:56.203770+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/airbnb-gpt-6-astra",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-09-28T04:07:56.203770+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-09-28T04:07:56.203770+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-09-27T21:35:42.590614+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-09-27T21:35:42.590614+00:00",
       "pipeline_version": "2"
     }
   ]
