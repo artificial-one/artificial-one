@@ -1,10 +1,55 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 64,
+    "successful_checks": 63,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-01",
+      "id": "684174d0c5ffadb5",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://contentstudio.io",
+      "tool_id": "contentstudio",
+      "tool_name": "ContentStudio"
+    },
+    {
+      "detected_on": "2026-10-01",
+      "id": "2282e065b53690c0",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://dovetail.com",
+      "tool_id": "dovetail",
+      "tool_name": "Dovetail"
+    },
+    {
+      "detected_on": "2026-10-01",
+      "id": "f5aa24a8048c5868",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://dataiku.com",
+      "tool_id": "dataiku",
+      "tool_name": "Dataiku"
+    },
+    {
+      "detected_on": "2026-10-01",
+      "id": "21dab512bb3bbbaf",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://fliki.ai",
+      "tool_id": "fliki",
+      "tool_name": "Fliki"
+    },
+    {
+      "detected_on": "2026-10-01",
+      "id": "6d2325b37e1f62df",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://jetbrains.com",
+      "tool_id": "jetbrains-ai",
+      "tool_name": "JetBrains AI"
+    },
     {
       "detected_on": "2026-09-30",
       "id": "004288bb84ae520b",
@@ -331,6 +376,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-09-30",
+  "updated_at": "2026-10-01",
   "version": 1
 }

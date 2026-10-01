@@ -1,6 +1,51 @@
 {
   "changes": [
     {
+      "detected_on": "2026-10-01",
+      "id": "684174d0c5ffadb5",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://contentstudio.io",
+      "tool_id": "contentstudio",
+      "tool_name": "ContentStudio"
+    },
+    {
+      "detected_on": "2026-10-01",
+      "id": "2282e065b53690c0",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://dovetail.com",
+      "tool_id": "dovetail",
+      "tool_name": "Dovetail"
+    },
+    {
+      "detected_on": "2026-10-01",
+      "id": "f5aa24a8048c5868",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://dataiku.com",
+      "tool_id": "dataiku",
+      "tool_name": "Dataiku"
+    },
+    {
+      "detected_on": "2026-10-01",
+      "id": "21dab512bb3bbbaf",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://fliki.ai",
+      "tool_id": "fliki",
+      "tool_name": "Fliki"
+    },
+    {
+      "detected_on": "2026-10-01",
+      "id": "6d2325b37e1f62df",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://jetbrains.com",
+      "tool_id": "jetbrains-ai",
+      "tool_name": "JetBrains AI"
+    },
+    {
       "detected_on": "2026-09-30",
       "id": "004288bb84ae520b",
       "kind": "pricing or plan",
@@ -328,6 +373,96 @@
   "methodology": "Catalogue-grounded browser-side recommendations; monetization is a one-point tie-break only.",
   "news": [
     {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Google releases Gemini 4 Argon, called its most powerful model yet",
+      "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Google Gemini 4 Argon closes the gap with OpenAI and Anthropic but doesn't take a clear lead",
+      "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+    },
+    {
+      "category": "AI Business",
+      "published": "",
+      "title": "Valor, Atreides, and Sequoia back AI startup Flow Engineering at $750M valuation",
+      "url": "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Google announces Gemini 4 and says it’s so capable that only ‘trusted cyber defenders’ can have it right now",
+      "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "The AI Tamagotchis are coming",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI and Synopsys team up to build an AI model that designs chips like a seasoned engineer",
+      "url": "https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "OpenAI’s Jev clone could help the frontier lab stop its swarming agents",
+      "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/"
+    },
+    {
+      "category": "AI Business",
+      "published": "",
+      "title": "AI voice startup ElevenLabs doubles valuation to $22B",
+      "url": "https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Google drops Gems for Skills, joining OpenAI and Anthropic in the shift to agent-ready prompt formats",
+      "url": "https://the-decoder.com/google-drops-gems-for-skills-joining-openai-and-anthropic-in-the-shift-to-agent-ready-prompt-formats/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Reddit is killing RSS feeds and ending public API access because of AI bots",
+      "url": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "Here’s what AI leaders are saying about Trump’s new safety plan",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002636/ai-execs-trump-self-policing-deal-comments"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "The ugly economics of consumer AI",
+      "url": "https://techcrunch.com/2026/09/30/the-ugly-economics-of-consumer-ai/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Meta dodges billions in US taxes by calling its AI data centers experiments",
+      "url": "https://the-decoder.com/meta-dodges-billions-in-us-taxes-by-calling-its-ai-data-centers-experiments/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "FTC launches sweeping probe into OpenAI, Anthropic, and other AI labs over consumer protection concerns",
+      "url": "https://the-decoder.com/ftc-launches-sweeping-probe-into-openai-anthropic-and-other-ai-labs-over-consumer-protection-concerns/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "DoorDash launches an AI agent you can text to order food",
+      "url": "https://techcrunch.com/2026/09/30/doordash-launches-an-ai-agent-you-can-text-to-order-food/"
+    },
+    {
       "category": "Policy & Safety",
       "published": "",
       "title": "Here’s how tech leaders will self-police AI safety under Trump’s deal",
@@ -336,8 +471,20 @@
     {
       "category": "AI Tools & Products",
       "published": "",
-      "title": "Airbnb adds AI search, more social features",
-      "url": "https://techcrunch.com/2026/09/30/airbnb-adds-ai-search-more-social-features/"
+      "title": "All the latest news on Meta’s cute, creepy Muse AI agent",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Google reportedly tests paying publishers for AI search results",
+      "url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "China's AI industry closes ranks as Deepseek ships open-source software for Huawei's Ascend chips",
+      "url": "https://the-decoder.com/chinas-ai-industry-closes-ranks-as-deepseek-ships-open-source-software-for-huaweis-ascend-chips/"
     },
     {
       "category": "Models & LLMs",
@@ -348,128 +495,26 @@
     {
       "category": "Models & LLMs",
       "published": "",
+      "title": "Disrupting a coordinated model-distillation campaign",
+      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
       "title": "Google is paying almost no publishers almost nothing for content used in AI answers",
       "url": "https://the-decoder.com/google-is-paying-almost-no-publishers-almost-nothing-for-content-used-in-ai-answers/"
     },
     {
       "category": "AI Tools & Products",
       "published": "",
-      "title": "Elon Musk’s AI-powered Grokipedia is updating again",
-      "url": "https://www.theverge.com/tech/1002448/elon-musk-grokipedia-ai-updating-again"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Trump and tech CEOs sign an AI code of conduct that's only \"morally binding\"",
-      "url": "https://the-decoder.com/trump-and-tech-ceos-sign-an-ai-code-of-conduct-thats-only-morally-binding/"
+      "title": "Helping small businesses put AI to work",
+      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work"
     },
     {
       "category": "Models & LLMs",
       "published": "",
       "title": "Sam Altman says OpenAI won’t go public until its models are safe",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "OpenAI DevDay 2026: The biggest news and announcements",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "Trump orders US government to call AI ‘Super Intelligence’",
-      "url": "https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "The internet is convinced Elon Musk’s xAI trolled OpenAI’s ‘Dots’ launch",
-      "url": "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI launches Dots, its Muse competitor",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI’s latest features take direct aim at the app store model",
-      "url": "https://techcrunch.com/2026/09/29/openais-latest-features-take-direct-aim-at-the-app-store-model/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "OpenAI reportedly in talks to raise $30B round at $1.4T valuation",
-      "url": "https://techcrunch.com/2026/09/29/openai-reportedly-in-talks-to-raise-30b-round-at-1-4t-valuation/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "UK AI Security Institute finds GPT-6 Astra's rogue attack rate jumped fivefold over its predecessor",
-      "url": "https://the-decoder.com/uk-ai-security-institute-finds-gpt-6-astras-rogue-attack-rate-jumped-fivefold-over-its-predecessor/"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "Here’s why OpenAI is absent from Nvidia’s industry-wide effort to end rogue AI agents",
-      "url": "https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "ChatGPT now reaches 1.2 billion people every week, OpenAI says",
-      "url": "https://the-decoder.com/chatgpt-now-reaches-1-2-billion-people-every-week-openai-says/"
-    },
-    {
-      "category": "Research",
-      "published": "",
-      "title": "AI researchers put out videos saying superintelligence is ‘exactly as dangerous as it sounds’",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1002238/openai-google-anthropic-ai-researchers-safety-interviews"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI takes on Microsoft with the launch of what feels a whole lot like ChatGPT’s own office suite",
-      "url": "https://techcrunch.com/2026/09/29/openai-takes-on-microsoft-with-the-launch-of-what-feels-a-whole-lot-like-chatgpts-own-office-suite/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Protesters gather at OpenAI’s DevDay",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1002201/openai-sam-altman-openai-devday-protests-ice-data-centers"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI's reveals a new ChatGPT that looks less like a chatbot and more like an operating system",
-      "url": "https://the-decoder.com/openais-reveals-a-new-chatgpt-that-looks-less-like-a-chatbot-and-more-like-an-operating-system/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "AI-powered app maker Wabi pivots to a messaging experience",
-      "url": "https://techcrunch.com/2026/09/29/ai-powered-app-maker-wabi-pivots-to-a-messaging-experience/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "OpenAI launches Dots, its bubbly agentic avatar",
-      "url": "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI launches always-on Dots agents to rival Meta's Muse",
-      "url": "https://the-decoder.com/openai-launches-always-on-dots-agents-to-rival-metas-muse/"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "OpenAI expands Codex and its API at DevDay with security scans, a Decisions API, and Ultrafast",
-      "url": "https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/"
     }
   ],
   "recipes": [
@@ -611,7 +656,7 @@
     }
   ],
   "stats": {
-    "changes": 36,
+    "changes": 41,
     "monetized": 291,
     "recipes": 8,
     "reviewed": 42,
@@ -14178,6 +14223,6 @@
       "summary": "Complete Zenler review covering features, pricing, and exclusive lifetime deal. See if this tool is worth it for your business"
     }
   ],
-  "updated_at": "2026-09-30",
+  "updated_at": "2026-10-01",
   "version": 1
 }
