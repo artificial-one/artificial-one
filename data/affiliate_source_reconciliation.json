@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-30",
+  "updated_at": "2026-10-01",
   "contract": {
     "states": [
       "inactive",
@@ -14,14 +14,13 @@
     "future_sources": "Any connector represented in partner_opportunities.json is reconciled automatically."
   },
   "summary": {
-    "total": 724,
-    "active_link_pending": 2,
+    "total": 723,
+    "active_link_pending": 7,
     "inactive": 1,
-    "pending": 428,
+    "pending": 425,
     "published": 290,
-    "terms_required": 3,
     "blocking_failures": 0,
-    "activation_blockers": 5
+    "activation_blockers": 7
   },
   "networks": {
     "awin": {
@@ -37,34 +36,41 @@
       "published": 248
     },
     "partnerstack": {
-      "total": 422,
-      "active_link_pending": 2,
+      "total": 421,
+      "active_link_pending": 7,
       "inactive": 1,
-      "pending": 381,
-      "published": 35,
-      "terms_required": 3
+      "pending": 378,
+      "published": 35
     }
   },
   "activation_blockers": [
     {
       "source_id": "partnerstack:browseai",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:emergentlabsinc",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:softrplatformsgmbh",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:quillbot",
       "reason": "active_link_pending"
     },
     {
+      "source_id": "partnerstack:sanebox",
+      "reason": "active_link_pending"
+    },
+    {
       "source_id": "partnerstack:runpod",
       "reason": "external_account_required"
+    },
+    {
+      "source_id": "partnerstack:aisq",
+      "reason": "active_link_pending"
     }
   ],
   "failures": []
