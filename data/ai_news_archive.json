@@ -1,7 +1,133 @@
 {
   "version": 1,
-  "updated_at": "2026-09-30T22:35:56.773704+00:00",
+  "updated_at": "2026-10-01T06:32:36.203300+00:00",
   "articles": [
+    {
+      "path": "news/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b.html",
+      "created_at": "2026-10-01T06:32:36.203300+00:00",
+      "source": {
+        "title": "AI voice startup ElevenLabs doubles valuation to $22B",
+        "url": "https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-09-30T18:23:57+00:00",
+        "display_date": "Sep 30, 2026",
+        "category": "AI Business",
+        "description": "The $300 million employee tender was co-led by Wellington and T. Rowe Price.",
+        "related": {
+          "title": "Evaluate ElevenLabs for this workflow",
+          "url": "partner-offers/elevenlabs-ai-voice.html",
+          "offer_id": "elevenlabs"
+        }
+      },
+      "article": {
+        "headline": "ElevenLabs Doubles Valuation to $22B, Boosts Employee Equity",
+        "summary": "AI voice startup ElevenLabs has doubled its valuation to $22 billion, offering employees a chance to cash out equity. The move is part of a trend where AI startups use employee liquidity as a retention tool.",
+        "facts": [
+          {
+            "statement": "ElevenLabs doubles valuation to $22B",
+            "evidence": "AI voice startup ElevenLabs doubles valuation to $22B"
+          },
+          {
+            "statement": "Employees can cash out vested equity at $22B valuation",
+            "evidence": "employees to cash out a portion of their vested equity at a $22 billion valuation"
+          },
+          {
+            "statement": "Tender offer co-led by Wellington and T. Rowe Price",
+            "evidence": "The transaction was co-led by Wellington and T. Rowe Price"
+          }
+        ],
+        "why_it_matters": "ElevenLabs' doubling of its valuation highlights the rapid growth of AI startups, with employee equity offers becoming a key tool for retention. This trend reflects the intense competition in the AI sector and the value placed on talent.",
+        "elephant_take": "🐘 鼋 ElevenLabs is cashing out employee equity at $22B, but this isn't just about money—it's about keeping top talent in a hyper-competitive AI race.",
+        "caveat": "The valuation is based on investor confidence, not yet public company metrics.",
+        "who_should_care": [
+          "AI investors",
+          "Tech startups",
+          "Employee retention strategies"
+        ],
+        "what_to_do": [
+          "Monitor AI startup valuations",
+          "Consider employee equity programs",
+          "Stay updated on tech trends"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/elevenlabs-ai-voice.html",
+        "review_title": "Evaluate ElevenLabs for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20AI%20voice%20startup%20ElevenLabs%20doubles%20valuation%20to%20%2422B%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "elevenlabs"
+      }
+    },
+    {
+      "path": "news/2026/09/30/google-drops-gems-for-skills-joining-openai-and-anthropic-in-the-shift-to-agent-re.html",
+      "created_at": "2026-10-01T06:32:36.203300+00:00",
+      "source": {
+        "title": "Google drops Gems for Skills, joining OpenAI and Anthropic in the shift to agent-ready prompt formats",
+        "url": "https://the-decoder.com/google-drops-gems-for-skills-joining-openai-and-anthropic-in-the-shift-to-agent-ready-prompt-formats/",
+        "source": "The Decoder",
+        "published_at": "2026-09-30T18:16:04+00:00",
+        "display_date": "Sep 30, 2026",
+        "category": "Models & LLMs",
+        "description": "Google is replacing Gems with \"Skills\" in Gemini chat. Skills are detailed, reusable prompts that users invoke by typing \"/\" or that Gemini runs automatically. The format is based on an open standard from Anthropic. Gems will be phased out starting in November, with existing ones migrating automatically. The article Google drops Gems for Skills, joining OpenAI and Anthropic in the shift to agent-ready prompt formats appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Google Shifts to Agent-Ready Prompt Formats",
+        "summary": "Google is replacing its Gems with 'Skills' in Gemini chat, aligning with OpenAI and Anthropic's moves toward agent-ready prompt formats. Skills allow users to save and invoke detailed prompts for specific tasks, with support for text, PDFs, and images.",
+        "facts": [
+          {
+            "statement": "Google is replacing Gems with 'Skills' in Gemini chat.",
+            "evidence": "Google drops Gems for Skills, joining OpenAI and Anthropic in the shift to agent-ready prompt formats"
+          },
+          {
+            "statement": "Skills are detailed prompts for specific tasks that the AI can help write and refine.",
+            "evidence": "Skills are detailed prompts for specific tasks that the AI can help write and refine"
+          },
+          {
+            "statement": "The Skills format originated with Anthropic and is available as an open standard.",
+            "evidence": "The Skills format originated with Anthropic and is available as an open standard"
+          }
+        ],
+        "why_it_matters": "This shift reflects a broader industry trend toward more structured, reusable prompts for AI agents. By adopting a standardized format, Google is aligning with other major players like OpenAI and Anthropic, signaling a move towards more sophisticated AI interaction models.",
+        "elephant_take": "🐘 鼋 Google's move to Skills is a subtle but significant step toward more structured AI interactions. It’s not just about replacing one feature with another, but about rethinking how users and AI collaborate on complex tasks.",
+        "caveat": "The transition from Gems to Skills may take time for users to adapt, and the long-term impact of this shift remains to be seen.",
+        "who_should_care": [
+          "AI developers",
+          "Tech companies",
+          "Users of Gemini chat"
+        ],
+        "what_to_do": [
+          "Review the new Skills format to understand how it works",
+          "Test the new features with a small group of users before full rollout",
+          "Monitor the transition period for any issues or user feedback"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Google%20drops%20Gems%20for%20Skills%2C%20joining%20OpenAI%20and%20Anthropic%20in%20the%20shift%20to%20agent-ready%20prompt%20formats%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/09/30/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasone.html",
       "created_at": "2026-09-30T22:35:56.773704+00:00",
@@ -2599,6 +2725,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-01T06:32:36.203300+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-01T06:32:36.203300+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002636/ai-execs-trump-self-policing-deal-comments",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-01T06:32:36.203300+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/30/the-ugly-economics-of-consumer-ai/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-01T06:32:36.203300+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-09-30T22:35:56.773704+00:00",
@@ -2812,30 +2962,6 @@
       "url": "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
       "at": "2026-09-27T17:16:24.739220+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-09-27T17:16:24.739220+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/two-years-of-openai-academy",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-09-27T17:16:24.739220+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-09-27T17:16:24.739220+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/",
-      "reason": "quality gate rejected draft: hype language is present",
-      "at": "2026-09-27T12:25:14.210649+00:00",
       "pipeline_version": "2"
     }
   ]

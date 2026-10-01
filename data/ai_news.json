@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-09-30T22:35:52.034479+00:00",
+  "updated_at": "2026-10-01T06:32:32.204207+00:00",
   "items": [
+    {
+      "title": "Google releases Gemini 4 Argon, called its most powerful model yet",
+      "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-09-30T23:43:07+00:00",
+      "display_date": "Sep 30, 2026",
+      "category": "Models & LLMs",
+      "description": "Google has released its latest Gemini model, marketing it as a workhorse for coding and cybersecurity work.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "Google Gemini 4 Argon closes the gap with OpenAI and Anthropic but doesn't take a clear lead",
       "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/",
@@ -99,7 +113,8 @@
         "title": "Evaluate ElevenLabs for this workflow",
         "url": "partner-offers/elevenlabs-ai-voice.html",
         "offer_id": "elevenlabs"
-      }
+      },
+      "archive_url": "news/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b.html"
     },
     {
       "title": "Google drops Gems for Skills, joining OpenAI and Anthropic in the shift to agent-ready prompt formats",
@@ -113,7 +128,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/09/30/google-drops-gems-for-skills-joining-openai-and-anthropic-in-the-shift-to-agent-re.html"
     },
     {
       "title": "Reddit is killing RSS feeds and ending public API access because of AI bots",
@@ -197,20 +213,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Destro AI’s secret sauce is getting robots and humans on the same page",
-      "url": "https://techcrunch.com/2026/09/30/destro-ais-secret-sauce-is-getting-robots-and-humans-on-the-same-page/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-09-30T16:00:00+00:00",
-      "display_date": "Sep 30, 2026",
-      "category": "AI Tools & Products",
-      "description": "\"One of the biggest reasons we are winning against robotics companies is because we are not a robotics company.\"",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
       }
     },
     {
@@ -326,21 +328,6 @@
         "url": "ai-tool-finder.html",
         "offer_id": ""
       }
-    },
-    {
-      "title": "Elon Musk’s AI-powered Grokipedia is updating again",
-      "url": "https://www.theverge.com/tech/1002448/elon-musk-grokipedia-ai-updating-again",
-      "source": "The Verge AI",
-      "published_at": "2026-09-30T09:50:13+00:00",
-      "display_date": "Sep 30, 2026",
-      "category": "AI Tools & Products",
-      "description": "Grokipedia, the AI-powered online encyclopedia from SpaceXAI, appears to be updating articles once again after a months-long pause. In August, Lawfare reported that articles on Grokipedia hadn't reviewed edits since April, but the platform's live updates site is now showing various recent changes to pages - though as I write this, many are just a […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/09/29/elon-musk-s-ai-powered-grokipedia-is-updating-again.html"
     },
     {
       "title": "Sam Altman says OpenAI won’t go public until its models are safe",
@@ -513,6 +500,20 @@
         "offer_id": "rank-prompt"
       },
       "archive_url": "news/2026/09/18/new-experts-join-google-s-ai-economy-team.html"
+    },
+    {
+      "title": "LLMs respond differently to harmful prompts when AI watermarking is used",
+      "url": "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/",
+      "source": "Ars Technica AI",
+      "published_at": "2026-09-17T18:33:13+00:00",
+      "display_date": "Sep 17, 2026",
+      "category": "Models & LLMs",
+      "description": "SynthID can cause models to follow harmful instructions they would otherwise refuse.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
     }
   ]
 }
