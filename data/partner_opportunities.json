@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-02",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 475,
+    "total": 474,
     "approved_link_pending": 11,
     "existing_active": 38,
     "not_qualified": 15,
-    "policy_review_required": 23,
+    "policy_review_required": 22,
     "program_paused": 1,
     "ready_for_owner_application": 387
   },
@@ -176,7 +176,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 31,
+      "review_days": 29,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -1192,7 +1192,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 12,
+      "review_days": 13,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1955,6 +1955,64 @@
           "paid_search_restricted": true,
           "coupon_restricted": true,
           "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:marketing360",
+      "network": "partnerstack",
+      "name": "Marketing 360®",
+      "slug": "marketing360",
+      "description": "Marketing 360® delivers an all-in-one platform for digital marketing and marketing services to help small businesses grow their brand. Trusted by over 15,000 SMBs, we are excited to work with you to help small businesses grow and local communities glow!",
+      "offer": "Earn 10% on every customer purchase!",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Artificial Intelligence",
+        "Digital Advertising",
+        "Hot",
+        "Marketing",
+        "Office Software",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/marketing360?company=marketing360&gref=marketplace",
+      "terms_url": "https://www.marketing360.com/marketing-360-referral-partner-revenue-share-agreement",
+      "website": "https://www.marketing360.com/",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-denied",
+      "terms_required": false,
+      "partnership_key": "part_IvU53CXerqa84r",
+      "score": 85,
+      "relevance_matches": [
+        "artificial intelligence",
+        "marketing",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -3308,71 +3366,6 @@
       }
     },
     {
-      "id": "partnerstack:vidaglobal",
-      "network": "partnerstack",
-      "name": "Vida Global Inc.",
-      "slug": "vidaglobal",
-      "description": "Vida.io’s AI Phone Agents give small, medium, and large businesses true 24/7 support across calls, SMS, email, and web chat — relaying information, handling scheduling, screening and transferring calls, and conversing naturally in 10 languages.",
-      "offer": "Earn 10% of net revenue on new referral for two years!",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Ambassadors",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Hot",
-        "Hubspot integrated",
-        "Influencers",
-        "Managed Service Provider",
-        "Marketing",
-        "Media Partners",
-        "Publishers",
-        "Referral Partners",
-        "Resellers",
-        "Sales",
-        "System Integrator",
-        "Trusted",
-        "Value Added Reseller"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vidaglobal?company=vidaglobal&gref=marketplace",
-      "terms_url": "https://vida.io/terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 13,
-      "source": "https://market.partnerstack.com/",
-      "score": 85,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "customer service",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:vistasocial",
       "network": "partnerstack",
       "name": "Vista Social",
@@ -4291,62 +4284,6 @@
       }
     },
     {
-      "id": "partnerstack:marketing360",
-      "network": "partnerstack",
-      "name": "Marketing 360®",
-      "slug": "marketing360",
-      "description": "Marketing 360® delivers an all-in-one platform for digital marketing and marketing services to help small businesses grow their brand. Trusted by over 15,000 SMBs, we are excited to work with you to help small businesses grow and local communities glow!",
-      "offer": "Earn 10% on every customer purchase!",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Artificial Intelligence",
-        "Digital Advertising",
-        "Marketing",
-        "Office Software",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/marketing360?company=marketing360&gref=marketplace",
-      "terms_url": "https://www.marketing360.com/marketing-360-referral-partner-revenue-share-agreement",
-      "website": "https://www.marketing360.com/",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "approved": false,
-      "authenticated_relationship": true,
-      "relationship_status": "application-denied",
-      "terms_required": false,
-      "partnership_key": "part_IvU53CXerqa84r",
-      "score": 80,
-      "relevance_matches": [
-        "artificial intelligence",
-        "marketing",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:murfai",
       "network": "partnerstack",
       "name": "Murf AI",
@@ -4823,58 +4760,6 @@
       }
     },
     {
-      "id": "partnerstack:synder",
-      "network": "partnerstack",
-      "name": "Synder",
-      "slug": "synder",
-      "description": "Synder is powerful automation software that enables easy accounting for e-commerce businesses and accounting firms. Automate reconciliation of sales from e-commerce systems with accounting for always accurate reporting.",
-      "offer": "Up to 20% recurring commission for every paid referral",
-      "tags": [
-        "Accounting",
-        "Affiliates",
-        "Artificial Intelligence",
-        "Commerce",
-        "Hot",
-        "Referral Partners",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/synder?company=synder&gref=marketplace",
-      "terms_url": "https://synder.com/affiliate-terms-and-conditions/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 2,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "artificial intelligence",
-        "automation",
-        "e-commerce",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": 7
-      }
-    },
-    {
       "id": "partnerstack:thinkific6979",
       "network": "partnerstack",
       "name": "Thinkific",
@@ -4926,6 +4811,69 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:vidaglobal",
+      "network": "partnerstack",
+      "name": "Vida Global Inc.",
+      "slug": "vidaglobal",
+      "description": "Vida.io’s AI Phone Agents give small, medium, and large businesses true 24/7 support across calls, SMS, email, and web chat — relaying information, handling scheduling, screening and transferring calls, and conversing naturally in 10 languages.",
+      "offer": "Earn 10% of net revenue on new referral for two years!",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Ambassadors",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Hubspot integrated",
+        "Influencers",
+        "Managed Service Provider",
+        "Marketing",
+        "Media Partners",
+        "Publishers",
+        "Referral Partners",
+        "Resellers",
+        "Sales",
+        "System Integrator",
+        "Value Added Reseller"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vidaglobal?company=vidaglobal&gref=marketplace",
+      "terms_url": "https://vida.io/terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 13,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "customer service",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -6189,10 +6137,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -6369,7 +6325,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 517,
+      "review_days": 526,
       "source": "https://market.partnerstack.com/",
       "score": 76,
       "relevance_matches": [
@@ -7053,6 +7009,56 @@
       }
     },
     {
+      "id": "partnerstack:synder",
+      "network": "partnerstack",
+      "name": "Synder",
+      "slug": "synder",
+      "description": "Synder is powerful automation software that enables easy accounting for e-commerce businesses and accounting firms. Automate reconciliation of sales from e-commerce systems with accounting for always accurate reporting.",
+      "offer": "Up to 20% recurring commission for every paid referral",
+      "tags": [
+        "Accounting",
+        "Affiliates",
+        "Artificial Intelligence",
+        "Commerce",
+        "Referral Partners"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/synder?company=synder&gref=marketplace",
+      "terms_url": "https://synder.com/affiliate-terms-and-conditions/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 2,
+      "source": "https://market.partnerstack.com/",
+      "score": 75,
+      "relevance_matches": [
+        "artificial intelligence",
+        "automation",
+        "e-commerce",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 7
+      }
+    },
+    {
       "id": "partnerstack:testgorilla",
       "network": "partnerstack",
       "name": "TestGorilla",
@@ -7278,7 +7284,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -8875,7 +8881,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 107,
+      "review_days": 105,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -9167,7 +9173,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 89,
+      "review_days": 174,
       "source": "https://market.partnerstack.com/",
       "score": 68,
       "relevance_matches": [
@@ -9465,7 +9471,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10053,7 +10059,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -10245,7 +10251,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11367,7 +11373,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11840,7 +11846,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 58,
+      "review_days": 56,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11923,6 +11929,61 @@
           "disclosure_required": false
         },
         "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:servicem8",
+      "network": "partnerstack",
+      "name": "ServiceM8",
+      "slug": "servicem8",
+      "description": "The app for trade contractors & home services, with everything in one place — job cards, scheduling, time tracking, CRM, job history, invoicing & payments. ServiceM8 helps small businesses cut paperwork, get jobs done & provide amazing customer service.",
+      "offer": "Get 80% on the first 12 months for every referred subscriber.",
+      "tags": [
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Hot",
+        "Marketing",
+        "Office Software",
+        "Other",
+        "Sales",
+        "Trusted",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/servicem8?company=servicem8&gref=marketplace",
+      "terms_url": "https://www.servicem8.com/affiliate-program-agreement",
+      "website": "https://www.servicem8.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "customer service",
+        "marketing",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": 90
       }
     },
     {
@@ -12262,7 +12323,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 121,
+      "review_days": 123,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12649,7 +12710,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13230,7 +13291,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 66,
       "relevance_matches": [
@@ -14543,6 +14604,50 @@
       }
     },
     {
+      "id": "direct:postly",
+      "network": "direct-vendor",
+      "platform": "Direct vendor",
+      "name": "Postly",
+      "slug": "postly",
+      "description": "Postly review - AI social media management",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://postly.ai/earn",
+      "terms_url": "https://postly.ai/earn",
+      "website": "https://postly.ai",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://postly.ai",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "content"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "direct:postwise",
       "network": "direct-vendor",
       "platform": "Direct vendor",
@@ -15324,7 +15429,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 50,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -15708,7 +15813,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 83,
+      "review_days": 85,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17583,7 +17688,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 61,
+      "review_days": 56,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18134,59 +18239,6 @@
           "disclosure_required": false
         },
         "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:servicem8",
-      "network": "partnerstack",
-      "name": "ServiceM8",
-      "slug": "servicem8",
-      "description": "The app for trade contractors & home services, with everything in one place — job cards, scheduling, time tracking, CRM, job history, invoicing & payments. ServiceM8 helps small businesses cut paperwork, get jobs done & provide amazing customer service.",
-      "offer": "Get 80% on the first 12 months for every referred subscriber.",
-      "tags": [
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Marketing",
-        "Office Software",
-        "Other",
-        "Sales",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/servicem8?company=servicem8&gref=marketplace",
-      "terms_url": "https://www.servicem8.com/affiliate-program-agreement",
-      "website": "https://www.servicem8.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "customer service",
-        "marketing",
-        "productivity",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
-        "cookie_days": 90
       }
     },
     {
@@ -18808,7 +18860,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 26,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19492,62 +19544,6 @@
       }
     },
     {
-      "id": "partnerstack:digittechnologiesinc",
-      "network": "partnerstack",
-      "name": "Digit",
-      "slug": "digittechnologiesinc",
-      "description": "Digit is the modern ERP built for manufacturers and distributors. We unify production, inventory, warehouse, and operations into one AI native platform that deploys in days, not months. Digit integrates natively with QuickBooks, Xero, Shopify, and more, making it the fastest path from spreadsheets and legacy systems to real operational control. Partners earn recurring revenue referring a product their clients actually want to use.",
-      "offer": "Earn 25% lifetime revenue share referring Digit to manufacturers and distributors ready to ditch spreadsheets and legacy ERPs.",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Analytics",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Commerce",
-        "ERP",
-        "Media Partners",
-        "Other",
-        "Publishers",
-        "Supply Chain & Logistics",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/digittechnologiesinc?company=digittechnologiesinc&gref=marketplace",
-      "terms_url": "https://www.digit-software.com/legal/partner-program-terms-and-conditions",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 20,
-      "source": "https://market.partnerstack.com/",
-      "score": 59,
-      "relevance_matches": [
-        "ai",
-        "analytics",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": 400
-      }
-    },
-    {
       "id": "partnerstack:fastmail",
       "network": "partnerstack",
       "name": "Fastmail",
@@ -19639,14 +19635,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": true,
-          "coupon_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 180
+        "cookie_days": null
       }
     },
     {
@@ -20726,7 +20722,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 21,
+      "review_days": 20,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21362,57 +21358,10 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 11,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:velory",
-      "network": "partnerstack",
-      "name": "Velory",
-      "slug": "velory",
-      "description": "Velory automates IT Lifecycle Management, enabling secure, circular IT procurement and management. Companies can efficiently handle IT assets while empowering employees to choose the best equipment, boosting productivity and satisfaction from day one.",
-      "offer": "Earn a 20% commission on every signed customer you refer, paid throughout their first year.",
-      "tags": [
-        "Affiliates",
-        "IT Management",
-        "Office Software",
-        "Referral Partners",
-        "Resellers"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/velory?company=velory&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1QG4xlzLIJ0qyNQGDNpW0fxfS6T163VsW/view",
-      "website": "https://www.velory.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 57,
-      "relevance_matches": [
-        "productivity",
         "software"
       ],
       "already_active": false,
@@ -21940,15 +21889,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": true,
+          "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
       }
     },
     {
