@@ -84,6 +84,21 @@
       ]
     },
     {
+      "offer_id": "pinecone",
+      "name": "AO Generic Intent - Pinecone",
+      "eligible": false,
+      "status": "blocked_terms_unverified",
+      "landing_url": "https://artificial.one/partner-offers/pinecone-vector-database.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-pinecone",
+      "keywords": [
+        "developer infrastructure",
+        "build retrieval augmented generation",
+        "add semantic search to an application"
+      ],
+      "negative_keywords": [
+        "Pinecone"
+      ]
+    },
+    {
       "offer_id": "volza",
       "name": "AO Generic Intent - Volza",
       "eligible": false,
@@ -97,21 +112,6 @@
       ],
       "negative_keywords": [
         "Volza"
-      ]
-    },
-    {
-      "offer_id": "pinecone",
-      "name": "AO Generic Intent - Pinecone",
-      "eligible": false,
-      "status": "blocked_terms_unverified",
-      "landing_url": "https://artificial.one/partner-offers/pinecone-vector-database.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-pinecone",
-      "keywords": [
-        "developer infrastructure",
-        "build retrieval augmented generation",
-        "add semantic search to an application"
-      ],
-      "negative_keywords": [
-        "Pinecone"
       ]
     },
     {
