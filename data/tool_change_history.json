@@ -1,10 +1,28 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 63,
+    "successful_checks": 57,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-02",
+      "id": "c0e74b4a4fe44300",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://reflect.app",
+      "tool_id": "reflect",
+      "tool_name": "Reflect"
+    },
+    {
+      "detected_on": "2026-10-02",
+      "id": "52ab1641f993a315",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://thoughtspot.com",
+      "tool_id": "thoughtspot",
+      "tool_name": "ThoughtSpot"
+    },
     {
       "detected_on": "2026-10-01",
       "id": "684174d0c5ffadb5",
@@ -376,6 +394,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-02",
   "version": 1
 }
