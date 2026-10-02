@@ -1,7 +1,80 @@
 {
   "version": 1,
-  "updated_at": "2026-10-02T06:09:18.153411+00:00",
+  "updated_at": "2026-10-02T13:08:20.796841+00:00",
   "items": [
+    {
+      "title": "Three firings and a fourth departure shake up OpenAI's safety team",
+      "url": "https://the-decoder.com/three-firings-and-a-fourth-departure-shake-up-openais-safety-team/",
+      "source": "The Decoder",
+      "published_at": "2026-10-02T12:51:08+00:00",
+      "display_date": "Oct 02, 2026",
+      "category": "Research",
+      "description": "OpenAI has parted ways with three researchers who allegedly leaked confidential information to an outside AI safety organization, according to the Wall Street Journal. The article Three firings and a fourth departure shake up OpenAI's safety team appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      },
+      "archive_url": "news/2026/10/02/three-firings-and-a-fourth-departure-shake-up-openai-s-safety-team.html"
+    },
+    {
+      "title": "AI beats licensed accountants on speed and accuracy, but still can't close the books without supervision",
+      "url": "https://the-decoder.com/ai-beats-licensed-accountants-on-speed-and-accuracy-but-still-cant-close-the-books-without-supervision/",
+      "source": "The Decoder",
+      "published_at": "2026-10-02T11:15:24+00:00",
+      "display_date": "Oct 02, 2026",
+      "category": "Models & LLMs",
+      "description": "According to a Mercor study, current AI models now outperform licensed CPAs on structured accounting tasks in both speed and accuracy. Eighteen months ago, they still lagged far behind. On the more demanding APEX Benchmark, though, no model fully completes all the tasks. Without human oversight, AI still can't close the books on its own. The article AI beats licensed accountants on speed and accuracy, but still can't close the books without supervision appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/02/ai-beats-licensed-accountants-on-speed-and-accuracy-but-still-can-t-close-the-book.html"
+    },
+    {
+      "title": "AI music maker Suno now generates spoken words",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1003925/suno-speech-ai-voice-feature-beta-availability",
+      "source": "The Verge AI",
+      "published_at": "2026-10-02T09:42:19+00:00",
+      "display_date": "Oct 02, 2026",
+      "category": "AI Tools & Products",
+      "description": "Suno is branching out from the world of AI music, launching a new feature that generates spoken voices based on scripts or prompted descriptions. Speech is now available in public beta across Suno's web and mobile platforms, and allows you to simultaneously generate voiceovers and background music to accompany them. \"Music will always be at […]",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Microsoft AI releases new transcription and text-to-speech models for voice agents",
+      "url": "https://the-decoder.com/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents/",
+      "source": "The Decoder",
+      "published_at": "2026-10-02T09:20:39+00:00",
+      "display_date": "Oct 02, 2026",
+      "category": "Models & LLMs",
+      "description": "Microsoft AI has released MAI-Transcribe-2-Streaming, a new model for real-time transcription. The article Microsoft AI releases new transcription and text-to-speech models for voice agents appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate ElevenLabs for this workflow",
+        "url": "partner-offers/elevenlabs-ai-voice.html",
+        "offer_id": "elevenlabs"
+      },
+      "archive_url": "news/2026/10/02/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents.html"
+    },
+    {
+      "title": "Businesses are using more AI and paying less for it, Ramp AI Index shows",
+      "url": "https://the-decoder.com/businesses-are-using-more-ai-and-paying-less-for-it-ramp-ai-index-shows/",
+      "source": "The Decoder",
+      "published_at": "2026-10-02T09:09:21+00:00",
+      "display_date": "Oct 02, 2026",
+      "category": "AI Tools & Products",
+      "description": "US companies are spending less on AI, according to the latest Ramp AI Index from Ramp economist Ara Kharazian. The article Businesses are using more AI and paying less for it, Ramp AI Index shows appeared first on The Decoder .",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
     {
       "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
       "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
@@ -185,7 +258,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/10/01/anthropic-brings-claude-to-civilian-agencies-as-its-fight-with-the-pentagon-drags.html"
     },
     {
       "title": "Photon held a funeral for mobile apps. Now it has $4.5M to help replace them with agents.",
@@ -195,49 +269,6 @@
       "display_date": "Oct 01, 2026",
       "category": "AI Business",
       "description": "The startup helps developers build AI agents that work over iMessage, SMS/RCS, email, and other messaging platforms. It's a bet that consumers will increasingly use agents instead of downloading apps.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Security startup finds more than 13,000 internal company screenshots that AI agents uploaded publicly",
-      "url": "https://the-decoder.com/security-startup-finds-more-than-13000-internal-company-screenshots-that-ai-agents-uploaded-publicly/",
-      "source": "The Decoder",
-      "published_at": "2026-10-01T13:19:33+00:00",
-      "display_date": "Oct 01, 2026",
-      "category": "Policy & Safety",
-      "description": "AI agents quietly posted more than 13,000 internal screenshots from 343 organizations, including Fortune 500 companies, to public GitHub repos. Because the platform didn't offer a protected way to upload them, the agents came up with a workaround on their own. The exposed images showed customer data, login credentials, and details about unreleased products. The article Security startup finds more than 13,000 internal company screenshots that AI agents uploaded publicly appeared first on The Deco",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/01/security-startup-finds-more-than-13-000-internal-company-screenshots-that-ai-agent.html"
-    },
-    {
-      "title": "AI beats Stratego's greatest player, ending one of the last human strongholds in board games",
-      "url": "https://the-decoder.com/ai-beats-strategos-greatest-player-ending-one-of-the-last-human-strongholds-in-board-games/",
-      "source": "The Decoder",
-      "published_at": "2026-10-01T12:58:02+00:00",
-      "display_date": "Oct 01, 2026",
-      "category": "Research",
-      "description": "The AI system Ataraxos has decisively beaten the best Stratego player of all time. The board game is a tough test for AI because both sides set up their pieces face down. Google Deepmind fell short in 2023 despite a multimillion-dollar budget. Researchers from Carnegie Mellon, NYU, Stanford, and MIT built Ataraxos for less than $8,000. The article AI beats Stratego's greatest player, ending one of the last human strongholds in board games appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "OpenAI says it stopped a campaign to steal its models' reasoning, but the trick still worked on Azure",
-      "url": "https://the-decoder.com/openai-says-it-stopped-a-campaign-to-steal-its-models-reasoning-but-the-trick-still-worked-on-azure/",
-      "source": "The Decoder",
-      "published_at": "2026-10-01T12:05:49+00:00",
-      "display_date": "Oct 01, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI says it stopped a coordinated campaign in which more than 15,000 accounts tried to copy the hidden reasoning of its models. The company ties part of the activity to people connected to Moonshot AI. But researchers found that the same attack kept working on Microsoft Azure for weeks, even against the new GPT-6 Astra. So far, OpenAI's protections don't seem to extend to the cloud platforms that also sell its models. The article OpenAI says it stopped a campaign to steal its models' reasonin",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -256,77 +287,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Google Gemini 4 Argon closes the gap with OpenAI and Anthropic but doesn't take a clear lead",
-      "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/",
-      "source": "The Decoder",
-      "published_at": "2026-09-30T22:06:30+00:00",
-      "display_date": "Sep 30, 2026",
-      "category": "Models & LLMs",
-      "description": "Gemini 4 Argon is Google's first frontier model in over seven months. It matches GPT-6 Astra in independent testing but can't keep up with Anthropic's Claude Opus 5.5. The per-token price is low, but Argon burns through more than twice as many tokens per task as Astra. Select testers get access first, with the API and paid tiers following later. The article Google Gemini 4 Argon closes the gap with OpenAI and Anthropic but doesn't take a clear lead appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Google announces Gemini 4 and says it’s so capable that only ‘trusted cyber defenders’ can have it right now",
-      "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
-      "source": "The Verge AI",
-      "published_at": "2026-09-30T20:41:41+00:00",
-      "display_date": "Sep 30, 2026",
-      "category": "Models & LLMs",
-      "description": "Google today revealed its next AI frontier model, which it's calling Gemini 4 Argon. The new model delivers \"frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense,\" according to chief AI architect and Google DeepMind SVP Koray Kavukcuoglu. But the company is limiting access at […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "The AI Tamagotchis are coming",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices",
-      "source": "The Verge AI",
-      "published_at": "2026-09-30T20:19:43+00:00",
-      "display_date": "Sep 30, 2026",
-      "category": "AI Tools & Products",
-      "description": "While AI has made plenty of inroads on people's phones and computers, it's largely failed in dedicated devices. But over the next year, two major AI companies, Meta and OpenAI, will attempt to change that. And they're apparently betting on a similar path: testing appetites for physical hardware with their cutesy software agents. \"Hardware is […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "OpenAI and Synopsys team up to build an AI model that designs chips like a seasoned engineer",
-      "url": "https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/",
-      "source": "The Decoder",
-      "published_at": "2026-09-30T19:12:30+00:00",
-      "display_date": "Sep 30, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI and Synopsys are building GPT-Synopsys, a specialized AI model for chip design. It's meant to operate Synopsys' EDA tools like a seasoned engineer and optimize designs on its own. Early tests with semiconductor customers are already underway. OpenAI is likely using the partnership to advance its own chip development as well. The article OpenAI and Synopsys team up to build an AI model that designs chips like a seasoned engineer appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/09/30/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasone.html"
-    },
-    {
-      "title": "Here’s what AI leaders are saying about Trump’s new safety plan",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1002636/ai-execs-trump-self-policing-deal-comments",
-      "source": "The Verge AI",
-      "published_at": "2026-09-30T17:32:07+00:00",
-      "display_date": "Sep 30, 2026",
-      "category": "Policy & Safety",
-      "description": "After hosting a meal with Big Tech leaders on Tuesday, President Donald Trump responded to journalist questions about his artificial intelligence announcements in typical fashion. He said his previous claims regarding fears around AI safety being a \"hoax\" cooked up by Democrats no longer apply now that he's renamed the technology to \"Super Intelligence.\" He […]",
-      "related": {
-        "title": "Browse independent AI software buying guides",
-        "url": "buyers-guides.html",
-        "offer_id": ""
       }
     },
     {
@@ -508,6 +468,48 @@
       "display_date": "Sep 15, 2026",
       "category": "AI Tools & Products",
       "description": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Building AI to accelerate science and improve lives",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+      "source": "Google AI",
+      "published_at": "2026-09-15T16:00:00+00:00",
+      "display_date": "Sep 15, 2026",
+      "category": "AI Tools & Products",
+      "description": "B-roll showing diverse environments and people, including a teacher and students in a classroom and a patient with a doctor",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "AI for everyone in every language",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+      "source": "Google AI",
+      "published_at": "2026-09-15T16:00:00+00:00",
+      "display_date": "Sep 15, 2026",
+      "category": "AI Tools & Products",
+      "description": "Animation of several words in different languages slowly zooming past",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "New insights from Google’s AI & Economy ATLAS",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/",
+      "source": "Google AI",
+      "published_at": "2026-09-15T13:00:00+00:00",
+      "display_date": "Sep 15, 2026",
+      "category": "AI Tools & Products",
+      "description": "Text \"AI & Economy Atlas v1.0 2026\" with the Google G and a spinning globe illustration",
       "related": {
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
