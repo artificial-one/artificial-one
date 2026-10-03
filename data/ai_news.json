@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updated_at": "2026-10-02T22:32:21.315758+00:00",
+  "updated_at": "2026-10-03T05:42:48.832079+00:00",
   "items": [
+    {
+      "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
+      "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
+      "source": "Ars Technica AI",
+      "published_at": "2026-10-02T23:03:16+00:00",
+      "display_date": "Oct 02, 2026",
+      "category": "AI Tools & Products",
+      "description": "Meta says FDA isn't sufficient to Muse reading messages. Apple begs to differ.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/02/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents.html"
+    },
     {
       "title": "Sean Parker is rebuilding Stability AI around music",
       "url": "https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/",
@@ -115,7 +130,8 @@
         "title": "Browse independent AI software buying guides",
         "url": "buyers-guides.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/02/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it.html"
     },
     {
       "title": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
@@ -129,7 +145,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/10/02/openai-s-dot-agent-is-enterprise-software-that-can-also-order-your-dinner.html"
     },
     {
       "title": "It’s not AI anymore, it’s ‘super intelligence’ (according to the White House)",
@@ -143,7 +160,8 @@
         "title": "Browse independent AI software buying guides",
         "url": "buyers-guides.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/02/it-s-not-ai-anymore-it-s-super-intelligence-according-to-the-white-house.html"
     },
     {
       "title": "TechCrunch Disrupt 2026: Blackstone’s Jas Khaira on building the next generation of AI giants",
@@ -500,20 +518,6 @@
         "offer_id": "rank-prompt"
       },
       "archive_url": "news/2026/09/18/new-experts-join-google-s-ai-economy-team.html"
-    },
-    {
-      "title": "LLMs respond differently to harmful prompts when AI watermarking is used",
-      "url": "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/",
-      "source": "Ars Technica AI",
-      "published_at": "2026-09-17T18:33:13+00:00",
-      "display_date": "Sep 17, 2026",
-      "category": "Models & LLMs",
-      "description": "SynthID can cause models to follow harmful instructions they would otherwise refuse.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
     }
   ]
 }

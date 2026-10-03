@@ -1,7 +1,263 @@
 {
   "version": 1,
-  "updated_at": "2026-10-02T22:32:25.217662+00:00",
+  "updated_at": "2026-10-03T05:42:53.291906+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/02/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents.html",
+      "created_at": "2026-10-03T05:42:53.291906+00:00",
+      "source": {
+        "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
+        "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
+        "source": "Ars Technica AI",
+        "published_at": "2026-10-02T23:03:16+00:00",
+        "display_date": "Oct 02, 2026",
+        "category": "AI Tools & Products",
+        "description": "Meta says FDA isn't sufficient to Muse reading messages. Apple begs to differ.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Apple Restricts AI Access to User Data",
+        "summary": "Apple is adjusting privacy settings to limit AI agents' access to user data, following concerns over potential misuse. The changes aim to prevent third-party apps from accessing sensitive information like messages and browsing history.",
+        "facts": [
+          {
+            "statement": "Apple is changing macOS privacy settings to prevent third-party apps from misusing full-disk access.",
+            "evidence": "Apple changes full-disk access permissions to curb abuse from AI agents"
+          },
+          {
+            "statement": "Meta's AI agent Muse was found to have accessed user messages without explicit permission.",
+            "evidence": "Meta says FDA isn’t sufficient to Muse reading messages"
+          },
+          {
+            "statement": "Apple warns that full-disk access can expose users to risks by allowing apps to access sensitive data.",
+            "evidence": "Some developers are using Full Disk Access in ways that could put users at risk"
+          }
+        ],
+        "why_it_matters": "Apple's move highlights the growing concern over AI agents' ability to access and misuse user data. As these tools become more autonomous, the risks of privacy breaches increase, making it crucial for users to understand and control their data access.",
+        "elephant_take": "🐘 鼋 Apple is trying to stop AI agents from reading messages, but the tech isn't as simple as it seems. The debate over full-disk access shows how tricky it is to balance convenience with privacy in the age of AI.",
+        "caveat": "Apple's changes may not fully address the risks posed by AI agents, and the situation remains complex.",
+        "who_should_care": [
+          "Users concerned about data privacy",
+          "AI developers",
+          "Privacy advocates",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Review app permissions regularly",
+          "Be cautious with AI tools that request access to personal data",
+          "Report suspicious activity to tech companies",
+          "Stay informed about privacy changes in operating systems"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Apple%20changes%20full-disk%20access%20permissions%20to%20curb%20abuse%20from%20AI%20agents%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/02/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it.html",
+      "created_at": "2026-10-03T05:42:53.291906+00:00",
+      "source": {
+        "title": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
+        "url": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-02T17:56:00+00:00",
+        "display_date": "Oct 02, 2026",
+        "category": "Policy & Safety",
+        "description": "This week, the White House got nearly every major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them — to sign an AI safety pledge that President Donald Trump called “morally binding.” Trump also signed an executive order officially rebranding AI as “super intelligence,” and meanwhile, Meta and OpenAI are putting friendlier faces on their AI products, even as the biggest money […]",
+        "related": {
+          "title": "Browse independent AI software buying guides",
+          "url": "buyers-guides.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "AI Rebranding and Consumer Adoption Disparity",
+        "summary": "The article discusses the rebranding of AI as 'super intelligence' and highlights that only 2% of consumers are purchasing AI products, despite significant investment in enterprise applications.",
+        "facts": [
+          {
+            "statement": "AI is being rebranded as 'super intelligence'.",
+            "evidence": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it"
+          },
+          {
+            "statement": "Only 2% of consumers are purchasing AI products.",
+            "evidence": "only 2% of consumers are buying it"
+          },
+          {
+            "statement": "Major tech CEOs have signed an AI safety pledge.",
+            "evidence": "the White House got nearly every major tech CEO in one room"
+          }
+        ],
+        "why_it_matters": "The rebranding of AI as 'super intelligence' and the low consumer adoption rate highlight a disconnect between public perception and actual usage. This disparity may signal a need for greater consumer education and trust in AI technology.",
+        "elephant_take": "🐘 🦘 The rebranding of AI as 'super intelligence' is a strategic move, but the 2% consumer adoption rate suggests a gap between hype and reality. It's a reminder that not everyone is ready to embrace the future of tech.",
+        "caveat": "The data on consumer adoption may be skewed by enterprise-focused investments and marketing efforts.",
+        "who_should_care": [
+          "Tech companies",
+          "Policy makers",
+          "Consumers"
+        ],
+        "what_to_do": [
+          "Educate consumers about AI benefits",
+          "Monitor AI rebranding strategies",
+          "Invest in consumer trust-building initiatives"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "buyers-guides.html",
+        "review_title": "Browse independent AI software buying guides",
+        "elephant_url": "index.html?task=Explain%20what%20Call%20it%20AI%2C%20call%20it%20Super%20Intelligence%2C%20only%202%25%20of%20consumers%20are%20buying%20it%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/10/02/openai-s-dot-agent-is-enterprise-software-that-can-also-order-your-dinner.html",
+      "created_at": "2026-10-03T05:42:53.291906+00:00",
+      "source": {
+        "title": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
+        "source": "The Verge AI",
+        "published_at": "2026-10-02T17:56:00+00:00",
+        "display_date": "Oct 02, 2026",
+        "category": "AI Business",
+        "description": "It's a tale as old as last week: OpenAI's new agent platform, called Dots, is full of cute little guys who can do your bidding. But unlike the ultra-approachable Meta Muse, Dots feel very much like using workplace software that happens to be able to order you a burrito - emphasis on work. OpenAI announced […]",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "OpenAI's Dots: Enterprise AI with Dinner Ordering Capabilities",
+        "summary": "OpenAI's new agent platform, Dots, is designed for enterprise use and can perform tasks like ordering dinner, highlighting its blend of workplace software and personal convenience.",
+        "facts": [
+          {
+            "statement": "OpenAI's Dot agent is enterprise software that can also order your dinner",
+            "evidence": "OpenAI’s Dot agent is enterprise software that can also order your dinner"
+          },
+          {
+            "statement": "Dots are designed to function as business software with access to various applications",
+            "evidence": "Your Dot’s virtual machine can access apps like Blender and GIMP right off the bat"
+          },
+          {
+            "statement": "Dots are intended for enterprise users and are not freely available to all",
+            "evidence": "OpenAI is offering Dots first to users on its highest-tier accounts"
+          }
+        ],
+        "why_it_matters": "The introduction of OpenAI's Dots highlights the evolving role of AI in both professional and personal domains. While designed for enterprise use, the ability to perform tasks like ordering dinner suggests a broader integration of AI into daily life, raising questions about accessibility and user experience.",
+        "elephant_take": "🐘 鼋 Dots are the corporate version of a personal assistant—cute, functional, but still bound by the constraints of work. OpenAI is trying to balance utility with a touch of whimsy, but the emphasis on enterprise use suggests a clear target audience.",
+        "caveat": "The product's focus on enterprise users may limit its broader appeal and accessibility.",
+        "who_should_care": [
+          "Business professionals",
+          "Tech enthusiasts",
+          "AI developers",
+          "Enterprise software users"
+        ],
+        "what_to_do": [
+          "Evaluate the enterprise features of Dots for your business needs",
+          "Test the AI capabilities with personal use cases",
+          "Consider the pricing model for accessibility",
+          "Monitor OpenAI's rollout strategy for future updates"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%E2%80%99s%20Dot%20agent%20is%20enterprise%20software%20that%20can%20also%20order%20your%20dinner%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/02/it-s-not-ai-anymore-it-s-super-intelligence-according-to-the-white-house.html",
+      "created_at": "2026-10-03T05:42:53.291906+00:00",
+      "source": {
+        "title": "It’s not AI anymore, it’s ‘super intelligence’ (according to the White House)",
+        "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-02T17:48:16+00:00",
+        "display_date": "Oct 02, 2026",
+        "category": "Policy & Safety",
+        "description": "This week, the White House got nearly every major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them — to sign an AI safety pledge that President Donald Trump called “morally binding.” Trump also signed an executive order officially rebranding AI as “super intelligence,” and meanwhile, Meta and OpenAI are putting friendlier faces on their AI products, even as the biggest money […]",
+        "related": {
+          "title": "Browse independent AI software buying guides",
+          "url": "buyers-guides.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "White House Rebrands AI as 'Super Intelligence'",
+        "summary": "The White House has rebranded artificial intelligence as 'super intelligence' and is pushing for AI safety pledges from major tech companies.",
+        "facts": [
+          {
+            "statement": "The White House rebranded AI as 'super intelligence'.",
+            "evidence": "White House got nearly every major tech CEO in one room"
+          },
+          {
+            "statement": "Tech CEOs signed an AI safety pledge.",
+            "evidence": "nearly every major tech CEO in one room — Zuckerberg, Bezos, Musk"
+          },
+          {
+            "statement": "President Trump signed an executive order rebranding AI as 'super intelligence'.",
+            "evidence": "executive order officially rebranding ai as"
+          }
+        ],
+        "why_it_matters": "The White House's rebranding of AI as 'super intelligence' signals a shift in regulatory focus, potentially influencing how AI is developed and governed. The safety pledges by major tech companies may indicate a growing consensus on the need for responsible AI practices.",
+        "elephant_take": "🐘 鼋 The White House's rebranding of AI as 'super intelligence' is a clever PR move, but it doesn't change the reality that AI is still just AI. The safety pledges are more about optics than actual safeguards.",
+        "caveat": "The rebranding may be more about politics than technology, and the safety pledges may not reflect real progress in AI governance.",
+        "who_should_care": [
+          "Tech companies",
+          "Regulators",
+          "AI researchers"
+        ],
+        "what_to_do": [
+          "Monitor regulatory changes",
+          "Evaluate AI safety initiatives",
+          "Stay informed about tech trends"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "buyers-guides.html",
+        "review_title": "Browse independent AI software buying guides",
+        "elephant_url": "index.html?task=Explain%20what%20It%E2%80%99s%20not%20AI%20anymore%2C%20it%E2%80%99s%20%E2%80%98super%20intelligence%E2%80%99%20%28according%20to%20the%20White%20House%29%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music.html",
       "created_at": "2026-10-02T22:32:25.217662+00:00",
@@ -3553,6 +3809,12 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-03T05:42:53.291906+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-02T22:32:25.217662+00:00",
@@ -3784,12 +4046,6 @@
       "url": "https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-09-28T23:30:19.591513+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-09-28T14:26:47.202879+00:00",
       "pipeline_version": "2"
     }
   ]
