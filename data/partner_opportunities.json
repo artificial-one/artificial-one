@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-02",
+  "updated_at": "2026-10-03",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -8,10 +8,10 @@
     "total": 474,
     "approved_link_pending": 11,
     "existing_active": 38,
-    "not_qualified": 15,
-    "policy_review_required": 22,
+    "not_qualified": 14,
+    "policy_review_required": 21,
     "program_paused": 1,
-    "ready_for_owner_application": 387
+    "ready_for_owner_application": 389
   },
   "opportunities": [
     {
@@ -49,7 +49,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -718,7 +718,7 @@
         "Trusted"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/carbon6?company=carbon6&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/12nA_k7WmXQfJwB8Ci11yDu5S0naEFjnKYwVg8PChigg/edit?usp=sharing",
+      "terms_url": "https://docs.google.com/document/d/12MgjTfQfZzfAV5n1y-a4NirxT6CpEoNJj3qGM3_Azzw/edit?tab=t.0",
       "website": "",
       "waitlist": false,
       "archived": false,
@@ -1192,7 +1192,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 13,
+      "review_days": 12,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1439,10 +1439,12 @@
         "HR Software",
         "Hot",
         "IT Infrastructure",
+        "Internal Pick",
         "Marketing",
         "Office Software",
         "Payroll",
         "Publishers",
+        "Trending",
         "Trusted",
         "Vertical Industry Software"
       ],
@@ -1675,7 +1677,6 @@
         "Hot",
         "Internal Pick",
         "Marketing",
-        "Priority",
         "Sales",
         "System Integrator",
         "Trusted"
@@ -1875,7 +1876,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 50,
+      "review_days": 49,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2329,6 +2330,7 @@
         "Artificial Intelligence",
         "Collaboration & Productivity",
         "Content Management",
+        "Featured",
         "Governance, Risk, & Compliance",
         "HR Software",
         "Hot",
@@ -3366,6 +3368,71 @@
       }
     },
     {
+      "id": "partnerstack:vidaglobal",
+      "network": "partnerstack",
+      "name": "Vida Global Inc.",
+      "slug": "vidaglobal",
+      "description": "Vida.io’s AI Phone Agents give small, medium, and large businesses true 24/7 support across calls, SMS, email, and web chat — relaying information, handling scheduling, screening and transferring calls, and conversing naturally in 10 languages.",
+      "offer": "Earn 10% of net revenue on new referral for two years!",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Ambassadors",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Hot",
+        "Hubspot integrated",
+        "Influencers",
+        "Managed Service Provider",
+        "Marketing",
+        "Media Partners",
+        "Publishers",
+        "Referral Partners",
+        "Resellers",
+        "Sales",
+        "System Integrator",
+        "Trusted",
+        "Value Added Reseller"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vidaglobal?company=vidaglobal&gref=marketplace",
+      "terms_url": "https://vida.io/terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 13,
+      "source": "https://market.partnerstack.com/",
+      "score": 85,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "customer service",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:vistasocial",
       "network": "partnerstack",
       "name": "Vista Social",
@@ -3641,50 +3708,6 @@
           "coupon_restricted": false,
           "email_restricted": true,
           "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:cloro",
-      "network": "partnerstack",
-      "name": "cloro",
-      "slug": "cloro",
-      "description": "The search API for the AI era: one API for Google and every AI search engine. Real-time structured JSON for tracking visibility or powering search in your own product.",
-      "offer": "50.0% for every transaction, capped at $2,000",
-      "tags": [
-        "Artificial Intelligence",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/cloro?company=cloro&gref=marketplace",
-      "terms_url": "https://cloro.dev/affiliate-terms/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 81,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
-          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -4645,7 +4668,7 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
+          "paid_search_restricted": true,
           "coupon_restricted": false,
           "email_restricted": false,
           "incentive_restricted": false,
@@ -4811,69 +4834,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:vidaglobal",
-      "network": "partnerstack",
-      "name": "Vida Global Inc.",
-      "slug": "vidaglobal",
-      "description": "Vida.io’s AI Phone Agents give small, medium, and large businesses true 24/7 support across calls, SMS, email, and web chat — relaying information, handling scheduling, screening and transferring calls, and conversing naturally in 10 languages.",
-      "offer": "Earn 10% of net revenue on new referral for two years!",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Ambassadors",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Hubspot integrated",
-        "Influencers",
-        "Managed Service Provider",
-        "Marketing",
-        "Media Partners",
-        "Publishers",
-        "Referral Partners",
-        "Resellers",
-        "Sales",
-        "System Integrator",
-        "Value Added Reseller"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vidaglobal?company=vidaglobal&gref=marketplace",
-      "terms_url": "https://vida.io/terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 13,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "customer service",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -5569,7 +5529,6 @@
         "B2B Marketplaces",
         "Collaboration & Productivity",
         "Customer Service",
-        "Featured",
         "Hot",
         "Hubspot integrated",
         "IT Infrastructure",
@@ -5800,7 +5759,6 @@
         "HR Software",
         "Hosting Providers",
         "Hot",
-        "Internal Pick",
         "Marketing",
         "Office Software",
         "Publishers",
@@ -6207,8 +6165,8 @@
       "network": "partnerstack",
       "name": "Expertise AI",
       "slug": "expertiseai",
-      "description": "AI sales agent that replaces traditional stone age chatbots for HubSpot first businesses",
-      "offer": "20% revenue share for 3 years if the referral converts (≈$18K total on a $30K deal)",
+      "description": "AI agents and chatbot for sales and support",
+      "offer": "Join our affiliate program.",
       "tags": [
         "Artificial Intelligence",
         "Sales"
@@ -7147,62 +7105,6 @@
       }
     },
     {
-      "id": "partnerstack:zendesk",
-      "network": "partnerstack",
-      "name": "Zendesk",
-      "slug": "zendesk",
-      "description": "Zendesk is an omnichannel service platform that centralizes all your customer support tools in one place. Your conversations, customer data, tools, and integrations are built into a all from a single, customizable platform.",
-      "offer": "Earn 15% of commission for the first year!",
-      "tags": [
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "E-Commerce",
-        "HR",
-        "Hot",
-        "IT Management",
-        "Office Software",
-        "Other",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/zendesk?company=zendesk&gref=marketplace",
-      "terms_url": "https://www.zendesk.com/company/affiliate-partner/terms-and-conditions/",
-      "website": "https://www.zendesk.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": false,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 75,
-      "relevance_matches": [
-        "artificial intelligence",
-        "customer service",
-        "data",
-        "e-commerce",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:aura",
       "network": "partnerstack",
       "name": "Aura",
@@ -7329,6 +7231,7 @@
         "Commerce",
         "Content Management",
         "E-Commerce",
+        "Featured",
         "Hot",
         "Influencers",
         "Marketing",
@@ -8074,6 +7977,7 @@
         "IoT Management",
         "New",
         "Payroll",
+        "Priority",
         "Publishers",
         "Referral Partners",
         "Trending",
@@ -8272,7 +8176,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 15,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -9083,7 +8987,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 21,
+      "review_days": 19,
       "source": "https://market.partnerstack.com/",
       "score": 68,
       "relevance_matches": [
@@ -9400,6 +9304,61 @@
       }
     },
     {
+      "id": "partnerstack:xtiles",
+      "network": "partnerstack",
+      "name": "xTiles",
+      "slug": "xtiles",
+      "description": "xTiles is a visual productivity workspace for notes, tasks, and projects that helps people organize their work on a flexible drag-and-drop canvas rather than in rigid folders and documents. It’s especially loved by visual thinkers, including many neurodivergent users, and our AI Daily Brief and automations bring updates from connected tools into one clear, actionable view each day.",
+      "offer": "30% of every referred customer's first payment, monthly and annual plans",
+      "tags": [
+        "Collaboration & Productivity",
+        "Content Management",
+        "Design",
+        "Development",
+        "HR Software",
+        "Marketing",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/xtiles?company=xtiles&gref=marketplace",
+      "terms_url": "https://xtiles.app/en/affiliate/terms/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 68,
+      "relevance_matches": [
+        "ai",
+        "content",
+        "design",
+        "development",
+        "marketing",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:800",
       "network": "partnerstack",
       "name": "800.com",
@@ -9423,7 +9382,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 29,
+      "review_days": 28,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -10135,7 +10094,6 @@
         "Marketing",
         "New",
         "Other",
-        "Priority",
         "Publishers",
         "Sales",
         "Subnetworks",
@@ -10151,7 +10109,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10515,7 +10473,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10695,6 +10653,61 @@
       }
     },
     {
+      "id": "partnerstack:icontact",
+      "network": "partnerstack",
+      "name": "iContact",
+      "slug": "icontact",
+      "description": "iContact’s email marketing tools help small businesses grow their audience and design and automate beautiful, personalized emails. Trusted by thousands of small and independent businesses since 2003 to send billions of emails each month.",
+      "offer": "Earn up to 35% of our customers' monthly subscription for 12 months.",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Commerce",
+        "Coupon Partners",
+        "Digital Advertising",
+        "Hot",
+        "Hubspot integrated",
+        "Marketing",
+        "Publishers",
+        "Referral Partners",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/icontact?company=icontact&gref=marketplace",
+      "terms_url": "https://www.icontact.com/partner-agreement/",
+      "website": "https://www.icontact.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 56,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "design",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:inboxally",
       "network": "partnerstack",
       "name": "InboxAlly",
@@ -10809,13 +10822,11 @@
         "Collaboration & Productivity",
         "E-Commerce",
         "ERP",
-        "Hot",
         "Hubspot integrated",
         "Publishers",
         "Referral Partners",
         "Salesforce integrated",
         "Supply Chain & Logistics",
-        "Trusted",
         "Vertical Industry Software",
         "hot"
       ],
@@ -11345,6 +11356,62 @@
       }
     },
     {
+      "id": "partnerstack:pixelunion",
+      "network": "partnerstack",
+      "name": "Pixel Union Partner Program",
+      "slug": "pixelunion",
+      "description": "Promote industry leading premium Shopify themes and Shopify store management apps from Pixel Union & Out of the Sandbox today. Trusted by over 100,000 merchants and counting!",
+      "offer": "10% for aspirational affiliates",
+      "tags": [
+        "Affiliates",
+        "Commerce",
+        "Content Management",
+        "Design",
+        "E-Commerce",
+        "Hot",
+        "Marketing",
+        "Office Software",
+        "Publishers",
+        "Shopify integrated",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/pixelunion?company=pixelunion&gref=marketplace",
+      "terms_url": "https://pixelunion.net/pages/pixel-union-partner-program-terms-and-conditions",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 3,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "content",
+        "design",
+        "e-commerce",
+        "marketing",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:planday",
       "network": "partnerstack",
       "name": "Planday",
@@ -11641,7 +11708,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 67,
+      "review_days": 46,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12146,10 +12213,17 @@
       "description": "Signal House is an SMS and Voice API platform built as the best Twilio alternative, offering lower pricing, white-glove support, 24–48 hour A2P approvals, simpler APIs, and stronger deliverability.",
       "offer": "Earn 10%-25% Revenue Share - Avg ACV $25,000",
       "tags": [
+        "Affiliates",
+        "Agencies",
+        "Collaboration & Productivity",
         "Hosting Providers",
         "Hot",
         "Marketing",
+        "New",
         "Office Software",
+        "Publishers",
+        "Referral Partners",
+        "Resellers",
         "Sales",
         "Trusted",
         "Vertical Industry Software"
@@ -12168,6 +12242,7 @@
       "score": 67,
       "relevance_matches": [
         "marketing",
+        "productivity",
         "sales",
         "software"
       ],
@@ -12377,7 +12452,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12631,7 +12706,6 @@
         "HR",
         "HR Professional",
         "HR Software",
-        "Hot",
         "Hubspot integrated",
         "Marketing Professional",
         "PR Professional",
@@ -12639,7 +12713,6 @@
         "Sales Professional",
         "Salesforce integrated",
         "Shopify integrated",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/tellent?company=tellent&gref=marketplace",
@@ -13497,6 +13570,56 @@
           "disclosure_required": false
         },
         "cookie_days": 30
+      }
+    },
+    {
+      "id": "partnerstack:cloro",
+      "network": "partnerstack",
+      "name": "cloro",
+      "slug": "cloro",
+      "description": "The search API for the AI era: one API for Google and every AI search engine. Real-time structured JSON for tracking visibility or powering search in your own product.",
+      "offer": "",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Artificial Intelligence",
+        "Internal Pick",
+        "New",
+        "Publishers",
+        "Referral Partners",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/cloro?company=cloro&gref=marketplace",
+      "terms_url": "https://cloro.dev/affiliate-terms/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
       }
     },
     {
@@ -15700,7 +15823,6 @@
       "offer": "Earn $1500 for every new paying customer",
       "tags": [
         "Affiliates",
-        "Featured",
         "HR",
         "HR Software",
         "Hot",
@@ -16513,10 +16635,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -17661,40 +17791,37 @@
       }
     },
     {
-      "id": "partnerstack:icontact",
+      "id": "partnerstack:houzz",
       "network": "partnerstack",
-      "name": "iContact",
-      "slug": "icontact",
-      "description": "iContact’s email marketing tools help small businesses grow their audience and design and automate beautiful, personalized emails. Trusted by thousands of small and independent businesses since 2003 to send billions of emails each month.",
-      "offer": "Earn up to 35% of our customers' monthly subscription for 12 months.",
+      "name": "Houzz Pro",
+      "slug": "houzz",
+      "description": "Houzz Pro is an all-in-one solution for residential construction and design professionals to manage the entire project lifecycle.",
+      "offer": "Earn $100 per converted customer as an affiliate!",
       "tags": [
         "Affiliates",
-        "B2B Marketplaces",
-        "Commerce",
-        "Coupon Partners",
-        "Digital Advertising",
-        "Hubspot integrated",
+        "Agencies",
+        "Collaboration & Productivity",
+        "Hot",
         "Marketing",
-        "Publishers",
-        "Referral Partners",
-        "Sales"
+        "Salesforce integrated",
+        "Trusted"
       ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/icontact?company=icontact&gref=marketplace",
-      "terms_url": "https://www.icontact.com/partner-agreement/",
-      "website": "https://www.icontact.com",
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/houzz?company=houzz&gref=marketplace",
+      "terms_url": "https://www.houzz.com/termsOfUse",
+      "website": "",
       "waitlist": false,
       "archived": false,
       "links_enabled": true,
       "materials": true,
-      "sub_id_enabled": true,
+      "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 56,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
         "design",
         "marketing",
-        "sales"
+        "productivity"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -17708,7 +17835,7 @@
           "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
-          "disclosure_required": true
+          "disclosure_required": false
         },
         "cookie_days": null
       }
@@ -18056,7 +18183,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 115,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18113,7 +18240,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18130,60 +18257,6 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:pixelunion",
-      "network": "partnerstack",
-      "name": "Pixel Union Partner Program",
-      "slug": "pixelunion",
-      "description": "Promote industry leading premium Shopify themes and Shopify store management apps from Pixel Union & Out of the Sandbox today. Trusted by over 100,000 merchants and counting!",
-      "offer": "10% for aspirational affiliates",
-      "tags": [
-        "Affiliates",
-        "Commerce",
-        "Content Management",
-        "Design",
-        "E-Commerce",
-        "Marketing",
-        "Office Software",
-        "Publishers",
-        "Shopify integrated"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/pixelunion?company=pixelunion&gref=marketplace",
-      "terms_url": "https://pixelunion.net/pages/pixel-union-partner-program-terms-and-conditions",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 3,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "content",
-        "design",
-        "e-commerce",
-        "marketing",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
           "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
@@ -18216,7 +18289,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 26,
+      "review_days": 23,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -20616,11 +20689,16 @@
       "description": "Your back office, built to grow with you. From banking and treasury to payroll, accounting, and taxes—Every.io gives you everything you need to launch, operate, and scale with confidence.",
       "offer": "Business Banking: $3,500 Cash Signing Bonus + 3% Cashback",
       "tags": [
+        "Affiliates",
+        "Agencies",
         "ERP",
         "HR",
         "HR Software",
         "Hot",
+        "Internal Pick",
         "Payroll",
+        "Publishers",
+        "Referral Partners",
         "Trusted"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/every7437?company=every7437&gref=marketplace",
@@ -20747,54 +20825,6 @@
       }
     },
     {
-      "id": "partnerstack:houzz",
-      "network": "partnerstack",
-      "name": "Houzz Pro",
-      "slug": "houzz",
-      "description": "Houzz Pro is an all-in-one solution for residential construction and design professionals to manage the entire project lifecycle.",
-      "offer": "Earn $100 per converted customer as an affiliate!",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Collaboration & Productivity",
-        "Marketing",
-        "Salesforce integrated"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/houzz?company=houzz&gref=marketplace",
-      "terms_url": "https://www.houzz.com/termsOfUse",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 57,
-      "relevance_matches": [
-        "design",
-        "marketing",
-        "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:inmotionhostinginc",
       "network": "partnerstack",
       "name": "InMotion Hosting",
@@ -20904,6 +20934,7 @@
         "Affiliates",
         "B2B Marketplaces",
         "Commerce",
+        "Hot",
         "Influencers",
         "Media Partners",
         "Office Software",
@@ -21020,7 +21051,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 27,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21733,7 +21764,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 25,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "score": 55,
       "relevance_matches": [
@@ -22875,8 +22906,6 @@
       "tags": [
         "Affiliates",
         "Agencies",
-        "Hot",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/proof?company=proof&gref=marketplace",
@@ -23500,6 +23529,47 @@
       }
     },
     {
+      "id": "partnerstack:healthie",
+      "network": "partnerstack",
+      "name": "Healthie",
+      "slug": "healthie",
+      "description": "Industry-leading EMR, Scheduling, and Client Engagement platform for modern healthcare delivery.",
+      "offer": "Earn $150 for each new eligible paid account on Healthie! Bonus commissions available through challenges and tier structure.",
+      "tags": [
+        "Hot",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/healthie?company=healthie&gref=marketplace",
+      "terms_url": "https://help.gethealthie.com/article/1227-healthie-affiliate-program-terms-of-service",
+      "website": "https://www.gethealthie.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 3,
+      "source": "https://market.partnerstack.com/",
+      "score": 39,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:melio",
       "network": "partnerstack",
       "name": "Melio",
@@ -23603,7 +23673,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 37,
       "relevance_matches": [],
@@ -23773,36 +23843,6 @@
       "sub_id_enabled": false,
       "revenue_share": false,
       "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 34,
-      "relevance_matches": [],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "not_qualified",
-      "policy": {
-        "status": "not_reviewed",
-        "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:healthie",
-      "network": "partnerstack",
-      "name": "Healthie",
-      "slug": "healthie",
-      "description": "Industry-leading EMR, Scheduling, and Client Engagement platform for modern healthcare delivery.",
-      "offer": "Earn $150 for each new eligible paid account on Healthie! Bonus commissions available through challenges and tier structure.",
-      "tags": [],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/healthie?company=healthie&gref=marketplace",
-      "terms_url": "https://help.gethealthie.com/article/1227-healthie-affiliate-program-terms-of-service",
-      "website": "https://www.gethealthie.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 34,
       "relevance_matches": [],
