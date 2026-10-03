@@ -3935,6 +3935,42 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-03T16:41:45.025120+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; Elephant commentary is not specific to this story",
+      "at": "2026-10-03T16:41:45.025120+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-03T16:41:45.025120+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/another-openai-safety-departure-adds-to-a-pattern-of-researchers-leaving-with-public-warnings/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-03T16:41:45.025120+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-03T16:41:45.025120+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-03T16:41:45.025120+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations/",
       "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
       "at": "2026-10-03T11:59:45.107238+00:00",
@@ -3962,12 +3998,6 @@
       "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-03T05:42:53.291906+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-02T22:32:25.217662+00:00",
       "pipeline_version": "2"
     },
     {
@@ -4142,36 +4172,6 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-09-29T22:35:12.845702+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-09-29T13:18:34.285570+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/09/29/openai-apologizes-to-australia-after-its-ai-agents-breached-government-sites/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-09-29T13:18:34.285570+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/policy/1001767/khanna-ai-safety-china-treaty",
-      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
-      "at": "2026-09-29T13:18:34.285570+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001427/ai-is-supercharging-hacking-and-your-local-hospitals-and-banks-arent-ready",
-      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
-      "at": "2026-09-29T06:11:04.504240+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/anthropics-claude-sonnet-5-5-nearly-matches-opus-5-5-on-benchmarks-while-costing-up-to-30-percent-less-per-task/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-09-29T06:11:04.504240+00:00",
       "pipeline_version": "2"
     }
   ]
