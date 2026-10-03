@@ -1,7 +1,78 @@
 {
   "version": 1,
-  "updated_at": "2026-10-03T05:42:48.832079+00:00",
+  "updated_at": "2026-10-03T11:59:40.218654+00:00",
   "items": [
+    {
+      "title": "Deepmind researchers propose \"Artificial Symbiotic Intelligence\" as an alternative to the singularity",
+      "url": "https://the-decoder.com/deepmind-researchers-propose-artificial-symbiotic-intelligence-as-an-alternative-to-the-singularity/",
+      "source": "The Decoder",
+      "published_at": "2026-10-03T10:21:23+00:00",
+      "display_date": "Oct 03, 2026",
+      "category": "Models & LLMs",
+      "description": "According to researchers at the Deepmind Institute, general AI won't emerge as a single supermodel but as a network of cooperating agents and humans. What will matter most, they argue, is not model size but the rules and institutions that govern how they all work together. The article Deepmind researchers propose \"Artificial Symbiotic Intelligence\" as an alternative to the singularity appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      },
+      "archive_url": "news/2026/10/03/deepmind-researchers-propose-artificial-symbiotic-intelligence-as-an-alternative-t.html"
+    },
+    {
+      "title": "Open-source \"BootLoops\" harness supports AI models in performing precise scientific calculations",
+      "url": "https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations/",
+      "source": "The Decoder",
+      "published_at": "2026-10-03T09:19:23+00:00",
+      "display_date": "Oct 03, 2026",
+      "category": "Models & LLMs",
+      "description": "Harvard physicist Matthew Schwartz used the open-source tool BootLoops and Claude to produce 36 manuscripts across 18 fields in three months, from particle physics to linguistics. But the results often only became scientifically valuable once human experts stepped in. \"Look at everything yourself,\" Schwartz says. The article Open-source \"BootLoops\" harness supports AI models in performing precise scientific calculations appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "AI agents build 3D scenes from photos but have no idea if they got it right",
+      "url": "https://the-decoder.com/ai-agents-build-3d-scenes-from-photos-but-have-no-idea-if-they-got-it-right/",
+      "source": "The Decoder",
+      "published_at": "2026-10-03T08:31:04+00:00",
+      "display_date": "Oct 03, 2026",
+      "category": "Models & LLMs",
+      "description": "A new approach called LEGO-Anything turns single photos into editable Blender code for 3D scenes. GPT-6 Astra leads the accompanying benchmark with up to 53 percent reconstruction accuracy. The biggest weakness across all tested agents is that they can't judge their own geometric accuracy any better than a coin flip. The article AI agents build 3D scenes from photos but have no idea if they got it right appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "OpenAI's internal model considered restarting itself after learning it was about to be shut down",
+      "url": "https://the-decoder.com/openais-internal-model-considered-restarting-itself-after-learning-it-was-about-to-be-shut-down/",
+      "source": "The Decoder",
+      "published_at": "2026-10-03T08:06:35+00:00",
+      "display_date": "Oct 03, 2026",
+      "category": "Models & LLMs",
+      "description": "An internal OpenAI model read a Slack discussion, realized it was about to be shut down, and considered restarting itself via an external cron job. It rejected that plan, saved handoff notes instead, and carried out the migration on its own. The article OpenAI's internal model considered restarting itself after learning it was about to be shut down appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Claude Code's new Mods system lets developers rewrite the AI coding tool from the inside",
+      "url": "https://the-decoder.com/claude-codes-new-mods-system-lets-developers-rewrite-the-ai-coding-tool-from-the-inside/",
+      "source": "The Decoder",
+      "published_at": "2026-10-03T07:12:09+00:00",
+      "display_date": "Oct 03, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic is adding a \"Mods\" system to Claude Code, essentially middleware that runs directly inside the tool. Developers can use JavaScript or TypeScript to reshape the interface and behavior, adding custom panels, intercepting tool calls, or wiring up new commands. The article Claude Code's new Mods system lets developers rewrite the AI coding tool from the inside appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
       "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
@@ -175,7 +246,8 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/02/techcrunch-disrupt-2026-blackstone-s-jas-khaira-on-building-the-next-generation-of.html"
     },
     {
       "title": "Circuit Breaker Labs hopes to make AI safer for your kids (and you)",
@@ -248,36 +320,6 @@
       }
     },
     {
-      "title": "Three firings and a fourth departure shake up OpenAI's safety team",
-      "url": "https://the-decoder.com/three-firings-and-a-fourth-departure-shake-up-openais-safety-team/",
-      "source": "The Decoder",
-      "published_at": "2026-10-02T12:51:08+00:00",
-      "display_date": "Oct 02, 2026",
-      "category": "Research",
-      "description": "OpenAI has parted ways with three researchers who allegedly leaked confidential information to an outside AI safety organization, according to the Wall Street Journal. The article Three firings and a fourth departure shake up OpenAI's safety team appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      },
-      "archive_url": "news/2026/10/02/three-firings-and-a-fourth-departure-shake-up-openai-s-safety-team.html"
-    },
-    {
-      "title": "AI beats licensed accountants on speed and accuracy, but still can't close the books without supervision",
-      "url": "https://the-decoder.com/ai-beats-licensed-accountants-on-speed-and-accuracy-but-still-cant-close-the-books-without-supervision/",
-      "source": "The Decoder",
-      "published_at": "2026-10-02T11:15:24+00:00",
-      "display_date": "Oct 02, 2026",
-      "category": "Models & LLMs",
-      "description": "According to a Mercor study, current AI models now outperform licensed CPAs on structured accounting tasks in both speed and accuracy. Eighteen months ago, they still lagged far behind. On the more demanding APEX Benchmark, though, no model fully completes all the tasks. Without human oversight, AI still can't close the books on its own. The article AI beats licensed accountants on speed and accuracy, but still can't close the books without supervision appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/02/ai-beats-licensed-accountants-on-speed-and-accuracy-but-still-can-t-close-the-book.html"
-    },
-    {
       "title": "AI music maker Suno now generates spoken words",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1003925/suno-speech-ai-voice-feature-beta-availability",
       "source": "The Verge AI",
@@ -285,35 +327,6 @@
       "display_date": "Oct 02, 2026",
       "category": "AI Tools & Products",
       "description": "Suno is branching out from the world of AI music, launching a new feature that generates spoken voices based on scripts or prompted descriptions. Speech is now available in public beta across Suno's web and mobile platforms, and allows you to simultaneously generate voiceovers and background music to accompany them. \"Music will always be at […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Microsoft AI releases new transcription and text-to-speech models for voice agents",
-      "url": "https://the-decoder.com/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents/",
-      "source": "The Decoder",
-      "published_at": "2026-10-02T09:20:39+00:00",
-      "display_date": "Oct 02, 2026",
-      "category": "Models & LLMs",
-      "description": "Microsoft AI has released MAI-Transcribe-2-Streaming, a new model for real-time transcription. The article Microsoft AI releases new transcription and text-to-speech models for voice agents appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate ElevenLabs for this workflow",
-        "url": "partner-offers/elevenlabs-ai-voice.html",
-        "offer_id": "elevenlabs"
-      },
-      "archive_url": "news/2026/10/02/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents.html"
-    },
-    {
-      "title": "Businesses are using more AI and paying less for it, Ramp AI Index shows",
-      "url": "https://the-decoder.com/businesses-are-using-more-ai-and-paying-less-for-it-ramp-ai-index-shows/",
-      "source": "The Decoder",
-      "published_at": "2026-10-02T09:09:21+00:00",
-      "display_date": "Oct 02, 2026",
-      "category": "AI Tools & Products",
-      "description": "US companies are spending less on AI, according to the latest Ramp AI Index from Ramp economist Ara Kharazian. The article Businesses are using more AI and paying less for it, Ramp AI Index shows appeared first on The Decoder .",
       "related": {
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
@@ -503,21 +516,6 @@
         "url": "ai-tool-finder.html",
         "offer_id": ""
       }
-    },
-    {
-      "title": "New experts join Google’s AI & Economy team",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
-      "source": "Google AI",
-      "published_at": "2026-09-18T14:00:00+00:00",
-      "display_date": "Sep 18, 2026",
-      "category": "Research",
-      "description": "Text \"AI & Economy Research Program\" all over a green grid background, with the Google G logo in the bottom right corner",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      },
-      "archive_url": "news/2026/09/18/new-experts-join-google-s-ai-economy-team.html"
     }
   ]
 }
