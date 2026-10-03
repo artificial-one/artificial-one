@@ -1,10 +1,37 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 57,
+    "successful_checks": 65,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-03",
+      "id": "222655f8ad257428",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://brkox.com/",
+      "tool_id": "brkox",
+      "tool_name": "brkox"
+    },
+    {
+      "detected_on": "2026-10-03",
+      "id": "20d6a67a712c0cc3",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://elevenlabs.io/",
+      "tool_id": "elevenlabs",
+      "tool_name": "ElevenLabs"
+    },
+    {
+      "detected_on": "2026-10-03",
+      "id": "c390920f5ddfac67",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://omniseo.com/",
+      "tool_id": "omniseo",
+      "tool_name": "OmniSEO"
+    },
     {
       "detected_on": "2026-10-02",
       "id": "c0e74b4a4fe44300",
@@ -394,6 +421,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-02",
+  "updated_at": "2026-10-03",
   "version": 1
 }

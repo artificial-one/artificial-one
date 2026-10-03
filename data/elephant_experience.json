@@ -1,6 +1,33 @@
 {
   "changes": [
     {
+      "detected_on": "2026-10-03",
+      "id": "222655f8ad257428",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://brkox.com/",
+      "tool_id": "brkox",
+      "tool_name": "brkox"
+    },
+    {
+      "detected_on": "2026-10-03",
+      "id": "20d6a67a712c0cc3",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://elevenlabs.io/",
+      "tool_id": "elevenlabs",
+      "tool_name": "ElevenLabs"
+    },
+    {
+      "detected_on": "2026-10-03",
+      "id": "c390920f5ddfac67",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://omniseo.com/",
+      "tool_id": "omniseo",
+      "tool_name": "OmniSEO"
+    },
+    {
       "detected_on": "2026-10-02",
       "id": "c0e74b4a4fe44300",
       "kind": "pricing or plan",
@@ -391,6 +418,108 @@
   "methodology": "Catalogue-grounded browser-side recommendations; monetization is a one-point tie-break only.",
   "news": [
     {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
+      "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Sean Parker is rebuilding Stability AI around music",
+      "url": "https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Meta open sources code to let you make Muse AI gadgets",
+      "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
+      "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "AI music generator Suno can now create spoken audio with matching background music",
+      "url": "https://the-decoder.com/ai-music-generator-suno-can-now-create-spoken-audio-with-matching-background-music/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Anthropic co-founder reportedly told religious leaders he fears having created something that \"suffers perpetually\"",
+      "url": "https://the-decoder.com/anthropic-co-founder-reportedly-told-religious-leaders-he-fears-having-created-something-that-suffers-perpetually/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Cloudflare says its new Clef model means humans no longer need to be in the loop for AI agents",
+      "url": "https://the-decoder.com/cloudflare-says-its-new-clef-model-means-humans-no-longer-need-to-be-in-the-loop-for-ai-agents/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Apple says it’s tightening macOS ‘Full Disk Access’ controls due to new risks from AI agents",
+      "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
+      "url": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/"
+    },
+    {
+      "category": "AI Business",
+      "published": "",
+      "title": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "It’s not AI anymore, it’s ‘super intelligence’ (according to the White House)",
+      "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "TechCrunch Disrupt 2026: Blackstone’s Jas Khaira on building the next generation of AI giants",
+      "url": "https://techcrunch.com/2026/10/02/techcrunch-disrupt-2026-blackstones-jas-khaira-on-building-the-next-generation-of-ai-giants/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Circuit Breaker Labs hopes to make AI safer for your kids (and you)",
+      "url": "https://techcrunch.com/2026/10/02/circuit-breaker-labs-hopes-to-make-ai-safer-for-your-kids-and-you/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "A model guide for the GPT-6 family",
+      "url": "https://openai.com/index/practical-guide-building-gpt-6"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Pope Leo XIV is not a fan of AI-generated art",
+      "url": "https://techcrunch.com/2026/10/02/pope-leo-xiv-is-not-a-fan-of-ai-generated-art/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
+      "url": "https://huggingface.co/blog/allenai/astabrief"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "The latest AI news we announced in September 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/"
+    },
+    {
       "category": "Research",
       "published": "",
       "title": "Three firings and a fourth departure shake up OpenAI's safety team",
@@ -429,110 +558,8 @@
     {
       "category": "Models & LLMs",
       "published": "",
-      "title": "OpenAI’s new agent is a shot at Meta — but can it compete with free?",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Musk’s AI chatbot Grok reportedly encouraged Trump to capture Venezuela’s president",
-      "url": "https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "ChatGPT can now virtually try on clothes for you",
-      "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/"
-    },
-    {
-      "category": "Research",
-      "published": "",
-      "title": "OpenAI cuts ties with 3 safety researchers, WSJ reports",
-      "url": "https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Nearly half of test subjects mistook Tavus' AI video avatar for a real person on a one-minute call",
-      "url": "https://the-decoder.com/nearly-half-of-test-subjects-mistook-tavus-ai-video-avatar-for-a-real-person-on-a-one-minute-call/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Opus 5.5 loves to tell you ‘this matters’ (and other AI writing tells)",
-      "url": "https://techcrunch.com/2026/10/01/opus-5-5-loves-to-tell-you-this-matters-and-other-ai-writing-tells/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Ideogram says its new model can edit part of an image without messing up the rest",
-      "url": "https://the-decoder.com/ideogram-says-its-new-model-can-edit-part-of-an-image-without-messing-up-the-rest/"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "Judge dismisses antitrust lawsuits over Google’s AI Overviews",
-      "url": "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Amazon releases its own Jev clone as decision models flood the web",
-      "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Shopify debuts Canvas, a way to build online stores by chatting with AI",
-      "url": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Brian Chesky interview: AI agents need their own operating system",
-      "url": "https://techcrunch.com/2026/10/01/brian-chesky-interview-ai-agents-need-their-own-operating-system/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Anthropic brings Claude to civilian agencies as its fight with the Pentagon drags on",
-      "url": "https://the-decoder.com/anthropic-brings-claude-to-civilian-agencies-as-its-fight-with-the-pentagon-drags-on/"
-    },
-    {
-      "category": "AI Business",
-      "published": "",
-      "title": "Photon held a funeral for mobile apps. Now it has $4.5M to help replace them with agents.",
-      "url": "https://techcrunch.com/2026/10/01/photon-held-a-funeral-for-mobile-apps-now-it-has-4-5m-to-help-replace-them-with-agents/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "The Den frees up 10-15 hours a week to grow with ChatGPT Work",
-      "url": "https://openai.com/index/the-den-family-social"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Disrupting a coordinated model-distillation campaign",
-      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Helping small businesses put AI to work",
-      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
-      "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Holo4: powering generalist computer-use agents",
-      "url": "https://huggingface.co/blog/Hcompany/holo4"
+      "title": "Chatham scales its capital markets expertise with OpenAI",
+      "url": "https://openai.com/index/chatham-financial"
     }
   ],
   "recipes": [
@@ -674,7 +701,7 @@
     }
   ],
   "stats": {
-    "changes": 43,
+    "changes": 46,
     "monetized": 290,
     "recipes": 8,
     "reviewed": 42,
@@ -14223,6 +14250,6 @@
       "summary": "Complete Zenler review covering features, pricing, and exclusive lifetime deal. See if this tool is worth it for your business"
     }
   ],
-  "updated_at": "2026-10-02",
+  "updated_at": "2026-10-03",
   "version": 1
 }
