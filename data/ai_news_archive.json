@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updated_at": "2026-10-04T12:50:26.833046+00:00",
+  "updated_at": "2026-10-04T21:54:34.678619+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/03/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project.html",
+      "created_at": "2026-10-04T21:54:34.678619+00:00",
+      "source": {
+        "title": "\"Muse Gadgets\" turns AI hardware into an open-source DIY project",
+        "url": "https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/",
+        "source": "The Decoder",
+        "published_at": "2026-10-03T14:28:51+00:00",
+        "display_date": "Oct 03, 2026",
+        "category": "AI Tools & Products",
+        "description": "Meta announced Muse Gadgets, an open-source project that lets hobbyists build their own AI hardware using ESP32 boards and connect it to Meta's AI agent Muse. The team also produced 5,000 units of the \"Muse Home Link,\" a USB-C device for smart home control. The open-source approach also helps Meta figure out which AI hardware form factors people actually want. The article \"Muse Gadgets\" turns AI hardware into an open-source DIY project appeared first on The Decoder .",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Meta's Open-Source AI Hardware Project Lets Hobbyists Build Their Own Devices",
+        "summary": "Meta's Muse Gadgets project allows hobbyists to build AI hardware using ESP32 boards and connect it to Meta's AI agent Muse. The open-source approach aims to understand user preferences for AI hardware form factors while also providing a Discord community for discussions.",
+        "facts": [
+          {
+            "statement": "Meta announced Muse Gadgets, an open-source project that lets hobbyists build their own AI hardware",
+            "evidence": "Meta has announced Muse Gadgets, an open-source project"
+          },
+          {
+            "statement": "The project includes firmware for ESP32 boards and a Linux SDK to connect homemade devices to Meta's AI agent Muse",
+            "evidence": "It includes firmware for ESP32 boards and a Linux SDK"
+          },
+          {
+            "statement": "Meta also built its own device, the 'Muse Home Link', which connects Muse to a home network",
+            "evidence": "meta also built its own device. the \"muse home link\" is a small usb-c gadget"
+          }
+        ],
+        "why_it_matters": "Meta's open-source AI hardware project aims to understand user preferences for AI form factors while empowering hobbyists to build their own devices. This approach could influence future AI hardware design and provide insights into what consumers want in AI technology.",
+        "elephant_take": "🐘 鼋 Meta is trying to figure out what people want in AI hardware by letting them build it themselves. It's a bit of a meta move, but it shows the company is trying to understand user needs through community input.",
+        "caveat": "The open-source approach may not fully capture user preferences due to the limitations of community feedback and the potential for diverse interpretations of what AI hardware should look like.",
+        "who_should_care": [
+          "AI developers",
+          "Hardware enthusiasts",
+          "Tech companies",
+          "Consumers"
+        ],
+        "what_to_do": [
+          "Explore the open-source project on Meta's website",
+          "Join the Discord community for discussions",
+          "Consider the potential impact on AI hardware design",
+          "Stay updated on Meta's future AI projects"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20%22Muse%20Gadgets%22%20turns%20AI%20hardware%20into%20an%20open-source%20DIY%20project%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/04/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-the.html",
       "created_at": "2026-10-04T12:50:26.833046+00:00",
@@ -4378,6 +4443,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-04T21:54:34.678619+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-04T21:54:34.678619+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-04T21:54:34.678619+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft",
+      "reason": "quality gate rejected draft: headline length is outside the publication range",
+      "at": "2026-10-04T21:54:34.678619+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/apparently-openai-isnt-trying-to-build-magic-intelligence-in-the-sky-anymore/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-04T21:54:34.678619+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
       "at": "2026-10-04T12:50:26.833046+00:00",
@@ -4420,12 +4515,6 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://the-decoder.com/apparently-openai-isnt-trying-to-build-magic-intelligence-in-the-sky-anymore/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-03T21:44:04.642252+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-03T21:44:04.642252+00:00",
@@ -4441,12 +4530,6 @@
       "url": "https://openai.com/index/practical-guide-building-gpt-6",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-10-03T21:44:04.642252+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-03T16:41:45.025120+00:00",
       "pipeline_version": "2"
     },
     {
@@ -4597,24 +4680,6 @@
       "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-09-30T22:35:56.773704+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-09-30T22:35:56.773704+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-09-30T22:35:56.773704+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/google-is-paying-almost-no-publishers-almost-nothing-for-content-used-in-ai-answers/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-09-30T12:59:15.409690+00:00",
       "pipeline_version": "2"
     }
   ]
