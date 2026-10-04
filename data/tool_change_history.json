@@ -6,6 +6,51 @@
   },
   "events": [
     {
+      "detected_on": "2026-10-04",
+      "id": "e261164c7d3ed1b4",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://fireflies.ai",
+      "tool_id": "fireflies-ai",
+      "tool_name": "Fireflies.ai"
+    },
+    {
+      "detected_on": "2026-10-04",
+      "id": "dadc8c6efa750ac0",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://fotor.com",
+      "tool_id": "fotor",
+      "tool_name": "Fotor"
+    },
+    {
+      "detected_on": "2026-10-04",
+      "id": "405c41174f62f2ae",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hotpot.ai",
+      "tool_id": "hotpot-ai",
+      "tool_name": "Hotpot.ai"
+    },
+    {
+      "detected_on": "2026-10-04",
+      "id": "6dd8b178eef055ad",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://invideo.io",
+      "tool_id": "invideo",
+      "tool_name": "InVideo"
+    },
+    {
+      "detected_on": "2026-10-04",
+      "id": "5b418fbb4c13f21b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hootsuite.com",
+      "tool_id": "hootsuite-insights",
+      "tool_name": "Hootsuite Insights"
+    },
+    {
       "detected_on": "2026-10-03",
       "id": "222655f8ad257428",
       "kind": "pricing or plan",
@@ -421,6 +466,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-03",
+  "updated_at": "2026-10-04",
   "version": 1
 }

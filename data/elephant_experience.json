@@ -1,6 +1,51 @@
 {
   "changes": [
     {
+      "detected_on": "2026-10-04",
+      "id": "e261164c7d3ed1b4",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://fireflies.ai",
+      "tool_id": "fireflies-ai",
+      "tool_name": "Fireflies.ai"
+    },
+    {
+      "detected_on": "2026-10-04",
+      "id": "dadc8c6efa750ac0",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://fotor.com",
+      "tool_id": "fotor",
+      "tool_name": "Fotor"
+    },
+    {
+      "detected_on": "2026-10-04",
+      "id": "405c41174f62f2ae",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hotpot.ai",
+      "tool_id": "hotpot-ai",
+      "tool_name": "Hotpot.ai"
+    },
+    {
+      "detected_on": "2026-10-04",
+      "id": "6dd8b178eef055ad",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://invideo.io",
+      "tool_id": "invideo",
+      "tool_name": "InVideo"
+    },
+    {
+      "detected_on": "2026-10-04",
+      "id": "5b418fbb4c13f21b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hootsuite.com",
+      "tool_id": "hootsuite-insights",
+      "tool_name": "Hootsuite Insights"
+    },
+    {
       "detected_on": "2026-10-03",
       "id": "222655f8ad257428",
       "kind": "pricing or plan",
@@ -418,6 +463,54 @@
   "methodology": "Catalogue-grounded browser-side recommendations; monetization is a one-point tie-break only.",
   "news": [
     {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "The Agent Said It Was Done. The Database Disagreed.",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Apparently, OpenAI isn't trying to build \"magic intelligence in the sky\" anymore",
+      "url": "https://the-decoder.com/apparently-openai-isnt-trying-to-build-magic-intelligence-in-the-sky-anymore/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Capcom is preparing for a ‘future where we create games together with AI’",
+      "url": "https://www.theverge.com/games/1004418/capcom-ai-game-development"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
+      "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "An OpenAI safety employee has quit and is sounding the alarm",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "\"Muse Gadgets\" turns AI hardware into an open-source DIY project",
+      "url": "https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Another OpenAI safety departure adds to a pattern of researchers leaving with public warnings",
+      "url": "https://the-decoder.com/another-openai-safety-departure-adds-to-a-pattern-of-researchers-leaving-with-public-warnings/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "All the AI agents that can live in your text messages",
+      "url": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/"
+    },
+    {
       "category": "Models & LLMs",
       "published": "",
       "title": "Deepmind researchers propose \"Artificial Symbiotic Intelligence\" as an alternative to the singularity",
@@ -472,24 +565,6 @@
       "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents"
     },
     {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "AI music generator Suno can now create spoken audio with matching background music",
-      "url": "https://the-decoder.com/ai-music-generator-suno-can-now-create-spoken-audio-with-matching-background-music/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Anthropic co-founder reportedly told religious leaders he fears having created something that \"suffers perpetually\"",
-      "url": "https://the-decoder.com/anthropic-co-founder-reportedly-told-religious-leaders-he-fears-having-created-something-that-suffers-perpetually/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Cloudflare says its new Clef model means humans no longer need to be in the loop for AI agents",
-      "url": "https://the-decoder.com/cloudflare-says-its-new-clef-model-means-humans-no-longer-need-to-be-in-the-loop-for-ai-agents/"
-    },
-    {
       "category": "AI Tools & Products",
       "published": "",
       "title": "Apple says it’s tightening macOS ‘Full Disk Access’ controls due to new risks from AI agents",
@@ -522,44 +597,14 @@
     {
       "category": "AI Tools & Products",
       "published": "",
+      "title": "Splice CEO Kakul Srivastava thinks AI emails are killing conversations",
+      "url": "https://www.theverge.com/entertainment/1004162/splice-ceo-kakul-srivastava-ai-interview"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
       "title": "Circuit Breaker Labs hopes to make AI safer for your kids (and you)",
       "url": "https://techcrunch.com/2026/10/02/circuit-breaker-labs-hopes-to-make-ai-safer-for-your-kids-and-you/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "A model guide for the GPT-6 family",
-      "url": "https://openai.com/index/practical-guide-building-gpt-6"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Pope Leo XIV is not a fan of AI-generated art",
-      "url": "https://techcrunch.com/2026/10/02/pope-leo-xiv-is-not-a-fan-of-ai-generated-art/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
-      "url": "https://huggingface.co/blog/allenai/astabrief"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "The latest AI news we announced in September 2026",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "AI music maker Suno now generates spoken words",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1003925/suno-speech-ai-voice-feature-beta-availability"
-    },
-    {
-      "category": "AI Business",
-      "published": "",
-      "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
-      "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata"
     }
   ],
   "recipes": [
@@ -701,7 +746,7 @@
     }
   ],
   "stats": {
-    "changes": 46,
+    "changes": 51,
     "monetized": 290,
     "recipes": 8,
     "reviewed": 42,
@@ -14250,6 +14295,6 @@
       "summary": "Complete Zenler review covering features, pricing, and exclusive lifetime deal. See if this tool is worth it for your business"
     }
   ],
-  "updated_at": "2026-10-03",
+  "updated_at": "2026-10-04",
   "version": 1
 }
