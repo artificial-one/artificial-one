@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-03",
+  "updated_at": "2026-10-04",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -2528,7 +2528,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 54,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2877,7 +2877,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 29,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3368,71 +3368,6 @@
       }
     },
     {
-      "id": "partnerstack:vidaglobal",
-      "network": "partnerstack",
-      "name": "Vida Global Inc.",
-      "slug": "vidaglobal",
-      "description": "Vida.io’s AI Phone Agents give small, medium, and large businesses true 24/7 support across calls, SMS, email, and web chat — relaying information, handling scheduling, screening and transferring calls, and conversing naturally in 10 languages.",
-      "offer": "Earn 10% of net revenue on new referral for two years!",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Ambassadors",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Hot",
-        "Hubspot integrated",
-        "Influencers",
-        "Managed Service Provider",
-        "Marketing",
-        "Media Partners",
-        "Publishers",
-        "Referral Partners",
-        "Resellers",
-        "Sales",
-        "System Integrator",
-        "Trusted",
-        "Value Added Reseller"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vidaglobal?company=vidaglobal&gref=marketplace",
-      "terms_url": "https://vida.io/terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 13,
-      "source": "https://market.partnerstack.com/",
-      "score": 85,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "customer service",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:vistasocial",
       "network": "partnerstack",
       "name": "Vista Social",
@@ -3649,6 +3584,76 @@
       }
     },
     {
+      "id": "partnerstack:assembly",
+      "network": "partnerstack",
+      "name": "Assembly",
+      "slug": "assembly",
+      "description": "Assembly's product suite gives service business an all-in-one solution for client management, communication, payments, file-sharing, contracts, forms, help desks, and more.",
+      "offer": "Earn 20% of your referred customer's subscription revenue for one year, up to $1,200 per customer.",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Ambassadors",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Customer Service",
+        "Design",
+        "Development",
+        "E-Commerce",
+        "Hot",
+        "Influencers",
+        "Marketing",
+        "Media Partners",
+        "Office Software",
+        "Publishers",
+        "Referral Partners",
+        "Sales",
+        "System Integrator",
+        "Trusted",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/assembly?company=assembly&gref=marketplace",
+      "terms_url": "https://assembly.com/legal/terms-of-service",
+      "website": "https://www.assembly.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 12,
+      "source": "https://market.partnerstack.com/",
+      "score": 81,
+      "relevance_matches": [
+        "artificial intelligence",
+        "customer service",
+        "design",
+        "development",
+        "e-commerce",
+        "marketing",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:atria",
       "network": "partnerstack",
       "name": "Atria",
@@ -3715,6 +3720,53 @@
       }
     },
     {
+      "id": "partnerstack:expertiseai",
+      "network": "partnerstack",
+      "name": "Expertise AI",
+      "slug": "expertiseai",
+      "description": "AI agents and chatbot for sales and support",
+      "offer": "Join our affiliate program.",
+      "tags": [
+        "Artificial Intelligence",
+        "Hot",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/expertiseai?company=expertiseai&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/126UCKu1m-dGJp8GyaDAmixnhPPPpU5RL/view?usp=sharing",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 81,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:ngram",
       "network": "partnerstack",
       "name": "ngram",
@@ -3772,6 +3824,54 @@
           "disclosure_required": false
         },
         "cookie_days": 60
+      }
+    },
+    {
+      "id": "partnerstack:refreshme",
+      "network": "partnerstack",
+      "name": "Zypper",
+      "slug": "refreshme",
+      "description": "Zypper is a personal financial management platform.",
+      "offer": "AI-powered personal financial management platform with 20% recurring commissions",
+      "tags": [
+        "Accounting",
+        "Affiliates",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Publishers",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/refreshme?company=refreshme&gref=marketplace",
+      "terms_url": "",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 81,
+      "relevance_matches": [
+        "artificial intelligence",
+        "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
       }
     },
     {
@@ -4668,7 +4768,7 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": true,
+          "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
           "incentive_restricted": false,
@@ -4783,6 +4883,58 @@
       }
     },
     {
+      "id": "partnerstack:synder",
+      "network": "partnerstack",
+      "name": "Synder",
+      "slug": "synder",
+      "description": "Synder is powerful automation software that enables easy accounting for e-commerce businesses and accounting firms. Automate reconciliation of sales from e-commerce systems with accounting for always accurate reporting.",
+      "offer": "Up to 20% recurring commission for every paid referral",
+      "tags": [
+        "Accounting",
+        "Affiliates",
+        "Artificial Intelligence",
+        "Commerce",
+        "Hot",
+        "Referral Partners",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/synder?company=synder&gref=marketplace",
+      "terms_url": "https://synder.com/affiliate-terms-and-conditions/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 2,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "artificial intelligence",
+        "automation",
+        "e-commerce",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 7
+      }
+    },
+    {
       "id": "partnerstack:thinkific6979",
       "network": "partnerstack",
       "name": "Thinkific",
@@ -4834,6 +4986,69 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:vidaglobal",
+      "network": "partnerstack",
+      "name": "Vida Global Inc.",
+      "slug": "vidaglobal",
+      "description": "Vida.io’s AI Phone Agents give small, medium, and large businesses true 24/7 support across calls, SMS, email, and web chat — relaying information, handling scheduling, screening and transferring calls, and conversing naturally in 10 languages.",
+      "offer": "Earn 10% of net revenue on new referral for two years!",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Ambassadors",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Hubspot integrated",
+        "Influencers",
+        "Managed Service Provider",
+        "Marketing",
+        "Media Partners",
+        "Publishers",
+        "Referral Partners",
+        "Resellers",
+        "Sales",
+        "System Integrator",
+        "Value Added Reseller"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vidaglobal?company=vidaglobal&gref=marketplace",
+      "terms_url": "https://vida.io/terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 13,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "customer service",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -5378,7 +5593,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 30,
+      "review_days": 24,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -5928,74 +6143,6 @@
       }
     },
     {
-      "id": "partnerstack:assembly",
-      "network": "partnerstack",
-      "name": "Assembly",
-      "slug": "assembly",
-      "description": "Assembly's product suite gives service business an all-in-one solution for client management, communication, payments, file-sharing, contracts, forms, help desks, and more.",
-      "offer": "Earn 20% of your referred customer's subscription revenue for one year, up to $1,200 per customer.",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Ambassadors",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Customer Service",
-        "Design",
-        "Development",
-        "E-Commerce",
-        "Influencers",
-        "Marketing",
-        "Media Partners",
-        "Office Software",
-        "Publishers",
-        "Referral Partners",
-        "Sales",
-        "System Integrator",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/assembly?company=assembly&gref=marketplace",
-      "terms_url": "https://assembly.com/legal/terms-of-service",
-      "website": "https://www.assembly.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 12,
-      "source": "https://market.partnerstack.com/",
-      "score": 76,
-      "relevance_matches": [
-        "artificial intelligence",
-        "customer service",
-        "design",
-        "development",
-        "e-commerce",
-        "marketing",
-        "productivity",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:beautifulai",
       "network": "partnerstack",
       "name": "Beautiful.ai",
@@ -6153,51 +6300,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:expertiseai",
-      "network": "partnerstack",
-      "name": "Expertise AI",
-      "slug": "expertiseai",
-      "description": "AI agents and chatbot for sales and support",
-      "offer": "Join our affiliate program.",
-      "tags": [
-        "Artificial Intelligence",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/expertiseai?company=expertiseai&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/126UCKu1m-dGJp8GyaDAmixnhPPPpU5RL/view?usp=sharing",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 76,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -6489,53 +6591,6 @@
       "policy": {
         "status": "not_reviewed",
         "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:refreshme",
-      "network": "partnerstack",
-      "name": "Zypper",
-      "slug": "refreshme",
-      "description": "Zypper is a personal financial management platform.",
-      "offer": "AI-powered personal financial management platform with 20% recurring commissions",
-      "tags": [
-        "Accounting",
-        "Affiliates",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Publishers"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/refreshme?company=refreshme&gref=marketplace",
-      "terms_url": "",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 76,
-      "relevance_matches": [
-        "artificial intelligence",
-        "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
         "cookie_days": null
       }
     },
@@ -6964,56 +7019,6 @@
           "disclosure_required": false
         },
         "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:synder",
-      "network": "partnerstack",
-      "name": "Synder",
-      "slug": "synder",
-      "description": "Synder is powerful automation software that enables easy accounting for e-commerce businesses and accounting firms. Automate reconciliation of sales from e-commerce systems with accounting for always accurate reporting.",
-      "offer": "Up to 20% recurring commission for every paid referral",
-      "tags": [
-        "Accounting",
-        "Affiliates",
-        "Artificial Intelligence",
-        "Commerce",
-        "Referral Partners"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/synder?company=synder&gref=marketplace",
-      "terms_url": "https://synder.com/affiliate-terms-and-conditions/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 2,
-      "source": "https://market.partnerstack.com/",
-      "score": 75,
-      "relevance_matches": [
-        "artificial intelligence",
-        "automation",
-        "e-commerce",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": 7
       }
     },
     {
@@ -9328,7 +9333,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 68,
       "relevance_matches": [
@@ -10513,6 +10518,7 @@
         "Office Software",
         "Resellers",
         "Salesforce integrated",
+        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/hive?company=hive&gref=marketplace",
@@ -12178,7 +12184,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 18,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12291,7 +12297,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 51,
+      "review_days": 55,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12542,8 +12548,10 @@
         "Commerce",
         "E-Commerce",
         "Freelancer",
+        "Hot",
         "Marketing Professional",
         "Referral Partners",
+        "Trusted",
         "Web Developer",
         "hot"
       ],
@@ -12947,6 +12955,55 @@
         "data",
         "productivity",
         "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:truckstop",
+      "network": "partnerstack",
+      "name": "TRUCKSTOP",
+      "slug": "truckstop",
+      "description": "We develop and deliver technology solutions and services that empower freight professionals—carriers, brokers, and shippers of all sizes—to run their businesses from start to finish.",
+      "offer": "Earn up to 20% per active customer you refer!",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Hot",
+        "Other",
+        "Referral Partners",
+        "Supply Chain & Logistics",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/truckstop?company=truckstop&gref=marketplace",
+      "terms_url": "https://truckstop.com/partner-referral-program-agreement-terms-of-service",
+      "website": "https://www.truckstop.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 38,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "productivity"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -13460,7 +13517,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 66,
       "relevance_matches": [
@@ -16624,7 +16681,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 15,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17318,6 +17375,57 @@
       }
     },
     {
+      "id": "partnerstack:westfax",
+      "network": "partnerstack",
+      "name": "WestFax",
+      "slug": "westfax",
+      "description": "WestFax provides HIPAA-compliant cloud faxing built for enterprise healthcare organizations. We deliver high fax completion rates, enterprise-grade reliability, and responsive human support - helping providers streamline critical document exchange while maintaining strict compliance.",
+      "offer": "Earn 20% recurring commission for the lifetime of the customer!",
+      "tags": [
+        "Collaboration & Productivity",
+        "Data Privacy",
+        "Hot",
+        "IT Infrastructure",
+        "IT Management",
+        "Office Software",
+        "Security",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/westfax?company=westfax&gref=marketplace",
+      "terms_url": "https://westfax.com/partner-program-terms-and-conditions/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 8,
+      "source": "https://market.partnerstack.com/",
+      "score": 63,
+      "relevance_matches": [
+        "data",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:mycase",
       "network": "partnerstack",
       "name": "8am™",
@@ -17791,6 +17899,54 @@
       }
     },
     {
+      "id": "partnerstack:heard",
+      "network": "partnerstack",
+      "name": "Heard",
+      "slug": "heard",
+      "description": "Heard is the only accounting platform built for mental health and wellness providers, combining bookkeeping, taxes, and payroll in one place. Providers using Heard save an average of 60 hours a year and $5,000 in taxes. We handle monthly bookkeeping, deliver clear financial reports, estimate quarterly taxes, file personal and business returns, support S Corp setup, and respond to questions within one business day.",
+      "offer": "Earn $100 per new paid account referral on Heard.",
+      "tags": [
+        "Accounting",
+        "Collaboration & Productivity",
+        "Hot",
+        "Office Software",
+        "Payroll",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/heard?company=heard&gref=marketplace",
+      "terms_url": "https://www.joinheard.com/affiliate-terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 20,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": 90
+      }
+    },
+    {
       "id": "partnerstack:houzz",
       "network": "partnerstack",
       "name": "Houzz Pro",
@@ -18169,9 +18325,11 @@
         "Development",
         "Digital Advertising",
         "Hosting Providers",
+        "Hot",
         "Marketing",
         "Publishers",
         "Shopify integrated",
+        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/pagecloud?company=pagecloud&gref=marketplace",
@@ -18628,53 +18786,6 @@
       }
     },
     {
-      "id": "partnerstack:truckstop",
-      "network": "partnerstack",
-      "name": "TRUCKSTOP",
-      "slug": "truckstop",
-      "description": "We develop and deliver technology solutions and services that empower freight professionals—carriers, brokers, and shippers of all sizes—to run their businesses from start to finish.",
-      "offer": "Earn up to 20% per active customer you refer!",
-      "tags": [
-        "Affiliates",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Other",
-        "Referral Partners",
-        "Supply Chain & Logistics"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/truckstop?company=truckstop&gref=marketplace",
-      "terms_url": "https://truckstop.com/partner-referral-program-agreement-terms-of-service",
-      "website": "https://www.truckstop.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 38,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:unitelvoice",
       "network": "partnerstack",
       "name": "Unitel Voice",
@@ -18738,7 +18849,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "Earn 10% on every referral",
+      "offer": "5% on year 2 renewal",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -18998,7 +19109,7 @@
       "name": "Bar Codes Talk",
       "slug": "barcodestalk",
       "description": "UPC & EAN Barcode Number & Label Provider.",
-      "offer": "10% earned on first two sales per customer",
+      "offer": "15% earned on first two sales per customer",
       "tags": [
         "Affiliates",
         "Customer Service",
@@ -19708,14 +19819,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -20259,7 +20370,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 17,
+      "review_days": 18,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20277,6 +20388,68 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:ueniltd",
+      "network": "partnerstack",
+      "name": "UENI.com",
+      "slug": "ueniltd",
+      "description": "UENI gives small businesses and independent professionals a chance to reach a broader audience and increase sales by building their new website for them without the need to settle for expensive agencies or complicated DIY web design builders.",
+      "offer": "Earn $100 - $150 for each customer referred",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Commerce",
+        "Content Management",
+        "Customer Service",
+        "Design",
+        "Development",
+        "Digital Advertising",
+        "Hot",
+        "IT Management",
+        "Marketing",
+        "Office Software",
+        "Sales",
+        "Trusted",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ueniltd?company=ueniltd&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/e/2PACX-1vRnkOpvk40w1_nuiXhNDvQIwtq5poxA2sJ22UmMK40rRAuKBVyjQLzWud5xxhlj1Y1Rjsm7dmflE_A8/pub",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 7,
+      "source": "https://market.partnerstack.com/",
+      "score": 59,
+      "relevance_matches": [
+        "content",
+        "customer service",
+        "design",
+        "development",
+        "marketing",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -20537,55 +20710,6 @@
       }
     },
     {
-      "id": "partnerstack:westfax",
-      "network": "partnerstack",
-      "name": "WestFax",
-      "slug": "westfax",
-      "description": "WestFax provides HIPAA-compliant cloud faxing built for enterprise healthcare organizations. We deliver high fax completion rates, enterprise-grade reliability, and responsive human support - helping providers streamline critical document exchange while maintaining strict compliance.",
-      "offer": "Earn 20% recurring commission for the lifetime of the customer!",
-      "tags": [
-        "Collaboration & Productivity",
-        "Data Privacy",
-        "IT Infrastructure",
-        "IT Management",
-        "Office Software",
-        "Security"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/westfax?company=westfax&gref=marketplace",
-      "terms_url": "https://westfax.com/partner-program-terms-and-conditions/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 8,
-      "source": "https://market.partnerstack.com/",
-      "score": 58,
-      "relevance_matches": [
-        "data",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:attmarketplace",
       "network": "partnerstack",
       "name": "AT&T",
@@ -20776,52 +20900,6 @@
           "disclosure_required": false
         },
         "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:heard",
-      "network": "partnerstack",
-      "name": "Heard",
-      "slug": "heard",
-      "description": "Heard is the only accounting platform built for mental health and wellness providers, combining bookkeeping, taxes, and payroll in one place. Providers using Heard save an average of 60 hours a year and $5,000 in taxes. We handle monthly bookkeeping, deliver clear financial reports, estimate quarterly taxes, file personal and business returns, support S Corp setup, and respond to questions within one business day.",
-      "offer": "Earn $100 per new paid account referral on Heard.",
-      "tags": [
-        "Accounting",
-        "Collaboration & Productivity",
-        "Office Software",
-        "Payroll"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/heard?company=heard&gref=marketplace",
-      "terms_url": "https://www.joinheard.com/affiliate-terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 20,
-      "source": "https://market.partnerstack.com/",
-      "score": 57,
-      "relevance_matches": [
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
-        "cookie_days": 90
       }
     },
     {
@@ -22100,66 +22178,6 @@
       }
     },
     {
-      "id": "partnerstack:ueniltd",
-      "network": "partnerstack",
-      "name": "UENI.com",
-      "slug": "ueniltd",
-      "description": "UENI gives small businesses and independent professionals a chance to reach a broader audience and increase sales by building their new website for them without the need to settle for expensive agencies or complicated DIY web design builders.",
-      "offer": "Earn $100 - $150 for each customer referred",
-      "tags": [
-        "Affiliates",
-        "B2B Marketplaces",
-        "Commerce",
-        "Content Management",
-        "Customer Service",
-        "Design",
-        "Development",
-        "Digital Advertising",
-        "IT Management",
-        "Marketing",
-        "Office Software",
-        "Sales",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ueniltd?company=ueniltd&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/e/2PACX-1vRnkOpvk40w1_nuiXhNDvQIwtq5poxA2sJ22UmMK40rRAuKBVyjQLzWud5xxhlj1Y1Rjsm7dmflE_A8/pub",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 7,
-      "source": "https://market.partnerstack.com/",
-      "score": 54,
-      "relevance_matches": [
-        "content",
-        "customer service",
-        "design",
-        "development",
-        "marketing",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:aftrdrk",
       "network": "partnerstack",
       "name": "AFTRDRK",
@@ -23168,6 +23186,47 @@
       }
     },
     {
+      "id": "partnerstack:shopmonkey",
+      "network": "partnerstack",
+      "name": "Shopmonkey",
+      "slug": "shopmonkey",
+      "description": "Shopmonkey is an all-in-one cloud-based shop management system used to organize and operate all aspects of a shop's operations.",
+      "offer": "Earn $300 for every Demo Held Lead",
+      "tags": [
+        "Hot",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shopmonkey?company=shopmonkey&gref=marketplace",
+      "terms_url": "https://www.shopmonkey.io/legal/terms-of-service",
+      "website": "https://www.shopmonkey.io",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 4,
+      "source": "https://market.partnerstack.com/",
+      "score": 42,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:airtable",
       "network": "partnerstack",
       "name": "Airtable",
@@ -23638,44 +23697,6 @@
       "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 38,
-      "relevance_matches": [],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:shopmonkey",
-      "network": "partnerstack",
-      "name": "Shopmonkey",
-      "slug": "shopmonkey",
-      "description": "Shopmonkey is an all-in-one cloud-based shop management system used to organize and operate all aspects of a shop's operations.",
-      "offer": "Earn $300 for every Demo Held Lead",
-      "tags": [],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shopmonkey?company=shopmonkey&gref=marketplace",
-      "terms_url": "https://www.shopmonkey.io/legal/terms-of-service",
-      "website": "https://www.shopmonkey.io",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 4,
-      "source": "https://market.partnerstack.com/",
-      "score": 37,
       "relevance_matches": [],
       "already_active": false,
       "relationship_state": "pending",
