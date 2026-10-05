@@ -18,7 +18,7 @@ class ProjectHardeningTests(unittest.TestCase):
             self.assertIn(offer_id, offers)
             page = (ROOT / "partner-offers" / f"{offers[offer_id]['slug']}.html").read_text(encoding="utf-8")
             self.assertIn("Your seven-day proof plan", page)
-            self.assertIn("Decision scorecard", page)
+            self.assertIn("Evidence dossier", page)
             self.assertIn("Primary sources", page)
 
     def test_non_ai_commercial_relationships_stay_out_of_ai_sitemap(self):
@@ -34,6 +34,12 @@ class ProjectHardeningTests(unittest.TestCase):
         candidates = indexing_recovery.indexing_candidates()
         self.assertLess(len(candidates), len(list(ROOT.rglob("*.html"))))
         self.assertIn(ROOT / "ai-software-shortlist.html", candidates)
+
+    def test_priority_index_is_capped_and_contains_the_price_tracker(self):
+        priority = json.loads((ROOT / "data" / "indexing_priority.json").read_text(encoding="utf-8"))
+        self.assertLessEqual(priority["included"], indexing_recovery.PRIORITY_LIMIT)
+        self.assertGreaterEqual(priority["included"], 120)
+        self.assertIn("ai-software-price-tracker.html", priority["included_paths"])
 
     def test_deploy_batching_preserves_human_release_deploys(self):
         config = json.loads((ROOT / "vercel.json").read_text(encoding="utf-8"))
