@@ -33,6 +33,7 @@ PRAGUE = ZoneInfo("Europe/Prague")
 RESEND_URL = "https://api.resend.com/emails"
 RESEND_DOMAINS_URL = "https://api.resend.com/domains"
 LINKEDIN_VERSION = "202608"
+LINKEDIN_DEFAULT_AUTHOR_URN = "urn:li:organization:145231312"
 SOCIAL_PLATFORMS = ("linkedin", "bluesky", "x")
 
 
@@ -404,7 +405,7 @@ def social_performance(root: Path, window_end: datetime) -> dict[str, list[dict[
     metrics.update(linkedin_metrics(
         recent,
         os.environ.get("LINKEDIN_ACCESS_TOKEN", "").strip(),
-        os.environ.get("LINKEDIN_AUTHOR_URN", "").strip(),
+        os.environ.get("LINKEDIN_AUTHOR_URN", "").strip() or LINKEDIN_DEFAULT_AUTHOR_URN,
     ))
     return social_posts_for_window(receipts, window_end, metrics)
 
@@ -1023,6 +1024,44 @@ def send_email(api_key: str, sender: str, recipient: str, subject: str, text: st
     return {"id": email_id, "event": event, "sender": sender}
 
 
+def persist_private_ledger(model: dict[str, Any], subject: str, delivery: dict[str, str] | None = None) -> bool:
+    """Keep a durable, private daily aggregate independent of email delivery."""
+    redis_url = os.environ.get("UPSTASH_REDIS_REST_URL", "").strip().rstrip("/")
+    redis_token = os.environ.get("UPSTASH_REDIS_REST_TOKEN", "").strip()
+    if not redis_url or not redis_token:
+        return False
+    record = {
+        "date": model["date"].isoformat(),
+        "subject": subject,
+        "revenue": model["revenue"],
+        "commissions": model["commissions"],
+        "visits": model["visits"],
+        "visit_window_days": model["visit_window_days"],
+        "affiliate_clicks": model["clicks"],
+        "click_window_days": model["click_window_days"],
+        "signups": model["signups"],
+        "paying_customers": model["paying_customers"],
+        "published_offers": model["published_offers"],
+        "new_news_pages": len(model.get("new_news_pages") or []),
+        "search": model.get("search") or {},
+        "social_posts": {platform: len(posts) for platform, posts in model.get("social", {}).items()},
+        "social_comments": {platform: len(posts) for platform, posts in model.get("social_comments", {}).items()},
+        "delivery": delivery or {"event": "not_sent"},
+        "recorded_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
+    key = f"artificial-one:daily-report:{record['date']}"
+    payload = json.dumps(record, separators=(",", ":"), ensure_ascii=False)
+    endpoint = redis_url + "/" + "/".join(quote(part, safe="") for part in ("SET", key, payload))
+    request = Request(endpoint, headers={"Authorization": f"Bearer {redis_token}", "Accept": "application/json"})
+    try:
+        with urlopen(request, timeout=25) as response:
+            result = json.load(response)
+        return isinstance(result, dict) and result.get("result") == "OK"
+    except Exception as exc:
+        print(f"Private daily ledger could not be updated: {type(exc).__name__}")
+        return False
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", type=Path, default=Path(".daily-executive/affiliate-snapshot.json"))
@@ -1044,6 +1083,7 @@ def main() -> int:
     health = github_health(os.environ.get("GITHUB_TOKEN", ""), os.environ.get("GITHUB_REPOSITORY", ""), now)
     model = report_model(ROOT, args.snapshot, report_date, health, args.marketplace_status, now, args.search_snapshot)
     subject, text, html = render(model)
+    delivery: dict[str, str] | None = None
     if args.output_html:
         args.output_html.parent.mkdir(parents=True, exist_ok=True)
         args.output_html.write_text(html, encoding="utf-8")
@@ -1061,6 +1101,8 @@ def main() -> int:
             "delivery_event": delivery["event"],
             "sender": delivery["sender"],
         }, indent=2) + "\n", encoding="utf-8")
+    ledger_saved = persist_private_ledger(model, subject, delivery)
+    print(f"Private metrics ledger: {'saved' if ledger_saved else 'not configured'}")
     print(f"Prepared executive report for {report_date.isoformat()}: {subject}")
     return 0
 

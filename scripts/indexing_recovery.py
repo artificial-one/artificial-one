@@ -19,8 +19,10 @@ from urllib.request import Request, urlopen
 
 try:
     from scripts.build_partner_offers import esc, shell
+    from scripts.affiliate_catalog import COMMERCIAL_CORE_IDS, is_ai_relevant
 except ModuleNotFoundError:
     from build_partner_offers import esc, shell  # type: ignore
+    from affiliate_catalog import COMMERCIAL_CORE_IDS, is_ai_relevant  # type: ignore
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -54,6 +56,7 @@ CURATED_CORE = (
     "comparison-lab.html",
     "workflow-recipes.html",
     "partner-offers.html",
+    "ai-software-shortlist.html",
     "affiliate-categories.html",
     "decision-tools.html",
     "offer-updates.html",
@@ -84,7 +87,26 @@ def priority_pages() -> list[Path]:
     ]
     for folder in ("partner-offers", "appsumo-guides", "affiliate-categories", "search-intent", "calculators"):
         paths.extend(sorted((ROOT / folder).glob("*.html")))
-    return [path for path in paths if path.exists()]
+    return [path for path in paths if path.exists() and ai_search_candidate(path)]
+
+
+def ai_search_candidate(path: Path) -> bool:
+    """Keep commercial pages public while excluding off-topic offers from AI SEO."""
+    try:
+        relative = path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return False
+    if relative.startswith("appsumo-guides/"):
+        payload = load_public_json(ROOT / "data" / "appsumo_offers.json")
+        slug = path.stem
+        offer = next((item for item in payload.get("offers", []) if item.get("slug") == slug), None)
+        return bool(offer and offer.get("ai_relevant") and offer.get("availability") != "expired")
+    if not relative.startswith("partner-offers/"):
+        return True
+    payload = load_public_json(ROOT / "data" / "partner_offers.json")
+    slug = path.stem
+    offer = next((item for item in payload.get("offers", []) if item.get("slug") == slug), None)
+    return bool(offer and is_ai_relevant(offer))
 
 
 def indexing_candidates() -> list[Path]:
@@ -92,7 +114,18 @@ def indexing_candidates() -> list[Path]:
     paths = [ROOT / relative for relative in CURATED_CORE]
     for folder in PRIORITY_FOLDERS:
         paths.extend(sorted((ROOT / folder).rglob("*.html")))
-    return sorted({path for path in paths if path.exists()})
+    candidates = {path for path in paths if path.exists() and ai_search_candidate(path)}
+    core_position = {identifier: index for index, identifier in enumerate(COMMERCIAL_CORE_IDS)}
+    slug_to_position = {
+        str(item.get("slug")): core_position[str(item.get("id"))]
+        for item in load_public_json(ROOT / "data" / "partner_offers.json").get("offers", [])
+        if str(item.get("id")) in core_position
+    }
+    return sorted(candidates, key=lambda path: (
+        0 if path.parent.name == "partner-offers" and path.stem in slug_to_position else 1,
+        slug_to_position.get(path.stem, 9999),
+        path.as_posix(),
+    ))
 
 
 def expected_url(path: Path) -> str:
@@ -274,7 +307,7 @@ def render_hub(paths: list[Path], crawl_priority: list[Path] | None = None) -> s
         )
 
     featured_preferences = {
-        "Decision tools": ["ai-tool-finder.html", "calculators/ai-software-roi-calculator.html"],
+        "Decision tools": ["ai-software-shortlist.html", "ai-tool-finder.html"],
         "Partner reviews": ["partner-offers/elevenlabs-ai-voice.html", "partner-offers/descript-ai-video-editing.html"],
         "Comparisons and buying guides": ["search-intent/best-artificial-intelligence-tools.html", "search-intent/best-productivity-business-tools.html"],
     }

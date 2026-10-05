@@ -1,0 +1,41 @@
+name: Publish scheduled site release
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Two predictable production releases: after morning data work and after
+    # the afternoon publishing/social window.
+    - cron: "20 8,17 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: artificial-one-site-publisher
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Verify the publishable site
+        run: |
+          python scripts/build_partner_offers.py --check
+          python scripts/indexing_recovery.py --check
+          python -m unittest tests.test_visual_contracts -v
+      - name: Create one deployment checkpoint
+        shell: bash
+        run: |
+          python -c "import json,datetime,pathlib; p=pathlib.Path('data/site_release.json'); p.write_text(json.dumps({'released_at':datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),'source_sha':'${{ github.sha }}'},indent=2)+'\n')"
+          git add -- data/site_release.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish scheduled site release [release]"
+          git push

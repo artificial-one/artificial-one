@@ -434,6 +434,16 @@ button { color: inherit; }
 .recipe-card p { min-height: 52px; color: #cbd5e1; line-height: 1.55; }
 .recipe-card strong { color: #a78bfa; }
 .elephant-mini { display: block; width: 62px; height: 62px; background: url("/images/branding/artificial-one-elephant-mark.png") center/contain no-repeat; filter: drop-shadow(0 9px 18px rgba(139,92,246,.28)); font-size: 0; }
+.core-badge { display:inline-block; margin-left:.5rem; padding:.3rem .55rem; border-radius:999px; background:#9cff3b; color:#15200c; font-size:.68rem; font-weight:950; letter-spacing:.08em; vertical-align:middle; }
+.trial-plan { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; padding:0; list-style:none; }
+.trial-plan li { display:flex; flex-direction:column; gap:7px; min-height:150px; padding:18px; border:1px solid var(--line); border-radius:18px; background:rgba(139,92,246,.07); }
+.trial-plan strong { color:var(--acid); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+.trial-plan span { line-height:1.55; }
+.decision-scorecard { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.decision-scorecard div { padding:16px; border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.025); }
+.decision-scorecard dt { color:var(--muted); font-size:.75rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+.decision-scorecard dd { margin:.45rem 0 0; line-height:1.55; }
+@media (max-width:760px) { .trial-plan,.decision-scorecard { grid-template-columns:1fr; } }
 .recipe-steps { display: grid; gap: 14px; padding: 0; list-style: none; counter-reset: steps; }
 .recipe-steps li { display: grid; grid-template-columns: 54px 1fr; gap: 18px; align-items: center; padding: 20px; border: 1px solid #374151; border-radius: 18px; color: #f8fafc; background: #111827; }
 .recipe-steps span { display: grid; width: 50px; height: 50px; place-items: center; border-radius: 15px; color: #fff; background: #5b21b6; font-size: 1.3rem; font-weight: 900; }
