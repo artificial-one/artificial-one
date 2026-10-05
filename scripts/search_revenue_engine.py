@@ -287,6 +287,22 @@ def build_executive_snapshot(
             "detail": f"{len(api_errors)} page check{'s' if len(api_errors) != 1 else ''} failed temporarily. The system will retry automatically.",
             "requires_user_action": False,
         })
+    if (
+        inspection_scope_available
+        and checked >= max(10, int(total * 0.8))
+        and checked
+        and sum(item.get("status") == "PASS" for item in affiliate_inspections) / checked < 0.25
+    ):
+        confirmed = sum(item.get("status") == "PASS" for item in affiliate_inspections)
+        attention.append({
+            "title": "Google visibility is critically low",
+            "detail": (
+                f"Google currently confirms only {confirmed} of {checked} checked affiliate pages as indexed. "
+                "This is the main constraint on search traffic; the system will keep improving internal links, "
+                "refreshing sitemaps and resubmitting changed pages automatically."
+            ),
+            "requires_user_action": False,
+        })
     if lost_indexing:
         attention.append({
             "title": "Some affiliate pages dropped out of Google",
