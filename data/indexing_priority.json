@@ -1,7 +1,7 @@
 {
-  "candidates": 618,
-  "excluded": 458,
-  "excluded_page_count": 458,
+  "candidates": 619,
+  "excluded": 459,
+  "excluded_page_count": 459,
   "excluded_pages": [
     {
       "path": "search-intent/pinecone-vector-database-for-build-retrieval-augmented-generation.html",
@@ -127,14 +127,14 @@
       "reasons": [
         "index_budget"
       ],
-      "words": 356
+      "words": 361
     },
     {
       "path": "search-intent/omniseo-search-optimization-for-organize-content-optimization-work.html",
       "reasons": [
         "index_budget"
       ],
-      "words": 356
+      "words": 361
     },
     {
       "path": "search-intent/omniseo-search-optimization-vs-kartra-marketing-platform.html",
@@ -176,12 +176,12 @@
       "reasons": [
         "index_budget"
       ],
-      "words": 347
+      "words": 352
     }
   ],
   "excluded_pages_note": "A representative sample only; the full count is grouped by exclusion reason.",
   "exclusion_reasons": {
-    "index_budget": 458
+    "index_budget": 459
   },
   "included": 160,
   "included_paths": [
