@@ -1,6 +1,24 @@
 {
   "changes": [
     {
+      "detected_on": "2026-10-05",
+      "id": "f98ee8e52bd83988",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://replit.com",
+      "tool_id": "replit-ai",
+      "tool_name": "Replit AI"
+    },
+    {
+      "detected_on": "2026-10-05",
+      "id": "7fd4e374ec9530bb",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://speechify.com",
+      "tool_id": "speechify",
+      "tool_name": "Speechify"
+    },
+    {
       "detected_on": "2026-10-04",
       "id": "e261164c7d3ed1b4",
       "kind": "feature or product",
@@ -746,7 +764,7 @@
     }
   ],
   "stats": {
-    "changes": 51,
+    "changes": 53,
     "monetized": 290,
     "recipes": 8,
     "reviewed": 42,

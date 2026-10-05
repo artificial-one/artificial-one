@@ -1,10 +1,28 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 65,
+    "successful_checks": 55,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-05",
+      "id": "f98ee8e52bd83988",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://replit.com",
+      "tool_id": "replit-ai",
+      "tool_name": "Replit AI"
+    },
+    {
+      "detected_on": "2026-10-05",
+      "id": "7fd4e374ec9530bb",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://speechify.com",
+      "tool_id": "speechify",
+      "tool_name": "Speechify"
+    },
     {
       "detected_on": "2026-10-04",
       "id": "e261164c7d3ed1b4",
@@ -466,6 +484,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-04",
+  "updated_at": "2026-10-05",
   "version": 1
 }
