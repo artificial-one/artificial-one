@@ -838,11 +838,14 @@ def render_offer(
 
 def render_commercial_core(offers: list[dict[str, Any]]) -> str:
     """Create a tightly linked, AI-relevant shortlist for search and buyers."""
-    positions = {identifier: index for index, identifier in enumerate(COMMERCIAL_CORE_IDS)}
-    core = sorted(
-        (offer for offer in offers if offer["id"] in positions and is_ai_relevant(offer)),
-        key=lambda offer: positions[offer["id"]],
-    )
+    # `offers` has already been ranked by the privacy-safe revenue strategy.
+    # Preserve that behavioral ordering while keeping membership constrained to
+    # the reviewed, AI-relevant commercial core.
+    core = [
+        offer
+        for offer in offers
+        if offer["id"] in COMMERCIAL_CORE_IDS and is_ai_relevant(offer)
+    ]
     cards = "".join(offer_card(offer, "commercial-core") for offer in core)
     content = f'''<section class="page-hero"><div class="container"><p class="eyebrow">30 evidence-led starting points</p><h1>The AI software shortlist</h1><p class="lead">Start with the job, then open a practical fit guide. Every page includes sources, limitations, a seven-day proof plan and comparable alternatives.</p><p><a class="btn btn-secondary" href="ai-software-price-tracker.html">Open the price &amp; plan tracker →</a></p></div></section><section class="container section-tight"><div class="card-grid">{cards}</div></section>{catalog_script(core)}'''
     return shell(

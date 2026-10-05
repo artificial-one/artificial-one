@@ -666,7 +666,8 @@
         var source = haystack(item);
         return tokens.every(function (token) { return source.indexOf(token) >= 0; });
       });
-      target.innerHTML = matches.length ? matches.slice(0,4).map(homeToolMarkup).join("") : '<div class="home-tool-empty">No exact match. Try a task such as <strong>video</strong>, <strong>sales</strong> or <strong>PDF</strong>.</div>';
+      var visibleLimit = query ? 4 : 3;
+      target.innerHTML = matches.length ? matches.slice(0,visibleLimit).map(homeToolMarkup).join("") : '<div class="home-tool-empty">No exact match. Try a task such as <strong>video</strong>, <strong>sales</strong> or <strong>PDF</strong>.</div>';
       if (meta) meta.textContent = query ? matches.length + " relevant tool" + (matches.length === 1 ? "" : "s") + " found" : catalog.length + " verified partner tools—popular picks first";
       bindDynamic(target);
     }
