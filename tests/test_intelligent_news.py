@@ -132,7 +132,7 @@ class IntelligentNewsTests(unittest.TestCase):
         self.assertIn(intelligent.normalized(repaired["facts"][0]["evidence"]), intelligent.normalized(EVIDENCE))
         self.assertEqual(intelligent.validate_draft(ITEM, EVIDENCE, repaired), [])
 
-    def test_rendered_page_has_news_schema_source_and_three_decision_routes(self):
+    def test_rendered_page_has_news_schema_source_and_four_decision_routes(self):
         record = {
             "path": intelligent.permanent_path(ITEM),
             "created_at": datetime(2026, 9, 27, tzinfo=timezone.utc).isoformat(),
@@ -150,7 +150,8 @@ class IntelligentNewsTests(unittest.TestCase):
         self.assertIn("The Elephant take", page)
         self.assertIn("Read the original reporting", page)
         self.assertIn("BUYER GUIDE", page)
-        self.assertIn("RELATED TOOL", page)
+        self.assertIn("COMPARE OPTIONS", page)
+        self.assertIn("COMMERCIAL PRODUCT", page)
         self.assertIn("ASK THE ELEPHANT", page)
         self.assertIn("background:#fff", page)
         self.assertIn("AI news worth knowing", page)

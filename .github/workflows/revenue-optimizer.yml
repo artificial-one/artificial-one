@@ -124,6 +124,7 @@ jobs:
       - name: Build the tool finder and performance-ranked offer pages
         run: |
           python scripts/build_partner_offers.py
+          python scripts/build_price_plan_tracker.py
           python scripts/build_search_revenue_pages.py
           python scripts/monetize_affiliate_links.py
           python scripts/build_ai_news.py --cached
@@ -186,6 +187,7 @@ jobs:
           node --check assets/affiliate-tracking.js
           node --check api/affiliate-event.js
           python scripts/build_partner_offers.py --check
+          python scripts/build_price_plan_tracker.py --check
           python scripts/build_search_revenue_pages.py --check
           python scripts/monetize_affiliate_links.py --check
           python scripts/build_ai_news.py --check
@@ -212,7 +214,7 @@ jobs:
       - name: Commit only public, privacy-safe optimization output
         shell: bash
         run: |
-          git add -- data/revenue_strategy.json data/conversion_strategy.json data/content_routes.json data/distribution_queue.json data/distribution_receipts.json data/paid_campaign_plan.json data/offer_change_alerts.json data/indexing_recovery.json data/indexing_priority.json data/legacy_index_consolidation.json data/tool_intelligence.json data/affiliate_growth_loop.json data/ai-tool-intelligence.csv data/tool_change_history.json data/elephant_experience.json ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html ask-elephant.html ai-stack-studio.html comparison-lab.html ai-tool-observatory.html workflow-recipes.html workflow-recipes developers.html watchlist-confirmed.html index.html news.html newsletter feed.xml partner-offers.html partner-offers affiliate-categories.html affiliate-categories search-intent calculators decision-tools.html ai-stack-builder.html buyers-guides.html offer-updates.html sponsor.html sponsor-success.html sitemap.xml sitemap-priority.xml robots.txt assets/affiliate-tracking.js assets/decision-engine.css assets/legacy-tool-pages.css assets/elephant-experience.js assets/elephant-share.js api/affiliate-event.js api/tool-catalog.js api/watchlist-subscribe.js api/outcome-signals.js a10e20260915d74b93c2f18e7a45c901.txt images/social images/social-cards ':(glob)**/*.html'
+          git add -- data/revenue_strategy.json data/conversion_strategy.json data/content_routes.json data/distribution_queue.json data/distribution_receipts.json data/paid_campaign_plan.json data/offer_change_alerts.json data/indexing_recovery.json data/indexing_priority.json data/indexing_request_queue.json data/legacy_index_consolidation.json data/tool_intelligence.json data/affiliate_growth_loop.json data/ai-tool-intelligence.csv data/tool_change_history.json data/ai-software-price-tracker.json data/ai-software-price-tracker.csv data/elephant_experience.json ai-tool-finder.html ai-software-price-tracker.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html ask-elephant.html ai-stack-studio.html comparison-lab.html ai-tool-observatory.html workflow-recipes.html workflow-recipes developers.html watchlist-confirmed.html index.html news.html newsletter feed.xml partner-offers.html partner-offers affiliate-categories.html affiliate-categories search-intent calculators decision-tools.html ai-stack-builder.html buyers-guides.html offer-updates.html sponsor.html sponsor-success.html sitemap.xml sitemap-priority.xml robots.txt assets/affiliate-tracking.js assets/decision-engine.css assets/legacy-tool-pages.css assets/elephant-experience.js assets/elephant-share.js api/affiliate-event.js api/tool-catalog.js api/watchlist-subscribe.js api/outcome-signals.js a10e20260915d74b93c2f18e7a45c901.txt images/social images/social-cards ':(glob)**/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

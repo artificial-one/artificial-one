@@ -62,6 +62,7 @@ jobs:
       - name: Build newly activated offers through the existing safe pipeline
         run: |
           python scripts/build_partner_offers.py
+          python scripts/build_price_plan_tracker.py
           python scripts/build_search_revenue_pages.py
           python scripts/monetize_affiliate_links.py
           python scripts/build_tool_intelligence.py
@@ -74,6 +75,7 @@ jobs:
         run: |
           python -m unittest tests.test_partner_opportunity_engine tests.test_affiliate_network_connectors tests.test_affiliate_source_reconciliation tests.test_partner_offer_pipeline -v
           python scripts/build_partner_offers.py --check
+          python scripts/build_price_plan_tracker.py --check
           python scripts/build_search_revenue_pages.py --check
           python scripts/monetize_affiliate_links.py --check
           python scripts/build_tool_intelligence.py --check
@@ -85,7 +87,7 @@ jobs:
       - name: Commit public-safe inventory and newly activated offers
         shell: bash
         run: |
-          git add -- data/partner_opportunities.json data/affiliate_network_status.json data/affiliate_source_reconciliation.json data/partner_offers.json data/partnerstack_program_audit.json data/tool_intelligence.json data/affiliate_growth_loop.json data/ai-tool-intelligence.csv data/indexing_recovery.json data/indexing_priority.json data/legacy_index_consolidation.json partner-opportunities.html partner-offers.html partner-offers affiliate-categories.html affiliate-categories search-intent calculators ai-tool-finder.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html news-archive.html sitemap.xml sitemap-priority.xml robots.txt assets/affiliate-tracking.js ':(glob)tools/*.html'
+          git add -- data/partner_opportunities.json data/affiliate_network_status.json data/affiliate_source_reconciliation.json data/partner_offers.json data/partnerstack_program_audit.json data/tool_intelligence.json data/affiliate_growth_loop.json data/ai-tool-intelligence.csv data/indexing_recovery.json data/indexing_priority.json data/indexing_request_queue.json data/legacy_index_consolidation.json data/ai-software-price-tracker.json data/ai-software-price-tracker.csv partner-opportunities.html partner-offers.html partner-offers affiliate-categories.html affiliate-categories search-intent calculators ai-tool-finder.html ai-software-price-tracker.html ai-tool-database.html ai-tool-alternatives.html ai-tool-changes.html buyers-guides.html news-archive.html sitemap.xml sitemap-priority.xml robots.txt assets/affiliate-tracking.js ':(glob)tools/*.html'
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

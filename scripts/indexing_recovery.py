@@ -30,6 +30,7 @@ SITEMAP_PATH = ROOT / "sitemap.xml"
 PRIORITY_SITEMAP_PATH = ROOT / "sitemap-priority.xml"
 REPORT_PATH = ROOT / "data" / "indexing_recovery.json"
 PRIORITY_REPORT_PATH = ROOT / "data" / "indexing_priority.json"
+REQUEST_QUEUE_PATH = ROOT / "data" / "indexing_request_queue.json"
 SEARCH_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
 HUB_PATH = ROOT / "buyers-guides.html"
 NEWS_ARCHIVE_PATH = ROOT / "news-archive.html"
@@ -57,6 +58,7 @@ CURATED_CORE = (
     "workflow-recipes.html",
     "partner-offers.html",
     "ai-software-shortlist.html",
+    "ai-software-price-tracker.html",
     "affiliate-categories.html",
     "decision-tools.html",
     "offer-updates.html",
@@ -64,6 +66,7 @@ CURATED_CORE = (
     "partners.html",
 )
 PRIORITY_FOLDERS = ("partner-offers", "appsumo-guides", "affiliate-categories", "search-intent", "calculators", "workflow-recipes", "news")
+PRIORITY_LIMIT = 160
 
 
 def priority_pages() -> list[Path]:
@@ -204,7 +207,69 @@ def select_priority_pages(
             })
         else:
             accepted.append(path)
-    return accepted, rejected, incoming
+    ranked = sorted(accepted, key=priority_rank)
+    included: list[Path] = []
+
+    def add(values: list[Path], limit: int | None = None) -> None:
+        for value in values[:limit]:
+            if value not in included and len(included) < PRIORITY_LIMIT:
+                included.append(value)
+
+    offers = load_public_json(ROOT / "data" / "partner_offers.json").get("offers", [])
+    slug_by_id = {str(item.get("id")): str(item.get("slug")) for item in offers}
+    core_slugs = [slug_by_id[identifier] for identifier in COMMERCIAL_CORE_IDS if identifier in slug_by_id]
+    add([path for path in ranked if path.relative_to(ROOT).as_posix() in CURATED_CORE])
+    add([path for path in ranked if path.parent.name == "partner-offers" and path.stem in core_slugs])
+    for slug in core_slugs:
+        decision_pages = [
+            path for path in ranked
+            if path.parent.name == "search-intent" and path.stem.startswith(slug + "-")
+        ]
+        add(decision_pages, 2)
+    for slug in core_slugs:
+        add([path for path in ranked if path.parent.name == "calculators" and path.stem.startswith(slug + "-")], 1)
+    add([path for path in ranked if path.parent.name == "workflow-recipes"])
+    # A small AppSumo sample keeps live deal coverage discoverable without
+    # allowing hundreds of near-identical deal pages to consume crawl demand.
+    add([path for path in ranked if path.parent.name == "appsumo-guides"], 5)
+    add([path for path in ranked if "news" in path.relative_to(ROOT).parts])
+    add(ranked)
+    for path in ranked:
+        if path in included:
+            continue
+        rejected.append({
+            "path": path.relative_to(ROOT).as_posix(),
+            "reasons": ["index_budget"],
+            "words": len(_visible_words((virtual or {}).get(path) or path.read_text(encoding="utf-8", errors="ignore"))),
+        })
+    return included, rejected, incoming
+
+
+def priority_rank(path: Path) -> tuple[int, int, str]:
+    """Concentrate crawl demand on hubs, 30 money products and their decision pages."""
+    relative = path.relative_to(ROOT).as_posix()
+    core_position = {identifier: index for index, identifier in enumerate(COMMERCIAL_CORE_IDS)}
+    offers = load_public_json(ROOT / "data" / "partner_offers.json").get("offers", [])
+    slug_to_id = {str(item.get("slug")): str(item.get("id")) for item in offers}
+    core_slugs = {slug: identifier for slug, identifier in slug_to_id.items() if identifier in core_position}
+    if relative in CURATED_CORE:
+        return (0, CURATED_CORE.index(relative), relative)
+    if relative.startswith("partner-offers/"):
+        identifier = slug_to_id.get(path.stem, "")
+        return (1 if identifier in core_position else 8, core_position.get(identifier, 9999), relative)
+    if relative.startswith("search-intent/"):
+        identifier = next((value for slug, value in core_slugs.items() if path.stem.startswith(slug + "-")), "")
+        suffix_order = 0 if path.stem.endswith("-pricing") else 1 if path.stem.endswith("-alternatives") else 2
+        return (2 if identifier else 7, core_position.get(identifier, 9999) * 3 + suffix_order, relative)
+    if relative.startswith("calculators/"):
+        identifier = next((value for slug, value in core_slugs.items() if path.stem.startswith(slug + "-")), "")
+        return (3 if identifier else 7, core_position.get(identifier, 9999), relative)
+    if relative.startswith("workflow-recipes/") or relative == "workflow-recipes.html":
+        return (4, 0, relative)
+    if relative.startswith("news/"):
+        # ISO date folders sort naturally; newest stories receive the crawl budget.
+        return (5, 0, "".join(chr(255 - ord(char)) if ord(char) < 256 else char for char in relative))
+    return (6, 0, relative)
 
 
 def render_priority_sitemap(paths: list[Path]) -> str:
@@ -213,6 +278,19 @@ def render_priority_sitemap(paths: list[Path]) -> str:
     rows.extend(f"  <url><loc>{expected_url(path)}</loc><lastmod>{lastmod}</lastmod></url>" for path in paths)
     rows.append("</urlset>")
     return "\n".join(rows) + "\n"
+
+
+def request_queue(paths: list[Path]) -> dict[str, Any]:
+    cornerstone = [path for path in paths if path.relative_to(ROOT).as_posix() in CURATED_CORE]
+    commercial = [path for path in paths if path.parent.name == "partner-offers"]
+    chosen = (cornerstone + commercial)[:40]
+    return {
+        "version": 1,
+        "updated_at": content_lastmod(),
+        "method": "cornerstone-url-inspection-queue",
+        "urls": [{"url": expected_url(path), "reason": "cornerstone" if path in cornerstone else "commercial-core"} for path in chosen],
+        "note": "Use URL Inspection for diagnosis and selected cornerstone requests. Google does not provide a supported bulk indexing API for ordinary web pages.",
+    }
 
 
 def render_news_archive(paths: list[Path]) -> str:
@@ -478,7 +556,9 @@ def priority_report(
         "included": len(accepted),
         "excluded": len(rejected),
         "included_paths": [path.relative_to(ROOT).as_posix() for path in accepted],
-        "excluded_pages": rejected,
+        "excluded_pages": rejected[:25],
+        "excluded_page_count": len(rejected),
+        "excluded_pages_note": "A representative sample only; the full count is grouped by exclusion reason.",
         "exclusion_reasons": dict(sorted(reason_counts.items())),
         "incoming_link_distribution": {
             "0": sum(incoming[path.relative_to(ROOT).as_posix()] == 0 for path in accepted),
@@ -487,7 +567,7 @@ def priority_report(
         },
         "policy": {
             "included": "Curated hubs and substantive commercial, workflow and permanent news pages that pass the quality gate.",
-            "excluded": "Bulk legacy tool pages, thin deal templates, noindex pages and candidates lacking useful content or crawl signals.",
+            "excluded": "Pages outside the 160-URL crawl budget remain public but are not advertised in the priority sitemap. Quality failures are also excluded.",
             "google": "This priority sitemap is submitted to Search Console; inclusion is a request, not a guarantee of indexing.",
         },
     }
@@ -583,14 +663,18 @@ def build(check: bool = False, submit: bool = False, state_path: Path = ROOT / "
     accepted, rejected, incoming = select_priority_pages(candidates, virtual)
     priority_sitemap = render_priority_sitemap(accepted)
     sitemap = SITEMAP_PATH.read_text(encoding="utf-8")
+    # Keep the complete catalogue sitemap as a public inventory, while robots.txt
+    # advertises only the deliberately capped priority sitemap to crawlers.
     expected_sitemap = update_sitemap(sitemap)
     report = json.dumps(audit(accepted, virtual, priority_sitemap), indent=2, ensure_ascii=False, sort_keys=True) + "\n"
     selection_report = json.dumps(priority_report(candidates, accepted, rejected, incoming), indent=2, ensure_ascii=False, sort_keys=True) + "\n"
+    queue = json.dumps(request_queue(accepted), indent=2, ensure_ascii=False, sort_keys=True) + "\n"
     stale = (
         not HUB_PATH.exists() or HUB_PATH.read_text(encoding="utf-8") != hub
         or not NEWS_ARCHIVE_PATH.exists() or NEWS_ARCHIVE_PATH.read_text(encoding="utf-8") != news_archive
         or not REPORT_PATH.exists() or REPORT_PATH.read_text(encoding="utf-8") != report
         or not PRIORITY_REPORT_PATH.exists() or PRIORITY_REPORT_PATH.read_text(encoding="utf-8") != selection_report
+        or not REQUEST_QUEUE_PATH.exists() or REQUEST_QUEUE_PATH.read_text(encoding="utf-8") != queue
         or not PRIORITY_SITEMAP_PATH.exists() or PRIORITY_SITEMAP_PATH.read_text(encoding="utf-8") != priority_sitemap
         or sitemap != expected_sitemap
     )
@@ -604,6 +688,7 @@ def build(check: bool = False, submit: bool = False, state_path: Path = ROOT / "
     write_if_changed(NEWS_ARCHIVE_PATH, news_archive)
     write_if_changed(REPORT_PATH, report)
     write_if_changed(PRIORITY_REPORT_PATH, selection_report)
+    write_if_changed(REQUEST_QUEUE_PATH, queue)
     write_if_changed(PRIORITY_SITEMAP_PATH, priority_sitemap)
     write_if_changed(SITEMAP_PATH, expected_sitemap)
     status = submit_indexnow(changed_urls(), state_path) if submit else "IndexNow not requested"

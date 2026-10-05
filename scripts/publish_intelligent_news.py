@@ -296,18 +296,23 @@ def route_links(item: dict[str, Any]) -> dict[str, str]:
     review_title = str(related.get("title") or "Browse relevant partner reviews")
     offer_id = str(related.get("offer_id") or "")
     guide = "buyers-guides.html"
+    comparison = "comparison-lab.html"
     if offer_id:
-        candidates = [
-            ROOT / "search-intent" / f"{offer_id}-alternatives.html",
-            ROOT / "search-intent" / f"{offer_id}-pricing.html",
-        ]
-        match = next((path for path in candidates if path.exists()), None)
-        if match:
-            guide = match.relative_to(ROOT).as_posix()
+        offers = load_json(OFFERS_PATH).get("offers", [])
+        matched = next((offer for offer in offers if str(offer.get("id")) == offer_id), {})
+        offer_slug = str(matched.get("slug") or offer_id)
+        pricing = ROOT / "search-intent" / f"{offer_slug}-pricing.html"
+        alternatives = ROOT / "search-intent" / f"{offer_slug}-alternatives.html"
+        if pricing.exists():
+            guide = pricing.relative_to(ROOT).as_posix()
+        if alternatives.exists():
+            comparison = alternatives.relative_to(ROOT).as_posix()
     task = f"Explain what {item.get('title', 'this AI news')} changes for my workflow and help me choose the right tools"
     return {
         "guide_url": guide,
         "guide_title": "Open the practical buyer guide",
+        "comparison_url": comparison,
+        "comparison_title": "Compare the strongest alternatives",
         "review_url": review_url,
         "review_title": review_title,
         "elephant_url": f"index.html?task={quote(task)}#build",
@@ -317,6 +322,8 @@ def route_links(item: dict[str, Any]) -> dict[str, str]:
 
 def render_article(record: dict[str, Any]) -> str:
     item, article, links = record["source"], record["article"], record["links"]
+    comparison_url = str(links.get("comparison_url") or "comparison-lab.html")
+    comparison_title = str(links.get("comparison_title") or "Compare the strongest alternatives")
     path = record["path"]
     prefix = "../" * len(Path(path).parent.parts)
     canonical = SITE_URL + path
@@ -341,7 +348,7 @@ def render_article(record: dict[str, Any]) -> str:
 <header class="article-head"><div class="eyebrow">{html.escape(item['category'])}</div><h1>{html.escape(article['headline'])}</h1><p class="dek">{html.escape(article['summary'])}</p><p class="meta">{html.escape(item['source'])} · {html.escape(item['display_date'])}</p></header>
 <div class="layout"><article><section><h2>What happened</h2><ul>{facts}</ul></section><section><h2>Why it matters</h2><p>{html.escape(article['why_it_matters'])}</p></section><section class="take"><h2>The Elephant take</h2><p>{html.escape(article['elephant_take'])}</p></section><section><h2>Who should care</h2><ul>{audiences}</ul></section><section><h2>What to do next</h2><ol>{actions}</ol></section><section class="caveat"><h2>Keep in mind</h2><p>{html.escape(article['caveat'])}</p></section>
 <p><a class="source" href="{html.escape(item['url'], quote=True)}" target="_blank" rel="noopener noreferrer">Read the original reporting at {html.escape(item['source'])} ↗</a></p></article>
-<aside class="side"><h2>Keep exploring</h2><p>Turn this development into a practical software decision.</p><a class="route" href="{prefix}{html.escape(links['guide_url'], quote=True)}"><small>BUYER GUIDE</small>{html.escape(links['guide_title'])} →</a><a class="route" href="{prefix}{html.escape(links['review_url'], quote=True)}" data-content-route data-related-offer-id="{html.escape(links['offer_id'], quote=True)}"><small>RELATED TOOL</small>{html.escape(links['review_title'])} →</a><a class="route" href="{prefix}{html.escape(links['elephant_url'], quote=True)}"><small>ASK THE ELEPHANT</small>Get a recommendation from this story →</a></aside></div></main><footer>© {datetime.now(timezone.utc).year} artificial.one · AI news worth knowing.</footer></body></html>'''
+<aside class="side"><h2>Turn news into a decision</h2><p>Use the story to compare options, check a commercial product and ask a better question.</p><a class="route" href="{prefix}{html.escape(links['guide_url'], quote=True)}"><small>BUYER GUIDE</small>{html.escape(links['guide_title'])} →</a><a class="route" href="{prefix}{html.escape(comparison_url, quote=True)}"><small>COMPARE OPTIONS</small>{html.escape(comparison_title)} →</a><a class="route" href="{prefix}{html.escape(links['review_url'], quote=True)}" data-content-route data-related-offer-id="{html.escape(links['offer_id'], quote=True)}"><small>COMMERCIAL PRODUCT</small>{html.escape(links['review_title'])} →</a><a class="route" href="{prefix}{html.escape(links['elephant_url'], quote=True)}"><small>ASK THE ELEPHANT</small>Get a recommendation from this story →</a></aside></div></main><footer>© {datetime.now(timezone.utc).year} artificial.one · AI news worth knowing.</footer></body></html>'''
 
 
 def render_news_sitemap(records: list[dict[str, Any]], now: datetime) -> str:
@@ -398,6 +405,17 @@ def process(*, max_new: int, max_attempts: int, time_budget: int, now: datetime,
             except Exception as exc:
                 failures.append({"url": str(item.get("url") or ""), "reason": clean_text(str(exc), 240), "at": now.isoformat(), "pipeline_version": PIPELINE_VERSION})
     records.sort(key=lambda record: str(record.get("created_at") or ""), reverse=True)
+    # Routing is deterministic and refreshed for the complete archive, so an
+    # older briefing benefits when a better buyer guide or comparison appears.
+    for record in records:
+        if not isinstance(record.get("source"), dict):
+            continue
+        record["links"] = route_links(record["source"])
+        if not check:
+            page = ROOT / str(record.get("path") or "")
+            if page.suffix == ".html":
+                page.parent.mkdir(parents=True, exist_ok=True)
+                page.write_text(render_article(record), encoding="utf-8")
     retained_failures = [item for item in prior_failures if str(item.get("url") or "") not in {str(value.get("url") or "") for value in failures} and str(item.get("url") or "") not in known]
     archive = {"version": 1, "updated_at": now.isoformat() if created else archive.get("updated_at", ""), "articles": records, "last_failures": (failures + retained_failures)[:40]}
     if not check:
