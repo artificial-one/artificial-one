@@ -62,7 +62,7 @@ def build_plan() -> dict[str, Any]:
             "name": f"AO Generic Intent - {offer['name']}",
             "eligible": allowed,
             "status": "ready" if allowed else "blocked_network_policy" if prohibited else "blocked_terms_unverified",
-            "landing_url": f"https://artificial.one/partner-offers/{offer['slug']}.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-{offer_id}",
+            "landing_url": f"https://www.artificial.one/partner-offers/{offer['slug']}.html?utm_source=google&utm_medium=cpc&utm_campaign=ao-{offer_id}",
             "keywords": generic_keywords(offer),
             "negative_keywords": [str(offer["name"])],
         })

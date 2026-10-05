@@ -7,7 +7,7 @@ from pathlib import Path
 
 def get_correct_og_image_url(filepath):
     """Get the correct OG image URL for a file."""
-    base_url = "https://artificial.one"
+    base_url = "https://www.artificial.one"
     path_str = str(filepath).replace('\\', '/')
     
     if filepath.name == 'index.html':

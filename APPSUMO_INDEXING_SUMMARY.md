@@ -8,7 +8,7 @@
 ## 1. AppSumo Pages Identified
 
 - **Total AppSumo tool review pages (with appsumo.8odi.net):** **152**
-- **Location:** All under `/tools/` as `{tool-name}-review.html` (e.g. `https://artificial.one/tools/triplo-ai-review.html`).
+- **Location:** All under `/tools/` as `{tool-name}-review.html` (e.g. `https://www.artificial.one/tools/triplo-ai-review.html`).
 - **Note:** There is no separate `/appsumo/` directory; “AppSumo pages” are the tool review pages that contain AppSumo affiliate links.
 
 ---
@@ -69,7 +69,7 @@ Use Google Search Console → URL Inspection → paste each URL → Request Inde
   - `<changefreq>weekly</changefreq>`
   - `<priority>0.9</priority>`
 - **Result:** 153 URL blocks updated (152 AppSumo tool reviews + 1 duplicate slug edge case).
-- **New URL in sitemap:** `https://artificial.one/blog-best-appsumo-deals-2026.html` with priority 0.9 and changefreq weekly.
+- **New URL in sitemap:** `https://www.artificial.one/blog-best-appsumo-deals-2026.html` with priority 0.9 and changefreq weekly.
 
 ---
 

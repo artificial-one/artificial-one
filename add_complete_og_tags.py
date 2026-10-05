@@ -29,7 +29,7 @@ def extract_page_info(content, filepath):
         info['description'] = info['title']
     
     # Generate URL
-    base_url = "https://artificial.one"
+    base_url = "https://www.artificial.one"
     path_str = str(filepath).replace('\\', '/')
     
     if filepath.name == 'index.html':
@@ -52,7 +52,7 @@ def extract_page_info(content, filepath):
 
 def get_og_image_url(filepath):
     """Get OG image URL for the page."""
-    base_url = "https://artificial.one"
+    base_url = "https://www.artificial.one"
     path_str = str(filepath).replace('\\', '/')
     
     if filepath.name == 'index.html':

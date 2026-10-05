@@ -68,7 +68,7 @@ def fetch_source(tool: dict[str, Any]) -> tuple[str, str, str, str] | None:
     request = Request(
         url,
         headers={
-            "User-Agent": "artificial.one intelligence monitor/1.0 (+https://artificial.one/about.html)",
+            "User-Agent": "artificial.one intelligence monitor/1.0 (+https://www.artificial.one/about.html)",
             "Accept": "text/html,application/xhtml+xml",
         },
     )

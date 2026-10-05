@@ -6,7 +6,7 @@
 
 module.exports = {
   site: {
-    url: 'https://artificial.one',
+    url: 'https://www.artificial.one',
     name: 'artificial.one',
     tagline: 'AI Tools Reviewed BY AI',
     footerText: '© 2026 artificial.one - AI tools reviewed by AI',

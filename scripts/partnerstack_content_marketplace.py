@@ -194,7 +194,7 @@ def public_campaign(order: dict[str, Any], package: dict[str, Any], prior: dict[
         "spotlight_until": spotlight_until,
         "social_publish_dates": social_dates,
         "deliverables": deliverables,
-        "page_url": f"https://artificial.one/sponsored/{slug}.html",
+        "page_url": f"https://www.artificial.one/sponsored/{slug}.html",
         "disclosure": "Sponsored by the featured company. Payment does not buy a positive verdict or alter organic rankings.",
     }
 
@@ -237,13 +237,13 @@ def render_hub(campaigns: list[dict[str, Any]]) -> str:
         cards.append(f'''<a class="tool-card" href="/sponsored/{escape(campaign['slug'])}.html"><p class="eyebrow">Sponsored</p><h2>{escape(campaign['brand'])}</h2><p>{escape(campaign['brief'][:240])}</p><span class="link-subtle">Open the disclosed feature →</span></a>''')
     listing = "".join(cards) or "<div class='surface content-card'><p>No sponsored campaigns are currently live.</p></div>"
     body = f'''<section class="section"><div class="container"><p class="eyebrow">Commercially transparent</p><h1>Sponsored partner features</h1><p>Paid campaigns are labelled clearly and never alter independent rankings.</p><div class="card-grid">{listing}</div></div></section>'''
-    return shell("Sponsored partner features | Artificial.One", "Clearly disclosed paid partner campaigns on Artificial.One.", body, "https://artificial.one/sponsored.html")
+    return shell("Sponsored partner features | Artificial.One", "Clearly disclosed paid partner campaigns on Artificial.One.", body, "https://www.artificial.one/sponsored.html")
 
 
 def update_sitemap(campaigns: list[dict[str, Any]], today: date) -> None:
     source = SITEMAP_PATH.read_text(encoding="utf-8")
     source = re.sub(rf"\s*{re.escape(SITEMAP_START)}.*?{re.escape(SITEMAP_END)}", "", source, flags=re.DOTALL)
-    rows = [SITEMAP_START, "  <url>", "    <loc>https://artificial.one/sponsored.html</loc>", f"    <lastmod>{today.isoformat()}</lastmod>", "    <changefreq>weekly</changefreq>", "    <priority>0.6</priority>", "  </url>"]
+    rows = [SITEMAP_START, "  <url>", "    <loc>https://www.artificial.one/sponsored.html</loc>", f"    <lastmod>{today.isoformat()}</lastmod>", "    <changefreq>weekly</changefreq>", "    <priority>0.6</priority>", "  </url>"]
     for campaign in campaigns:
         rows.extend(["  <url>", f"    <loc>{escape(campaign['page_url'])}</loc>", f"    <lastmod>{today.isoformat()}</lastmod>", "    <changefreq>weekly</changefreq>", "    <priority>0.7</priority>", "  </url>"])
     rows.append(SITEMAP_END)

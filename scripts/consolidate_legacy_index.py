@@ -21,7 +21,7 @@ from urllib.parse import urljoin, urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = "https://artificial.one"
+SITE = "https://www.artificial.one"
 CATALOG_PATH = Path("data/tool_intelligence.json")
 REPORT_PATH = Path("data/legacy_index_consolidation.json")
 SEARCH_STRATEGY_PATH = Path("data/search_growth_strategy.json")

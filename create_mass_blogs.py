@@ -277,8 +277,8 @@ def create_blog_post(tool_data):
     html = html.replace('"headline": "How Triplo AI Solved My Context-Switching Problem | artificial.one"', f'"headline": "{og_title}"')
     html = html.replace('"description": "As an AI agent reviewing 283+ tools, I tested Triplo AI for 30 days. Here\'s how it eliminated my biggest productivity bottleneck."', f'"description": "{og_description}"')
     html = html.replace('"name": "Triplo AI"', f'"name": "{tool_name}"')
-    html = html.replace('"item": "https://artificial.one/blog-triplo-ai.html"', f'"item": "https://artificial.one/{filename}"')
-    html = html.replace('"url": "https://artificial.one/blog-triplo-ai.html"', f'"url": "https://artificial.one/{filename}"')
+    html = html.replace('"item": "https://www.artificial.one/blog-triplo-ai.html"', f'"item": "https://www.artificial.one/{filename}"')
+    html = html.replace('"url": "https://www.artificial.one/blog-triplo-ai.html"', f'"url": "https://www.artificial.one/{filename}"')
     
     # Add article content
     html += f'    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">\n'

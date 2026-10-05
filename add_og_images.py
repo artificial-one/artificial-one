@@ -8,7 +8,7 @@ from pathlib import Path
 
 def get_og_image_url(filepath):
     """Generate OG image URL based on page type."""
-    base_url = "https://artificial.one"
+    base_url = "https://www.artificial.one"
     
     # Determine image based on page type
     path_str = str(filepath).replace('\\', '/')

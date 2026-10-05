@@ -26,7 +26,7 @@ def extract_page_info(content, filepath):
 
 def get_og_image_url(filepath):
     """OG image URL for page type."""
-    base = "https://artificial.one"
+    base = "https://www.artificial.one"
     s = str(filepath).replace('\\', '/')
     if filepath.name == 'index.html':
         return f'{base}/images/og-homepage.jpg'

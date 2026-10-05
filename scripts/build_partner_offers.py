@@ -240,10 +240,10 @@ def shell(
     content: str,
     prefix: str = "",
     structured_data: dict[str, Any] | None = None,
-    social_image: str = "https://artificial.one/images/og-homepage.jpg",
+    social_image: str = "https://www.artificial.one/images/og-homepage.jpg",
     social_image_alt: str | None = None,
 ) -> str:
-    canonical = f"https://artificial.one/{canonical_path}"
+    canonical = f"https://www.artificial.one/{canonical_path}"
     image_alt = social_image_alt or title
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -429,7 +429,7 @@ def render_hub(offers: list[dict[str, Any]]) -> str:
                     "@type": "ListItem",
                     "position": index,
                     "name": offer["name"],
-                    "url": f"https://artificial.one/partner-offers/{offer['slug']}.html",
+                    "url": f"https://www.artificial.one/partner-offers/{offer['slug']}.html",
                 }
                 for index, offer in enumerate(offers, start=1)
             ],
@@ -460,7 +460,7 @@ def render_finder(offers: list[dict[str, Any]]) -> str:
                 "@type": "ListItem",
                 "position": index,
                 "name": offer["name"],
-                "url": f"https://artificial.one/partner-offers/{offer['slug']}.html",
+                "url": f"https://www.artificial.one/partner-offers/{offer['slug']}.html",
             }
             for index, offer in enumerate(offers, 1)
         ],
@@ -662,7 +662,7 @@ def render_offer(
         canonical_path=f"partner-offers/{offer['slug']}.html",
         content=content,
         prefix="../",
-        social_image=f"https://artificial.one/images/social-cards/{offer['id']}.jpg",
+        social_image=f"https://www.artificial.one/images/social-cards/{offer['id']}.jpg",
         social_image_alt=f"Independent {offer['name']} fit, use-case and pricing guide from Artificial.One",
         structured_data={
             "@context": "https://schema.org",
@@ -672,7 +672,7 @@ def render_offer(
                     "name": offer["name"],
                     "applicationCategory": offer["category"],
                     "description": offer["summary"],
-                    "url": f"https://artificial.one/partner-offers/{offer['slug']}.html",
+                    "url": f"https://www.artificial.one/partner-offers/{offer['slug']}.html",
                 },
                 {
                     "@type": "BreadcrumbList",
@@ -681,13 +681,13 @@ def render_offer(
                             "@type": "ListItem",
                             "position": 1,
                             "name": "Partner offers",
-                            "item": "https://artificial.one/partner-offers.html",
+                            "item": "https://www.artificial.one/partner-offers.html",
                         },
                         {
                             "@type": "ListItem",
                             "position": 2,
                             "name": offer["name"],
-                            "item": f"https://artificial.one/partner-offers/{offer['slug']}.html",
+                            "item": f"https://www.artificial.one/partner-offers/{offer['slug']}.html",
                         },
                     ],
                 },
@@ -717,7 +717,7 @@ def render_finder(offers: list[dict[str, Any]]) -> str:
         content=content,
         structured_data={
             "@context": "https://schema.org", "@type": "ItemList", "name": "AI tool finder",
-            "itemListElement": [{"@type": "ListItem", "position": index, "name": offer["name"], "url": f"https://artificial.one/partner-offers/{offer['slug']}.html"} for index, offer in enumerate(offers, 1)],
+            "itemListElement": [{"@type": "ListItem", "position": index, "name": offer["name"], "url": f"https://www.artificial.one/partner-offers/{offer['slug']}.html"} for index, offer in enumerate(offers, 1)],
         },
     )
 
@@ -798,15 +798,15 @@ def render_offer(
     structured = {
         "@context": "https://schema.org",
         "@graph": [
-            {"@type": "SoftwareApplication", "name": offer["name"], "applicationCategory": offer["category"], "description": offer["summary"], "url": f"https://artificial.one/partner-offers/{offer['slug']}.html"},
-            {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Partner offers", "item": "https://artificial.one/partner-offers.html"}, {"@type": "ListItem", "position": 2, "name": offer["name"], "item": f"https://artificial.one/partner-offers/{offer['slug']}.html"}]},
+            {"@type": "SoftwareApplication", "name": offer["name"], "applicationCategory": offer["category"], "description": offer["summary"], "url": f"https://www.artificial.one/partner-offers/{offer['slug']}.html"},
+            {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Partner offers", "item": "https://www.artificial.one/partner-offers.html"}, {"@type": "ListItem", "position": 2, "name": offer["name"], "item": f"https://www.artificial.one/partner-offers/{offer['slug']}.html"}]},
             {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": question, "acceptedAnswer": {"@type": "Answer", "text": answer}} for question, answer in faq]},
         ],
     }
     return shell(
         title=title, description=description,
         canonical_path=f"partner-offers/{offer['slug']}.html", content=content, prefix="../",
-        social_image=f"https://artificial.one/images/social-cards/{offer['id']}.jpg",
+        social_image=f"https://www.artificial.one/images/social-cards/{offer['id']}.jpg",
         social_image_alt=f"Independent {offer['name']} fit, use-case and pricing guide from Artificial.One",
         structured_data=structured,
     )
@@ -814,12 +814,12 @@ def render_offer(
 
 def sitemap_block(offers: list[dict[str, Any]], lastmod: str) -> str:
     pages = [
-        ("https://artificial.one/partners.html", "0.7"),
-        ("https://artificial.one/partner-offers.html", "0.8"),
-        ("https://artificial.one/ai-tool-finder.html", "0.9"),
+        ("https://www.artificial.one/partners.html", "0.7"),
+        ("https://www.artificial.one/partner-offers.html", "0.8"),
+        ("https://www.artificial.one/ai-tool-finder.html", "0.9"),
     ]
     pages.extend(
-        (f"https://artificial.one/partner-offers/{offer['slug']}.html", "0.8")
+        (f"https://www.artificial.one/partner-offers/{offer['slug']}.html", "0.8")
         for offer in offers
     )
     rows = [SITEMAP_START]
@@ -848,7 +848,7 @@ def expected_sitemap(current: str, block: str) -> str:
     # Other sitemap updaters may drop XML comments and add these pages themselves.
     # Remove any such entries before inserting the single block owned by this builder.
     managed_url = re.compile(
-        r"\s*<url>\s*<loc>https://artificial\.one/"
+        r"\s*<url>\s*<loc>https://www\.artificial\.one/"
         r"(?:partners\.html|partner-offers\.html|ai-tool-finder\.html|partner-offers/[^<]+)"
         r"</loc>.*?</url>",
         re.DOTALL,

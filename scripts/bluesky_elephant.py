@@ -290,7 +290,7 @@ def publish_bonus(
     item = bluesky_bonus_item(as_of)
     if not item or item["id"] in bucket["bonus_posts"]:
         return None
-    image_path = ROOT / item["image"].split("https://artificial.one/", 1)[-1]
+    image_path = ROOT / item["image"].split("https://www.artificial.one/", 1)[-1]
     if not image_path.exists():
         raise FileNotFoundError(f"Social card is missing: {image_path}")
     thumbnail = distribution.upload_bluesky_blob(active_session["accessJwt"], image_path)

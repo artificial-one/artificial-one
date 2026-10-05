@@ -55,7 +55,7 @@ def render_success() -> str:
 
 
 def update_sitemap(source: str, lastmod: str) -> str:
-    row = f"{SITEMAP_START}\n  <url><loc>https://artificial.one/sponsor.html</loc><lastmod>{lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n{SITEMAP_END}"
+    row = f"{SITEMAP_START}\n  <url><loc>https://www.artificial.one/sponsor.html</loc><lastmod>{lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n{SITEMAP_END}"
     if SITEMAP_START in source and SITEMAP_END in source:
         return re.sub(re.escape(SITEMAP_START) + r".*?" + re.escape(SITEMAP_END), row, source, flags=re.S)
     return source.rsplit("</urlset>", 1)[0].rstrip() + "\n" + row + "\n</urlset>\n"

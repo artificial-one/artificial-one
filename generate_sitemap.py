@@ -65,7 +65,7 @@ def get_changefreq(path):
 def generate_sitemap():
     """Generate sitemap.xml with all HTML pages."""
     root = Path('.')
-    base_url = 'https://artificial.one'
+    base_url = 'https://www.artificial.one'
     today = '2026-01-24'
     
     # Find all HTML files

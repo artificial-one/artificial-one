@@ -8,7 +8,7 @@ from pathlib import Path
 
 def get_breadcrumbs(filepath):
     """Generate breadcrumb trail from file path."""
-    base_url = "https://artificial.one"
+    base_url = "https://www.artificial.one"
     
     breadcrumbs = [
         ('Home', f'{base_url}/')

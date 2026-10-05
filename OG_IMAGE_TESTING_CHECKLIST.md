@@ -1,7 +1,7 @@
 # OG Image Testing Checklist
 
 ## ✅ Homepage (Already Tested)
-- **URL:** `https://artificial.one/`
+- **URL:** `https://www.artificial.one/`
 - **Status:** ✅ Working on X
 - **Image:** `og-homepage.jpg`
 
@@ -13,10 +13,10 @@
 These are your money pages - most likely to be shared and drive affiliate conversions.
 
 **Test These:**
-- `https://artificial.one/tools/chatgpt.html`
-- `https://artificial.one/tools/claude.html`
-- `https://artificial.one/tools/midjourney.html`
-- `https://artificial.one/tools/cursor.html`
+- `https://www.artificial.one/tools/chatgpt.html`
+- `https://www.artificial.one/tools/claude.html`
+- `https://www.artificial.one/tools/midjourney.html`
+- `https://www.artificial.one/tools/cursor.html`
 
 **What to Check:**
 - ✅ Image shows tool name
@@ -35,9 +35,9 @@ These are your money pages - most likely to be shared and drive affiliate conver
 These help with topic clustering and category discovery.
 
 **Test These:**
-- `https://artificial.one/category/writing-content.html`
-- `https://artificial.one/category/design-images.html`
-- `https://artificial.one/category/coding-development.html`
+- `https://www.artificial.one/category/writing-content.html`
+- `https://www.artificial.one/category/design-images.html`
+- `https://www.artificial.one/category/coding-development.html`
 
 **What to Check:**
 - ✅ Category name is clear
@@ -55,9 +55,9 @@ These help with topic clustering and category discovery.
 These are highly shareable and drive decision-making traffic.
 
 **Test These:**
-- `https://artificial.one/compare/chatgpt-vs-claude.html`
-- `https://artificial.one/compare/cursor-vs-codeium.html`
-- `https://artificial.one/compare/dall-e-3-vs-midjourney.html`
+- `https://www.artificial.one/compare/chatgpt-vs-claude.html`
+- `https://www.artificial.one/compare/cursor-vs-codeium.html`
+- `https://www.artificial.one/compare/dall-e-3-vs-midjourney.html`
 
 **What to Check:**
 - ✅ Uses default or comparison-specific image
@@ -74,9 +74,9 @@ These are highly shareable and drive decision-making traffic.
 These drive organic traffic and establish authority.
 
 **Test These:**
-- `https://artificial.one/blog-ai-seo-tools.html`
-- `https://artificial.one/blog-chatgpt-business.html`
-- `https://artificial.one/blog-free-ai-tools.html`
+- `https://www.artificial.one/blog-ai-seo-tools.html`
+- `https://www.artificial.one/blog-chatgpt-business.html`
+- `https://www.artificial.one/blog-free-ai-tools.html`
 
 **What to Check:**
 - ✅ Uses default or blog-specific image
@@ -93,8 +93,8 @@ These drive organic traffic and establish authority.
 These are useful but less frequently shared.
 
 **Test These:**
-- `https://artificial.one/best/` (if exists)
-- `https://artificial.one/guides/` (if exists)
+- `https://www.artificial.one/best/` (if exists)
+- `https://www.artificial.one/guides/` (if exists)
 
 **What to Check:**
 - ✅ Uses default image
@@ -145,31 +145,31 @@ These are useful but less frequently shared.
 
 ### Tool Reviews (Most Important):
 ```
-https://artificial.one/tools/chatgpt.html
-https://artificial.one/tools/claude.html
-https://artificial.one/tools/midjourney.html
-https://artificial.one/tools/cursor.html
-https://artificial.one/tools/github-copilot.html
+https://www.artificial.one/tools/chatgpt.html
+https://www.artificial.one/tools/claude.html
+https://www.artificial.one/tools/midjourney.html
+https://www.artificial.one/tools/cursor.html
+https://www.artificial.one/tools/github-copilot.html
 ```
 
 ### Categories:
 ```
-https://artificial.one/category/writing-content.html
-https://artificial.one/category/design-images.html
-https://artificial.one/category/coding-development.html
-https://artificial.one/category/productivity-business.html
+https://www.artificial.one/category/writing-content.html
+https://www.artificial.one/category/design-images.html
+https://www.artificial.one/category/coding-development.html
+https://www.artificial.one/category/productivity-business.html
 ```
 
 ### Comparisons:
 ```
-https://artificial.one/compare/chatgpt-vs-claude.html
-https://artificial.one/compare/cursor-vs-codeium.html
+https://www.artificial.one/compare/chatgpt-vs-claude.html
+https://www.artificial.one/compare/cursor-vs-codeium.html
 ```
 
 ### Blog Posts:
 ```
-https://artificial.one/blog-ai-seo-tools.html
-https://artificial.one/blog-chatgpt-business.html
+https://www.artificial.one/blog-ai-seo-tools.html
+https://www.artificial.one/blog-chatgpt-business.html
 ```
 
 ---

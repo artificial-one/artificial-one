@@ -124,21 +124,60 @@ class DailyExecutiveReportTests(unittest.TestCase):
                     "previous": {"clicks": 6, "impressions": 400, "ctr": .015, "position": 10.2},
                 },
                 "sitemap": {"counts_available": True, "submitted": 120, "indexed": 87, "errors": 0, "warnings": 1},
-                "indexing": {"affiliate_pages": 40, "indexed": 38, "inspected": 40, "issues": 2, "complete": True, "newly_indexed": ["one"], "lost_indexing": [], "issue_details": [
-                    {"url": "https://artificial.one/partner-offers/broken.html", "detail": "Crawled - currently not indexed"}
-                ]},
+                "indexing": {
+                    "affiliate_pages": 40, "indexed": 38, "inspected": 40, "issues": 2,
+                    "api_errors": 0, "measurement_available": True, "complete": True,
+                    "newly_indexed": ["one"], "lost_indexing": [], "attention": [],
+                    "site_property": "https://www.artificial.one/",
+                },
                 "commercial_search": {"pages_with_impressions": 9, "top_pages": []},
             },
         }
         _, text, html = render(model)
-        self.assertIn("Priority affiliate pages indexed: 38/40", text)
+        self.assertIn("Affiliate pages confirmed indexed: 38", text)
+        self.assertIn("checked: 40/40", text)
         self.assertIn("Can customers find our affiliate pages?", html)
         self.assertIn("2026-08-25", html)
         self.assertIn("2026-09-21", html)
-        self.assertIn("Crawled - currently not indexed", html)
+        self.assertNotIn("Pages to watch", html)
+        self.assertNotIn("broken.html", html)
         self.assertIn("Explore Google performance", html)
         self.assertNotIn("API checks", html)
         self.assertNotIn("Sitemap", html)
+
+    def test_report_surfaces_only_material_google_attention(self):
+        model = {
+            "date": date(2026, 9, 25),
+            "activity": {"pages_created": 0, "pages_updated": 0, "social_posts": 0, "highlights": []},
+            "published_offers": 2, "visits": 0, "clicks": 0, "signups": 0,
+            "impact_actions": 0, "paying_customers": 0, "partnerstack_transactions": 0,
+            "revenue": "USD 0.00", "commissions": "USD 0.00", "owner_actions": [],
+            "system_work": [], "health": {"status": "healthy", "healthy": 10, "attention": 0, "issues": []},
+            "social": {},
+            "search": {
+                "period": {"start": "2026-08-25", "end": "2026-09-21"},
+                "performance": {"current": {}},
+                "indexing": {
+                    "affiliate_pages": 40, "indexed": 0, "inspected": 0, "issues": 0,
+                    "measurement_available": False,
+                    "site_property": "https://www.artificial.one/",
+                    "attention": [{
+                        "title": "Google needs access to the www property",
+                        "detail": "Verify the canonical property so indexing can be measured.",
+                        "action_url": "https://search.google.com/search-console/welcome",
+                        "action_label": "Verify the www property",
+                        "requires_user_action": True,
+                    }],
+                },
+                "commercial_search": {},
+            },
+        }
+        _, text, html = render(model)
+        self.assertIn("Setup needed", html)
+        self.assertIn("Worth your attention", html)
+        self.assertIn("Verify the www property", html)
+        self.assertIn("indexing confirmation is unavailable", text)
+        self.assertNotIn("Pages to watch", html)
 
     def test_every_owner_decision_is_rendered_without_grouping(self):
         actions = [

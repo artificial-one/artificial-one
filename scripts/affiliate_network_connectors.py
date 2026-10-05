@@ -22,7 +22,7 @@ from urllib.request import Request, urlopen
 from xml.etree import ElementTree
 
 
-USER_AGENT = "artificial.one-multi-network-scout/1.0 (+https://artificial.one/)"
+USER_AGENT = "artificial.one-multi-network-scout/1.0 (+https://www.artificial.one/)"
 NETWORKS: dict[str, dict[str, Any]] = {
     "awin": {
         "name": "Awin", "priority": 1,

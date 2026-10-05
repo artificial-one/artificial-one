@@ -32,7 +32,7 @@ SPONSORED_PATH = ROOT / "data" / "sponsored_campaigns.json"
 FEED_PATH = ROOT / "feed.xml"
 QUEUE_PATH = ROOT / "data" / "distribution_queue.json"
 RECEIPTS_PATH = ROOT / "data" / "distribution_receipts.json"
-FEED_URL = "https://artificial.one/feed.xml"
+FEED_URL = "https://www.artificial.one/feed.xml"
 WEBSUB_HUB = "https://pubsubhubbub.appspot.com/"
 SOCIAL_IMAGE_DIR = ROOT / "images" / "social-cards"
 PROFILE_AVATAR = ROOT / "images" / "social" / "artificial-one-logo.png"
@@ -72,7 +72,7 @@ RESOURCES = (
 
 def attributed_url(path: str, campaign: str) -> str:
     separator = "&" if "?" in path else "?"
-    return f"https://artificial.one/{path}{separator}utm_source=distribution&utm_medium=social&utm_campaign={campaign}"
+    return f"https://www.artificial.one/{path}{separator}utm_source=distribution&utm_medium=social&utm_campaign={campaign}"
 
 
 def appsumo_candidates() -> list[dict[str, Any]]:
@@ -207,8 +207,8 @@ def daily_editorial(as_of: date, offers: list[dict[str, Any]]) -> dict[str, Any]
         "title": title,
         "description": description,
         "page_path": path,
-        "image": "https://artificial.one/images/social-cards/daily-editorial.jpg",
-        "vertical_image": "https://artificial.one/images/social-cards/daily-editorial-vertical.jpg",
+        "image": "https://www.artificial.one/images/social-cards/daily-editorial.jpg",
+        "vertical_image": "https://www.artificial.one/images/social-cards/daily-editorial-vertical.jpg",
         "image_alt": f"{title} — daily editorial from Artificial.One",
         "url": f"{attributed_url(path, campaign)}&utm_content={as_of.isoformat()}",
         "text": text[:295],
@@ -235,7 +235,7 @@ def queue(as_of: date | None = None) -> list[dict[str, Any]]:
             "title": f"Sponsored: {campaign['brand']}",
             "description": str(campaign.get("brief") or "")[:240],
             "page_path": f"sponsored/{campaign['slug']}.html",
-            "image": "https://artificial.one/images/social-cards/daily-editorial.jpg",
+            "image": "https://www.artificial.one/images/social-cards/daily-editorial.jpg",
             "image_alt": f"Sponsored partner feature for {campaign['brand']} on Artificial.One",
             "url": target,
             "text": (
@@ -265,7 +265,7 @@ def queue(as_of: date | None = None) -> list[dict[str, Any]]:
             "title": title,
             "description": copy,
             "page_path": path,
-            "image": f"https://artificial.one/images/social-cards/{resource_id}.jpg",
+            "image": f"https://www.artificial.one/images/social-cards/{resource_id}.jpg",
             "image_alt": f"{title} — free decision tool from Artificial.One",
             "url": url,
             "text": text[:295],
@@ -289,7 +289,7 @@ def queue(as_of: date | None = None) -> list[dict[str, Any]]:
             "title": f"{offer['name']} review and pricing guide",
             "description": description,
             "page_path": f"partner-offers/{offer['slug']}.html",
-            "image": f"https://artificial.one/images/social-cards/{offer['id']}.jpg",
+            "image": f"https://www.artificial.one/images/social-cards/{offer['id']}.jpg",
             "image_alt": f"Independent {offer['name']} fit, use-case and pricing guide from Artificial.One",
             "url": url,
             "affiliate_url": str(offer.get("tracking_url") or ""),
@@ -380,7 +380,7 @@ def write_public_outputs(items: list[dict[str, Any]]) -> None:
         f"<item><title>{escape(item['title'])}</title><link>{escape(item['url'])}</link><guid>{escape(item['url'])}</guid><description>{escape(item['text'])}</description><media:content url=\"{escape(item['image'])}\" medium=\"image\"/><media:title>{escape(item['image_alt'])}</media:title><pubDate>{now}</pubDate></item>"
         for item in items
     )
-    FEED_PATH.write_text(f'''<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>artificial.one AI tool guides</title><link>https://artificial.one/</link><atom:link href="{FEED_URL}" rel="self" type="application/rss+xml"/><atom:link href="{WEBSUB_HUB}" rel="hub"/><description>Independent AI tool comparisons, use cases and current partner offers.</description>{rows}</channel></rss>\n''', encoding="utf-8")
+    FEED_PATH.write_text(f'''<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>artificial.one AI tool guides</title><link>https://www.artificial.one/</link><atom:link href="{FEED_URL}" rel="self" type="application/rss+xml"/><atom:link href="{WEBSUB_HUB}" rel="hub"/><description>Independent AI tool comparisons, use cases and current partner offers.</description>{rows}</channel></rss>\n''', encoding="utf-8")
 
 
 def ping_websub() -> str:
@@ -516,7 +516,7 @@ def linkedin_post_payload(author_urn: str, item: dict[str, Any], image_urn: str)
 
 def post_linkedin(access_token: str, author_urn: str, item: dict[str, Any]) -> dict[str, str]:
     author_urn = linkedin_author_urn(access_token, author_urn)
-    image_path = ROOT / item["image"].split("https://artificial.one/", 1)[-1]
+    image_path = ROOT / item["image"].split("https://www.artificial.one/", 1)[-1]
     if not image_path.exists():
         raise FileNotFoundError(f"Social card is missing: {image_path}")
     asset_urn, upload_url = register_linkedin_image(access_token, author_urn)
@@ -694,7 +694,7 @@ def post_bluesky(handle: str, password: str, item: dict[str, Any]) -> dict[str, 
     with urlopen(login, timeout=30) as response:
         session = json.load(response)
     profile_branded = ensure_bluesky_profile(session)
-    image_path = ROOT / item["image"].split("https://artificial.one/", 1)[-1]
+    image_path = ROOT / item["image"].split("https://www.artificial.one/", 1)[-1]
     if not image_path.exists():
         raise FileNotFoundError(f"Social card is missing: {image_path}")
     thumbnail = upload_bluesky_blob(session["accessJwt"], image_path)

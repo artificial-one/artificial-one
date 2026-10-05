@@ -9,7 +9,7 @@ from collections import defaultdict
 
 def get_og_image_path(filepath):
     """Get the OG image path for a file."""
-    base_url = "https://artificial.one"
+    base_url = "https://www.artificial.one"
     path_str = str(filepath).replace('\\', '/')
     
     if filepath.name == 'index.html':

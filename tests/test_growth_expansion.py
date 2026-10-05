@@ -87,14 +87,14 @@ class GrowthExpansionTests(unittest.TestCase):
 
     def test_robots_advertises_google_priority_sitemap(self):
         robots = (indexing.ROOT / "robots.txt").read_text(encoding="utf-8")
-        self.assertIn("Sitemap: https://artificial.one/sitemap-priority.xml", robots)
-        self.assertNotIn("Sitemap: https://artificial.one/sitemap.xml\n", robots)
+        self.assertIn("Sitemap: https://www.artificial.one/sitemap-priority.xml", robots)
+        self.assertNotIn("Sitemap: https://www.artificial.one/sitemap.xml\n", robots)
 
     def test_index_issues_publish_paths_only_to_crawl_priority(self):
         public = {"version": 1, "experiments": {}, "crawl_priority": []}
         inspections = [
-            {"url": "https://artificial.one/partner-offers/alpha.html", "status": "ISSUE", "detail": "private reason"},
-            {"url": "https://artificial.one/about.html", "status": "ISSUE", "detail": "ignored"},
+            {"url": "https://www.artificial.one/partner-offers/alpha.html", "status": "ISSUE", "detail": "private reason"},
+            {"url": "https://www.artificial.one/about.html", "status": "ISSUE", "detail": "ignored"},
         ]
         actions = search.update_crawl_priority(inspections, public, date(2026, 9, 15))
         self.assertEqual(public["crawl_priority"], ["/partner-offers/alpha.html"])
@@ -119,7 +119,7 @@ class GrowthExpansionTests(unittest.TestCase):
                 search.OFFERS_PATH = path
                 public = {"version": 1, "experiments": {}, "demand_pages": []}
                 private = {"version": 1}
-                rows = [{"keys": ["https://artificial.one/partner-offers/alpha.html", "alpha edit podcasts from transcripts secret"], "impressions": 35}]
+                rows = [{"keys": ["https://www.artificial.one/partner-offers/alpha.html", "alpha edit podcasts from transcripts secret"], "impressions": 35}]
                 actions = search.update_demand_pages(rows, public, private, date(2026, 9, 15))
                 self.assertEqual(public["demand_pages"], ["alpha-use-case-1"])
                 self.assertNotIn("secret", json.dumps(public))

@@ -35,9 +35,9 @@
    - Check your hosting dashboard for deployment status
 
 2. **Image URLs Need Verification**
-   - Images should be at: `https://artificial.one/images/og-*/`
-   - Test URL: `https://artificial.one/images/og-homepage.jpg`
-   - Test URL: `https://artificial.one/images/og-tools/chatgpt.jpg`
+   - Images should be at: `https://www.artificial.one/images/og-*/`
+   - Test URL: `https://www.artificial.one/images/og-homepage.jpg`
+   - Test URL: `https://www.artificial.one/images/og-tools/chatgpt.jpg`
 
 3. **Browser/Platform Caching**
    - Social media platforms cache OG images
@@ -50,27 +50,27 @@
 
 ### Step 1: Check Image URLs Directly
 Open these URLs in your browser:
-- `https://artificial.one/images/og-homepage.jpg`
-- `https://artificial.one/images/og-tools/chatgpt.jpg`
-- `https://artificial.one/images/og-categories/writing-content.jpg`
+- `https://www.artificial.one/images/og-homepage.jpg`
+- `https://www.artificial.one/images/og-tools/chatgpt.jpg`
+- `https://www.artificial.one/images/og-categories/writing-content.jpg`
 
 **If you see images:** ✅ Images are deployed correctly
 **If you get 404:** ❌ Images need to be deployed/uploaded
 
 ### Step 2: Check Page Source
-1. Visit: `https://artificial.one/`
+1. Visit: `https://www.artificial.one/`
 2. View page source (Ctrl+U)
 3. Search for: `og:image`
-4. Should see: `<meta property="og:image" content="https://artificial.one/images/og-homepage.jpg" />`
+4. Should see: `<meta property="og:image" content="https://www.artificial.one/images/og-homepage.jpg" />`
 
 ### Step 3: Test Social Sharing
 1. **Facebook:** https://developers.facebook.com/tools/debug/
-   - Enter: `https://artificial.one/`
+   - Enter: `https://www.artificial.one/`
    - Click "Scrape Again"
    - Should show image preview
 
 2. **Twitter:** https://cards-dev.twitter.com/validator
-   - Enter: `https://artificial.one/tools/chatgpt.html`
+   - Enter: `https://www.artificial.one/tools/chatgpt.html`
    - Should show image preview
 
 ---
@@ -119,7 +119,7 @@ Get-ChildItem images -Recurse -File | Measure-Object
 ```
 
 ### Test image URL (after deployment):
-Visit: `https://artificial.one/images/og-homepage.jpg`
+Visit: `https://www.artificial.one/images/og-homepage.jpg`
 
 ---
 

@@ -58,7 +58,7 @@ def authorized_session(service_account_info: dict[str, Any] | None = None):
     return AuthorizedSession(credentials)
 
 
-def resolve_site_property(session, configured: str = "", host: str = "artificial.one") -> str:
+def resolve_site_property(session, configured: str = "", host: str = "www.artificial.one") -> str:
     """Select the verified Search Console property that covers ``host``.
 
     Domain properties and URL-prefix properties use different identifiers. A
@@ -78,11 +78,17 @@ def resolve_site_property(session, configured: str = "", host: str = "artificial
         and item.get("permissionLevel") != "siteUnverifiedUser"
         and item.get("siteUrl")
     ]
-    configured = configured.strip()
-    if configured and configured in available:
-        return configured
-
     normalized_host = host.casefold().removeprefix("www.")
+
+    def exactly_covers_target(site_url: str) -> bool:
+        if site_url.casefold() == f"sc-domain:{normalized_host}":
+            return True
+        parsed = urlparse(site_url)
+        return parsed.hostname is not None and parsed.hostname.casefold() == host.casefold()
+
+    configured = configured.strip()
+    if configured and configured in available and exactly_covers_target(configured):
+        return configured
 
     def covers_target(site_url: str) -> bool:
         if site_url.casefold() == f"sc-domain:{normalized_host}":
@@ -100,9 +106,9 @@ def resolve_site_property(session, configured: str = "", host: str = "artificial
         lowered = site_url.casefold()
         if lowered == f"sc-domain:{normalized_host}":
             return (0, lowered)
-        if lowered.rstrip("/") == f"https://{normalized_host}":
+        if lowered.rstrip("/") == f"https://{host.casefold()}":
             return (1, lowered)
-        if lowered.rstrip("/") == f"https://www.{normalized_host}":
+        if lowered.rstrip("/") == f"https://{normalized_host}":
             return (2, lowered)
         return (3, lowered)
 
@@ -298,7 +304,7 @@ def main() -> int:
         "--site",
         default=os.environ.get("GSC_SITE_URL") or "",
     )
-    parser.add_argument("--sitemap", default="https://artificial.one/sitemap.xml")
+    parser.add_argument("--sitemap", default="https://www.artificial.one/sitemap.xml")
     parser.add_argument("--email-to", default="hello@artificial.one")
     parser.add_argument("--email-from", default="Artificial.One Growth <onboarding@resend.dev>")
     parser.add_argument("--days", type=int, default=28)

@@ -8,7 +8,7 @@ from scripts import consolidate_legacy_index as subject
 
 def page(title: str, href: str = "") -> str:
     link = f'<a href="{href}">record</a>' if href else ""
-    return f'<!doctype html><html><head><title>{title}</title><link rel="canonical" href="https://artificial.one/{href or "index.html"}"></head><body>{link}</body></html>'
+    return f'<!doctype html><html><head><title>{title}</title><link rel="canonical" href="https://www.artificial.one/{href or "index.html"}"></head><body>{link}</body></html>'
 
 
 class LegacyIndexConsolidationTests(unittest.TestCase):
@@ -19,11 +19,11 @@ class LegacyIndexConsolidationTests(unittest.TestCase):
         (self.root / "tools").mkdir()
         (self.root / "index.html").write_text(page("Home", "tools/weak.html"), encoding="utf-8")
         (self.root / "tools/weak.html").write_text(
-            '<html><head><link rel="canonical" href="https://artificial.one/tools/weak.html"></head><body>Weak</body></html>',
+            '<html><head><link rel="canonical" href="https://www.artificial.one/tools/weak.html"></head><body>Weak</body></html>',
             encoding="utf-8",
         )
         (self.root / "tools/sourced.html").write_text(
-            '<html><head><link rel="canonical" href="https://artificial.one/tools/sourced.html"></head><body>Sourced</body></html>',
+            '<html><head><link rel="canonical" href="https://www.artificial.one/tools/sourced.html"></head><body>Sourced</body></html>',
             encoding="utf-8",
         )
         self.records = {
@@ -35,7 +35,7 @@ class LegacyIndexConsolidationTests(unittest.TestCase):
         (self.root / "data/tool_intelligence.json").write_text(json.dumps(self.records), encoding="utf-8")
         (self.root / "data/search_growth_strategy.json").write_text('{"observed_pages": []}', encoding="utf-8")
         (self.root / "sitemap.xml").write_text(
-            '<urlset><url><loc>https://artificial.one/tools/weak.html</loc></url><url><loc>https://artificial.one/tools/sourced.html</loc></url></urlset>',
+            '<urlset><url><loc>https://www.artificial.one/tools/weak.html</loc></url><url><loc>https://www.artificial.one/tools/sourced.html</loc></url></urlset>',
             encoding="utf-8",
         )
 
@@ -73,8 +73,8 @@ class LegacyIndexConsolidationTests(unittest.TestCase):
     def test_repairs_stale_tool_aliases_and_drops_unmatched_urls(self):
         (self.root / "tools/copy-ai-review.html").write_text(page("Copy AI"), encoding="utf-8")
         sitemap = """<urlset>
-        <url><loc>https://artificial.one/tools/copyai-review.html</loc></url>
-        <url><loc>https://artificial.one/tools/vanished-review.html</loc></url>
+        <url><loc>https://www.artificial.one/tools/copyai-review.html</loc></url>
+        <url><loc>https://www.artificial.one/tools/vanished-review.html</loc></url>
         </urlset>"""
         repaired = subject.repair_sitemap_tool_urls(sitemap, self.root)
         self.assertIn("tools/copy-ai-review.html", repaired)
@@ -83,8 +83,8 @@ class LegacyIndexConsolidationTests(unittest.TestCase):
 
     def test_removes_duplicate_sitemap_rows(self):
         sitemap = """<urlset>
-        <url><loc>https://artificial.one/tools/sourced.html</loc></url>
-        <url><loc>https://artificial.one/tools/sourced.html</loc></url>
+        <url><loc>https://www.artificial.one/tools/sourced.html</loc></url>
+        <url><loc>https://www.artificial.one/tools/sourced.html</loc></url>
         </urlset>"""
         repaired = subject.repair_sitemap_tool_urls(sitemap, self.root)
         self.assertEqual(1, repaired.count("tools/sourced.html"))

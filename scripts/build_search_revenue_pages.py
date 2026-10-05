@@ -116,7 +116,7 @@ def render_alternatives(primary: dict[str, Any], alternatives: list[dict[str, An
             "@type": "ItemList",
             "name": f"Best {primary['name']} alternatives",
             "itemListElement": [
-                {"@type": "ListItem", "position": index, "name": item["name"], "url": f"https://artificial.one/partner-offers/{item['slug']}.html"}
+                {"@type": "ListItem", "position": index, "name": item["name"], "url": f"https://www.artificial.one/partner-offers/{item['slug']}.html"}
                 for index, item in enumerate(items, 1)
             ],
         },
@@ -144,7 +144,7 @@ def render_use_case(category: str, offers: list[dict[str, Any]]) -> str:
             "@type": "ItemList",
             "name": f"Best {category} tools",
             "itemListElement": [
-                {"@type": "ListItem", "position": index, "name": item["name"], "url": f"https://artificial.one/partner-offers/{item['slug']}.html"}
+                {"@type": "ListItem", "position": index, "name": item["name"], "url": f"https://www.artificial.one/partner-offers/{item['slug']}.html"}
                 for index, item in enumerate(offers, 1)
             ],
         },
@@ -171,7 +171,7 @@ def render_comparison(left: dict[str, Any], right: dict[str, Any]) -> str:
             "@type": "ItemList",
             "name": f"{left['name']} vs {right['name']}",
             "itemListElement": [
-                {"@type": "ListItem", "position": index, "name": item["name"], "url": f"https://artificial.one/partner-offers/{item['slug']}.html"}
+                {"@type": "ListItem", "position": index, "name": item["name"], "url": f"https://www.artificial.one/partner-offers/{item['slug']}.html"}
                 for index, item in enumerate((left, right), 1)
             ],
         },
@@ -342,12 +342,12 @@ def update_sitemap(source: str, paths: list[Path], lastmod: str) -> str:
     rows = [SITEMAP_START]
     for path in sorted(paths):
         relative = path.relative_to(ROOT).as_posix()
-        rows.append(f"  <url><loc>https://artificial.one/{relative}</loc><lastmod>{lastmod}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>")
+        rows.append(f"  <url><loc>https://www.artificial.one/{relative}</loc><lastmod>{lastmod}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>")
     rows.append(SITEMAP_END)
     block = "\n".join(rows)
     if SITEMAP_START in source and SITEMAP_END in source:
         return re.sub(re.escape(SITEMAP_START) + r".*?" + re.escape(SITEMAP_END), block, source, flags=re.S)
-    source = re.sub(r"\s*<url>\s*<loc>https://artificial\.one/search-intent/[^<]+</loc>.*?</url>", "", source, flags=re.S)
+    source = re.sub(r"\s*<url>\s*<loc>https://www\.artificial\.one/search-intent/[^<]+</loc>.*?</url>", "", source, flags=re.S)
     if "</urlset>" not in source:
         raise ValueError("sitemap.xml has no closing urlset element")
     return source.rsplit("</urlset>", 1)[0].rstrip() + "\n" + block + "\n</urlset>\n"

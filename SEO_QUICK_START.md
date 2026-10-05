@@ -26,7 +26,7 @@ This adds Schema.org JSON-LD markup for rich snippets.
 
 ### 4. Verify robots.txt
 The `robots.txt` file has been created. Verify it's accessible at:
-- https://artificial.one/robots.txt
+- https://www.artificial.one/robots.txt
 
 ---
 
@@ -34,9 +34,9 @@ The `robots.txt` file has been created. Verify it's accessible at:
 
 ### Google Search Console
 1. Go to [Google Search Console](https://search.google.com/search-console)
-2. Add your property: `https://artificial.one`
+2. Add your property: `https://www.artificial.one`
 3. Verify ownership (DNS, HTML file, or meta tag)
-4. Submit your sitemap: `https://artificial.one/sitemap.xml`
+4. Submit your sitemap: `https://www.artificial.one/sitemap.xml`
 5. Monitor:
    - Indexing status
    - Search performance
@@ -56,7 +56,7 @@ The `robots.txt` file has been created. Verify it's accessible at:
 ### Check Canonical Tags
 Open any page and view source. Look for:
 ```html
-<link rel="canonical" href="https://artificial.one/..." />
+<link rel="canonical" href="https://www.artificial.one/..." />
 ```
 
 ### Check Structured Data
@@ -72,7 +72,7 @@ Open a page with affiliate links and view source. Look for:
 ```
 
 ### Check robots.txt
-Visit: https://artificial.one/robots.txt
+Visit: https://www.artificial.one/robots.txt
 Should see your sitemap reference and disallow rules.
 
 ---

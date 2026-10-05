@@ -26,7 +26,7 @@ function body(req) {
 
 function baseUrl(req) {
   const host = String(req.headers["x-forwarded-host"] || req.headers.host || "artificial.one").split(",")[0].trim();
-  return ALLOWED_HOST.test(host) ? `https://${host}` : "https://artificial.one";
+  return ALLOWED_HOST.test(host) ? `https://${host}` : "https://www.artificial.one";
 }
 
 async function sendConfirmation(email, token, req) {

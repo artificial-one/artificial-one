@@ -249,8 +249,8 @@ def attributed_x_url(value: str, as_of: date, slot: str) -> str:
 
 def image_path(item: dict[str, Any]) -> Path:
     value = str(item.get("image") or "")
-    if value.startswith("https://artificial.one/"):
-        return ROOT / value.split("https://artificial.one/", 1)[1]
+    if value.startswith("https://www.artificial.one/"):
+        return ROOT / value.split("https://www.artificial.one/", 1)[1]
     return ROOT / value.lstrip("/")
 
 
