@@ -33,7 +33,7 @@ class FakeResponse:
                     "robotsTxtState": "ALLOWED",
                     "indexingState": "INDEXING_ALLOWED",
                     "pageFetchState": "SUCCESSFUL",
-                    "googleCanonical": "https://artificial.one/partner-offers/useful.html",
+                    "googleCanonical": "https://www.artificial.one/partner-offers/useful.html",
                     "userCanonical": "https://www.artificial.one/partner-offers/useful.html",
                     "lastCrawlTime": "2026-09-14T00:00:00Z",
                 },
@@ -124,10 +124,10 @@ class SearchRevenueEngineTests(unittest.TestCase):
 
     def test_inspection_targets_always_use_public_origin(self):
         targets = engine.inspection_targets(
-            "https://artificial.one", {"/partner-offers/priority.html": 2.0},
+            "https://www.artificial.one", {"/partner-offers/priority.html": 2.0},
             {"/partner-offers/priority.html", "/appsumo-guides/other.html"},
         )
-        self.assertTrue(all(item.startswith("https://artificial.one/") for item in targets))
+        self.assertTrue(all(item.startswith("https://www.artificial.one/") for item in targets))
         self.assertEqual(len(targets), 2)
         self.assertTrue(targets[0].endswith("/partner-offers/priority.html"))
 
@@ -183,12 +183,17 @@ class SearchRevenueEngineTests(unittest.TestCase):
         self.assertTrue(any("Reverted" in item for item in actions))
         self.assertEqual(public["experiments"][path]["variant"], "control")
 
-    def test_inspection_accepts_www_to_apex_canonical(self):
+    def test_inspection_accepts_matching_www_canonical(self):
         result = engine.inspect_urls(
             FakeSession(), "https://www.artificial.one/",
             ["https://www.artificial.one/partner-offers/useful.html"]
         )
         self.assertEqual(result[0]["status"], "PASS")
+
+    def test_property_scope_requires_exact_url_prefix_or_domain_property(self):
+        self.assertTrue(engine.property_covers_origin("sc-domain:artificial.one", "https://www.artificial.one"))
+        self.assertTrue(engine.property_covers_origin("https://www.artificial.one/", "https://www.artificial.one"))
+        self.assertFalse(engine.property_covers_origin("https://artificial.one/", "https://www.artificial.one"))
 
     def test_private_state_is_written_outside_public_strategy(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -199,7 +204,7 @@ class SearchRevenueEngineTests(unittest.TestCase):
     def test_search_summary_and_sitemap_counts_are_management_ready(self):
         session = SummarySession()
         summary = engine.query_site_summary(session, "sc-domain:artificial.one", date(2026, 8, 1), date(2026, 8, 28))
-        sitemap = engine.sitemap_status(session, "sc-domain:artificial.one", "https://artificial.one/sitemap.xml")
+        sitemap = engine.sitemap_status(session, "sc-domain:artificial.one", "https://www.artificial.one/sitemap.xml")
         self.assertEqual(summary["clicks"], 12)
         self.assertEqual(summary["impressions"], 600)
         self.assertEqual(sitemap["submitted"], 120)
@@ -215,7 +220,7 @@ class SearchRevenueEngineTests(unittest.TestCase):
             (root / "appsumo-guides" / "excluded.html").write_text("data-affiliate-offer", encoding="utf-8")
             sitemap = root / "sitemap-priority.xml"
             sitemap.write_text(
-                "<urlset><url><loc>https://artificial.one/partner-offers/kept.html</loc></url></urlset>",
+                "<urlset><url><loc>https://www.artificial.one/partner-offers/kept.html</loc></url></urlset>",
                 encoding="utf-8",
             )
             self.assertEqual(
@@ -225,29 +230,48 @@ class SearchRevenueEngineTests(unittest.TestCase):
 
     def test_legacy_sitemap_removal_is_idempotent(self):
         session = SitemapMutationSession(404)
-        engine.remove_sitemap(session, "sc-domain:artificial.one", "https://artificial.one/sitemap.xml")
+        engine.remove_sitemap(session, "sc-domain:artificial.one", "https://www.artificial.one/sitemap.xml")
         self.assertEqual(len(session.deleted), 1)
 
     def test_executive_snapshot_tracks_index_changes_and_money_pages(self):
         inspections = [
-            {"url": "https://artificial.one/partner-offers/useful.html", "status": "PASS", "detail": "Indexed and crawlable"},
-            {"url": "https://artificial.one/partner-offers/broken.html", "status": "ISSUE", "detail": "Crawled - currently not indexed"},
+            {"url": "https://www.artificial.one/partner-offers/useful.html", "status": "PASS", "detail": "Indexed and crawlable"},
+            {"url": "https://www.artificial.one/partner-offers/broken.html", "status": "ISSUE", "detail": "Crawled - currently not indexed"},
+            {"url": "https://www.artificial.one/about.html", "status": "PASS", "detail": "Indexed and crawlable"},
         ]
         previous = {"indexing": {"status_by_url": {
-            "https://artificial.one/partner-offers/useful.html": "ISSUE",
-            "https://artificial.one/partner-offers/broken.html": "PASS",
+            "https://www.artificial.one/partner-offers/useful.html": "ISSUE",
+            "https://www.artificial.one/partner-offers/broken.html": "PASS",
         }}}
         snapshot = engine.build_executive_snapshot(
             [row()], {"clicks": 4, "impressions": 100, "ctr": .04, "position": 7},
             {"clicks": 2, "impressions": 80, "ctr": .025, "position": 9}, inspections,
             {"available": True, "counts_available": True, "submitted": 120, "indexed": 87},
-            {"/partner-offers/useful.html"}, date(2026, 8, 1), date(2026, 8, 28), previous,
+            {"/partner-offers/useful.html", "/partner-offers/broken.html"},
+            date(2026, 8, 1), date(2026, 8, 28), previous,
+            site_property="https://www.artificial.one/",
         )
         self.assertEqual(snapshot["indexing"]["indexed"], 1)
-        self.assertEqual(snapshot["indexing"]["affiliate_pages"], 1)
+        self.assertEqual(snapshot["indexing"]["affiliate_pages"], 2)
+        self.assertEqual(snapshot["indexing"]["inspected"], 2)
+        self.assertEqual(snapshot["indexing"]["issues"], 1)
         self.assertEqual(len(snapshot["indexing"]["newly_indexed"]), 1)
         self.assertEqual(len(snapshot["indexing"]["lost_indexing"]), 1)
         self.assertEqual(snapshot["commercial_search"]["pages_with_impressions"], 1)
+
+    def test_executive_snapshot_marks_canonical_property_gap_as_user_attention(self):
+        snapshot = engine.build_executive_snapshot(
+            [], {"clicks": 0, "impressions": 0, "ctr": 0, "position": 0},
+            {"clicks": 0, "impressions": 0, "ctr": 0, "position": 0}, [],
+            {"available": False}, {"/partner-offers/useful.html"},
+            date(2026, 8, 1), date(2026, 8, 28),
+            inspection_scope_available=False,
+            site_property="https://artificial.one/",
+        )
+        self.assertFalse(snapshot["indexing"]["measurement_available"])
+        self.assertEqual(snapshot["indexing"]["indexed"], 0)
+        self.assertEqual(snapshot["indexing"]["not_checked"], 1)
+        self.assertTrue(snapshot["indexing"]["attention"][0]["requires_user_action"])
 
     def test_content_priority_exposes_ids_not_queries_or_metrics(self):
         original = engine.OFFERS_PATH

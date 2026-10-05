@@ -25,7 +25,7 @@ class XElephantTests(unittest.TestCase):
         posts = [x.build_post(day, slot) for slot in x.POST_SLOTS]
         self.assertEqual(len({item["id"] for item in posts}), 3)
         self.assertEqual(len({item["text"] for item in posts}), 3)
-        self.assertTrue(all(item["image"].startswith("https://artificial.one/images/social-cards/") for item in posts))
+        self.assertTrue(all(item["image"].startswith("https://www.artificial.one/images/social-cards/") for item in posts))
         self.assertTrue(all(x.x_weighted_length(item["text"]) <= 275 for item in posts))
 
     def test_only_one_daily_post_contains_a_route(self):

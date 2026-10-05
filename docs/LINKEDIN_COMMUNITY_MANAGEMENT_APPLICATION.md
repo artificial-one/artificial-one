@@ -12,7 +12,7 @@ The Development-tier application was submitted to LinkedIn on September 23, 2026
 - Associated organization: Artificial.One (`urn:li:organization:145231312`)
 - Company association: verified September 23, 2026
 - Business email: `hello@artificial.one` (verified during the access-request flow)
-- Privacy policy: <https://artificial.one/privacy.html>
+- Privacy policy: <https://www.artificial.one/privacy.html>
 - Requested tier: Community Management API — Development
 - Submitted primary use case: Direct Advertiser — owned and operated LinkedIn activity only
 - Submitted capabilities: Page management and Page analytics
@@ -46,8 +46,8 @@ Member-feed read access is deliberately excluded from the initial request becaus
 - Registered legal organization: `mareke solutions s.r.o.`
 - Czech company number (IČO): `29415675`
 - Registered address: `Korunní 2569/108b, Vinohrady, 101 00 Praha 10, Czech Republic`
-- Public product website: <https://artificial.one/>
-- Public privacy policy: <https://artificial.one/privacy.html>
+- Public product website: <https://www.artificial.one/>
+- Public privacy policy: <https://www.artificial.one/privacy.html>
 - Business contact address: `hello@artificial.one`
 - Official LinkedIn Company Page: <https://www.linkedin.com/company/artificial-one/> (organization ID `145231312`)
 - Existing official-API visual publishing implementation and confirmed delivery receipts.

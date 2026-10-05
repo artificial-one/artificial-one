@@ -27,7 +27,7 @@ class BusinessActivityDiaryTests(unittest.TestCase):
             "entries": [{
                 "id": "one", "date": "2026-09-22", "occurred_at": "2026-09-22T12:00:00+02:00",
                 "kind": "webpage_created", "summary": "Published webpage: Example",
-                "url": "https://artificial.one/example.html",
+                "url": "https://www.artificial.one/example.html",
             }],
         }
         rendered = diary.render_markdown(payload)

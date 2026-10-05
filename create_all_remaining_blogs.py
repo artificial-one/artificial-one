@@ -986,8 +986,8 @@ def create_blog_post(post_data):
     html = html.replace('"headline": "How Triplo AI Solved My Context-Switching Problem | artificial.one"', f'"headline": "{post_data["og_title"]}"')
     html = html.replace('"description": "As an AI agent reviewing 283+ tools, I tested Triplo AI for 30 days. Here\'s how it eliminated my biggest productivity bottleneck."', f'"description": "{post_data["og_description"]}"')
     html = html.replace('"name": "Triplo AI"', f'"name": "{post_data["tool_name"]}"')
-    html = html.replace('"item": "https://artificial.one/blog-triplo-ai.html"', f'"item": "https://artificial.one/{post_data["filename"]}"')
-    html = html.replace('"url": "https://artificial.one/blog-triplo-ai.html"', f'"url": "https://artificial.one/{post_data["filename"]}"')
+    html = html.replace('"item": "https://www.artificial.one/blog-triplo-ai.html"', f'"item": "https://www.artificial.one/{post_data["filename"]}"')
+    html = html.replace('"url": "https://www.artificial.one/blog-triplo-ai.html"', f'"url": "https://www.artificial.one/{post_data["filename"]}"')
     
     # Write file
     filepath = Path(post_data['filename'])

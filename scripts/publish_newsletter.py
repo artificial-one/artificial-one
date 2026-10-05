@@ -54,19 +54,19 @@ def build_edition(today: date | None = None) -> tuple[str, str, str]:
         f'''<div style="border:1px solid #e4e7ec;border-radius:12px;padding:18px;margin:14px 0">
           <h3 style="margin:0 0 8px">{escape(str(offer['name']))}</h3>
           <p>{escape(str(offer['summary']))}</p><p><strong>Best for:</strong> {escape(str(offer['best_for']))}</p>
-          <p><a href="https://artificial.one/partner-offers/{escape(str(offer['slug']), quote=True)}.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools">Review pricing and fit →</a></p>
+          <p><a href="https://www.artificial.one/partner-offers/{escape(str(offer['slug']), quote=True)}.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools">Review pricing and fit →</a></p>
         </div>'''
         for offer in offers
     )
     alert_html = "".join(
-        f'<li style="margin:0 0 10px">{escape(str(item.get("message") or "Vendor information changed."))} <a href="https://artificial.one/offer-updates.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools">See verified update →</a></li>'
+        f'<li style="margin:0 0 10px">{escape(str(item.get("message") or "Vendor information changed."))} <a href="https://www.artificial.one/offer-updates.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools">See verified update →</a></li>'
         for item in alerts
     )
     alert_section = f"<h2>Confirmed tool changes</h2><ul>{alert_html}</ul>" if alert_html else ""
     body = f'''<p>Here is this week’s compact briefing: important AI developments plus tools that solve concrete work problems.</p>
       <h2>What changed in AI</h2><ul>{news_html}</ul>
-      <p><a href="https://artificial.one/news.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools">Browse the continuously updated AI news feed →</a></p>
-      <p><a href="https://artificial.one/ai-stack-builder.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools"><strong>Build a personalized three-tool AI shortlist →</strong></a></p>
+      <p><a href="https://www.artificial.one/news.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools">Browse the continuously updated AI news feed →</a></p>
+      <p><a href="https://www.artificial.one/ai-stack-builder.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=weekly-tools"><strong>Build a personalized three-tool AI shortlist →</strong></a></p>
       {alert_section}<h2>Five tools to evaluate</h2>{offer_html}
       <p style="font-size:12px;color:#667085">Some tool links are affiliate links. artificial.one may earn a commission at no extra cost to you. Recommendations are not guaranteed endorsements.</p>'''
     digest = sha256((title + body).encode("utf-8")).hexdigest()
@@ -74,7 +74,7 @@ def build_edition(today: date | None = None) -> tuple[str, str, str]:
 
 
 def render_archive(title: str, body: str) -> str:
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | artificial.one</title><meta name="description" content="The latest artificial.one AI news and tool briefing."><link rel="canonical" href="https://artificial.one/newsletter/latest.html"><meta name="affiliate-event-endpoint" content="/api/affiliate-event"><style>body{{font-family:Arial,sans-serif;color:#101828;max-width:760px;margin:auto;padding:30px;line-height:1.6}}a{{color:#4338ca}}header,footer{{padding:20px 0;border-bottom:1px solid #e4e7ec}}footer{{border-top:1px solid #e4e7ec;border-bottom:0;margin-top:30px}}</style></head><body><header><a href="../index.html">artificial.one</a></header><main><h1>{escape(title)}</h1>{body}</main><footer><a href="../news.html">AI news</a> · <a href="../ai-tool-finder.html">AI tool finder</a></footer><script src="../assets/affiliate-tracking.js" defer></script></body></html>'''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | artificial.one</title><meta name="description" content="The latest artificial.one AI news and tool briefing."><link rel="canonical" href="https://www.artificial.one/newsletter/latest.html"><meta name="affiliate-event-endpoint" content="/api/affiliate-event"><style>body{{font-family:Arial,sans-serif;color:#101828;max-width:760px;margin:auto;padding:30px;line-height:1.6}}a{{color:#4338ca}}header,footer{{padding:20px 0;border-bottom:1px solid #e4e7ec}}footer{{border-top:1px solid #e4e7ec;border-bottom:0;margin-top:30px}}</style></head><body><header><a href="../index.html">artificial.one</a></header><main><h1>{escape(title)}</h1>{body}</main><footer><a href="../news.html">AI news</a> · <a href="../ai-tool-finder.html">AI tool finder</a></footer><script src="../assets/affiliate-tracking.js" defer></script></body></html>'''
 
 
 def beehiiv_publish(api_key: str, publication_id: str, title: str, body: str, send: bool) -> str:

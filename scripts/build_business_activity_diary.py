@@ -65,8 +65,8 @@ def title_at(root: Path, revision: str, path: str) -> str:
 
 def public_url(path: str) -> str:
     if path == "index.html":
-        return "https://artificial.one/"
-    return "https://artificial.one/" + quote(path.replace("\\", "/"), safe="/")
+        return "https://www.artificial.one/"
+    return "https://www.artificial.one/" + quote(path.replace("\\", "/"), safe="/")
 
 
 def public_html(path: str) -> bool:
@@ -179,7 +179,7 @@ def repository_events(root: Path, since: str) -> list[dict[str, Any]]:
             entries.append(event(
                 f"git:{sha}:newsletter", timestamp, "newsletter_edition_updated",
                 "Published a refreshed web newsletter edition (email sending is not currently connected).",
-                url="https://artificial.one/newsletter/latest.html", source_commit=sha[:12],
+                url="https://www.artificial.one/newsletter/latest.html", source_commit=sha[:12],
             ))
         social_images = [
             path for path, path_status in changed_paths.items()

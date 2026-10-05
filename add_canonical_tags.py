@@ -8,7 +8,7 @@ from pathlib import Path
 
 def get_canonical_url(filepath):
     """Generate canonical URL from file path."""
-    base_url = "https://artificial.one"
+    base_url = "https://www.artificial.one"
     
     # Convert Windows path to URL path
     url_path = str(filepath).replace('\\', '/')

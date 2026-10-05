@@ -14,14 +14,14 @@ class GrowthSearchConsoleTests(unittest.TestCase):
     def test_revenue_pages_receive_priority_weight(self):
         rows = [
             {
-                "keys": ["https://artificial.one/reviews.html", "best ai writer"],
+                "keys": ["https://www.artificial.one/reviews.html", "best ai writer"],
                 "impressions": 100,
                 "clicks": 1,
                 "ctr": 0.01,
                 "position": 6,
             },
             {
-                "keys": ["https://artificial.one/blog.html", "ai news"],
+                "keys": ["https://www.artificial.one/blog.html", "ai news"],
                 "impressions": 100,
                 "clicks": 1,
                 "ctr": 0.01,
@@ -34,7 +34,7 @@ class GrowthSearchConsoleTests(unittest.TestCase):
 
     def test_low_impression_rows_are_ignored(self):
         rows = [{
-            "keys": ["https://artificial.one/page.html", "tiny query"],
+            "keys": ["https://www.artificial.one/page.html", "tiny query"],
             "impressions": 19,
             "clicks": 0,
             "ctr": 0,

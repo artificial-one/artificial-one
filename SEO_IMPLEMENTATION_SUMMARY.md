@@ -112,12 +112,12 @@
 2. **Verify Implementation** (Week 1)
    - Test structured data: https://search.google.com/test/rich-results
    - Check canonical tags on a few pages
-   - Verify robots.txt is accessible: https://artificial.one/robots.txt
+   - Verify robots.txt is accessible: https://www.artificial.one/robots.txt
    - Test breadcrumbs visually
 
 3. **Submit to Google Search Console** (Week 1)
-   - Add property: https://artificial.one
-   - Submit sitemap: https://artificial.one/sitemap.xml
+   - Add property: https://www.artificial.one
+   - Submit sitemap: https://www.artificial.one/sitemap.xml
    - Monitor indexing status
    - Check for any crawl errors
 

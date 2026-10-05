@@ -23,11 +23,11 @@ REVIEW_TEMPLATE = '''<!DOCTYPE html>
     <meta property="og:title" content="{name} Review 2026: Features, Pricing &amp; AppSumo Lifetime Deal" />
     <meta property="og:description" content="{meta_desc}" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://artificial.one/tools/{slug}-review.html" />
-    <meta property="og:image" content="https://artificial.one/images/og-default.jpg" />
+    <meta property="og:url" content="https://www.artificial.one/tools/{slug}-review.html" />
+    <meta property="og:image" content="https://www.artificial.one/images/og-default.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <link rel="canonical" href="https://artificial.one/tools/{slug}-review.html" />
+    <link rel="canonical" href="https://www.artificial.one/tools/{slug}-review.html" />
     <title>{name} Review 2026: Features, Pricing & AppSumo Lifetime Deal</title>
     <meta name="description" content="{meta_desc}">
     <style>
@@ -260,7 +260,7 @@ def run():
     nav_m = re.search(r"<nav[^>]*>[\s\S]*?</nav>", nav)
     nav_html = nav_m.group(0) if nav_m else ""
     guide.write_text(
-        f'<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>57 New AppSumo Deals 2026 | artificial.one</title><meta name="description" content="57 new AppSumo lifetime deals 2026. AI tools, productivity, design, marketing."><link rel="canonical" href="https://artificial.one/guides/best-new-appsumo-deals-2026.html"></head><body style="font-family:sans-serif;max-width:900px;margin:0 auto;padding:20px">{nav_html}{body}</body></html>',
+        f'<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>57 New AppSumo Deals 2026 | artificial.one</title><meta name="description" content="57 new AppSumo lifetime deals 2026. AI tools, productivity, design, marketing."><link rel="canonical" href="https://www.artificial.one/guides/best-new-appsumo-deals-2026.html"></head><body style="font-family:sans-serif;max-width:900px;margin:0 auto;padding:20px">{nav_html}{body}</body></html>',
         encoding="utf-8",
     )
     print("Created guides/best-new-appsumo-deals-2026.html")
@@ -299,7 +299,7 @@ def run():
     sitemap = ROOT / "sitemap.xml"
     sm = sitemap.read_text(encoding="utf-8")
     entry_tpl = """  <url>
-    <loc>https://artificial.one/tools/{slug}-review.html</loc>
+    <loc>https://www.artificial.one/tools/{slug}-review.html</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -307,13 +307,13 @@ def run():
 """
     new_urls = "".join(entry_tpl.format(slug=a["slug"]) for a in data)
     new_urls += """  <url>
-    <loc>https://artificial.one/guides/best-new-appsumo-deals-2026.html</loc>
+    <loc>https://www.artificial.one/guides/best-new-appsumo-deals-2026.html</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://artificial.one/blog-57-new-appsumo-deals-2026.html</loc>
+    <loc>https://www.artificial.one/blog-57-new-appsumo-deals-2026.html</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

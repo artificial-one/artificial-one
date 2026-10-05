@@ -37,7 +37,7 @@ class ElephantExperienceTests(unittest.TestCase):
                 continue
             self.assertIn("decision-engine.css", source, path.name)
             self.assertIn("affiliate-tracking.js", source, path.name)
-            self.assertIn("https://artificial.one/", source, path.name)
+            self.assertIn("https://www.artificial.one/", source, path.name)
         self.assertIn("data-elephant-form", first[ROOT / "ask-elephant.html"])
         self.assertIn("data-decision-stamp", first[ROOT / "ask-elephant.html"])
         self.assertIn("data-elephant-workflow", first[ROOT / "ask-elephant.html"])

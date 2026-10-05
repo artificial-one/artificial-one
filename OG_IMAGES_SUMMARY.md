@@ -81,12 +81,12 @@ Open a few samples to verify they look good:
 
 ### 2. Upload to Server (10 minutes)
 - Upload the entire `images/` folder to your web server
-- Ensure images are accessible at: `https://artificial.one/images/og-*/`
+- Ensure images are accessible at: `https://www.artificial.one/images/og-*/`
 - Test a few URLs to confirm they load
 
 ### 3. Test Social Sharing (5 minutes)
 - Use Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/
-  - Enter: `https://artificial.one/`
+  - Enter: `https://www.artificial.one/`
   - Click "Scrape Again" to refresh cache
 - Use Twitter Card Validator: https://cards-dev.twitter.com/validator
   - Enter a tool review URL

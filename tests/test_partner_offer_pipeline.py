@@ -180,14 +180,14 @@ class PartnerOfferPipelineTests(unittest.TestCase):
 
     def test_sitemap_sync_deduplicates_managed_pages(self):
         current = """<?xml version=\"1.0\"?><urlset>
-  <url><loc>https://artificial.one/partners.html</loc><priority>0.5</priority></url>
-  <url><loc>https://artificial.one/about.html</loc><priority>0.5</priority></url>
+  <url><loc>https://www.artificial.one/partners.html</loc><priority>0.5</priority></url>
+  <url><loc>https://www.artificial.one/about.html</loc><priority>0.5</priority></url>
 </urlset>"""
         block = pipeline.sitemap_block([], "2026-09-14")
         result = pipeline.expected_sitemap(current, block)
-        self.assertEqual(result.count("https://artificial.one/partners.html"), 1)
-        self.assertEqual(result.count("https://artificial.one/partner-offers.html"), 1)
-        self.assertEqual(result.count("https://artificial.one/about.html"), 1)
+        self.assertEqual(result.count("https://www.artificial.one/partners.html"), 1)
+        self.assertEqual(result.count("https://www.artificial.one/partner-offers.html"), 1)
+        self.assertEqual(result.count("https://www.artificial.one/about.html"), 1)
 
 
 if __name__ == "__main__":

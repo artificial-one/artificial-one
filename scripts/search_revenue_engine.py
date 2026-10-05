@@ -117,6 +117,17 @@ def page_path(url: str) -> str:
     return "/" + parsed.path.lstrip("/")
 
 
+def property_covers_origin(site_property: str, origin: str) -> bool:
+    """Return whether URL Inspection and sitemap calls may target ``origin``."""
+    origin_host = (urlparse(origin).hostname or "").casefold()
+    if not origin_host:
+        return False
+    if site_property.casefold() == f"sc-domain:{origin_host.removeprefix('www.')}":
+        return True
+    property_host = (urlparse(site_property).hostname or "").casefold()
+    return property_host == origin_host
+
+
 def revenue_weights() -> dict[str, float]:
     strategy = load_json(REVENUE_STRATEGY_PATH, {"ranking": []})
     ranking = [str(item) for item in strategy.get("ranking", [])]
@@ -233,6 +244,9 @@ def build_executive_snapshot(
     inspections: list[dict[str, str]], sitemap: dict[str, Any],
     monetized_paths: set[str], start: date, end: date,
     previous_snapshot: dict[str, Any] | None = None,
+    inspection_scope_available: bool = True,
+    site_property: str = "",
+    canonical_origin: str = "https://www.artificial.one",
 ) -> dict[str, Any]:
     """Build the private, human-readable Search Console input for the daily brief."""
     previous_snapshot = previous_snapshot or {}
@@ -242,28 +256,64 @@ def build_executive_snapshot(
         if path in monetized_paths or path.startswith("/partner-offers/")
     ]
     money_pages.sort(key=lambda item: (-item[1]["clicks"], -item[1]["impressions"], item[0]))
-    status_by_url = {str(item.get("url") or ""): str(item.get("status") or "UNKNOWN") for item in inspections}
+    affiliate_inspections = [item for item in inspections if page_path(str(item.get("url") or "")) in monetized_paths]
+    status_by_url = {
+        str(item.get("url") or ""): str(item.get("status") or "UNKNOWN")
+        for item in affiliate_inspections
+    }
     old_statuses = (previous_snapshot.get("indexing") or {}).get("status_by_url") or {}
     newly_indexed = [url for url, status in status_by_url.items() if status == "PASS" and old_statuses.get(url) not in {None, "PASS"}]
     lost_indexing = [url for url, status in status_by_url.items() if status == "ISSUE" and old_statuses.get(url) == "PASS"]
-    issues = [item for item in inspections if item.get("status") != "PASS"]
+    issues = [item for item in affiliate_inspections if item.get("status") == "ISSUE"]
+    api_errors = [item for item in affiliate_inspections if item.get("status") == "API_ERROR"]
+    checked = len(affiliate_inspections)
+    total = len(monetized_paths)
+    attention: list[dict[str, Any]] = []
+    if not inspection_scope_available:
+        attention.append({
+            "title": "Google needs access to the www property",
+            "detail": (
+                "The website now uses www.artificial.one as its canonical address, but the connected "
+                "Search Console account cannot yet inspect that property. Indexing totals are hidden "
+                "until the www or domain property is verified."
+            ),
+            "action_url": "https://search.google.com/search-console/welcome",
+            "action_label": "Verify the www property",
+            "requires_user_action": True,
+        })
+    elif api_errors:
+        attention.append({
+            "title": "Google could not confirm every affiliate page",
+            "detail": f"{len(api_errors)} page check{'s' if len(api_errors) != 1 else ''} failed temporarily. The system will retry automatically.",
+            "requires_user_action": False,
+        })
+    if lost_indexing:
+        attention.append({
+            "title": "Some affiliate pages dropped out of Google",
+            "detail": f"{len(lost_indexing)} previously indexed affiliate page{'s' if len(lost_indexing) != 1 else ''} are no longer confirmed. The system will refresh and resubmit them automatically.",
+            "requires_user_action": False,
+        })
     return {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "period": {"start": start.isoformat(), "end": end.isoformat(), "days": (end - start).days + 1, "data_lag_days": 3},
         "performance": {"current": current, "previous": previous},
         "sitemap": sitemap,
         "indexing": {
-            "affiliate_pages": len(monetized_paths),
+            "affiliate_pages": total,
             "scope": "google_priority_affiliate_pages",
-            "inspected": len(inspections),
-            "indexed": sum(item.get("status") == "PASS" for item in inspections),
+            "measurement_available": inspection_scope_available,
+            "site_property": site_property,
+            "canonical_origin": canonical_origin,
+            "inspected": checked,
+            "indexed": sum(item.get("status") == "PASS" for item in affiliate_inspections),
             "issues": len(issues),
-            "api_errors": sum(item.get("status") == "API_ERROR" for item in inspections),
-            "complete": len(inspections) == len(monetized_paths),
+            "api_errors": len(api_errors),
+            "not_checked": max(0, total - checked),
+            "complete": inspection_scope_available and checked == total and not api_errors,
             "newly_indexed": newly_indexed,
             "lost_indexing": lost_indexing,
-            "issue_details": issues[:10],
             "status_by_url": status_by_url,
+            "attention": attention,
         },
         "commercial_search": {
             "pages_with_impressions": len(money_pages),
@@ -675,9 +725,9 @@ def write_if_changed(path: Path, value: dict[str, Any]) -> bool:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--site", default=os.environ.get("GSC_SITE_URL") or "")
-    parser.add_argument("--origin", default="https://artificial.one")
-    parser.add_argument("--sitemap", default="https://artificial.one/sitemap-priority.xml")
-    parser.add_argument("--legacy-sitemap", default="https://artificial.one/sitemap.xml")
+    parser.add_argument("--origin", default="https://www.artificial.one")
+    parser.add_argument("--sitemap", default="https://www.artificial.one/sitemap-priority.xml")
+    parser.add_argument("--legacy-sitemap", default="https://www.artificial.one/sitemap.xml")
     parser.add_argument("--email-to", default="hello@artificial.one")
     parser.add_argument("--email-from", default="Artificial.One Growth <onboarding@resend.dev>")
     parser.add_argument("--days", type=int, default=28)
@@ -688,7 +738,9 @@ def main() -> int:
     try:
         raw_credentials = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "").strip()
         session = authorized_session(load_service_account(raw_credentials) if raw_credentials else None)
-        site_property = resolve_site_property(session, args.site)
+        canonical_host = urlparse(args.origin).hostname or "www.artificial.one"
+        site_property = resolve_site_property(session, args.site, host=canonical_host)
+        inspection_scope_available = property_covers_origin(site_property, args.origin)
         end = date.today() - timedelta(days=3)
         start = end - timedelta(days=max(1, args.days) - 1)
         previous_end = start - timedelta(days=1)
@@ -705,7 +757,10 @@ def main() -> int:
         actions.extend(update_content_priority(opportunities, public, private, date.today()))
         actions.extend(update_demand_pages(rows, public, private, date.today()))
         actions.extend(update_observed_pages(rows, public, date.today()))
-        inspections = inspect_urls(session, site_property, inspection_targets(args.origin, weights, monetized_paths))
+        inspections = (
+            inspect_urls(session, site_property, inspection_targets(args.origin, weights, monetized_paths))
+            if inspection_scope_available else []
+        )
         actions.extend(update_crawl_priority(inspections, public, date.today()))
         current_issues = inspection_signature(inspections)
         if current_issues != private.get("last_index_issues", []):
@@ -714,20 +769,27 @@ def main() -> int:
         previous_snapshot = load_json(args.executive_snapshot, {})
         executive_snapshot = build_executive_snapshot(
             rows, current_summary, previous_summary, inspections,
-            sitemap_status(session, site_property, args.sitemap), monetized_paths,
-            start, end, previous_snapshot,
+            sitemap_status(session, site_property, args.sitemap) if inspection_scope_available else {
+                "available": False, "error": "canonical_property_unavailable",
+            },
+            monetized_paths, start, end, previous_snapshot,
+            inspection_scope_available=inspection_scope_available,
+            site_property=site_property,
+            canonical_origin=args.origin,
         )
         public_changed = write_if_changed(args.public_strategy, public)
         write_if_changed(args.private_state, private)
         write_if_changed(args.executive_snapshot, executive_snapshot)
-        remove_sitemap(session, site_property, args.legacy_sitemap)
-        submit_sitemap(session, site_property, args.sitemap)
+        if inspection_scope_available:
+            remove_sitemap(session, site_property, args.legacy_sitemap)
+            submit_sitemap(session, site_property, args.sitemap)
         github_output = os.environ.get("GITHUB_OUTPUT", "")
         if github_output:
             with Path(github_output).open("a", encoding="utf-8") as handle:
                 handle.write(f"public_changed={'true' if public_changed else 'false'}\n")
                 handle.write(f"opportunities={len(opportunities)}\nissues={len(current_issues)}\nactions={len(actions)}\n")
-        print(f"Using Search Console property {site_property}. Analyzed {len(rows)} rows, inspected {len(inspections)} URLs, found {len(opportunities)} opportunities, took {len(actions)} guarded actions.")
+        scope_note = "canonical inspection enabled" if inspection_scope_available else "canonical inspection awaiting www property access"
+        print(f"Using Search Console property {site_property} ({scope_note}). Analyzed {len(rows)} rows, inspected {len(inspections)} URLs, found {len(opportunities)} opportunities, took {len(actions)} guarded actions.")
         return 0
     except GrowthError as exc:
         print(f"Search revenue engine failed: {exc}", file=os.sys.stderr)

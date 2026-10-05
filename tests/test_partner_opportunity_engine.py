@@ -141,7 +141,7 @@ class PartnerOpportunityEngineTests(unittest.TestCase):
         }
         subject, text, html = scout.render_email(payload, [], "https://github.com/example/run")
         self.assertIn("2 require review", subject)
-        self.assertIn("https://artificial.one/partner-opportunities.html", text)
+        self.assertIn("https://www.artificial.one/partner-opportunities.html", text)
         self.assertIn("Open the complete opportunity queue", html)
 
     def test_approved_partner_with_link_enters_offer_pipeline(self):

@@ -19,7 +19,7 @@ load_dotenv()
 
 class GSCMonitor:
     def __init__(self):
-        self.site_url = os.getenv('SITE_URL', 'https://artificial.one')
+        self.site_url = os.getenv('SITE_URL', 'https://www.artificial.one')
         self.credentials_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
         
         # Authenticate

@@ -65,7 +65,7 @@ Disallow: /*.py$
 Disallow: /generate_sitemap.py
 Disallow: /optimize_*.py
 
-Sitemap: https://artificial.one/sitemap.xml
+Sitemap: https://www.artificial.one/sitemap.xml
 ```
 
 **Expected Result:** Better crawl efficiency, faster indexing of important pages.
@@ -79,7 +79,7 @@ Sitemap: https://artificial.one/sitemap.xml
 
 **Implementation:** Add to `<head>` of every page:
 ```html
-<link rel="canonical" href="https://artificial.one/tools/tool-name-review.html" />
+<link rel="canonical" href="https://www.artificial.one/tools/tool-name-review.html" />
 ```
 
 **Expected Result:** Prevents duplicate content penalties, consolidates ranking signals.
@@ -110,11 +110,11 @@ Sitemap: https://artificial.one/sitemap.xml
 <nav aria-label="Breadcrumb">
   <ol itemscope itemtype="https://schema.org/BreadcrumbList">
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="https://artificial.one/"><span itemprop="name">Home</span></a>
+      <a itemprop="item" href="https://www.artificial.one/"><span itemprop="name">Home</span></a>
       <meta itemprop="position" content="1" />
     </li>
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="https://artificial.one/category/writing-content.html"><span itemprop="name">Writing & Content</span></a>
+      <a itemprop="item" href="https://www.artificial.one/category/writing-content.html"><span itemprop="name">Writing & Content</span></a>
       <meta itemprop="position" content="2" />
     </li>
     <li itemprop="itemListElement" itemscope itemscope itemtype="https://schema.org/ListItem">
@@ -140,7 +140,7 @@ Sitemap: https://artificial.one/sitemap.xml
 
 **Implementation:** Add to all pages:
 ```html
-<meta property="og:image" content="https://artificial.one/images/og-tool-name-review.jpg" />
+<meta property="og:image" content="https://www.artificial.one/images/og-tool-name-review.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Tool Name Review - Rating 4.5/5" />
@@ -214,7 +214,7 @@ Sitemap: https://artificial.one/sitemap.xml
    ```json
    {
      "@type": "ImageObject",
-     "url": "https://artificial.one/images/tool-logo.png",
+     "url": "https://www.artificial.one/images/tool-logo.png",
      "caption": "Tool Name Interface"
    }
    ```

@@ -19,7 +19,7 @@ import anthropic
 load_dotenv()
 
 # artificial.one conventions (match config.js)
-SITE_URL = os.getenv('SITE_URL', 'https://artificial.one')
+SITE_URL = os.getenv('SITE_URL', 'https://www.artificial.one')
 AFFILIATE_DOMAIN = 'appsumo.8odi.net'
 TEMP_CONTENT_DIR = os.getenv('TEMP_CONTENT', '/temp-content')
 QA_RESULTS_FILE = os.getenv('QA_RESULTS_PATH', os.path.join(os.getenv('SCRIPTS_DIR', '/scripts'), 'qa_results.json'))

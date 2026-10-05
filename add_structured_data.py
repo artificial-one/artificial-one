@@ -56,12 +56,12 @@ def create_review_schema(info):
         "author": {
             "@type": "Organization",
             "name": "artificial.one",
-            "url": "https://artificial.one"
+            "url": "https://www.artificial.one"
         },
         "publisher": {
             "@type": "Organization",
             "name": "artificial.one",
-            "url": "https://artificial.one"
+            "url": "https://www.artificial.one"
         }
     }
     
@@ -83,7 +83,7 @@ def create_review_schema(info):
 
 def create_article_schema(info, filepath):
     """Create Article schema for blog posts."""
-    base_url = "https://artificial.one"
+    base_url = "https://www.artificial.one"
     url_path = str(filepath).replace('\\', '/')
     if url_path.startswith('./'):
         url_path = url_path[2:]
@@ -105,7 +105,7 @@ def create_article_schema(info, filepath):
             "name": "artificial.one",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://artificial.one/artificial-one-logo-large.svg"
+                "url": "https://www.artificial.one/artificial-one-logo-large.svg"
             }
         },
         "url": url
@@ -118,7 +118,7 @@ def create_article_schema(info, filepath):
 
 def create_breadcrumb_schema(filepath):
     """Create BreadcrumbList schema."""
-    base_url = "https://artificial.one"
+    base_url = "https://www.artificial.one"
     
     # Build breadcrumb trail
     breadcrumbs = [
@@ -198,8 +198,8 @@ def add_structured_data(content, filepath):
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "artificial.one",
-            "url": "https://artificial.one",
-            "logo": "https://artificial.one/artificial-one-logo-large.svg",
+            "url": "https://www.artificial.one",
+            "logo": "https://www.artificial.one/artificial-one-logo-large.svg",
             "description": "Honest reviews of 220+ AI tools. Compare ChatGPT, Midjourney, Claude, and more."
         }
         schemas.append(org_schema)

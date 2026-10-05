@@ -59,17 +59,17 @@ class Redis:
 
 def send_email(api_key: str, sender: str, subscription: dict[str, Any], events: list[dict[str, Any]]) -> None:
     rows = "".join(
-        f'<li style="margin:0 0 16px"><strong>{escape(str(item.get("tool_name") or "AI tool"))}</strong> · {escape(str(item.get("kind") or "product"))}<br>{escape(str(item.get("message") or "A vendor-source change was confirmed."))}<br><a href="{escape(str(item.get("source_url") or "https://artificial.one/ai-tool-observatory.html"))}">Verify with vendor</a></li>'
+        f'<li style="margin:0 0 16px"><strong>{escape(str(item.get("tool_name") or "AI tool"))}</strong> · {escape(str(item.get("kind") or "product"))}<br>{escape(str(item.get("message") or "A vendor-source change was confirmed."))}<br><a href="{escape(str(item.get("source_url") or "https://www.artificial.one/ai-tool-observatory.html"))}">Verify with vendor</a></li>'
         for item in events
     )
-    unsubscribe = f'https://artificial.one/api/watchlist-subscribe?action=unsubscribe&token={quote(str(subscription.get("unsubscribe_token") or ""))}'
+    unsubscribe = f'https://www.artificial.one/api/watchlist-subscribe?action=unsubscribe&token={quote(str(subscription.get("unsubscribe_token") or ""))}'
     text = "Artificial.One Elephant watchlist\n\n" + "\n".join(f"{item.get('tool_name')}: {item.get('message')} {item.get('source_url')}" for item in events) + f"\n\nUnsubscribe: {unsubscribe}"
     payload = {
         "from": sender,
         "to": [subscription["email"]],
         "subject": f"🐘 {len(events)} confirmed AI tool change{'s' if len(events) != 1 else ''}",
         "text": text,
-        "html": f'<div style="font-family:Arial,sans-serif;max-width:680px;margin:auto;padding:28px"><h1>Elephant watchlist</h1><p>These changes passed Artificial.One’s repeated-observation rule.</p><ul>{rows}</ul><p><a href="https://artificial.one/ai-tool-observatory.html">Open the Observatory</a></p><p style="font-size:12px;color:#667085"><a href="{escape(unsubscribe)}">Unsubscribe</a></p></div>',
+        "html": f'<div style="font-family:Arial,sans-serif;max-width:680px;margin:auto;padding:28px"><h1>Elephant watchlist</h1><p>These changes passed Artificial.One’s repeated-observation rule.</p><ul>{rows}</ul><p><a href="https://www.artificial.one/ai-tool-observatory.html">Open the Observatory</a></p><p style="font-size:12px;color:#667085"><a href="{escape(unsubscribe)}">Unsubscribe</a></p></div>',
     }
     request_json(RESEND_URL, token=api_key, payload=payload)
 

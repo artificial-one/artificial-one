@@ -1,4 +1,4 @@
-const SITE = "https://artificial.one";
+const SITE = "https://www.artificial.one";
 const PREVIEW_ORIGIN = /^https:\/\/[a-z0-9-]+\.vercel\.app$/i;
 
 function text(value, max) {

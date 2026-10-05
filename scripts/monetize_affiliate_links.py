@@ -164,7 +164,7 @@ def render_placement(rule: dict[str, Any], offer: dict[str, Any]) -> str:
       <h2 class="mt-2 text-2xl font-bold text-gray-900">{html.escape(str(rule["headline"]))}</h2>
       <p class="mt-3 text-gray-700">{html.escape(str(rule["copy"]))}</p>
       <a href="{html.escape(str(offer["tracking_url"]), quote=True)}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer="" data-offer-id="{html.escape(offer_id)}" data-placement="{html.escape(placement_id)}" class="mt-5 inline-block rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700">{html.escape(str(rule["cta_label"]))} →</a>
-      <a href="https://artificial.one/partner-offers/{html.escape(str(offer["slug"]))}.html" class="ml-0 mt-4 inline-block font-semibold text-indigo-700 hover:underline sm:ml-4">Read our decision guide →</a>
+      <a href="https://www.artificial.one/partner-offers/{html.escape(str(offer["slug"]))}.html" class="ml-0 mt-4 inline-block font-semibold text-indigo-700 hover:underline sm:ml-4">Read our decision guide →</a>
       <p class="mt-3 text-xs text-gray-600">We may earn a commission if you subscribe through this link, at no extra cost to you.</p>
     </aside>
     <!-- affiliate-placement:{html.escape(placement_id)}:end -->\n'''

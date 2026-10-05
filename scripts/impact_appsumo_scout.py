@@ -181,7 +181,7 @@ def render_guide(offer: dict[str, Any]) -> str:
     product_url = str(offer.get("product_url") or "")
     checked = str(offer.get("verified_at") or date.today().isoformat())[:10]
     playbook = buying_playbook(category)
-    canonical = f"https://artificial.one/{offer['editorial_url']}"
+    canonical = f"https://www.artificial.one/{offer['editorial_url']}"
     structured = json.dumps({
         "@context": "https://schema.org", "@type": "SoftwareApplication", "name": name,
         "description": description, "applicationCategory": category, "url": canonical,

@@ -162,7 +162,7 @@ def render_stack_builder(offers: list[dict[str, Any]]) -> str:
         title="AI Stack Builder: Find the Right AI Tools | artificial.one",
         description="Build a personalized three-tool AI software shortlist by workflow, team context and buying priority.",
         canonical_path="ai-stack-builder.html", content=content + script,
-        social_image="https://artificial.one/images/social-cards/ai-stack-builder.jpg",
+        social_image="https://www.artificial.one/images/social-cards/ai-stack-builder.jpg",
         social_image_alt="Build a personalized AI software shortlist — free decision tool from Artificial.One",
         structured_data={"@context": "https://schema.org", "@type": "WebApplication", "name": "artificial.one AI Stack Builder", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
     )
@@ -186,7 +186,7 @@ def render_calculator(spec: dict[str, Any], offers: list[dict[str, Any]]) -> str
     return shell(
         title=f"{spec['title']} | Free Tool | artificial.one", description=spec["description"],
         canonical_path=f"calculators/{spec['slug']}.html", content=content, prefix="../",
-        social_image=f"https://artificial.one/images/social-cards/{spec['slug'].replace('-calculator', '')}.jpg",
+        social_image=f"https://www.artificial.one/images/social-cards/{spec['slug'].replace('-calculator', '')}.jpg",
         social_image_alt=f"{spec['title']} — free decision tool from Artificial.One",
         structured_data={"@context": "https://schema.org", "@type": "WebApplication", "name": spec["title"], "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
     )
@@ -202,7 +202,7 @@ def update_sitemap(source: str, paths: list[Path], lastmod: str) -> str:
     rows = [SITEMAP_START]
     for path in sorted(paths):
         relative = path.relative_to(ROOT).as_posix()
-        rows.append(f"  <url><loc>https://artificial.one/{relative}</loc><lastmod>{lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>")
+        rows.append(f"  <url><loc>https://www.artificial.one/{relative}</loc><lastmod>{lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>")
     rows.append(SITEMAP_END)
     block = "\n".join(rows)
     if SITEMAP_START in source and SITEMAP_END in source:

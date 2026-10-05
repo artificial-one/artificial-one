@@ -198,7 +198,7 @@ class SitemapUpdater:
 
 def main():
     """Main: update sitemap for artificial.one (run from repo root or set SITE_ROOT)."""
-    site_url = os.getenv('SITE_URL', 'https://artificial.one')
+    site_url = os.getenv('SITE_URL', 'https://www.artificial.one')
     site_root = os.getenv('SITE_ROOT', os.getcwd())
     print("=" * 60)
     print("Sitemap Updater (artificial.one)")

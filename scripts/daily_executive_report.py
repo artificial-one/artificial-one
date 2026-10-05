@@ -205,7 +205,7 @@ def news_pages_for_day(root: Path, report_date: date) -> tuple[list[dict[str, st
         article = record.get("article") if isinstance(record.get("article"), dict) else {}
         today.append({
             "title": str(article.get("headline") or record.get("source", {}).get("title") or "AI news briefing"),
-            "url": "https://artificial.one/" + str(record["path"]),
+            "url": "https://www.artificial.one/" + str(record["path"]),
         })
     return today, len(all_articles)
 
@@ -606,52 +606,77 @@ def render_search(search: dict[str, Any]) -> tuple[str, str]:
     inspected = integer(indexing.get("inspected"))
     affiliate_pages = integer(indexing.get("affiliate_pages")) or inspected
     index_issues = integer(indexing.get("issues"))
-    healthy_percent = (indexed / affiliate_pages * 100) if affiliate_pages else 0
-
-    issue_details = indexing.get("issue_details") or []
-    if issue_details:
-        issue_html = "".join(
-            "<div style='background:#fff8e8;border:1px solid #f3dfae;border-radius:12px;padding:12px 14px;margin-top:8px'>"
-            f"<a href='{escape(str(item.get('url') or ''))}' style='color:#5540aa;text-decoration:none;font-weight:800'>"
-            f"{escape(str(item.get('url') or 'Affiliate page'))}</a>"
-            f"<div style='font-size:12px;color:#7b6653;margin-top:4px'>{escape(str(item.get('detail') or item.get('status') or 'Needs attention'))}</div>"
-            "</div>" for item in issue_details
+    api_errors = integer(indexing.get("api_errors"))
+    measurement_available = bool(indexing.get("measurement_available", True))
+    attention = indexing.get("attention") or []
+    if attention:
+        attention_html = "".join(
+            "<div style='background:#fff8e8;border:1px solid #f3dfae;border-radius:12px;padding:14px 16px;margin-top:9px'>"
+            f"<strong style='color:#4a3b2d'>{escape(str(item.get('title') or 'Google visibility changed'))}</strong>"
+            f"<div style='font-size:13px;line-height:1.55;color:#6f6257;margin-top:5px'>{escape(str(item.get('detail') or ''))}</div>"
+            + (
+                f"<a href='{escape(str(item.get('action_url')))}' style='display:inline-block;margin-top:10px;color:#5540aa;text-decoration:none;font-weight:800'>{escape(str(item.get('action_label') or 'Open Google Search Console'))} &rarr;</a>"
+                if item.get("requires_user_action") and item.get("action_url") else ""
+            )
+            + "</div>" for item in attention
         )
-        issue_block = f"<div style='margin-top:18px'><strong style='color:#4a3b2d'>Pages to watch</strong>{issue_html}</div>"
-        issue_text = "\n".join(f"- {item.get('url')}: {item.get('detail') or item.get('status')}" for item in issue_details)
+        attention_block = f"<div style='margin-top:18px'><strong style='color:#4a3b2d'>Worth your attention</strong>{attention_html}</div>"
+        attention_text = "\n".join(
+            f"- {item.get('title')}: {item.get('detail')}" for item in attention
+        )
     else:
-        issue_block = "<div style='margin-top:16px;background:#e9f8f1;border-radius:12px;padding:12px 14px;color:#27614a'><strong>All checked affiliate pages look healthy.</strong></div>"
-        issue_text = "- All checked affiliate pages look healthy."
+        attention_block = ""
+        attention_text = ""
 
     top_pages = commercial.get("top_pages") or []
     top_html = "".join(
         "<div style='background:#ffffff;border:1px solid #dce8f7;border-radius:12px;padding:12px 14px;margin-top:8px'>"
-        f"<a href='https://artificial.one{escape(str(item.get('path') or '/'))}' style='color:#5540aa;text-decoration:none;font-weight:800'>{escape(str(item.get('path') or '/'))}</a>"
+        f"<a href='https://www.artificial.one{escape(str(item.get('path') or '/'))}' style='color:#5540aa;text-decoration:none;font-weight:800'>{escape(str(item.get('path') or '/'))}</a>"
         f"<div style='font-size:12px;color:#776f87;margin-top:5px'>{integer(item.get('clicks'))} visits from Google · {integer(item.get('impressions'))} search appearances</div></div>"
         for item in top_pages[:3]
     ) or "<div style='font-size:13px;color:#776f87;margin-top:8px'>Affiliate pages have not appeared in Google results yet.</div>"
 
-    search_console_url = "https://search.google.com/search-console?resource_id=" + quote("https://artificial.one/", safe="")
+    site_property = str(indexing.get("site_property") or "https://www.artificial.one/")
+    search_console_url = "https://search.google.com/search-console?resource_id=" + quote(site_property, safe="")
+    index_value = str(indexed) if measurement_available else "Setup needed"
+    index_label = (
+        f"confirmed in Google · {inspected} of {affiliate_pages} affiliate pages checked"
+        if measurement_available else "affiliate-page indexing cannot be confirmed yet"
+    )
+    if measurement_available:
+        index_summary = (
+            f"Google checked <strong>{inspected} of {affiliate_pages}</strong> affiliate pages. "
+            f"<strong>{indexed}</strong> are confirmed indexed; <strong>{index_issues}</strong> are not currently confirmed."
+        )
+        if api_errors:
+            index_summary += f" <strong>{api_errors}</strong> check{'s' if api_errors != 1 else ''} will retry automatically."
+    else:
+        index_summary = "Affiliate-page indexing confirmation is unavailable until Search Console can inspect the canonical www website."
     html = f'''<tr><td class="section-pad" style="padding:14px 28px"><div style="background:#edf6ff;border:1px solid #dceaf8;border-radius:22px;padding:24px">
       <div style="font-size:11px;font-weight:900;letter-spacing:1.2px;color:#4875a8;text-transform:uppercase">Google visibility</div>
       <h2 style="font-size:22px;color:#211a35;margin:7px 0 5px">Can customers find our affiliate pages?</h2>
       <p style="font-size:13px;color:#6f6880;margin:0 0 16px">Results for {escape(str(period.get('start') or '?'))} &ndash; {escape(str(period.get('end') or '?'))}</p>
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
-<td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#28644d">{indexed}/{affiliate_pages}</div><div style="font-size:12px;color:#706880;margin-top:6px">priority affiliate pages indexed &middot; {healthy_percent:.0f}%</div></div></td>
+<td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#28644d">{index_value}</div><div style="font-size:12px;color:#706880;margin-top:6px">{index_label}</div></div></td>
         <td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#5540aa">{impressions}</div><div style="font-size:12px;color:#706880;margin-top:6px">search appearances</div></div></td>
         <td width="33%" style="padding:5px"><div style="background:#ffffff;border-radius:15px;padding:16px"><div style="font-size:24px;font-weight:900;color:#b45b3d">{clicks}</div><div style="font-size:12px;color:#706880;margin-top:6px">visits from Google</div></div></td>
       </tr></table>
-      <div style="font-size:12px;color:#6f6880;margin:12px 5px 0">Click-through rate <strong>{ctr * 100:.2f}%</strong> &middot; average search position <strong>{position:.1f}</strong> &middot; <strong>{index_issues}</strong> page{'s' if index_issues != 1 else ''} to watch</div>
-      {issue_block}
+      <div style="font-size:12px;color:#6f6880;margin:12px 5px 0">Click-through rate <strong>{ctr * 100:.2f}%</strong> &middot; average search position <strong>{position:.1f}</strong></div>
+      <div style="font-size:13px;line-height:1.55;color:#5f5870;margin:14px 5px 0">{index_summary}</div>
+      {attention_block}
       <div style="margin-top:18px"><strong style="color:#2e2840">Most visible affiliate pages</strong>{top_html}</div>
       <div style="margin-top:18px"><a href="{search_console_url}" style="display:inline-block;background:#5540aa;color:white;text-decoration:none;font-weight:800;border-radius:12px;padding:11px 16px">Explore Google performance &rarr;</a></div>
     </div></td></tr>'''
     text = "\n".join([
         f"Period: {period.get('start')} to {period.get('end')}",
         f"Google clicks: {clicks}; search appearances: {impressions}; CTR: {ctr * 100:.2f}%; average position: {position:.1f}",
-        f"Priority affiliate pages indexed: {indexed}/{affiliate_pages}; pages to watch: {index_issues}",
+        (
+            f"Affiliate pages confirmed indexed: {indexed}; checked: {inspected}/{affiliate_pages}; not currently confirmed: {index_issues}; temporary check failures: {api_errors}"
+            if measurement_available else
+            "Affiliate-page indexing confirmation is unavailable until the canonical www Search Console property is accessible."
+        ),
         f"Affiliate pages with Google impressions: {integer(commercial.get('pages_with_impressions'))}",
-        issue_text,
+        attention_text,
     ])
     return html, text
 
@@ -848,7 +873,7 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
 <table class="email-shell" role="presentation" width="100%" cellspacing="0" cellpadding="0" style="width:100%;max-width:700px;background:#ffffff;border-radius:28px;overflow:hidden;box-shadow:0 18px 50px rgba(57,42,91,.12)">
 <tr><td class="hero-pad" style="padding:30px;background-color:#33254e;background-image:linear-gradient(135deg,#33254e 0%,#6651a5 55%,#4c8d86 100%);color:#ffffff">
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>
-    <td class="hero-logo-cell" width="76" valign="middle"><img class="hero-logo" src="https://artificial.one/images/social/artificial-one-logo.png" width="64" height="64" alt="Artificial.One elephant" style="display:block;border-radius:17px;border:2px solid rgba(255,255,255,.25)"></td>
+    <td class="hero-logo-cell" width="76" valign="middle"><img class="hero-logo" src="https://www.artificial.one/images/social/artificial-one-logo.png" width="64" height="64" alt="Artificial.One elephant" style="display:block;border-radius:17px;border:2px solid rgba(255,255,255,.25)"></td>
     <td valign="middle"><div style="font-size:12px;font-weight:900;letter-spacing:1.3px;color:#d9f8ad">ARTIFICIAL.ONE</div><h1 class="hero-title" style="margin:5px 0 0;font-size:29px;line-height:1.1">Growth &amp; revenue pulse</h1></td>
     <td class="hero-badge" align="right" valign="middle"><span style="display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:7px 10px;font-size:11px;font-weight:800">{escape(attention_label)}</span></td>
   </tr></table>
@@ -881,7 +906,7 @@ def render(model: dict[str, Any]) -> tuple[str, str, str]:
 {work_html}
 <tr><td align="center" style="background:#29213d;color:#ddd6ea;padding:24px 28px;font-size:12px;line-height:1.6">
   <strong style="color:#ffffff">Artificial.One</strong> &middot; independent AI-tool decisions<br>
-  <a href="https://artificial.one/" style="color:#c8ff84;text-decoration:none;font-weight:800">Visit the website &rarr;</a>
+  <a href="https://www.artificial.one/" style="color:#c8ff84;text-decoration:none;font-weight:800">Visit the website &rarr;</a>
 </td></tr></table></td></tr></table></body></html>"""
 
     text = "\n".join([

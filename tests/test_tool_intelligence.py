@@ -73,7 +73,7 @@ class ToolIntelligenceTests(unittest.TestCase):
         self.assertEqual(first_map.count("ai-tool-database.html"), 1)
 
     def test_sitemap_update_preserves_entries_after_generated_block(self):
-        trailing = "  <url><loc>https://artificial.one/news/example.html</loc></url>"
+        trailing = "  <url><loc>https://www.artificial.one/news/example.html</loc></url>"
         source = intelligence.update_sitemap('<?xml version="1.0"?><urlset>\n</urlset>\n', "2026-09-16")
         source = source.replace("</urlset>", trailing + "\n</urlset>")
         updated = intelligence.update_sitemap(source, "2026-09-28")

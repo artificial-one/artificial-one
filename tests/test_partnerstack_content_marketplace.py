@@ -52,7 +52,7 @@ class PartnerStackContentMarketplaceTests(unittest.TestCase):
     def test_render_escapes_sponsor_content_and_labels_payment(self) -> None:
         campaign = {
             "id": "partnerstack-1", "brand": "<b>Brand</b>", "brief": "<script>alert(1)</script>",
-            "target_url": "https://example.com", "page_url": "https://artificial.one/sponsored/brand.html",
+            "target_url": "https://example.com", "page_url": "https://www.artificial.one/sponsored/brand.html",
             "disclosure": "Sponsored by the featured company.",
         }
         html = marketplace.render_campaign(campaign)

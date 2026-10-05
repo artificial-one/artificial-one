@@ -37,7 +37,7 @@ class RevenueAccelerationTests(unittest.TestCase):
         self.assertTrue(items)
         self.assertTrue(all("artificial.one" in item["url"] for item in items))
         self.assertTrue(all("utm_source=distribution" in item["url"] for item in items))
-        self.assertTrue(all(item["image"].startswith("https://artificial.one/images/social-cards/") for item in items))
+        self.assertTrue(all(item["image"].startswith("https://www.artificial.one/images/social-cards/") for item in items))
         self.assertTrue(all(item["image_alt"] for item in items))
         self.assertTrue(all("utm_" not in item["text"] for item in items))
 

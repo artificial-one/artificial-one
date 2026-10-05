@@ -39,7 +39,7 @@ OFFERS_PATH = ROOT / "data" / "partner_offers.json"
 INTELLIGENCE_PATH = ROOT / "data" / "tool_intelligence.json"
 PARTNERSTACK_CONFIRMATIONS_PATH = ROOT / "data" / "partnerstack_confirmed_links.json"
 RESEND_URL = "https://api.resend.com/emails"
-USER_AGENT = "artificial.one-partner-scout/1.1 (+https://artificial.one/)"
+USER_AGENT = "artificial.one-partner-scout/1.1 (+https://www.artificial.one/)"
 APPLICATION_PROFILE = (
     "artificial.one is an AI and business-software discovery and decision-support site. "
     "We publish transparent affiliate disclosures, factual use-case guides, comparisons "
@@ -741,7 +741,7 @@ def render_queue_page(payload: dict[str, Any]) -> str:
 def render_email(payload: dict[str, Any], added: list[str], run_url: str) -> tuple[str, str, str]:
     actionable = [item for item in payload["opportunities"] if item["state"] in ACTIONABLE_STATES]
     lines = ["Artificial.One partner opportunity scout", "", f"Actionable opportunities: {len(actionable)}", f"Automatically onboarded: {len(added)}", "", "Applications and binding terms require owner action.", ""]
-    queue_url = "https://artificial.one/partner-opportunities.html"
+    queue_url = "https://www.artificial.one/partner-opportunities.html"
     lines.extend([f"Review the complete uncapped queue: {queue_url}", f"Cloud run: {run_url}"])
     subject = f"Artificial.One partner opportunities — {len(actionable)} require review"
     html = f"<!doctype html><html><body style='font-family:Arial,sans-serif;max-width:760px;margin:auto;padding:24px'><h1>Partner opportunity scout</h1><p>Every qualifying candidate is retained; no weekly quota is applied. Applications and contract acceptance remain an owner action.</p><p><strong>{len(actionable)}</strong> actionable · <strong>{len(added)}</strong> automatically onboarded</p><p><a href='{queue_url}' style='display:inline-block;background:#4f46e5;color:white;padding:12px 18px;border-radius:9px;text-decoration:none;font-weight:700'>Open the complete opportunity queue</a></p><p><a href='{escape(run_url)}'>Open cloud run</a></p></body></html>"

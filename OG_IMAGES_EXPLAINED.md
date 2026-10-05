@@ -28,14 +28,14 @@ OG images appear in:
 
 ### Method 1: Facebook Sharing Debugger (Recommended)
 1. Go to: https://developers.facebook.com/tools/debug/
-2. Enter your URL: `https://artificial.one/`
+2. Enter your URL: `https://www.artificial.one/`
 3. Click **"Scrape Again"** (this clears Facebook's cache)
 4. You should see your OG image preview
 
 **Test these URLs:**
-- `https://artificial.one/` (homepage)
-- `https://artificial.one/tools/chatgpt.html` (tool page)
-- `https://artificial.one/category/writing-content.html` (category page)
+- `https://www.artificial.one/` (homepage)
+- `https://www.artificial.one/tools/chatgpt.html` (tool page)
+- `https://www.artificial.one/category/writing-content.html` (category page)
 
 ### Method 2: Twitter Card Validator
 1. Go to: https://cards-dev.twitter.com/validator
@@ -66,7 +66,7 @@ Social platforms cache OG images for 24-48 hours. Even if you update your images
 ### 2. **Images Not Yet Deployed**
 If you just pushed changes, wait 2-5 minutes for Netlify to deploy.
 
-**Check:** Visit `https://artificial.one/images/og-homepage.jpg` directly in your browser.
+**Check:** Visit `https://www.artificial.one/images/og-homepage.jpg` directly in your browser.
 
 ### 3. **Testing in Wrong Place**
 If you're looking for images on your actual website pages, you won't find them there. OG images are meta tags, not visible content.
@@ -86,18 +86,18 @@ If you're looking for images on your actual website pages, you won't find them t
 ## 🧪 Quick Test Checklist
 
 1. **Direct Image Access:**
-   - ✅ Visit: `https://artificial.one/images/og-homepage.jpg`
+   - ✅ Visit: `https://www.artificial.one/images/og-homepage.jpg`
    - ✅ Should see the image
 
 2. **Page Source:**
-   - ✅ Visit: `https://artificial.one/`
+   - ✅ Visit: `https://www.artificial.one/`
    - ✅ View source (Ctrl+U)
    - ✅ Search for: `og:image`
-   - ✅ Should see: `<meta property="og:image" content="https://artificial.one/images/og-homepage.jpg" />`
+   - ✅ Should see: `<meta property="og:image" content="https://www.artificial.one/images/og-homepage.jpg" />`
 
 3. **Social Media Preview:**
    - ✅ Use Facebook Sharing Debugger
-   - ✅ Enter: `https://artificial.one/`
+   - ✅ Enter: `https://www.artificial.one/`
    - ✅ Click "Scrape Again"
    - ✅ Should see image preview
 
