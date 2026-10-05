@@ -3,7 +3,7 @@ from pathlib import Path
 import unittest
 
 from scripts.affiliate_catalog import COMMERCIAL_CORE_IDS, is_ai_relevant
-from scripts import indexing_recovery
+from scripts import build_partner_offers, indexing_recovery
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,6 +20,20 @@ class ProjectHardeningTests(unittest.TestCase):
             self.assertIn("Your seven-day proof plan", page)
             self.assertIn("Evidence dossier", page)
             self.assertIn("Primary sources", page)
+
+    def test_commercial_core_preserves_behavioral_revenue_order(self):
+        registry = json.loads((ROOT / "data" / "partner_offers.json").read_text(encoding="utf-8"))
+        core = [
+            item
+            for item in registry["offers"]
+            if item.get("status") == "published" and item["id"] in COMMERCIAL_CORE_IDS
+        ]
+        self.assertGreaterEqual(len(core), 2)
+        deliberately_ranked = [core[1], core[0], *core[2:]]
+        rendered = build_partner_offers.render_commercial_core(deliberately_ranked)
+        first_marker = f'data-offer-id="{core[1]["id"]}"'
+        second_marker = f'data-offer-id="{core[0]["id"]}"'
+        self.assertLess(rendered.index(first_marker), rendered.index(second_marker))
 
     def test_non_ai_commercial_relationships_stay_out_of_ai_sitemap(self):
         registry = json.loads((ROOT / "data" / "partner_offers.json").read_text(encoding="utf-8"))
