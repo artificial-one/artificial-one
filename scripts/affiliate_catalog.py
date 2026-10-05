@@ -13,6 +13,32 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 TOOL_INTELLIGENCE_PATH = ROOT / "data" / "tool_intelligence.json"
 
+# These products are valid commercial relationships, but they do not belong in
+# Google's AI-focused discovery surfaces.  They remain reachable in the full
+# offer directory, so the business can still earn from a qualified referral.
+NON_AI_OFFER_IDS = {
+    "800-com", "alison-us-ca", "brkox", "carepatron", "everleakproof-us",
+    "hubstaff", "lensmor", "mrpeasy", "quicksigner", "trainual",
+}
+AI_SIGNALS = (
+    " ai ", "artificial intelligence", "machine learning", "llm", "agent",
+    "automation", "voice", "transcription", "creative", "seo", "search",
+    "data", "analytics", "developer", "website", "marketing", "sales",
+    "content", "video", "audio", "presentation", "email", "lead",
+)
+
+# The first 30 revenue pages that receive concentrated editorial and internal-
+# linking support.  This is deliberately a small core, not a claim that the
+# remaining offers are unimportant.
+COMMERCIAL_CORE_IDS = (
+    "pinecone", "descript", "elevenlabs", "adcreative", "beautiful-ai",
+    "rank-prompt", "omniseo", "seamless", "kartra", "whatconverts", "kit",
+    "unbounce", "volza", "wegic", "mindstudio", "amplemarket", "castmagic",
+    "fullenrich", "reply-io", "close", "databox", "leadpages", "callrail",
+    "plesk", "capsule-and-transpond", "easyclaw", "rewarx-studio-ai",
+    "turbotic", "learnworlds", "foxit",
+)
+
 CLUSTERS: tuple[tuple[str, str, tuple[str, ...]], ...] = (
     ("content-writing", "Content & Writing", ("writing", "content", "copy", "document", "pdf", "translation")),
     ("video-creative", "Video & Creative", ("video", "design", "creative", "image", "presentation", "visual")),
@@ -29,6 +55,24 @@ CLUSTERS: tuple[tuple[str, str, tuple[str, ...]], ...] = (
 def valid_https(value: Any) -> bool:
     parsed = urlparse(str(value or "").strip())
     return parsed.scheme == "https" and bool(parsed.netloc)
+
+
+def is_ai_relevant(item: dict[str, Any]) -> bool:
+    """Return whether an offer belongs in AI-search-facing collections."""
+    identifier = str(item.get("id") or item.get("offer_id") or "").strip()
+    if identifier in NON_AI_OFFER_IDS:
+        return False
+    if identifier in COMMERCIAL_CORE_IDS or item.get("ai_relevant") is True:
+        return True
+    text = " " + " ".join(
+        str(item.get(key) or "").casefold()
+        for key in ("name", "category", "summary", "best_for", "search_text")
+    ) + " "
+    return any(signal in text for signal in AI_SIGNALS)
+
+
+def is_commercial_core(item: dict[str, Any]) -> bool:
+    return str(item.get("id") or item.get("offer_id") or "") in COMMERCIAL_CORE_IDS
 
 
 def cluster_for(*values: Any) -> tuple[str, str]:

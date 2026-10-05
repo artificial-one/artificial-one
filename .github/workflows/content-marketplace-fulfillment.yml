@@ -9,8 +9,9 @@ on:
         default: false
         type: boolean
   schedule:
-    # Fast enough for commercial orders without producing deployments when nothing changes.
-    - cron: "17 */2 * * *"
+    # Optional endpoint currently lacks account scope. Probe weekly instead of
+    # creating twelve predictable authorization failures every day.
+    - cron: "17 7 * * 1"
   push:
     branches: [main]
     paths:
@@ -55,13 +56,13 @@ jobs:
           python scripts/partnerstack_content_marketplace.py
           --state .content-marketplace/state.json
           --status .content-marketplace/status.json
-          --submit
+          --submit --unavailable-ok
 
       - name: Validate the Content Marketplace connection without changing anything
         if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.execute_fulfillment) }}
         env:
           PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
-        run: python scripts/partnerstack_content_marketplace.py --inspect-only
+        run: python scripts/partnerstack_content_marketplace.py --inspect-only --unavailable-ok
 
       - name: Rebuild the sponsored offers surface
         if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.execute_fulfillment) }}

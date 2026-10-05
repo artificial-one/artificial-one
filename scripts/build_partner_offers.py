@@ -13,6 +13,11 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import quote, urlparse
 
+try:
+    from scripts.affiliate_catalog import COMMERCIAL_CORE_IDS, is_ai_relevant
+except ModuleNotFoundError:
+    from affiliate_catalog import COMMERCIAL_CORE_IDS, is_ai_relevant  # type: ignore
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REGISTRY = ROOT / "data" / "partner_offers.json"
@@ -20,6 +25,7 @@ STRATEGY_PATH = ROOT / "data" / "revenue_strategy.json"
 SEARCH_STRATEGY_PATH = ROOT / "data" / "search_growth_strategy.json"
 SPONSORED_CAMPAIGNS_PATH = ROOT / "data" / "sponsored_campaigns.json"
 HUB_PATH = ROOT / "partner-offers.html"
+COMMERCIAL_CORE_PATH = ROOT / "ai-software-shortlist.html"
 FINDER_PATH = ROOT / "ai-tool-finder.html"
 HOME_PATH = ROOT / "index.html"
 OFFER_DIRECTORY = ROOT / "partner-offers"
@@ -271,7 +277,7 @@ def shell(
   {GENERATED_MARKER}
   <header class="site-header">
     <div class="nav-wrap">
-      <a class="brand" href="{prefix}index.html"><img src="{prefix}images/social/artificial-one-logo.png" alt="Artificial.One elephant"><span>artificial<span class="brand-dot">.</span>one</span></a>
+      <a class="brand" href="{prefix}index.html"><img src="{prefix}images/social/artificial-one-logo.png" alt="Artificial.One elephant" width="46" height="46"><span>artificial<span class="brand-dot">.</span>one</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button>
       <nav class="primary-nav" aria-label="Primary navigation">
         <a href="{prefix}affiliate-categories.html">Browse software</a>
@@ -281,7 +287,7 @@ def shell(
   </header>
   <main id="main-content">{content}</main>
   <footer class="site-footer"><div class="container footer-grid">
-    <div><a class="brand" href="{prefix}index.html"><img src="{prefix}images/social/artificial-one-logo.png" alt=""><span>artificial<span class="brand-dot">.</span>one</span></a><p>One job in. One practical AI setup out.</p><p class="disclosure">We may earn a commission from marked links at no extra cost to you. Payment never guarantees placement or a positive verdict.</p></div>
+    <div><a class="brand" href="{prefix}index.html"><img src="{prefix}images/social/artificial-one-logo.png" alt="" width="46" height="46"><span>artificial<span class="brand-dot">.</span>one</span></a><p>One job in. One practical AI setup out.</p><p class="disclosure">We may earn a commission from marked links at no extra cost to you. Payment never guarantees placement or a positive verdict.</p></div>
     <div><h4>Research</h4><a href="{prefix}reviews.html">Product research</a><a href="{prefix}buyers-guides.html">Buyer guides</a><a href="{prefix}news.html">AI news</a></div>
     <div><h4>About</h4><a href="{prefix}about.html">Methodology</a><a href="{prefix}partners.html">For partners</a><a href="{prefix}privacy.html">Privacy</a></div>
     <div><h4>Contact</h4><a href="mailto:hello@artificial.one">hello@artificial.one</a></div>
@@ -322,6 +328,7 @@ def public_offer_data(offer: dict[str, Any], prefix: str = "") -> dict[str, Any]
         "price": price_text, "trial": trial_text, "officialUrl": official_url,
         "logoUrl": f"https://www.google.com/s2/favicons?domain={quote(host)}&sz=128",
         "screenshotUrl": f"https://s.wordpress.com/mshots/v1/{quote(official_url, safe='')}?w=1000",
+        "screenshotSmallUrl": f"https://s.wordpress.com/mshots/v1/{quote(official_url, safe='')}?w=560",
     }
 
 
@@ -351,7 +358,7 @@ def offer_card(offer: dict[str, Any], placement: str = "offer-hub") -> str:
     mark = "".join(word[:1] for word in str(offer["name"]).split()[:2]).upper()
     search = " ".join([str(offer["name"]), str(offer["category"]), str(offer["best_for"]), *offer["use_cases"]]).casefold()
     return f'''<article class="tool-card" data-tool-card data-id="{esc(offer['id'])}" data-category="{esc(offer['category'])}" data-search="{esc(search)}" data-new-date="{esc(offer['terms_verified_at'])}" style="--brand:{data['color']}">
-      <div class="product-visual product-visual-card" data-product="{esc(offer['name'])}"><img src="{esc(data['screenshotUrl'])}" alt="{esc(offer['name'])} product website preview" width="1000" height="563" loading="lazy" decoding="async"><span class="product-logo"><img src="{esc(data['logoUrl'])}" alt="{esc(offer['name'])} logo" width="48" height="48" loading="lazy" decoding="async"><b aria-hidden="true">{esc(mark)}</b></span></div>
+      <div class="product-visual product-visual-card" data-product="{esc(offer['name'])}"><img src="{esc(data['screenshotSmallUrl'])}" srcset="{esc(data['screenshotSmallUrl'])} 560w, {esc(data['screenshotUrl'])} 1000w" sizes="(max-width: 760px) 92vw, 360px" alt="{esc(offer['name'])} product website preview" width="1000" height="563" loading="lazy" decoding="async" fetchpriority="low"><span class="product-logo"><img src="{esc(data['logoUrl'])}" alt="{esc(offer['name'])} logo" width="48" height="48" loading="lazy" decoding="async"><b aria-hidden="true">{esc(mark)}</b></span></div>
       <div class="card-top"><span class="new-badge" hidden>New since your last visit</span><span class="fit-score">Verified<small>{esc(offer['terms_verified_at'])}</small></span></div>
       <p class="category">{esc(offer['category'])}</p><h2>{esc(offer['name'])}</h2>
       <p class="summary">{esc(offer['summary'])}</p><p class="reason"><strong>Best for:</strong> {esc(offer['best_for'])}</p><p class="outcome"><strong>Outcome:</strong> {esc(data['useCases'][0])}</p>
@@ -409,6 +416,7 @@ def render_hub(offers: list[dict[str, Any]]) -> str:
 
     content = f'''
     <section class="section"><div class="container"><p class="eyebrow">Commercially transparent</p><div class="section-head"><div><h1>Verified AI <span class="gradient-text">deals worth checking</span></h1><p>{lead} Terms, fit and limitations are visible before the click.</p></div></div>
+      <div class="surface content-card"><strong>Start focused:</strong> <a class="link-subtle" href="ai-software-shortlist.html">Open the 30-tool evidence-led shortlist →</a></div>
       <div class="surface content-card"><strong>How we earn:</strong> marked links may pay artificial.one a commission. You pay no extra. Payment does not buy a positive verdict or guaranteed placement.</div>
     </div></section>
     <section class="container section-tight">
@@ -776,8 +784,22 @@ def render_offer(
         ("Is this an affiliate link?", "Yes. Artificial.One may earn a commission from qualifying purchases at no extra cost to you. The relationship does not buy a positive verdict."),
     ]
     faq_html = "".join(f'<details><summary>{esc(question)}</summary><p>{esc(answer)}</p></details>' for question, answer in faq)
+    evidence_confidence = "High" if len(offer.get("evidence", [])) >= 2 else "Source checked"
+    implementation_effort = "Low to medium" if any(
+        word in " ".join(use_cases).casefold() for word in ("create", "edit", "write", "generate", "track")
+    ) else "Confirm during trial"
+    core_badge = '<span class="core-badge">Revenue core</span>' if offer["id"] in COMMERCIAL_CORE_IDS else ""
+    trial_steps = "".join(
+        f"<li><strong>Day {day}</strong><span>{esc(step)}</span></li>"
+        for day, step in (
+            (1, f"Connect one real {offer['category'].casefold()} workflow and record the current time or cost."),
+            (3, f"Complete: {use_cases[0]}. Keep the first usable output as evidence."),
+            (5, "Repeat the workflow with a second person or input; note manual corrections and plan limits."),
+            (7, f"Compare the measured result with the price and the alternatives below. Keep {offer['name']} only if the value is repeatable."),
+        )
+    )
     content = f'''
-    <section class="offer-hero"><div class="container offer-grid"><div><p class="eyebrow">{esc(offer['category'])} · independent fit check</p><div class="offer-product-visual product-visual" data-product="{esc(offer['name'])}"><img src="{esc(data['screenshotUrl'])}" alt="{esc(offer['name'])} product website screenshot" width="1000" height="563" loading="lazy" decoding="async"><span class="product-logo"><img src="{esc(data['logoUrl'])}" alt="{esc(offer['name'])} logo" width="56" height="56" decoding="async"><b aria-hidden="true">{esc(offer['name'][:2])}</b></span></div><h1>{esc(offer['name'])}: <span class="gradient-text">is it right for your job?</span></h1><p class="lead">{esc(offer['summary'])}</p><div class="verdict"><strong>One-line verdict</strong><p>{esc(offer['why_consider'])}</p></div><div class="loop-actions"><button class="btn btn-secondary compare-add" type="button" data-id="{esc(offer['id'])}">⇄ Add to comparison</button><button class="btn btn-secondary stack-add" type="button" data-id="{esc(offer['id'])}">＋ Save to My Stack</button><button class="btn btn-secondary" type="button" data-watch-offer="{esc(offer['id'])}">Watch this deal</button></div></div>
+    <section class="offer-hero"><div class="container offer-grid"><div><p class="eyebrow">{esc(offer['category'])} · independent fit check {core_badge}</p><div class="offer-product-visual product-visual" data-product="{esc(offer['name'])}"><img src="{esc(data['screenshotSmallUrl'])}" srcset="{esc(data['screenshotSmallUrl'])} 560w, {esc(data['screenshotUrl'])} 1000w" alt="{esc(offer['name'])} product website screenshot" width="1000" height="563" sizes="(max-width: 760px) 92vw, 620px" loading="lazy" decoding="async" fetchpriority="low"><span class="product-logo"><img src="{esc(data['logoUrl'])}" alt="{esc(offer['name'])} logo" width="56" height="56" loading="lazy" decoding="async"><b aria-hidden="true">{esc(offer['name'][:2])}</b></span></div><h1>{esc(offer['name'])}: <span class="gradient-text">is it right for your job?</span></h1><p class="lead">{esc(offer['summary'])}</p><div class="verdict"><strong>One-line verdict</strong><p>{esc(offer['why_consider'])}</p></div><div class="loop-actions"><button class="btn btn-secondary compare-add" type="button" data-id="{esc(offer['id'])}">⇄ Add to comparison</button><button class="btn btn-secondary stack-add" type="button" data-id="{esc(offer['id'])}">＋ Save to My Stack</button><button class="btn btn-secondary" type="button" data-watch-offer="{esc(offer['id'])}">Watch this deal</button></div></div>
       <aside class="surface offer-aside"><p class="eyebrow">Current buying facts</p><h2>{esc(data['price'])}</h2><dl class="buying-facts"><div><dt>Trial</dt><dd>{esc(data['trial'])}</dd></div><div><dt>Last verified</dt><dd>{esc(offer['terms_verified_at'])}</dd></div></dl><p class="price-note">{esc(offer['pricing_note'])}</p><a class="btn btn-acid" href="{esc(offer['tracking_url'])}" target="_blank" rel="nofollow sponsored noopener" data-affiliate-offer data-offer-id="{esc(offer['id'])}" data-placement="offer-page-primary">{esc(data['cta'])} →</a><p class="verified-line">✓ Product, destination and terms checked {esc(offer['terms_verified_at'])}</p><p class="disclosure">Affiliate link. We may earn a commission; your price does not increase.</p></aside>
     </div></section>
     <section class="container section-tight"><div class="content-grid">
@@ -786,6 +808,8 @@ def render_offer(
       <article class="surface content-card span-2" data-tabs data-offer-id="{esc(offer['id'])}"><h2>What can you do with it?</h2><div class="tabs">{use_case_buttons}</div><div class="tab-panel" data-tab-panel>{esc(use_cases[0])}</div></article>
       <article class="surface content-card"><h2>Why it makes the shortlist</h2><p>{esc(offer['why_consider'])}</p><h3>Practical strengths</h3><ul><li>Focused fit for the use cases above</li><li>Current partner destination has been checked</li><li>Can be compared and saved without an account</li></ul></article>
       <article class="surface content-card warn"><h2>Limitations</h2><p>{esc(offer['watch_out'])}</p><p>Features, allowances and pricing can change. Confirm the live plan before paying.</p></article>
+      <article class="surface content-card span-2"><p class="eyebrow">A measurable decision</p><h2>Your seven-day proof plan</h2><p>Do not buy on a feature list. Run one real workflow and keep the evidence.</p><ol class="trial-plan">{trial_steps}</ol></article>
+      <article class="surface content-card span-2"><p class="eyebrow">Decision scorecard</p><h2>What we know—and what you must verify</h2><dl class="decision-scorecard"><div><dt>Workflow fit</dt><dd>{esc(offer['best_for'])}</dd></div><div><dt>Evidence confidence</dt><dd>{evidence_confidence}: {len(offer.get('evidence', []))} primary source{'s' if len(offer.get('evidence', [])) != 1 else ''}</dd></div><div><dt>Setup effort</dt><dd>{implementation_effort}</dd></div><div><dt>Budget clarity</dt><dd>{esc(offer['pricing_note'])}</dd></div><div><dt>Switching risk</dt><dd>{esc(offer['watch_out'])}</dd></div></dl></article>
       <article class="surface content-card span-2"><h2>Will it pay for itself?</h2><p class="disclosure">This calculator is illustrative, not a promise of savings.</p><form class="calculator" data-value-calculator><label>Monthly tool cost ($)<input name="monthly" type="number" min="0" value="30"></label><label>Hours saved monthly<input name="hours" type="number" min="0" value="4"></label><label>Your hour value ($)<input name="value" type="number" min="0" value="25"></label><output class="calc-result" data-calc-output></output></form></article>
       <article class="surface content-card span-2"><h2>Verification &amp; disclosure</h2><p>{relationship}. This does not change our editorial assessment.</p><dl class="trust-grid"><div class="stat"><strong>{esc(offer['terms_verified_at'])}</strong><span>Terms checked</span></div><div class="stat"><strong>{expiry}</strong><span>Offer expiry</span></div><div class="stat"><strong>{esc(offer['approved_at'])}</strong><span>Editorial approval</span></div></dl><h3>Primary sources</h3><ul>{evidence}</ul>{review_link}</article>
       <article class="surface content-card span-2 faq"><h2>Questions before you decide</h2>{faq_html}</article>
@@ -812,11 +836,28 @@ def render_offer(
     )
 
 
+def render_commercial_core(offers: list[dict[str, Any]]) -> str:
+    """Create a tightly linked, AI-relevant shortlist for search and buyers."""
+    positions = {identifier: index for index, identifier in enumerate(COMMERCIAL_CORE_IDS)}
+    core = sorted(
+        (offer for offer in offers if offer["id"] in positions and is_ai_relevant(offer)),
+        key=lambda offer: positions[offer["id"]],
+    )
+    cards = "".join(offer_card(offer, "commercial-core") for offer in core)
+    content = f'''<section class="page-hero"><div class="container"><p class="eyebrow">30 evidence-led starting points</p><h1>The AI software shortlist</h1><p class="lead">Start with the job, then open a practical fit guide. Every page includes sources, limitations, a seven-day proof plan and comparable alternatives.</p></div></section><section class="container section-tight"><div class="card-grid">{cards}</div></section>{catalog_script(core)}'''
+    return shell(
+        title="30 AI Tools Worth Evaluating: Evidence-Led Shortlist | artificial.one",
+        description="A focused shortlist of 30 AI and automation products with source-backed fit checks, limitations, trial plans and current partner links.",
+        canonical_path="ai-software-shortlist.html", content=content,
+    )
+
+
 def sitemap_block(offers: list[dict[str, Any]], lastmod: str) -> str:
     pages = [
         ("https://www.artificial.one/partners.html", "0.7"),
         ("https://www.artificial.one/partner-offers.html", "0.8"),
         ("https://www.artificial.one/ai-tool-finder.html", "0.9"),
+        ("https://www.artificial.one/ai-software-shortlist.html", "0.9"),
     ]
     pages.extend(
         (f"https://www.artificial.one/partner-offers/{offer['slug']}.html", "0.8")
@@ -873,6 +914,7 @@ def build(registry_path: Path, check: bool = False) -> int:
     lastmod = registry["updated_at"]
     expected: dict[Path, str] = {
         HUB_PATH: render_hub(offers),
+        COMMERCIAL_CORE_PATH: render_commercial_core(offers),
         FINDER_PATH: render_finder(offers),
         HOME_PATH: update_homepage_picks(HOME_PATH.read_text(encoding="utf-8"), offers),
     }

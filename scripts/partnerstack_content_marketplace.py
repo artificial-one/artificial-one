@@ -349,16 +349,34 @@ def main() -> int:
     parser.add_argument("--api-base", default=os.environ.get("PARTNERSTACK_API_BASE", API_BASE))
     parser.add_argument("--submit", action="store_true")
     parser.add_argument("--inspect-only", action="store_true", help="Check the connection without writing or submitting anything")
+    parser.add_argument("--unavailable-ok", action="store_true", help="Record an unavailable optional API without failing the publishing system")
     args = parser.parse_args()
     api_key = os.environ.get("PARTNERSTACK_API_KEY", "").strip()
     if not api_key:
         raise RuntimeError("PARTNERSTACK_API_KEY is required")
-    if args.inspect_only:
-        orders = [normalize_order(item) for item in fetch_orders(api_key, args.api_base)]
-        statuses = Counter(item["status"] for item in orders if item["key"])
-        print(f"Content Marketplace connection verified: {len(orders)} order(s); statuses={dict(sorted(statuses.items()))}")
+    try:
+        if args.inspect_only:
+            orders = [normalize_order(item) for item in fetch_orders(api_key, args.api_base)]
+            statuses = Counter(item["status"] for item in orders if item["key"])
+            print(f"Content Marketplace connection verified: {len(orders)} order(s); statuses={dict(sorted(statuses.items()))}")
+            return 0
+        result = run(api_key, args.state, args.status, api_base=args.api_base, submit=args.submit)
+    except HTTPError as exc:
+        if exc.code not in {401, 403} or not args.unavailable_ok:
+            raise
+        status = {
+            "version": 1,
+            "checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "available": False,
+            "reason": "PartnerStack has not granted Content Marketplace API access to this token.",
+            "owner_actions": [],
+            "orders_total": 0,
+            "fulfilling": 0,
+            "completed": 0,
+        }
+        write_json(args.status, status)
+        print(status["reason"] + " Optional sponsored-order polling is paused; affiliate publishing is unaffected.")
         return 0
-    result = run(api_key, args.state, args.status, api_base=args.api_base, submit=args.submit)
     print(
         f"Content Marketplace: {result['orders_total']} order(s), "
         f"{result['fulfilling']} in fulfilment, {len(result['owner_actions'])} owner action(s), "

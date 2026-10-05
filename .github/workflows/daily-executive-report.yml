@@ -78,15 +78,31 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+          RESEND_EMAIL_FROM: ${{ vars.RESEND_EMAIL_FROM }}
         run: >-
           python scripts/daily_executive_report.py
           --snapshot .daily-executive/affiliate-snapshot.json
           --marketplace-status .content-marketplace/status.json
           --search-snapshot .search-growth/executive-snapshot.json
           --state .daily-executive/state.json
+          --output-html .daily-executive/latest.html
           --email-to hello@artificial.one
-          --email-from "Artificial.One Daily Brief <onboarding@resend.dev>"
+          --email-from "${RESEND_EMAIL_FROM:-Artificial.One Daily Brief <onboarding@resend.dev>}"
           ${{ inputs.send_even_if_already_sent && '--force' || '' }}
+
+      - name: Archive the private management brief for 90 days
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: daily-management-brief-${{ github.run_id }}
+          path: |
+            .daily-executive/latest.html
+            .daily-executive/state.json
+            .daily-executive/affiliate-snapshot.json
+          retention-days: 90
+          if-no-files-found: warn
 
       - name: Save private report history
         if: always()
