@@ -127,6 +127,38 @@
       "url": "/partner-offers/elevenlabs-ai-voice.html"
     },
     {
+      "calculator_url": "/calculators/wegic-ai-website-builder-value-calculator.html",
+      "keywords": [
+        "wegic",
+        "website",
+        "building",
+        "freelancers",
+        "creators",
+        "small",
+        "businesses",
+        "want",
+        "launch",
+        "site",
+        "through",
+        "guided",
+        "business",
+        "create",
+        "portfolio",
+        "campaign",
+        "landing"
+      ],
+      "name": "Wegic",
+      "offer_id": "wegic",
+      "strong_keywords": [
+        "wegic",
+        "website building",
+        "launch a small-business website",
+        "create a portfolio or campaign landing site"
+      ],
+      "summary": "A conversational AI website builder for creating, editing and publishing websites without coding.",
+      "url": "/partner-offers/wegic-ai-website-builder.html"
+    },
+    {
       "calculator_url": "/calculators/volza-trade-intelligence-value-calculator.html",
       "keywords": [
         "volza",
@@ -158,38 +190,6 @@
       ],
       "summary": "A global trade intelligence platform for researching shipment data, buyers, suppliers, products and markets.",
       "url": "/partner-offers/volza-trade-intelligence.html"
-    },
-    {
-      "calculator_url": "/calculators/wegic-ai-website-builder-value-calculator.html",
-      "keywords": [
-        "wegic",
-        "website",
-        "building",
-        "freelancers",
-        "creators",
-        "small",
-        "businesses",
-        "want",
-        "launch",
-        "site",
-        "through",
-        "guided",
-        "business",
-        "create",
-        "portfolio",
-        "campaign",
-        "landing"
-      ],
-      "name": "Wegic",
-      "offer_id": "wegic",
-      "strong_keywords": [
-        "wegic",
-        "website building",
-        "launch a small-business website",
-        "create a portfolio or campaign landing site"
-      ],
-      "summary": "A conversational AI website builder for creating, editing and publishing websites without coding.",
-      "url": "/partner-offers/wegic-ai-website-builder.html"
     },
     {
       "calculator_url": "/calculators/pinecone-vector-database-value-calculator.html",
@@ -276,35 +276,6 @@
       "url": "/partner-offers/omniseo-search-optimization.html"
     },
     {
-      "calculator_url": "/calculators/rank-prompt-ai-visibility-value-calculator.html",
-      "keywords": [
-        "rank",
-        "prompt",
-        "visibility",
-        "marketing",
-        "measuring",
-        "brand",
-        "across",
-        "generated",
-        "answers",
-        "monitor",
-        "mentions",
-        "compare",
-        "search",
-        "competitors"
-      ],
-      "name": "Rank Prompt",
-      "offer_id": "rank-prompt",
-      "strong_keywords": [
-        "rank prompt",
-        "seo & visibility",
-        "monitor brand mentions in ai answers",
-        "compare ai-search visibility with competitors"
-      ],
-      "summary": "A visibility platform for tracking how brands appear in answers from AI search and assistant products.",
-      "url": "/partner-offers/rank-prompt-ai-visibility.html"
-    },
-    {
       "calculator_url": "/calculators/seamless-ai-sales-intelligence-value-calculator.html",
       "keywords": [
         "seamless",
@@ -332,6 +303,35 @@
       ],
       "summary": "A B2B sales intelligence platform for finding business contacts and supporting prospecting workflows.",
       "url": "/partner-offers/seamless-ai-sales-intelligence.html"
+    },
+    {
+      "calculator_url": "/calculators/rank-prompt-ai-visibility-value-calculator.html",
+      "keywords": [
+        "rank",
+        "prompt",
+        "visibility",
+        "marketing",
+        "measuring",
+        "brand",
+        "across",
+        "generated",
+        "answers",
+        "monitor",
+        "mentions",
+        "compare",
+        "search",
+        "competitors"
+      ],
+      "name": "Rank Prompt",
+      "offer_id": "rank-prompt",
+      "strong_keywords": [
+        "rank prompt",
+        "seo & visibility",
+        "monitor brand mentions in ai answers",
+        "compare ai-search visibility with competitors"
+      ],
+      "summary": "A visibility platform for tracking how brands appear in answers from AI search and assistant products.",
+      "url": "/partner-offers/rank-prompt-ai-visibility.html"
     },
     {
       "calculator_url": "/calculators/learnworlds-course-platform-value-calculator.html",
@@ -428,39 +428,6 @@
       "url": "/partner-offers/trainual-team-training.html"
     },
     {
-      "calculator_url": "/calculators/kit-creator-email-marketing-value-calculator.html",
-      "keywords": [
-        "email",
-        "marketing",
-        "newsletter",
-        "writers",
-        "podcasters",
-        "course",
-        "creators",
-        "independent",
-        "businesses",
-        "growing",
-        "owned",
-        "audience",
-        "launch",
-        "grow",
-        "automate",
-        "sequences",
-        "creator",
-        "products"
-      ],
-      "name": "Kit",
-      "offer_id": "kit",
-      "strong_keywords": [
-        "kit",
-        "email marketing",
-        "launch and grow a newsletter",
-        "automate email sequences for creator products"
-      ],
-      "summary": "An email marketing platform for creators, with forms, landing pages, broadcasts, automations and commerce tools.",
-      "url": "/partner-offers/kit-creator-email-marketing.html"
-    },
-    {
       "calculator_url": "/calculators/unbounce-landing-pages-value-calculator.html",
       "keywords": [
         "unbounce",
@@ -492,6 +459,39 @@
       ],
       "summary": "A landing-page and conversion platform for building, testing and optimizing campaign pages.",
       "url": "/partner-offers/unbounce-landing-pages.html"
+    },
+    {
+      "calculator_url": "/calculators/kit-creator-email-marketing-value-calculator.html",
+      "keywords": [
+        "email",
+        "marketing",
+        "newsletter",
+        "writers",
+        "podcasters",
+        "course",
+        "creators",
+        "independent",
+        "businesses",
+        "growing",
+        "owned",
+        "audience",
+        "launch",
+        "grow",
+        "automate",
+        "sequences",
+        "creator",
+        "products"
+      ],
+      "name": "Kit",
+      "offer_id": "kit",
+      "strong_keywords": [
+        "kit",
+        "email marketing",
+        "launch and grow a newsletter",
+        "automate email sequences for creator products"
+      ],
+      "summary": "An email marketing platform for creators, with forms, landing pages, broadcasts, automations and commerce tools.",
+      "url": "/partner-offers/kit-creator-email-marketing.html"
     },
     {
       "calculator_url": "/calculators/brkox-software-value-calculator.html",
@@ -872,6 +872,31 @@
       "url": "/partner-offers/800-com-software.html"
     },
     {
+      "calculator_url": "/calculators/easyclaw-software-value-calculator.html",
+      "keywords": [
+        "easyclaw",
+        "productivity",
+        "professionals",
+        "comparing",
+        "assisted",
+        "everyday",
+        "workflows",
+        "evaluate",
+        "compare",
+        "other"
+      ],
+      "name": "EasyClaw",
+      "offer_id": "easyclaw",
+      "strong_keywords": [
+        "easyclaw",
+        "ai productivity",
+        "evaluate easyclaw for an ai-assisted workflow",
+        "compare easyclaw with other ai productivity tools"
+      ],
+      "summary": "An AI productivity platform for organizing and accelerating everyday knowledge-work tasks and workflows.",
+      "url": "/partner-offers/easyclaw-software.html"
+    },
+    {
       "calculator_url": "/calculators/beautiful-ai-presentations-value-calculator.html",
       "keywords": [
         "beautiful",
@@ -900,31 +925,6 @@
       ],
       "summary": "Presentation software with AI-assisted drafting and adaptive slide layouts.",
       "url": "/partner-offers/beautiful-ai-presentations.html"
-    },
-    {
-      "calculator_url": "/calculators/easyclaw-software-value-calculator.html",
-      "keywords": [
-        "easyclaw",
-        "productivity",
-        "professionals",
-        "comparing",
-        "assisted",
-        "everyday",
-        "workflows",
-        "evaluate",
-        "compare",
-        "other"
-      ],
-      "name": "EasyClaw",
-      "offer_id": "easyclaw",
-      "strong_keywords": [
-        "easyclaw",
-        "ai productivity",
-        "evaluate easyclaw for an ai-assisted workflow",
-        "compare easyclaw with other ai productivity tools"
-      ],
-      "summary": "An AI productivity platform for organizing and accelerating everyday knowledge-work tasks and workflows.",
-      "url": "/partner-offers/easyclaw-software.html"
     },
     {
       "calculator_url": "/calculators/adcreative-ai-ad-design-value-calculator.html",
@@ -985,38 +985,6 @@
       ],
       "summary": "An AI product-photography platform for creating ecommerce visuals without arranging a traditional studio shoot.",
       "url": "/partner-offers/rewarx-studio-ai-software.html"
-    },
-    {
-      "calculator_url": "/calculators/esign-sign-pdf-docx-documents-ios-only-software-value-calculator.html",
-      "keywords": [
-        "esign",
-        "sign",
-        "docx",
-        "documents",
-        "only",
-        "document",
-        "signing",
-        "iphone",
-        "ipad",
-        "users",
-        "need",
-        "manage",
-        "compare",
-        "other",
-        "mobile",
-        "signature",
-        "apps"
-      ],
-      "name": "eSign: Sign PDF DOCX Documents (iOS only)",
-      "offer_id": "esign-sign-pdf-docx-documents-ios-only",
-      "strong_keywords": [
-        "esign: sign pdf docx documents (ios only)",
-        "document signing",
-        "sign and manage pdf or docx documents with esign: sign pdf docx documents (ios only)",
-        "compare esign: sign pdf docx documents (ios only) with other mobile e-signature apps"
-      ],
-      "summary": "An iOS document-signing app for preparing, signing and managing PDF and DOCX files on iPhone or iPad.",
-      "url": "/partner-offers/esign-sign-pdf-docx-documents-ios-only-software.html"
     },
     {
       "calculator_url": "/calculators/quicksigner-electronic-signatures-value-calculator.html",
@@ -1080,6 +1048,38 @@
       ],
       "summary": "Founded in 2007, Alison is the world’s largest free online empowerment platform for education and skills training. We offer over 6000 CPD accredited courses and a range of impactful career development tools.",
       "url": "/partner-offers/alison-us-ca-software.html"
+    },
+    {
+      "calculator_url": "/calculators/esign-sign-pdf-docx-documents-ios-only-software-value-calculator.html",
+      "keywords": [
+        "esign",
+        "sign",
+        "docx",
+        "documents",
+        "only",
+        "document",
+        "signing",
+        "iphone",
+        "ipad",
+        "users",
+        "need",
+        "manage",
+        "compare",
+        "other",
+        "mobile",
+        "signature",
+        "apps"
+      ],
+      "name": "eSign: Sign PDF DOCX Documents (iOS only)",
+      "offer_id": "esign-sign-pdf-docx-documents-ios-only",
+      "strong_keywords": [
+        "esign: sign pdf docx documents (ios only)",
+        "document signing",
+        "sign and manage pdf or docx documents with esign: sign pdf docx documents (ios only)",
+        "compare esign: sign pdf docx documents (ios only) with other mobile e-signature apps"
+      ],
+      "summary": "An iOS document-signing app for preparing, signing and managing PDF and DOCX files on iPhone or iPad.",
+      "url": "/partner-offers/esign-sign-pdf-docx-documents-ios-only-software.html"
     },
     {
       "calculator_url": "/calculators/mrpeasy-manufacturing-erp-value-calculator.html",
