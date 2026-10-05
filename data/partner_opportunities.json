@@ -9,9 +9,10 @@
     "approved_link_pending": 11,
     "existing_active": 38,
     "not_qualified": 14,
-    "policy_review_required": 21,
+    "policy_review_required": 20,
     "program_paused": 1,
-    "ready_for_owner_application": 389
+    "ready_for_owner_application": 389,
+    "terms_required": 1
   },
   "opportunities": [
     {
@@ -726,12 +727,12 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
-      "relationship_status": "application-pending",
-      "terms_required": false,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": true,
       "partnership_key": "part_1WoaJATfUerUR4",
       "score": 85,
       "relevance_matches": [
@@ -747,19 +748,11 @@
         "software"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -2412,7 +2405,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 86,
+      "review_days": 81,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2476,6 +2469,56 @@
         "e-commerce",
         "marketing",
         "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:rebolt",
+      "network": "partnerstack",
+      "name": "Rebolt",
+      "slug": "rebolt",
+      "description": "Rebolt is the all-in-one marketing platform for home service businesses, offering SEO-optimized websites, social media management, and AI-powered content creation.",
+      "offer": "20% revenue share for the first year",
+      "tags": [
+        "Artificial Intelligence",
+        "Digital Advertising",
+        "Marketing",
+        "Other",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/rebolt?company=rebolt&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/1Qxnwt4LERDpR6D5XqxZVJey1tR5jZvcf/edit",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 85,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "content",
+        "marketing",
+        "seo"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -3368,6 +3411,71 @@
       }
     },
     {
+      "id": "partnerstack:vidaglobal",
+      "network": "partnerstack",
+      "name": "Vida Global Inc.",
+      "slug": "vidaglobal",
+      "description": "Vida.io’s AI Phone Agents give small, medium, and large businesses true 24/7 support across calls, SMS, email, and web chat — relaying information, handling scheduling, screening and transferring calls, and conversing naturally in 10 languages.",
+      "offer": "Earn 10% of net revenue on new referral for two years!",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Ambassadors",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Hot",
+        "Hubspot integrated",
+        "Influencers",
+        "Managed Service Provider",
+        "Marketing",
+        "Media Partners",
+        "Publishers",
+        "Referral Partners",
+        "Resellers",
+        "Sales",
+        "System Integrator",
+        "Trusted",
+        "Value Added Reseller"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vidaglobal?company=vidaglobal&gref=marketplace",
+      "terms_url": "https://vida.io/terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 13,
+      "source": "https://market.partnerstack.com/",
+      "score": 85,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "customer service",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:vistasocial",
       "network": "partnerstack",
       "name": "Vista Social",
@@ -3759,6 +3867,59 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:feedvisor",
+      "network": "partnerstack",
+      "name": "Feedvisor",
+      "slug": "feedvisor",
+      "description": "The first agentic commerce platform for brands and large sellers on Amazon, Walmart, and other e-marketplaces. Agentis' unified engine connects advertising, pricing, inventory, and demand to make continuous, real-time decisions powered by AI that maximize profit and growth.",
+      "offer": "Earn 10% commission for every qualified customer",
+      "tags": [
+        "Affiliates",
+        "Analytics",
+        "Artificial Intelligence",
+        "Commerce",
+        "E-Commerce",
+        "Hot",
+        "Marketing",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/feedvisor?company=feedvisor&gref=marketplace",
+      "terms_url": "https://feedvisor.com/plans/terms-and-conditions/",
+      "website": "https://www.feedvisor.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 8,
+      "source": "https://market.partnerstack.com/",
+      "score": 81,
+      "relevance_matches": [
+        "ai",
+        "analytics",
+        "artificial intelligence",
+        "e-commerce",
+        "marketing"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -4433,7 +4594,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 15,
+      "review_days": 14,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -4602,55 +4763,6 @@
       "policy": {
         "status": "not_reviewed",
         "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:rebolt",
-      "network": "partnerstack",
-      "name": "Rebolt",
-      "slug": "rebolt",
-      "description": "Rebolt is the all-in-one marketing platform for home service businesses, offering SEO-optimized websites, social media management, and AI-powered content creation.",
-      "offer": "20% revenue share for the first year",
-      "tags": [
-        "Artificial Intelligence",
-        "Digital Advertising",
-        "Marketing",
-        "Other"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/rebolt?company=rebolt&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/1Qxnwt4LERDpR6D5XqxZVJey1tR5jZvcf/edit",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "content",
-        "marketing",
-        "seo"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
         "cookie_days": null
       }
     },
@@ -4986,69 +5098,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:vidaglobal",
-      "network": "partnerstack",
-      "name": "Vida Global Inc.",
-      "slug": "vidaglobal",
-      "description": "Vida.io’s AI Phone Agents give small, medium, and large businesses true 24/7 support across calls, SMS, email, and web chat — relaying information, handling scheduling, screening and transferring calls, and conversing naturally in 10 languages.",
-      "offer": "Earn 10% of net revenue on new referral for two years!",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Ambassadors",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Hubspot integrated",
-        "Influencers",
-        "Managed Service Provider",
-        "Marketing",
-        "Media Partners",
-        "Publishers",
-        "Referral Partners",
-        "Resellers",
-        "Sales",
-        "System Integrator",
-        "Value Added Reseller"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vidaglobal?company=vidaglobal&gref=marketplace",
-      "terms_url": "https://vida.io/terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 13,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "customer service",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -6289,57 +6338,6 @@
         "productivity",
         "software",
         "video"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:feedvisor",
-      "network": "partnerstack",
-      "name": "Feedvisor",
-      "slug": "feedvisor",
-      "description": "The first agentic commerce platform for brands and large sellers on Amazon, Walmart, and other e-marketplaces. Agentis' unified engine connects advertising, pricing, inventory, and demand to make continuous, real-time decisions powered by AI that maximize profit and growth.",
-      "offer": "Earn 10% commission for every qualified customer",
-      "tags": [
-        "Affiliates",
-        "Analytics",
-        "Artificial Intelligence",
-        "Commerce",
-        "E-Commerce",
-        "Marketing"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/feedvisor?company=feedvisor&gref=marketplace",
-      "terms_url": "https://feedvisor.com/plans/terms-and-conditions/",
-      "website": "https://www.feedvisor.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 8,
-      "source": "https://market.partnerstack.com/",
-      "score": 76,
-      "relevance_matches": [
-        "ai",
-        "analytics",
-        "artificial intelligence",
-        "e-commerce",
-        "marketing"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -7758,7 +7756,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 16,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -9414,7 +9412,7 @@
       "name": "ABC Trainerize",
       "slug": "trainerize",
       "description": "ABC Trainerize is an online coaching platform helping coaches and fitness businesses offer fitness, nutrition and habit programs online and stay connected to their clients and their audience.",
-      "offer": "Earn 10% on annual memberships",
+      "offer": "Earn 15% on monthly memberships",
       "tags": [
         "Affiliates",
         "B2B Marketplaces",
@@ -9798,7 +9796,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -9911,7 +9909,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10178,61 +10176,6 @@
           "coupon_restricted": true,
           "email_restricted": true,
           "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:gelato",
-      "network": "partnerstack",
-      "name": "Gelato",
-      "slug": "gelato",
-      "description": "Create and sell custom products online. With local production in 32 countries, easy integration, and 24/7 customer support, Gelato is an all-in-one platform for print on demand.",
-      "offer": "Join Gelato’s partners program and earn up to 12% commission for 1 year",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Commerce",
-        "Design",
-        "Hot",
-        "Influencers",
-        "Marketing",
-        "Office Software",
-        "Publishers",
-        "Supply Chain & Logistics",
-        "Trending",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/gelato?company=gelato&gref=marketplace",
-      "terms_url": "",
-      "website": "https://www.gelato.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 7,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "design",
-        "marketing",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -10688,7 +10631,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 56,
+      "review_days": 52,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11177,6 +11120,60 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:lucensoftware",
+      "network": "partnerstack",
+      "name": "Office Timeline",
+      "slug": "lucensoftware",
+      "description": "Create project timelines, Gantt charts, and roadmaps in PowerPoint with Office Timeline—a project management add-in built for consultants, PMOs, and teams needing fast, professional visuals for client updates and executive reporting.",
+      "offer": "Earn up to 50% commission in Year 1 (~$100 per referral). CPC, CPL, & CPA models available.",
+      "tags": [
+        "Collaboration & Productivity",
+        "Content Management",
+        "Design",
+        "Hot",
+        "Marketing",
+        "Office Software",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/lucensoftware?company=lucensoftware&gref=marketplace",
+      "terms_url": "https://img.officetimeline.com/uploads/assets/Partner_Affiliate_Program_Terms_and_Conditions_Office_Timeline_2025_04d5aa4d3c.pdf",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "content",
+        "design",
+        "marketing",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -12590,62 +12587,6 @@
       }
     },
     {
-      "id": "partnerstack:superfiliate",
-      "network": "partnerstack",
-      "name": "Superfiliate",
-      "slug": "superfiliate",
-      "description": "Superfiliate is the creator-led growth platform for D2C brands focused on measurable revenue growth. Get unified affiliate and creator management, automated gifting workflows, creator storefronts, built-in discovery tooling in one place, with full visibility into which creators and programs are driving results.",
-      "offer": "Earn 25% Revenue share for the first year of customer purchases + early adoption bonus of $250",
-      "tags": [
-        "Affiliates",
-        "B2B Marketplaces",
-        "Commerce",
-        "Content Management",
-        "E-Commerce",
-        "Hot",
-        "Influencers",
-        "Marketing",
-        "Media Partners",
-        "Publishers",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/superfiliate?company=superfiliate&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1nCSCwBekXP2VpP_UDfhSaMJUw6eG-rIe/view?usp=sharing",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 2,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "content",
-        "e-commerce",
-        "marketing",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:surveymonkey",
       "network": "partnerstack",
       "name": "SurveyMonkey",
@@ -12753,6 +12694,67 @@
           "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:textline",
+      "network": "partnerstack",
+      "name": "Textline",
+      "slug": "textline",
+      "description": "Textline is the most secure business text messaging platform for modern customer support, sales, and logistics teams. Textline is HIPAA and SOC2 compliant. Built for teams, popular features include automations, announcements, MMS, templates, and surveys.",
+      "offer": "Earn up to 25% of the deal value in recurring commissions!",
+      "tags": [
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Customer Service",
+        "Digital Advertising",
+        "HR Software",
+        "Hot",
+        "Hubspot integrated",
+        "Marketing",
+        "Office Software",
+        "Partner Lead Importer",
+        "Referral Partners",
+        "Sales",
+        "Salesforce integrated",
+        "Shopify integrated",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/textline?company=textline&gref=marketplace",
+      "terms_url": "https://www.textline.com/legal/partners-affiliates",
+      "website": "https://www.textline.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 67,
+      "relevance_matches": [
+        "customer service",
+        "marketing",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": true,
           "disclosure_required": false
         },
         "cookie_days": null
@@ -15609,7 +15611,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 56,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16059,6 +16061,55 @@
           "coupon_restricted": false,
           "email_restricted": true,
           "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:getida",
+      "network": "partnerstack",
+      "name": "Getida",
+      "slug": "getida",
+      "description": "Getida is the global leader in Amazon FBA auditing & reimbursement solutions for sellers worldwide. It's more than money back — it's the way forward.",
+      "offer": "Earn 10% of the recovery fee for the first 12 months of the customers lifetime!",
+      "tags": [
+        "Affiliates",
+        "Commerce",
+        "E-Commerce",
+        "Hot",
+        "Publishers",
+        "Trusted",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/getida?company=getida&gref=marketplace",
+      "terms_url": "https://online.getida.com/affiliate-partnership-agreement",
+      "website": "https://www.getida.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 65,
+      "relevance_matches": [
+        "e-commerce",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -16622,7 +16673,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 15,
+      "review_days": 14,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -17349,7 +17400,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 58,
+      "review_days": 54,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17839,6 +17890,60 @@
       }
     },
     {
+      "id": "partnerstack:gelato",
+      "network": "partnerstack",
+      "name": "Gelato",
+      "slug": "gelato",
+      "description": "Create and sell custom products online. With local production in 32 countries, easy integration, and 24/7 customer support, Gelato is an all-in-one platform for print on demand.",
+      "offer": "Join Gelato’s partners program and earn up to 12% commission for 1 year",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Commerce",
+        "Design",
+        "Influencers",
+        "Marketing",
+        "Office Software",
+        "Publishers",
+        "Supply Chain & Logistics",
+        "Trending",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/gelato?company=gelato&gref=marketplace",
+      "terms_url": "",
+      "website": "https://www.gelato.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 7,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "design",
+        "marketing",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:gravity",
       "network": "partnerstack",
       "name": "Gravity",
@@ -18259,58 +18364,6 @@
       }
     },
     {
-      "id": "partnerstack:lucensoftware",
-      "network": "partnerstack",
-      "name": "Office Timeline",
-      "slug": "lucensoftware",
-      "description": "Create project timelines, Gantt charts, and roadmaps in PowerPoint with Office Timeline—a project management add-in built for consultants, PMOs, and teams needing fast, professional visuals for client updates and executive reporting.",
-      "offer": "Earn up to 50% commission in Year 1 (~$100 per referral). CPC, CPL, & CPA models available.",
-      "tags": [
-        "Collaboration & Productivity",
-        "Content Management",
-        "Design",
-        "Marketing",
-        "Office Software",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/lucensoftware?company=lucensoftware&gref=marketplace",
-      "terms_url": "https://img.officetimeline.com/uploads/assets/Partner_Affiliate_Program_Terms_and_Conditions_Office_Timeline_2025_04d5aa4d3c.pdf",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "content",
-        "design",
-        "marketing",
-        "productivity",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:pagecloud",
       "network": "partnerstack",
       "name": "Pagecloud",
@@ -18575,6 +18628,60 @@
       }
     },
     {
+      "id": "partnerstack:superfiliate",
+      "network": "partnerstack",
+      "name": "Superfiliate",
+      "slug": "superfiliate",
+      "description": "Superfiliate is the creator-led growth platform for D2C brands focused on measurable revenue growth. Get unified affiliate and creator management, automated gifting workflows, creator storefronts, built-in discovery tooling in one place, with full visibility into which creators and programs are driving results.",
+      "offer": "Earn 25% Revenue share for the first year of customer purchases + early adoption bonus of $250",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Commerce",
+        "Content Management",
+        "E-Commerce",
+        "Influencers",
+        "Marketing",
+        "Media Partners",
+        "Publishers",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/superfiliate?company=superfiliate&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/1nCSCwBekXP2VpP_UDfhSaMJUw6eG-rIe/view?usp=sharing",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 2,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "content",
+        "e-commerce",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:tapstitch",
       "network": "partnerstack",
       "name": "Tapstitch",
@@ -18622,65 +18729,6 @@
           "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:textline",
-      "network": "partnerstack",
-      "name": "Textline",
-      "slug": "textline",
-      "description": "Textline is the most secure business text messaging platform for modern customer support, sales, and logistics teams. Textline is HIPAA and SOC2 compliant. Built for teams, popular features include automations, announcements, MMS, templates, and surveys.",
-      "offer": "Earn up to 25% of the deal value in recurring commissions!",
-      "tags": [
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Customer Service",
-        "Digital Advertising",
-        "HR Software",
-        "Hubspot integrated",
-        "Marketing",
-        "Office Software",
-        "Partner Lead Importer",
-        "Referral Partners",
-        "Sales",
-        "Salesforce integrated",
-        "Shopify integrated"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/textline?company=textline&gref=marketplace",
-      "terms_url": "https://www.textline.com/legal/partners-affiliates",
-      "website": "https://www.textline.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 62,
-      "relevance_matches": [
-        "customer service",
-        "marketing",
-        "productivity",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": true,
           "disclosure_required": false
         },
         "cookie_days": null
@@ -19044,7 +19092,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 24,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19299,53 +19347,6 @@
       "policy": {
         "status": "not_reviewed",
         "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:getida",
-      "network": "partnerstack",
-      "name": "Getida",
-      "slug": "getida",
-      "description": "Getida is the global leader in Amazon FBA auditing & reimbursement solutions for sellers worldwide. It's more than money back — it's the way forward.",
-      "offer": "Earn 10% of the recovery fee for the first 12 months of the customers lifetime!",
-      "tags": [
-        "Affiliates",
-        "Commerce",
-        "E-Commerce",
-        "Publishers",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/getida?company=getida&gref=marketplace",
-      "terms_url": "https://online.getida.com/affiliate-partnership-agreement",
-      "website": "https://www.getida.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 60,
-      "relevance_matches": [
-        "e-commerce",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
         "cookie_days": null
       }
     },
@@ -19720,10 +19721,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -19819,14 +19828,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -20485,7 +20494,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 48,
+      "review_days": 46,
       "source": "https://market.partnerstack.com/",
       "score": 58,
       "relevance_matches": [
@@ -20838,6 +20847,62 @@
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:finaleinventory",
+      "network": "partnerstack",
+      "name": "Finale Inventory",
+      "slug": "finaleinventory",
+      "description": "Finale Inventory is the top inventory management solution for applications involving high volume, multichannel eCommerce and warehouse management.",
+      "offer": "Earn 15% every month for a paid customer's first year",
+      "tags": [
+        "Affiliates",
+        "B2B Marketplaces",
+        "Commerce",
+        "E-Commerce",
+        "ERP",
+        "Hot",
+        "Office Software",
+        "Publishers",
+        "Referral Partners",
+        "Sales",
+        "Shopify integrated",
+        "Supply Chain & Logistics",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/finaleinventory?company=finaleinventory&gref=marketplace",
+      "terms_url": "https://www.finaleinventory.com/terms-of-service",
+      "website": "https://www.finaleinventory.com/",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 7,
+      "source": "https://market.partnerstack.com/",
+      "score": 57,
+      "relevance_matches": [
+        "e-commerce",
+        "sales",
         "software"
       ],
       "already_active": false,
@@ -21277,7 +21342,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 26,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21998,15 +22063,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
+          "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -22360,60 +22425,6 @@
       }
     },
     {
-      "id": "partnerstack:finaleinventory",
-      "network": "partnerstack",
-      "name": "Finale Inventory",
-      "slug": "finaleinventory",
-      "description": "Finale Inventory is the top inventory management solution for applications involving high volume, multichannel eCommerce and warehouse management.",
-      "offer": "Earn 15% every month for a paid customer's first year",
-      "tags": [
-        "Affiliates",
-        "B2B Marketplaces",
-        "Commerce",
-        "E-Commerce",
-        "ERP",
-        "Office Software",
-        "Publishers",
-        "Referral Partners",
-        "Sales",
-        "Shopify integrated",
-        "Supply Chain & Logistics"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/finaleinventory?company=finaleinventory&gref=marketplace",
-      "terms_url": "https://www.finaleinventory.com/terms-of-service",
-      "website": "https://www.finaleinventory.com/",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 7,
-      "source": "https://market.partnerstack.com/",
-      "score": 52,
-      "relevance_matches": [
-        "e-commerce",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:cloudtask",
       "network": "partnerstack",
       "name": "CloudTask",
@@ -22491,54 +22502,6 @@
       "score": 51,
       "relevance_matches": [
         "data"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:acceleratedgrowthstudio",
-      "network": "partnerstack",
-      "name": "Accelerated Growth Studio",
-      "slug": "acceleratedgrowthstudio",
-      "description": "We grow DTC brands. One click at a time. AGS is a performance marketing agency built to scale revenue, not just run ads. We manage paid media, test creative relentlessly, and optimize funnels so clicks turn into customers and customers turn into real growth. If it doesn’t move revenue, we don’t do it. Engineered for rapid scale",
-      "offer": "Earn $2000 per paid customer!",
-      "tags": [
-        "Digital Advertising",
-        "E-Commerce",
-        "Marketing",
-        "Shopify integrated",
-        "Social Media",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/acceleratedgrowthstudio?company=acceleratedgrowthstudio&gref=marketplace",
-      "terms_url": "",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": false,
-      "review_days": 35,
-      "source": "https://market.partnerstack.com/",
-      "score": 50,
-      "relevance_matches": [
-        "e-commerce",
-        "marketing"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -22978,7 +22941,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 47,
       "relevance_matches": [],
@@ -23045,6 +23008,53 @@
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": true
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:acceleratedgrowthstudio",
+      "network": "partnerstack",
+      "name": "Accelerated Growth Studio",
+      "slug": "acceleratedgrowthstudio",
+      "description": "We grow DTC brands. One click at a time. AGS is a performance marketing agency built to scale revenue, not just run ads. We manage paid media, test creative relentlessly, and optimize funnels so clicks turn into customers and customers turn into real growth. If it doesn’t move revenue, we don’t do it. Engineered for rapid scale",
+      "offer": "Earn $2000 per paid customer!",
+      "tags": [
+        "Digital Advertising",
+        "E-Commerce",
+        "Marketing",
+        "Shopify integrated",
+        "Social Media"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/acceleratedgrowthstudio?company=acceleratedgrowthstudio&gref=marketplace",
+      "terms_url": "",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 35,
+      "source": "https://market.partnerstack.com/",
+      "score": 45,
+      "relevance_matches": [
+        "e-commerce",
+        "marketing"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
         },
         "cookie_days": null
       }
@@ -23515,7 +23525,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 40,
+      "review_days": 94,
       "source": "https://market.partnerstack.com/",
       "score": 40,
       "relevance_matches": [
