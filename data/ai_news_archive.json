@@ -4583,6 +4583,42 @@
   ],
   "last_failures": [
     {
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-05T06:11:42.458245+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/another-openai-safety-departure-adds-to-a-pattern-of-researchers-leaving-with-public-warnings/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-05T06:11:42.458245+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; Elephant commentary is not specific to this story",
+      "at": "2026-10-05T06:11:42.458245+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-05T06:11:42.458245+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-05T06:11:42.458245+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-05T06:11:42.458245+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-04T21:54:34.678619+00:00",
@@ -4631,12 +4667,6 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-04T06:18:43.313465+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://the-decoder.com/ai-agents-build-3d-scenes-from-photos-but-have-no-idea-if-they-got-it-right/",
       "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
       "at": "2026-10-04T06:18:43.313465+00:00",
@@ -4649,18 +4679,6 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-04T06:18:43.313465+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-03T21:44:04.642252+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://techcrunch.com/2026/10/02/circuit-breaker-labs-hopes-to-make-ai-safer-for-your-kids-and-you/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-03T21:44:04.642252+00:00",
@@ -4670,24 +4688,6 @@
       "url": "https://openai.com/index/practical-guide-building-gpt-6",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-10-03T21:44:04.642252+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/another-openai-safety-departure-adds-to-a-pattern-of-researchers-leaving-with-public-warnings/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-03T16:41:45.025120+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-03T16:41:45.025120+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-03T16:41:45.025120+00:00",
       "pipeline_version": "2"
     },
     {
