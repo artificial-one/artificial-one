@@ -259,6 +259,27 @@ class SearchRevenueEngineTests(unittest.TestCase):
         self.assertEqual(len(snapshot["indexing"]["lost_indexing"]), 1)
         self.assertEqual(snapshot["commercial_search"]["pages_with_impressions"], 1)
 
+    def test_executive_snapshot_flags_critically_low_affiliate_indexing(self):
+        inspections = [
+            {
+                "url": f"https://www.artificial.one/partner-offers/tool-{index}.html",
+                "status": "PASS" if index == 0 else "ISSUE",
+                "detail": "Indexed" if index == 0 else "Discovered - currently not indexed",
+            }
+            for index in range(10)
+        ]
+        monetized = {f"/partner-offers/tool-{index}.html" for index in range(10)}
+        snapshot = engine.build_executive_snapshot(
+            [], {"clicks": 0, "impressions": 0, "ctr": 0, "position": 0},
+            {"clicks": 0, "impressions": 0, "ctr": 0, "position": 0}, inspections,
+            {"available": True}, monetized,
+            date(2026, 8, 1), date(2026, 8, 28),
+            site_property="https://www.artificial.one/",
+        )
+        attention = snapshot["indexing"]["attention"]
+        self.assertTrue(any(item["title"] == "Google visibility is critically low" for item in attention))
+        self.assertTrue(all(not item["requires_user_action"] for item in attention))
+
     def test_executive_snapshot_marks_canonical_property_gap_as_user_attention(self):
         snapshot = engine.build_executive_snapshot(
             [], {"clicks": 0, "impressions": 0, "ctr": 0, "position": 0},
