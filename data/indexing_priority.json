@@ -1,7 +1,7 @@
 {
-  "candidates": 619,
-  "excluded": 459,
-  "excluded_page_count": 459,
+  "candidates": 621,
+  "excluded": 461,
+  "excluded_page_count": 461,
   "excluded_pages": [
     {
       "path": "search-intent/pinecone-vector-database-for-build-retrieval-augmented-generation.html",
@@ -181,7 +181,7 @@
   ],
   "excluded_pages_note": "A representative sample only; the full count is grouped by exclusion reason.",
   "exclusion_reasons": {
-    "index_budget": 459
+    "index_budget": 461
   },
   "included": 160,
   "included_paths": [
@@ -337,14 +337,14 @@
     "appsumo-guides/acadle.html",
     "appsumo-guides/acumbamail.html",
     "appsumo-guides/adilo.html",
+    "news/2026/10/05/wikipedia-operator-says-openai-s-rogue-bots-may-be-linked-to-a-may-outage.html",
     "news/2026/10/05/sen-adam-schiff-on-ai-regulation-free-speech-and-impeaching-trump-one-more-time.html",
     "news/2026/10/05/researchers-are-tracking-a-chinese-ai-agent-fleet.html",
     "news/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results.html",
+    "news/2026/10/05/gemini-call-for-me-might-tell-your-mom-you-re-running-late.html",
     "news/2026/10/05/aleph-alpha-releases-kolibri-an-open-weight-model-that-makes-the-case-for-european.html",
     "news/2026/10/04/google-s-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-sub.html",
-    "news/2026/10/04/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-the.html",
-    "news/2026/10/04/chinese-ai-models-parrot-state-doctrine-or-refuse-to-answer-on-sensitive-topics.html",
-    "news/2026/10/03/openai-s-internal-model-considered-restarting-itself-after-learning-it-was-about-t.html"
+    "news/2026/10/04/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-the.html"
   ],
   "incoming_link_distribution": {
     "0": 0,
