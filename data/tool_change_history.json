@@ -1,10 +1,73 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 55,
+    "successful_checks": 68,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-06",
+      "id": "b9bd7ef2f0561234",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://stylar.ai",
+      "tool_id": "stylar",
+      "tool_name": "Stylar"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "4ec3a726c97b71a1",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://tavily.com",
+      "tool_id": "tavily",
+      "tool_name": "Tavily"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "8a6906f3ba341434",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://todoist.com",
+      "tool_id": "todoist-ai",
+      "tool_name": "Todoist AI"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "1e56ab592352d256",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://veed.io",
+      "tool_id": "veed-io",
+      "tool_name": "Veed.io"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "5b35e6faa6f35bdb",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://typecast.ai",
+      "tool_id": "typecast",
+      "tool_name": "Typecast"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "5e9c98f4c6aa8526",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.carepatron.com/",
+      "tool_id": "carepatron",
+      "tool_name": "Carepatron"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "816dcdbce11d52f8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.databox.com/",
+      "tool_id": "databox",
+      "tool_name": "Databox"
+    },
     {
       "detected_on": "2026-10-05",
       "id": "f98ee8e52bd83988",
@@ -484,6 +547,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-05",
+  "updated_at": "2026-10-06",
   "version": 1
 }

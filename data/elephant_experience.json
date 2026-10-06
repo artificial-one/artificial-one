@@ -1,6 +1,69 @@
 {
   "changes": [
     {
+      "detected_on": "2026-10-06",
+      "id": "b9bd7ef2f0561234",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://stylar.ai",
+      "tool_id": "stylar",
+      "tool_name": "Stylar"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "4ec3a726c97b71a1",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://tavily.com",
+      "tool_id": "tavily",
+      "tool_name": "Tavily"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "8a6906f3ba341434",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://todoist.com",
+      "tool_id": "todoist-ai",
+      "tool_name": "Todoist AI"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "1e56ab592352d256",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://veed.io",
+      "tool_id": "veed-io",
+      "tool_name": "Veed.io"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "5b35e6faa6f35bdb",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://typecast.ai",
+      "tool_id": "typecast",
+      "tool_name": "Typecast"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "5e9c98f4c6aa8526",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.carepatron.com/",
+      "tool_id": "carepatron",
+      "tool_name": "Carepatron"
+    },
+    {
+      "detected_on": "2026-10-06",
+      "id": "816dcdbce11d52f8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.databox.com/",
+      "tool_id": "databox",
+      "tool_name": "Databox"
+    },
+    {
       "detected_on": "2026-10-05",
       "id": "f98ee8e52bd83988",
       "kind": "pricing or plan",
@@ -481,6 +544,132 @@
   "methodology": "Catalogue-grounded browser-side recommendations; monetization is a one-point tie-break only.",
   "news": [
     {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Falcon-Emirati: When an LLM Learns the Dialect, the Culture, and the Nuance",
+      "url": "https://huggingface.co/blog/tiiuae/falcon-emirati"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Gemini Call for Me might tell your mom you’re running late",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1005177/google-gemini-call-for-me-expansion-rumors"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "MCP for agent-to-agent comms may be the riskiest protocol you've never heard of",
+      "url": "https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Wikipedia operator says OpenAI’s ‘rogue’ bots may be linked to a May outage",
+      "url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI will start watermarking ChatGPT’s text in the EU",
+      "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/"
+    },
+    {
+      "category": "AI Business",
+      "published": "",
+      "title": "This startup is issuing AI-generated acne prescriptions",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1005075/nolla-health-acne-ai-prescriptions"
+    },
+    {
+      "category": "Research",
+      "published": "",
+      "title": "All the drama around AI’s takeover of mathematics",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004933/ai-math-openai-breakthrough-solution"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Reflection debuts Beam, an open-weight AI model to rival Chinese models at lower compute cost",
+      "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Meta and Microsoft pull back from Claude as Anthropic transforms from partner into competitor",
+      "url": "https://the-decoder.com/meta-and-microsoft-pull-back-from-claude-as-anthropic-transforms-from-partner-into-competitor/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Instinct brings its AI agent to group chats, even for friends without an account",
+      "url": "https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "TikTok rolls out an AI shopping assistant and one-click checkout",
+      "url": "https://techcrunch.com/2026/10/05/tiktok-rolls-out-an-ai-shopping-assistant-and-one-click-checkout/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "Reka AI's omni-model Rho-1 handles text, images, video, and robot control in a single model",
+      "url": "https://the-decoder.com/reka-ais-omni-model-rho-1-handles-text-images-video-and-robot-control-in-a-single-model/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Sam Altman says ‘some bad things’ will happen, but AI is totally worth it",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004811/openai-altman-bad-things-ai-tradeoff"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI PR tells journalist to ‘move on’ while asking Sam Altman about a ChatGPT user’s suicide",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004827/openai-sam-altman-vanity-fair-interview-pr"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "OpenAI will watermark ChatGPT text in the EU but makes it optional for API users worldwide",
+      "url": "https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "Hot Girl Hotline is like ‘Dear Abby’ for the AI era",
+      "url": "https://techcrunch.com/2026/10/05/hot-girl-hotline-is-like-dear-abby-for-the-ai-era/"
+    },
+    {
+      "category": "Models & LLMs",
+      "published": "",
+      "title": "HackerRank’s AI interviewer offers a glimpse into what job interviews could become",
+      "url": "https://techcrunch.com/2026/10/05/hackerranks-ai-interviewer-offers-a-glimpse-into-what-job-interviews-could-become/"
+    },
+    {
+      "category": "Research",
+      "published": "",
+      "title": "Most Americans want AI development to slow down or stop entirely, new poll finds",
+      "url": "https://the-decoder.com/most-americans-want-ai-development-to-slow-down-or-stop-entirely-new-poll-finds/"
+    },
+    {
+      "category": "AI Tools & Products",
+      "published": "",
+      "title": "Anthropic is quietly becoming America's biggest corporate donor ahead of its mega IPO",
+      "url": "https://the-decoder.com/anthropic-is-quietly-becoming-americas-biggest-corporate-donor-ahead-of-its-mega-ipo/"
+    },
+    {
+      "category": "Policy & Safety",
+      "published": "",
+      "title": "Sen. Adam Schiff on AI regulation, free speech, and impeaching Trump one more time",
+      "url": "https://www.theverge.com/podcast/1004286/senator-adam-schiff-ai-trump-regulation-corruption"
+    },
+    {
       "category": "AI Tools & Products",
       "published": "",
       "title": "OpenAI launches visual ads that appear alongside image generation results",
@@ -493,136 +682,10 @@
       "url": "https://techcrunch.com/2026/10/05/open-or-closed-ai-how-founders-are-choosing-what-to-build-on-at-techcrunch-disrupt-2026/"
     },
     {
-      "category": "Research",
-      "published": "",
-      "title": "Researchers are tracking a Chinese AI ‘agent fleet’",
-      "url": "https://techcrunch.com/2026/10/05/researchers-are-tracking-a-chinese-ai-agent-fleet/"
-    },
-    {
       "category": "Models & LLMs",
       "published": "",
       "title": "Aleph Alpha releases Kolibri, an open-weight model that makes the case for European AI sovereignty",
       "url": "https://the-decoder.com/aleph-alpha-releases-kolibri-an-open-weight-model-that-makes-the-case-for-european-ai-sovereignty/"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "Sen. Adam Schiff on AI regulation, free speech, and impeaching Trump one more time",
-      "url": "https://www.theverge.com/podcast/1004286/senator-adam-schiff-ai-trump-regulation-corruption"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "OpenAI is sticking more ads in ChatGPT",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1004655/openai-chatgpt-visual-ads"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "ChatGPT's new ad format fills the image generation loading screen with product carousels",
-      "url": "https://the-decoder.com/chatgpts-new-ad-format-fills-the-image-generation-loading-screen-with-product-carousels/"
-    },
-    {
-      "category": "Research",
-      "published": "",
-      "title": "AI is eroding office hours, study groups, and the trust between faculty and students, MIT report finds",
-      "url": "https://the-decoder.com/ai-is-eroding-office-hours-study-groups-and-the-trust-between-faculty-and-students-mit-report-finds/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Our minds aren’t equipped to handle AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1003794/ai-education-computational-model-thought"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Building advertising for the way people use AI",
-      "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Google froze its open source bug bounty program due to a ‘significant rise’ in AI submissions",
-      "url": "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "Can ‘super intelligence’ and a non-binding safety pact solve AI’s image problem?",
-      "url": "https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "NJ’s former Lt Gov is using AI to say he’s innocent of sexual harassment",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "An AI couldn’t beat humans at StarCraft, so it decided to cheat",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft"
-    },
-    {
-      "category": "Research",
-      "published": "",
-      "title": "Google researchers find a way to keep self-improving AI agents from memorizing their tests",
-      "url": "https://the-decoder.com/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-their-tests/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "NASA and IBM's open source lunar model turns 17 years of orbiter data into a foundation for lunar science",
-      "url": "https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Chinese AI models parrot state doctrine or refuse to answer on sensitive topics",
-      "url": "https://the-decoder.com/chinese-ai-models-parrot-state-doctrine-or-refuse-to-answer-on-sensitive-topics/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "Google's new Gemini tiers cut free users to its weakest model and lock $5/month subscribers out of Pro",
-      "url": "https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "The Agent Said It Was Done. The Database Disagreed.",
-      "url": "https://huggingface.co/blog/microsoft/thinkingbox"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Capcom is preparing for a ‘future where we create games together with AI’",
-      "url": "https://www.theverge.com/games/1004418/capcom-ai-game-development"
-    },
-    {
-      "category": "Policy & Safety",
-      "published": "",
-      "title": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
-      "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/"
-    },
-    {
-      "category": "Models & LLMs",
-      "published": "",
-      "title": "An OpenAI safety employee has quit and is sounding the alarm",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "All the AI agents that can live in your text messages",
-      "url": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/"
-    },
-    {
-      "category": "AI Tools & Products",
-      "published": "",
-      "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
-      "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/"
     }
   ],
   "recipes": [
@@ -764,7 +827,7 @@
     }
   ],
   "stats": {
-    "changes": 53,
+    "changes": 60,
     "monetized": 290,
     "recipes": 8,
     "reviewed": 42,
@@ -14313,6 +14376,6 @@
       "summary": "Complete Zenler review covering features, pricing, and exclusive lifetime deal. See if this tool is worth it for your business"
     }
   ],
-  "updated_at": "2026-10-05",
+  "updated_at": "2026-10-06",
   "version": 1
 }
