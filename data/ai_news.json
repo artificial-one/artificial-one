@@ -1,7 +1,80 @@
 {
   "version": 1,
-  "updated_at": "2026-10-06T18:36:11.425087+00:00",
+  "updated_at": "2026-10-06T22:47:23.930421+00:00",
   "items": [
+    {
+      "title": "How AI decision models could change content moderation",
+      "url": "https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-06T20:35:20+00:00",
+      "display_date": "Oct 06, 2026",
+      "category": "Models & LLMs",
+      "description": "On Tuesday, Musubi announced a lightweight decision model made for real-time moderation called PolicyLM-1.7B, released with open weights.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "AI computing startup Lambda to raise $4B ahead of planned IPO",
+      "url": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-06T20:00:30+00:00",
+      "display_date": "Oct 06, 2026",
+      "category": "AI Business",
+      "description": "Nvidia-backed Lambda is raising up to $4 billion at a $14.5 billion pre-money valuation ahead of a planned 2027 IPO, led by Coatue and Blackstone.",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo.html"
+    },
+    {
+      "title": "The next hurdle for AI agents: getting websites to let them in",
+      "url": "https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-06T19:56:50+00:00",
+      "display_date": "Oct 06, 2026",
+      "category": "AI Tools & Products",
+      "description": "Personal AI agents promise to shop, book flights, and make reservations for you. But deliberate blocks and anti-bot defenses are getting in the way, leaving consumers caught in the middle. A new standard aims to help.",
+      "related": {
+        "title": "Evaluate Unbounce for this workflow",
+        "url": "partner-offers/unbounce-landing-pages.html",
+        "offer_id": "unbounce"
+      }
+    },
+    {
+      "title": "Google claims EmbeddingGemma 2 outperforms rival embedding models twice its size",
+      "url": "https://the-decoder.com/google-claims-embeddinggemma-2-outperforms-rival-embedding-models-twice-its-size/",
+      "source": "The Decoder",
+      "published_at": "2026-10-06T19:47:27+00:00",
+      "display_date": "Oct 06, 2026",
+      "category": "Models & LLMs",
+      "description": "Google released EmbeddingGemma 2, an open model with 740 million parameters that converts text, images, video, audio, and code into vectors. It runs on-device, needs only about 191 MB of RAM, and outperforms some competing models twice its size, according to Google. Paired with a small open model like Gemma 4, it can run offline RAG apps without sending data to external servers. The article Google claims EmbeddingGemma 2 outperforms rival embedding models twice its size appeared first on The Dec",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/06/google-claims-embeddinggemma-2-outperforms-rival-embedding-models-twice-its-size.html"
+    },
+    {
+      "title": "Google's new image model Nano Banana 2.1 generates better images for less money",
+      "url": "https://the-decoder.com/googles-new-image-model-nano-banana-2-1-generates-better-images-for-less-money/",
+      "source": "The Decoder",
+      "published_at": "2026-10-06T19:29:42+00:00",
+      "display_date": "Oct 06, 2026",
+      "category": "Models & LLMs",
+      "description": "Google's new Nano Banana 2.1 image model uses Gemini 3.6 Flash and beats the previous Pro model in some benchmarks at a lower cost. But its predecessor also scored well in tests, while Pro often produced better images in practice. The article Google's new image model Nano Banana 2.1 generates better images for less money appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate AdCreative.ai for this workflow",
+        "url": "partner-offers/adcreative-ai-ad-design.html",
+        "offer_id": "adcreative"
+      },
+      "archive_url": "news/2026/10/06/google-s-new-image-model-nano-banana-2-1-generates-better-images-for-less-money.html"
+    },
     {
       "title": "Wikimedia confirms OpenAI's rogue AI agents edited wikis, tried to compromise tools, and hammered its infrastructure",
       "url": "https://the-decoder.com/wikimedia-confirms-openais-rogue-ai-agents-edited-wikis-tried-to-compromise-tools-and-hammered-its-infrastructure/",
@@ -24,7 +97,7 @@
       "published_at": "2026-10-06T18:22:45+00:00",
       "display_date": "Oct 06, 2026",
       "category": "AI Tools & Products",
-      "description": "The AI lab's personal assistant is an operating system from the future designed to compete with Muse, Dots and Instinct.",
+      "description": "The AI lab's personal assistant is an operating system from the future designed to compete with Muse, Dots, and Instinct.",
       "related": {
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
@@ -145,20 +218,6 @@
       }
     },
     {
-      "title": "Pinterest’s AI now turns beauty Pins into action plans",
-      "url": "https://techcrunch.com/2026/10/06/pinterests-ai-now-turns-beauty-pins-into-action-plans/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-06T14:00:49+00:00",
-      "display_date": "Oct 06, 2026",
-      "category": "AI Tools & Products",
-      "description": "Pinterest’s new AI-powered Beauty Guides translate hair and nail Pins into salon terminology, with estimated costs, appointment times, and maintenance needs.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
       "title": "Google is about to remove free access to Gemini Flash and Pro",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1005451/google-gemini-free-flash-lite-only",
       "source": "The Verge AI",
@@ -193,7 +252,7 @@
       "published_at": "2026-10-06T12:21:53+00:00",
       "display_date": "Oct 06, 2026",
       "category": "AI Tools & Products",
-      "description": "The reports of OpenAI agents harming 3rd party sites keep coming.",
+      "description": "The reports of OpenAI agents harming third-party sites keep coming.",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -215,31 +274,17 @@
       }
     },
     {
-      "title": "Researchers stretch LeCun's JEPA AI into a universal world model that works from physics to biology",
-      "url": "https://the-decoder.com/researchers-stretch-lecuns-jepa-ai-into-a-universal-world-model-that-works-from-physics-to-biology/",
-      "source": "The Decoder",
-      "published_at": "2026-10-06T11:43:42+00:00",
+      "title": "Sharing AI progress in mathematics",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+      "source": "OpenAI",
+      "published_at": "2026-10-06T12:00:00+00:00",
       "display_date": "Oct 06, 2026",
       "category": "Models & LLMs",
-      "description": "Researchers at PhAI Labs have expanded Yann LeCun's JEPA architecture to work across seven fields, from robotics to biomedicine. The effort also produced a liver cancer treatment candidate that showed promise in lab tests, though the study doesn't establish whether it could become an actual therapy. The article Researchers stretch LeCun's JEPA AI into a universal world model that works from physics to biology appeared first on The Decoder .",
+      "description": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
       "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "CATL and Tencent back Deepseek's ballooning funding round as the AI startup eyes a 2027 IPO",
-      "url": "https://the-decoder.com/catl-and-tencent-back-deepseeks-ballooning-funding-round-as-the-ai-startup-eyes-a-2027-ipo/",
-      "source": "The Decoder",
-      "published_at": "2026-10-06T10:50:18+00:00",
-      "display_date": "Oct 06, 2026",
-      "category": "AI Business",
-      "description": "Deepseek is close to raising at least $12 billion in a new funding round, Bloomberg reports. The article CATL and Tencent back Deepseek's ballooning funding round as the AI startup eyes a 2027 IPO appeared first on The Decoder .",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
       }
     },
     {
@@ -301,20 +346,6 @@
       "archive_url": "news/2026/10/05/wikipedia-operator-says-openai-s-rogue-bots-may-be-linked-to-a-may-outage.html"
     },
     {
-      "title": "OpenAI will start watermarking ChatGPT’s text in the EU",
-      "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-05T20:36:48+00:00",
-      "display_date": "Oct 05, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI will watermark ChatGPT and Codex text in the EU to comply with the AI Act. Editing can make the invisible marks harder to detect, it says.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "This startup is issuing AI-generated acne prescriptions",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1005075/nolla-health-acne-ai-prescriptions",
       "source": "The Verge AI",
@@ -340,20 +371,6 @@
         "title": "Evaluate Rank Prompt for this workflow",
         "url": "partner-offers/rank-prompt-ai-visibility.html",
         "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "Reflection debuts Beam, an open-weight AI model to rival Chinese models at lower compute cost",
-      "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-05T19:33:53+00:00",
-      "display_date": "Oct 05, 2026",
-      "category": "Models & LLMs",
-      "description": "Reflection is aiming Beam and future models at enterprises and sovereign nations. The pitch is to build “AI factories,” a product that would let institutions build their own customized, local AI system by training Reflection’s AI models on their own proprietary data.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
       }
     },
     {
@@ -491,20 +508,6 @@
       "display_date": "Oct 02, 2026",
       "category": "Models & LLMs",
       "description": "Chatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation from 30 minutes to under 4.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
-      "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
-      "source": "Hugging Face",
-      "published_at": "2026-09-29T13:07:00+00:00",
-      "display_date": "Sep 29, 2026",
-      "category": "AI Tools & Products",
-      "description": "",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
