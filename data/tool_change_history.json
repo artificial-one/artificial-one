@@ -1,10 +1,19 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 68,
+    "successful_checks": 64,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-07",
+      "id": "9412d5bd40ec7671",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://github.com/features/copilot",
+      "tool_id": "github-copilot",
+      "tool_name": "GitHub Copilot"
+    },
     {
       "detected_on": "2026-10-06",
       "id": "b9bd7ef2f0561234",
@@ -547,6 +556,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-06",
+  "updated_at": "2026-10-07",
   "version": 1
 }
