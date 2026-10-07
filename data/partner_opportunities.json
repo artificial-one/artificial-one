@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-10-06",
+  "updated_at": "2026-10-07",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 474,
+    "total": 476,
     "approved_link_pending": 11,
     "existing_active": 38,
     "not_qualified": 14,
     "policy_review_required": 21,
     "program_paused": 1,
-    "ready_for_owner_application": 388,
+    "ready_for_owner_application": 390,
     "terms_required": 1
   },
   "opportunities": [
@@ -178,7 +178,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 28,
+      "review_days": 29,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -1186,11 +1186,11 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 13,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
-      "relationship_status": "application-pending",
+      "relationship_status": "application-denied",
       "terms_required": false,
       "partnership_key": "part_m1TqFlACuwwFpB",
       "score": 85,
@@ -2407,7 +2407,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 81,
+      "review_days": 79,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2573,7 +2573,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2795,7 +2795,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 41,
+      "review_days": 48,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -4652,7 +4652,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 14,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5699,7 +5699,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6414,6 +6414,49 @@
       }
     },
     {
+      "id": "partnerstack:inworldai",
+      "network": "partnerstack",
+      "name": "Inworld AI",
+      "slug": "inworldai",
+      "description": "Inworld is a research lab and inference provider focused on realtime AI for consumer-facing applications. We build first-party speech models, serve the LLMs developers choose, and operate the inference behind modular APIs, so developers of high-volume consumer applications can meet the quality, latency, reliability, and cost bar their users require. Perfect for building Tutors, Companions, Voice agents, Fitness coaches, NPCs, Customer Experience, and more realtime conversational use cases.",
+      "offer": "Earn 20% for every transaction for the first year",
+      "tags": [
+        "Artificial Intelligence"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/inworldai?company=inworldai&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/1QoAoMNkMQQIst6pyXODRVia1rkI55VaY/view?usp=sharing",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 76,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:motion",
       "network": "partnerstack",
       "name": "Motion",
@@ -6440,7 +6483,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 526,
+      "review_days": 521,
       "source": "https://market.partnerstack.com/",
       "score": 76,
       "relevance_matches": [
@@ -9646,7 +9689,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 6,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10010,7 +10053,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10272,7 +10315,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10320,7 +10363,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 61,
+      "review_days": 53,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11763,7 +11806,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12293,7 +12336,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 16,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12513,7 +12556,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 123,
+      "review_days": 121,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12782,7 +12825,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 24,
+      "review_days": 30,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -15883,7 +15926,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16123,7 +16166,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16218,7 +16261,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 85,
+      "review_days": 73,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17242,7 +17285,9 @@
       "offer": "Earn a 25% revenue share on every subscription payment from Shopify merchants you refer.",
       "tags": [
         "Commerce",
-        "Marketing"
+        "E-Commerce",
+        "Marketing",
+        "Shopify integrated"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/fastbundle?company=fastbundle&gref=marketplace",
       "terms_url": "https://fastbundle.co/terms-and-conditions/",
@@ -17258,6 +17303,7 @@
       "score": 63,
       "relevance_matches": [
         "ai",
+        "e-commerce",
         "marketing"
       ],
       "already_active": false,
@@ -17514,7 +17560,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 39,
+      "review_days": 32,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17643,6 +17689,54 @@
           "disclosure_required": false
         },
         "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:taxfyle",
+      "network": "partnerstack",
+      "name": "Taxfyle",
+      "slug": "taxfyle",
+      "description": "Taxfyle is a technology-driven platform connecting people and businesses with licensed tax professionals and bookkeepers for seamless tax prep, filing, advisory, and accounting services.",
+      "offer": "30% commission for every customer purchase in their first year!",
+      "tags": [
+        "Accounting",
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Governance, Risk, & Compliance",
+        "Hot",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/taxfyle?company=taxfyle&gref=marketplace",
+      "terms_url": "https://www.taxfyle.com/policy/affiliate-partner-terms-of-service",
+      "website": "https://www.taxfyle.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 2,
+      "source": "https://market.partnerstack.com/",
+      "score": 63,
+      "relevance_matches": [
+        "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 30
       }
     },
     {
@@ -18006,6 +18100,52 @@
       }
     },
     {
+      "id": "partnerstack:ebillity",
+      "network": "partnerstack",
+      "name": "eBillity",
+      "slug": "ebillity",
+      "description": "eBillity offers flexible time tracking, workforce management and billing software that helps businesses save time, improve accuracy and increase profitability. Teams can track time, manage schedules, streamline payroll, create invoices and gain valuable productivity insights, all in one easy-to-use platform.",
+      "offer": "25% commission on paid monthly or annual subscription with reoccuring revenue for two years. Signup before December 31, 2026 and we will extend the reoccuring revenue to three years!",
+      "tags": [
+        "Collaboration & Productivity",
+        "HR Software",
+        "Office Software",
+        "Payroll"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ebillity?company=ebillity&gref=marketplace",
+      "terms_url": "https://ebillity.com/ebillity-affiliate-partner-agreement/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:flexiquiz",
       "network": "partnerstack",
       "name": "FlexiQuiz",
@@ -18195,7 +18335,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 20,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18957,7 +19097,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "Earn 10% on every referral",
+      "offer": "Earn 15% on every referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -19217,7 +19357,7 @@
       "name": "Bar Codes Talk",
       "slug": "barcodestalk",
       "description": "UPC & EAN Barcode Number & Label Provider.",
-      "offer": "10% earned on first two sales per customer",
+      "offer": "15% earned on first two sales per customer",
       "tags": [
         "Affiliates",
         "Customer Service",
@@ -19434,7 +19574,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 82,
+      "review_days": 104,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19927,14 +20067,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -19965,7 +20105,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20116,7 +20256,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -20382,7 +20522,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 10,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20672,52 +20812,6 @@
       }
     },
     {
-      "id": "partnerstack:taxfyle",
-      "network": "partnerstack",
-      "name": "Taxfyle",
-      "slug": "taxfyle",
-      "description": "Taxfyle is a technology-driven platform connecting people and businesses with licensed tax professionals and bookkeepers for seamless tax prep, filing, advisory, and accounting services.",
-      "offer": "30% commission for every customer purchase in their first year!",
-      "tags": [
-        "Accounting",
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Governance, Risk, & Compliance"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/taxfyle?company=taxfyle&gref=marketplace",
-      "terms_url": "https://www.taxfyle.com/policy/affiliate-partner-terms-of-service",
-      "website": "https://www.taxfyle.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 2,
-      "source": "https://market.partnerstack.com/",
-      "score": 58,
-      "relevance_matches": [
-        "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": 30
-      }
-    },
-    {
       "id": "partnerstack:getstartedtiktok",
       "network": "partnerstack",
       "name": "TikTok for Business",
@@ -20730,6 +20824,7 @@
         "Artificial Intelligence",
         "B2B Marketplaces",
         "Digital Advertising",
+        "Featured",
         "Hot",
         "Influencers",
         "Marketing",
@@ -20999,7 +21094,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 32,
+      "review_days": 31,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21397,7 +21492,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 25,
+      "review_days": 24,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21494,7 +21589,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 31,
+      "review_days": 35,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21587,7 +21682,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 10,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -22299,6 +22394,44 @@
       }
     },
     {
+      "id": "partnerstack:thepointco",
+      "network": "partnerstack",
+      "name": "The Point Co.",
+      "slug": "thepointco",
+      "description": "BUSINESS DEVELOPMENT is what we do. Let's get you signed up and earning money for your referrals.",
+      "offer": "Earn 5% of first year contract value paid quarterly",
+      "tags": [
+        "Marketing",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/thepointco?company=thepointco&gref=marketplace",
+      "terms_url": "https://thepointco.com/privacy-policy/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 54,
+      "relevance_matches": [
+        "development",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:aftrdrk",
       "network": "partnerstack",
       "name": "AFTRDRK",
@@ -22731,43 +22864,6 @@
       }
     },
     {
-      "id": "partnerstack:thepointco",
-      "network": "partnerstack",
-      "name": "The Point Co.",
-      "slug": "thepointco",
-      "description": "BUSINESS DEVELOPMENT is what we do. Let's get you signed up and earning money for your referrals.",
-      "offer": "Earn 5% of first year contract value paid quarterly",
-      "tags": [
-        "Marketing",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/thepointco?company=thepointco&gref=marketplace",
-      "terms_url": "https://thepointco.com/privacy-policy/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": false,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 49,
-      "relevance_matches": [
-        "development",
-        "marketing",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "policy_review_required",
-      "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:gcheck",
       "network": "partnerstack",
       "name": "GCheck",
@@ -22809,7 +22905,7 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -23877,7 +23973,7 @@
       "name": "Guesty",
       "slug": "guesty",
       "description": "With Guesty’s Affiliate Program, you can earn an additional stream of income, with up to 5K per referral Help your network of hospitality pros succeed in growing their businesses with our advanced hospitality operations platform.",
-      "offer": "Earn $100 for a Customer's First Listing",
+      "offer": "$50 for per Listing",
       "tags": [
         "Hot",
         "Trusted"
@@ -23943,7 +24039,7 @@
       "name": "LettrLabs",
       "slug": "lettrlabs",
       "description": "LettrLabs is an automated direct mail platform designed to target, segment, automate and measure results of campaigns. We empower organizations to connect with their clients through personalized, handwritten mailers that leave a lasting impression using automations that make direct mail as easy as digital.",
-      "offer": "Earn 3% for 12 months",
+      "offer": "Earn 4% for 18 months",
       "tags": [],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/lettrlabs?company=lettrlabs&gref=marketplace",
       "terms_url": "https://www.lettrlabs.com/company/terms-of-service",
