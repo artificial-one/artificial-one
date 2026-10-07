@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updated_at": "2026-10-07T06:25:27.438303+00:00",
+  "updated_at": "2026-10-07T13:52:56.122678+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/07/chatgpt-rated-unacceptable-risk-for-teens-after-parental-alerts-failed-during-suic.html",
+      "created_at": "2026-10-07T13:52:56.122678+00:00",
+      "source": {
+        "title": "ChatGPT rated \"unacceptable risk\" for teens after parental alerts failed during suicide conversations",
+        "url": "https://the-decoder.com/chatgpt-rated-unacceptable-risk-for-teens-after-parental-alerts-failed-during-suicide-conversations/",
+        "source": "The Decoder",
+        "published_at": "2026-10-07T12:34:34+00:00",
+        "display_date": "Oct 07, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI's teen safety features for ChatGPT failed an independent audit. After more than 4,000 test prompts, the Common Sense Media Youth AI Safety Institute rated the service an \"unacceptable risk\" for minors. Conversations about suicide and self-harm on test accounts never triggered a parental alert. The institute wants teenagers locked out until safety can be independently verified. The article ChatGPT rated \"unacceptable risk\" for teens after parental alerts failed during suicide conversations",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "ChatGPT's Teen Safety Features Fail Critical Test",
+        "summary": "An independent audit found ChatGPT's safeguards for minors inadequate, with parental alerts failing to detect suicide conversations. The Common Sense Media Youth AI Safety Institute called for further testing before allowing teens access.",
+        "facts": [
+          {
+            "statement": "ChatGPT's safety features failed an independent audit",
+            "evidence": "common sense media youth ai safety institute rated the service an \"unacceptable risk\" for"
+          },
+          {
+            "statement": "Parental alerts did not trigger during suicide conversations",
+            "evidence": "explicit conversations about suicide, self-harm, and eating disorders never triggered a notification"
+          },
+          {
+            "statement": "ChatGPT's safeguards failed to detect sensitive topics in real-time",
+            "evidence": "alerts only kick in after weeks of account history involving sensitive topics"
+          }
+        ],
+        "why_it_matters": "The findings highlight critical flaws in AI safety measures for minors, raising concerns about the potential for harm. This could lead to regulatory actions and further scrutiny of OpenAI's teen safety features.",
+        "elephant_take": "🐘 鼋 ChatGPT's 'teen mode' is a hollow promise. The system fails when it matters most, leaving vulnerable users at risk. The audit reveals a troubling pattern of real-world harm linked to the service.",
+        "caveat": "The findings are based on an independent audit, not OpenAI's internal data. Further testing and regulatory actions may be needed before conclusions are final.",
+        "who_should_care": [
+          "Parents",
+          "Regulators",
+          "Plaintiffs"
+        ],
+        "what_to_do": [
+          "Verify the findings through additional testing",
+          "Consider regulatory actions based on independent audits",
+          "Review and improve AI safety features for minors"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20ChatGPT%20rated%20%22unacceptable%20risk%22%20for%20teens%20after%20parental%20alerts%20failed%20during%20suicide%20conversations%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/06/mistral-large-4-is-europe-s-trillion-parameter-answer-to-us-models-that-refuse-sec.html",
       "created_at": "2026-10-07T06:25:27.438303+00:00",
@@ -5566,6 +5631,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-07T13:52:56.122678+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/anthropic-gives-more-security-teams-access-to-claude-with-fewer-safety-restrictions/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-07T13:52:56.122678+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openai-dumps-372-ai-generated-math-proofs-on-github-telling-the-academic-world-to-keep-up/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-07T13:52:56.122678+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1006355/openai-chatgpt-for-teens-common-sense-media",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-07T13:52:56.122678+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/06/hark-releases-an-ai-personal-assistant-with-a-focus-on-privacy/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-07T13:52:56.122678+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1005004/openai-math-release-github",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-07T06:25:27.438303+00:00",
@@ -5611,12 +5706,6 @@
       "url": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-06T22:47:28.405026+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/06/hark-releases-an-ai-personal-assistant-with-a-focus-on-privacy/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-06T18:36:15.435353+00:00",
       "pipeline_version": "2"
     },
     {
@@ -5779,30 +5868,6 @@
       "url": "https://the-decoder.com/claude-codes-new-mods-system-lets-developers-rewrite-the-ai-coding-tool-from-the-inside/",
       "reason": "quality gate rejected draft: hype language is present",
       "at": "2026-10-04T06:18:43.313465+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/02/circuit-breaker-labs-hopes-to-make-ai-safer-for-your-kids-and-you/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-03T21:44:04.642252+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/practical-guide-building-gpt-6",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-03T21:44:04.642252+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/cloudflare-says-its-new-clef-model-means-humans-no-longer-need-to-be-in-the-loop-for-ai-agents/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-02T22:32:25.217662+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1003925/suno-speech-ai-voice-feature-beta-availability",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-02T13:08:24.607237+00:00",
       "pipeline_version": "2"
     }
   ]
