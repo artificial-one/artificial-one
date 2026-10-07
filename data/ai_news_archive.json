@@ -1,7 +1,205 @@
 {
   "version": 1,
-  "updated_at": "2026-10-07T13:52:56.122678+00:00",
+  "updated_at": "2026-10-07T23:18:07.785129+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users.html",
+      "created_at": "2026-10-07T23:18:07.785129+00:00",
+      "source": {
+        "title": "Nous Research confirms it hit $1.5B valuation, launches AI agents for business users",
+        "url": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-07T20:48:45+00:00",
+        "display_date": "Oct 07, 2026",
+        "category": "Research",
+        "description": "The developer of Hermes Agent raised a $90 million Series B.",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Nous Research hits $1.5B valuation, launches AI agents for businesses",
+        "summary": "Nous Research, developer of Hermes Agent, raises $90M Series B at $1.5B valuation, aiming to expand into enterprise with customized AI agents.",
+        "facts": [
+          {
+            "statement": "Nous Research has raised a $90 million Series B at a $1.5 billion valuation",
+            "evidence": "Nous Research confirms it hit $1.5B valuation, launches AI agents for business users"
+          },
+          {
+            "statement": "The new financing brings the three-year-old startup’s total funding to $158 million",
+            "evidence": "The new financing brings the three-year-old startup’s total funding to $158 million"
+          },
+          {
+            "statement": "Hermes Agent has been cloned more than 24 million times, driving roughly 2.5% of global AI token usage",
+            "evidence": "the open source Hermes Agent has been cloned more than 24 million times"
+          }
+        ],
+        "why_it_matters": "The $1.5B valuation highlights the growing interest in AI agents for business applications, with a focus on enterprise solutions and data privacy. This development could signal a shift towards more specialized AI tools tailored for corporate use.",
+        "elephant_take": "🐘 鼋 The $1.5B valuation is a big deal, but it's not clear if Hermes Agent will actually deliver the promised enterprise solutions. The numbers are impressive, but the real test is whether the AI agents can handle complex workflows without compromising data security.",
+        "caveat": "The valuation may be inflated and the claims about AI token usage are estimates.",
+        "who_should_care": [
+          "AI investors",
+          "Enterprise tech leaders",
+          "Startups in AI space",
+          "Data privacy advocates"
+        ],
+        "what_to_do": [
+          "Research the company's track record",
+          "Evaluate the AI agent's capabilities",
+          "Monitor data security practices",
+          "Stay updated on AI trends in enterprise"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Nous%20Research%20confirms%20it%20hit%20%241.5B%20valuation%2C%20launches%20AI%20agents%20for%20business%20users%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/10/07/microsoft-is-giving-copilot-more-control-over-windows-and-your-files.html",
+      "created_at": "2026-10-07T23:18:07.785129+00:00",
+      "source": {
+        "title": "Microsoft is giving Copilot more control over Windows and your files",
+        "url": "https://www.theverge.com/tech/1007113/microsoft-windows-copilot-ai-control-search-hybrid-intelligence",
+        "source": "The Verge AI",
+        "published_at": "2026-10-07T20:26:53+00:00",
+        "display_date": "Oct 07, 2026",
+        "category": "AI Tools & Products",
+        "description": "At today's Windows and Surface event, Microsoft showed off an upgrade to its Copilot AI system that will give it access to local files on your PC and the ability to take actions across the OS. It's part of an idea Microsoft is calling \"Hybrid Intelligence,\" where apps and tools rely on a mix of […]",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Microsoft Expands Copilot's Control Over Windows and Files",
+        "summary": "Microsoft is enhancing Copilot's capabilities with 'Hybrid Intelligence' to access local files and perform actions across Windows, including tax filing demos and new search features.",
+        "facts": [
+          {
+            "statement": "Microsoft is giving Copilot more control over Windows and your files.",
+            "evidence": "Microsoft is giving Copilot more control over Windows and your files"
+          },
+          {
+            "statement": "Copilot can use files on your Windows PC to take actions.",
+            "evidence": "With features powered by ‘Hybrid Intelligence,’ Copilot can use files on your Windows PC to take actions."
+          },
+          {
+            "statement": "Microsoft is introducing a new Windows search experience with quick actions.",
+            "evidence": "The new experience will be available starting this fall on Windows 11 PCs"
+          }
+        ],
+        "why_it_matters": "Microsoft's 'Hybrid Intelligence' initiative aims to enhance Copilot's ability to interact with local files and perform tasks across the OS, potentially improving productivity for users. The new search features could streamline user interactions with their devices.",
+        "elephant_take": "🐘 鼋 Microsoft is trying to make Copilot more useful by letting it access your files and do things like file taxes. But it's still early days, and we'll see if this actually helps users or just adds more complexity.",
+        "caveat": "The implementation of Hybrid Intelligence may raise privacy concerns as Copilot gains more control over local data.",
+        "who_should_care": [
+          "Tech professionals",
+          "Windows users",
+          "AI developers"
+        ],
+        "what_to_do": [
+          "Check out the new Windows search features",
+          "Stay updated on Copilot's improvements",
+          "Consider privacy implications of AI tools"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Microsoft%20is%20giving%20Copilot%20more%20control%20over%20Windows%20and%20your%20files%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11.html",
+      "created_at": "2026-10-07T23:18:07.785129+00:00",
+      "source": {
+        "title": "Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11",
+        "url": "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-07T20:22:37+00:00",
+        "display_date": "Oct 07, 2026",
+        "category": "Models & LLMs",
+        "description": "Microsoft revealed the specs and price for its Surface Laptop Ultra, AI PCs that run on Nvidia chips that are designed to run AI models and agents.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Microsoft Unveils AI-Powered PCs with Windows 11",
+        "summary": "Microsoft has introduced new AI-powered PCs featuring Nvidia chips and a revamped Windows 11, targeting developers and content creators with enhanced performance for AI models and local processing.",
+        "facts": [
+          {
+            "statement": "Microsoft released specs and pricing for its Surface Laptop Ultra AI PCs.",
+            "evidence": "Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11"
+          },
+          {
+            "statement": "The devices are designed to run AI models on-device locally.",
+            "evidence": "This makes it easier to sandbox AI agents, the company says."
+          },
+          {
+            "statement": "Microsoft is offering discounts for users trading in MacBook Pro.",
+            "evidence": "Microsoft is offering up to $1,000 off to people who trade in a MacBook Pro"
+          }
+        ],
+        "why_it_matters": "Microsoft's new AI PCs represent a shift towards on-device AI processing, empowering developers and creators with powerful hardware and a revamped OS. The focus on local AI execution and compatibility with existing tools highlights Microsoft's commitment to shaping the future of AI in computing.",
+        "elephant_take": "🐘 鼋 Microsoft is trying to out-AI Apple with AI-powered PCs, but it's not clear if this will make a dent in the market. The focus on developers and content creators suggests a strategic move to dominate the AI space, but the real test will be how well these machines perform in practice.",
+        "caveat": "The sensitive nature of AI processing and data privacy should be carefully considered when using these devices.",
+        "who_should_care": [
+          "Developers",
+          "Content creators",
+          "AI enthusiasts"
+        ],
+        "what_to_do": [
+          "Evaluate the performance of the new AI PCs for your specific use case.",
+          "Consider the compatibility of the revamped Windows 11 with existing tools and workflows.",
+          "Explore the discount options for trading in older devices.",
+          "Assess the security implications of running AI models on-device."
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Microsoft%20releases%20new%20Nvidia-chip%20AI%20PCs%20with%20revamped%20Windows%2011%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/07/chatgpt-rated-unacceptable-risk-for-teens-after-parental-alerts-failed-during-suic.html",
       "created_at": "2026-10-07T13:52:56.122678+00:00",
@@ -5631,6 +5829,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-07T23:18:07.785129+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/chatgpt-with-gpt-6-ditches-mostly-text-output-for-interactive-ui-with-charts-buttons-and-mini-apps/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-10-07T23:18:07.785129+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-07T23:18:07.785129+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-07T13:52:56.122678+00:00",
@@ -5850,24 +6066,6 @@
       "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
       "at": "2026-10-04T12:50:26.833046+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; Elephant commentary is not specific to this story",
-      "at": "2026-10-04T12:50:26.833046+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/ai-agents-build-3d-scenes-from-photos-but-have-no-idea-if-they-got-it-right/",
-      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
-      "at": "2026-10-04T06:18:43.313465+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/claude-codes-new-mods-system-lets-developers-rewrite-the-ai-coding-tool-from-the-inside/",
-      "reason": "quality gate rejected draft: hype language is present",
-      "at": "2026-10-04T06:18:43.313465+00:00",
       "pipeline_version": "2"
     }
   ]
