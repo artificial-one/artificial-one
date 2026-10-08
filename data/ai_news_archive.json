@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "updated_at": "2026-10-07T23:18:07.785129+00:00",
+  "updated_at": "2026-10-08T06:37:41.531486+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/07/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-o.html",
+      "created_at": "2026-10-08T06:37:41.531486+00:00",
+      "source": {
+        "title": "OpenAI launches Decisions API that reduces complex evaluations to yes, no, or pick one",
+        "url": "https://the-decoder.com/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-one/",
+        "source": "The Decoder",
+        "published_at": "2026-10-07T15:36:39+00:00",
+        "display_date": "Oct 07, 2026",
+        "category": "AI Tools & Products",
+        "description": "OpenAI's new Decisions API classifies text and images about ten times faster than the Responses API, returning yes/no probabilities, category picks, or scale ratings for $0.10 per million input tokens. The company also cut its paid API tiers from five to three. The article OpenAI launches Decisions API that reduces complex evaluations to yes, no, or pick one appeared first on The Decoder .",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "OpenAI's Decisions API Simplifies Complex Evaluations",
+        "summary": "OpenAI introduces a new API that classifies text and images into yes/no responses or predefined categories, offering faster processing and lower costs. The tool is in beta with potential applications in various industries.",
+        "facts": [
+          {
+            "statement": "The Decisions API processes text and images ten times faster than the Responses API.",
+            "evidence": "running about ten times faster than the Responses API"
+          },
+          {
+            "statement": "The API offers three response types: yes/no probabilities, category picks, and scale ratings.",
+            "evidence": "handles three response types: yes/no probabilities, picks from predefined categories, and scale-based ratings"
+          },
+          {
+            "statement": "The API is available in public beta with general availability coming soon.",
+            "evidence": "in public beta now, with general availability coming"
+          }
+        ],
+        "why_it_matters": "OpenAI's new Decisions API represents a significant advancement in AI processing speed and efficiency. By simplifying complex evaluations into binary or category-based responses, the tool could revolutionize industries that rely on rapid decision-making, such as customer service and document classification. Its potential applications and cost-effectiveness make it a noteworthy development in the AI landscape.",
+        "elephant_take": "🐘 🦘 OpenAI's Decisions API is a clever but limited tool that prioritizes speed over nuance. While it's great for binary decisions, its narrow focus might miss the complexity of real-world scenarios. Still, it's a useful addition to the AI toolkit for specific use cases.",
+        "caveat": "The API currently supports only gpt-6-luna and has limited use cases, which could restrict its broader adoption.",
+        "who_should_care": [
+          "AI developers",
+          "Business analysts",
+          "Data scientists"
+        ],
+        "what_to_do": [
+          "Evaluate the API's suitability for your specific decision-making needs",
+          "Test the beta version to assess performance and limitations",
+          "Consider HIPAA compliance if handling sensitive data",
+          "Monitor updates as general availability approaches"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20launches%20Decisions%20API%20that%20reduces%20complex%20evaluations%20to%20yes%2C%20no%2C%20or%20pick%20one%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users.html",
       "created_at": "2026-10-07T23:18:07.785129+00:00",
@@ -5829,6 +5895,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-08T06:37:41.531486+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-08T06:37:41.531486+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/zuckerbergs-biohub-leads-a-1-8-billion-push-to-build-ai-models-that-predict-cell-behavior/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-08T06:37:41.531486+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+      "reason": "quality gate rejected draft: summary length is outside the publication range; hype language is present",
+      "at": "2026-10-08T06:37:41.531486+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/07/meta-rolls-out-new-ai-tools-to-detect-ads-that-secretly-lead-to-child-sexual-abuse-material/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-08T06:37:41.531486+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-07T23:18:07.785129+00:00",
@@ -6036,36 +6132,6 @@
       "url": "https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-04T21:54:34.678619+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-04T21:54:34.678619+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft",
-      "reason": "quality gate rejected draft: headline length is outside the publication range",
-      "at": "2026-10-04T21:54:34.678619+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/apparently-openai-isnt-trying-to-build-magic-intelligence-in-the-sky-anymore/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-04T21:54:34.678619+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
-      "at": "2026-10-04T12:50:26.833046+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
-      "at": "2026-10-04T12:50:26.833046+00:00",
       "pipeline_version": "2"
     }
   ]
