@@ -1,10 +1,37 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 64,
+    "successful_checks": 57,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-08",
+      "id": "e9fffda11459ed82",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://kittl.com",
+      "tool_id": "kittl",
+      "tool_name": "Kittl"
+    },
+    {
+      "detected_on": "2026-10-08",
+      "id": "1e26480a77cfdbaa",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://postly.ai",
+      "tool_id": "postly",
+      "tool_name": "Postly"
+    },
+    {
+      "detected_on": "2026-10-08",
+      "id": "3a3bfc67c6e8ca67",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://playgroundai.com",
+      "tool_id": "playground-ai",
+      "tool_name": "Playground AI"
+    },
     {
       "detected_on": "2026-10-07",
       "id": "9412d5bd40ec7671",
@@ -556,6 +583,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-07",
+  "updated_at": "2026-10-08",
   "version": 1
 }
