@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-07",
+  "updated_at": "2026-10-08",
   "contract": {
     "states": [
       "inactive",
@@ -14,10 +14,10 @@
     "future_sources": "Any connector represented in partner_opportunities.json is reconciled automatically."
   },
   "summary": {
-    "total": 724,
+    "total": 722,
     "active_link_pending": 7,
     "inactive": 1,
-    "pending": 425,
+    "pending": 423,
     "published": 290,
     "terms_required": 1,
     "blocking_failures": 0,
@@ -37,10 +37,10 @@
       "published": 248
     },
     "partnerstack": {
-      "total": 421,
+      "total": 419,
       "active_link_pending": 7,
       "inactive": 1,
-      "pending": 377,
+      "pending": 375,
       "published": 35,
       "terms_required": 1
     }
