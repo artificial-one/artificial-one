@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updated_at": "2026-10-08T06:37:41.531486+00:00",
+  "updated_at": "2026-10-08T14:00:37.764673+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/08/ai-math-breakthroughs-have-ethereum-researchers-debating-how-fast-wallet-security.html",
+      "created_at": "2026-10-08T14:00:37.764673+00:00",
+      "source": {
+        "title": "AI math breakthroughs have Ethereum researchers debating how fast wallet security could collapse",
+        "url": "https://the-decoder.com/ai-math-breakthroughs-have-ethereum-researchers-debating-how-fast-wallet-security-could-collapse/",
+        "source": "The Decoder",
+        "published_at": "2026-10-08T13:52:54+00:00",
+        "display_date": "Oct 08, 2026",
+        "category": "Research",
+        "description": "Ethereum researcher Justin Drake is urging the crypto industry to prepare a \"bunker mode\" for a scenario where AI-powered math could break wallet signature schemes within months. Vitalik Buterin broadly agrees but warns against rushed migrations, saying he's personally lost more money to botched transitions than to hacks. So far, no one has actually broken ECDSA in practice. The article AI math breakthroughs have Ethereum researchers debating how fast wallet security could collapse appeared firs",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "AI Math Breakthroughs Spark Debate on Ethereum Wallet Security",
+        "summary": "Ethereum researchers warn that AI-assisted math could compromise wallet security within months, prompting calls for 'bunker mode' and cautious migrations.",
+        "facts": [
+          {
+            "statement": "Ethereum researchers are debating the potential collapse of wallet security due to AI-powered math breakthroughs",
+            "evidence": "AI math breakthroughs have Ethereum researchers debating how fast wallet security could collapse"
+          },
+          {
+            "statement": "Justin Drake urges the crypto industry to prepare for a 'bunker mode' in case AI breaks wallet signature schemes",
+            "evidence": "ethereum researcher justin drake is urging the crypto industry to prepare a"
+          },
+          {
+            "statement": "Vitalik Buterin warns against rushed migrations, citing past losses from botched transitions",
+            "evidence": "He said he's lost more money to botched migrations than to hacks"
+          }
+        ],
+        "why_it_matters": "The potential for AI to break Ethereum wallet security raises urgent concerns about the future of cryptocurrency safety. Researchers are calling for proactive measures, but caution is needed to avoid further financial losses from rushed transitions.",
+        "elephant_take": "🐘 🦘 The crypto world is on edge as AI math could undermine wallet security, but experts warn against panic. Bunker mode is a precaution, not a solution, and past mistakes highlight the need for careful planning.",
+        "caveat": "No real-world breaches have occurred yet, so the threat remains theoretical but significant.",
+        "who_should_care": [
+          "Crypto investors",
+          "Blockchain developers",
+          "Security experts"
+        ],
+        "what_to_do": [
+          "Monitor AI research developments",
+          "Stay informed about wallet security updates",
+          "Consult with experts before migrating funds"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20AI%20math%20breakthroughs%20have%20Ethereum%20researchers%20debating%20how%20fast%20wallet%20security%20could%20collapse%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "path": "news/2026/10/07/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-o.html",
       "created_at": "2026-10-08T06:37:41.531486+00:00",
@@ -5895,6 +5960,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/podcast/1007408/meta-muse-openai-dots-ai-agent-race-privacy-free",
+      "reason": "quality gate rejected draft: summary length is outside the publication range; Elephant commentary is not specific to this story",
+      "at": "2026-10-08T14:00:37.764673+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1007132/icann-domains-2026-ai-agi",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-08T14:00:37.764673+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/a-single-prompt-was-enough-to-hijack-every-ai-agent-in-an-aws-account-zenity-researchers-found/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-08T14:00:37.764673+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/teens-ai-guided-mountain-hike-ends-with-a-helicopter-rescue-and-a-lesson-in-common-sense/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-08T14:00:37.764673+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/ai-powered-hacking-tools-enabled-a-likely-single-attacker-to-breach-multiple-south-korean-banks/",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-10-08T14:00:37.764673+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-08T06:37:41.531486+00:00",
@@ -6102,36 +6197,6 @@
       "url": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; Elephant commentary is not specific to this story",
       "at": "2026-10-05T06:11:42.458245+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-05T06:11:42.458245+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-05T06:11:42.458245+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-05T06:11:42.458245+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-04T21:54:34.678619+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-04T21:54:34.678619+00:00",
       "pipeline_version": "2"
     }
   ]
