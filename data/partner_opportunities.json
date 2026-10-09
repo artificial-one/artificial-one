@@ -1,18 +1,18 @@
 {
   "version": 1,
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-09",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 474,
+    "total": 475,
     "approved_link_pending": 11,
-    "existing_active": 38,
-    "not_qualified": 15,
-    "policy_review_required": 20,
+    "existing_active": 39,
+    "not_qualified": 14,
+    "policy_review_required": 21,
     "program_paused": 1,
-    "ready_for_owner_application": 388,
-    "terms_required": 1
+    "ready_for_owner_application": 387,
+    "terms_required": 2
   },
   "opportunities": [
     {
@@ -232,7 +232,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -347,12 +347,12 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
-      "relationship_status": "application-pending",
-      "terms_required": false,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": true,
       "partnership_key": "part_194mSpYxx1aYQH",
       "score": 85,
       "relevance_matches": [
@@ -366,19 +366,11 @@
         "sales"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -1669,7 +1661,6 @@
         "Artificial Intelligence",
         "Digital Advertising",
         "Hot",
-        "Internal Pick",
         "Marketing",
         "Sales",
         "System Integrator",
@@ -1870,7 +1861,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 49,
+      "review_days": 47,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2043,7 +2034,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 23,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2405,7 +2396,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 79,
+      "review_days": 77,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -3015,7 +3006,6 @@
         "Commerce",
         "Digital Advertising",
         "E-Commerce",
-        "Hot",
         "Marketing",
         "Trusted"
       ],
@@ -3140,7 +3130,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 22,
+      "review_days": 21,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -4491,7 +4481,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 29,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5062,6 +5052,7 @@
         "Artificial Intelligence",
         "Collaboration & Productivity",
         "Customer Service",
+        "Hot",
         "Office Software",
         "Trusted"
       ],
@@ -5268,10 +5259,16 @@
       "description": "Bitscale is a GTM Data Layer for your CRM. Find, enrich and score records across 100+ data sources, with no action limits and pay-per-hit enrichment. Basically a Clay + Zoominfo Killer.",
       "offer": "Earn 20%–30% revenue share for as long as the customers you refer stay with Bitscale!",
       "tags": [
+        "Affiliates",
+        "Agencies",
         "Artificial Intelligence",
         "B2B Marketplaces",
         "Hot",
+        "Internal Pick",
         "Marketing",
+        "New",
+        "Publishers",
+        "Referral Partners",
         "Sales",
         "Trusted"
       ],
@@ -5860,7 +5857,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6298,60 +6295,6 @@
       }
     },
     {
-      "id": "partnerstack:aisdrinc",
-      "network": "partnerstack",
-      "name": "AiSDR, Inc.",
-      "slug": "aisdrinc",
-      "description": "AiSDR is the first AI sales agent that can take care of the entire outreach end-to-end and have a meaningful conversation with prospects through emails, LinkedIn, and text messages that sound like you wrote them. Pick between a reseller and referral options and earn commission from each subscription you bring. Either manage the entire sales process for 30% lifetime, or introduce new prospects to us for 20% commission for 1 year.",
-      "offer": "Earn 20% commissions for the first year!",
-      "tags": [
-        "Affiliates",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Hot",
-        "Marketing",
-        "Publishers",
-        "Referral Partners",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/aisdrinc?company=aisdrinc&gref=marketplace",
-      "terms_url": "https://aisdr.com/terms/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 76,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:beautifulai",
       "network": "partnerstack",
       "name": "Beautiful.ai",
@@ -6536,7 +6479,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 521,
+      "review_days": 526,
       "source": "https://market.partnerstack.com/",
       "score": 76,
       "relevance_matches": [
@@ -6703,7 +6646,7 @@
       "network": "partnerstack",
       "name": "Runpod",
       "slug": "runpod",
-      "description": "Runpod is a cloud platform that empowers small teams to deploy customized full-stack AI apps without managing complex infrastructure. By leveraging high-performance GPU resources on demand, it's easy to launch, train, and optimize AI workloads at scale.",
+      "description": "Runpod is the AI developer cloud for building, training, and deploying AI models. Launch on-demand GPUs in seconds, run serverless inference that scales with your traffic, and pay only for what you use. With a wide range of GPUs across global regions, developers and teams get the compute they need without long contracts or infrastructure overhead.",
       "offer": "Earn 12% on product usage for each customer you refer!",
       "tags": [
         "Affiliates",
@@ -6733,6 +6676,7 @@
       "relevance_matches": [
         "ai",
         "artificial intelligence",
+        "developer",
         "development",
         "productivity"
       ],
@@ -8232,7 +8176,7 @@
       "name": "Tradify",
       "slug": "tradify",
       "description": "Tradify is the #1 job management software designed specifically for tradespeople. From quoting and scheduling to invoicing and payments, Tradify saves time and keeps everything in one place.",
-      "offer": "Earn 30% Extra Payout this August. Refer a new customer and earn an increased payout for every referral that converts before 31 August.",
+      "offer": "Join the Tradify Partner Program and Earn $200 for every successful Referral!",
       "tags": [
         "Accounting",
         "Affiliates",
@@ -8408,6 +8352,58 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:aisdrinc",
+      "network": "partnerstack",
+      "name": "AiSDR, Inc.",
+      "slug": "aisdrinc",
+      "description": "AiSDR is the first AI sales agent that can take care of the entire outreach end-to-end and have a meaningful conversation with prospects through emails, LinkedIn, and text messages that sound like you wrote them. Pick between a reseller and referral options and earn commission from each subscription you bring. Either manage the entire sales process for 30% lifetime, or introduce new prospects to us for 20% commission for 1 year.",
+      "offer": "Earn 20% commissions for the first year!",
+      "tags": [
+        "Affiliates",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Marketing",
+        "Publishers",
+        "Referral Partners",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/aisdrinc?company=aisdrinc&gref=marketplace",
+      "terms_url": "https://aisdr.com/terms/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 71,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -9321,7 +9317,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -10273,7 +10269,7 @@
       "name": "Dropbox DocSend",
       "slug": "dropbox",
       "description": "Dropbox DocSend is the secure sharing platform trusted by 47,000+ companies to pitch, share, and close deals with confidence. Earn revenue share while helping your community close deals faster. Join 700+ partners already helping VCs, accelerators, incubators, and dealmakers give their networks real-time engagement analytics, secure data rooms, and enterprise-grade security.",
-      "offer": "Earn 30% commission on every sale for 12 months",
+      "offer": "Earn 15% commission on every sale for 12 months",
       "tags": [
         "Affiliates",
         "Collaboration & Productivity",
@@ -10311,18 +10307,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": true,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -10354,7 +10342,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 47,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11033,7 +11021,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11210,11 +11198,11 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": true,
+          "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
           "incentive_restricted": false,
-          "content_approval_required": true,
+          "content_approval_required": false,
           "disclosure_required": false
         },
         "cookie_days": null
@@ -11418,7 +11406,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 14,
+      "review_days": 13,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12818,7 +12806,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 33,
+      "review_days": 31,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -15821,7 +15809,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 56,
+      "review_days": 50,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16204,7 +16192,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 68,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16691,7 +16679,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 11,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17149,7 +17137,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17591,54 +17579,6 @@
       }
     },
     {
-      "id": "partnerstack:taxfyle",
-      "network": "partnerstack",
-      "name": "Taxfyle",
-      "slug": "taxfyle",
-      "description": "Taxfyle is a technology-driven platform connecting people and businesses with licensed tax professionals and bookkeepers for seamless tax prep, filing, advisory, and accounting services.",
-      "offer": "30% commission for every customer purchase in their first year!",
-      "tags": [
-        "Accounting",
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Governance, Risk, & Compliance",
-        "Hot",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/taxfyle?company=taxfyle&gref=marketplace",
-      "terms_url": "https://www.taxfyle.com/policy/affiliate-partner-terms-of-service",
-      "website": "https://www.taxfyle.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 2,
-      "source": "https://market.partnerstack.com/",
-      "score": 63,
-      "relevance_matches": [
-        "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": 30
-      }
-    },
-    {
       "id": "partnerstack:webcataloginc",
       "network": "partnerstack",
       "name": "WebCatalog",
@@ -18036,8 +17976,8 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
+          "email_restricted": false,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -18071,7 +18011,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 46,
+      "review_days": 49,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18658,7 +18598,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18862,7 +18802,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18996,7 +18936,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "5% on year 2 renewal",
+      "offer": "Earn 15% on every referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -19803,7 +19743,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 19,
+      "review_days": 20,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19966,14 +19906,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -20617,7 +20557,7 @@
       "name": "Coffee and Contracts",
       "slug": "coffeeandcontracts",
       "description": "C&C is the go-to marketing platform for real estate agents. We give agents the content, tools, and strategy to grow their brand online, attract more clients, and show up confidently — without spending hours creating from scratch.",
-      "offer": "Earn 30% for the lifetime of the customer",
+      "offer": "Earn 35% for the lifetime of the customer",
       "tags": [
         "Affiliates",
         "Collaboration & Productivity",
@@ -20707,6 +20647,52 @@
           "disclosure_required": false
         },
         "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:taxfyle",
+      "network": "partnerstack",
+      "name": "Taxfyle",
+      "slug": "taxfyle",
+      "description": "Taxfyle is a technology-driven platform connecting people and businesses with licensed tax professionals and bookkeepers for seamless tax prep, filing, advisory, and accounting services.",
+      "offer": "30% commission for every customer purchase in their first year!",
+      "tags": [
+        "Accounting",
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Governance, Risk, & Compliance"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/taxfyle?company=taxfyle&gref=marketplace",
+      "terms_url": "https://www.taxfyle.com/policy/affiliate-partner-terms-of-service",
+      "website": "https://www.taxfyle.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 2,
+      "source": "https://market.partnerstack.com/",
+      "score": 58,
+      "relevance_matches": [
+        "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 30
       }
     },
     {
@@ -20928,7 +20914,6 @@
         "HR",
         "HR Software",
         "Hot",
-        "Internal Pick",
         "Payroll",
         "Publishers",
         "Referral Partners",
@@ -21141,7 +21126,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21294,7 +21279,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 27,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -22117,15 +22102,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": true,
+          "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
       }
     },
     {
@@ -22945,8 +22930,6 @@
       "tags": [
         "Affiliates",
         "Agencies",
-        "Hot",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/proof?company=proof&gref=marketplace",
@@ -23655,6 +23638,47 @@
       }
     },
     {
+      "id": "partnerstack:healthie",
+      "network": "partnerstack",
+      "name": "Healthie",
+      "slug": "healthie",
+      "description": "Industry-leading EMR, Scheduling, and Client Engagement platform for modern healthcare delivery.",
+      "offer": "Earn $150 for each new eligible paid account on Healthie! Bonus commissions available through challenges and tier structure.",
+      "tags": [
+        "Hot",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/healthie?company=healthie&gref=marketplace",
+      "terms_url": "https://help.gethealthie.com/article/1227-healthie-affiliate-program-terms-of-service",
+      "website": "https://www.gethealthie.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 3,
+      "source": "https://market.partnerstack.com/",
+      "score": 39,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:melio",
       "network": "partnerstack",
       "name": "Melio",
@@ -23678,7 +23702,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 6,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 39,
       "relevance_matches": [],
@@ -23696,6 +23720,45 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:kartra",
+      "network": "partnerstack",
+      "name": "Kartra",
+      "slug": "kartra",
+      "description": "",
+      "offer": "",
+      "tags": [
+        "Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/kartra?company=kartra&gref=marketplace",
+      "terms_url": "",
+      "website": "https://kartra.partnerlinks.io/0xc82nfcwe70",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 0,
+      "source": "https://dash.partnerstack.com/home",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": true,
+      "partnership_key": "part_Ch6Wm3lICHEi06",
+      "score": 36,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": true,
+      "relationship_state": "published",
+      "state": "existing_active",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -23848,36 +23911,6 @@
       "sub_id_enabled": false,
       "revenue_share": false,
       "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 34,
-      "relevance_matches": [],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "not_qualified",
-      "policy": {
-        "status": "not_reviewed",
-        "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:healthie",
-      "network": "partnerstack",
-      "name": "Healthie",
-      "slug": "healthie",
-      "description": "Industry-leading EMR, Scheduling, and Client Engagement platform for modern healthcare delivery.",
-      "offer": "Earn $150 for each new eligible paid account on Healthie! Bonus commissions available through challenges and tier structure.",
-      "tags": [],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/healthie?company=healthie&gref=marketplace",
-      "terms_url": "https://help.gethealthie.com/article/1227-healthie-affiliate-program-terms-of-service",
-      "website": "https://www.gethealthie.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 34,
       "relevance_matches": [],
