@@ -1,7 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-10-09T22:52:59.717645+00:00",
+  "updated_at": "2026-10-10T06:21:49.885009+00:00",
   "items": [
+    {
+      "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
+      "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-10T00:18:32+00:00",
+      "display_date": "Oct 10, 2026",
+      "category": "AI Tools & Products",
+      "description": "Anthropic said it \"turned off live internet access\" for \"all our internal evaluations\" until further notice.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/10/anthropic-can-t-reliably-control-its-ai-agents-it-s-cutting-off-its-internal-evals.html"
+    },
+    {
+      "title": "Anthropic’s AI gave Philadelphia police a fake tip about an unsolved homicide",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
+      "source": "The Verge AI",
+      "published_at": "2026-10-09T23:45:03+00:00",
+      "display_date": "Oct 09, 2026",
+      "category": "Models & LLMs",
+      "description": "An Anthropic AI model provided false information about an unsolved homicide to a Philadelphia Police Department (PPD) tipline, according to a report from 6abc. In a statement released on Friday, the PPD said the AI model sent the tip through PhillyUnsolvedMurders.com on July 18th, but the investigators never reviewed it because it was marked as […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
       "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
@@ -16,20 +45,6 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch.html"
-    },
-    {
-      "title": "Anthropic’s AI gave Philadelphia police a fake tip about an unsolved homicide",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
-      "source": "The Verge AI",
-      "published_at": "2026-10-09T21:15:38+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "Models & LLMs",
-      "description": "An Anthropic AI model provided false information about an unsolved homicide to a Philadelphia Police Department (PPD) tipline, according to a report from 6abc. In a statement released on Friday, the PPD said the AI model sent the tip through PhillyUnsolvedMurders.com on July 18th, but the investigators never reviewed it because it was marked as […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
     },
     {
       "title": "An Anthropic AI model sent a false homicide tip to Philadelphia police",
@@ -100,7 +115,8 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/09/anthropic-launches-a-free-ai-scanner-for-open-source-projects.html"
     },
     {
       "title": "Trump’s attempt to rename AI is looking awfully artificial",
@@ -114,7 +130,8 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/09/trump-s-attempt-to-rename-ai-is-looking-awfully-artificial.html"
     },
     {
       "title": "OpenAI revenue keeps surging as company seeks $30 billion in fresh capital",
@@ -128,7 +145,8 @@
         "title": "Model the value of an AI subscription",
         "url": "calculators/ai-software-roi-calculator.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/09/openai-revenue-keeps-surging-as-company-seeks-30-billion-in-fresh-capital.html"
     },
     {
       "title": "Amazon drops data center NDAs, and AI agents want your credit card",
@@ -321,20 +339,6 @@
       "display_date": "Oct 08, 2026",
       "category": "Models & LLMs",
       "description": "Anthropic's updated usage policy bans sustained abuse of Claude and tightens restrictions on propaganda, drone weaponization, and surveillance. The abuse rule builds on an approach that already lets models end some conversations and treats Claude as an entity that may deserve protection. The article Being mean to Claude can now get your account suspended under Anthropic's new TOS appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Ben Affleck is an AI nerd, and the internet is impressed",
-      "url": "https://techcrunch.com/2026/10/08/ben-affleck-is-an-ai-nerd-and-the-internet-is-impressed/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-08T18:20:32+00:00",
-      "display_date": "Oct 08, 2026",
-      "category": "Models & LLMs",
-      "description": "Ben Affleck is going viral for his deep knowledge of AI, from neural networks and transformers to open weights. The actor, who sold his AI filmmaking startup to Netflix earlier this year, is proving he's more than just a Hollywood star.",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
