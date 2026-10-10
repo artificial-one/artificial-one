@@ -1,10 +1,46 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 66,
+    "successful_checks": 63,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-10",
+      "id": "2c83a59a9738960b",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://turbotic.com/",
+      "tool_id": "turbotic",
+      "tool_name": "Turbotic"
+    },
+    {
+      "detected_on": "2026-10-10",
+      "id": "086f1d2619e1f92d",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://wave.video",
+      "tool_id": "wave-video",
+      "tool_name": "Wave.video"
+    },
+    {
+      "detected_on": "2026-10-10",
+      "id": "5c399c96a61efcac",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://alteryx.com",
+      "tool_id": "alteryx-ai",
+      "tool_name": "Alteryx AI"
+    },
+    {
+      "detected_on": "2026-10-10",
+      "id": "f0ff18c15f35b6e5",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://clickup.com",
+      "tool_id": "clickup-ai",
+      "tool_name": "ClickUp AI"
+    },
     {
       "detected_on": "2026-10-09",
       "id": "c1a1c899a384ee5e",
@@ -619,6 +655,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-09",
+  "updated_at": "2026-10-10",
   "version": 1
 }
