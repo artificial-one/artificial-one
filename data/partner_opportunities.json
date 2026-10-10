@@ -1,18 +1,18 @@
 {
   "version": 1,
-  "updated_at": "2026-10-09",
+  "updated_at": "2026-10-10",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 475,
+    "total": 476,
     "approved_link_pending": 11,
     "existing_active": 39,
     "not_qualified": 14,
     "policy_review_required": 21,
     "program_paused": 1,
     "ready_for_owner_application": 387,
-    "terms_required": 2
+    "terms_required": 3
   },
   "opportunities": [
     {
@@ -2141,12 +2141,12 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
-      "relationship_status": "application-pending",
-      "terms_required": false,
+      "relationship_status": "tos-acceptance-pending",
+      "terms_required": true,
       "partnership_key": "part_SQa0JlB7iXFzgv",
       "score": 85,
       "relevance_matches": [
@@ -2157,10 +2157,10 @@
         "software"
       ],
       "already_active": false,
-      "relationship_state": "pending",
-      "state": "policy_review_required",
+      "relationship_state": "terms_required",
+      "state": "terms_required",
       "policy": {
-        "status": "unreachable",
+        "status": "not_reviewed",
         "signals": {},
         "cookie_days": null
       }
@@ -2479,56 +2479,6 @@
       }
     },
     {
-      "id": "partnerstack:rebolt",
-      "network": "partnerstack",
-      "name": "Rebolt",
-      "slug": "rebolt",
-      "description": "Rebolt is the all-in-one marketing platform for home service businesses, offering SEO-optimized websites, social media management, and AI-powered content creation.",
-      "offer": "20% revenue share for the first year",
-      "tags": [
-        "Artificial Intelligence",
-        "Digital Advertising",
-        "Marketing",
-        "Other",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/rebolt?company=rebolt&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/1Qxnwt4LERDpR6D5XqxZVJey1tR5jZvcf/edit",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 85,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "content",
-        "marketing",
-        "seo"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:reply",
       "network": "partnerstack",
       "name": "Reply.io",
@@ -2620,7 +2570,7 @@
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
-      "relationship_status": "application-denied",
+      "relationship_status": "removed",
       "terms_required": false,
       "partnership_key": "part_iWpnHzRY97D340",
       "score": 85,
@@ -2784,7 +2734,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 70,
+      "review_days": 51,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -3874,58 +3824,6 @@
       }
     },
     {
-      "id": "partnerstack:quil",
-      "network": "partnerstack",
-      "name": "CoRecruit (formerly Quil)",
-      "slug": "quil",
-      "description": "CoRecruit is the #1 AI assistant for recruitment agencies. Automate your interview notes, ATS updates, and AI-generated candidate submittals. CoRecruit captures the nuance of every conversation, whether it happens over a cell phone call, VoIP, video conference, or in-person. Firms using CoRecruit report faster time-to-fill, searchable, complete, and up-to-date ATS data, and a time savings of 8+ hours per week.",
-      "offer": "Earn $100 for every successful CoRecruit referral!",
-      "tags": [
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "HR Software",
-        "Hot",
-        "Office Software",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/quil?company=quil&gref=marketplace",
-      "terms_url": "https://corecruit.com/legal/terms-of-service",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 81,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "data",
-        "productivity",
-        "software",
-        "video"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:expertiseai",
       "network": "partnerstack",
       "name": "Expertise AI",
@@ -4865,6 +4763,55 @@
       }
     },
     {
+      "id": "partnerstack:rebolt",
+      "network": "partnerstack",
+      "name": "Rebolt",
+      "slug": "rebolt",
+      "description": "Rebolt is the all-in-one marketing platform for home service businesses, offering SEO-optimized websites, social media management, and AI-powered content creation.",
+      "offer": "20% revenue share for the first year",
+      "tags": [
+        "Artificial Intelligence",
+        "Digital Advertising",
+        "Marketing",
+        "Other"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/rebolt?company=rebolt&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/1Qxnwt4LERDpR6D5XqxZVJey1tR5jZvcf/edit",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "content",
+        "marketing",
+        "seo"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:reclaim",
       "network": "partnerstack",
       "name": "Reclaim.ai",
@@ -4897,7 +4844,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 24,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -4981,59 +4928,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:shade",
-      "network": "partnerstack",
-      "name": "Shade",
-      "slug": "shade",
-      "description": "Shade is an intelligent cloud storage platform that transforms post-production workflows. It consolidates file streaming, review and approval, automated metadata, AI search all in one platform.",
-      "offer": "Earn 10% commission on all first year revenue (ACV $25,000/customer)",
-      "tags": [
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Design",
-        "Digital Advertising",
-        "Hot",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shade?company=shade&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/18dg3qEU0Uw2pqGQQKw_W1tL0molNftUk/edit?usp=sharing&ouid=116868290743095582619&rtpof=true&sd=true",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 8,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "design",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -6410,6 +6304,56 @@
       }
     },
     {
+      "id": "partnerstack:quil",
+      "network": "partnerstack",
+      "name": "CoRecruit (formerly Quil)",
+      "slug": "quil",
+      "description": "CoRecruit is the #1 AI assistant for recruitment agencies. Automate your interview notes, ATS updates, and AI-generated candidate submittals. CoRecruit captures the nuance of every conversation, whether it happens over a cell phone call, VoIP, video conference, or in-person. Firms using CoRecruit report faster time-to-fill, searchable, complete, and up-to-date ATS data, and a time savings of 8+ hours per week.",
+      "offer": "Earn $100 for every successful CoRecruit referral!",
+      "tags": [
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "HR Software",
+        "Office Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/quil?company=quil&gref=marketplace",
+      "terms_url": "https://corecruit.com/legal/terms-of-service",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 76,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "data",
+        "productivity",
+        "software",
+        "video"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:inworldai",
       "network": "partnerstack",
       "name": "Inworld AI",
@@ -6930,7 +6874,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 75,
       "relevance_matches": [
@@ -7036,6 +6980,57 @@
         "ai",
         "artificial intelligence",
         "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:shade",
+      "network": "partnerstack",
+      "name": "Shade",
+      "slug": "shade",
+      "description": "Shade is an intelligent cloud storage platform that transforms post-production workflows. It consolidates file streaming, review and approval, automated metadata, AI search all in one platform.",
+      "offer": "Earn 10% commission on all first year revenue (ACV $25,000/customer)",
+      "tags": [
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Design",
+        "Digital Advertising",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shade?company=shade&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/18dg3qEU0Uw2pqGQQKw_W1tL0molNftUk/edit?usp=sharing&ouid=116868290743095582619&rtpof=true&sd=true",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 8,
+      "source": "https://market.partnerstack.com/",
+      "score": 75,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "design",
+        "productivity",
+        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -10508,7 +10503,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10903,13 +10898,11 @@
         "Collaboration & Productivity",
         "E-Commerce",
         "ERP",
-        "Hot",
         "Hubspot integrated",
         "Publishers",
         "Referral Partners",
         "Salesforce integrated",
         "Supply Chain & Logistics",
-        "Trusted",
         "Vertical Industry Software",
         "hot"
       ],
@@ -12537,7 +12530,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 123,
+      "review_days": 121,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -16226,9 +16219,11 @@
       "tags": [
         "Affiliates",
         "Customer Service",
+        "Hot",
         "IT Management",
         "Office Software",
         "Publishers",
+        "Trusted",
         "Vertical Industry Software",
         "hot"
       ],
@@ -16768,7 +16763,7 @@
         "Vertical Industry Software"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/recostseg?company=recostseg&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1JDew0znD3u6LL2Ma7sCg2GaYhMYTaBgt/view?usp=drive_link",
+      "terms_url": "https://drive.google.com/file/d/18wE6sTsv0qvU1t_NimWUBP5CARm-N_UP/view?usp=drive_link",
       "website": "https://www.recostseg.com/",
       "waitlist": false,
       "archived": false,
@@ -16785,18 +16780,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -17238,7 +17225,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17554,7 +17541,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 4,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17976,8 +17963,8 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -18525,11 +18512,9 @@
         "Development",
         "Digital Advertising",
         "Hosting Providers",
-        "Hot",
         "Marketing",
         "Publishers",
         "Shopify integrated",
-        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/pagecloud?company=pagecloud&gref=marketplace",
@@ -18561,7 +18546,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -18701,7 +18686,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18936,7 +18921,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "Earn 15% on every referral",
+      "offer": "Earn 10% on every referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -19288,7 +19273,7 @@
       "network": "awin",
       "name": "brkox",
       "slug": "brkox",
-      "description": "BRKOX creates premium display frames and cases for LEGO® collectors, helping enthusiasts turn their builds into stunning home displays.",
+      "description": "BRKOX offers LED light kits compatible with LEGO® sets, plus display frames and cases. Help US collectors light up their builds with set-specific accessories.",
       "offer": "Joined Awin advertiser programme.",
       "tags": [
         "Software"
@@ -19906,14 +19891,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": true,
-          "coupon_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 180
+        "cookie_days": null
       }
     },
     {
@@ -19944,7 +19929,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20044,7 +20029,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 18,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20171,7 +20156,7 @@
       "name": "ShipBob",
       "slug": "shipbobinc",
       "description": "End-to-end order fulfillment platform for ecommerce brands.",
-      "offer": "Earn $250 as a signup bonus",
+      "offer": "Earn $1000 for an SMB referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -20388,6 +20373,51 @@
       }
     },
     {
+      "id": "partnerstack:teachableinc",
+      "network": "partnerstack",
+      "name": "Teachable",
+      "slug": "teachableinc",
+      "description": "It pays to partner with Teachable. Refer creators to Teachable and earn 30% commission by joining our partner program.",
+      "offer": "Earn 30% recurring commission by referring creators, coaches, and entrepreneurs to Teachable.",
+      "tags": [
+        "Hot",
+        "Marketing",
+        "New",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/teachableinc?company=teachableinc&gref=marketplace",
+      "terms_url": "",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 2,
+      "source": "https://market.partnerstack.com/",
+      "score": 59,
+      "relevance_matches": [
+        "marketing"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:toggl",
       "network": "partnerstack",
       "name": "Toggl",
@@ -20557,7 +20587,7 @@
       "name": "Coffee and Contracts",
       "slug": "coffeeandcontracts",
       "description": "C&C is the go-to marketing platform for real estate agents. We give agents the content, tools, and strategy to grow their brand online, attract more clients, and show up confidently — without spending hours creating from scratch.",
-      "offer": "Earn 35% for the lifetime of the customer",
+      "offer": "Earn 30% for the lifetime of the customer",
       "tags": [
         "Affiliates",
         "Collaboration & Productivity",
@@ -20804,58 +20834,6 @@
       }
     },
     {
-      "id": "partnerstack:coast361",
-      "network": "partnerstack",
-      "name": "Coast",
-      "slug": "coast361",
-      "description": "Coast is a smart fuel card and expense management built on the Visa network. Drivers can fill up anywhere their Visa is accepted and pay for parking, tolls, maintenance, and more. All with granular driver and vehicle controls and reporting.",
-      "offer": "Get $300 Per Approved Application",
-      "tags": [
-        "Accounting",
-        "Affiliates",
-        "Ambassadors",
-        "B2B Marketplaces",
-        "Commerce",
-        "Governance, Risk, & Compliance",
-        "Hot",
-        "Office Software",
-        "Supply Chain & Logistics",
-        "Trusted",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/coast361?company=coast361&gref=marketplace",
-      "terms_url": "https://coastpay.com/affiliate-terms/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 57,
-      "relevance_matches": [
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:employmenthero",
       "network": "partnerstack",
       "name": "Employment Hero",
@@ -20982,7 +20960,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 7,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21946,7 +21924,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 22,
+      "review_days": 20,
       "source": "https://market.partnerstack.com/",
       "score": 55,
       "relevance_matches": [
@@ -22102,15 +22080,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
+          "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -22329,44 +22307,6 @@
       }
     },
     {
-      "id": "partnerstack:thepointco",
-      "network": "partnerstack",
-      "name": "The Point Co.",
-      "slug": "thepointco",
-      "description": "BUSINESS DEVELOPMENT is what we do. Let's get you signed up and earning money for your referrals.",
-      "offer": "Earn 5% of first year contract value paid quarterly",
-      "tags": [
-        "Marketing",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/thepointco?company=thepointco&gref=marketplace",
-      "terms_url": "https://thepointco.com/privacy-policy/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": false,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 54,
-      "relevance_matches": [
-        "development",
-        "marketing",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "policy_review_required",
-      "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:aftrdrk",
       "network": "partnerstack",
       "name": "AFTRDRK",
@@ -22409,42 +22349,6 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:hibobaffiliate",
-      "network": "partnerstack",
-      "name": "HiBob Affiliate",
-      "slug": "hibobaffiliate",
-      "description": "HiBob is the modern HRIS built for fast-growing companies. It replaces clunky legacy systems with a clean, scalable platform for people data, performance, time, compensation, and culture. Designed for today’s teams, HiBob helps HR move faster, stay organized, and deliver a standout employee experience. The result: smarter workflows, happier people, and an HR foundation built for growth.",
-      "offer": "Earn $200 for every qualified sign-up!",
-      "tags": [
-        "HR Software",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/hibobaffiliate?company=hibobaffiliate&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/1uwXWwnHkT04T0570Iafjp-jnyN9F_FIB/view",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 53,
-      "relevance_matches": [
-        "data",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "policy_review_required",
-      "policy": {
-        "status": "unreachable",
-        "signals": {},
         "cookie_days": null
       }
     },
@@ -22535,22 +22439,70 @@
       }
     },
     {
+      "id": "partnerstack:coast361",
+      "network": "partnerstack",
+      "name": "Coast",
+      "slug": "coast361",
+      "description": "Coast is a smart fuel card and expense management built on the Visa network. Drivers can fill up anywhere their Visa is accepted and pay for parking, tolls, maintenance, and more. All with granular driver and vehicle controls and reporting.",
+      "offer": "Get $300 Per Approved Application",
+      "tags": [
+        "Accounting",
+        "Affiliates",
+        "Ambassadors",
+        "B2B Marketplaces",
+        "Commerce",
+        "Governance, Risk, & Compliance",
+        "Office Software",
+        "Supply Chain & Logistics",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/coast361?company=coast361&gref=marketplace",
+      "terms_url": "https://coastpay.com/affiliate-terms/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 52,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:cloudtask",
       "network": "partnerstack",
       "name": "CloudTask",
       "slug": "cloudtask",
       "description": "We place LATAM talent in your time zone with a 24+ month average tenure.",
-      "offer": "Refer remote talent to CloudTask and earn when they’re hired.",
+      "offer": "Refer job seekers and hiring companies to CloudTask. Earn $100 per hired job seeker and 15% of our fee on every company hire.",
       "tags": [
         "Affiliates",
         "Customer Service",
         "Hot",
         "Hubspot integrated",
-        "Office Software",
         "Referral Partners",
         "Sales",
         "Trusted",
-        "Vertical Industry Software",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/cloudtask?company=cloudtask&gref=marketplace",
@@ -22567,8 +22519,7 @@
       "score": 51,
       "relevance_matches": [
         "customer service",
-        "sales",
-        "software"
+        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -22785,6 +22736,43 @@
       }
     },
     {
+      "id": "partnerstack:thepointco",
+      "network": "partnerstack",
+      "name": "The Point Co.",
+      "slug": "thepointco",
+      "description": "BUSINESS DEVELOPMENT is what we do. Let's get you signed up and earning money for your referrals.",
+      "offer": "Earn 5% of first year contract value paid quarterly",
+      "tags": [
+        "Marketing",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/thepointco?company=thepointco&gref=marketplace",
+      "terms_url": "https://thepointco.com/privacy-policy/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 49,
+      "relevance_matches": [
+        "development",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:gcheck",
       "network": "partnerstack",
       "name": "GCheck",
@@ -22826,7 +22814,42 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:hibobaffiliate",
+      "network": "partnerstack",
+      "name": "HiBob Affiliate",
+      "slug": "hibobaffiliate",
+      "description": "HiBob is the modern HRIS built for fast-growing companies. It replaces clunky legacy systems with a clean, scalable platform for people data, performance, time, compensation, and culture. Designed for today’s teams, HiBob helps HR move faster, stay organized, and deliver a standout employee experience. The result: smarter workflows, happier people, and an HR foundation built for growth.",
+      "offer": "Earn $200 for every qualified sign-up!",
+      "tags": [
+        "HR Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/hibobaffiliate?company=hibobaffiliate&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/1uwXWwnHkT04T0570Iafjp-jnyN9F_FIB/view",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 48,
+      "relevance_matches": [
+        "data",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
+        "cookie_days": null
       }
     },
     {
@@ -22972,6 +22995,7 @@
       "tags": [
         "Accounting",
         "Affiliates",
+        "Hot",
         "Publishers",
         "Trusted"
       ],
@@ -23866,7 +23890,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 39,
+      "review_days": 36,
       "source": "https://market.partnerstack.com/",
       "score": 35,
       "relevance_matches": [
@@ -23896,7 +23920,7 @@
       "name": "Guesty",
       "slug": "guesty",
       "description": "With Guesty’s Affiliate Program, you can earn an additional stream of income, with up to 5K per referral Help your network of hospitality pros succeed in growing their businesses with our advanced hospitality operations platform.",
-      "offer": "$50 for per Listing",
+      "offer": "Earn $100 for a Customer's First Listing",
       "tags": [
         "Hot",
         "Trusted"
@@ -23962,7 +23986,7 @@
       "name": "LettrLabs",
       "slug": "lettrlabs",
       "description": "LettrLabs is an automated direct mail platform designed to target, segment, automate and measure results of campaigns. We empower organizations to connect with their clients through personalized, handwritten mailers that leave a lasting impression using automations that make direct mail as easy as digital.",
-      "offer": "Earn 3% for 12 months",
+      "offer": "Earn 4% for 18 months",
       "tags": [],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/lettrlabs?company=lettrlabs&gref=marketplace",
       "terms_url": "https://www.lettrlabs.com/company/terms-of-service",

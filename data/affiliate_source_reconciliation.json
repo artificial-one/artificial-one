@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-09",
+  "updated_at": "2026-10-10",
   "contract": {
     "states": [
       "inactive",
@@ -14,14 +14,14 @@
     "future_sources": "Any connector represented in partner_opportunities.json is reconciled automatically."
   },
   "summary": {
-    "total": 722,
+    "total": 723,
     "active_link_pending": 7,
     "inactive": 1,
     "pending": 422,
     "published": 290,
-    "terms_required": 2,
+    "terms_required": 3,
     "blocking_failures": 0,
-    "activation_blockers": 9
+    "activation_blockers": 10
   },
   "networks": {
     "awin": {
@@ -37,12 +37,12 @@
       "published": 247
     },
     "partnerstack": {
-      "total": 420,
+      "total": 421,
       "active_link_pending": 7,
       "inactive": 1,
       "pending": 374,
       "published": 36,
-      "terms_required": 2
+      "terms_required": 3
     }
   },
   "activation_blockers": [
@@ -61,6 +61,10 @@
     {
       "source_id": "partnerstack:emergentlabsinc",
       "reason": "active_link_pending"
+    },
+    {
+      "source_id": "partnerstack:miroaffiliate",
+      "reason": "terms_required"
     },
     {
       "source_id": "partnerstack:softrplatformsgmbh",
