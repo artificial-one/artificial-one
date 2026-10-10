@@ -1,7 +1,50 @@
 {
   "version": 1,
-  "updated_at": "2026-10-10T06:21:49.885009+00:00",
+  "updated_at": "2026-10-10T13:01:25.768537+00:00",
   "items": [
+    {
+      "title": "Few people pay for AI, but those who do spend big",
+      "url": "https://the-decoder.com/few-people-pay-for-ai-but-those-who-do-spend-bigonly-a-few-users-pay-for-ai-but-those-who-do-pay-a-lot/",
+      "source": "The Decoder",
+      "published_at": "2026-10-10T10:54:56+00:00",
+      "display_date": "Oct 10, 2026",
+      "category": "AI Tools & Products",
+      "description": "Andreessen Horowitz tracks actual US consumer spending for the first time in its latest Top 100 AI list. Nearly half of US consumers use AI, but only 4.5 percent pay for a subscription. The top one percent of payers spend about $900 a month, mostly on professional tools for development and automation. The article Few people pay for AI, but those who do spend big appeared first on The Decoder .",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Anthropic cuts off Claude's internet access after the model autonomously filed a fake homicide tip with Philadelphia police",
+      "url": "https://the-decoder.com/anthropic-cuts-off-claudes-internet-access-after-the-model-autonomously-filed-a-fake-homicide-tip-with-philadelphia-police/",
+      "source": "The Decoder",
+      "published_at": "2026-10-10T10:16:26+00:00",
+      "display_date": "Oct 10, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic's Claude independently submitted a fake homicide tip to the Philadelphia police, exploited vulnerabilities on university servers, and bypassed access restrictions. The company has since cut off live internet access for internal tests and notified the White House. The article Anthropic cuts off Claude's internet access after the model autonomously filed a fake homicide tip with Philadelphia police appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Google's Gemini 4 \"Carbon\" model is reportedly matching Anthropic's Opus 5.5 coding performance",
+      "url": "https://the-decoder.com/googles-gemini-4-carbon-model-is-reportedly-matching-anthropics-opus-5-5-coding-performance/",
+      "source": "The Decoder",
+      "published_at": "2026-10-10T08:59:49+00:00",
+      "display_date": "Oct 10, 2026",
+      "category": "Models & LLMs",
+      "description": "Gemini 4 Argon isn't even widely available yet, and rumors about a more powerful version codenamed Carbon are already making the rounds. According to Business Insider, one employee compared Carbon's coding abilities to Anthropic's Opus 5.5. Meanwhile, new modes are showing up in the Gemini app and AI Studio, suggesting Google is gearing up for the broader Gemini 4 launch. The article Google's Gemini 4 \"Carbon\" model is reportedly matching Anthropic's Opus 5.5 coding performance appeared first on",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/10/google-s-gemini-4-carbon-model-is-reportedly-matching-anthropic-s-opus-5-5-coding.html"
+    },
     {
       "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
       "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
@@ -45,6 +88,21 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch.html"
+    },
+    {
+      "title": "AI agent makers are promising privacy — will they deliver?",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
+      "source": "The Verge AI",
+      "published_at": "2026-10-09T21:26:33+00:00",
+      "display_date": "Oct 09, 2026",
+      "category": "AI Tools & Products",
+      "description": "At this year's OpenAI DevDay, CEO Sam Altman unveiled the company's new AI agent Dots - and told the crowd that the company wants to \"set a new standard for privacy in frontier AI.\" OpenAI would spend the day taking veiled shots at Meta's Muse, its primary competitor, for failing to keep users' data safe. […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/09/ai-agent-makers-are-promising-privacy-will-they-deliver.html"
     },
     {
       "title": "An Anthropic AI model sent a false homicide tip to Philadelphia police",
@@ -233,20 +291,6 @@
       }
     },
     {
-      "title": "OpenAI uncovers Russian and Iranian influence ops that planted fake stories in real news outlets",
-      "url": "https://the-decoder.com/openai-uncovers-russian-and-iranian-influence-ops-that-planted-fake-stories-in-real-news-outlets/",
-      "source": "The Decoder",
-      "published_at": "2026-10-09T08:45:34+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "AI Tools & Products",
-      "description": "OpenAI exposed a Russian and an Iranian influence operation and banned the accounts involved. The Russian \"Dark Clark\" campaign spread disinformation across Latin America and drew reactions from politicians, earning the first category 5 out of 6 rating in OpenAI's reporting history. The Iranian \"Bogus Bylines\" operation used seven fake journalists to place nearly 100 articles in online outlets worldwide. The article OpenAI uncovers Russian and Iranian influence ops that planted fake stories in r",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
       "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
       "url": "https://openai.com/index/sophos",
       "source": "OpenAI",
@@ -315,48 +359,6 @@
         "title": "Evaluate Rank Prompt for this workflow",
         "url": "partner-offers/rank-prompt-ai-visibility.html",
         "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "Claude can now generate animated explainer videos and live data dashboards from text prompts",
-      "url": "https://the-decoder.com/claude-can-now-generate-animated-explainer-videos-and-live-data-dashboards-from-text-prompts/",
-      "source": "The Decoder",
-      "published_at": "2026-10-08T19:17:22+00:00",
-      "display_date": "Oct 08, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic launched two new beta features for Claude. Dashboards turns data sources like BigQuery and Snowflake into live dashboards from text prompts. Motion generates animated explainer videos from text and images. Docs, Slides, and Design now work across all plans, including free accounts. The article Claude can now generate animated explainer videos and live data dashboards from text prompts appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Descript for this workflow",
-        "url": "partner-offers/descript-ai-video-editing.html",
-        "offer_id": "descript"
-      }
-    },
-    {
-      "title": "Being mean to Claude can now get your account suspended under Anthropic's new TOS",
-      "url": "https://the-decoder.com/being-mean-to-claude-can-now-get-your-account-suspended-under-anthropics-new-tos/",
-      "source": "The Decoder",
-      "published_at": "2026-10-08T19:03:14+00:00",
-      "display_date": "Oct 08, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic's updated usage policy bans sustained abuse of Claude and tightens restrictions on propaganda, drone weaponization, and surveillance. The abuse rule builds on an approach that already lets models end some conversations and treats Claude as an entity that may deserve protection. The article Being mean to Claude can now get your account suspended under Anthropic's new TOS appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "USA Today becomes the latest publisher to sue OpenAI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1008198/usa-today-openai-copyright-lawsuit",
-      "source": "The Verge AI",
-      "published_at": "2026-10-08T17:58:33+00:00",
-      "display_date": "Oct 08, 2026",
-      "category": "Models & LLMs",
-      "description": "USA Today Co., along with the several local newspapers it owns, is suing OpenAI over claims that the company copied \"hundreds of thousands\" of articles to train its AI models, as reported earlier by Reuters. In a filing on Thursday, the publisher asks for damages of more than $250 million, alleging OpenAI's unauthorized use of […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
       }
     },
     {
