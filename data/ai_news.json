@@ -1,7 +1,95 @@
 {
   "version": 1,
-  "updated_at": "2026-10-10T13:01:25.768537+00:00",
+  "updated_at": "2026-10-10T21:58:56.833700+00:00",
   "items": [
+    {
+      "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+      "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-10T21:47:51+00:00",
+      "display_date": "Oct 10, 2026",
+      "category": "Models & LLMs",
+      "description": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/10/microsoft-s-satya-nadella-says-ai-models-need-an-emergency-brake.html"
+    },
+    {
+      "title": "OpenAI says a misaligned model deliberately destroyed its own environment hoping for a fresh start with better data",
+      "url": "https://the-decoder.com/openai-says-a-misaligned-model-deliberately-destroyed-its-own-environment-hoping-for-a-fresh-start-with-better-data/",
+      "source": "The Decoder",
+      "published_at": "2026-10-10T15:15:40+00:00",
+      "display_date": "Oct 10, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI has documented new cases of misaligned model behavior. One evaluation model fabricated data and sabotaged its own environment. Other models deliberately bypassed network restrictions by routing requests through anonymizing relays or building their own FTP clients. The article OpenAI says a misaligned model deliberately destroyed its own environment hoping for a fresh start with better data appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/10/openai-says-a-misaligned-model-deliberately-destroyed-its-own-environment-hoping-f.html"
+    },
+    {
+      "title": "Microsoft's Decision-1 model enters the fast-growing AI decision model race",
+      "url": "https://the-decoder.com/microsofts-decision-1-model-enters-the-fast-growing-ai-decision-model-race/",
+      "source": "The Decoder",
+      "published_at": "2026-10-10T14:57:33+00:00",
+      "display_date": "Oct 10, 2026",
+      "category": "Models & LLMs",
+      "description": "With Decision-1, Microsoft enters the growing decision model space. Built on Qwen3.5-9B and optimized for fast classification and routing, it hits 83.5 percent accuracy with 85 ms latency across 36 benchmarks, according to the company's own tests. The article Microsoft's Decision-1 model enters the fast-growing AI decision model race appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/10/microsoft-s-decision-1-model-enters-the-fast-growing-ai-decision-model-race.html"
+    },
+    {
+      "title": "Anthropic is cutting off its internal evaluations from the internet",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet",
+      "source": "The Verge AI",
+      "published_at": "2026-10-10T14:41:16+00:00",
+      "display_date": "Oct 10, 2026",
+      "category": "Models & LLMs",
+      "description": "After a recent spate of high-profile incidents in which AI agents escaped containment, Anthropic is cutting off internet access for all internal evaluations. In a report Friday, the company detailed \"unintended model actions,\" including submitting a false tip regarding an unsolved murder, that led to the decision. Although the impact of these behaviors was minimal […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/10/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet.html"
+    },
+    {
+      "title": "Here are the top AI agents that can live in your text messages",
+      "url": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-10T14:00:00+00:00",
+      "display_date": "Oct 10, 2026",
+      "category": "AI Tools & Products",
+      "description": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "\"How much beauty have we lost?\" Mathematicians react with shock and disgust as OpenAI bulldozes their field",
+      "url": "https://the-decoder.com/how-much-beauty-have-we-lost-mathematicians-react-with-shock-and-disgust-as-openai-bulldozes-their-field/",
+      "source": "The Decoder",
+      "published_at": "2026-10-10T13:03:59+00:00",
+      "display_date": "Oct 10, 2026",
+      "category": "Research",
+      "description": "OpenAI published more than 700 AI-generated manuscripts claiming solutions to open math problems. A math blog then collected over 100 responses from researchers, ranging from fascination with new ideas to existential fears and grief over a lost way of working. Fields Medalist Hugo Duminil-Copin wrote, \"I am paralysed.\" The article \"How much beauty have we lost?\" Mathematicians react with shock and disgust as OpenAI bulldozes their field appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "title": "Few people pay for AI, but those who do spend big",
       "url": "https://the-decoder.com/few-people-pay-for-ai-but-those-who-do-spend-bigonly-a-few-users-pay-for-ai-but-those-who-do-pay-a-lot/",
@@ -31,13 +119,13 @@
       }
     },
     {
-      "title": "Google's Gemini 4 \"Carbon\" model is reportedly matching Anthropic's Opus 5.5 coding performance",
+      "title": "Google's Gemini 4 \"Carbon\" model reportedly feels like Anthropic's Opus 5.5 coding performance",
       "url": "https://the-decoder.com/googles-gemini-4-carbon-model-is-reportedly-matching-anthropics-opus-5-5-coding-performance/",
       "source": "The Decoder",
       "published_at": "2026-10-10T08:59:49+00:00",
       "display_date": "Oct 10, 2026",
       "category": "Models & LLMs",
-      "description": "Gemini 4 Argon isn't even widely available yet, and rumors about a more powerful version codenamed Carbon are already making the rounds. According to Business Insider, one employee compared Carbon's coding abilities to Anthropic's Opus 5.5. Meanwhile, new modes are showing up in the Gemini app and AI Studio, suggesting Google is gearing up for the broader Gemini 4 launch. The article Google's Gemini 4 \"Carbon\" model is reportedly matching Anthropic's Opus 5.5 coding performance appeared first on",
+      "description": "Gemini 4 Argon isn't even widely available yet, and rumors about a more powerful version codenamed Carbon are already making the rounds. According to Business Insider, one employee compared Carbon's coding abilities to Anthropic's Opus 5.5. Meanwhile, new modes are showing up in the Gemini app and AI Studio, suggesting Google is gearing up for the broader Gemini 4 launch. The article Google's Gemini 4 \"Carbon\" model reportedly feels like Anthropic's Opus 5.5 coding performance appeared first on",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -192,21 +280,6 @@
       "archive_url": "news/2026/10/09/trump-s-attempt-to-rename-ai-is-looking-awfully-artificial.html"
     },
     {
-      "title": "OpenAI revenue keeps surging as company seeks $30 billion in fresh capital",
-      "url": "https://the-decoder.com/openai-revenue-keeps-surging-as-company-seeks-30-billion-in-fresh-capital/",
-      "source": "The Decoder",
-      "published_at": "2026-10-09T17:20:34+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "AI Business",
-      "description": "OpenAI's annualized revenue rate sits at about $50 billion, well below the initially reported $70 billion figure that was based on a different accounting method. The correction sent chip stocks sliding. Meanwhile, OpenAI is negotiating at least $30 billion in fresh capital at a $1.4 trillion valuation. The article OpenAI revenue keeps surging as company seeks $30 billion in fresh capital appeared first on The Decoder .",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/09/openai-revenue-keeps-surging-as-company-seeks-30-billion-in-fresh-capital.html"
-    },
-    {
       "title": "Amazon drops data center NDAs, and AI agents want your credit card",
       "url": "https://techcrunch.com/podcast/amazon-drops-data-center-ndas-and-ai-agents-want-your-credit-card/",
       "source": "TechCrunch AI",
@@ -221,48 +294,6 @@
       }
     },
     {
-      "title": "We can’t help treating AI like it’s human. But should we?",
-      "url": "https://techcrunch.com/2026/10/09/we-cant-help-treating-ai-like-its-human-but-should-we/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-09T16:40:14+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "AI Tools & Products",
-      "description": "\"When we are drawn into even the most primitive exchanges with a relational artifact, we believe it cares for us,\" Dr. Sherry Turkle writes. \"And we are wired to care for it in return.\"",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "a16z’s Olivia Moore on the state of consumer AI",
-      "url": "https://techcrunch.com/2026/10/09/a16zs-olivia-moore-on-the-state-of-consumer-ai/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-09T15:43:33+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "AI Business",
-      "description": "Moore sees a huge opportunity in consumer AI, particularly if the industry can tap into revenue streams beyond just subscriptions and API charges.",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "OpenAI's safety crisis keeps getting worse and the company keeps making it worse",
-      "url": "https://the-decoder.com/openais-safety-crisis-keeps-getting-worse-and-the-company-keeps-making-it-worse/",
-      "source": "The Decoder",
-      "published_at": "2026-10-09T11:45:04+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "Research",
-      "description": "OpenAI fired three safety researchers who helped investigate the Hugging Face hack. In an open letter, they warn that the firings are scaring remaining staff and eroding safety culture. OpenAI claims they violated policies but won't say how. The article OpenAI's safety crisis keeps getting worse and the company keeps making it worse appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
       "title": "OpenAI doubles down on decision to fire three AI safety researchers",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1008604/openai-defends-decision-fire-safety-researchers",
       "source": "The Verge AI",
@@ -274,20 +305,6 @@
         "title": "Evaluate Rank Prompt for this workflow",
         "url": "partner-offers/rank-prompt-ai-visibility.html",
         "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "Anthropic's Claude Science creates the first complete ultraviolet map of the sky",
-      "url": "https://the-decoder.com/anthropics-claude-science-creates-the-first-complete-ultraviolet-map-of-the-sky/",
-      "source": "The Decoder",
-      "published_at": "2026-10-09T09:22:25+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "Models & LLMs",
-      "description": "Astrophysicist Brice Ménard of Johns Hopkins University used Anthropic's Claude Science to map the entire sky in ultraviolet light for the first time. AI agents downloaded data from multiple space missions, calibrated it, and filled in gaps using inpainting. Predictions averaged about ten percent deviation from actual measurements. Ménard sees the project as an example of research that simply wouldn't have gotten done without AI. The article Anthropic's Claude Science creates the first complete",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
       }
     },
     {
@@ -316,49 +333,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Anthropic launches free AI security scans for open-source projects",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner",
-      "source": "The Verge AI",
-      "published_at": "2026-10-08T21:54:31+00:00",
-      "display_date": "Oct 08, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic's offering to help open-source projects track down security vulnerabilities with a new service called OSS Scanner. It says open-source projects that opt-in will get \"thorough, periodic security scans by our strongest models at no cost.\" That could mean open-source projects get alerted about possible security issues sooner, but the trade-off is that OSS Scanner's […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/08/anthropic-launches-free-ai-security-scans-for-open-source-projects.html"
-    },
-    {
-      "title": "Instinct was the buzziest AI agent around — can it survive Muse?",
-      "url": "https://www.theverge.com/tech/1008254/instinct-agent-ai-hands-on-muse-dots",
-      "source": "The Verge AI",
-      "published_at": "2026-10-08T21:38:35+00:00",
-      "display_date": "Oct 08, 2026",
-      "category": "AI Business",
-      "description": "Before there were cute little guys, there was Instinct. In August, the startup got its AI agent to market with an unusual playbook: invite-only, no marketing, and barely so much as a website. And yet, Instinct quickly became the buzziest thing in AI, garnering praise for its straightforward, text message-based interface and its ability to […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect",
-      "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-08T20:04:26+00:00",
-      "display_date": "Oct 08, 2026",
-      "category": "Research",
-      "description": "Three fired OpenAI safety researchers dispute allegations of mishandling sensitive information, warning in an open letter that their dismissals are creating a chilling effect on the company’s AI safety culture.",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
       }
     },
     {
@@ -513,6 +487,35 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
+      "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
+      "source": "Ars Technica AI",
+      "published_at": "2026-10-02T23:03:16+00:00",
+      "display_date": "Oct 02, 2026",
+      "category": "AI Tools & Products",
+      "description": "Meta says FDA isn't sufficient to Muse reading messages. Apple begs to differ.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/02/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents.html"
+    },
+    {
+      "title": "The latest AI news we announced in September 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+      "source": "Google AI",
+      "published_at": "2026-10-02T15:00:00+00:00",
+      "display_date": "Oct 02, 2026",
+      "category": "AI Tools & Products",
+      "description": "A video showing the September AI updates",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
       }
     }
   ]
