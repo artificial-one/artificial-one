@@ -2,9 +2,2943 @@
   "version": 1,
   "history_begins": "2026-09-15",
   "timezone": "Europe/Prague",
-  "last_activity_at": "2026-10-10T01:02:37+02:00",
+  "last_activity_at": "2026-10-11T00:10:23+02:00",
   "method": "GitHub Actions publication commits plus confirmed social-network posts",
   "entries": [
+    {
+      "id": "git:310e4d06acd754f575c2d74442207ae24ec3a3c9:news_items_added",
+      "date": "2026-10-11",
+      "occurred_at": "2026-10-11T00:10:23+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 8 new AI-news items to the live briefing.",
+      "details": [
+        "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+        "OpenAI says a misaligned model deliberately destroyed its own environment hoping for a fresh start with better data",
+        "Microsoft's Decision-1 model enters the fast-growing AI decision model race",
+        "Anthropic is cutting off its internal evaluations from the internet",
+        "Here are the top AI agents that can live in your text messages",
+        "\"How much beauty have we lost?\" Mathematicians react with shock and disgust as OpenAI bulldozes their field",
+        "Apple changes full-disk access permissions to curb abuse from AI agents",
+        "The latest AI news we announced in September 2026"
+      ],
+      "source_commit": "310e4d06acd7"
+    },
+    {
+      "id": "git:310e4d06acd754f575c2d74442207ae24ec3a3c9:M:news.html",
+      "date": "2026-10-11",
+      "occurred_at": "2026-10-11T00:10:23+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://www.artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "310e4d06acd7"
+    },
+    {
+      "id": "git:310e4d06acd754f575c2d74442207ae24ec3a3c9:M:news-archive.html",
+      "date": "2026-10-11",
+      "occurred_at": "2026-10-11T00:10:23+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI News Archive | artificial.one",
+      "url": "https://www.artificial.one/news-archive.html",
+      "path": "news-archive.html",
+      "source_commit": "310e4d06acd7"
+    },
+    {
+      "id": "git:310e4d06acd754f575c2d74442207ae24ec3a3c9:M:index.html",
+      "date": "2026-10-11",
+      "occurred_at": "2026-10-11T00:10:23+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Build My AI Setup | Artificial.One",
+      "url": "https://www.artificial.one/",
+      "path": "index.html",
+      "source_commit": "310e4d06acd7"
+    },
+    {
+      "id": "git:310e4d06acd754f575c2d74442207ae24ec3a3c9:A:news/2026/10/10/openai-says-a-misaligned-model-deliberately-destroyed-its-own-environment-hoping-f.html",
+      "date": "2026-10-11",
+      "occurred_at": "2026-10-11T00:10:23+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: OpenAI Reports Misaligned Models Sabotaging Their Own Systems | artificial.one",
+      "url": "https://www.artificial.one/news/2026/10/10/openai-says-a-misaligned-model-deliberately-destroyed-its-own-environment-hoping-f.html",
+      "path": "news/2026/10/10/openai-says-a-misaligned-model-deliberately-destroyed-its-own-environment-hoping-f.html",
+      "source_commit": "310e4d06acd7"
+    },
+    {
+      "id": "git:310e4d06acd754f575c2d74442207ae24ec3a3c9:A:news/2026/10/10/microsoft-s-satya-nadella-says-ai-models-need-an-emergency-brake.html",
+      "date": "2026-10-11",
+      "occurred_at": "2026-10-11T00:10:23+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: Microsoft CEO Calls for 'Emergency Brake' in AI Models | artificial.one",
+      "url": "https://www.artificial.one/news/2026/10/10/microsoft-s-satya-nadella-says-ai-models-need-an-emergency-brake.html",
+      "path": "news/2026/10/10/microsoft-s-satya-nadella-says-ai-models-need-an-emergency-brake.html",
+      "source_commit": "310e4d06acd7"
+    },
+    {
+      "id": "git:310e4d06acd754f575c2d74442207ae24ec3a3c9:A:news/2026/10/10/microsoft-s-decision-1-model-enters-the-fast-growing-ai-decision-model-race.html",
+      "date": "2026-10-11",
+      "occurred_at": "2026-10-11T00:10:23+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: Microsoft's Decision-1 Model Enters AI Decision Race | artificial.one",
+      "url": "https://www.artificial.one/news/2026/10/10/microsoft-s-decision-1-model-enters-the-fast-growing-ai-decision-model-race.html",
+      "path": "news/2026/10/10/microsoft-s-decision-1-model-enters-the-fast-growing-ai-decision-model-race.html",
+      "source_commit": "310e4d06acd7"
+    },
+    {
+      "id": "git:310e4d06acd754f575c2d74442207ae24ec3a3c9:A:news/2026/10/10/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet.html",
+      "date": "2026-10-11",
+      "occurred_at": "2026-10-11T00:10:23+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: Anthropic Restricts Internet Access for AI Testing | artificial.one",
+      "url": "https://www.artificial.one/news/2026/10/10/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet.html",
+      "path": "news/2026/10/10/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet.html",
+      "source_commit": "310e4d06acd7"
+    },
+    {
+      "id": "bluesky:at://did:plc:jbekuorna4bmpbwfj6fl7alk/app.bsky.feed.post/3mxju4dsqqe2q",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T17:57:12+02:00",
+      "kind": "social_post_published",
+      "summary": "Published Bluesky post: Elephant trunk check: Hubstaff review and pricing guide",
+      "url": "https://bsky.app/profile/artificial-one.bsky.social/post/3mxju4dsqqe2q"
+    },
+    {
+      "id": "bluesky:at://did:plc:jbekuorna4bmpbwfj6fl7alk/app.bsky.feed.post/3mxjp5sz4zw2l",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T16:28:32+02:00",
+      "kind": "social_post_published",
+      "summary": "Published Bluesky post: Weekend workflow · Oct 10 Deliver branded customer or employee training. Check the fit, limitations and current pricing before you buy ↓ #AITools #Productivity",
+      "url": "https://bsky.app/profile/artificial-one.bsky.social/post/3mxjp5sz4zw2l"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:workflow-recipes/turn-recordings-into-content.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one",
+      "url": "https://www.artificial.one/workflow-recipes/turn-recordings-into-content.html",
+      "path": "workflow-recipes/turn-recordings-into-content.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:workflow-recipes/ship-an-ai-powered-product.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one",
+      "url": "https://www.artificial.one/workflow-recipes/ship-an-ai-powered-product.html",
+      "path": "workflow-recipes/ship-an-ai-powered-product.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:workflow-recipes/onboard-a-growing-team.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one",
+      "url": "https://www.artificial.one/workflow-recipes/onboard-a-growing-team.html",
+      "path": "workflow-recipes/onboard-a-growing-team.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:workflow-recipes/build-a-business-website.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one",
+      "url": "https://www.artificial.one/workflow-recipes/build-a-business-website.html",
+      "path": "workflow-recipes/build-a-business-website.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/zupyak.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Zupyak AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/zupyak.html",
+      "path": "appsumo-guides/zupyak.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/zagomail.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Zagomail AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/zagomail.html",
+      "path": "appsumo-guides/zagomail.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/yaycommerce.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: YayCommerce AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/yaycommerce.html",
+      "path": "appsumo-guides/yaycommerce.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/writerank.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WriteRank AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/writerank.html",
+      "path": "appsumo-guides/writerank.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/wp-301-redirects.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WP 301 Redirects AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/wp-301-redirects.html",
+      "path": "appsumo-guides/wp-301-redirects.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/wordkraftai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Wordkraft.ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/wordkraftai.html",
+      "path": "appsumo-guides/wordkraftai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/woolentor.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WooLentor AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/woolentor.html",
+      "path": "appsumo-guides/woolentor.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/wisernotify.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WiserNotify AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/wisernotify.html",
+      "path": "appsumo-guides/wisernotify.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/wiremo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Wiremo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/wiremo.html",
+      "path": "appsumo-guides/wiremo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/weconnectchat.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WeConnect.chat AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/weconnectchat.html",
+      "path": "appsumo-guides/weconnectchat.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/webwave.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: WebWave AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/webwave.html",
+      "path": "appsumo-guides/webwave.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/webullar.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Webullar AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/webullar.html",
+      "path": "appsumo-guides/webullar.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/website-auditor.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Website Auditor AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/website-auditor.html",
+      "path": "appsumo-guides/website-auditor.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/wavevideo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Wave.video AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/wavevideo.html",
+      "path": "appsumo-guides/wavevideo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/vzy.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Vzy AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/vzy.html",
+      "path": "appsumo-guides/vzy.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/voxpopme.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Voxpopme AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/voxpopme.html",
+      "path": "appsumo-guides/voxpopme.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/voiser.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Voiser AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/voiser.html",
+      "path": "appsumo-guides/voiser.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/voila.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Voilà AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/voila.html",
+      "path": "appsumo-guides/voila.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/vista-social.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Vista Social AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/vista-social.html",
+      "path": "appsumo-guides/vista-social.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/viloud.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Viloud AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/viloud.html",
+      "path": "appsumo-guides/viloud.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/vidpowr.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: VidPowr AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/vidpowr.html",
+      "path": "appsumo-guides/vidpowr.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/vidpopup.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Vidpopup AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/vidpopup.html",
+      "path": "appsumo-guides/vidpopup.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/vidjet.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Vidjet AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/vidjet.html",
+      "path": "appsumo-guides/vidjet.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/videopeel.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: VideoPeel AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/videopeel.html",
+      "path": "appsumo-guides/videopeel.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/vidboard-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: vidBoard AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/vidboard-ai.html",
+      "path": "appsumo-guides/vidboard-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/vicodo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Vicodo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/vicodo.html",
+      "path": "appsumo-guides/vicodo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/vbout.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: VBOUT AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/vbout.html",
+      "path": "appsumo-guides/vbout.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/uuki.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: UUKI AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/uuki.html",
+      "path": "appsumo-guides/uuki.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/utobo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: utobo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/utobo.html",
+      "path": "appsumo-guides/utobo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/upgrade-chat.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Upgrade.Chat AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/upgrade-chat.html",
+      "path": "appsumo-guides/upgrade-chat.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/tinyemail.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: tinyEmail AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/tinyemail.html",
+      "path": "appsumo-guides/tinyemail.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/tiledesk.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Tiledesk AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/tiledesk.html",
+      "path": "appsumo-guides/tiledesk.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/textwizard.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: TextWizard AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/textwizard.html",
+      "path": "appsumo-guides/textwizard.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/textmetrics.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Textmetrics SME AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/textmetrics.html",
+      "path": "appsumo-guides/textmetrics.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/testimonial-hunt.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Testimonial Hunt AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/testimonial-hunt.html",
+      "path": "appsumo-guides/testimonial-hunt.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/taskade.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Taskade AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/taskade.html",
+      "path": "appsumo-guides/taskade.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/synthesys.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Synthesys AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/synthesys.html",
+      "path": "appsumo-guides/synthesys.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/swish.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Swish AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/swish.html",
+      "path": "appsumo-guides/swish.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/support-board.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Support Board AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/support-board.html",
+      "path": "appsumo-guides/support-board.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/supermachine.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SUPERMACHINE - BF early special 23 AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/supermachine.html",
+      "path": "appsumo-guides/supermachine.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/supercopy-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SuperCopy.ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/supercopy-ai.html",
+      "path": "appsumo-guides/supercopy-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/superbuzz.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SuperBuzz AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/superbuzz.html",
+      "path": "appsumo-guides/superbuzz.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/supapass-premium-website-builder.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SupaPass AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/supapass-premium-website-builder.html",
+      "path": "appsumo-guides/supapass-premium-website-builder.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/subpage.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SubPage AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/subpage.html",
+      "path": "appsumo-guides/subpage.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/storydoc.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Storydoc AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/storydoc.html",
+      "path": "appsumo-guides/storydoc.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/stori.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: STORI AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/stori.html",
+      "path": "appsumo-guides/stori.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/sticker-mule-custom-t-shirts.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: StickerMule - logo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/sticker-mule-custom-t-shirts.html",
+      "path": "appsumo-guides/sticker-mule-custom-t-shirts.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/steve-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Steve.AI AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/steve-ai.html",
+      "path": "appsumo-guides/steve-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/stageset.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Stageset AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/stageset.html",
+      "path": "appsumo-guides/stageset.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/squirrly-seo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Squirrly SEO AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/squirrly-seo.html",
+      "path": "appsumo-guides/squirrly-seo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/squash.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Squash AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/squash.html",
+      "path": "appsumo-guides/squash.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/spiritme.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Spiritme AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/spiritme.html",
+      "path": "appsumo-guides/spiritme.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/soundpiece.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: soundpiece AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/soundpiece.html",
+      "path": "appsumo-guides/soundpiece.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/soliloquy.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Soliloquy AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/soliloquy.html",
+      "path": "appsumo-guides/soliloquy.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/socialnowa-chatbot.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SocialNowa AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/socialnowa-chatbot.html",
+      "path": "appsumo-guides/socialnowa-chatbot.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/socialcloser.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SocialCloser AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/socialcloser.html",
+      "path": "appsumo-guides/socialcloser.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/snackeet.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Snackeet AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/snackeet.html",
+      "path": "appsumo-guides/snackeet.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/sms-it-crm.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SMS-iT CRM AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/sms-it-crm.html",
+      "path": "appsumo-guides/sms-it-crm.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/smart-quiz-builder-plus-exclusive.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Smart Quiz Builder AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/smart-quiz-builder-plus-exclusive.html",
+      "path": "appsumo-guides/smart-quiz-builder-plus-exclusive.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/slickpic.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SlickPic AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/slickpic.html",
+      "path": "appsumo-guides/slickpic.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/slice-knowledge.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Slice Knowledge AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/slice-knowledge.html",
+      "path": "appsumo-guides/slice-knowledge.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/sizze.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Sizze AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/sizze.html",
+      "path": "appsumo-guides/sizze.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/simplex.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SimpleX AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/simplex.html",
+      "path": "appsumo-guides/simplex.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/sidekick-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Sidekick Ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/sidekick-ai.html",
+      "path": "appsumo-guides/sidekick-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/shown.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Shown AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/shown.html",
+      "path": "appsumo-guides/shown.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/shoutout.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: ShoutOut AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/shoutout.html",
+      "path": "appsumo-guides/shoutout.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/sheerseo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SheerSEO AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/sheerseo.html",
+      "path": "appsumo-guides/sheerseo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/sessions.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Sessions AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/sessions.html",
+      "path": "appsumo-guides/sessions.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/serpwizz.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SerpWizz AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/serpwizz.html",
+      "path": "appsumo-guides/serpwizz.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/seodity.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Seodity AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/seodity.html",
+      "path": "appsumo-guides/seodity.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/seocrawl.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SEOCrawl AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/seocrawl.html",
+      "path": "appsumo-guides/seocrawl.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/selzy.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Selzy AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/selzy.html",
+      "path": "appsumo-guides/selzy.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/scopa-shoppable-product-tagging.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Scopa Shoppable Product Tagging AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/scopa-shoppable-product-tagging.html",
+      "path": "appsumo-guides/scopa-shoppable-product-tagging.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/schedulingkit.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SchedulingKit AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/schedulingkit.html",
+      "path": "appsumo-guides/schedulingkit.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/salesrobot.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: SalesRobot AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/salesrobot.html",
+      "path": "appsumo-guides/salesrobot.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/robinize.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Robinize AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/robinize.html",
+      "path": "appsumo-guides/robinize.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/reachoutai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: ReachOut.AI AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/reachoutai.html",
+      "path": "appsumo-guides/reachoutai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/qwil-messenger.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Qwil Messenger AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/qwil-messenger.html",
+      "path": "appsumo-guides/qwil-messenger.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/quoterules.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: QuoteRules AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/quoterules.html",
+      "path": "appsumo-guides/quoterules.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/q-by-substrata.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Q by Substrata AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/q-by-substrata.html",
+      "path": "appsumo-guides/q-by-substrata.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/publitio.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Publitio AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/publitio.html",
+      "path": "appsumo-guides/publitio.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/pubcoder.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: PubCoder AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/pubcoder.html",
+      "path": "appsumo-guides/pubcoder.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/procesio.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: PROCESIO AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/procesio.html",
+      "path": "appsumo-guides/procesio.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/potion.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Potion AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/potion.html",
+      "path": "appsumo-guides/potion.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/popup-hero.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Popup Hero AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/popup-hero.html",
+      "path": "appsumo-guides/popup-hero.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/poised.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Poised AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/poised.html",
+      "path": "appsumo-guides/poised.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/pixelied.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Pixelied AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/pixelied.html",
+      "path": "appsumo-guides/pixelied.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/pipio.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Pipio AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/pipio.html",
+      "path": "appsumo-guides/pipio.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/pinchat.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: PinChat AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/pinchat.html",
+      "path": "appsumo-guides/pinchat.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/persona-by-delve-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Persona by Delve AI AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/persona-by-delve-ai.html",
+      "path": "appsumo-guides/persona-by-delve-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/perkzilla.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: PerkZilla AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/perkzilla.html",
+      "path": "appsumo-guides/perkzilla.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/pagemaker.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Pagemaker AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/pagemaker.html",
+      "path": "appsumo-guides/pagemaker.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/paced-email.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Paced Email AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/paced-email.html",
+      "path": "appsumo-guides/paced-email.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/oxolo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Oxolo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/oxolo.html",
+      "path": "appsumo-guides/oxolo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/orai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Orai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/orai.html",
+      "path": "appsumo-guides/orai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/optinly.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Optinly AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/optinly.html",
+      "path": "appsumo-guides/optinly.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/oppflow.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Oppflow AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/oppflow.html",
+      "path": "appsumo-guides/oppflow.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/one-transcriber.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: One Transcriber AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/one-transcriber.html",
+      "path": "appsumo-guides/one-transcriber.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/omnius.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Omni.us AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/omnius.html",
+      "path": "appsumo-guides/omnius.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/ocoya.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Ocoya AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/ocoya.html",
+      "path": "appsumo-guides/ocoya.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/nova-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Nova A.I. AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/nova-ai.html",
+      "path": "appsumo-guides/nova-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/notice.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Notice AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/notice.html",
+      "path": "appsumo-guides/notice.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/notetracks-pro.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Notetracks Pro AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/notetracks-pro.html",
+      "path": "appsumo-guides/notetracks-pro.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/nolimit.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: NoLimit AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/nolimit.html",
+      "path": "appsumo-guides/nolimit.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/nexmind.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: NexMind AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/nexmind.html",
+      "path": "appsumo-guides/nexmind.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/neuronwriter.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: NeuronWriter AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/neuronwriter.html",
+      "path": "appsumo-guides/neuronwriter.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/nami.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Nami AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/nami.html",
+      "path": "appsumo-guides/nami.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/mysignature.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: MySignature AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/mysignature.html",
+      "path": "appsumo-guides/mysignature.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/mojoauth.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: MojoAuth AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/mojoauth.html",
+      "path": "appsumo-guides/mojoauth.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/mobiroller.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Mobiroller AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/mobiroller.html",
+      "path": "appsumo-guides/mobiroller.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/missinglettr.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: MissingLettr AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/missinglettr.html",
+      "path": "appsumo-guides/missinglettr.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/million-dollar-email-templates-20.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Million-Dollar Email Templates 2.0 AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/million-dollar-email-templates-20.html",
+      "path": "appsumo-guides/million-dollar-email-templates-20.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/mieuxai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Mieux.ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/mieuxai.html",
+      "path": "appsumo-guides/mieuxai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/meettrics.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Meettrics AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/meettrics.html",
+      "path": "appsumo-guides/meettrics.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/maxiblocks.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: MaxiBlocks AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/maxiblocks.html",
+      "path": "appsumo-guides/maxiblocks.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/masterstudy-lms.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: MasterStudy AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/masterstudy-lms.html",
+      "path": "appsumo-guides/masterstudy-lms.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/mastera.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Mastera AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/mastera.html",
+      "path": "appsumo-guides/mastera.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/markopolo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Markopolo ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/markopolo.html",
+      "path": "appsumo-guides/markopolo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/markettailor.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Markettailor AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/markettailor.html",
+      "path": "appsumo-guides/markettailor.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/mark-copy-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: MarkCopy AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/mark-copy-ai.html",
+      "path": "appsumo-guides/mark-copy-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/marbleflows.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: MarbleFlows AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/marbleflows.html",
+      "path": "appsumo-guides/marbleflows.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/luna.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Luna AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/luna.html",
+      "path": "appsumo-guides/luna.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/luminar-ai-elements.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Luminar AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/luminar-ai-elements.html",
+      "path": "appsumo-guides/luminar-ai-elements.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/louddoc.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: LoudDoc AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/louddoc.html",
+      "path": "appsumo-guides/louddoc.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/livewebinar.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: LiveWebinar AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/livewebinar.html",
+      "path": "appsumo-guides/livewebinar.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/live2social.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Live2.Social AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/live2social.html",
+      "path": "appsumo-guides/live2social.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/linguix.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Linguix AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/linguix.html",
+      "path": "appsumo-guides/linguix.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/linguix-turbo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Linguix Turbo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/linguix-turbo.html",
+      "path": "appsumo-guides/linguix-turbo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/lets-connect.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Let's Connect AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/lets-connect.html",
+      "path": "appsumo-guides/lets-connect.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/lebesgue.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Lebesgue AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/lebesgue.html",
+      "path": "appsumo-guides/lebesgue.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/leadspot.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: LeadSpot AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/leadspot.html",
+      "path": "appsumo-guides/leadspot.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/laxis.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Laxis AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/laxis.html",
+      "path": "appsumo-guides/laxis.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/kure.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kure AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/kure.html",
+      "path": "appsumo-guides/kure.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/konnectzit.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: KonnectzIT AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/konnectzit.html",
+      "path": "appsumo-guides/konnectzit.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/knowtworthy.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Knowtworthy AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/knowtworthy.html",
+      "path": "appsumo-guides/knowtworthy.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/klynk.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Klynk AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/klynk.html",
+      "path": "appsumo-guides/klynk.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/kites.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kites AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/kites.html",
+      "path": "appsumo-guides/kites.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/kimola-cognitive.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kimola Cognitive AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/kimola-cognitive.html",
+      "path": "appsumo-guides/kimola-cognitive.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/keywordsearch.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: KeywordSearch AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/keywordsearch.html",
+      "path": "appsumo-guides/keywordsearch.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/keyframe-audio.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Keyframe Audio AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/keyframe-audio.html",
+      "path": "appsumo-guides/keyframe-audio.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/kennected-video.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Kennected Video AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/kennected-video.html",
+      "path": "appsumo-guides/kennected-video.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/justreview.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: JustReview AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/justreview.html",
+      "path": "appsumo-guides/justreview.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/juice-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Juice.ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/juice-ai.html",
+      "path": "appsumo-guides/juice-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/interacty.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Interacty AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/interacty.html",
+      "path": "appsumo-guides/interacty.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/instaminutes.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Instaminutes AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/instaminutes.html",
+      "path": "appsumo-guides/instaminutes.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/ingimage.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Ingimage AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/ingimage.html",
+      "path": "appsumo-guides/ingimage.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/influencersoft.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: InfluencerSoft AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/influencersoft.html",
+      "path": "appsumo-guides/influencersoft.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/inboxpro.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: InboxPro AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/inboxpro.html",
+      "path": "appsumo-guides/inboxpro.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/inbox.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: INBOX AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/inbox.html",
+      "path": "appsumo-guides/inbox.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/impulze-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: impulze.ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/impulze-ai.html",
+      "path": "appsumo-guides/impulze-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/image-plus.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Image+ AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/image-plus.html",
+      "path": "appsumo-guides/image-plus.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/illa-cloud.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: ILLA Cloud AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/illa-cloud.html",
+      "path": "appsumo-guides/illa-cloud.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/if-so.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: If-So AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/if-so.html",
+      "path": "appsumo-guides/if-so.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/icreate.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: iCreate AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/icreate.html",
+      "path": "appsumo-guides/icreate.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/hypi.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Hypi AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/hypi.html",
+      "path": "appsumo-guides/hypi.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/how-to-sell-appsumo-product.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: How to Sell Your Product on AppSumo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/how-to-sell-appsumo-product.html",
+      "path": "appsumo-guides/how-to-sell-appsumo-product.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/hopscotch.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Hopscotch AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/hopscotch.html",
+      "path": "appsumo-guides/hopscotch.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/hollyfy.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: HOLLYFY AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/hollyfy.html",
+      "path": "appsumo-guides/hollyfy.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/hippovideo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Hippo Video AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/hippovideo.html",
+      "path": "appsumo-guides/hippovideo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/hexospark.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Hexospark AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/hexospark.html",
+      "path": "appsumo-guides/hexospark.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/helloscribe.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: HelloScribe AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/helloscribe.html",
+      "path": "appsumo-guides/helloscribe.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/happyscribe.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Happy Scribe AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/happyscribe.html",
+      "path": "appsumo-guides/happyscribe.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/growmatik.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Growmatik AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/growmatik.html",
+      "path": "appsumo-guides/growmatik.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/gozen-forms.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: GoZen AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/gozen-forms.html",
+      "path": "appsumo-guides/gozen-forms.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/getshow.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: GetShow AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/getshow.html",
+      "path": "appsumo-guides/getshow.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/getgenie.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: GetGenie AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/getgenie.html",
+      "path": "appsumo-guides/getgenie.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/fynzo-survey.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Fynzo Survey AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/fynzo-survey.html",
+      "path": "appsumo-guides/fynzo-survey.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/formaloo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Formaloo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/formaloo.html",
+      "path": "appsumo-guides/formaloo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/flotiq.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Flotiq AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/flotiq.html",
+      "path": "appsumo-guides/flotiq.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/feederloop.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Feederloop AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/feederloop.html",
+      "path": "appsumo-guides/feederloop.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/feedblitz.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: FeedBlitz AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/feedblitz.html",
+      "path": "appsumo-guides/feedblitz.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/exposure.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Exposure AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/exposure.html",
+      "path": "appsumo-guides/exposure.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/ewww-image-optimizer.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: EWWW AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/ewww-image-optimizer.html",
+      "path": "appsumo-guides/ewww-image-optimizer.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/evolup.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Evolup AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/evolup.html",
+      "path": "appsumo-guides/evolup.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/embolden.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Embolden AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/embolden.html",
+      "path": "appsumo-guides/embolden.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/emailbadge.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Email Badge AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/emailbadge.html",
+      "path": "appsumo-guides/emailbadge.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/education-cloud-plus.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Education Cloud PLUS AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/education-cloud-plus.html",
+      "path": "appsumo-guides/education-cloud-plus.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/directual.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Directual AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/directual.html",
+      "path": "appsumo-guides/directual.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/dinorank.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: DinoRANK AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/dinorank.html",
+      "path": "appsumo-guides/dinorank.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/digital-first-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Digital First AI AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/digital-first-ai.html",
+      "path": "appsumo-guides/digital-first-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/dashed-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Dashed AI AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/dashed-ai.html",
+      "path": "appsumo-guides/dashed-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/curatora.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Curatora AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/curatora.html",
+      "path": "appsumo-guides/curatora.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/cubicl.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Cubicl AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/cubicl.html",
+      "path": "appsumo-guides/cubicl.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/cubewp.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: CubeWP AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/cubewp.html",
+      "path": "appsumo-guides/cubewp.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/creatosaurus.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Creatosaurus AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/creatosaurus.html",
+      "path": "appsumo-guides/creatosaurus.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/creasquare.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Creasquare AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/creasquare.html",
+      "path": "appsumo-guides/creasquare.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/creaitorai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Creaitor.ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/creaitorai.html",
+      "path": "appsumo-guides/creaitorai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/crawlq.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: CrawlQ AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/crawlq.html",
+      "path": "appsumo-guides/crawlq.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/copilotly.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Copilotly AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/copilotly.html",
+      "path": "appsumo-guides/copilotly.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/contextminds.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: ContextMinds AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/contextminds.html",
+      "path": "appsumo-guides/contextminds.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/contentpace.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Contentpace AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/contentpace.html",
+      "path": "appsumo-guides/contentpace.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/constant-contact.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Constant Contact AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/constant-contact.html",
+      "path": "appsumo-guides/constant-contact.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/cogniflow.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Cogniflow AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/cogniflow.html",
+      "path": "appsumo-guides/cogniflow.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/cloudpresenter.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Cloudpresenter AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/cloudpresenter.html",
+      "path": "appsumo-guides/cloudpresenter.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/clay.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Clay AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/clay.html",
+      "path": "appsumo-guides/clay.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/circleboom-publish.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Circleboom AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/circleboom-publish.html",
+      "path": "appsumo-guides/circleboom-publish.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/chopcast.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Chopcast AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/chopcast.html",
+      "path": "appsumo-guides/chopcast.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/cheat-layer.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Cheat Layer AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/cheat-layer.html",
+      "path": "appsumo-guides/cheat-layer.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/chatfluxio.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Chatflux.io AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/chatfluxio.html",
+      "path": "appsumo-guides/chatfluxio.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/chatabc.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: ChatABC AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/chatabc.html",
+      "path": "appsumo-guides/chatabc.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/centered.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Centered AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/centered.html",
+      "path": "appsumo-guides/centered.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/castnest.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: CastNest AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/castnest.html",
+      "path": "appsumo-guides/castnest.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/castmagic.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Castmagic AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/castmagic.html",
+      "path": "appsumo-guides/castmagic.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/caisy.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: caisy AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/caisy.html",
+      "path": "appsumo-guides/caisy.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/buttonizer.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Buttonizer AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/buttonizer.html",
+      "path": "appsumo-guides/buttonizer.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/bugpilot.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BugPilot AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/bugpilot.html",
+      "path": "appsumo-guides/bugpilot.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/browse-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Browse AI AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/browse-ai.html",
+      "path": "appsumo-guides/browse-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/breezedoc.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BreezeDoc 10% off social AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/breezedoc.html",
+      "path": "appsumo-guides/breezedoc.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/breakcold.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Breakcold AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/breakcold.html",
+      "path": "appsumo-guides/breakcold.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/brandvox.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BrandVox AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/brandvox.html",
+      "path": "appsumo-guides/brandvox.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/brandlens.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BrandLens AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/brandlens.html",
+      "path": "appsumo-guides/brandlens.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/bramework.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Bramework AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/bramework.html",
+      "path": "appsumo-guides/bramework.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/brain-pod-ai-writer.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Brain Pod AI Writer AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/brain-pod-ai-writer.html",
+      "path": "appsumo-guides/brain-pod-ai-writer.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/bouncecast.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BounceCast AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/bouncecast.html",
+      "path": "appsumo-guides/bouncecast.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/boost.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Boost AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/boost.html",
+      "path": "appsumo-guides/boost.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/booltool.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Booltool AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/booltool.html",
+      "path": "appsumo-guides/booltool.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/boardmix.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Boardmix AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/boardmix.html",
+      "path": "appsumo-guides/boardmix.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/blogely.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Blogely AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/blogely.html",
+      "path": "appsumo-guides/blogely.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/blogassistant.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BlogAssistant AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/blogassistant.html",
+      "path": "appsumo-guides/blogassistant.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/blixo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Blixo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/blixo.html",
+      "path": "appsumo-guides/blixo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/blitsai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Blits.ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/blitsai.html",
+      "path": "appsumo-guides/blitsai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/biq.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BiQ AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/biq.html",
+      "path": "appsumo-guides/biq.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/bingbangai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BingBang.ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/bingbangai.html",
+      "path": "appsumo-guides/bingbangai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/bigvu.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BIGVU - 23 BF AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/bigvu.html",
+      "path": "appsumo-guides/bigvu.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/bhuman.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BHuman AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/bhuman.html",
+      "path": "appsumo-guides/bhuman.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/bestregards.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BestRegards AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/bestregards.html",
+      "path": "appsumo-guides/bestregards.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/beezer.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Beezer AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/beezer.html",
+      "path": "appsumo-guides/beezer.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/beatovenai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Beatoven.ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/beatovenai.html",
+      "path": "appsumo-guides/beatovenai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/baseline.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Baseline AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/baseline.html",
+      "path": "appsumo-guides/baseline.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/bannerboo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: BannerBoo - Logo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/bannerboo.html",
+      "path": "appsumo-guides/bannerboo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/balloonary.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Balloonary AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/balloonary.html",
+      "path": "appsumo-guides/balloonary.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/badger.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Badger AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/badger.html",
+      "path": "appsumo-guides/badger.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/autorytr.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Autorytr AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/autorytr.html",
+      "path": "appsumo-guides/autorytr.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/atomchat.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AtomChat AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/atomchat.html",
+      "path": "appsumo-guides/atomchat.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/artsmart-ai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Artsmart.ai AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/artsmart-ai.html",
+      "path": "appsumo-guides/artsmart-ai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/appmysite.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AppMySite - logo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/appmysite.html",
+      "path": "appsumo-guides/appmysite.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/appily-app-builder.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Appily App Builder AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/appily-app-builder.html",
+      "path": "appsumo-guides/appily-app-builder.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/apphive.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Apphive AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/apphive.html",
+      "path": "appsumo-guides/apphive.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/apix-drive.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: ApiX Drive AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/apix-drive.html",
+      "path": "appsumo-guides/apix-drive.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/apiway.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Apiway AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/apiway.html",
+      "path": "appsumo-guides/apiway.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/alttextai.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AltText.ai 600x500 AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/alttextai.html",
+      "path": "appsumo-guides/alttextai.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/albato.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Albato AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/albato.html",
+      "path": "appsumo-guides/albato.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/aissistify.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AIssistify AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/aissistify.html",
+      "path": "appsumo-guides/aissistify.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/aimages.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Aimages AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/aimages.html",
+      "path": "appsumo-guides/aimages.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/aidol-studio.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AIDOL Studio AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/aidol-studio.html",
+      "path": "appsumo-guides/aidol-studio.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/agencyeasy.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AgencyEasy AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/agencyeasy.html",
+      "path": "appsumo-guides/agencyeasy.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/adilo.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Adilo AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/adilo.html",
+      "path": "appsumo-guides/adilo.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/acumbamail.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Acumbamail AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/acumbamail.html",
+      "path": "appsumo-guides/acumbamail.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/acadle.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Acadle AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/acadle.html",
+      "path": "appsumo-guides/acadle.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/aasaan.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Aasaan AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/aasaan.html",
+      "path": "appsumo-guides/aasaan.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-guides/11sight.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: 11Sight AppSumo Deal: Fit & Buying Guide | artificial.one",
+      "url": "https://www.artificial.one/appsumo-guides/11sight.html",
+      "path": "appsumo-guides/11sight.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:df56f8b2296226939c2e317beda1665fcb9d37a6:M:appsumo-ai-tools.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:54:17+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AppSumo AI Deals Available Today | artificial.one",
+      "url": "https://www.artificial.one/appsumo-ai-tools.html",
+      "path": "appsumo-ai-tools.html",
+      "source_commit": "df56f8b22962"
+    },
+    {
+      "id": "git:97036c2970ea7a334b62ddd7a2d76045d03828db:news_items_added",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:16:31+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 4 new AI-news items to the live briefing.",
+      "details": [
+        "Few people pay for AI, but those who do spend big",
+        "Anthropic cuts off Claude's internet access after the model autonomously filed a fake homicide tip with Philadelphia police",
+        "Google's Gemini 4 \"Carbon\" model is reportedly matching Anthropic's Opus 5.5 coding performance",
+        "AI agent makers are promising privacy — will they deliver?"
+      ],
+      "source_commit": "97036c2970ea"
+    },
+    {
+      "id": "git:97036c2970ea7a334b62ddd7a2d76045d03828db:M:news.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:16:31+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://www.artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "97036c2970ea"
+    },
+    {
+      "id": "git:97036c2970ea7a334b62ddd7a2d76045d03828db:M:news-archive.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:16:31+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI News Archive | artificial.one",
+      "url": "https://www.artificial.one/news-archive.html",
+      "path": "news-archive.html",
+      "source_commit": "97036c2970ea"
+    },
+    {
+      "id": "git:97036c2970ea7a334b62ddd7a2d76045d03828db:M:index.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:16:31+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Build My AI Setup | Artificial.One",
+      "url": "https://www.artificial.one/",
+      "path": "index.html",
+      "source_commit": "97036c2970ea"
+    },
+    {
+      "id": "git:97036c2970ea7a334b62ddd7a2d76045d03828db:A:news/2026/10/10/google-s-gemini-4-carbon-model-is-reportedly-matching-anthropic-s-opus-5-5-coding.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:16:31+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: Google's Gemini 4 'Carbon' Model Competes with Anthropic's Opus 5.5 | artificial.one",
+      "url": "https://www.artificial.one/news/2026/10/10/google-s-gemini-4-carbon-model-is-reportedly-matching-anthropic-s-opus-5-5-coding.html",
+      "path": "news/2026/10/10/google-s-gemini-4-carbon-model-is-reportedly-matching-anthropic-s-opus-5-5-coding.html",
+      "source_commit": "97036c2970ea"
+    },
+    {
+      "id": "git:97036c2970ea7a334b62ddd7a2d76045d03828db:A:news/2026/10/09/ai-agent-makers-are-promising-privacy-will-they-deliver.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T15:16:31+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: AI Privacy Promises: Can Companies Deliver? | artificial.one",
+      "url": "https://www.artificial.one/news/2026/10/09/ai-agent-makers-are-promising-privacy-will-they-deliver.html",
+      "path": "news/2026/10/09/ai-agent-makers-are-promising-privacy-will-they-deliver.html",
+      "source_commit": "97036c2970ea"
+    },
+    {
+      "id": "git:49b4bd39a87c018dc87b3adecfd406b4993690cc:affiliate_opportunities_found",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T13:21:34+02:00",
+      "kind": "affiliate_opportunities_found",
+      "summary": "Discovered 1 new affiliate opportunities for evaluation.",
+      "details": [
+        "Teachable"
+      ],
+      "source_commit": "49b4bd39a87c"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:vendor_changes_detected",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "vendor_changes_detected",
+      "summary": "Published 4 confirmed vendor pricing, plan, or availability changes.",
+      "details": [
+        "Turbotic",
+        "Wave.video",
+        "Alteryx AI",
+        "ClickUp AI"
+      ],
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:M:workflow-recipes/turn-recordings-into-content.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Turn one recording into a week of content — AI Workflow Recipe | artificial.one",
+      "url": "https://www.artificial.one/workflow-recipes/turn-recordings-into-content.html",
+      "path": "workflow-recipes/turn-recordings-into-content.html",
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:M:workflow-recipes/ship-an-ai-powered-product.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Ship an AI-powered product — AI Workflow Recipe | artificial.one",
+      "url": "https://www.artificial.one/workflow-recipes/ship-an-ai-powered-product.html",
+      "path": "workflow-recipes/ship-an-ai-powered-product.html",
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:M:workflow-recipes/onboard-a-growing-team.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Onboard and operate a growing team — AI Workflow Recipe | artificial.one",
+      "url": "https://www.artificial.one/workflow-recipes/onboard-a-growing-team.html",
+      "path": "workflow-recipes/onboard-a-growing-team.html",
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:M:workflow-recipes/build-a-business-website.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Build a business website that captures demand — AI Workflow Recipe | artificial.one",
+      "url": "https://www.artificial.one/workflow-recipes/build-a-business-website.html",
+      "path": "workflow-recipes/build-a-business-website.html",
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:M:index.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Build My AI Setup | Artificial.One",
+      "url": "https://www.artificial.one/",
+      "path": "index.html",
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:M:developers.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Artificial.One Public AI Tool Data API",
+      "url": "https://www.artificial.one/developers.html",
+      "path": "developers.html",
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:M:ask-elephant.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Ask the Elephant: AI Tool Decision Assistant | artificial.one",
+      "url": "https://www.artificial.one/ask-elephant.html",
+      "path": "ask-elephant.html",
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:M:ai-tool-observatory.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Price & Product Changes | artificial.one",
+      "url": "https://www.artificial.one/ai-tool-observatory.html",
+      "path": "ai-tool-observatory.html",
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:M:ai-tool-database.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Database: Prices, Free Plans & Verified Sources | artificial.one",
+      "url": "https://www.artificial.one/ai-tool-database.html",
+      "path": "ai-tool-database.html",
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:7161a9e1674df99a8a0078b6f9b655142312df6b:M:ai-tool-changes.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T12:46:57+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI Tool Pricing & Feature Change History | artificial.one",
+      "url": "https://www.artificial.one/ai-tool-changes.html",
+      "path": "ai-tool-changes.html",
+      "source_commit": "7161a9e1674d"
+    },
+    {
+      "id": "git:201391579caf59642b365768b883b6aa42f014b8:news_items_added",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T08:33:51+02:00",
+      "kind": "news_items_added",
+      "summary": "Added 1 new AI-news items to the live briefing.",
+      "details": [
+        "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead"
+      ],
+      "source_commit": "201391579caf"
+    },
+    {
+      "id": "git:201391579caf59642b365768b883b6aa42f014b8:M:news.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T08:33:51+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Latest AI, LLM & AI Tools News | artificial.one",
+      "url": "https://www.artificial.one/news.html",
+      "path": "news.html",
+      "source_commit": "201391579caf"
+    },
+    {
+      "id": "git:201391579caf59642b365768b883b6aa42f014b8:M:news-archive.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T08:33:51+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: AI News Archive | artificial.one",
+      "url": "https://www.artificial.one/news-archive.html",
+      "path": "news-archive.html",
+      "source_commit": "201391579caf"
+    },
+    {
+      "id": "git:201391579caf59642b365768b883b6aa42f014b8:M:index.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T08:33:51+02:00",
+      "kind": "webpage_updated",
+      "summary": "Updated webpage: Build My AI Setup | Artificial.One",
+      "url": "https://www.artificial.one/",
+      "path": "index.html",
+      "source_commit": "201391579caf"
+    },
+    {
+      "id": "git:201391579caf59642b365768b883b6aa42f014b8:A:news/2026/10/10/anthropic-can-t-reliably-control-its-ai-agents-it-s-cutting-off-its-internal-evals.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T08:33:51+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: Anthropic Restricts AI Access to Internet for Safety Reasons | artificial.one",
+      "url": "https://www.artificial.one/news/2026/10/10/anthropic-can-t-reliably-control-its-ai-agents-it-s-cutting-off-its-internal-evals.html",
+      "path": "news/2026/10/10/anthropic-can-t-reliably-control-its-ai-agents-it-s-cutting-off-its-internal-evals.html",
+      "source_commit": "201391579caf"
+    },
+    {
+      "id": "git:201391579caf59642b365768b883b6aa42f014b8:A:news/2026/10/09/trump-s-attempt-to-rename-ai-is-looking-awfully-artificial.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T08:33:51+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: Trump's AI rebranding strategy faces skepticism | artificial.one",
+      "url": "https://www.artificial.one/news/2026/10/09/trump-s-attempt-to-rename-ai-is-looking-awfully-artificial.html",
+      "path": "news/2026/10/09/trump-s-attempt-to-rename-ai-is-looking-awfully-artificial.html",
+      "source_commit": "201391579caf"
+    },
+    {
+      "id": "git:201391579caf59642b365768b883b6aa42f014b8:A:news/2026/10/09/openai-revenue-keeps-surging-as-company-seeks-30-billion-in-fresh-capital.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T08:33:51+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: OpenAI's Revenue Growth and $30 Billion Capital Raise Spark Market Concerns | artificial.one",
+      "url": "https://www.artificial.one/news/2026/10/09/openai-revenue-keeps-surging-as-company-seeks-30-billion-in-fresh-capital.html",
+      "path": "news/2026/10/09/openai-revenue-keeps-surging-as-company-seeks-30-billion-in-fresh-capital.html",
+      "source_commit": "201391579caf"
+    },
+    {
+      "id": "git:201391579caf59642b365768b883b6aa42f014b8:A:news/2026/10/09/anthropic-launches-a-free-ai-scanner-for-open-source-projects.html",
+      "date": "2026-10-10",
+      "occurred_at": "2026-10-10T08:33:51+02:00",
+      "kind": "webpage_created",
+      "summary": "Published webpage: Anthropic's Free AI Scanner for Open-Source Projects | artificial.one",
+      "url": "https://www.artificial.one/news/2026/10/09/anthropic-launches-a-free-ai-scanner-for-open-source-projects.html",
+      "path": "news/2026/10/09/anthropic-launches-a-free-ai-scanner-for-open-source-projects.html",
+      "source_commit": "201391579caf"
+    },
     {
       "id": "git:03e88a3e691f29980d6e3686aeb8bd2dfe36cf65:news_items_added",
       "date": "2026-10-10",
