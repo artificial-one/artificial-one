@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-11",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -9,9 +9,9 @@
     "approved_link_pending": 11,
     "existing_active": 39,
     "not_qualified": 14,
-    "policy_review_required": 21,
+    "policy_review_required": 22,
     "program_paused": 1,
-    "ready_for_owner_application": 387,
+    "ready_for_owner_application": 386,
     "terms_required": 3
   },
   "opportunities": [
@@ -2141,7 +2141,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2396,7 +2396,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 77,
+      "review_days": 81,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2734,7 +2734,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 51,
+      "review_days": 56,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -4936,6 +4936,59 @@
       }
     },
     {
+      "id": "partnerstack:shade",
+      "network": "partnerstack",
+      "name": "Shade",
+      "slug": "shade",
+      "description": "Shade is an intelligent cloud storage platform that transforms post-production workflows. It consolidates file streaming, review and approval, automated metadata, AI search all in one platform.",
+      "offer": "Earn 10% commission on all first year revenue (ACV $25,000/customer)",
+      "tags": [
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Design",
+        "Digital Advertising",
+        "Hot",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shade?company=shade&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/18dg3qEU0Uw2pqGQQKw_W1tL0molNftUk/edit?usp=sharing&ouid=116868290743095582619&rtpof=true&sd=true",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 8,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "design",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:supportbee",
       "network": "partnerstack",
       "name": "SupportBee",
@@ -6189,6 +6242,60 @@
       }
     },
     {
+      "id": "partnerstack:aisdrinc",
+      "network": "partnerstack",
+      "name": "AiSDR, Inc.",
+      "slug": "aisdrinc",
+      "description": "AiSDR is the first AI sales agent that can take care of the entire outreach end-to-end and have a meaningful conversation with prospects through emails, LinkedIn, and text messages that sound like you wrote them. Pick between a reseller and referral options and earn commission from each subscription you bring. Either manage the entire sales process for 30% lifetime, or introduce new prospects to us for 20% commission for 1 year.",
+      "offer": "Earn 20% commissions for the first year!",
+      "tags": [
+        "Affiliates",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Hot",
+        "Marketing",
+        "Publishers",
+        "Referral Partners",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/aisdrinc?company=aisdrinc&gref=marketplace",
+      "terms_url": "https://aisdr.com/terms/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 76,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:beautifulai",
       "network": "partnerstack",
       "name": "Beautiful.ai",
@@ -6980,57 +7087,6 @@
         "ai",
         "artificial intelligence",
         "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:shade",
-      "network": "partnerstack",
-      "name": "Shade",
-      "slug": "shade",
-      "description": "Shade is an intelligent cloud storage platform that transforms post-production workflows. It consolidates file streaming, review and approval, automated metadata, AI search all in one platform.",
-      "offer": "Earn 10% commission on all first year revenue (ACV $25,000/customer)",
-      "tags": [
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Design",
-        "Digital Advertising",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shade?company=shade&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/18dg3qEU0Uw2pqGQQKw_W1tL0molNftUk/edit?usp=sharing&ouid=116868290743095582619&rtpof=true&sd=true",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 8,
-      "source": "https://market.partnerstack.com/",
-      "score": 75,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "design",
-        "productivity",
-        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -8355,58 +8411,6 @@
       }
     },
     {
-      "id": "partnerstack:aisdrinc",
-      "network": "partnerstack",
-      "name": "AiSDR, Inc.",
-      "slug": "aisdrinc",
-      "description": "AiSDR is the first AI sales agent that can take care of the entire outreach end-to-end and have a meaningful conversation with prospects through emails, LinkedIn, and text messages that sound like you wrote them. Pick between a reseller and referral options and earn commission from each subscription you bring. Either manage the entire sales process for 30% lifetime, or introduce new prospects to us for 20% commission for 1 year.",
-      "offer": "Earn 20% commissions for the first year!",
-      "tags": [
-        "Affiliates",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Marketing",
-        "Publishers",
-        "Referral Partners",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/aisdrinc?company=aisdrinc&gref=marketplace",
-      "terms_url": "https://aisdr.com/terms/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 71,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:brevo",
       "network": "partnerstack",
       "name": "Brevo",
@@ -8939,52 +8943,6 @@
       }
     },
     {
-      "id": "partnerstack:ployai",
-      "network": "partnerstack",
-      "name": "Ploy.ai",
-      "slug": "ployai",
-      "description": "Ploy is an AI-powered marketing platform platform that turns your website into a growth engine. Ploy builds, optimize, and publish high-converting marketing websites. From on-brand page design and content to SEO/AEO, visitor identification, ABM, and paid-campaign reporting, Ploy turns your site into a living growth engine. Design, ship, and iterate faster, all while staying true to your brand.",
-      "offer": "Earn 50% for 12 months for referred customers!",
-      "tags": [
-        "Hot"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ployai?company=ployai&gref=marketplace",
-      "terms_url": "",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 69,
-      "relevance_matches": [
-        "ai",
-        "content",
-        "design",
-        "marketing",
-        "seo"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:callhippo",
       "network": "partnerstack",
       "name": "CallHippo",
@@ -9186,7 +9144,7 @@
       "name": "Nexcess",
       "slug": "nexcess",
       "description": "Nexcess delivers specialty cloud, managed hosting, bare metal and enterprise AI infrastructure for performance-sensitive and regulated workloads. Partners choose us for co-selling support, technical architects, compliance-ready environments and expert engineering that reduces delivery risk, protects services revenue and helps close and retain clients.",
-      "offer": "Earn 10% Monthly Residual Payments",
+      "offer": "Earn 5% Monthly Residual Payments",
       "tags": [
         "Affiliates",
         "Development",
@@ -10861,7 +10819,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11137,63 +11095,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:ninjaone",
-      "network": "partnerstack",
-      "name": "NinjaOne",
-      "slug": "ninjaone",
-      "description": "Become a NinjaOne affiliate partner and empower your clients to streamline their IT operations! NinjaOne's RMM platform offers visibility, security & control, boosting client productivity & reducing IT costs. #1 for support, Ninja is a proven solution.",
-      "offer": "Join our affiliate network and earn on clicks, leads, and demos! We personalize based on your advertisement portfolio. Visit our website to learn more about NinjaOne and apply today!",
-      "tags": [
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Development",
-        "Hot",
-        "IT Infrastructure",
-        "IT Management",
-        "IoT Management",
-        "Office Software",
-        "Other",
-        "Publishers",
-        "Security",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ninjaone?company=ninjaone&gref=marketplace",
-      "terms_url": "https://www.ninjaone.com/affiliate-program-terms/",
-      "website": "https://www.ninjaone.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "customer service",
-        "development",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -12530,7 +12431,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 121,
+      "review_days": 128,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -16219,7 +16120,6 @@
       "tags": [
         "Affiliates",
         "Customer Service",
-        "Hot",
         "IT Management",
         "Office Software",
         "Publishers",
@@ -16968,11 +16868,55 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 21,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
         "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:ployai",
+      "network": "partnerstack",
+      "name": "Ploy.ai",
+      "slug": "ployai",
+      "description": "Ploy is an AI-powered marketing platform platform that turns your website into a growth engine. Ploy builds, optimize, and publish high-converting marketing websites. From on-brand page design and content to SEO/AEO, visitor identification, ABM, and paid-campaign reporting, Ploy turns your site into a living growth engine. Design, ship, and iterate faster, all while staying true to your brand.",
+      "offer": "Earn 50% for 12 months for referred customers!",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ployai?company=ployai&gref=marketplace",
+      "terms_url": "",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 64,
+      "relevance_matches": [
+        "ai",
+        "content",
+        "design",
+        "marketing",
+        "seo"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -18277,18 +18221,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -18479,6 +18415,61 @@
       "relevance_matches": [
         "customer service",
         "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:ninjaone",
+      "network": "partnerstack",
+      "name": "NinjaOne",
+      "slug": "ninjaone",
+      "description": "Become a NinjaOne affiliate partner and empower your clients to streamline their IT operations! NinjaOne's RMM platform offers visibility, security & control, boosting client productivity & reducing IT costs. #1 for support, Ninja is a proven solution.",
+      "offer": "Join our affiliate network and earn on clicks, leads, and demos! We personalize based on your advertisement portfolio. Visit our website to learn more about NinjaOne and apply today!",
+      "tags": [
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Customer Service",
+        "Development",
+        "IT Infrastructure",
+        "IT Management",
+        "IoT Management",
+        "Office Software",
+        "Other",
+        "Publishers",
+        "Security"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/ninjaone?company=ninjaone&gref=marketplace",
+      "terms_url": "https://www.ninjaone.com/affiliate-program-terms/",
+      "website": "https://www.ninjaone.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 62,
+      "relevance_matches": [
+        "customer service",
+        "development",
+        "productivity",
+        "software"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -19398,7 +19389,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 109,
+      "review_days": 115,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19878,7 +19869,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 19,
+      "review_days": 20,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19891,14 +19882,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -21405,7 +21396,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 24,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21924,7 +21915,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 20,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "score": 55,
       "relevance_matches": [
@@ -22995,7 +22986,6 @@
       "tags": [
         "Accounting",
         "Affiliates",
-        "Hot",
         "Publishers",
         "Trusted"
       ],
@@ -23056,7 +23046,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 41,
+      "review_days": 42,
       "source": "https://market.partnerstack.com/",
       "score": 46,
       "relevance_matches": [
@@ -23920,7 +23910,7 @@
       "name": "Guesty",
       "slug": "guesty",
       "description": "With Guesty’s Affiliate Program, you can earn an additional stream of income, with up to 5K per referral Help your network of hospitality pros succeed in growing their businesses with our advanced hospitality operations platform.",
-      "offer": "Earn $100 for a Customer's First Listing",
+      "offer": "$50 for per Listing",
       "tags": [
         "Hot",
         "Trusted"
@@ -23986,7 +23976,7 @@
       "name": "LettrLabs",
       "slug": "lettrlabs",
       "description": "LettrLabs is an automated direct mail platform designed to target, segment, automate and measure results of campaigns. We empower organizations to connect with their clients through personalized, handwritten mailers that leave a lasting impression using automations that make direct mail as easy as digital.",
-      "offer": "Earn 4% for 18 months",
+      "offer": "Earn 3% for 12 months",
       "tags": [],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/lettrlabs?company=lettrlabs&gref=marketplace",
       "terms_url": "https://www.lettrlabs.com/company/terms-of-service",
