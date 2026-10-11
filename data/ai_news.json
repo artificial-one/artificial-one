@@ -1,7 +1,78 @@
 {
   "version": 1,
-  "updated_at": "2026-10-11T13:29:20.738480+00:00",
+  "updated_at": "2026-10-11T22:26:32.998569+00:00",
   "items": [
+    {
+      "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+      "source": "The Verge AI",
+      "published_at": "2026-10-11T18:33:56+00:00",
+      "display_date": "Oct 11, 2026",
+      "category": "AI Tools & Products",
+      "description": "When President Donald Trump announced his plans to rebrand artificial intelligence as \"super intelligence,\" you'd be forgiven for being skeptical that it would catch on. While most of the broader population is sticking with AI, some of Silicon Valley's most powerful are falling in line and trying to give Trump the great AI rebrand he […]",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Can the AI industry persuade data center opponents by getting rid of NDAs?",
+      "url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-11T16:52:33+00:00",
+      "display_date": "Oct 11, 2026",
+      "category": "AI Tools & Products",
+      "description": "On Equity, we debate the impact of data center moratoriums and whether the AI industry has a communication problem.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "AI agent teams waste massive tokens for barely measurable quality gains, research finds",
+      "url": "https://the-decoder.com/ai-agent-teams-waste-massive-tokens-for-barely-measurable-quality-gains-research-finds/",
+      "source": "The Decoder",
+      "published_at": "2026-10-11T15:39:26+00:00",
+      "display_date": "Oct 11, 2026",
+      "category": "Models & LLMs",
+      "description": "Teams of AI agents barely outperform solo agents but cost up to 5.1x more, according to Vals AI. Only one out of four tests with GPT-6 Sol and Claude Opus 5.5 showed a measurable gain. Anthropic's own data backs this up: beyond ten agents, quality plateaus while token costs keep climbing. The article AI agent teams waste massive tokens for barely measurable quality gains, research finds appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "These execs think voice AI hasn’t reached its ChatGPT moment yet",
+      "url": "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-11T14:00:00+00:00",
+      "display_date": "Oct 11, 2026",
+      "category": "Models & LLMs",
+      "description": "Voice AI's often misses important points for its context layer, and causes the whole pipeline to break",
+      "related": {
+        "title": "Evaluate ElevenLabs for this workflow",
+        "url": "partner-offers/elevenlabs-ai-voice.html",
+        "offer_id": "elevenlabs"
+      },
+      "archive_url": "news/2026/10/11/these-execs-think-voice-ai-hasn-t-reached-its-chatgpt-moment-yet.html"
+    },
+    {
+      "title": "AI agents overstate their results and remain far from autonomous research, study finds",
+      "url": "https://the-decoder.com/ai-agents-overstate-their-results-and-remain-far-from-autonomous-research-study-finds/",
+      "source": "The Decoder",
+      "published_at": "2026-10-11T13:44:32+00:00",
+      "display_date": "Oct 11, 2026",
+      "category": "Models & LLMs",
+      "description": "Epoch AI and Anthropic independently found the same thing: current AI models like GPT-5.6 Sol and Claude Fable 5 can run experiments but lack scientific self-criticism and genuine creative thinking. At best, Sol reached 15 percent of the human reference score, and even that came from methods researchers already knew. The models' biggest weakness is still their inability to critically question their own results. The article AI agents overstate their results and remain far from autonomous research",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "title": "Cheaper AI tokens are driving more demand, and that's Jensen Huang's best-case scenario",
       "url": "https://the-decoder.com/cheaper-ai-tokens-are-driving-more-demand-and-thats-jensen-huangs-best-case-scenario/",
@@ -164,35 +235,6 @@
       }
     },
     {
-      "title": "\"How much beauty have we lost?\" Mathematicians react with shock and disgust as OpenAI bulldozes their field",
-      "url": "https://the-decoder.com/how-much-beauty-have-we-lost-mathematicians-react-with-shock-and-disgust-as-openai-bulldozes-their-field/",
-      "source": "The Decoder",
-      "published_at": "2026-10-10T13:03:59+00:00",
-      "display_date": "Oct 10, 2026",
-      "category": "Research",
-      "description": "OpenAI published more than 700 AI-generated manuscripts claiming solutions to open math problems. A math blog then collected over 100 responses from researchers, ranging from fascination with new ideas to existential fears and grief over a lost way of working. Fields Medalist Hugo Duminil-Copin wrote, \"I am paralysed.\" The article \"How much beauty have we lost?\" Mathematicians react with shock and disgust as OpenAI bulldozes their field appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "Few people pay for AI, but those who do spend big",
-      "url": "https://the-decoder.com/few-people-pay-for-ai-but-those-who-do-spend-bigonly-a-few-users-pay-for-ai-but-those-who-do-pay-a-lot/",
-      "source": "The Decoder",
-      "published_at": "2026-10-10T10:54:56+00:00",
-      "display_date": "Oct 10, 2026",
-      "category": "AI Tools & Products",
-      "description": "Andreessen Horowitz tracks actual US consumer spending for the first time in its latest Top 100 AI list. Nearly half of US consumers use AI, but only 4.5 percent pay for a subscription. The top one percent of payers spend about $900 a month, mostly on professional tools for development and automation. The article Few people pay for AI, but those who do spend big appeared first on The Decoder .",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/10/few-people-pay-for-ai-but-those-who-do-spend-big.html"
-    },
-    {
       "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
       "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
       "source": "TechCrunch AI",
@@ -280,34 +322,6 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/10/09/pure-insanity-mathematicians-will-need-years-to-make-sense-of-openai-s-latest-drop.html"
-    },
-    {
-      "title": "Nikon microscopic video competition winner disqualified for using generative AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1008930/nikon-small-world-in-motion-winner-ai",
-      "source": "The Verge AI",
-      "published_at": "2026-10-09T18:06:57+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "AI Tools & Products",
-      "description": "Nikon says the video that originally won first place in its Small World in Motion contest \"did not comply with the competition rules regarding generative AI.\" BBC reports that the original first place video from Dr. Ning Xu claimed to show \"tiny, hair-like structures called cilia moving in the airway of a child with the […]",
-      "related": {
-        "title": "Evaluate Descript for this workflow",
-        "url": "partner-offers/descript-ai-video-editing.html",
-        "offer_id": "descript"
-      }
-    },
-    {
-      "title": "Amazon drops data center NDAs, and AI agents want your credit card",
-      "url": "https://techcrunch.com/podcast/amazon-drops-data-center-ndas-and-ai-agents-want-your-credit-card/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-09T16:53:02+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "AI Business",
-      "description": "Amazon says it will stop using NDAs when negotiating data center deals with local governments, following a similar move from Microsoft earlier this year. Secrecy has fueled community backlash against AI infrastructure, with opposition leading to hundreds of proposed and enacted moratoriums from New York to San Francisco. Meanwhile, a wave of startups is betting that consumers will hand AI agents access […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
     },
     {
       "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
@@ -505,20 +519,6 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/10/02/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents.html"
-    },
-    {
-      "title": "The latest AI news we announced in September 2026",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
-      "source": "Google AI",
-      "published_at": "2026-10-02T15:00:00+00:00",
-      "display_date": "Oct 02, 2026",
-      "category": "AI Tools & Products",
-      "description": "A video showing the September AI updates",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
     }
   ]
 }
