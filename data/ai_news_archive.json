@@ -1,7 +1,203 @@
 {
   "version": 1,
-  "updated_at": "2026-10-11T06:24:53.925151+00:00",
+  "updated_at": "2026-10-11T13:29:25.289501+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/11/microsoft-s-nadella-bows-to-trump-s-language-diktat-on-super-intelligence-and-uses.html",
+      "created_at": "2026-10-11T13:29:25.289501+00:00",
+      "source": {
+        "title": "Microsoft's Nadella bows to Trump's language diktat on \"Super Intelligence\" and uses it to attack OpenAI and Anthropic",
+        "url": "https://the-decoder.com/microsofts-nadella-bows-to-trumps-language-diktat-on-super-intelligence-and-uses-it-to-attack-openai-and-anthropic/",
+        "source": "The Decoder",
+        "published_at": "2026-10-11T09:08:35+00:00",
+        "display_date": "Oct 11, 2026",
+        "category": "Models & LLMs",
+        "description": "Microsoft CEO Satya Nadella now calls artificial intelligence \"super intelligence\" instead of artificial intelligence, falling in line with Trump's preferred language. In his latest blog post, he frames AI models as insider security threats, taking yet another shot at OpenAI and Anthropic. The real motive is business: Microsoft risks falling behind as AI labs turn their models into the primary computer interface. The article Microsoft's Nadella bows to Trump's language diktat on \"Super Intellige",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Microsoft CEO adopts Trump's AI terminology to undermine rivals",
+        "summary": "Microsoft's Satya Nadella aligns with Trump's preferred language for AI while criticizing OpenAI and Anthropic, suggesting a strategic move to protect Microsoft's business interests.",
+        "facts": [
+          {
+            "statement": "Nadella uses 'Super Intelligence' instead of 'Artificial Intelligence'.",
+            "evidence": "microsoft's nadella bows to trump's language diktat on"
+          },
+          {
+            "statement": "Nadella frames AI models as insider security threats.",
+            "evidence": "He argues that companies should treat AI models like insider security threats"
+          },
+          {
+            "statement": "Microsoft is replacing OpenAI and Anthropic models with cheaper alternatives.",
+            "evidence": "Microsoft has long been that default computer interface, but it's badly behind with its own products"
+          }
+        ],
+        "why_it_matters": "Nadella's shift in terminology and criticism of rivals may be a strategic move to protect Microsoft's business interests. By aligning with Trump's language, he could be trying to gain political advantage while undermining competitors. This highlights the complex interplay between corporate strategy, political influence, and technological competition.",
+        "elephant_take": "🐘 鼋Microsoft is using Trump's language to attack rivals, but it's all about business. The CEO is trying to protect Microsoft's margins by pushing for model diversity and control, even if it means undermining OpenAI and Anthropic.",
+        "caveat": "The article suggests Nadella's actions may be driven by business strategy rather than genuine concern for AI safety.",
+        "who_should_care": [
+          "Tech executives",
+          "AI researchers",
+          "Political analysts"
+        ],
+        "what_to_do": [
+          "Monitor Microsoft's AI strategies",
+          "Analyze political influence on tech decisions",
+          "Evaluate competitive dynamics in AI development",
+          "Assess corporate motives behind AI terminology changes"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Microsoft%27s%20Nadella%20bows%20to%20Trump%27s%20language%20diktat%20on%20%22Super%20Intelligence%22%20and%20uses%20it%20to%20attack%20OpenAI%20and%20Anthropic%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/11/odyssey-3-is-a-new-generative-world-model-that-you-can-try-for-free.html",
+      "created_at": "2026-10-11T13:29:25.289501+00:00",
+      "source": {
+        "title": "Odyssey-3 is a new generative world model that you can try for free",
+        "url": "https://the-decoder.com/odyssey-3-is-a-new-generative-world-model-that-you-can-try-for-free/",
+        "source": "The Decoder",
+        "published_at": "2026-10-11T07:48:01+00:00",
+        "display_date": "Oct 11, 2026",
+        "category": "Models & LLMs",
+        "description": "Odyssey is making its world model Odyssey-3 available as a public research preview. The 14-billion-parameter model generates interactive environments from text prompts in real time and can reportedly control robots, drones, and even GTA V. Odyssey claims top scores on physics benchmarks, though the methodology behind those results has limits. The article Odyssey-3 is a new generative world model that you can try for free appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Odyssey-3: A Free Generative World Model for Exploration and Control",
+        "summary": "Odyssey-3 is a new generative world model that allows users to create interactive environments from text prompts. It can control robots, drones, and video games, with public access and API availability.",
+        "facts": [
+          {
+            "statement": "Odyssey-3 generates interactive environments from text prompts in real time.",
+            "evidence": "The model generates interactive environments from text prompts in real time"
+          },
+          {
+            "statement": "Odyssey-3 can control robots, drones, and video game characters.",
+            "evidence": "Beyond generating virtual worlds, Odyssey-3 is designed to serve as a foundation for controlling different systems"
+          },
+          {
+            "statement": "Odyssey-3 has top scores on physics benchmarks but with caveats.",
+            "evidence": "pixels. physics benchmark claims come with"
+          }
+        ],
+        "why_it_matters": "Odyssey-3 represents a significant advancement in generative world models, offering tools for researchers and developers to explore interactive environments. Its potential applications in robotics, autonomous driving, and video games highlight its versatility and impact on AI research.",
+        "elephant_take": "🐘 鼋 Odyssey-3 is a fascinating glimpse into the future of AI, but the physics benchmark results are a reminder that even the most advanced models have limitations. The free demo is a great starting point for exploring this new frontier.",
+        "caveat": "The physics benchmark scores come with caveats and may not reflect the model's true capabilities.",
+        "who_should_care": [
+          "AI researchers",
+          "Robotics developers",
+          "Video game creators"
+        ],
+        "what_to_do": [
+          "Explore the free online demo",
+          "Apply for API access",
+          "Review the benchmark results carefully"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Odyssey-3%20is%20a%20new%20generative%20world%20model%20that%20you%20can%20try%20for%20free%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/10/few-people-pay-for-ai-but-those-who-do-spend-big.html",
+      "created_at": "2026-10-11T13:29:25.289501+00:00",
+      "source": {
+        "title": "Few people pay for AI, but those who do spend big",
+        "url": "https://the-decoder.com/few-people-pay-for-ai-but-those-who-do-spend-bigonly-a-few-users-pay-for-ai-but-those-who-do-pay-a-lot/",
+        "source": "The Decoder",
+        "published_at": "2026-10-10T10:54:56+00:00",
+        "display_date": "Oct 10, 2026",
+        "category": "AI Tools & Products",
+        "description": "Andreessen Horowitz tracks actual US consumer spending for the first time in its latest Top 100 AI list. Nearly half of US consumers use AI, but only 4.5 percent pay for a subscription. The top one percent of payers spend about $900 a month, mostly on professional tools for development and automation. The article Few people pay for AI, but those who do spend big appeared first on The Decoder .",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "AI Adoption Grows, But Spending Remains Concentrated",
+        "summary": "Despite widespread AI usage, only a small fraction of users pay for it, with high-spending individuals driving most revenue. Andreessen Horowitz's data highlights the disparity between free and paid AI users.",
+        "facts": [
+          {
+            "statement": "Nearly half of US consumers use AI, but only 4.5 percent pay for a subscription.",
+            "evidence": "Nearly half of US consumers use AI, but only 4.5 percent pay for a subscription"
+          },
+          {
+            "statement": "The top one percent of payers spend about $900 a month on work and creative tools.",
+            "evidence": "The top one percent of spenders accounts for nearly a fifth of all observed AI spending"
+          },
+          {
+            "statement": "AI is widely used, but only a small group pays for it, and that group pays a lot.",
+            "evidence": "AI is widely used, but only a small group pays for it, and that group pays a lot"
+          }
+        ],
+        "why_it_matters": "The data reveals a stark divide between AI adoption and monetization. While many use AI for casual purposes, the majority of revenue comes from a small, high-spending segment. This concentration raises concerns about accessibility and inequality in AI usage.",
+        "elephant_take": "🐘 鼋 The AI world is a two-tier system: one where the few spend big on tools, and the rest just scratch the surface. It's a digital divide that could widen social gaps.",
+        "caveat": "The data is based on observed spending, not total revenue, and may not reflect global trends.",
+        "who_should_care": [
+          "AI developers",
+          "Economists",
+          "Policy makers"
+        ],
+        "what_to_do": [
+          "Monitor AI spending trends",
+          "Address accessibility issues in AI tools",
+          "Consider the impact of subscription models on user engagement"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Few%20people%20pay%20for%20AI%2C%20but%20those%20who%20do%20spend%20big%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/10/satya-nadella-says-we-should-assume-all-ai-models-are-compromised.html",
       "created_at": "2026-10-11T06:24:53.925151+00:00",
@@ -7335,6 +7531,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/cheaper-ai-tokens-are-driving-more-demand-and-thats-jensen-huangs-best-case-scenario/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-11T13:29:25.289501+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/arxiv-caps-submissions-at-two-per-month-as-ai-paper-flood-overwhelms-the-preprint-server/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-11T13:29:25.289501+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-11T13:29:25.289501+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-11T06:24:53.925151+00:00",
@@ -7350,12 +7564,6 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
       "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
       "at": "2026-10-11T06:24:53.925151+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/few-people-pay-for-ai-but-those-who-do-spend-bigonly-a-few-users-pay-for-ai-but-those-who-do-pay-a-lot/",
-      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
-      "at": "2026-10-10T13:01:30.162822+00:00",
       "pipeline_version": "2"
     },
     {
@@ -7560,18 +7768,6 @@
       "url": "https://techcrunch.com/2026/10/06/hark-releases-an-ai-personal-assistant-with-a-focus-on-privacy/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-07T13:52:56.122678+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1005004/openai-math-release-github",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-07T06:25:27.438303+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-07T06:25:27.438303+00:00",
       "pipeline_version": "2"
     }
   ]
