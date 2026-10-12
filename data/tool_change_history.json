@@ -1,10 +1,73 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 60,
+    "successful_checks": 63,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-12",
+      "id": "30bad09cbd07d5c8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://speechify.com",
+      "tool_id": "speechify",
+      "tool_name": "Speechify"
+    },
+    {
+      "detected_on": "2026-10-12",
+      "id": "4064f9b1b80689b8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://sanebox.com",
+      "tool_id": "sanebox",
+      "tool_name": "SaneBox"
+    },
+    {
+      "detected_on": "2026-10-12",
+      "id": "c2aa5f83ba34b47d",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://tavily.com",
+      "tool_id": "tavily",
+      "tool_name": "Tavily"
+    },
+    {
+      "detected_on": "2026-10-12",
+      "id": "2c57efe9e08c22a9",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://todoist.com",
+      "tool_id": "todoist-ai",
+      "tool_name": "Todoist AI"
+    },
+    {
+      "detected_on": "2026-10-12",
+      "id": "18cc67870b437ebb",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://unriddle.ai",
+      "tool_id": "unriddle",
+      "tool_name": "Unriddle"
+    },
+    {
+      "detected_on": "2026-10-12",
+      "id": "976c07c1809290cc",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://breezy.hr/terms",
+      "tool_id": "breezy-hr",
+      "tool_name": "Breezy HR"
+    },
+    {
+      "detected_on": "2026-10-12",
+      "id": "0dbf7ec8ed6e4a0c",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.carepatron.com/",
+      "tool_id": "carepatron",
+      "tool_name": "Carepatron"
+    },
     {
       "detected_on": "2026-10-11",
       "id": "4b2c8982ab24feb2",
@@ -700,6 +763,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-11",
+  "updated_at": "2026-10-12",
   "version": 1
 }
