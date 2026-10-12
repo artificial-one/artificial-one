@@ -1,7 +1,7 @@
 {
-  "candidates": 660,
-  "excluded": 500,
-  "excluded_page_count": 500,
+  "candidates": 661,
+  "excluded": 501,
+  "excluded_page_count": 501,
   "excluded_pages": [
     {
       "path": "search-intent/pinecone-vector-database-for-build-retrieval-augmented-generation.html",
@@ -181,7 +181,7 @@
   ],
   "excluded_pages_note": "A representative sample only; the full count is grouped by exclusion reason.",
   "exclusion_reasons": {
-    "index_budget": 500
+    "index_budget": 501
   },
   "included": 160,
   "included_paths": [
