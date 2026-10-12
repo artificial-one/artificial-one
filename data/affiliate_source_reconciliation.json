@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-11",
+  "updated_at": "2026-10-12",
   "contract": {
     "states": [
       "inactive",
@@ -17,11 +17,11 @@
     "total": 723,
     "active_link_pending": 7,
     "inactive": 1,
-    "pending": 422,
+    "pending": 421,
     "published": 290,
-    "terms_required": 3,
+    "terms_required": 4,
     "blocking_failures": 0,
-    "activation_blockers": 10
+    "activation_blockers": 11
   },
   "networks": {
     "awin": {
@@ -40,9 +40,9 @@
       "total": 421,
       "active_link_pending": 7,
       "inactive": 1,
-      "pending": 374,
+      "pending": 373,
       "published": 36,
-      "terms_required": 3
+      "terms_required": 4
     }
   },
   "activation_blockers": [
@@ -81,6 +81,10 @@
     {
       "source_id": "partnerstack:runpod",
       "reason": "external_account_required"
+    },
+    {
+      "source_id": "partnerstack:gammaapp",
+      "reason": "terms_required"
     },
     {
       "source_id": "partnerstack:aisq",
