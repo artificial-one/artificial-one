@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-12",
+  "updated_at": "2026-10-13",
   "contract": {
     "states": [
       "inactive",
@@ -14,14 +14,14 @@
     "future_sources": "Any connector represented in partner_opportunities.json is reconciled automatically."
   },
   "summary": {
-    "total": 723,
+    "total": 724,
     "active_link_pending": 7,
     "inactive": 1,
-    "pending": 421,
+    "pending": 420,
     "published": 290,
-    "terms_required": 4,
+    "terms_required": 6,
     "blocking_failures": 0,
-    "activation_blockers": 11
+    "activation_blockers": 13
   },
   "networks": {
     "awin": {
@@ -37,12 +37,12 @@
       "published": 247
     },
     "partnerstack": {
-      "total": 421,
+      "total": 422,
       "active_link_pending": 7,
       "inactive": 1,
-      "pending": 373,
+      "pending": 372,
       "published": 36,
-      "terms_required": 4
+      "terms_required": 6
     }
   },
   "activation_blockers": [
@@ -59,11 +59,19 @@
       "reason": "terms_required"
     },
     {
+      "source_id": "partnerstack:datahawk",
+      "reason": "terms_required"
+    },
+    {
       "source_id": "partnerstack:emergentlabsinc",
       "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:miroaffiliate",
+      "reason": "terms_required"
+    },
+    {
+      "source_id": "partnerstack:sleekflow",
       "reason": "terms_required"
     },
     {
