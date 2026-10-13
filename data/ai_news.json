@@ -1,7 +1,80 @@
 {
   "version": 1,
-  "updated_at": "2026-10-12T16:03:57.663600+00:00",
+  "updated_at": "2026-10-13T00:57:50.620721+00:00",
   "items": [
+    {
+      "title": "Meta's new frontier model Muse Wonder Full breaks into the AI top tier",
+      "url": "https://the-decoder.com/metas-new-frontier-model-muse-wonder-full-breaks-into-the-ai-top-tier/",
+      "source": "The Decoder",
+      "published_at": "2026-10-12T18:48:29+00:00",
+      "display_date": "Oct 12, 2026",
+      "category": "Models & LLMs",
+      "description": "Meta's new Muse Wonder models rank in the top three on six out of ten benchmarks, with the biggest gains in agentic tasks. But the cost per task has nearly tripled. The article Meta's new frontier model Muse Wonder Full breaks into the AI top tier appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/12/meta-s-new-frontier-model-muse-wonder-full-breaks-into-the-ai-top-tier.html"
+    },
+    {
+      "title": "Sakana AI's self-improving model gets better at solving and judging, but can't catch its own blind spots",
+      "url": "https://the-decoder.com/sakana-ais-self-improving-model-gets-better-at-solving-and-judging-but-cant-catch-its-own-blind-spots/",
+      "source": "The Decoder",
+      "published_at": "2026-10-12T17:58:54+00:00",
+      "display_date": "Oct 12, 2026",
+      "category": "Models & LLMs",
+      "description": "Sakana AI's MASS method lets one language model improve itself by solving tasks, judging results, and refining workflows, reaching a win rate of nearly 70 percent against the base model after two rounds. But when the model misses the same errors across all three roles, it can mistake them for progress and reinforce them during training. The article Sakana AI's self-improving model gets better at solving and judging, but can't catch its own blind spots appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Meta releases its first frontier model, Muse Wonder",
+      "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-12T17:56:56+00:00",
+      "display_date": "Oct 12, 2026",
+      "category": "Models & LLMs",
+      "description": "Where Muse Spark aimed to be a lightweight model that could perform at low latency, the Wonder models are larger and said to be more capable, with higher benchmark scores and better results on complex tasks like coding.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder.html"
+    },
+    {
+      "title": "Clearing chat history helps AI agents find better solutions",
+      "url": "https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/",
+      "source": "The Decoder",
+      "published_at": "2026-10-12T16:10:00+00:00",
+      "display_date": "Oct 12, 2026",
+      "category": "Research",
+      "description": "Microsoft researchers found that autonomous AI agents get trapped in what they call \"idea basins\" because of their growing chat context, local solution regions they can't escape. Their \"Fork-and-Flush\" method clears the chat history but keeps the workspace, achieving up to 66 percent better results on the same compute budget. The article Clearing chat history helps AI agents find better solutions appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      },
+      "archive_url": "news/2026/10/12/clearing-chat-history-helps-ai-agents-find-better-solutions.html"
+    },
+    {
+      "title": "Honeyjar offers AI tools to improve PR and comms at every company",
+      "url": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-12T15:45:00+00:00",
+      "display_date": "Oct 12, 2026",
+      "category": "AI Tools & Products",
+      "description": "Journalists, entrepreneurs, and even some public relations professionals will tell you that the PR process is broken. But could AI actually make things better?",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
     {
       "title": "Microsoft president says UK is best placed to drive AI regulation",
       "url": "https://techcrunch.com/2026/10/12/microsoft-president-says-uk-is-best-placed-to-drive-ai-regulation/",
@@ -9,7 +82,7 @@
       "published_at": "2026-10-12T15:31:19+00:00",
       "display_date": "Oct 12, 2026",
       "category": "Policy & Safety",
-      "description": "Microsoft President Brad Smith calls for urgent AI regulation, saying milk and washing machines have more oversight than AI companies.",
+      "description": "Microsoft president Brad Smith calls for urgent AI regulation, saying milk and washing machines have more oversight than AI companies.",
       "related": {
         "title": "Browse independent AI software buying guides",
         "url": "buyers-guides.html",
@@ -93,11 +166,25 @@
       "published_at": "2026-10-12T12:47:59+00:00",
       "display_date": "Oct 12, 2026",
       "category": "AI Tools & Products",
-      "description": "Ambi is releasing apps for iPhone, Mac, and Apple Watch that enables ambient capture",
+      "description": "One of the core promises of AI is that the more it knows about a person, the better it will be able to assist them with tasks and make appropriate suggestions, which, if you'll believe the tech companies, requires apps and devices to listen, watch, or record users' activity all the time and gather all possible context.",
       "related": {
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
+      }
+    },
+    {
+      "title": "Meta has some Wonder Full new AI models",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
+      "source": "The Verge AI",
+      "published_at": "2026-10-12T11:13:10+00:00",
+      "display_date": "Oct 12, 2026",
+      "category": "Models & LLMs",
+      "description": "Meta is making up for lost time in the AI race. After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best. The new models, Muse Wonder and Muse Wonder Full, are available […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
       }
     },
     {
@@ -172,48 +259,6 @@
       "archive_url": "news/2026/10/11/these-execs-think-voice-ai-hasn-t-reached-its-chatgpt-moment-yet.html"
     },
     {
-      "title": "AI agents overstate their results and remain far from autonomous research, study finds",
-      "url": "https://the-decoder.com/ai-agents-overstate-their-results-and-remain-far-from-autonomous-research-study-finds/",
-      "source": "The Decoder",
-      "published_at": "2026-10-11T13:44:32+00:00",
-      "display_date": "Oct 11, 2026",
-      "category": "Models & LLMs",
-      "description": "Epoch AI and Anthropic independently found the same thing: current AI models like GPT-5.6 Sol and Claude Fable 5 can run experiments but lack scientific self-criticism and genuine creative thinking. At best, Sol reached 15 percent of the human reference score, and even that came from methods researchers already knew. The models' biggest weakness is still their inability to critically question their own results. The article AI agents overstate their results and remain far from autonomous research",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "Cheaper AI tokens are driving more demand, and that's Jensen Huang's best-case scenario",
-      "url": "https://the-decoder.com/cheaper-ai-tokens-are-driving-more-demand-and-thats-jensen-huangs-best-case-scenario/",
-      "source": "The Decoder",
-      "published_at": "2026-10-11T09:49:59+00:00",
-      "display_date": "Oct 11, 2026",
-      "category": "AI Tools & Products",
-      "description": "Data from a16z shows a Jevons paradox in the AI market: token prices keep falling, but H100 GPU rental prices hold steady or climb. Cheaper AI drives demand faster than costs drop. If that demand flattens, the chain from chip makers to cloud providers takes a hit. The article Cheaper AI tokens are driving more demand, and that's Jensen Huang's best-case scenario appeared first on The Decoder .",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "ArXiv caps submissions at two per month as AI paper flood overwhelms the preprint server",
-      "url": "https://the-decoder.com/arxiv-caps-submissions-at-two-per-month-as-ai-paper-flood-overwhelms-the-preprint-server/",
-      "source": "The Decoder",
-      "published_at": "2026-10-11T09:17:32+00:00",
-      "display_date": "Oct 11, 2026",
-      "category": "Research",
-      "description": "Starting October 2026, arXiv will cap submissions at two per person per month. Monthly submissions have doubled in two years, and in the cs.AI category they've grown more than sixfold. According to arXiv, a small fraction of authors are flooding the platform with low-quality papers, overwhelming its volunteer moderators. The article ArXiv caps submissions at two per month as AI paper flood overwhelms the preprint server appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
       "title": "Learning to use local AI is exciting, overwhelming, and frustrating",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress",
       "source": "The Verge AI",
@@ -243,21 +288,6 @@
       "archive_url": "news/2026/10/10/satya-nadella-says-we-should-assume-all-ai-models-are-compromised.html"
     },
     {
-      "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
-      "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-10T21:47:51+00:00",
-      "display_date": "Oct 10, 2026",
-      "category": "Models & LLMs",
-      "description": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/10/microsoft-s-satya-nadella-says-ai-models-need-an-emergency-brake.html"
-    },
-    {
       "title": "Anthropic is cutting off its internal evaluations from the internet",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet",
       "source": "The Verge AI",
@@ -273,20 +303,6 @@
       "archive_url": "news/2026/10/10/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet.html"
     },
     {
-      "title": "Here are the top AI agents that can live in your text messages",
-      "url": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-10T14:00:00+00:00",
-      "display_date": "Oct 10, 2026",
-      "category": "AI Tools & Products",
-      "description": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Anthropic’s AI gave Philadelphia police a fake tip about an unsolved homicide",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
       "source": "The Verge AI",
@@ -300,21 +316,6 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/10/09/anthropic-s-ai-gave-philadelphia-police-a-fake-tip-about-an-unsolved-homicide.html"
-    },
-    {
-      "title": "AI agent makers are promising privacy — will they deliver?",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
-      "source": "The Verge AI",
-      "published_at": "2026-10-09T21:26:33+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "AI Tools & Products",
-      "description": "At this year's OpenAI DevDay, CEO Sam Altman unveiled the company's new AI agent Dots - and told the crowd that the company wants to \"set a new standard for privacy in frontier AI.\" OpenAI would spend the day taking veiled shots at Meta's Muse, its primary competitor, for failing to keep users' data safe. […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/09/ai-agent-makers-are-promising-privacy-will-they-deliver.html"
     },
     {
       "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",

@@ -1,7 +1,203 @@
 {
   "version": 1,
-  "updated_at": "2026-10-12T06:29:41.242698+00:00",
+  "updated_at": "2026-10-13T00:57:54.377946+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/12/meta-s-new-frontier-model-muse-wonder-full-breaks-into-the-ai-top-tier.html",
+      "created_at": "2026-10-13T00:57:54.377946+00:00",
+      "source": {
+        "title": "Meta's new frontier model Muse Wonder Full breaks into the AI top tier",
+        "url": "https://the-decoder.com/metas-new-frontier-model-muse-wonder-full-breaks-into-the-ai-top-tier/",
+        "source": "The Decoder",
+        "published_at": "2026-10-12T18:48:29+00:00",
+        "display_date": "Oct 12, 2026",
+        "category": "Models & LLMs",
+        "description": "Meta's new Muse Wonder models rank in the top three on six out of ten benchmarks, with the biggest gains in agentic tasks. But the cost per task has nearly tripled. The article Meta's new frontier model Muse Wonder Full breaks into the AI top tier appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Meta's New AI Model Challenges Top Performers",
+        "summary": "Meta's new Muse Wonder and Full models show strong performance in coding and problem-solving but lag in factual knowledge. The models are more expensive per API call and have a smaller base model than competitors.",
+        "facts": [
+          {
+            "statement": "Meta's new models show significant improvements in coding and problem-solving tasks.",
+            "evidence": "Muse Wonder Full hits 68 points on the Coding Agents Index, tying Claude Code with Sonnet 5.5."
+          },
+          {
+            "statement": "The models have a smaller base model than competitors in factual knowledge tests.",
+            "evidence": "remains a weak spot. on the aa-omniscience knowledge test, muse wonder full manages only 30 points,"
+          },
+          {
+            "statement": "The models are more expensive per API call compared to their predecessor.",
+            "evidence": "Both versions cost nearly three times as much per API call as their predecessor, Muse Spark 1.3."
+          }
+        ],
+        "why_it_matters": "Meta's new AI models show promise in coding and problem-solving but still fall short in factual knowledge. The increased cost per task and smaller base model compared to competitors highlight challenges in balancing performance with efficiency.",
+        "elephant_take": "🐘 鼋 Meta's new AI models are a mixed bag—strong in coding but weak in facts. The price hike is a red flag for users on budget. It's a reminder that even top-tier models have gaps.",
+        "caveat": "The models' limitations in factual knowledge and the cost increase should be carefully considered before adoption.",
+        "who_should_care": [
+          "AI developers",
+          "Business leaders",
+          "Researchers"
+        ],
+        "what_to_do": [
+          "Evaluate if the model's strengths align with your needs",
+          "Assess the cost implications of increased API pricing",
+          "Test the model on real-world tasks beyond benchmarks",
+          "Monitor updates from Meta for potential improvements"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Meta%27s%20new%20frontier%20model%20Muse%20Wonder%20Full%20breaks%20into%20the%20AI%20top%20tier%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder.html",
+      "created_at": "2026-10-13T00:57:54.377946+00:00",
+      "source": {
+        "title": "Meta releases its first frontier model, Muse Wonder",
+        "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-12T17:56:56+00:00",
+        "display_date": "Oct 12, 2026",
+        "category": "Models & LLMs",
+        "description": "Where Muse Spark aimed to be a lightweight model that could perform at low latency, the Wonder models are larger and said to be more capable, with higher benchmark scores and better results on complex tasks like coding.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Meta Unveils New Frontier Model, Muse Wonder",
+        "summary": "Meta has released its first frontier model, Muse Wonder, which is larger and more capable than previous models like Muse Spark. The new models are designed to handle complex tasks and have higher benchmark scores.",
+        "facts": [
+          {
+            "statement": "Muse Wonder is a new frontier model from Meta.",
+            "evidence": "Meta releases its first frontier model, Muse Wonder"
+          },
+          {
+            "statement": "Muse Wonder is larger and more capable than previous models.",
+            "evidence": "the Wonder models are larger and said to be more capable"
+          },
+          {
+            "statement": "Muse Wonder has higher benchmark scores than other models.",
+            "evidence": "Wonder and Wonder Full achieve comparable benchmark scores to Fable 5.1 and GPT-6 Astra"
+          }
+        ],
+        "why_it_matters": "The release of Muse Wonder marks a significant step in Meta's AI development, showcasing their progress in creating more capable and scalable models. This could have implications for the future of AI research and development.",
+        "elephant_take": "🐘 鼋 The new frontier model is a big deal, but it's not clear if it will outperform other leading models in the long run. Meta's focus on memory retention is interesting, but it's just one aspect of what makes a great AI model.",
+        "caveat": "The pricing and availability details for Muse Wonder may change, and the long-term performance of the model is still unknown.",
+        "who_should_care": [
+          "AI researchers",
+          "Tech companies",
+          "Data center operators"
+        ],
+        "what_to_do": [
+          "Monitor Meta's AI development progress",
+          "Evaluate the pricing and availability of Muse Wonder",
+          "Assess the long-term performance of the model"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Meta%20releases%20its%20first%20frontier%20model%2C%20Muse%20Wonder%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/12/clearing-chat-history-helps-ai-agents-find-better-solutions.html",
+      "created_at": "2026-10-13T00:57:54.377946+00:00",
+      "source": {
+        "title": "Clearing chat history helps AI agents find better solutions",
+        "url": "https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/",
+        "source": "The Decoder",
+        "published_at": "2026-10-12T16:10:00+00:00",
+        "display_date": "Oct 12, 2026",
+        "category": "Research",
+        "description": "Microsoft researchers found that autonomous AI agents get trapped in what they call \"idea basins\" because of their growing chat context, local solution regions they can't escape. Their \"Fork-and-Flush\" method clears the chat history but keeps the workspace, achieving up to 66 percent better results on the same compute budget. The article Clearing chat history helps AI agents find better solutions appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "AI Agents Benefit from Clearing Chat History",
+        "summary": "Microsoft researchers found that clearing chat history in AI agents helps them escape 'idea basins' and find better solutions, improving performance by up to 66% on the same compute budget.",
+        "facts": [
+          {
+            "statement": "AI agents can get trapped in 'idea basins' due to accumulated conversation context",
+            "evidence": "paper. agents get stuck in"
+          },
+          {
+            "statement": "Clearing chat history improves AI agent performance by up to 66%",
+            "evidence": "A 66 percent higher normalized average score on the same compute budget"
+          },
+          {
+            "statement": "Fork-and-Flush method allows agents to explore new approaches",
+            "evidence": "Fresh context restores diversity in the search"
+          }
+        ],
+        "why_it_matters": "The ability of AI agents to escape 'idea basins' through chat history clearing could significantly improve their problem-solving efficiency. This research highlights a practical limitation of current AI systems and offers a solution that enhances performance without additional computational resources.",
+        "elephant_take": "🐘 鼋 Microsoft's Fork-and-Flush method shows that AI agents can get stuck in repetitive loops, but resetting chat history helps them explore new solutions. It's a reminder that even smart systems need periodic resets to avoid stagnation.",
+        "caveat": "The study focuses on specific tasks and models; real-world applications may vary.",
+        "who_should_care": [
+          "AI researchers",
+          "Tech companies",
+          "Developers"
+        ],
+        "what_to_do": [
+          "Test chat history clearing methods in AI systems",
+          "Monitor agent performance for stagnation",
+          "Experiment with branching and flushing techniques"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Clearing%20chat%20history%20helps%20AI%20agents%20find%20better%20solutions%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "path": "news/2026/10/09/anthropic-s-ai-gave-philadelphia-police-a-fake-tip-about-an-unsolved-homicide.html",
       "created_at": "2026-10-12T06:29:41.242698+00:00",
@@ -7662,6 +7858,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/sakana-ais-self-improving-model-gets-better-at-solving-and-judging-but-cant-catch-its-own-blind-spots/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-13T00:57:54.377946+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-13T00:57:54.377946+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/12/former-plaud-exec-raises-26m-for-ai-app-that-listens-to-you-in-the-background/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-10-13T00:57:54.377946+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/12/microsoft-president-says-uk-is-best-placed-to-drive-ai-regulation/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
       "at": "2026-10-12T16:04:01.492027+00:00",
@@ -7880,24 +8094,6 @@
     {
       "url": "https://www.theverge.com/tech/1007132/icann-domains-2026-ai-agi",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-08T14:00:37.764673+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/a-single-prompt-was-enough-to-hijack-every-ai-agent-in-an-aws-account-zenity-researchers-found/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-08T14:00:37.764673+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/teens-ai-guided-mountain-hike-ends-with-a-helicopter-rescue-and-a-lesson-in-common-sense/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-08T14:00:37.764673+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/ai-powered-hacking-tools-enabled-a-likely-single-attacker-to-breach-multiple-south-korean-banks/",
-      "reason": "quality gate rejected draft: hype language is present",
       "at": "2026-10-08T14:00:37.764673+00:00",
       "pipeline_version": "2"
     }
