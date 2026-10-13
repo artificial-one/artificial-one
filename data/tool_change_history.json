@@ -1,10 +1,46 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 63,
+    "successful_checks": 62,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-13",
+      "id": "c63f5082e146c1f4",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.quicksigner.com/",
+      "tool_id": "quicksigner",
+      "tool_name": "QuickSigner"
+    },
+    {
+      "detected_on": "2026-10-13",
+      "id": "04dfbff7bef02e97",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://taskade.com",
+      "tool_id": "taskade",
+      "tool_name": "Taskade"
+    },
+    {
+      "detected_on": "2026-10-13",
+      "id": "fbe6597441228c79",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://aws.amazon.com/codewhisperer",
+      "tool_id": "amazon-codewhisperer",
+      "tool_name": "Amazon CodeWhisperer"
+    },
+    {
+      "detected_on": "2026-10-13",
+      "id": "6659c44cd4b1798a",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://brandwatch.com",
+      "tool_id": "brandwatch",
+      "tool_name": "Brandwatch"
+    },
     {
       "detected_on": "2026-10-12",
       "id": "30bad09cbd07d5c8",
@@ -763,6 +799,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-12",
+  "updated_at": "2026-10-13",
   "version": 1
 }
