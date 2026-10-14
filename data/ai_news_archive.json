@@ -1,7 +1,204 @@
 {
   "version": 1,
-  "updated_at": "2026-10-13T23:06:36.271132+00:00",
+  "updated_at": "2026-10-14T05:20:59.750110+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/13/gemini-4-argon-is-now-available-worldwide-as-google-s-most-capable-frontier-model.html",
+      "created_at": "2026-10-14T05:20:59.750110+00:00",
+      "source": {
+        "title": "Gemini 4 Argon is now available worldwide as Google's most capable frontier model",
+        "url": "https://the-decoder.com/gemini-4-argon-is-now-available-worldwide-as-googles-most-capable-frontier-model/",
+        "source": "The Decoder",
+        "published_at": "2026-10-13T18:00:49+00:00",
+        "display_date": "Oct 13, 2026",
+        "category": "Models & LLMs",
+        "description": "Google is making Gemini 4 Argon available worldwide through its API, the Gemini app, and Google Antigravity. The frontier model is aggressively priced but trails Anthropic's Claude Opus 5.5 and Meta's Muse Wonder Full in independent benchmarks. Internally, Google says Argon already cut coding tasks from months to weeks. The article Gemini 4 Argon is now available worldwide as Google's most capable frontier model appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Google's Gemini 4 Argon Model Now Available Globally",
+        "summary": "Google has made its new frontier model, Gemini 4 Argon, available worldwide through various platforms. The model is described as highly capable and has shown improvements in coding tasks and performance benchmarks.",
+        "facts": [
+          {
+            "statement": "Google has rolled out Gemini 4 Argon globally.",
+            "evidence": "Google is rolling out Gemini 4 Argon globally"
+          },
+          {
+            "statement": "Argon has improved coding efficiency for Google engineers.",
+            "evidence": "Google says Argon turned months of internal engineering into weeks"
+          },
+          {
+            "statement": "Argon can generate complex 3D models and animations in code.",
+            "evidence": "Argon can also generate complex 3D models, games, and animations in pure code"
+          }
+        ],
+        "why_it_matters": "The availability of Gemini 4 Argon marks a significant advancement in AI capabilities, with potential impacts on coding efficiency and 3D generation. Its global rollout suggests widespread adoption and may influence industry standards for AI models.",
+        "elephant_take": "🐘 鼋 Google's new frontier model is a coding wizard, but 3D generation remains a weak spot for Meta. The price point is aggressive, but it still trails some competitors in benchmarks.",
+        "caveat": "The evidence is self-reported by Google and may not reflect independent assessments.",
+        "who_should_care": [
+          "AI developers",
+          "Businesses using AI tools",
+          "Researchers in machine learning"
+        ],
+        "what_to_do": [
+          "Evaluate the model's performance in your specific use case",
+          "Monitor pricing and benchmark updates",
+          "Stay informed about Google's future AI releases"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Gemini%204%20Argon%20is%20now%20available%20worldwide%20as%20Google%27s%20most%20capable%20frontier%20model%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/13/epic-shifts-to-ai-accelerated-development-for-upcoming-disney-game.html",
+      "created_at": "2026-10-14T05:20:59.750110+00:00",
+      "source": {
+        "title": "Epic shifts to ‘AI-accelerated development’ for upcoming Disney game",
+        "url": "https://www.theverge.com/games/1010097/epic-games-disney-project-ai-coding-art",
+        "source": "The Verge AI",
+        "published_at": "2026-10-13T17:43:49+00:00",
+        "display_date": "Oct 13, 2026",
+        "category": "Models & LLMs",
+        "description": "Epic Games plans to use AI to generate code and art for an unannounced Disney game, which is now delayed from its original March release window, according to a report from Bloomberg. The project's developers have been given an \"AI-first\" mandate directing them to use tools like Anthropic's Claude more to finish the game. According […]",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Epic Games Uses AI for Disney Game Development",
+        "summary": "Epic Games is using AI tools like Anthropic's Claude to accelerate development of an unannounced Disney game, which has been delayed from its original March release window.",
+        "facts": [
+          {
+            "statement": "Epic Games is using AI to generate code and art for a Disney game.",
+            "evidence": "Epic Games plans to use AI to generate code and art for an unannounced Disney game"
+          },
+          {
+            "statement": "The game is now delayed from its original March release window.",
+            "evidence": "which is now delayed from its original March release window"
+          },
+          {
+            "statement": "Epic Games has given developers an 'AI-first' mandate.",
+            "evidence": "the project's developers have been given an \"AI-first\" mandate"
+          }
+        ],
+        "why_it_matters": "The shift to AI-accelerated development in game creation highlights how technology is reshaping entertainment production. Epic Games' move could signal a broader trend in the gaming industry, where AI tools are being used to speed up development and reduce costs. This also comes as Epic faces challenges like layoffs and declining engagement on Fortnite.",
+        "elephant_take": "🐘 鼋Epic is trying to out-AI the AI with a 'AI-first' mandate, but it's unclear if this will result in better games or just more code. The Disney collaboration adds a layer of complexity, as the company is already investing heavily in Epic.",
+        "caveat": "The report is based on a Bloomberg source and may not be fully verified.",
+        "who_should_care": [
+          "Game developers",
+          "AI researchers",
+          "Disney executives"
+        ],
+        "what_to_do": [
+          "Monitor AI trends in gaming",
+          "Evaluate AI tool effectiveness",
+          "Stay informed about Epic's financial health",
+          "Consider the impact of AI on entertainment production"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Epic%20shifts%20to%20%E2%80%98AI-accelerated%20development%E2%80%99%20for%20upcoming%20Disney%20game%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache.html",
+      "created_at": "2026-10-14T05:20:59.750110+00:00",
+      "source": {
+        "title": "Pluto Security raises $42M as AI gives enterprise security teams a new headache",
+        "url": "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-13T17:18:25+00:00",
+        "display_date": "Oct 13, 2026",
+        "category": "Policy & Safety",
+        "description": "The problem with giving everyone in a company access to AI tools is that people will use them in unexpected ways. And that fact is steadily seeding fears that companies now have new, gaping security holes in their systems or, at least, will soon.",
+        "related": {
+          "title": "Browse independent AI software buying guides",
+          "url": "buyers-guides.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "AI Tools Create New Security Challenges for Enterprises",
+        "summary": "Pluto Security raised $42M to address AI-driven security risks in enterprises, as companies face new vulnerabilities from unexpected tool usage.",
+        "facts": [
+          {
+            "statement": "AI tools are being used in unexpected ways by non-developers within companies.",
+            "evidence": "people will use them in unexpected ways"
+          },
+          {
+            "statement": "Pluto Security detects risks from AI tools used by non-developer teams.",
+            "evidence": "non-developers: Finance departments are the biggest source of such risks"
+          },
+          {
+            "statement": "Pluto Security has already secured enterprise clients and achieved revenue growth.",
+            "evidence": "has already crossed $2 million in annual recurring revenue"
+          }
+        ],
+        "why_it_matters": "The rapid adoption of AI tools is creating new security challenges for enterprises, as non-technical users are inadvertently introducing risks. Pluto Security's $42M funding highlights the growing demand for solutions to manage these emerging threats.",
+        "elephant_take": "🐘 🦘AI is turning enterprise security into a chaotic game of whack-a-mole. Pluto’s $42M raise shows companies are scrambling to plug holes in their systems, but the real problem is that everyone from finance to marketing is now a potential risk vector.",
+        "caveat": "The risks are widespread and not limited to large tech companies, indicating a broader AI security crisis.",
+        "who_should_care": [
+          "CISOs",
+          "Enterprise IT leaders",
+          "AI adopters"
+        ],
+        "what_to_do": [
+          "Audit AI tool usage across departments",
+          "Implement proactive security monitoring for non-technical tools",
+          "Invest in AI security solutions like Pluto Security",
+          "Train employees on responsible AI use"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "buyers-guides.html",
+        "review_title": "Browse independent AI software buying guides",
+        "elephant_url": "index.html?task=Explain%20what%20Pluto%20Security%20raises%20%2442M%20as%20AI%20gives%20enterprise%20security%20teams%20a%20new%20headache%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case.html",
       "created_at": "2026-10-13T23:06:36.271132+00:00",
@@ -8185,6 +8382,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-14T05:20:59.750110+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/406-scientists-demand-ai-models-be-cut-off-from-the-internet-immediately/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-14T05:20:59.750110+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-10-14T05:20:59.750110+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-13T23:06:36.271132+00:00",
@@ -8404,24 +8619,6 @@
       "url": "https://the-decoder.com/openai-uncovers-russian-and-iranian-influence-ops-that-planted-fake-stories-in-real-news-outlets/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-09T13:46:34.442276+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-09T06:40:16.645877+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/some-mathematicians-call-for-openai-boycott-after-ai-generated-proofs-flood-their-field/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-09T06:40:16.645877+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1008198/usa-today-openai-copyright-lawsuit",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-09T06:40:16.645877+00:00",
       "pipeline_version": "2"
     }
   ]
