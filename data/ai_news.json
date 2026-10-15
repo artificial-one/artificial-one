@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-10-15T05:08:10.000632+00:00",
+  "updated_at": "2026-10-15T12:04:39.011577+00:00",
   "items": [
+    {
+      "title": "Anthropic's Q3 revenue hits $16.8B but growth slows ahead of planned November IPO",
+      "url": "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/",
+      "source": "The Decoder",
+      "published_at": "2026-10-15T09:50:43+00:00",
+      "display_date": "Oct 15, 2026",
+      "category": "AI Business",
+      "description": "Anthropic hit $16.8 billion in third-quarter revenue, a 45 percent gain that still falls far short of Q2's 140 percent surge. With a November IPO approaching, some investors now expect the company's valuation to drop below $1.5 trillion. Slowing growth and a tough market are cooling expectations for the AI boom's biggest Wall Street test yet. The article Anthropic's Q3 revenue hits $16.8B but growth slows ahead of planned November IPO appeared first on The Decoder .",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      }
+    },
     {
       "title": "Figma announces new features to define how agents work on its platform",
       "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
@@ -217,22 +231,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Microsoft has a new machine learning tool to improve weather forecasts",
-      "url": "https://www.theverge.com/science/1011127/ai-weather-forecast-microsoft",
-      "source": "The Verge AI",
-      "published_at": "2026-10-14T16:05:21+00:00",
-      "display_date": "Oct 14, 2026",
-      "category": "Models & LLMs",
-      "description": "Old-school physics-based weather forecasting and even new AI models typically become less reliable beyond two weeks, a problem Microsoft claims to have solved using machine learning. Researchers with the company say they've found a new, cost-effective way to make more accurate weather forecasts two to six weeks in advance - allowing farmers and emergency responders […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
       },
-      "archive_url": "news/2026/10/14/microsoft-has-a-new-machine-learning-tool-to-improve-weather-forecasts.html"
+      "archive_url": "news/2026/10/14/openai-will-reportedly-ship-at-least-one-model-this-year-but-its-flagship-still-ne.html"
     },
     {
       "title": "Deezer will soon let you filter out AI-generated music",
@@ -275,7 +275,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/10/14/ai-guardrails-designed-to-stop-hackers-are-now-blocking-defenders-and-orion-1-aims.html"
     },
     {
       "title": "Anthropic warns small AI models could self-replicate through IoT devices",
@@ -374,21 +375,6 @@
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       }
-    },
-    {
-      "title": "Gemini 4 Argon is now available worldwide as Google's most capable frontier model",
-      "url": "https://the-decoder.com/gemini-4-argon-is-now-available-worldwide-as-googles-most-capable-frontier-model/",
-      "source": "The Decoder",
-      "published_at": "2026-10-13T18:00:49+00:00",
-      "display_date": "Oct 13, 2026",
-      "category": "Models & LLMs",
-      "description": "Google is making Gemini 4 Argon available worldwide through its API, the Gemini app, and Google Antigravity. The frontier model is aggressively priced but trails Anthropic's Claude Opus 5.5 and Meta's Muse Wonder Full in independent benchmarks. Internally, Google says Argon already cut coding tasks from months to weeks. The article Gemini 4 Argon is now available worldwide as Google's most capable frontier model appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/13/gemini-4-argon-is-now-available-worldwide-as-google-s-most-capable-frontier-model.html"
     },
     {
       "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
@@ -510,6 +496,20 @@
       "display_date": "Oct 05, 2026",
       "category": "AI Tools & Products",
       "description": "Trust gaps in the new protocol spread malicious prompts from one agent to another.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "The Agent Said It Was Done. The Database Disagreed.",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "source": "Hugging Face",
+      "published_at": "2026-10-03T22:56:48+00:00",
+      "display_date": "Oct 03, 2026",
+      "category": "AI Tools & Products",
+      "description": "",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
