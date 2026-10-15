@@ -1,7 +1,139 @@
 {
   "version": 1,
-  "updated_at": "2026-10-15T17:20:01.236468+00:00",
+  "updated_at": "2026-10-15T21:44:48.942043+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/15/trump-posts-ai-edited-photo-to-brag-about-white-house-restoration-work.html",
+      "created_at": "2026-10-15T21:44:48.942043+00:00",
+      "source": {
+        "title": "Trump posts AI-edited photo to brag about White House restoration work",
+        "url": "https://www.theverge.com/policy/1012445/donald-trump-ai-photo-white-house-rennovation-column",
+        "source": "The Verge AI",
+        "published_at": "2026-10-15T21:32:54+00:00",
+        "display_date": "Oct 15, 2026",
+        "category": "AI Tools & Products",
+        "description": "President Donald Trump posted a series of photos on Truth Social showing off renovations to the White House - but one of them appears to be modified with AI. The picture, which compares an old White House column to a \"restored\" one, has several discrepancies and was flagged by Google's AI detector as \"made or […]",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "AI-Modified White House Photo Sparks Debate",
+        "summary": "President Trump shared AI-edited photos of White House renovations, with one flagged as AI-generated. Discrepancies in the 'restored' column photo raised questions about authenticity.",
+        "facts": [
+          {
+            "statement": "A White House column photo was modified with AI.",
+            "evidence": "the picture, which compares an old white house column to a \"restored\" one, has several discrepancies"
+          },
+          {
+            "statement": "The AI detection flagged the photo as edited with OpenAI.",
+            "evidence": "was flagged by google’s ai detector as “made or edited with"
+          },
+          {
+            "statement": "Discrepancies in the 'restored' column photo were noted.",
+            "evidence": "the picture of the “restored” column has an uneven number of steps on both sides of the structure."
+          }
+        ],
+        "why_it_matters": "The use of AI to alter images raises concerns about authenticity and potential misinformation. It highlights the growing role of AI in political communication and the challenges of verifying visual content.",
+        "elephant_take": "🐘 鼋 The White House is using AI to showcase renovations, but the 'restored' column photo seems suspiciously perfect. It's a reminder that even with AI, some things don't add up.",
+        "caveat": "The AI detection tool may not always be accurate, and the White House hasn't commented on the issue.",
+        "who_should_care": [
+          "Politicians",
+          "Media",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Verify images with AI detection tools",
+          "Question discrepancies in visual content",
+          "Stay informed about AI's role in politics"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Trump%20posts%20AI-edited%20photo%20to%20brag%20about%20White%20House%20restoration%20work%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-acce.html",
+      "created_at": "2026-10-15T21:44:48.942043+00:00",
+      "source": {
+        "title": "Anthropic is letting METR researchers look under the hood with employee-level access",
+        "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-15T19:14:26+00:00",
+        "display_date": "Oct 15, 2026",
+        "category": "Models & LLMs",
+        "description": "METR will publish its own assessments of Anthropic’s risks, incidents, and practices, and the frontier AI model maker has given up the right to block them.",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Anthropic grants METR researchers access to evaluate AI systems",
+        "summary": "Anthropic has granted METR researchers employee-level access to assess its AI models and safety practices, as part of efforts to increase transparency and accountability in AI development.",
+        "facts": [
+          {
+            "statement": "Anthropic is granting METR researchers access to evaluate its AI models and safety practices.",
+            "evidence": "Anthropic is giving employee-level access to six researchers from METR"
+          },
+          {
+            "statement": "METR will publish independent assessments of Anthropic’s AI systems.",
+            "evidence": "METR will publish its own assessments of Anthropic’s risks, incidents, and practices"
+          },
+          {
+            "statement": "Anthropic has given up the right to block METR from publishing their findings.",
+            "evidence": "the company has given up the right to block them"
+          }
+        ],
+        "why_it_matters": "This move by Anthropic highlights a growing trend of AI companies seeking external validation and transparency in their systems. By allowing independent evaluators to assess their models, Anthropic is addressing concerns about accountability and safety in the rapidly evolving AI landscape.",
+        "elephant_take": "🐘 鼋Anthropic’s decision to let METR researchers into its labs is a step toward openness, but it’s still a small part of a larger effort to ensure AI systems are safe. The company is trying to balance innovation with responsibility.",
+        "caveat": "The arrangement includes restrictions on what can be published, which could limit the scope of independent evaluation.",
+        "who_should_care": [
+          "AI developers",
+          "Regulators",
+          "Researchers",
+          "Ethicists"
+        ],
+        "what_to_do": [
+          "Review Anthropic’s blog post for details on the access granted",
+          "Monitor METR’s published assessments for insights into AI safety",
+          "Stay informed about developments in AI accountability",
+          "Engage with regulatory discussions on AI transparency"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20is%20letting%20METR%20researchers%20look%20under%20the%20hood%20with%20employee-level%20access%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "path": "news/2026/10/15/black-forest-labs-open-weights-image-model-flux-3-image-klein-runs-on-consumer-gpu.html",
       "created_at": "2026-10-15T17:20:01.236468+00:00",
@@ -9294,6 +9426,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-15T21:44:48.942043+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-15T21:44:48.942043+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-15T21:44:48.942043+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-15T21:44:48.942043+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/google-wants-gemini-4-argon-to-be-the-only-ai-model-robots-need/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-15T17:20:01.236468+00:00",
@@ -9507,30 +9663,6 @@
       "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-12T16:04:01.492027+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/white-house-reverses-course-and-restores-uk-ai-safety-institutes-access-to-frontier-models/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-12T16:04:01.492027+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/anthropics-andrej-karpathy-says-the-external-world-has-seen-the-preview-of-what-ai-can-actually-do/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-12T16:04:01.492027+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; Elephant commentary is not specific to this story",
-      "at": "2026-10-12T06:29:41.242698+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/asana-browser-agent",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-12T06:29:41.242698+00:00",
       "pipeline_version": "2"
     }
   ]
