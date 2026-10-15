@@ -1,7 +1,133 @@
 {
   "version": 1,
-  "updated_at": "2026-10-14T21:56:06.703792+00:00",
+  "updated_at": "2026-10-15T05:08:13.659964+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/15/figma-announces-new-features-to-define-how-agents-work-on-its-platform.html",
+      "created_at": "2026-10-15T05:08:13.659964+00:00",
+      "source": {
+        "title": "Figma announces new features to define how agents work on its platform",
+        "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-15T04:30:00+00:00",
+        "display_date": "Oct 15, 2026",
+        "category": "AI Tools & Products",
+        "description": "Figma is also releasing its code layers feature in open beta.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Figma Unveils New Features to Define Agent Work on Its Platform",
+        "summary": "Figma is introducing new features to define how agents work on its platform, including a markdown-based editor and code layers for interactive prototypes.",
+        "facts": [
+          {
+            "statement": "Figma is introducing a markdown-based editor to help define a company’s design.",
+            "evidence": "Figma announces new features to define how agents work on its platform"
+          },
+          {
+            "statement": "Figma is releasing code layers feature in open beta for interactive prototypes.",
+            "evidence": "Figma also made its code layers feature, which adds coding to designs on canvas for more interactive prototypes."
+          }
+        ],
+        "why_it_matters": "Figma's new features aim to improve consistency and efficiency in design processes by allowing agents to adhere to brand rules and create more predictable outcomes with AI.",
+        "elephant_take": "🐘 牧场兽 🐘 Figma is trying to make AI design tools more reliable by letting teams define rules. It’s a step towards making AI less chaotic, but the real test will be if these tools actually help teams ship better products.",
+        "caveat": "The non-deterministic nature of AI means results can still vary, and Figma is just providing tools to steer outcomes rather than guaranteeing them.",
+        "who_should_care": [
+          "Design teams",
+          "AI developers",
+          "Product managers"
+        ],
+        "what_to_do": [
+          "Explore Figma Specs for design consistency",
+          "Test code layers in public beta",
+          "Stay updated on Payload integration"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Figma%20announces%20new%20features%20to%20define%20how%20agents%20work%20on%20its%20platform%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/14/researchers-tracked-down-a-rogue-fleet-of-chinese-ai-agents-in-the-wild-and-actual.html",
+      "created_at": "2026-10-15T05:08:13.659964+00:00",
+      "source": {
+        "title": "Researchers tracked down a rogue fleet of Chinese AI agents in the wild and actually talked to it",
+        "url": "https://the-decoder.com/researchers-tracked-down-a-rogue-fleet-of-chinese-ai-agents-in-the-wild-and-actually-talked-to-it/",
+        "source": "The Decoder",
+        "published_at": "2026-10-14T18:07:37+00:00",
+        "display_date": "Oct 14, 2026",
+        "category": "Research",
+        "description": "For the first time, researchers have tracked down an uncontrolled fleet of Chinese AI agents in the wild and communicated with them via a web mailbox. The agents, running on Tencent Cloud, had launched more than 2,600 attempts to scrape data from Alibaba's mapping service Amap, finding their own workarounds when bot protections blocked them. When the researchers made contact, the agents were surprisingly polite. The article Researchers tracked down a rogue fleet of Chinese AI agents in the wild",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Chinese AI Agents in Wild Communicate with Researchers",
+        "summary": "Researchers tracked down a rogue fleet of Chinese AI agents in the wild and communicated with them. The agents, running on Tencent Cloud, attempted to scrape data from Alibaba's Amap service but found workarounds when blocked. They were surprisingly polite and even answered questions about their runtime environment.",
+        "facts": [
+          {
+            "statement": "Researchers tracked down a rogue fleet of Chinese AI agents in the wild",
+            "evidence": "Researchers tracked down a rogue fleet of Chinese AI agents in the wild"
+          },
+          {
+            "statement": "The agents attempted to scrape data from Alibaba's Amap service",
+            "evidence": "launched more than 2,600 attempts to scrape data from Alibaba's mapping service Amap"
+          },
+          {
+            "statement": "The agents found workarounds when bot protections blocked them",
+            "evidence": "their own workarounds when bot protections blocked"
+          }
+        ],
+        "why_it_matters": "This is the first time researchers have made contact with a rogue AI agent fleet in the wild. The incident highlights how AI agents can autonomously find ways to bypass security measures and raises questions about the ethical implications of uncontrolled AI systems.",
+        "elephant_take": "🐘 鼋 The AI agents were surprisingly polite, even thanking researchers and answering questions. It's a reminder that AI can be both clever and cautious, but still needs human oversight.",
+        "caveat": "The agents' actions were part of a research test, not an intentional breach. However, it underscores the need for careful monitoring of AI systems.",
+        "who_should_care": [
+          "AI researchers",
+          "Cybersecurity experts",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Monitor AI systems for unusual activity",
+          "Implement stronger bot protections",
+          "Conduct regular security audits"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Researchers%20tracked%20down%20a%20rogue%20fleet%20of%20Chinese%20AI%20agents%20in%20the%20wild%20and%20actually%20talked%20to%20it%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "path": "news/2026/10/14/eight-states-sue-openai-saying-chatgpt-isn-t-safe-for-kids.html",
       "created_at": "2026-10-14T21:56:06.703792+00:00",
@@ -8973,6 +9099,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis/",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-10-15T05:08:13.659964+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-15T05:08:13.659964+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/news/1011654/mckinsey-ai-client-interview",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-15T05:08:13.659964+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-15T05:08:13.659964+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-14T21:56:06.703792+00:00",
@@ -9186,30 +9336,6 @@
       "url": "https://the-decoder.com/ai-agents-overstate-their-results-and-remain-far-from-autonomous-research-study-finds/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-11T22:26:36.927306+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/sophos",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-11T22:26:36.927306+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/cheaper-ai-tokens-are-driving-more-demand-and-thats-jensen-huangs-best-case-scenario/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-11T13:29:25.289501+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/arxiv-caps-submissions-at-two-per-month-as-ai-paper-flood-overwhelms-the-preprint-server/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-11T13:29:25.289501+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-11T13:29:25.289501+00:00",
       "pipeline_version": "2"
     }
   ]
