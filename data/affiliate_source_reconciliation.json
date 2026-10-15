@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-14",
+  "updated_at": "2026-10-15",
   "contract": {
     "states": [
       "inactive",
@@ -14,14 +14,13 @@
     "future_sources": "Any connector represented in partner_opportunities.json is reconciled automatically."
   },
   "summary": {
-    "total": 724,
-    "active_link_pending": 7,
+    "total": 725,
+    "active_link_pending": 14,
     "inactive": 1,
     "pending": 420,
     "published": 290,
-    "terms_required": 6,
     "blocking_failures": 0,
-    "activation_blockers": 13
+    "activation_blockers": 14
   },
   "networks": {
     "awin": {
@@ -37,18 +36,17 @@
       "published": 247
     },
     "partnerstack": {
-      "total": 422,
-      "active_link_pending": 7,
+      "total": 423,
+      "active_link_pending": 14,
       "inactive": 1,
       "pending": 372,
-      "published": 36,
-      "terms_required": 6
+      "published": 36
     }
   },
   "activation_blockers": [
     {
       "source_id": "partnerstack:bookyourdata1288",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:browseai",
@@ -56,11 +54,11 @@
     },
     {
       "source_id": "partnerstack:carbon6",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:datahawk",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:emergentlabsinc",
@@ -68,11 +66,11 @@
     },
     {
       "source_id": "partnerstack:miroaffiliate",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:sleekflow",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:softrplatformsgmbh",
@@ -91,8 +89,12 @@
       "reason": "external_account_required"
     },
     {
+      "source_id": "partnerstack:folkapp",
+      "reason": "active_link_pending"
+    },
+    {
       "source_id": "partnerstack:gammaapp",
-      "reason": "terms_required"
+      "reason": "active_link_pending"
     },
     {
       "source_id": "partnerstack:aisq",
