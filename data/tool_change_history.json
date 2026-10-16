@@ -1,10 +1,46 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 61,
+    "successful_checks": 64,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-16",
+      "id": "4ae01f221ea1789f",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.leadpages.com",
+      "tool_id": "leadpages",
+      "tool_name": "Leadpages"
+    },
+    {
+      "detected_on": "2026-10-16",
+      "id": "8e8b3a0bb7092120",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.whatconverts.com/",
+      "tool_id": "whatconverts",
+      "tool_name": "WhatConverts"
+    },
+    {
+      "detected_on": "2026-10-16",
+      "id": "759ccf6125e8463f",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://blackbox.ai",
+      "tool_id": "blackbox-ai",
+      "tool_name": "Blackbox AI"
+    },
+    {
+      "detected_on": "2026-10-16",
+      "id": "4419af0536196e28",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://circleback.ai",
+      "tool_id": "circleback",
+      "tool_name": "Circleback"
+    },
     {
       "detected_on": "2026-10-15",
       "id": "2d66b6bebf1437cb",
@@ -871,6 +907,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-15",
+  "updated_at": "2026-10-16",
   "version": 1
 }
