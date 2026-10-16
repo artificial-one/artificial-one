@@ -1,7 +1,199 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16T11:53:03.642210+00:00",
+  "updated_at": "2026-10-16T16:55:44.088690+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/16/a-nvidia-insider-turned-vc-on-why-robotics-hasn-t-hit-its-chatgpt-moment-yet.html",
+      "created_at": "2026-10-16T16:55:44.088690+00:00",
+      "source": {
+        "title": "A Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
+        "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-16T16:30:00+00:00",
+        "display_date": "Oct 16, 2026",
+        "category": "Models & LLMs",
+        "description": "Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators, robotic hands, software, and safety standards still being rebuilt. This view runs counter to those who believe that robotics, powered by a general foundation model, is about to have […]",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Robotics in 'Lego Era' Before ChatGPT Moment",
+        "summary": "Amulya Vishwanath, a former NVIDIA executive, argues robotics is still in its early stages, with foundational elements like actuators and safety standards needing development. This contrasts with the belief that robotics could soon reach a 'ChatGPT moment' with general foundation models.",
+        "facts": [
+          {
+            "statement": "Robotics is currently in its 'Lego era'.",
+            "evidence": "robotics is currently in its"
+          },
+          {
+            "statement": "Basic building blocks like actuators and safety standards are still being rebuilt.",
+            "evidence": "basic building blocks like actuators, robotic hands, software, and safety standards still being rebuilt"
+          },
+          {
+            "statement": "Some believe robotics could soon have a 'ChatGPT moment'.",
+            "evidence": "robotics, powered by a general foundation model, is about to have its"
+          }
+        ],
+        "why_it_matters": "The debate over whether robotics is ready for a breakthrough akin to ChatGPT highlights the challenges of integrating complex physical systems with AI. It underscores the need for foundational advancements before practical applications can emerge.",
+        "elephant_take": "🐘 🦘 Robotics is still playing with building blocks, not yet crafting the next big thing. The 'Lego era' suggests we're far from the 'ChatGPT moment'—a reminder that AI's physical counterparts are still in their infancy.",
+        "caveat": "The 'Lego era' perspective may overlook the rapid progress in specialized robotics and AI integration.",
+        "who_should_care": [
+          "AI investors",
+          "Robotics developers",
+          "Tech enthusiasts"
+        ],
+        "what_to_do": [
+          "Invest in foundational robotics research",
+          "Monitor advancements in AI-driven physical systems",
+          "Stay informed about industry trends and debates"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20A%20Nvidia%20insider-turned-VC%20on%20why%20robotics%20hasn%E2%80%99t%20hit%20its%20ChatGPT%20moment%2C%20yet%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/16/meta-s-new-terms-may-allow-it-to-train-ai-on-news-sites-for-free.html",
+      "created_at": "2026-10-16T16:55:44.088690+00:00",
+      "source": {
+        "title": "Meta’s new terms may allow it to train AI on news sites for free",
+        "url": "https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers",
+        "source": "The Verge AI",
+        "published_at": "2026-10-16T15:22:13+00:00",
+        "display_date": "Oct 16, 2026",
+        "category": "Research",
+        "description": "Meta's new terms appear to give it permission to crawl and scrape websites \"associated\" with the businesses that use its platforms - including online publishers, according to a report from Nieman Lab. The new terms, which go into effect on October 30th, say Meta can use this outside content to \"develop, improve, research,\" and \"train\" […]",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Meta's New Terms Allow AI Training on News Sites",
+        "summary": "Meta's new terms permit crawling and scraping content from news sites, raising concerns about AI training on user-generated content.",
+        "facts": [
+          {
+            "statement": "Meta's new terms allow it to crawl websites associated with businesses using its platforms.",
+            "evidence": "The new policy allows Meta to crawl all websites ‘associated’ with a business account."
+          },
+          {
+            "statement": "Meta can use outside content for AI training and development under the new terms.",
+            "evidence": "meta can use this outside content to “develop, improve, research,” and “train” its ai products."
+          }
+        ],
+        "why_it_matters": "This change could enable Meta to train AI models on news sites without explicit permission, potentially undermining content creators' control over their work. It raises questions about data privacy and the ethical implications of AI training on user-generated content.",
+        "elephant_take": "🐘 鼋 Meta's new terms are a stealthy move to train AI on news sites, blurring the line between data collection and content ownership. The legal gray area here is concerning for publishers who may lose control over their own content.",
+        "caveat": "Meta claims no changes to web crawler usage, but experts warn of potential conflicts with robots.txt files.",
+        "who_should_care": [
+          "News Publishers",
+          "AI Developers",
+          "Data Privacy Advocates"
+        ],
+        "what_to_do": [
+          "Review Meta's terms carefully for any changes in data usage policies.",
+          "Monitor for updates on how Meta handles content from third-party websites.",
+          "Consult with legal experts to understand the implications of AI training on user-generated content."
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Meta%E2%80%99s%20new%20terms%20may%20allow%20it%20to%20train%20AI%20on%20news%20sites%20for%20free%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/10/16/google-s-gemini-4-argon-is-closer-to-the-ai-frontier-than-any-google-model-in-mont.html",
+      "created_at": "2026-10-16T16:55:44.088690+00:00",
+      "source": {
+        "title": "Google's Gemini 4 Argon is closer to the AI frontier than any Google model in months",
+        "url": "https://the-decoder.com/googles-gemini-4-argon-is-closer-to-the-ai-frontier-than-any-google-model-in-months/",
+        "source": "The Decoder",
+        "published_at": "2026-10-16T15:03:46+00:00",
+        "display_date": "Oct 16, 2026",
+        "category": "Models & LLMs",
+        "description": "Google Deepmind's Gemini 4 Argon scored 97.5 percent on the ARC-AGI-3 benchmark, making Google the second lab after OpenAI to cross the 95 percent mark. But the results swing wildly depending on the test setup: in the standard harness, the score drops to just 49.8 percent. Argon also trails rivals in math and software engineering. The article Google's Gemini 4 Argon is closer to the AI frontier than any Google model in months appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Google's Gemini 4 Argon Advances AI Frontier Despite Testing Disparities",
+        "summary": "Google's Gemini 4 Argon model shows strong performance on specific benchmarks but faces challenges in standardized testing and other domains.",
+        "facts": [
+          {
+            "statement": "Gemini 4 Argon scored high on ARC-AGI-3 benchmark using specialized test settings.",
+            "evidence": "scored 97.5 percent on the ARC-AGI-3 benchmark"
+          },
+          {
+            "statement": "Performance varies significantly based on testing environment and setup.",
+            "evidence": "results swing wildly depending on the test setup"
+          },
+          {
+            "statement": "Gemini 4 Argon trails in math and software engineering benchmarks.",
+            "evidence": "lags in math and coding"
+          }
+        ],
+        "why_it_matters": "The performance of Gemini 4 Argon highlights the importance of testing environments in AI benchmarking. While it shows promise in specific areas, its limitations in standardized tests and other domains suggest that progress is context-dependent and not universally applicable.",
+        "elephant_take": "🐘 鼋 Google's Gemini 4 Argon is a mixed bag—high on some benchmarks but struggling in others. The results show how testing environments can drastically affect AI performance, making it hard to judge true capabilities without consistent standards.",
+        "caveat": "Benchmarking AI models remains subjective and influenced by testing conditions.",
+        "who_should_care": [
+          "AI researchers",
+          "Tech companies",
+          "Investors"
+        ],
+        "what_to_do": [
+          "Standardize benchmarking practices",
+          "Conduct multi-environment tests",
+          "Monitor performance across different domains",
+          "Evaluate AI models holistically"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Google%27s%20Gemini%204%20Argon%20is%20closer%20to%20the%20AI%20frontier%20than%20any%20Google%20model%20in%20months%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/15/ai-agents-are-coming-to-rivian-s-cars.html",
       "created_at": "2026-10-16T11:53:03.642210+00:00",
@@ -9622,6 +9814,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-16T16:55:44.088690+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-16T16:55:44.088690+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-10-16T16:55:44.088690+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/tech/1011938/muse-ai-data-friends-consent",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-16T11:53:03.642210+00:00",
@@ -9841,18 +10051,6 @@
       "url": "https://techcrunch.com/2026/10/12/microsoft-president-says-uk-is-best-placed-to-drive-ai-regulation/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-13T14:33:27.036047+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/sakana-ais-self-improving-model-gets-better-at-solving-and-judging-but-cant-catch-its-own-blind-spots/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-13T00:57:54.377946+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-13T00:57:54.377946+00:00",
       "pipeline_version": "2"
     }
   ]
