@@ -1,9 +1,68 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16T16:55:39.685071+00:00",
+  "updated_at": "2026-10-16T21:41:00.993206+00:00",
   "items": [
     {
-      "title": "A Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
+      "title": "Replit is no longer working with Anthropic, CEO says",
+      "url": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-16T21:22:28+00:00",
+      "display_date": "Oct 16, 2026",
+      "category": "AI Tools & Products",
+      "description": "Replit CEO and co-founder Amjad Masad made the comments during TechCrunch Disrupt 2026.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says.html"
+    },
+    {
+      "title": "ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs",
+      "url": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
+      "source": "The Decoder",
+      "published_at": "2026-10-16T18:10:27+00:00",
+      "display_date": "Oct 16, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI's updated Chrome extension lets ChatGPT access open browser tabs, sum up content, and use \"Computer Use\" in Work mode to fill out forms or compare products across several tabs. It is open to all ChatGPT plans. The article ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "India becomes the latest country to report rogue AI agent activity",
+      "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-16T17:52:24+00:00",
+      "display_date": "Oct 16, 2026",
+      "category": "AI Tools & Products",
+      "description": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity.html"
+    },
+    {
+      "title": "China plans to tighten export controls on open-weight models and 23 key AI technologies",
+      "url": "https://the-decoder.com/china-plans-to-tighten-export-controls-on-open-weight-models-and-23-key-ai-technologies/",
+      "source": "The Decoder",
+      "published_at": "2026-10-16T17:42:47+00:00",
+      "display_date": "Oct 16, 2026",
+      "category": "Models & LLMs",
+      "description": "China plans to restrict exports of 23 key AI technologies, including model weights, source code, and training methods for systems hitting 10^26 FLOPs or 2 trillion parameters. A fast-track rule will still clear open-source releases as soon as they are registered, but the move will likely push Western companies to double down on US open-weight models over Chinese alternatives. The article China plans to tighten export controls on open-weight models and 23 key AI technologies appeared first on The",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/16/china-plans-to-tighten-export-controls-on-open-weight-models-and-23-key-ai-technol.html"
+    },
+    {
+      "title": "An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
       "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
       "source": "TechCrunch AI",
       "published_at": "2026-10-16T16:30:00+00:00",
@@ -146,6 +205,20 @@
       }
     },
     {
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "source": "OpenAI",
+      "published_at": "2026-10-16T00:00:00+00:00",
+      "display_date": "Oct 16, 2026",
+      "category": "Models & LLMs",
+      "description": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
       "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
       "url": "https://huggingface.co/blog/reflection-beam",
       "source": "Hugging Face",
@@ -158,21 +231,6 @@
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       }
-    },
-    {
-      "title": "When it came to Cal AI’s viral success, a small army of influencers paid off",
-      "url": "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-15T23:44:56+00:00",
-      "display_date": "Oct 15, 2026",
-      "category": "AI Business",
-      "description": "The company generated over $30 million in revenue in two years and was acquired by MyFitnessPal for an undisclosed amount of money in March.",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/15/when-it-came-to-cal-ai-s-viral-success-a-small-army-of-influencers-paid-off.html"
     },
     {
       "title": "ChatGPT can peek at your Chrome tabs now",
@@ -202,20 +260,6 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/10/15/trump-posts-ai-edited-photo-to-brag-about-white-house-restoration-work.html"
-    },
-    {
-      "title": "Meta launches an open-weight AI model that runs on Macs",
-      "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-15T20:04:53+00:00",
-      "display_date": "Oct 15, 2026",
-      "category": "Models & LLMs",
-      "description": "Meta and Apple have teamed up for the launch of the social media giant's newest model, Muse Spark Open, which will run locally on Apple silicon.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
     },
     {
       "title": "Bluesky’s AI tool now lets you make games and apps to share on social",
@@ -287,34 +331,6 @@
         "offer_id": "adcreative"
       },
       "archive_url": "news/2026/10/15/black-forest-labs-open-weights-image-model-flux-3-image-klein-runs-on-consumer-gpu.html"
-    },
-    {
-      "title": "Google wants Gemini 4 Argon to be the only AI model robots need",
-      "url": "https://the-decoder.com/google-wants-gemini-4-argon-to-be-the-only-ai-model-robots-need/",
-      "source": "The Decoder",
-      "published_at": "2026-10-15T16:35:47+00:00",
-      "display_date": "Oct 15, 2026",
-      "category": "Models & LLMs",
-      "description": "Google's Gemini 4 Argon controls robots, generates simulations from photos or sketches, and evaluates training videos. On Google's own ERQA benchmark, it scores 87 percent. But the published example prompts show that the demos still need a lot of human guidance. The article Google wants Gemini 4 Argon to be the only AI model robots need appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Nvidia's Nemotron 3.5 Super VL is an open model built to run enterprise AI agents nonstop",
-      "url": "https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop/",
-      "source": "The Decoder",
-      "published_at": "2026-10-15T16:09:44+00:00",
-      "display_date": "Oct 15, 2026",
-      "category": "Models & LLMs",
-      "description": "With Nemotron 3.5 Super VL, Nvidia is releasing an open multimodal model with 120 billion parameters for enterprise agents. Two compact Bolt models bring agents to local machines. Dozens of organizations are already fine-tuning Super VL, but getting the most out of it means buying Nvidia hardware. The article Nvidia's Nemotron 3.5 Super VL is an open model built to run enterprise AI agents nonstop appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
     },
     {
       "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
@@ -426,20 +442,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Higgsfield takes AI video from 1 minute to over 10",
-      "url": "https://openai.com/index/higgsfield-longer-videos-voice",
-      "source": "OpenAI",
-      "published_at": "2026-10-13T12:00:00+00:00",
-      "display_date": "Oct 13, 2026",
-      "category": "Models & LLMs",
-      "description": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
-      "related": {
-        "title": "Evaluate Descript for this workflow",
-        "url": "partner-offers/descript-ai-video-editing.html",
-        "offer_id": "descript"
       }
     },
     {
