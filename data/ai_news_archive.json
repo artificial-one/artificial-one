@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16T04:58:09.347458+00:00",
+  "updated_at": "2026-10-16T11:53:03.642210+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/15/ai-agents-are-coming-to-rivian-s-cars.html",
+      "created_at": "2026-10-16T11:53:03.642210+00:00",
+      "source": {
+        "title": "AI agents are coming to Rivian’s cars",
+        "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-15T15:02:36+00:00",
+        "display_date": "Oct 15, 2026",
+        "category": "AI Tools & Products",
+        "description": "We'll likely learn more about how this will work at the company's upcoming \"AI & Autonomy Day\" event in December.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Rivian's Cars Set to Integrate AI Agents in 2024",
+        "summary": "Rivian is preparing to integrate AI agents into its vehicles, with plans to showcase this at an upcoming event. The company has already developed an AI assistant and is exploring partnerships with other AI firms.",
+        "facts": [
+          {
+            "statement": "Rivian has developed an in-house agentic framework for its vehicles",
+            "evidence": "Rivian says it has created its own in-house agentic framework"
+          },
+          {
+            "statement": "Rivian is considering integrating AI agents from other companies",
+            "evidence": "Rivian’s cars will be able to run AI agents made by other companies like Anthropic"
+          },
+          {
+            "statement": "Rivian is hosting an event to discuss AI and autonomy in 2024",
+            "evidence": "the company's upcoming \"ai & autonomy day\" event in"
+          }
+        ],
+        "why_it_matters": "The integration of AI agents into Rivian's vehicles could revolutionize the automotive industry by offering more personalized and intuitive interactions between drivers and their cars. This development highlights the growing role of AI in vehicle autonomy and user experience, with potential implications for both consumer engagement and industry standards.",
+        "elephant_take": "🐘 鼋 Rivian is trying to make cars smarter than a traffic light. They’ve built their own framework, but integrating third-party AI agents could be tricky. It’s a big step towards making cars more responsive to user needs, but safety remains a top concern.",
+        "caveat": "The integration of external AI agents into safety-critical systems requires careful coordination and testing.",
+        "who_should_care": [
+          "Automotive industry analysts",
+          "AI developers",
+          "Consumer tech enthusiasts"
+        ],
+        "what_to_do": [
+          "Attend Rivian's 'AI & Autonomy Day' event in December",
+          "Stay updated on AI developments in the automotive sector",
+          "Consider the implications of AI integration on vehicle safety",
+          "Explore how Rivian's approach could influence industry standards"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20AI%20agents%20are%20coming%20to%20Rivian%E2%80%99s%20cars%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/15/when-it-came-to-cal-ai-s-viral-success-a-small-army-of-influencers-paid-off.html",
       "created_at": "2026-10-16T04:58:09.347458+00:00",
@@ -9556,6 +9622,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/tech/1011938/muse-ai-data-friends-consent",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-16T11:53:03.642210+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/google-wants-gemini-4-argon-to-be-the-only-ai-model-robots-need/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-16T11:53:03.642210+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-16T11:53:03.642210+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/bank-of-america-puts-4000-people-on-fixing-vulnerabilities-uncovered-by-anthropics-mythos-and-other-ai-models/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-16T11:53:03.642210+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-16T11:53:03.642210+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
       "reason": "quality gate rejected draft: headline length is outside the publication range",
       "at": "2026-10-16T04:58:09.347458+00:00",
@@ -9601,42 +9697,6 @@
       "url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-15T21:44:48.942043+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/google-wants-gemini-4-argon-to-be-the-only-ai-model-robots-need/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-15T17:20:01.236468+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1011938/muse-ai-data-friends-consent",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-15T17:20:01.236468+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-15T17:20:01.236468+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/bank-of-america-puts-4000-people-on-fixing-vulnerabilities-uncovered-by-anthropics-mythos-and-other-ai-models/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-15T17:20:01.236468+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-15T17:20:01.236468+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-15T12:04:43.365156+00:00",
       "pipeline_version": "2"
     },
     {
