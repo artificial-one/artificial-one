@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-10-15",
+  "updated_at": "2026-10-16",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 478,
+    "total": 496,
     "approved_link_pending": 18,
     "existing_active": 39,
-    "not_qualified": 14,
-    "policy_review_required": 25,
+    "not_qualified": 32,
+    "policy_review_required": 27,
     "program_paused": 1,
-    "ready_for_owner_application": 381
+    "ready_for_owner_application": 379
   },
   "opportunities": [
     {
@@ -114,7 +114,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -177,7 +177,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -415,7 +415,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -453,7 +453,7 @@
       "name": "Bread & Butter IO Inc.",
       "slug": "breadbutterioinc",
       "description": "Bread & Butter is an AI-powered lead intelligence platform that helps you track and scale what converts into revenue. It sits between your analytics and your CRM — giving demand gen and revenue teams the intelligence to prime the pipeline, act on high-intent visitors, and hand off sales-ready leads without adding headcount.",
-      "offer": "30% of the license fees a referred customer pays in their first year only, on the Pro license ($49/month) or Pro Plus ($199/month, for customers who need the MCP server). Credits aren't included.",
+      "offer": "20% of the license fees a referred customer pays in their first year only, on the Pro license ($49/month) or Pro Plus ($199/month, for customers who need the MCP server). Credits aren't included.",
       "tags": [
         "Analytics",
         "Artificial Intelligence",
@@ -477,7 +477,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1080,7 +1080,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 70,
+      "review_days": 68,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1192,7 +1192,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 17,
+      "review_days": 18,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1388,7 +1388,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1676,7 +1676,6 @@
         "Artificial Intelligence",
         "Digital Advertising",
         "Hot",
-        "Internal Pick",
         "Marketing",
         "Sales",
         "System Integrator",
@@ -1877,7 +1876,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 67,
+      "review_days": 61,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1931,7 +1930,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1991,7 +1990,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2007,18 +2006,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -2280,7 +2271,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2412,7 +2403,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 140,
+      "review_days": 133,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2632,7 +2623,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2968,6 +2959,7 @@
       "tags": [
         "Artificial Intelligence",
         "Collaboration & Productivity",
+        "Hot",
         "Hubspot integrated",
         "Sales",
         "Salesforce integrated",
@@ -3001,6 +2993,59 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:teikametricsinc",
+      "network": "partnerstack",
+      "name": "Teikametrics",
+      "slug": "teikametricsinc",
+      "description": "Teikametrics is an AI-powered marketplace optimization platform that helps brands and sellers grow profitably on Amazon, Walmart, and TikTok Shop. Powered by Artificial Retail Intelligence (ARI), the platform automates advertising, optimizes product listings, forecasts inventory demand, and unifies marketplace data to maximize sales, efficiency, and profitability.",
+      "offer": "Earn 25% of First Year Subscription Revenue for each successful referral",
+      "tags": [
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Commerce",
+        "Digital Advertising",
+        "E-Commerce",
+        "Marketing",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/teikametricsinc?company=teikametricsinc&gref=marketplace",
+      "terms_url": "https://www.teikametrics.com/terms-conditions/",
+      "website": "https://www.teikametrics.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 85,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "data",
+        "e-commerce",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -3085,7 +3130,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3146,7 +3191,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 46,
+      "review_days": 42,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3324,7 +3369,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -3352,6 +3397,64 @@
       "policy": {
         "status": "not_reviewed",
         "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:vea",
+      "network": "partnerstack",
+      "name": "VEA",
+      "slug": "vea",
+      "description": "VEA is an AI powered business management platform for solopreneurs and small teams. One dashboard for customers, invoicing, work orders, scheduling, tasks, and AI analytics. $30/user/month. No contracts. Earn up to 30% recurring commission for 12 months per referral.",
+      "offer": "Earn up to 30% recurring revenue share for the first 12 months of every customer you refer",
+      "tags": [
+        "Accounting",
+        "Analytics",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Customer Service",
+        "ERP",
+        "HR Software",
+        "Office Software",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vea?company=vea&gref=marketplace",
+      "terms_url": "https://vea.ai/affiliate-terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 5,
+      "source": "https://market.partnerstack.com/",
+      "score": 85,
+      "relevance_matches": [
+        "ai",
+        "analytics",
+        "artificial intelligence",
+        "customer service",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -3897,7 +4000,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 81,
       "relevance_matches": [
@@ -4026,54 +4129,6 @@
           "disclosure_required": false
         },
         "cookie_days": 60
-      }
-    },
-    {
-      "id": "partnerstack:refreshme",
-      "network": "partnerstack",
-      "name": "Zypper",
-      "slug": "refreshme",
-      "description": "Zypper is a personal financial management platform.",
-      "offer": "AI-powered personal financial management platform with 20% recurring commissions",
-      "tags": [
-        "Accounting",
-        "Affiliates",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Publishers",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/refreshme?company=refreshme&gref=marketplace",
-      "terms_url": "",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 81,
-      "relevance_matches": [
-        "artificial intelligence",
-        "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
       }
     },
     {
@@ -4635,7 +4690,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 35,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5087,58 +5142,6 @@
       }
     },
     {
-      "id": "partnerstack:teikametricsinc",
-      "network": "partnerstack",
-      "name": "Teikametrics",
-      "slug": "teikametricsinc",
-      "description": "Teikametrics is an AI-powered marketplace optimization platform that helps brands and sellers grow profitably on Amazon, Walmart, and TikTok Shop. Powered by Artificial Retail Intelligence (ARI), the platform automates advertising, optimizes product listings, forecasts inventory demand, and unifies marketplace data to maximize sales, efficiency, and profitability.",
-      "offer": "Earn 25% of First Year Subscription Revenue for each successful referral",
-      "tags": [
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Commerce",
-        "Digital Advertising",
-        "E-Commerce",
-        "Marketing"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/teikametricsinc?company=teikametricsinc&gref=marketplace",
-      "terms_url": "https://www.teikametrics.com/terms-conditions/",
-      "website": "https://www.teikametrics.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "data",
-        "e-commerce",
-        "marketing",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:thinkific6979",
       "network": "partnerstack",
       "name": "Thinkific",
@@ -5179,63 +5182,6 @@
         "development",
         "marketing",
         "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:vea",
-      "network": "partnerstack",
-      "name": "VEA",
-      "slug": "vea",
-      "description": "VEA is an AI powered business management platform for solopreneurs and small teams. One dashboard for customers, invoicing, work orders, scheduling, tasks, and AI analytics. $30/user/month. No contracts. Earn up to 30% recurring commission for 12 months per referral.",
-      "offer": "Earn up to 30% recurring revenue share for the first 12 months of every customer you refer",
-      "tags": [
-        "Accounting",
-        "Analytics",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Customer Service",
-        "ERP",
-        "HR Software",
-        "Office Software",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vea?company=vea&gref=marketplace",
-      "terms_url": "https://vea.ai/affiliate-terms",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 6,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "ai",
-        "analytics",
-        "artificial intelligence",
-        "customer service",
-        "productivity",
-        "sales",
-        "software"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -5573,7 +5519,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -5798,7 +5744,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -7153,7 +7099,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 75,
       "relevance_matches": [
@@ -7683,6 +7629,7 @@
       "tags": [
         "Affiliates",
         "Customer Service",
+        "Hot",
         "Hubspot integrated",
         "Influencers",
         "Marketing",
@@ -7752,7 +7699,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -8030,7 +7977,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -8254,7 +8201,6 @@
         "IoT Management",
         "New",
         "Payroll",
-        "Priority",
         "Publishers",
         "Referral Partners",
         "Trending",
@@ -8736,7 +8682,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -9017,6 +8963,54 @@
       }
     },
     {
+      "id": "partnerstack:datasnipper",
+      "network": "partnerstack",
+      "name": "DataSnipper",
+      "slug": "datasnipper",
+      "description": "DataSnipper is an intelligent automation platform that automatically and securely extracts, cross-references and validates source documents of any audit and finance procedure",
+      "offer": "Earn up to 30% of commissionable revenue!",
+      "tags": [
+        "Accounting",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Governance, Risk, & Compliance",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/datasnipper?company=datasnipper&gref=marketplace",
+      "terms_url": "",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": false,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 70,
+      "relevance_matches": [
+        "artificial intelligence",
+        "automation",
+        "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:callhippo",
       "network": "partnerstack",
       "name": "CallHippo",
@@ -9200,7 +9194,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -9457,6 +9451,52 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:upwork",
+      "network": "partnerstack",
+      "name": "Upwork",
+      "slug": "upwork",
+      "description": "Upwork is the world’s human and AI-powered work marketplace. It connects businesses, from early startups to global enterprises, with skilled independent professionals who help them move faster and solve problems. For more than two decades, Upwork has helped companies find specialized expertise across AI, development, design, marketing, finance, operations, customer support, and more.",
+      "offer": "Earn 70% commission on a new client’s first contract, up to $250.",
+      "tags": [
+        "Collaboration & Productivity",
+        "HR Software",
+        "Hot",
+        "Marketing",
+        "Office Software",
+        "Supply Chain & Logistics",
+        "Trusted",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/upwork?company=upwork&gref=marketplace",
+      "terms_url": "https://www.upwork.com/legal",
+      "website": "https://www.upwork.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 68,
+      "relevance_matches": [
+        "ai",
+        "design",
+        "development",
+        "marketing",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -10200,7 +10240,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10569,7 +10609,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 18,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11141,7 +11181,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -11392,6 +11432,7 @@
         "Sales",
         "Salesforce integrated",
         "Shopify integrated",
+        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/outgrow?company=outgrow&gref=marketplace",
@@ -11910,7 +11951,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 209,
+      "review_days": 206,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12279,7 +12320,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12598,7 +12639,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 223,
+      "review_days": 217,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12867,7 +12908,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 44,
+      "review_days": 41,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13048,7 +13089,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 12,
+      "review_days": 96,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13367,7 +13408,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13681,7 +13722,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -14810,11 +14851,19 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 90
       }
     },
     {
@@ -15340,7 +15389,7 @@
           "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
@@ -15961,7 +16010,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 13,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16061,53 +16110,6 @@
       "relevance_matches": [
         "data",
         "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:datasnipper",
-      "network": "partnerstack",
-      "name": "DataSnipper",
-      "slug": "datasnipper",
-      "description": "DataSnipper is an intelligent automation platform that automatically and securely extracts, cross-references and validates source documents of any audit and finance procedure",
-      "offer": "Earn up to 30% of commissionable revenue!",
-      "tags": [
-        "Accounting",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Governance, Risk, & Compliance"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/datasnipper?company=datasnipper&gref=marketplace",
-      "terms_url": "",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": false,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 65,
-      "relevance_matches": [
-        "artificial intelligence",
-        "automation",
-        "productivity"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -16857,8 +16859,13 @@
       "description": "SupportYourApp is an international Intelligent Support-as-a-Service company that has been providing secure technical, customer support and CX services to growing companies around the globe since 2010. Our AI-powered agentic solutions help automate routine tasks, handle common customer requests, and support agents in managing interactions more efficiently.",
       "offer": "Earn $300 for every MQL or $700 for every SQL",
       "tags": [
+        "Affiliates",
+        "Agencies",
         "Customer Service",
         "Hot",
+        "Internal Pick",
+        "Publishers",
+        "Referral Partners",
         "Trusted"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/supportyourapp?company=supportyourapp&gref=marketplace",
@@ -16870,7 +16877,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16952,6 +16959,55 @@
       }
     },
     {
+      "id": "partnerstack:topechelonsoftware",
+      "network": "partnerstack",
+      "name": "Top Echelon Software",
+      "slug": "topechelonsoftware",
+      "description": "Top Echelon is an applicant tracking and recruiting software designed to help businesses streamline their hiring process.",
+      "offer": "Earn 20% revenue share on your customer's first year purchases!",
+      "tags": [
+        "Affiliates",
+        "Ambassadors",
+        "HR",
+        "HR Software",
+        "Hot",
+        "Office Software",
+        "Referral Partners",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/topechelonsoftware?company=topechelonsoftware&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/1sV2lgbE816l-GnfRqwOeyUmNlPG6Qgb0/view?usp=share_link",
+      "website": "https://www.topechelon.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 65,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:ultahost",
       "network": "partnerstack",
       "name": "Ultahost",
@@ -17030,7 +17086,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 56,
+      "review_days": 59,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17284,7 +17340,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17546,7 +17602,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17671,6 +17727,54 @@
           "disclosure_required": false
         },
         "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:taxfyle",
+      "network": "partnerstack",
+      "name": "Taxfyle",
+      "slug": "taxfyle",
+      "description": "Taxfyle is a technology-driven platform connecting people and businesses with licensed tax professionals and bookkeepers for seamless tax prep, filing, advisory, and accounting services.",
+      "offer": "30% commission for every customer purchase in their first year!",
+      "tags": [
+        "Accounting",
+        "Affiliates",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Governance, Risk, & Compliance",
+        "Hot",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/taxfyle?company=taxfyle&gref=marketplace",
+      "terms_url": "https://www.taxfyle.com/policy/affiliate-partner-terms-of-service",
+      "website": "https://www.taxfyle.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 4,
+      "source": "https://market.partnerstack.com/",
+      "score": 63,
+      "relevance_matches": [
+        "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 30
       }
     },
     {
@@ -18114,7 +18218,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18975,7 +19079,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "Earn 10% on every referral",
+      "offer": "Earn 15% on every referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -19561,30 +19665,76 @@
       }
     },
     {
-      "id": "partnerstack:topechelonsoftware",
+      "id": "partnerstack:prevuehr",
       "network": "partnerstack",
-      "name": "Top Echelon Software",
-      "slug": "topechelonsoftware",
-      "description": "Top Echelon is an applicant tracking and recruiting software designed to help businesses streamline their hiring process.",
-      "offer": "Earn 20% revenue share on your customer's first year purchases!",
+      "name": "Prevue HR",
+      "slug": "prevuehr",
+      "description": "Modernize your hiring with Prevue Assessments. Our pre-employment assessments are designed to help you make smarter, data-driven hiring decisions.",
+      "offer": "Earn 15% for the 1st year on all new customers",
       "tags": [
         "Affiliates",
-        "Ambassadors",
         "HR",
         "HR Software",
-        "Office Software",
-        "Referral Partners"
+        "Referral Partners",
+        "Trusted"
       ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/topechelonsoftware?company=topechelonsoftware&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1sV2lgbE816l-GnfRqwOeyUmNlPG6Qgb0/view?usp=share_link",
-      "website": "https://www.topechelon.com",
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/prevuehr?company=prevuehr&gref=marketplace",
+      "terms_url": "https://www.prevuehr.com/affiliate-terms-of-service/",
+      "website": "https://www.prevuehr.com",
       "waitlist": false,
       "archived": false,
       "links_enabled": true,
       "materials": true,
-      "sub_id_enabled": true,
+      "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 60,
+      "relevance_matches": [
+        "data",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:vestwell",
+      "network": "partnerstack",
+      "name": "Vestwell",
+      "slug": "vestwell",
+      "description": "Vestwell is the modern savings platform helping small and mid‑size businesses offer high‑quality, affordable retirement and workplace savings plans. We partner with employers, advisors, payroll providers, and states to make saving for life’s biggest milestones more accessible to everyone.",
+      "offer": "Earn $25 per qualified lead AND 10% revenue share for paid customers!",
+      "tags": [
+        "B2B Marketplaces",
+        "HR",
+        "HR Software",
+        "Hot",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vestwell?company=vestwell&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/1ZlFU0dy8SA6Z3qYP2-fOYn34wSu2XYwaCTngWSymImw/edit?usp=sharing",
+      "website": "https://www.vestwell.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19599,7 +19749,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -19852,14 +20002,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": true,
-          "coupon_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 180
+        "cookie_days": null
       }
     },
     {
@@ -20072,8 +20222,10 @@
       "tags": [
         "Affiliates",
         "Agencies",
+        "Featured",
         "Hot",
         "Marketing",
+        "Priority",
         "Resellers",
         "Sales",
         "Trusted"
@@ -20087,7 +20239,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20461,7 +20613,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20518,7 +20670,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 119,
+      "review_days": 159,
       "source": "https://market.partnerstack.com/",
       "score": 58,
       "relevance_matches": [
@@ -20641,52 +20793,6 @@
       }
     },
     {
-      "id": "partnerstack:taxfyle",
-      "network": "partnerstack",
-      "name": "Taxfyle",
-      "slug": "taxfyle",
-      "description": "Taxfyle is a technology-driven platform connecting people and businesses with licensed tax professionals and bookkeepers for seamless tax prep, filing, advisory, and accounting services.",
-      "offer": "30% commission for every customer purchase in their first year!",
-      "tags": [
-        "Accounting",
-        "Affiliates",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Governance, Risk, & Compliance"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/taxfyle?company=taxfyle&gref=marketplace",
-      "terms_url": "https://www.taxfyle.com/policy/affiliate-partner-terms-of-service",
-      "website": "https://www.taxfyle.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 4,
-      "source": "https://market.partnerstack.com/",
-      "score": 58,
-      "relevance_matches": [
-        "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": 30
-      }
-    },
-    {
       "id": "partnerstack:getstartedtiktok",
       "network": "partnerstack",
       "name": "TikTok for Business",
@@ -20787,6 +20893,58 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:coast361",
+      "network": "partnerstack",
+      "name": "Coast",
+      "slug": "coast361",
+      "description": "Coast is a smart fuel card and expense management built on the Visa network. Drivers can fill up anywhere their Visa is accepted and pay for parking, tolls, maintenance, and more. All with granular driver and vehicle controls and reporting.",
+      "offer": "Get $300 Per Approved Application",
+      "tags": [
+        "Accounting",
+        "Affiliates",
+        "Ambassadors",
+        "B2B Marketplaces",
+        "Commerce",
+        "Governance, Risk, & Compliance",
+        "Hot",
+        "Office Software",
+        "Supply Chain & Logistics",
+        "Trusted",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/coast361?company=coast361&gref=marketplace",
+      "terms_url": "https://coastpay.com/affiliate-terms/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 57,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -21094,9 +21252,14 @@
       "network": "partnerstack",
       "name": "Modern Agent Social Club",
       "slug": "modernagentsocialclub",
-      "description": "We are a real estate marketing and personal brand building membership for thousands of agents looking to build their business the modern way.",
-      "offer": "20% recurring revenue for the first 12 months",
-      "tags": [],
+      "description": "We are a real estate marketing and personal brand building membership for thousands of agents looking to build their business the modern way. Our tools and systems help them build their own personal brand so they don't look like every other agent on Instagram or in our membership.",
+      "offer": "$50 for every membership signup",
+      "tags": [
+        "Content Management",
+        "Digital Advertising",
+        "Marketing",
+        "Sales"
+      ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/modernagentsocialclub?company=modernagentsocialclub&gref=marketplace",
       "terms_url": "https://modernagentsocialclub.com/terms-and-conditions",
       "website": "",
@@ -21110,7 +21273,9 @@
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
-        "marketing"
+        "content",
+        "marketing",
+        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -21512,18 +21677,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -21597,7 +21754,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 5,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21846,52 +22003,6 @@
       }
     },
     {
-      "id": "partnerstack:prevuehr",
-      "network": "partnerstack",
-      "name": "Prevue HR",
-      "slug": "prevuehr",
-      "description": "Modernize your hiring with Prevue Assessments. Our pre-employment assessments are designed to help you make smarter, data-driven hiring decisions.",
-      "offer": "Earn 15% for the 1st year on all new customers",
-      "tags": [
-        "Affiliates",
-        "HR",
-        "HR Software",
-        "Referral Partners"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/prevuehr?company=prevuehr&gref=marketplace",
-      "terms_url": "https://www.prevuehr.com/affiliate-terms-of-service/",
-      "website": "https://www.prevuehr.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 55,
-      "relevance_matches": [
-        "data",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:streak",
       "network": "partnerstack",
       "name": "Streak - CRM for Gmail",
@@ -21944,50 +22055,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:vestwell",
-      "network": "partnerstack",
-      "name": "Vestwell",
-      "slug": "vestwell",
-      "description": "Vestwell is the modern savings platform helping small and mid‑size businesses offer high‑quality, affordable retirement and workplace savings plans. We partner with employers, advisors, payroll providers, and states to make saving for life’s biggest milestones more accessible to everyone.",
-      "offer": "Earn $25 per qualified lead AND 10% revenue share for paid customers!",
-      "tags": [
-        "B2B Marketplaces",
-        "HR",
-        "HR Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vestwell?company=vestwell&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/1ZlFU0dy8SA6Z3qYP2-fOYn34wSu2XYwaCTngWSymImw/edit?usp=sharing",
-      "website": "https://www.vestwell.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 55,
-      "relevance_matches": [
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -22497,7 +22564,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 52,
       "relevance_matches": [
@@ -22521,33 +22588,28 @@
       }
     },
     {
-      "id": "partnerstack:coast361",
+      "id": "partnerstack:gcheck",
       "network": "partnerstack",
-      "name": "Coast",
-      "slug": "coast361",
-      "description": "Coast is a smart fuel card and expense management built on the Visa network. Drivers can fill up anywhere their Visa is accepted and pay for parking, tolls, maintenance, and more. All with granular driver and vehicle controls and reporting.",
-      "offer": "Get $300 Per Approved Application",
+      "name": "GCheck",
+      "slug": "gcheck",
+      "description": "GCheck is an FCRA-compliant background screening platform for mid-market HR teams and staffing agencies. Services include criminal, MVR, employment, education, and drug screening, backed by SOC 2 Type 2 controls and integrations with Workday, UKG, ADP, Greenhouse, and 50+ other ATS/HRIS systems. Strongest in Healthcare, Manufacturing, Transportation, and Construction, where compliance and MVR coverage drive buying decisions.",
+      "offer": "Earn $150 for each customer acquisition ($50 for a completed demo, and $100 upon contract signed)",
       "tags": [
-        "Accounting",
-        "Affiliates",
-        "Ambassadors",
-        "B2B Marketplaces",
-        "Commerce",
         "Governance, Risk, & Compliance",
+        "HR Software",
         "Office Software",
-        "Supply Chain & Logistics",
-        "Vertical Industry Software"
+        "Trusted"
       ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/coast361?company=coast361&gref=marketplace",
-      "terms_url": "https://coastpay.com/affiliate-terms/",
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/gcheck?company=gcheck&gref=marketplace",
+      "terms_url": "https://gcheck.com/partnerstack-terms-and-conditions/",
       "website": "",
       "waitlist": false,
       "archived": false,
       "links_enabled": true,
       "materials": true,
-      "sub_id_enabled": true,
+      "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": -1,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 52,
       "relevance_matches": [
@@ -22559,7 +22621,7 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": true,
+          "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
@@ -22567,7 +22629,7 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -22642,7 +22704,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 12,
+      "review_days": 14,
       "source": "https://market.partnerstack.com/",
       "score": 51,
       "relevance_matches": [
@@ -22863,51 +22925,6 @@
       }
     },
     {
-      "id": "partnerstack:gcheck",
-      "network": "partnerstack",
-      "name": "GCheck",
-      "slug": "gcheck",
-      "description": "GCheck is an FCRA-compliant background screening platform for mid-market HR teams and staffing agencies. Services include criminal, MVR, employment, education, and drug screening, backed by SOC 2 Type 2 controls and integrations with Workday, UKG, ADP, Greenhouse, and 50+ other ATS/HRIS systems. Strongest in Healthcare, Manufacturing, Transportation, and Construction, where compliance and MVR coverage drive buying decisions.",
-      "offer": "Earn $150 for each customer acquisition ($50 for a completed demo, and $100 upon contract signed)",
-      "tags": [
-        "Governance, Risk, & Compliance",
-        "HR Software",
-        "Office Software",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/gcheck?company=gcheck&gref=marketplace",
-      "terms_url": "https://gcheck.com/partnerstack-terms-and-conditions/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": false,
-      "review_days": 7,
-      "source": "https://market.partnerstack.com/",
-      "score": 48,
-      "relevance_matches": [
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": 90
-      }
-    },
-    {
       "id": "partnerstack:hibobaffiliate",
       "network": "partnerstack",
       "name": "HiBob Affiliate",
@@ -22962,7 +22979,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": -1,
+      "review_days": 13,
       "source": "https://market.partnerstack.com/",
       "score": 47,
       "relevance_matches": [
@@ -23085,6 +23102,7 @@
       "tags": [
         "Accounting",
         "Affiliates",
+        "Hot",
         "Publishers",
         "Trusted"
       ],
@@ -23145,7 +23163,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 90,
+      "review_days": 93,
       "source": "https://market.partnerstack.com/",
       "score": 46,
       "relevance_matches": [
@@ -23678,7 +23696,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 111,
+      "review_days": 106,
       "source": "https://market.partnerstack.com/",
       "score": 40,
       "relevance_matches": [
@@ -23815,7 +23833,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 14,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 39,
       "relevance_matches": [],
@@ -24009,7 +24027,7 @@
       "name": "Guesty",
       "slug": "guesty",
       "description": "With Guesty’s Affiliate Program, you can earn an additional stream of income, with up to 5K per referral Help your network of hospitality pros succeed in growing their businesses with our advanced hospitality operations platform.",
-      "offer": "$50 for per Listing",
+      "offer": "Earn $100 for a Customer's First Listing",
       "tags": [
         "Hot",
         "Trusted"
@@ -24154,6 +24172,36 @@
       "relevance_matches": [
         "software"
       ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:i904flagco1792075900",
+      "network": "partnerstack",
+      "name": "i904 flagco 1792075900",
+      "slug": "i904flagco1792075900",
+      "description": "",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/i904flagco1792075900?company=i904flagco1792075900&gref=marketplace",
+      "terms_url": "",
+      "website": "https://flag1792075900.example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 18,
+      "relevance_matches": [],
       "already_active": false,
       "relationship_state": "pending",
       "state": "not_qualified",
@@ -24442,6 +24490,516 @@
       "review_days": 0,
       "source": "https://market.partnerstack.com/",
       "score": 15,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:i1105approvedco",
+      "network": "partnerstack",
+      "name": "i1105 Approved Co",
+      "slug": "i1105approvedco",
+      "description": "",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/i1105approvedco?company=i1105approvedco&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:i878approvedgates1792074901038",
+      "network": "partnerstack",
+      "name": "i878 approved+gates 1792074901038",
+      "slug": "i878approvedgates1792074901038",
+      "description": "",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/i878approvedgates1792074901038?company=i878approvedgates1792074901038&gref=marketplace",
+      "terms_url": "",
+      "website": "https://apprgate.example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:i878fapproved1792074641",
+      "network": "partnerstack",
+      "name": "i878 f_approved 1792074641",
+      "slug": "i878fapproved1792074641",
+      "description": "",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/i878fapproved1792074641?company=i878fapproved1792074641&gref=marketplace",
+      "terms_url": "",
+      "website": "https://f-approved.example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:i904appco11792075598",
+      "network": "partnerstack",
+      "name": "i904 appco1 1792075598",
+      "slug": "i904appco11792075598",
+      "description": "",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/i904appco11792075598?company=i904appco11792075598&gref=marketplace",
+      "terms_url": "",
+      "website": "https://a1-1792075598.example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:i904appco21792075598",
+      "network": "partnerstack",
+      "name": "i904 appco2 1792075598",
+      "slug": "i904appco21792075598",
+      "description": "",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/i904appco21792075598?company=i904appco21792075598&gref=marketplace",
+      "terms_url": "",
+      "website": "https://a2-1792075598.example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:i904appco41792075598",
+      "network": "partnerstack",
+      "name": "i904 appco4 1792075598",
+      "slug": "i904appco41792075598",
+      "description": "",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/i904appco41792075598?company=i904appco41792075598&gref=marketplace",
+      "terms_url": "",
+      "website": "https://a4-1792075598.example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:i944c65441",
+      "network": "partnerstack",
+      "name": "i944c65441",
+      "slug": "i944c65441",
+      "description": "i944 C",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/i944c65441?company=i944c65441&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:i944d65441",
+      "network": "partnerstack",
+      "name": "i944d65441",
+      "slug": "i944d65441",
+      "description": "i944 D",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/i944d65441?company=i944d65441&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:i954appr1792083764",
+      "network": "partnerstack",
+      "name": "i954 appr 1792083764",
+      "slug": "i954appr1792083764",
+      "description": "",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/i954appr1792083764?company=i954appr1792083764&gref=marketplace",
+      "terms_url": "",
+      "website": "https://g1792083764.ex.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:t1srcdoc8880",
+      "network": "partnerstack",
+      "name": "t1_srcdoc8880",
+      "slug": "t1srcdoc8880",
+      "description": "t1_srcdoc",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/t1srcdoc8880?company=t1srcdoc8880&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:t2jssrc156",
+      "network": "partnerstack",
+      "name": "t2_jssrc156",
+      "slug": "t2jssrc156",
+      "description": "t2_jssrc",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/t2jssrc156?company=t2jssrc156&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:t3datasrc218",
+      "network": "partnerstack",
+      "name": "t3_datasrc218",
+      "slug": "t3datasrc218",
+      "description": "t3_datasrc",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/t3datasrc218?company=t3datasrc218&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:t4ext5706",
+      "network": "partnerstack",
+      "name": "t4_ext5706",
+      "slug": "t4ext5706",
+      "description": "t4_ext",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/t4ext5706?company=t4ext5706&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:t5self7644",
+      "network": "partnerstack",
+      "name": "t5_self7644",
+      "slug": "t5self7644",
+      "description": "t5_self",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/t5self7644?company=t5self7644&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:t6styleurl8005",
+      "network": "partnerstack",
+      "name": "t6_styleurl8005",
+      "slug": "t6styleurl8005",
+      "description": "t6_styleurl",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/t6styleurl8005?company=t6styleurl8005&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:t7imgonerr3325",
+      "network": "partnerstack",
+      "name": "t7_imgonerr3325",
+      "slug": "t7imgonerr3325",
+      "description": "t7_imgonerr",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/t7imgonerr3325?company=t7imgonerr3325&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "not_qualified",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:t8proto7142",
+      "network": "partnerstack",
+      "name": "t8_proto7142",
+      "slug": "t8proto7142",
+      "description": "t8_proto",
+      "offer": "",
+      "tags": [],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/t8proto7142?company=t8proto7142&gref=marketplace",
+      "terms_url": "",
+      "website": "https://example.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 10,
       "relevance_matches": [],
       "already_active": false,
       "relationship_state": "pending",
