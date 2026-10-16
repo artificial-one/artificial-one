@@ -1,7 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-10-15T21:44:44.968796+00:00",
+  "updated_at": "2026-10-16T04:58:05.535555+00:00",
   "items": [
+    {
+      "title": "When it came to Cal AI’s viral success, a small army of influencers paid off",
+      "url": "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-15T23:44:56+00:00",
+      "display_date": "Oct 15, 2026",
+      "category": "AI Business",
+      "description": "The company generated over $30 million in revenue in two years and was acquired by MyFitnessPal for an undisclosed amount of money in March.",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/10/15/when-it-came-to-cal-ai-s-viral-success-a-small-army-of-influencers-paid-off.html"
+    },
+    {
+      "title": "ChatGPT can peek at your Chrome tabs now",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+      "source": "The Verge AI",
+      "published_at": "2026-10-15T22:43:23+00:00",
+      "display_date": "Oct 15, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI's ChatGPT Atlas browser is gone, but now ChatGPT's Google Chrome extension is getting some upgrades that allow it to use the browser tabs you already have open. With the extension installed, OpenAI says ChatGPT can now view your browser tabs when you tag Chrome in ChatGPT's web or desktop app, posting a demo video […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "Trump posts AI-edited photo to brag about White House restoration work",
       "url": "https://www.theverge.com/policy/1012445/donald-trump-ai-photo-white-house-rennovation-column",
@@ -227,7 +256,8 @@
         "title": "Model the value of an AI subscription",
         "url": "calculators/ai-software-roi-calculator.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/15/amazon-s-bee-launches-two-new-personal-ai-devices-starting-at-75.html"
     },
     {
       "title": "Anthropic's Q3 revenue hits $16.8B but growth slows ahead of planned November IPO",
@@ -242,21 +272,6 @@
         "url": "calculators/ai-software-roi-calculator.html",
         "offer_id": ""
       }
-    },
-    {
-      "title": "Figma announces new features to define how agents work on its platform",
-      "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-15T04:30:00+00:00",
-      "display_date": "Oct 15, 2026",
-      "category": "AI Tools & Products",
-      "description": "Figma is also releasing its code layers feature in open beta.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/15/figma-announces-new-features-to-define-how-agents-work-on-its-platform.html"
     },
     {
       "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
@@ -400,39 +415,11 @@
       }
     },
     {
-      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-      "url": "https://openai.com/index/asana-browser-agent",
-      "source": "OpenAI",
-      "published_at": "2026-10-09T07:00:00+00:00",
-      "display_date": "Oct 09, 2026",
-      "category": "Models & LLMs",
-      "description": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "The model that didn't exist, so you made it yourself",
       "url": "https://huggingface.co/blog/building-with-ml-intern",
       "source": "Hugging Face",
       "published_at": "2026-10-08T00:00:00+00:00",
       "display_date": "Oct 08, 2026",
-      "category": "Models & LLMs",
-      "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
-      "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
-      "source": "Hugging Face",
-      "published_at": "2026-10-07T12:45:31+00:00",
-      "display_date": "Oct 07, 2026",
       "category": "Models & LLMs",
       "description": "",
       "related": {
@@ -510,6 +497,20 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
+      }
+    },
+    {
+      "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "source": "Hugging Face",
+      "published_at": "2026-10-02T04:01:31+00:00",
+      "display_date": "Oct 02, 2026",
+      "category": "AI Business",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
       }
     }
   ]
