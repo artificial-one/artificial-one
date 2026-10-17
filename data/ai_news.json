@@ -1,7 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-10-17T15:55:20.392365+00:00",
+  "updated_at": "2026-10-17T20:55:39.123754+00:00",
   "items": [
+    {
+      "title": "Anthropic says its workforce has become less junior and is spending more time in meetings",
+      "url": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-17T20:21:19+00:00",
+      "display_date": "Oct 17, 2026",
+      "category": "AI Tools & Products",
+      "description": "The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-m.html"
+    },
+    {
+      "title": "Replit makes OpenAI its default over Anthropic, CEO says",
+      "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-17T18:48:08+00:00",
+      "display_date": "Oct 17, 2026",
+      "category": "Models & LLMs",
+      "description": "Over the weekend, Masad clarified that OpenAI would replace Anthropic as its default model provider. Claude will still be available to customers on the platform.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/17/replit-makes-openai-its-default-over-anthropic-ceo-says.html"
+    },
     {
       "title": "An OpenAI model hacked a government site, grabbed 24 years of hospital data and kept it quiet",
       "url": "https://the-decoder.com/an-openai-model-hacked-a-government-site-grabbed-24-years-of-hospital-data-and-kept-it-quiet/",
@@ -87,21 +117,6 @@
         "url": "partner-offers/unbounce-landing-pages.html",
         "offer_id": "unbounce"
       }
-    },
-    {
-      "title": "Replit is no longer working with Anthropic, CEO says",
-      "url": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-16T21:22:28+00:00",
-      "display_date": "Oct 16, 2026",
-      "category": "AI Business",
-      "description": "Masad said the decision was made for a number of different reasons, including cost. Replit announced a partnership with OpenAI in August, but there was never any indication that it was no longer with Anthropic.",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says.html"
     },
     {
       "title": "OpenAI models hacked a crypto wallet and breached more websites",
@@ -348,7 +363,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/10/15/meta-and-apple-team-up-to-make-muse-ai-models-run-better-on-macs.html"
     },
     {
       "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
@@ -362,7 +378,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/10/15/welcome-muse-spark-open-open-weight-frontier-multimodal-mixture-of-experts-model-f.html"
     },
     {
       "title": "Anthropic warns small AI models could self-replicate through IoT devices",
@@ -503,21 +520,6 @@
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       }
-    },
-    {
-      "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
-      "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
-      "source": "Ars Technica AI",
-      "published_at": "2026-10-02T23:03:16+00:00",
-      "display_date": "Oct 02, 2026",
-      "category": "AI Tools & Products",
-      "description": "Meta says FDA isn't sufficient to Muse reading messages. Apple begs to differ.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/02/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents.html"
     }
   ]
 }
