@@ -6,6 +6,33 @@
   },
   "events": [
     {
+      "detected_on": "2026-10-17",
+      "id": "da28bebf4ed0e3e5",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://fotor.com",
+      "tool_id": "fotor",
+      "tool_name": "Fotor"
+    },
+    {
+      "detected_on": "2026-10-17",
+      "id": "972ae142e8527833",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hotpot.ai",
+      "tool_id": "hotpot-ai",
+      "tool_name": "Hotpot.ai"
+    },
+    {
+      "detected_on": "2026-10-17",
+      "id": "26a68b8c4fdafbae",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://invideo.io",
+      "tool_id": "invideo",
+      "tool_name": "InVideo"
+    },
+    {
       "detected_on": "2026-10-16",
       "id": "4ae01f221ea1789f",
       "kind": "pricing or plan",
@@ -907,6 +934,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-16",
+  "updated_at": "2026-10-17",
   "version": 1
 }
