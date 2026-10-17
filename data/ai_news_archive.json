@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16T21:41:06.361981+00:00",
+  "updated_at": "2026-10-17T04:58:02.241137+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/16/anthropic-gives-metr-inside-access-to-audit-its-ai-models-and-safety-practices.html",
+      "created_at": "2026-10-17T04:58:02.241137+00:00",
+      "source": {
+        "title": "Anthropic gives METR inside access to audit its AI models and safety practices",
+        "url": "https://the-decoder.com/anthropic-gives-metr-inside-access-to-audit-its-ai-models-and-safety-practices/",
+        "source": "The Decoder",
+        "published_at": "2026-10-16T13:11:55+00:00",
+        "display_date": "Oct 16, 2026",
+        "category": "Models & LLMs",
+        "description": "Anthropic has given a team from the nonprofit METR inside access to review its AI models and safety practices, the company announced. The article Anthropic gives METR inside access to audit its AI models and safety practices appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Anthropic grants METR access to audit AI models and safety practices",
+        "summary": "Anthropic has given a team from nonprofit METR inside access to review its AI models and safety practices, with METR publishing findings independently.",
+        "facts": [
+          {
+            "statement": "Anthropic has given a team from the nonprofit METR inside access to review its AI models and safety practices",
+            "evidence": "Anthropic gives METR inside access to audit its AI models and safety practices"
+          },
+          {
+            "statement": "METR will publish its findings independently",
+            "evidence": "METR will publish its findings independently"
+          },
+          {
+            "statement": "Anthropic says it can ask for redactions in certain predefined categories",
+            "evidence": "Anthropic says it can ask for redactions in certain predefined categories"
+          }
+        ],
+        "why_it_matters": "This partnership highlights Anthropic's commitment to transparency and external review, which is crucial for ensuring the safety and ethical use of AI. It also shows that Anthropic is willing to share information with trusted third parties, even if some details remain confidential.",
+        "elephant_take": "🐘 鼋Anthropic is trying to be transparent, but it’s still keeping some secrets. METR gets a nice package, but not all the info. It's a step in the right direction, but we'll see if they follow through on their promises.",
+        "caveat": "The details of what is and isn't accessible remain unclear, and the long-term impact of this partnership is yet to be seen.",
+        "who_should_care": [
+          "AI developers",
+          "Ethics researchers",
+          "Regulators"
+        ],
+        "what_to_do": [
+          "Monitor Anthropic's public statements on transparency",
+          "Keep an eye on METR's published findings",
+          "Stay informed about the White House Accord on Super Intelligence"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20gives%20METR%20inside%20access%20to%20audit%20its%20AI%20models%20and%20safety%20practices%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/16/welcome-beam-a-501b-open-model-you-can-own-customize-and-scale.html",
+      "created_at": "2026-10-17T04:58:02.241137+00:00",
+      "source": {
+        "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
+        "url": "https://huggingface.co/blog/reflection-beam",
+        "source": "Hugging Face",
+        "published_at": "2026-10-16T00:00:00+00:00",
+        "display_date": "Oct 16, 2026",
+        "category": "Models & LLMs",
+        "description": "",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Welcome Beam: A 501B Open Model for Customization and Scaling",
+        "summary": "Welcome Beam is a 501B-parameter model designed for customization and scaling, with support for long-context reasoning and agentic tasks. It offers tools for inference, fine-tuning, and reinforcement learning, along with open-source libraries and a reward program for contributors.",
+        "facts": [
+          {
+            "statement": "Welcome Beam is a 501B-parameter model designed for customization and scaling.",
+            "evidence": "Welcome Beam: a 501B open model you can own, customize, and scale"
+          },
+          {
+            "statement": "The model supports long-context reasoning with a 1M token context window.",
+            "evidence": "Text in, text out with context window of 1M tokens"
+          },
+          {
+            "statement": "Welcome Beam is built for agentic use cases and offers tools for inference and fine-tuning.",
+            "evidence": "beam is focused on coding and agentic use cases. it is for teams that want a frontier-scale"
+          }
+        ],
+        "why_it_matters": "Welcome Beam represents a significant advancement in large language models, offering unprecedented scalability and customization for specialized tasks. Its open-source nature and support for long-context reasoning make it a valuable tool for researchers and developers working on complex agentic applications.",
+        "elephant_take": "🐘 鼋 Welcome Beam is a massive leap in model efficiency, but the $10k reward program might be more enticing than the model itself. The 'scalable-softmax' attention mechanism is impressive, but the real value lies in the community contributions and shared innovations.",
+        "caveat": "The model's complexity may pose challenges for less experienced users, and the reward program's criteria are not fully detailed.",
+        "who_should_care": [
+          "Researchers",
+          "Developers",
+          "Agentic task creators"
+        ],
+        "what_to_do": [
+          "Explore the open-source libraries provided by Beam",
+          "Participate in the $10k Hub credit reward program",
+          "Customize the model for specific use cases",
+          "Contribute to the community by sharing innovations"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Welcome%20Beam%3A%20a%20501B%20open%20model%20you%20can%20own%2C%20customize%2C%20and%20scale%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says.html",
       "created_at": "2026-10-16T21:41:06.361981+00:00",
@@ -10010,6 +10141,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-17T04:58:02.241137+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/itau-generative-ai",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-17T04:58:02.241137+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openais-new-rosalind-academic-plan-gives-research-labs-up-to-30-free-seats-for-a-year/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-17T04:58:02.241137+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-17T04:58:02.241137+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
       "at": "2026-10-16T21:41:06.361981+00:00",
@@ -10223,30 +10378,6 @@
       "url": "https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads/",
       "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
       "at": "2026-10-14T05:20:59.750110+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-13T23:06:36.271132+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/13/cerebras-ceo-pushes-back-on-ai-doomsday-warnings/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
-      "at": "2026-10-13T23:06:36.271132+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1010642/openai-employee-arrested-recording-device",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-13T23:06:36.271132+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce",
-      "reason": "quality gate rejected draft: headline length is outside the publication range; Elephant commentary is not specific to this story",
-      "at": "2026-10-13T23:06:36.271132+00:00",
       "pipeline_version": "2"
     }
   ]

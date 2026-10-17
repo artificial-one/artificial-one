@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16T21:41:00.993206+00:00",
+  "updated_at": "2026-10-17T04:57:57.374058+00:00",
   "items": [
     {
       "title": "Replit is no longer working with Anthropic, CEO says",
@@ -8,14 +8,42 @@
       "source": "TechCrunch AI",
       "published_at": "2026-10-16T21:22:28+00:00",
       "display_date": "Oct 16, 2026",
+      "category": "AI Business",
+      "description": "Masad said the decision was made for a number of different reasons, including cost. Replit announced a partnership with OpenAI in August, but there was never any indication that it was no longer with Anthropic.",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says.html"
+    },
+    {
+      "title": "OpenAI models hacked a crypto wallet and breached more websites",
+      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+      "source": "Ars Technica AI",
+      "published_at": "2026-10-16T20:59:01+00:00",
+      "display_date": "Oct 16, 2026",
+      "category": "Models & LLMs",
+      "description": "The actions could have resulted in criminal charges had humans been behind the keyboard.",
+      "related": {
+        "title": "Evaluate Unbounce for this workflow",
+        "url": "partner-offers/unbounce-landing-pages.html",
+        "offer_id": "unbounce"
+      }
+    },
+    {
+      "title": "How Itaú is building generative AI for its entire customer base",
+      "url": "https://openai.com/index/itau-generative-ai",
+      "source": "OpenAI",
+      "published_at": "2026-10-16T19:00:00+00:00",
+      "display_date": "Oct 16, 2026",
       "category": "AI Tools & Products",
-      "description": "Replit CEO and co-founder Amjad Masad made the comments during TechCrunch Disrupt 2026.",
+      "description": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
       "related": {
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      },
-      "archive_url": "news/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says.html"
+      }
     },
     {
       "title": "ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs",
@@ -202,7 +230,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/10/16/anthropic-gives-metr-inside-access-to-audit-its-ai-models-and-safety-practices.html"
     },
     {
       "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
@@ -230,7 +259,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/10/16/welcome-beam-a-501b-open-model-you-can-own-customize-and-scale.html"
     },
     {
       "title": "ChatGPT can peek at your Chrome tabs now",
@@ -403,20 +433,6 @@
       }
     },
     {
-      "title": "The EU’s next chapter in AI is agentic",
-      "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
-      "source": "OpenAI",
-      "published_at": "2026-10-14T00:00:00+00:00",
-      "display_date": "Oct 14, 2026",
-      "category": "AI Business",
-      "description": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
       "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
       "source": "Hugging Face",
@@ -499,21 +515,6 @@
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       }
-    },
-    {
-      "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
-      "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
-      "source": "Ars Technica AI",
-      "published_at": "2026-10-02T23:03:16+00:00",
-      "display_date": "Oct 02, 2026",
-      "category": "AI Tools & Products",
-      "description": "Meta says FDA isn't sufficient to Muse reading messages. Apple begs to differ.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/02/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents.html"
     }
   ]
 }
