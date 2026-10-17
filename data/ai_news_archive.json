@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-10-17T04:58:02.241137+00:00",
+  "updated_at": "2026-10-17T11:09:17.179518+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/16/jev-is-vercel-s-fastest-adopted-ai-model-ever.html",
+      "created_at": "2026-10-17T11:09:17.179518+00:00",
+      "source": {
+        "title": "Jev is Vercel’s fastest-adopted AI model ever",
+        "url": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-16T15:33:49+00:00",
+        "display_date": "Oct 16, 2026",
+        "category": "Models & LLMs",
+        "description": "The data comes from Vercel's AI gateway, a unified API service similar to OpenRouter.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Vercel's Jev Model Surpasses All Others in Adoption Speed",
+        "summary": "Vercel's Jev model has become the fastest adopted AI model ever, with 35% of paid teams using it within two weeks of its launch. The model's lightweight design and efficiency have made it popular for data classification tasks.",
+        "facts": [
+          {
+            "statement": "Jev is the fastest adopted AI model ever",
+            "evidence": "Jev is Vercel’s fastest-adopted AI model ever"
+          },
+          {
+            "statement": "Jev has been widely adopted within two weeks of its launch",
+            "evidence": "within two weeks of its launch, the buzzy decision model was being used by 35% of paid teams"
+          },
+          {
+            "statement": "Jev's lightweight design allows for faster and cheaper processing",
+            "evidence": "Limiting the outputs lets the model run cheaper and faster than alternatives like Sonnet"
+          }
+        ],
+        "why_it_matters": "The rapid adoption of Jev highlights its efficiency and appeal in data classification tasks. This could signal a shift towards lightweight, cost-effective AI models in the industry.",
+        "elephant_take": "🐘 鼋 Vercel's Jev model is a fast-moving train in the AI world, but its speed might not last if competitors catch up. The model's focus on efficiency is a smart move for data-heavy tasks.",
+        "caveat": "The data is limited and may not reflect broader industry trends.",
+        "who_should_care": [
+          "AI developers",
+          "Data classification experts",
+          "Vercel users"
+        ],
+        "what_to_do": [
+          "Evaluate Jev's efficiency for your data processing needs",
+          "Monitor competitor responses to Jev's success",
+          "Consider the cost-effectiveness of AI models in your workflow"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Jev%20is%20Vercel%E2%80%99s%20fastest-adopted%20AI%20model%20ever%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/15/chatgpt-can-peek-at-your-chrome-tabs-now.html",
+      "created_at": "2026-10-17T11:09:17.179518+00:00",
+      "source": {
+        "title": "ChatGPT can peek at your Chrome tabs now",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+        "source": "The Verge AI",
+        "published_at": "2026-10-15T22:43:23+00:00",
+        "display_date": "Oct 15, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI's ChatGPT Atlas browser is gone, but now ChatGPT's Google Chrome extension is getting some upgrades that allow it to use the browser tabs you already have open. With the extension installed, OpenAI says ChatGPT can now view your browser tabs when you tag Chrome in ChatGPT's web or desktop app, posting a demo video […]",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "ChatGPT Can Access Chrome Tabs With New Extension",
+        "summary": "OpenAI's ChatGPT now allows users to view open Chrome tabs via a new browser extension, enabling AI to access information from multiple tabs and perform tasks like filling out forms or managing calendars.",
+        "facts": [
+          {
+            "statement": "ChatGPT can view open Chrome tabs when tagged in web or desktop apps",
+            "evidence": "ChatGPT can peek at your Chrome tabs now"
+          },
+          {
+            "statement": "The extension allows ChatGPT to access information from multiple open tabs",
+            "evidence": "with the chatgpt extension installed, it can pull information from your open tabs"
+          },
+          {
+            "statement": "ChatGPT can perform tasks like filling out forms or managing calendars using tab data",
+            "evidence": "fill out the form I have open in @chrome ahead of seeing my new dentist"
+          }
+        ],
+        "why_it_matters": "This update highlights how AI is becoming more integrated with user browsing habits, raising concerns about privacy and data security. It also shows how AI can streamline tasks by leveraging browser data, but at the cost of potential user oversight.",
+        "elephant_take": "🐘 鼋 ChatGPT's new Chrome tab feature is a privacy risk that's also a productivity boost. Users might not realize their browsing data is being harvested for AI tasks, but it could save time on repetitive tasks like filling out forms.",
+        "caveat": "The feature may inadvertently expose sensitive information and requires user awareness of its implications.",
+        "who_should_care": [
+          "Privacy advocates",
+          "Tech users",
+          "AI developers"
+        ],
+        "what_to_do": [
+          "Review extension permissions",
+          "Limit tab access for sensitive sites",
+          "Stay informed about AI data practices",
+          "Use browser privacy tools"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20ChatGPT%20can%20peek%20at%20your%20Chrome%20tabs%20now%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/16/anthropic-gives-metr-inside-access-to-audit-its-ai-models-and-safety-practices.html",
       "created_at": "2026-10-17T04:58:02.241137+00:00",
@@ -10141,6 +10272,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/ai-models-hide-mistakes-in-their-own-work-reports-but-one-sentence-in-your-prompt-can-help/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-17T11:09:17.179518+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/mathematicians-say-openai-doesnt-understand-its-own-navier-stokes-proof/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-17T11:09:17.179518+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-17T11:09:17.179518+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-17T11:09:17.179518+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-17T04:58:02.241137+00:00",
@@ -10183,24 +10338,6 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-16T16:55:44.088690+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-16T16:55:44.088690+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
-      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
-      "at": "2026-10-16T16:55:44.088690+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://www.theverge.com/tech/1011938/muse-ai-data-friends-consent",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-16T11:53:03.642210+00:00",
@@ -10228,12 +10365,6 @@
       "url": "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-16T11:53:03.642210+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
-      "reason": "quality gate rejected draft: headline length is outside the publication range",
-      "at": "2026-10-16T04:58:09.347458+00:00",
       "pipeline_version": "2"
     },
     {
