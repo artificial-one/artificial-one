@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16",
+  "updated_at": "2026-10-17",
   "contract": {
     "states": [
       "inactive",
@@ -14,10 +14,10 @@
     "future_sources": "Any connector represented in partner_opportunities.json is reconciled automatically."
   },
   "summary": {
-    "total": 743,
+    "total": 742,
     "active_link_pending": 14,
     "inactive": 1,
-    "pending": 438,
+    "pending": 437,
     "published": 290,
     "blocking_failures": 0,
     "activation_blockers": 14
@@ -28,8 +28,8 @@
       "published": 7
     },
     "direct-vendor": {
-      "total": 48,
-      "pending": 48
+      "total": 47,
+      "pending": 47
     },
     "impact-appsumo": {
       "total": 247,
