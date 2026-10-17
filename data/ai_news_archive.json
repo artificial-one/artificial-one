@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-10-17T11:09:17.179518+00:00",
+  "updated_at": "2026-10-17T15:55:25.243831+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/17/anthropics-claude-cracks-a-25-year-old-nsa-cryptography-mystery-in-under-30-minute.html",
+      "created_at": "2026-10-17T15:55:25.243831+00:00",
+      "source": {
+        "title": "Anthropics' Claude cracks a 25-year-old NSA cryptography mystery in under 30 minutes",
+        "url": "https://the-decoder.com/anthropics-claude-cracks-a-25-year-old-nsa-cryptography-mystery-in-under-30-minutes/",
+        "source": "The Decoder",
+        "published_at": "2026-10-17T14:42:56+00:00",
+        "display_date": "Oct 17, 2026",
+        "category": "Models & LLMs",
+        "description": "Anthropic's AI model Claude has solved a 25-year-old cryptography puzzle. The mysterious seeds behind NIST's standard curves for digital signatures were provided by the NSA without explanation, raising long-standing suspicion about built-in backdoors. Claude figured out in under 30 minutes that the seeds came from \"lrand48,\" a simple C random number generator, making deliberate backdoors far less likely. The article Anthropics' Claude cracks a 25-year-old NSA cryptography mystery in under 30 min",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "AI Solves 25-Year-Old NSA Cryptography Mystery",
+        "summary": "Anthropic's AI model Claude solved a 25-year-old cryptography puzzle involving NIST's standard curves, revealing the seeds originated from a simple C random number generator.",
+        "facts": [
+          {
+            "statement": "Anthropic's AI model Claude solved a 25-year-old cryptography puzzle",
+            "evidence": "Anthropics' Claude cracks a 25-year-old NSA cryptography mystery in under 30 minutes"
+          },
+          {
+            "statement": "The seeds used to generate NIST's standard curves originated from a simple C random number generator",
+            "evidence": "claude spotted the pattern because \"lrand48\" only outputs 31"
+          },
+          {
+            "statement": "The mystery involved suspicion of possible backdoors in NIST's standard curves",
+            "evidence": "No one knew how they were created, and that fueled suspicion of possible backdoors"
+          }
+        ],
+        "why_it_matters": "The resolution of a long-standing cryptography mystery highlights the power of AI in uncovering hidden patterns. The discovery suggests that the NIST standard curves may not have deliberate backdoors, which has implications for cybersecurity and trust in cryptographic standards.",
+        "elephant_take": "🐘 鼋 The NSA's mysterious seeds were just a simple C random number generator. Anthropic's Claude cracked the 25-year-old mystery in under 30 minutes, revealing no hidden backdoors. It's a reminder that even the most complex puzzles can be solved with the right tools.",
+        "caveat": "The findings are based on an AI model's analysis and may not be fully verified by human experts.",
+        "who_should_care": [
+          "Cryptography researchers",
+          "AI developers",
+          "Cybersecurity professionals"
+        ],
+        "what_to_do": [
+          "Investigate AI's role in solving complex puzzles",
+          "Verify AI findings with human expertise",
+          "Stay updated on cryptographic standards and their origins"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropics%27%20Claude%20cracks%20a%2025-year-old%20NSA%20cryptography%20mystery%20in%20under%2030%20minutes%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/15/bluesky-s-ai-tool-now-lets-you-make-games-and-apps-to-share-on-social.html",
+      "created_at": "2026-10-17T15:55:25.243831+00:00",
+      "source": {
+        "title": "Bluesky’s AI tool now lets you make games and apps to share on social",
+        "url": "https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps",
+        "source": "The Verge AI",
+        "published_at": "2026-10-15T19:57:16+00:00",
+        "display_date": "Oct 15, 2026",
+        "category": "AI Tools & Products",
+        "description": "Bluesky's Attie AI tool, which initially launched earlier this year as a way to use AI to build your own feeds, now lets you make \"small\" social apps like games, polls, and dashboards that you can then share with others as their own websites. In an interview at TechCrunch Disrupt, Bluesky CEO Toni Schneider said […]",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Bluesky's AI Tool Expands to Create Social Apps",
+        "summary": "Bluesky's Attie AI tool now allows users to build and share social apps like games, polls, and dashboards. The tool, launched earlier this year for creating personalized feeds, is expanding its capabilities to enable community-driven content creation.",
+        "facts": [
+          {
+            "statement": "Bluesky's Attie AI tool can create social apps like games and polls",
+            "evidence": "Bluesky’s AI tool now lets you make games and apps to share on social"
+          },
+          {
+            "statement": "Users can generate simple apps with a prompt",
+            "evidence": "You can make your own Attie app by typing in a prompt"
+          },
+          {
+            "statement": "Examples of generated apps include Flappy Bird clones and drum machines",
+            "evidence": "the attie website currently highlights a few examples like a “flappy butterfly” flappy bird clone"
+          }
+        ],
+        "why_it_matters": "Bluesky's expansion of Attie AI marks a shift from personalized feeds to community-driven content creation. This could redefine how users interact with social media, allowing for more creative and collaborative experiences.",
+        "elephant_take": "🐘 鼋 Bluesky is turning AI into a playground for social creativity, but the apps remain lightweight novelties. The 'vibe coding' concept is catchy, but the real impact depends on how these tools evolve beyond gimmicks.",
+        "caveat": "The current capabilities are limited to basic apps, and the long-term implications of this shift in social media design are still unclear.",
+        "who_should_care": [
+          "AI developers",
+          "social media users",
+          "tech enthusiasts"
+        ],
+        "what_to_do": [
+          "Explore Attie's website for examples",
+          "Try generating your own app with a prompt",
+          "Stay updated on Bluesky's future plans"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Bluesky%E2%80%99s%20AI%20tool%20now%20lets%20you%20make%20games%20and%20apps%20to%20share%20on%20social%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/16/jev-is-vercel-s-fastest-adopted-ai-model-ever.html",
       "created_at": "2026-10-17T11:09:17.179518+00:00",
@@ -10272,6 +10402,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/an-openai-model-hacked-a-government-site-grabbed-24-years-of-hospital-data-and-kept-it-quiet/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-17T15:55:25.243831+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-17T15:55:25.243831+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
+      "at": "2026-10-17T15:55:25.243831+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-17T15:55:25.243831+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/ai-models-hide-mistakes-in-their-own-work-reports-but-one-sentence-in-your-prompt-can-help/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-17T11:09:17.179518+00:00",
@@ -10317,18 +10471,6 @@
       "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-10-17T04:58:02.241137+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
-      "at": "2026-10-16T21:41:06.361981+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-16T21:41:06.361981+00:00",
       "pipeline_version": "2"
     },
     {
@@ -10387,12 +10529,6 @@
     },
     {
       "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-15T21:44:48.942043+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-15T21:44:48.942043+00:00",
       "pipeline_version": "2"
@@ -10502,12 +10638,6 @@
     {
       "url": "https://the-decoder.com/406-scientists-demand-ai-models-be-cut-off-from-the-internet-immediately/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-14T05:20:59.750110+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads/",
-      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
       "at": "2026-10-14T05:20:59.750110+00:00",
       "pipeline_version": "2"
     }
