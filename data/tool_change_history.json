@@ -1,10 +1,28 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 64,
+    "successful_checks": 57,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-18",
+      "id": "250798e9b72f16b9",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://otter.ai",
+      "tool_id": "otter-ai",
+      "tool_name": "Otter.ai"
+    },
+    {
+      "detected_on": "2026-10-18",
+      "id": "02c0877c2deaf433",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://stylar.ai",
+      "tool_id": "stylar",
+      "tool_name": "Stylar"
+    },
     {
       "detected_on": "2026-10-17",
       "id": "da28bebf4ed0e3e5",
@@ -934,6 +952,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-17",
+  "updated_at": "2026-10-18",
   "version": 1
 }
