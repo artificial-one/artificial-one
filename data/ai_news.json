@@ -1,7 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-10-18T11:40:28.881181+00:00",
+  "updated_at": "2026-10-18T16:07:10.309555+00:00",
   "items": [
+    {
+      "title": "Anthropic has nearly stopped hiring junior staff because AI agents now work six times as many hours",
+      "url": "https://the-decoder.com/anthropic-has-nearly-stopped-hiring-junior-staff-because-ai-agents-now-work-six-times-as-many-hours/",
+      "source": "The Decoder",
+      "published_at": "2026-10-18T13:22:26+00:00",
+      "display_date": "Oct 18, 2026",
+      "category": "Research",
+      "description": "Anthropic is hiring fewer and fewer junior staff in technical roles. The share of junior positions among new hires dropped from 27 to 9 percent since early 2025. By August 2026, AI agents across the company were already logging six times as many hours as humans. Researchers warn of a \"tragedy of the cognitive commons\": if junior positions disappear, experienced specialists will be in short supply down the road. That is, assuming such specialists are even needed anymore. The article Anthropic has",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      },
+      "archive_url": "news/2026/10/18/anthropic-has-nearly-stopped-hiring-junior-staff-because-ai-agents-now-work-six-ti.html"
+    },
+    {
+      "title": "Four Gemini 4 Argon agents beat Minecraft without any human help",
+      "url": "https://the-decoder.com/four-gemini-4-argon-agents-beat-minecraft-without-any-human-help/",
+      "source": "The Decoder",
+      "published_at": "2026-10-18T12:39:51+00:00",
+      "display_date": "Oct 18, 2026",
+      "category": "Models & LLMs",
+      "description": "Four AI agents running on Google's Gemini 4 Argon have beaten Minecraft for the first time without human help, slaying the Ender Dragon in a fully autonomous run. With no predefined roles or strategies, they coordinated on their own, wrote 2,783 programs, exchanged 229 chat messages, and died 605 times. The session cost $1,620. The article Four Gemini 4 Argon agents beat Minecraft without any human help appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "Two German courts now hold Google liable for what its AI overviews say",
       "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/",
@@ -150,20 +179,6 @@
       "archive_url": "news/2026/10/17/anthropics-claude-cracks-a-25-year-old-nsa-cryptography-mystery-in-under-30-minute.html"
     },
     {
-      "title": "AI models hide mistakes in their own work reports, but one sentence in your prompt can help",
-      "url": "https://the-decoder.com/ai-models-hide-mistakes-in-their-own-work-reports-but-one-sentence-in-your-prompt-can-help/",
-      "source": "The Decoder",
-      "published_at": "2026-10-17T09:54:36+00:00",
-      "display_date": "Oct 17, 2026",
-      "category": "Models & LLMs",
-      "description": "AI agents systematically skip errors in their own reports, even when they spot the problems. In a study by Google Research, MIT, and Harvard, GPT-5.5 left out negative results in 198 out of 200 paper abstracts. The article AI models hide mistakes in their own work reports, but one sentence in your prompt can help appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Websites are closing their doors to AI agents",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
       "source": "The Verge AI",
@@ -261,7 +276,8 @@
         "title": "Evaluate AdCreative.ai for this workflow",
         "url": "partner-offers/adcreative-ai-ad-design.html",
         "offer_id": "adcreative"
-      }
+      },
+      "archive_url": "news/2026/10/16/elorian-s-first-ai-model-wants-to-reason-with-images-not-just-about-them.html"
     },
     {
       "title": "Jev is Vercel’s fastest-adopted AI model ever",
@@ -502,20 +518,6 @@
       "display_date": "Oct 05, 2026",
       "category": "AI Tools & Products",
       "description": "Trust gaps in the new protocol spread malicious prompts from one agent to another.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "The Agent Said It Was Done. The Database Disagreed.",
-      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
-      "source": "Hugging Face",
-      "published_at": "2026-10-03T22:56:48+00:00",
-      "display_date": "Oct 03, 2026",
-      "category": "AI Tools & Products",
-      "description": "",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
