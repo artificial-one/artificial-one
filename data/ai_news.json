@@ -1,7 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-10-18T16:07:10.309555+00:00",
+  "updated_at": "2026-10-18T21:01:25.238511+00:00",
   "items": [
+    {
+      "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+      "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-18T20:37:40+00:00",
+      "display_date": "Oct 18, 2026",
+      "category": "AI Tools & Products",
+      "description": "Anthropic said that it will commit 5% of its shares to the fund.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/10/18/anthropic-says-it-s-committing-5-of-its-shares-to-a-public-benefit-fund.html"
+    },
+    {
+      "title": "Disney agrees to hire the majority of Character.AI’s workforce",
+      "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-18T16:30:00+00:00",
+      "display_date": "Oct 18, 2026",
+      "category": "AI Tools & Products",
+      "description": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with a higher offer.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
     {
       "title": "Anthropic has nearly stopped hiring junior staff because AI agents now work six times as many hours",
       "url": "https://the-decoder.com/anthropic-has-nearly-stopped-hiring-junior-staff-because-ai-agents-now-work-six-times-as-many-hours/",
@@ -265,36 +294,6 @@
       }
     },
     {
-      "title": "Elorian’s first AI model wants to reason with images, not just about them",
-      "url": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-16T16:01:37+00:00",
-      "display_date": "Oct 16, 2026",
-      "category": "Models & LLMs",
-      "description": "According to Elorian's evaluations, Glimpse outperforms even GPT-6 Astra on scientific chart reasoning and short-form video captioning, with competitive results on other visual reasoning tasks.",
-      "related": {
-        "title": "Evaluate AdCreative.ai for this workflow",
-        "url": "partner-offers/adcreative-ai-ad-design.html",
-        "offer_id": "adcreative"
-      },
-      "archive_url": "news/2026/10/16/elorian-s-first-ai-model-wants-to-reason-with-images-not-just-about-them.html"
-    },
-    {
-      "title": "Jev is Vercel’s fastest-adopted AI model ever",
-      "url": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-16T15:33:49+00:00",
-      "display_date": "Oct 16, 2026",
-      "category": "Models & LLMs",
-      "description": "The data comes from Vercel's AI gateway, a unified API service similar to OpenRouter.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/16/jev-is-vercel-s-fastest-adopted-ai-model-ever.html"
-    },
-    {
       "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
       "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
       "source": "OpenAI",
@@ -367,21 +366,6 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/10/15/bluesky-s-ai-tool-now-lets-you-make-games-and-apps-to-share-on-social.html"
-    },
-    {
-      "title": "Meta and Apple team up to make Muse AI models run better on Macs",
-      "url": "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx",
-      "source": "The Verge AI",
-      "published_at": "2026-10-15T18:15:36+00:00",
-      "display_date": "Oct 15, 2026",
-      "category": "Models & LLMs",
-      "description": "Meta announced the Muse Spark Open AI model today, claiming that it's the \"most capable US open-weight model to date.\" But the company also says that it's the \"the first model in its class\" that can \"run on your desktop using two Apple M5 Ultra Mac Studios with the latest MLX framework.\" Meta and Apple, […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/15/meta-and-apple-team-up-to-make-muse-ai-models-run-better-on-macs.html"
     },
     {
       "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
@@ -518,6 +502,20 @@
       "display_date": "Oct 05, 2026",
       "category": "AI Tools & Products",
       "description": "Trust gaps in the new protocol spread malicious prompts from one agent to another.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "The Agent Said It Was Done. The Database Disagreed.",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "source": "Hugging Face",
+      "published_at": "2026-10-03T22:56:48+00:00",
+      "display_date": "Oct 03, 2026",
+      "category": "AI Tools & Products",
+      "description": "",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
