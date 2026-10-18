@@ -1,7 +1,74 @@
 {
   "version": 1,
-  "updated_at": "2026-10-17T20:55:43.934702+00:00",
+  "updated_at": "2026-10-18T05:05:45.490402+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns.html",
+      "created_at": "2026-10-18T05:05:45.490402+00:00",
+      "source": {
+        "title": "Meta removes language that raised scraping and AI training concerns",
+        "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-17T21:31:32+00:00",
+        "display_date": "Oct 17, 2026",
+        "category": "AI Tools & Products",
+        "description": "A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web.",
+        "related": {
+          "title": "Evaluate LearnWorlds for this workflow",
+          "url": "partner-offers/learnworlds-course-platform.html",
+          "offer_id": "learnworlds"
+        }
+      },
+      "article": {
+        "headline": "Meta Removes Language Concerning AI Training and Scraping",
+        "summary": "Meta has revised its terms of use to remove provisions that could allow it to scrape content from business accounts for AI training, clarifying that its web crawling practices remain unchanged.",
+        "facts": [
+          {
+            "statement": "Meta revised its terms of use to remove language concerning AI training and scraping.",
+            "evidence": "Meta removes language that raised scraping and AI training concerns"
+          },
+          {
+            "statement": "Meta clarified that its web crawling practices have not changed despite the revision.",
+            "evidence": "It does not change how Meta uses web crawlers"
+          },
+          {
+            "statement": "Legal experts previously expressed concern over the revised terms allowing content scraping for AI training.",
+            "evidence": "could give Meta permission to scrape the website of any publisher"
+          }
+        ],
+        "why_it_matters": "This update highlights ongoing tensions between tech companies and publishers over data usage and AI training. It underscores the need for clear legal boundaries around web scraping and content rights in the age of AI.",
+        "elephant_take": "🐘 鼋 Meta’s revised terms are a clumsy attempt to reassure stakeholders, but the removal of the controversial clause shows the company is listening. However, the broader issue of data rights remains unresolved.",
+        "caveat": "The clarification does not fully address the concerns of publishers and legal experts about AI training and content scraping.",
+        "who_should_care": [
+          "Publishers",
+          "Legal experts",
+          "AI developers",
+          "Regulators"
+        ],
+        "what_to_do": [
+          "Monitor Meta’s terms of use for future changes",
+          "Consult with legal counsel on data usage policies",
+          "Advocate for clearer regulations around AI training and scraping",
+          "Stay informed about developments in AI ethics and compliance"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/learnworlds-course-platform-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/learnworlds-course-platform-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/learnworlds-course-platform.html",
+        "review_title": "Evaluate LearnWorlds for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Meta%20removes%20language%20that%20raised%20scraping%20and%20AI%20training%20concerns%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "learnworlds"
+      }
+    },
     {
       "path": "news/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-m.html",
       "created_at": "2026-10-17T20:55:43.934702+00:00",
@@ -10659,6 +10726,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-18T05:05:45.490402+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/itau-generative-ai",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-18T05:05:45.490402+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-18T05:05:45.490402+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-18T05:05:45.490402+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/amp-beyond-coding",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-18T05:05:45.490402+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/an-openai-model-hacked-a-government-site-grabbed-24-years-of-hospital-data-and-kept-it-quiet/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-17T15:55:25.243831+00:00",
@@ -10707,26 +10804,8 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-17T04:58:02.241137+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/itau-generative-ai",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-17T04:58:02.241137+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://the-decoder.com/openais-new-rosalind-academic-plan-gives-research-labs-up-to-30-free-seats-for-a-year/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-17T04:58:02.241137+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-      "reason": "HTTP Error 403: Forbidden",
       "at": "2026-10-17T04:58:02.241137+00:00",
       "pipeline_version": "2"
     },
@@ -10805,12 +10884,6 @@
     {
       "url": "https://techcrunch.com/2026/10/14/zenzap-raises-44m-for-its-ai-chat-app-that-aims-to-replace-whatsapp-in-the-workplace/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-15T12:04:43.365156+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-15T12:04:43.365156+00:00",
       "pipeline_version": "2"
     },
