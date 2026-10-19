@@ -1,7 +1,269 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T13:55:06.907238+00:00",
+  "updated_at": "2026-10-19T22:37:38.205889+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-can-t-be-trus.html",
+      "created_at": "2026-10-19T22:37:38.205889+00:00",
+      "source": {
+        "title": "Microsoft says AI agents are like insider threats as ‘frontier models can’t be trusted’",
+        "url": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-19T22:04:28+00:00",
+        "display_date": "Oct 19, 2026",
+        "category": "Models & LLMs",
+        "description": "Microsoft wants enterprises to closely watch the agents employees use with systems not controlled by AI labs like OpenAI and Anthropic.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Microsoft Warns AI Agents Pose Insider Threat Risks",
+        "summary": "Microsoft warns that AI agents pose insider threat risks, urging enterprises to monitor them with separate systems. The company introduces Guardian Agents as part of Project Perception to address the unpredictability and potential harm of frontier models.",
+        "facts": [
+          {
+            "statement": "Microsoft warns AI agents can be like insider threats",
+            "evidence": "microsoft says ai agents are like insider threats as 'frontier models can't be trusted'"
+          },
+          {
+            "statement": "Microsoft introduces security features to monitor AI agents",
+            "evidence": "Microsoft on Monday introduced new security features designed to protect enterprises from the growing threat of AI agents"
+          },
+          {
+            "statement": "Microsoft advocates for separate systems to control AI agents",
+            "evidence": "we need to separate the supply of intelligence from the authority over it"
+          }
+        ],
+        "why_it_matters": "Microsoft's warning highlights the risks of AI agents acting as insider threats, emphasizing the need for enterprise-level monitoring and control. This shift in perspective challenges the trust placed in AI model providers and underscores the importance of safeguarding sensitive data and operations.",
+        "elephant_take": "🐘 鼋 Microsoft is casting a wide net of suspicion on AI agents, even those developed by its own partners. The company’s push for internal security solutions may be as much about profit as it is about safety, but the underlying concern is valid: unpredictable AI can become dangerous if not properly controlled.",
+        "caveat": "Microsoft's stance may reflect conflicting interests, but the core issue of AI unpredictability remains a pressing concern for enterprises.",
+        "who_should_care": [
+          "Enterprise IT leaders",
+          "AI security professionals",
+          "Cloud service providers"
+        ],
+        "what_to_do": [
+          "Implement internal monitoring systems for AI agents",
+          "Review and restrict access to sensitive data and tools",
+          "Maintain separate control over AI systems and their outputs",
+          "Stay informed about evolving AI security threats"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Microsoft%20says%20AI%20agents%20are%20like%20insider%20threats%20as%20%E2%80%98frontier%20models%20can%E2%80%99t%20be%20trusted%E2%80%99%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/19/coreweave-s-debt-is-becoming-the-whole-ai-industry-s-problem.html",
+      "created_at": "2026-10-19T22:37:38.205889+00:00",
+      "source": {
+        "title": "CoreWeave’s debt is becoming the whole AI industry’s problem",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1014045/coreweave-stock-debt-sector-ai",
+        "source": "The Verge AI",
+        "published_at": "2026-10-19T21:28:20+00:00",
+        "display_date": "Oct 19, 2026",
+        "category": "AI Tools & Products",
+        "description": "CoreWeave had a bad week last week. Its bonds slipped into distressed territory by a common definition - when investors demand 1,000 basis points more in yield than they'd get from government bonds. Last Tuesady Chamath \"SPAC King\" Palihapitiya noticed the distressed debt, and also asked whether the AI buildout was a private credit bubble. […]",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "CoreWeave's Debt Crisis Reflects Broader AI Industry Challenges",
+        "summary": "CoreWeave's financial troubles highlight the risks of excessive debt in the AI industry, raising concerns about a potential credit bubble and the sustainability of high-risk investments in AI infrastructure.",
+        "facts": [
+          {
+            "statement": "CoreWeave's bonds have entered distressed territory",
+            "evidence": "bonds slipped into distressed territory by a common definition"
+          },
+          {
+            "statement": "Investors are concerned about CoreWeave's debt and the AI industry's financial health",
+            "evidence": "investors afraid that CoreWeave is going to borrow even more"
+          },
+          {
+            "statement": "CoreWeave has significant debt and is struggling with profitability",
+            "evidence": "money — the company lost more than a billion dollars in the first half of the"
+          }
+        ],
+        "why_it_matters": "The financial struggles of CoreWeave reflect broader concerns about the sustainability of high-debt AI infrastructure and the potential for a credit bubble in the industry. As the AI sector continues to expand, the risks associated with excessive debt and unprofitable business models could have far-reaching implications for investors and the industry as a whole.",
+        "elephant_take": "🐘 鼋 CoreWeave's financial troubles are a bellwether for the AI industry's precarious balance between innovation and debt. While a plunging stock price doesn't always mean disaster, the company's heavy reliance on high-risk loans and lack of profitability raise red flags about the sustainability of the current model.",
+        "caveat": "The situation is complex and not solely indicative of an AI bubble. Financial markets can be volatile, and a single company's troubles don't necessarily reflect the broader industry's health.",
+        "who_should_care": [
+          "AI investors",
+          "Financial analysts",
+          "Tech industry leaders"
+        ],
+        "what_to_do": [
+          "Monitor CoreWeave's financial performance and debt levels",
+          "Assess the risks of high-debt AI infrastructure investments",
+          "Evaluate the sustainability of current AI business models"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20CoreWeave%E2%80%99s%20debt%20is%20becoming%20the%20whole%20AI%20industry%E2%80%99s%20problem%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts.html",
+      "created_at": "2026-10-19T22:37:38.205889+00:00",
+      "source": {
+        "title": "Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts",
+        "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-19T19:28:34+00:00",
+        "display_date": "Oct 19, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenCode is an open source AI coding agent that's become a popular alternative to Claude Code and Cursor. But hackers got into part of its online platform and stole some users’ API keys, and the AI tools it turned to for help kept refusing to look at the malicious code.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Hackers Target OpenCode, Causing Unauthorized Charges on AI Accounts",
+        "summary": "A security breach at OpenCode led to unauthorized charges on users' AI accounts. Hackers accessed API keys, which were used to generate malicious code, causing financial issues for some users. The incident highlights the challenges of defending against AI-driven cyberattacks.",
+        "facts": [
+          {
+            "statement": "Hackers breached OpenCode's system, impacting 1.4% of users.",
+            "evidence": "attackers broke into an older system overnight, affecting 1.4% of users"
+          },
+          {
+            "statement": "Users reported unauthorized charges on their AI accounts.",
+            "evidence": "users reported charges in the hundreds of dollars on individual accounts"
+          },
+          {
+            "statement": "OpenCode's AI tools were compromised by malicious code.",
+            "evidence": "the clock. ai models that the opencode team turned to for analysis"
+          }
+        ],
+        "why_it_matters": "This breach underscores the risks of unvetted access to AI models and highlights the challenges of defending against sophisticated cyberattacks. It also raises concerns about financial accountability and the security of sensitive data in AI systems.",
+        "elephant_take": "🐘 鼋 The OpenCode breach shows how even open-source tools can be vulnerable to large-scale attacks, and how quickly things can go wrong when AI is involved. It's a reminder that security is a constant battle, especially with AI models that have safety filters.",
+        "caveat": "The incident may have been mischaracterized as a distillation attack, and the exact method remains unproven.",
+        "who_should_care": [
+          "AI developers",
+          " cybersecurity experts",
+          " users of AI tools"
+        ],
+        "what_to_do": [
+          "Regularly review API key access and usage",
+          "Implement strong security protocols for AI systems",
+          "Monitor account activity for unusual charges or alerts"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Hackers%20hit%20AI%20coding%20tool%20OpenCode%2C%20running%20up%20charges%20on%20users%E2%80%99%20AI%20accounts%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/19/replika-s-founder-built-the-ai-assistant-she-pitched-at-disrupt-12-years-ago.html",
+      "created_at": "2026-10-19T22:37:38.205889+00:00",
+      "source": {
+        "title": "Replika’s founder built the AI assistant she pitched at Disrupt 12 years ago",
+        "url": "https://techcrunch.com/2026/10/19/replikas-founder-built-the-ai-assistant-she-pitched-at-disrupt-12-years-ago/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-19T18:49:04+00:00",
+        "display_date": "Oct 19, 2026",
+        "category": "AI Business",
+        "description": "Eugenia Kuyda's newest startup Wabi is positioned to take advantage of an idea she had more than a decade ago. Wabi offers a personal AI assistant with a twist, free and downloadable to anyone today.",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Replika’s Founder Built AI Assistant 12 Years Ago",
+        "summary": "Eugenia Kuyda's startup Luka, later Replika, created an AI assistant 12 years ago. Now, she's launching Wabi, a new personal AI assistant with similar goals.",
+        "facts": [
+          {
+            "statement": "Kuyda presented an AI assistant at Disrupt 12 years ago",
+            "evidence": "Replika’s founder built the AI assistant she pitched at Disrupt 12 years ago"
+          },
+          {
+            "statement": "Luka, Kuyda's startup, became Replika",
+            "evidence": "Luka ended up becoming Replika, the popular AI chatbot companion company"
+          },
+          {
+            "statement": "Wabi is a new personal AI assistant with similar goals to Luka",
+            "evidence": "Wabi offers a personal AI assistant with a twist, free and downloadable to anyone today"
+          }
+        ],
+        "why_it_matters": "Kuyda's return to AI with Wabi highlights the evolution of personal assistants. Her original vision from 12 years ago is now being realized, showing how technology has advanced. This could signal a new era for personal AI tools.",
+        "elephant_take": "🐘 鼋 Kuyda’s AI journey shows how far we’ve come. From IO to Wabi, it’s a reminder that innovation often starts with a single idea. But even 12 years later, the vision is still ahead of us.",
+        "caveat": "The story focuses on Kuyda's past and present, but doesn’t cover the full technical or market challenges of AI assistants.",
+        "who_should_care": [
+          "AI developers",
+          "Tech investors",
+          "Users of personal assistants"
+        ],
+        "what_to_do": [
+          "Research Kuyda’s history with AI",
+          "Follow Wabi’s development",
+          "Consider the future of personal AI tools",
+          "Evaluate the market for AI assistants"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20Replika%E2%80%99s%20founder%20built%20the%20AI%20assistant%20she%20pitched%20at%20Disrupt%2012%20years%20ago%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/19/stripe-says-ai-agent-purchases-are-adding-up-but-it-won-t-share-the-numbers.html",
       "created_at": "2026-10-19T13:55:06.907238+00:00",
@@ -11251,6 +11513,12 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/19/tolan-snags-30m-for-its-ai-companion-that-helps-users-navigate-life/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-19T22:37:38.205889+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/four-gemini-4-argon-agents-beat-minecraft-without-any-human-help/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-19T13:55:06.907238+00:00",
@@ -11481,12 +11749,6 @@
     {
       "url": "https://www.theverge.com/news/1011654/mckinsey-ai-client-interview",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-15T05:08:13.659964+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-15T05:08:13.659964+00:00",
       "pipeline_version": "2"
     }
