@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-10-18",
+  "updated_at": "2026-10-19",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 494,
+    "total": 495,
     "approved_link_pending": 18,
     "existing_active": 39,
     "not_qualified": 32,
-    "policy_review_required": 25,
+    "policy_review_required": 28,
     "program_paused": 1,
-    "ready_for_owner_application": 379
+    "ready_for_owner_application": 377
   },
   "opportunities": [
     {
@@ -399,7 +399,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1008,7 +1008,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1070,7 +1070,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1332,18 +1332,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -1441,7 +1433,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1929,7 +1921,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 59,
+      "review_days": 99,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2094,7 +2086,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 72,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2676,7 +2668,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -4038,7 +4030,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 25,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -4746,59 +4738,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:shade",
-      "network": "partnerstack",
-      "name": "Shade",
-      "slug": "shade",
-      "description": "Shade is an intelligent cloud storage platform that transforms post-production workflows. It consolidates file streaming, review and approval, automated metadata, AI search all in one platform.",
-      "offer": "Earn 10% commission on all first year revenue (ACV $25,000/customer)",
-      "tags": [
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Design",
-        "Digital Advertising",
-        "Hot",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shade?company=shade&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/18dg3qEU0Uw2pqGQQKw_W1tL0molNftUk/edit?usp=sharing&ouid=116868290743095582619&rtpof=true&sd=true",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 18,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "design",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -7058,6 +6997,57 @@
       }
     },
     {
+      "id": "partnerstack:shade",
+      "network": "partnerstack",
+      "name": "Shade",
+      "slug": "shade",
+      "description": "Shade is an intelligent cloud storage platform that transforms post-production workflows. It consolidates file streaming, review and approval, automated metadata, AI search all in one platform.",
+      "offer": "Earn 10% commission on all first year revenue (ACV $25,000/customer)",
+      "tags": [
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Design",
+        "Digital Advertising",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shade?company=shade&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/18dg3qEU0Uw2pqGQQKw_W1tL0molNftUk/edit?usp=sharing&ouid=116868290743095582619&rtpof=true&sd=true",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 18,
+      "source": "https://market.partnerstack.com/",
+      "score": 75,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "design",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:stratos",
       "network": "partnerstack",
       "name": "Stratos Development Group",
@@ -7093,7 +7083,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 75,
       "relevance_matches": [
@@ -7523,7 +7513,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 5,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -8029,7 +8019,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -9225,7 +9215,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 76,
       "source": "https://market.partnerstack.com/",
       "score": 68,
       "relevance_matches": [
@@ -9827,7 +9817,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -9890,19 +9880,11 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": 30
+        "status": "unreachable",
+        "signals": {},
+        "cookie_days": null
       }
     },
     {
@@ -9930,7 +9912,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10034,7 +10016,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10232,7 +10214,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10348,8 +10330,8 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -10805,7 +10787,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 134,
+      "review_days": 168,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11015,7 +10997,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 23,
+      "review_days": 29,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11618,7 +11600,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12036,7 +12018,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13446,7 +13428,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 36,
+      "review_days": 35,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -14264,6 +14246,50 @@
         "status": "unreachable",
         "signals": {},
         "cookie_days": null
+      }
+    },
+    {
+      "id": "direct:flick",
+      "network": "direct-vendor",
+      "platform": "Direct vendor",
+      "name": "Flick",
+      "slug": "flick",
+      "description": "Flick review - AI social media assistant",
+      "offer": "Direct vendor affiliate or referral program discovered from its official website.",
+      "tags": [
+        "Writing & Content"
+      ],
+      "application_url": "https://flick.social/affiliates",
+      "terms_url": "https://flick.social/affiliates",
+      "website": "https://flick.social",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 0,
+      "source": "https://flick.social",
+      "score": 66,
+      "relevance_matches": [
+        "ai",
+        "content"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 60
       }
     },
     {
@@ -16311,7 +16337,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -16430,7 +16456,6 @@
         "Governance, Risk, & Compliance",
         "HR",
         "HR Software",
-        "Hot",
         "Referral Partners",
         "Resellers",
         "Trusted",
@@ -16582,7 +16607,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17647,7 +17672,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -18290,18 +18315,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -19194,7 +19211,7 @@
       "name": "Bar Codes Talk",
       "slug": "barcodestalk",
       "description": "UPC & EAN Barcode Number & Label Provider.",
-      "offer": "10% earned on first two sales per customer",
+      "offer": "15% earned on first two sales per customer",
       "tags": [
         "Affiliates",
         "Customer Service",
@@ -19255,7 +19272,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 19,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -20479,7 +20496,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 191,
+      "review_days": 238,
       "source": "https://market.partnerstack.com/",
       "score": 58,
       "relevance_matches": [
@@ -20883,7 +20900,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 75,
+      "review_days": 69,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -22039,15 +22056,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
+          "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -23098,7 +23115,6 @@
         "B2B Marketplaces",
         "Governance, Risk, & Compliance",
         "Hosting Providers",
-        "Hot",
         "Trusted"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/workwisecompliance?company=workwisecompliance&gref=marketplace",
@@ -23221,7 +23237,7 @@
       "name": "Shopmonkey",
       "slug": "shopmonkey",
       "description": "Shopmonkey is an all-in-one cloud-based shop management system used to organize and operate all aspects of a shop's operations.",
-      "offer": "4% of monthly revenue",
+      "offer": "Earn $300 for every Demo Held Lead",
       "tags": [
         "Hot",
         "Trusted"
