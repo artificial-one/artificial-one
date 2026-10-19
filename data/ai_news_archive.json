@@ -11053,6 +11053,42 @@
   ],
   "last_failures": [
     {
+      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-19T05:17:07.633039+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/itau-generative-ai",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-19T05:17:07.633039+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-19T05:17:07.633039+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-19T05:17:07.633039+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/amp-beyond-coding",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-19T05:17:07.633039+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://arstechnica.com/security/2026/10/openai-agents-tried-to-hack-wikipedia-tools-and-flooded-it-with-traffic/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-19T05:17:07.633039+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-18T21:01:29.171155+00:00",
@@ -11128,36 +11164,6 @@
       "url": "https://the-decoder.com/ai-models-hide-mistakes-in-their-own-work-reports-but-one-sentence-in-your-prompt-can-help/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-18T11:40:33.489799+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-18T05:05:45.490402+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/itau-generative-ai",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-18T05:05:45.490402+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-18T05:05:45.490402+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-18T05:05:45.490402+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/amp-beyond-coding",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-18T05:05:45.490402+00:00",
       "pipeline_version": "2"
     },
     {
@@ -11284,12 +11290,6 @@
       "url": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-15T05:08:13.659964+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-14T21:56:06.703792+00:00",
       "pipeline_version": "2"
     }
   ]
