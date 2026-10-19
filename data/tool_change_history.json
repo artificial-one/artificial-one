@@ -1,10 +1,55 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 57,
+    "successful_checks": 65,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-19",
+      "id": "ead0952a866152d5",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://todoist.com",
+      "tool_id": "todoist-ai",
+      "tool_name": "Todoist AI"
+    },
+    {
+      "detected_on": "2026-10-19",
+      "id": "88c1a2cc8971c43d",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://unriddle.ai",
+      "tool_id": "unriddle",
+      "tool_name": "Unriddle"
+    },
+    {
+      "detected_on": "2026-10-19",
+      "id": "2117c5bd79a16a0b",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hubstaff.com/",
+      "tool_id": "hubstaff",
+      "tool_name": "Hubstaff"
+    },
+    {
+      "detected_on": "2026-10-19",
+      "id": "874bee3c94d48802",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.lensmor.com/",
+      "tool_id": "lensmor",
+      "tool_name": "lensmor"
+    },
+    {
+      "detected_on": "2026-10-19",
+      "id": "76d88f988cc4c0f2",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://articleforge.com",
+      "tool_id": "article-forge",
+      "tool_name": "Article Forge"
+    },
     {
       "detected_on": "2026-10-18",
       "id": "250798e9b72f16b9",
@@ -952,6 +997,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-18",
+  "updated_at": "2026-10-19",
   "version": 1
 }
