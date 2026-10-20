@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T22:37:38.205889+00:00",
+  "updated_at": "2026-10-20T05:14:23.760246+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/19/kling-ai-drops-version-4-0-with-stereo-audio-multilingual-lip-sync-and-a-lighter-f.html",
+      "created_at": "2026-10-20T05:14:23.760246+00:00",
+      "source": {
+        "title": "Kling AI drops version 4.0 with stereo audio, multilingual lip sync, and a lighter Flash variant",
+        "url": "https://the-decoder.com/kling-ai-drops-version-4-0-with-stereo-audio-multilingual-lip-sync-and-a-lighter-flash-variant/",
+        "source": "The Decoder",
+        "published_at": "2026-10-19T17:36:26+00:00",
+        "display_date": "Oct 19, 2026",
+        "category": "Models & LLMs",
+        "description": "Kling AI has released version 4.0 of its video generator with support for clips up to 30 seconds, ten keyframe images as input, and prompt comprehension expanded to 8,000 tokens. In comparisons with Wan 3.0 and Seedance 2.5, Kling 4.0 holds its own but doesn't pull ahead, which could be an early sign that the breakneck pace of progress in AI video models is starting to level off. The article Kling AI drops version 4.0 with stereo audio, multilingual lip sync, and a lighter Flash variant appeared",
+        "related": {
+          "title": "Evaluate ElevenLabs for this workflow",
+          "url": "partner-offers/elevenlabs-ai-voice.html",
+          "offer_id": "elevenlabs"
+        }
+      },
+      "article": {
+        "headline": "Kling AI releases version 4.0 with audio, lip sync, and lighter variant",
+        "summary": "Kling AI has released version 4.0 of its video generator with features like stereo audio, multilingual lip sync, and a lighter Flash variant. The update includes support for longer videos, more keyframe images, and improved prompt comprehension.",
+        "facts": [
+          {
+            "statement": "Kling AI has released version 4.0 of its video generator",
+            "evidence": "Kling AI drops version 4.0 with stereo audio, multilingual lip sync, and a lighter Flash variant"
+          },
+          {
+            "statement": "The update includes support for longer videos",
+            "evidence": "Users can now generate up to 30 seconds of video in a single pass"
+          },
+          {
+            "statement": "Kling AI has improved prompt comprehension",
+            "evidence": "Prompt comprehension has been expanded to 8,000 tokens"
+          }
+        ],
+        "why_it_matters": "The release of Kling AI's version 4.0 highlights ongoing advancements in AI video generation, but the lack of significant improvements over competitors may indicate a plateauing in progress. This could have implications for the future development and competition in the AI video model space.",
+        "elephant_take": "🐘 鼋Kling AI's latest update is a solid but incremental step forward, with features like stereo audio and multilingual lip sync showing off their capabilities. However, the lack of standout performance over competitors suggests that progress might be slowing down.",
+        "caveat": "The release of Kling AI's version 4.0 doesn't include all promised features, such as 10-bit HDR output and video extension functions, which are still listed as 'coming soon'.",
+        "who_should_care": [
+          "AI developers",
+          "Video creators",
+          "Tech investors"
+        ],
+        "what_to_do": [
+          "Evaluate the new features of Kling AI's version 4.0 for potential use cases",
+          "Compare the performance of Kling 4.0 with competitors like Wan 3.0 and Seedance 2.5",
+          "Monitor the release of upcoming features such as 10-bit HDR output",
+          "Stay updated on pricing and API availability for Kling 4.0"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/elevenlabs-ai-voice-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/elevenlabs-ai-voice-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/elevenlabs-ai-voice.html",
+        "review_title": "Evaluate ElevenLabs for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Kling%20AI%20drops%20version%204.0%20with%20stereo%20audio%2C%20multilingual%20lip%20sync%2C%20and%20a%20lighter%20Flash%20variant%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "elevenlabs"
+      }
+    },
+    {
+      "path": "news/2026/10/19/a-hacker-broke-into-john-deere-and-sharkninja-with-an-army-of-ai-agents.html",
+      "created_at": "2026-10-20T05:14:23.760246+00:00",
+      "source": {
+        "title": "A hacker broke into John Deere and SharkNinja with an army of AI agents",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
+        "source": "The Verge AI",
+        "published_at": "2026-10-19T17:33:16+00:00",
+        "display_date": "Oct 19, 2026",
+        "category": "Policy & Safety",
+        "description": "A hacker broke into more than 100 websites using an army of AI agents that mostly operated on their own, according to findings from the AI security firm Norforge. Though Norforge doesn't name the targets, Reuters reports that the victims included companies like John Deere, SharkNinja, and Cummins. Concerns over AI-powered cybersecurity breaches have grown […]",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "AI-Powered Cyberattacks Target Major Companies",
+        "summary": "A cybersecurity firm reports that hackers used AI agents to breach over 100 websites, including John Deere and SharkNinja. The attacks involved autonomous AI systems that operated with minimal human input, raising concerns about the security risks of advanced AI technology.",
+        "facts": [
+          {
+            "statement": "Hackers used AI agents to breach over 100 websites",
+            "evidence": "A hacker broke into more than 100 websites using an army of AI agents"
+          },
+          {
+            "statement": "AI agents operated with minimal human input",
+            "evidence": "The AI agents carried out the attacks with little involvement from the human hacker"
+          },
+          {
+            "statement": "Companies like John Deere and SharkNinja were among the victims",
+            "evidence": "the victims included companies like John Deere, SharkNinja, and Cummins"
+          }
+        ],
+        "why_it_matters": "The use of AI in cyberattacks highlights growing security risks as technology advances. Autonomous AI systems can carry out complex attacks with minimal human oversight, raising concerns about the potential for large-scale breaches and the need for stronger safeguards.",
+        "elephant_take": "🐘 鼋 The rise of AI-driven hacking shows that even advanced tools can be misused by bad actors. While the AI agents were not inherently malicious, their misuse underscores a critical flaw in how we control and monitor AI systems.",
+        "caveat": "The exact details of the attacks and the full scope of the breach remain unclear as the sources are not fully disclosed.",
+        "who_should_care": [
+          "Cybersecurity professionals",
+          "Tech companies",
+          "AI researchers"
+        ],
+        "what_to_do": [
+          "Implement stronger AI oversight protocols",
+          "Conduct regular security audits",
+          "Monitor for unusual AI activity in networks"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20A%20hacker%20broke%20into%20John%20Deere%20and%20SharkNinja%20with%20an%20army%20of%20AI%20agents%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-can-t-be-trus.html",
       "created_at": "2026-10-19T22:37:38.205889+00:00",
@@ -11513,6 +11644,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/19/mamdani-says-feds-have-abdicated-on-ai-urges-new-yorkers-to-push-back/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-20T05:14:23.760246+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-20T05:14:23.760246+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-20T05:14:23.760246+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/minimax-m3-1-flash-shows-chinas-ai-price-race-has-no-floor-in-sight/",
+      "reason": "quality gate rejected draft: headline length is outside the publication range; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-20T05:14:23.760246+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/19/tolan-snags-30m-for-its-ai-companion-that-helps-users-navigate-life/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-19T22:37:38.205889+00:00",
@@ -11726,30 +11881,6 @@
       "url": "https://www.theverge.com/column/1011264/digital-twin-metabolism-ai-twin-health",
       "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
       "at": "2026-10-15T12:04:43.365156+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/14/zenzap-raises-44m-for-its-ai-chat-app-that-aims-to-replace-whatsapp-in-the-workplace/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-15T12:04:43.365156+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis/",
-      "reason": "quality gate rejected draft: hype language is present",
-      "at": "2026-10-15T05:08:13.659964+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-15T05:08:13.659964+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/news/1011654/mckinsey-ai-client-interview",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-15T05:08:13.659964+00:00",
       "pipeline_version": "2"
     }
   ]
