@@ -6,6 +6,78 @@
   },
   "events": [
     {
+      "detected_on": "2026-10-20",
+      "id": "5d89797561719618",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://colossyan.com",
+      "tool_id": "colossyan",
+      "tool_name": "Colossyan"
+    },
+    {
+      "detected_on": "2026-10-20",
+      "id": "9148f6ec4c6e58f8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://datarobot.com",
+      "tool_id": "datarobot",
+      "tool_name": "DataRobot"
+    },
+    {
+      "detected_on": "2026-10-20",
+      "id": "1326f6141af3065c",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://equals.com",
+      "tool_id": "equals-ai",
+      "tool_name": "Equals AI"
+    },
+    {
+      "detected_on": "2026-10-20",
+      "id": "e31cae5eaa96c089",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://designs.ai",
+      "tool_id": "designs-ai",
+      "tool_name": "Designs.ai"
+    },
+    {
+      "detected_on": "2026-10-20",
+      "id": "f6d46d03bbf54de2",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://getimg.ai",
+      "tool_id": "getimg-ai",
+      "tool_name": "Getimg.ai"
+    },
+    {
+      "detected_on": "2026-10-20",
+      "id": "f549b8e662a7ef89",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://heygen.com",
+      "tool_id": "heygen",
+      "tool_name": "HeyGen"
+    },
+    {
+      "detected_on": "2026-10-20",
+      "id": "45ccd0fd1d6e8cf0",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hootsuite.com",
+      "tool_id": "hootsuite-insights",
+      "tool_name": "Hootsuite Insights"
+    },
+    {
+      "detected_on": "2026-10-20",
+      "id": "4f816dbf5e6271c7",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://grammarly.com",
+      "tool_id": "grammarly",
+      "tool_name": "Grammarly"
+    },
+    {
       "detected_on": "2026-10-19",
       "id": "ead0952a866152d5",
       "kind": "pricing or plan",
@@ -997,6 +1069,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-19",
+  "updated_at": "2026-10-20",
   "version": 1
 }
