@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20T05:14:23.760246+00:00",
+  "updated_at": "2026-10-20T12:07:06.672400+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/20/otter-ai-raises-320-million-from-general-catalyst-s-growth-fund-for-its-meeting-to.html",
+      "created_at": "2026-10-20T12:07:06.672400+00:00",
+      "source": {
+        "title": "Otter.ai raises $320 million from General Catalyst’s growth fund for its meeting tool",
+        "url": "https://techcrunch.com/2026/10/20/otter-ai-raises-320-million-from-general-catalysts-growth-fund-for-its-meeting-tool/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-20T11:00:00+00:00",
+        "display_date": "Oct 20, 2026",
+        "category": "AI Business",
+        "description": "Meeting note-taking tool Otter.ai announced on Tuesday that it has raised $320 million from General Catalyst’s Customer Value Fund (CVF), which provides capital to startups without diluting equity and gets returns on the results of marketing spend. Otter.ai said that it will use these funds for enterprise growth, go-to-market strategy, international expansion, and product innovation. […]",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Otter.ai Secures $320M Funding for Meeting Tool Expansion",
+        "summary": "Otter.ai has raised $320 million from General Catalyst's growth fund to expand its meeting note-taking tool. The funding will support enterprise growth, international expansion, and product innovation. The company has been around for nearly a decade and has reached significant revenue milestones.",
+        "facts": [
+          {
+            "statement": "Otter.ai raised $320 million from General Catalyst’s Customer Value Fund.",
+            "evidence": "Otter.ai raises $320 million from General Catalyst's growth fund for its meeting tool"
+          },
+          {
+            "statement": "The company has been around for nearly a decade and has raised $50 million in total funding.",
+            "evidence": "The startup, which has been around for nearly a decade, has raised $50 million in total funding"
+          },
+          {
+            "statement": "Otter.ai has crossed $100 million in annual recurring revenue (ARR) and has 40 million users.",
+            "evidence": "Last year, Otter hit a revenue milestone after crossing $100 million in annual recurring revenue (ARR)"
+          }
+        ],
+        "why_it_matters": "The significant funding highlights the growing interest in enterprise AI solutions for meeting note-taking. With competition from other companies, Otter's ability to scale and innovate will be crucial in maintaining its market position.",
+        "elephant_take": "🐘 鼋 Otter.ai’s $320M round is a big win, but the crowded market means they’ll need to keep innovating to stay relevant. Their focus on turning transcripts into actionable insights could be their key differentiator.",
+        "caveat": "The company hasn't provided churn data or monthly active user numbers, which are critical for assessing long-term sustainability.",
+        "who_should_care": [
+          "AI investors",
+          "Enterprise software companies",
+          "Meeting note-taking competitors"
+        ],
+        "what_to_do": [
+          "Monitor Otter's user retention and churn metrics",
+          "Track their international expansion plans",
+          "Assess their product innovation timeline",
+          "Compare them to competitors like Fireflies.ai and Granola"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20Otter.ai%20raises%20%24320%20million%20from%20General%20Catalyst%E2%80%99s%20growth%20fund%20for%20its%20meeting%20tool%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/19/kling-ai-drops-version-4-0-with-stereo-audio-multilingual-lip-sync-and-a-lighter-f.html",
       "created_at": "2026-10-20T05:14:23.760246+00:00",
@@ -11644,6 +11710,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/cloudflares-clairic-pulls-data-from-documents-faster-and-cheaper-than-llms/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
+      "at": "2026-10-20T12:07:06.672400+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-20T12:07:06.672400+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-20T12:07:06.672400+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/hf-torchneuron",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-20T12:07:06.672400+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-20T12:07:06.672400+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/19/mamdani-says-feds-have-abdicated-on-ai-urges-new-yorkers-to-push-back/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-20T05:14:23.760246+00:00",
@@ -11676,12 +11772,6 @@
     {
       "url": "https://the-decoder.com/four-gemini-4-argon-agents-beat-minecraft-without-any-human-help/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-19T13:55:06.907238+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-19T13:55:06.907238+00:00",
       "pipeline_version": "2"
     },
@@ -11755,12 +11845,6 @@
       "url": "https://huggingface.co/blog/building-with-ml-intern",
       "reason": "quality gate rejected draft: headline length is outside the publication range; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-18T21:01:29.171155+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-18T16:07:14.882008+00:00",
       "pipeline_version": "2"
     },
     {
@@ -11863,24 +11947,6 @@
       "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-15T21:44:48.942043+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-15T21:44:48.942043+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-15T21:44:48.942043+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/column/1011264/digital-twin-metabolism-ai-twin-health",
-      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
-      "at": "2026-10-15T12:04:43.365156+00:00",
       "pipeline_version": "2"
     }
   ]
