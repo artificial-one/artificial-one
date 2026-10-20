@@ -1,7 +1,204 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20T12:07:06.672400+00:00",
+  "updated_at": "2026-10-20T17:30:45.969501+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/20/mistral-ai-launches-voxtral-3-a-full-voice-agent-stack-that-listens-thinks-and-tal.html",
+      "created_at": "2026-10-20T17:30:45.969501+00:00",
+      "source": {
+        "title": "Mistral AI launches Voxtral 3, a full voice agent stack that listens, thinks, and talks in real time",
+        "url": "https://the-decoder.com/mistral-ai-launches-voxtral-3-a-full-voice-agent-stack-that-listens-thinks-and-talks-in-real-time/",
+        "source": "The Decoder",
+        "published_at": "2026-10-20T17:17:55+00:00",
+        "display_date": "Oct 20, 2026",
+        "category": "Models & LLMs",
+        "description": "Mistral AI launched Voxtral 3, a new family of language models built for real-time voice agents. The system combines speech-to-text, text-to-speech, and a voice agent SDK, supports more than 50 languages, and lets agents tap into external tools during live conversations. It can run on your own infrastructure or through EU-hosted APIs to keep data under your control. The article Mistral AI launches Voxtral 3, a full voice agent stack that listens, thinks, and talks in real time appeared first on",
+        "related": {
+          "title": "Evaluate ElevenLabs for this workflow",
+          "url": "partner-offers/elevenlabs-ai-voice.html",
+          "offer_id": "elevenlabs"
+        }
+      },
+      "article": {
+        "headline": "Mistral AI Launches Voxtral 3 Voice Agent Stack",
+        "summary": "Mistral AI introduces Voxtral 3, a voice agent stack that combines speech-to-text, text-to-speech, and SDK for real-time conversations. It supports over 50 languages and allows agents to use external tools during live interactions.",
+        "facts": [
+          {
+            "statement": "Voxtral 3 is a full voice agent stack that listens, thinks, and talks in real time",
+            "evidence": "Mistral AI launches Voxtral 3, a full voice agent stack that listens, thinks, and talks in real time"
+          },
+          {
+            "statement": "The system supports more than 50 languages for transcription",
+            "evidence": "Transcription covers more than 50 languages"
+          },
+          {
+            "statement": "Agents can tap into external systems during live conversations",
+            "evidence": "Agents can tap into external systems during live conversations"
+          }
+        ],
+        "why_it_matters": "Voxtral 3 represents a significant advancement in real-time voice processing, enabling more natural and functional interactions. Its support for multiple languages and integration with external tools makes it a versatile solution for various applications, from customer service to personal assistants.",
+        "elephant_take": "🐘 鼋 Mistral's Voxtral 3 is a solid step forward in voice tech, but the real test will be how well it handles edge cases and user privacy concerns.",
+        "caveat": "The system's effectiveness may depend on infrastructure and data control, which are critical for enterprise use.",
+        "who_should_care": [
+          "Developers",
+          "Businesses",
+          "AI Researchers"
+        ],
+        "what_to_do": [
+          "Evaluate the system's language support and tool integration",
+          "Assess data control options for compliance",
+          "Test the system in real-world scenarios"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/elevenlabs-ai-voice-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/elevenlabs-ai-voice-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/elevenlabs-ai-voice.html",
+        "review_title": "Evaluate ElevenLabs for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Mistral%20AI%20launches%20Voxtral%203%2C%20a%20full%20voice%20agent%20stack%20that%20listens%2C%20thinks%2C%20and%20talks%20in%20real%20time%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "elevenlabs"
+      }
+    },
+    {
+      "path": "news/2026/10/20/sam-altman-reportedly-pitched-three-endgames-for-ai-safety-one-involving-a-single.html",
+      "created_at": "2026-10-20T17:30:45.969501+00:00",
+      "source": {
+        "title": "Sam Altman reportedly pitched three endgames for AI safety, one involving a single firm melting everyone else's GPUs",
+        "url": "https://the-decoder.com/sam-altman-reportedly-pitched-three-endgames-for-ai-safety-one-involving-a-single-firm-melting-everyone-elses-gpus/",
+        "source": "The Decoder",
+        "published_at": "2026-10-20T17:00:59+00:00",
+        "display_date": "Oct 20, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI CEO Sam Altman laid out three paths to safe AI in an internal presentation: an international watchdog modeled after the IAEA, a merger of the major labs into one entity, or a single company so powerful it could shut down everyone else's compute. He called the last option \"terrible.\" The article Sam Altman reportedly pitched three endgames for AI safety, one involving a single firm melting everyone else's GPUs appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Sam Altman's Three AI Safety Endgames: From IAEA to Economic Dominance",
+        "summary": "OpenAI CEO Sam Altman outlined three potential approaches for governing advanced AI, ranging from an international watchdog to a single company dominating compute resources. The proposals highlight the tension between safety and innovation in AI development.",
+        "facts": [
+          {
+            "statement": "Altman proposed an international watchdog modeled after the IAEA",
+            "evidence": "International Atomic Energy Agency (IAEA) to enforce safety standards"
+          },
+          {
+            "statement": "Altman suggested a merger of major labs into one entity",
+            "evidence": "major labs would merge into a single entity or operate under its"
+          },
+          {
+            "statement": "Altman described a scenario where a single company could shut down others' compute",
+            "evidence": "single company so powerful it could shut down everyone else's compute"
+          }
+        ],
+        "why_it_matters": "Altman's proposals reflect the complex trade-offs in AI governance. While international cooperation and consolidation offer structured approaches, the economic dominance scenario raises concerns about monopolies and safety risks. The race to develop AI is intensifying, with companies and governments vying for control over next-generation systems.",
+        "elephant_take": "🐘 鼋 Altman's three endgames are as wild as they are worrisome. The IAEA model is a nice touch, but the 'single company melting GPUs' idea is a bit of a joke—though not in a good way. It highlights the absurdity of trying to balance safety and speed in AI development.",
+        "caveat": "The proposals are internal and unverified, with some sources suggesting they may be strategic jabs at competitors.",
+        "who_should_care": [
+          "AI developers",
+          "Policy makers",
+          "Tech investors"
+        ],
+        "what_to_do": [
+          "Monitor AI governance discussions closely",
+          "Assess risks of monopolistic compute dominance",
+          "Support international cooperation in safety standards",
+          "Evaluate the balance between innovation and regulation"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Sam%20Altman%20reportedly%20pitched%20three%20endgames%20for%20AI%20safety%2C%20one%20involving%20a%20single%20firm%20melting%20everyone%20else%27s%20GPUs%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/20/openai-says-gpt-6-is-much-better-with-legacy-programming-languages-such-as-cobol-a.html",
+      "created_at": "2026-10-20T17:30:45.969501+00:00",
+      "source": {
+        "title": "OpenAI says GPT-6 is much better with legacy programming languages such as COBOL and Fortran",
+        "url": "https://the-decoder.com/openai-says-gpt-6-is-much-better-with-legacy-programming-languages-such-as-cobol-and-fortran/",
+        "source": "The Decoder",
+        "published_at": "2026-10-20T16:40:29+00:00",
+        "display_date": "Oct 20, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI improved its latest models for low-resource programming languages like COBOL, Fortran, and Visual Basic. On the new MultiLangBench, GPT-6 Astra hits an 87.4 percent test pass rate across 20 languages, up from about 38 percent for GPT-5.6 Terra. For COBOL migration specifically, GPT-6.1 Sol reaches up to 97.9 percent accuracy, a result that could matter for modernizing critical financial infrastructure. The article OpenAI says GPT-6 is much better with legacy programming languages such as",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "OpenAI's GPT-6 Excels in Legacy Programming Languages",
+        "summary": "OpenAI claims its latest model, GPT-6, performs significantly better with legacy programming languages like COBOL and Fortran, which are crucial for critical infrastructure. The company highlights improvements in low-resource languages and showcases results on benchmarks such as MultiLangBench and COBOL migration.",
+        "facts": [
+          {
+            "statement": "OpenAI claims GPT-6 is much better with legacy programming languages such as COBOL and Fortran",
+            "evidence": "OpenAI says GPT-6 is much better with legacy programming languages such as COBOL and Fortran"
+          },
+          {
+            "statement": "GPT-6 Astra achieves 87.4 percent test pass rate across 20 languages on MultiLangBench",
+            "evidence": "GPT-6 Astra hits an 87.4 percent test pass rate across 20 languages"
+          },
+          {
+            "statement": "GPT-6.1 Sol reaches 97.9 percent accuracy in COBOL migration benchmark with high reasoning effort",
+            "evidence": "GPT-6.1 Sol reaches up to 97.9 percent accuracy, a result that could matter for modernizing critical financial infrastructure"
+          }
+        ],
+        "why_it_matters": "OpenAI's advancements in handling legacy programming languages could have significant implications for maintaining and upgrading critical systems, such as banking and ATM networks. The improved performance of GPT-6 in these areas suggests potential benefits for industries reliant on older technologies.",
+        "elephant_take": "🐘 鼋 OpenAI’s GPT-6 is a bit of a coding superhero, but the real story is how it helps keep financial systems running. Legacy languages are still vital, and OpenAI is proving they can be modernized with AI.",
+        "caveat": "The results are based on specific benchmarks and may not reflect real-world performance in all scenarios.",
+        "who_should_care": [
+          "Financial institutions",
+          "IT professionals",
+          "Legacy system maintainers"
+        ],
+        "what_to_do": [
+          "Evaluate AI tools for legacy system maintenance",
+          "Monitor OpenAI's progress in low-resource language support",
+          "Assess the impact of improved COBOL migration accuracy",
+          "Stay informed about advancements in AI for critical infrastructure"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20says%20GPT-6%20is%20much%20better%20with%20legacy%20programming%20languages%20such%20as%20COBOL%20and%20Fortran%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/20/otter-ai-raises-320-million-from-general-catalyst-s-growth-fund-for-its-meeting-to.html",
       "created_at": "2026-10-20T12:07:06.672400+00:00",
@@ -11710,6 +11907,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://huggingface.co/blog/allenai/fairstress",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-20T17:30:45.969501+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/20/plants-can-speak-using-electricity-so-this-startup-built-an-ai-model-to-decipher-their-language/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-20T17:30:45.969501+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-20T17:30:45.969501+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/cloudflares-clairic-pulls-data-from-documents-faster-and-cheaper-than-llms/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
       "at": "2026-10-20T12:07:06.672400+00:00",
@@ -11929,24 +12144,6 @@
       "url": "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-16T11:53:03.642210+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/muse-spark-open-is-metas-answer-to-qwen-glm-and-kimi-in-the-open-weight-race/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-16T04:58:09.347458+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/report/1011927/instagram-celebrity-ai-slop-likeness-taylor-swift-mia-goth",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-16T04:58:09.347458+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-15T21:44:48.942043+00:00",
       "pipeline_version": "2"
     }
   ]
