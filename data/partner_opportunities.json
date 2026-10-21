@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20",
+  "updated_at": "2026-10-21",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -9,9 +9,9 @@
     "approved_link_pending": 18,
     "existing_active": 39,
     "not_qualified": 14,
-    "policy_review_required": 26,
+    "policy_review_required": 27,
     "program_paused": 1,
-    "ready_for_owner_application": 379
+    "ready_for_owner_application": 378
   },
   "opportunities": [
     {
@@ -284,7 +284,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 13,
+      "review_days": 12,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2041,7 +2041,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2454,7 +2454,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 140,
+      "review_days": 147,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2842,7 +2842,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 23,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -3151,7 +3151,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -3189,7 +3189,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 47,
+      "review_days": 43,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3763,6 +3763,58 @@
       }
     },
     {
+      "id": "partnerstack:quil",
+      "network": "partnerstack",
+      "name": "CoRecruit (formerly Quil)",
+      "slug": "quil",
+      "description": "CoRecruit is the #1 AI assistant for recruitment agencies. Automate your interview notes, ATS updates, and AI-generated candidate submittals. CoRecruit captures the nuance of every conversation, whether it happens over a cell phone call, VoIP, video conference, or in-person. Firms using CoRecruit report faster time-to-fill, searchable, complete, and up-to-date ATS data, and a time savings of 8+ hours per week.",
+      "offer": "Earn $100 for every successful CoRecruit referral!",
+      "tags": [
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "HR Software",
+        "Hot",
+        "Office Software",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/quil?company=quil&gref=marketplace",
+      "terms_url": "https://corecruit.com/legal/terms-of-service",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 81,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "data",
+        "productivity",
+        "software",
+        "video"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:expertiseai",
       "network": "partnerstack",
       "name": "Expertise AI",
@@ -4213,7 +4265,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -4478,7 +4530,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -4531,7 +4583,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5530,18 +5582,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -5557,7 +5601,6 @@
         "B2B Marketplaces",
         "Collaboration & Productivity",
         "Customer Service",
-        "Hot",
         "Office Software",
         "Trusted",
         "Vertical Industry Software",
@@ -5916,7 +5959,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 16,
+      "review_days": 12,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6399,56 +6442,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:quil",
-      "network": "partnerstack",
-      "name": "CoRecruit (formerly Quil)",
-      "slug": "quil",
-      "description": "CoRecruit is the #1 AI assistant for recruitment agencies. Automate your interview notes, ATS updates, and AI-generated candidate submittals. CoRecruit captures the nuance of every conversation, whether it happens over a cell phone call, VoIP, video conference, or in-person. Firms using CoRecruit report faster time-to-fill, searchable, complete, and up-to-date ATS data, and a time savings of 8+ hours per week.",
-      "offer": "Earn $100 for every successful CoRecruit referral!",
-      "tags": [
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "HR Software",
-        "Office Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/quil?company=quil&gref=marketplace",
-      "terms_url": "https://corecruit.com/legal/terms-of-service",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 76,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "data",
-        "productivity",
-        "software",
-        "video"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -7514,7 +7507,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 4,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -8020,7 +8013,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -8227,6 +8220,61 @@
       }
     },
     {
+      "id": "partnerstack:shipcominc",
+      "network": "partnerstack",
+      "name": "Ship.com",
+      "slug": "shipcominc",
+      "description": "Ship.com is an AI-powered shipping software and your personal shipping manager. Ship AI automatically preps every order and catches mistakes before you buy the label. Enjoy discounted shipping rates and integrations with major e-commerce platforms. Earn up to $70 for every new subscriber!",
+      "offer": "Earn up to $70 for every successful referral!",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Artificial Intelligence",
+        "Commerce",
+        "E-Commerce",
+        "Hot",
+        "New",
+        "Priority",
+        "Publishers",
+        "Referral Partners",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shipcominc?company=shipcominc&gref=marketplace",
+      "terms_url": "https://www.ship.com/terms-and-conditions/partnerstack",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 72,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "e-commerce",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:tradify",
       "network": "partnerstack",
       "name": "Tradify",
@@ -8261,7 +8309,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 72,
       "relevance_matches": [
@@ -8556,7 +8604,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 45,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -9448,10 +9496,14 @@
       "offer": "Earn 70% commission on a new client’s first contract, up to $250.",
       "tags": [
         "Collaboration & Productivity",
+        "Design",
+        "HR",
         "HR Software",
         "Hot",
         "Marketing",
+        "New",
         "Office Software",
+        "Other",
         "Supply Chain & Logistics",
         "Trusted",
         "Vertical Industry Software"
@@ -10077,7 +10129,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10367,7 +10419,7 @@
       "name": "Dropbox DocSend",
       "slug": "dropbox",
       "description": "Dropbox DocSend is the secure sharing platform trusted by 47,000+ companies to pitch, share, and close deals with confidence. Earn revenue share while helping your community close deals faster. Join 700+ partners already helping VCs, accelerators, incubators, and dealmakers give their networks real-time engagement analytics, secure data rooms, and enterprise-grade security.",
-      "offer": "Earn 15% commission on every sale for 12 months",
+      "offer": "$40 per activated trial",
       "tags": [
         "Affiliates",
         "Collaboration & Productivity",
@@ -10908,7 +10960,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 168,
+      "review_days": 113,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11077,18 +11129,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -11552,7 +11596,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 14,
+      "review_days": 13,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11864,6 +11908,7 @@
         "Collaboration & Productivity",
         "HR Professional",
         "HR Software",
+        "Hot",
         "Hubspot integrated",
         "Marketing Professional",
         "Office Software",
@@ -11871,6 +11916,7 @@
         "Resellers",
         "Sales Professional",
         "Salesforce integrated",
+        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/processstreet?company=processstreet&gref=marketplace",
@@ -11971,6 +12017,7 @@
         "Analytics",
         "ERP",
         "HR Software",
+        "Hot",
         "Hubspot integrated",
         "Office Software",
         "Referral Partners",
@@ -12252,7 +12299,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12332,59 +12379,6 @@
           "disclosure_required": true
         },
         "cookie_days": 90
-      }
-    },
-    {
-      "id": "partnerstack:shipcominc",
-      "network": "partnerstack",
-      "name": "Ship.com",
-      "slug": "shipcominc",
-      "description": "Ship.com is an AI-powered shipping software and your personal shipping manager. Ship AI automatically preps every order and catches mistakes before you buy the label. Enjoy discounted shipping rates and integrations with major e-commerce platforms. Earn up to $70 for every new subscriber!",
-      "offer": "Earn up to $70 for every successful referral!",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Artificial Intelligence",
-        "Commerce",
-        "E-Commerce",
-        "New",
-        "Priority",
-        "Publishers",
-        "Referral Partners"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shipcominc?company=shipcominc&gref=marketplace",
-      "terms_url": "https://www.ship.com/terms-and-conditions/partnerstack",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": false,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "e-commerce",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": true
-        },
-        "cookie_days": null
       }
     },
     {
@@ -12732,7 +12726,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 223,
+      "review_days": 217,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13001,7 +12995,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 44,
+      "review_days": 47,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13341,7 +13335,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13395,7 +13389,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13605,7 +13599,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 35,
+      "review_days": 34,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -16153,7 +16147,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17306,7 +17300,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -17639,7 +17633,7 @@
       "tags": [
         "Accounting",
         "Affiliates",
-        "Governance, Risk, & Compliance",
+        "B2B Marketplaces",
         "Hot",
         "Office Software",
         "Referral Partners",
@@ -17800,7 +17794,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -18621,7 +18615,7 @@
       "network": "partnerstack",
       "name": "Passpack",
       "slug": "passpack",
-      "description": "Enterprise-grade credential security built for SMBs, Mid-Markets, and the MSPs who manage them. Zero-knowledge encryption, multi-tenant architecture, role-based access control, and full audit trails without the complexity or cost of traditional enterprise tools. Scales well. SOC 2 Type II certified. GDPR & CCPA compliant. SSO, MFA, One-Time Passwords, Mobile App, Browser Extensions, Advanced Reporting. 300K+ active users. 8M credentials protected. 12+ years in business. 4.1 rating on G2.",
+      "description": "Enterprise-grade credential security built for SMBs, Mid-Markets, and the MSPs who manage them. Zero-knowledge encryption, multi-tenant architecture, role-based access control, and full audit trails without the complexity or cost of traditional enterprise tools. Scales well. SOC 2 Type II certified. GDPR & CCPA compliant. SSO, MFA, One-Time Passwords, Mobile App, Browser Extensions, Advanced Reporting. 300K+ active users. 8M credentials protected. 12+ years in business. Major upgrades in 2026.",
       "offer": "Earn 35% on first-year signups!",
       "tags": [
         "Affiliates",
@@ -18983,7 +18977,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "Earn 15% on every referral",
+      "offer": "Earn 10% on every referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -19844,7 +19838,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19907,14 +19901,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -19999,7 +19993,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 25,
+      "review_days": 26,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20417,7 +20411,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20580,7 +20574,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 99,
+      "review_days": 90,
       "source": "https://market.partnerstack.com/",
       "score": 58,
       "relevance_matches": [
@@ -20984,7 +20978,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 69,
+      "review_days": 56,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21137,10 +21131,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -22635,6 +22637,51 @@
       }
     },
     {
+      "id": "partnerstack:samsara",
+      "network": "partnerstack",
+      "name": "Samsara",
+      "slug": "samsara",
+      "description": "Samsara is the pioneer of the Connected Operations Cloud, helping businesses that depend on physical operations turn IoT data into actionable insights that improve their operations.",
+      "offer": "Earn a $150 flat fee for every paying customer you refer",
+      "tags": [
+        "Hot",
+        "IoT Management",
+        "Supply Chain & Logistics",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/samsara?company=samsara&gref=marketplace",
+      "terms_url": "https://www.samsara.com/pdf/affiliate-programt-terms-and-conditions.pdf",
+      "website": "https://www.samsara.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 11,
+      "source": "https://market.partnerstack.com/",
+      "score": 51,
+      "relevance_matches": [
+        "data"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:partnercentric",
       "network": "partnerstack",
       "name": "PartnerCentric",
@@ -22713,7 +22760,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 50,
       "relevance_matches": [
@@ -23021,7 +23068,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 93,
+      "review_days": 91,
       "source": "https://market.partnerstack.com/",
       "score": 46,
       "relevance_matches": [
@@ -23040,49 +23087,6 @@
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": true
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:samsara",
-      "network": "partnerstack",
-      "name": "Samsara",
-      "slug": "samsara",
-      "description": "Samsara is the pioneer of the Connected Operations Cloud, helping businesses that depend on physical operations turn IoT data into actionable insights that improve their operations.",
-      "offer": "Earn a $150 flat fee for every paying customer you refer",
-      "tags": [
-        "IoT Management",
-        "Supply Chain & Logistics"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/samsara?company=samsara&gref=marketplace",
-      "terms_url": "https://www.samsara.com/pdf/affiliate-programt-terms-and-conditions.pdf",
-      "website": "https://www.samsara.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 14,
-      "source": "https://market.partnerstack.com/",
-      "score": 46,
-      "relevance_matches": [
-        "data"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
         },
         "cookie_days": null
       }
