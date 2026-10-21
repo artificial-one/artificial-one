@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T17:37:51.739628+00:00",
+  "updated_at": "2026-10-21T21:58:43.032740+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/21/meta-to-create-a-new-class-of-shares-to-fund-ai-push.html",
+      "created_at": "2026-10-21T21:58:43.032740+00:00",
+      "source": {
+        "title": "Meta to create a new class of shares to fund AI push",
+        "url": "https://www.theverge.com/tech/1015799/meta-shares-class-ai-q3-2026-earnings",
+        "source": "The Verge AI",
+        "published_at": "2026-10-21T21:30:02+00:00",
+        "display_date": "Oct 21, 2026",
+        "category": "AI Business",
+        "description": "Meta says it's issuing a new class of shares to fund its AI initiatives. As part of its third-quarter earnings report released on Wednesday, the company says the non-voting stock will also go toward potential acquisitions and employee compensation, with trading beginning in 2027. \"The scale of investment required to compete, sustain growth, expand infrastructure, […]",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Meta Introduces New Share Class to Fund AI Expansion",
+        "summary": "Meta is issuing a new class of non-voting shares to fund its AI initiatives, with trading set for 2027. The shares will support acquisitions, employee compensation, and infrastructure growth as the company accelerates its AI strategy.",
+        "facts": [
+          {
+            "statement": "Meta is issuing a new class of non-voting shares to fund AI initiatives",
+            "evidence": "Meta to create a new class of shares to fund AI push"
+          },
+          {
+            "statement": "The new share class will support acquisitions and employee compensation",
+            "evidence": "the non-voting stock will also go toward potential acquisitions and employee compensation"
+          },
+          {
+            "statement": "Meta expects significant capital expenditures this year",
+            "evidence": "capital expenditures between $135 billion and $145 billion this year"
+          }
+        ],
+        "why_it_matters": "Meta's move to issue new shares highlights the intense competition in the AI space. As the company invests heavily in infrastructure and talent, the new share class provides flexibility to support its ambitious AI goals. This decision reflects the growing importance of AI in shaping the future of technology and business.",
+        "elephant_take": "🐘 鼋 Meta's AI push is as much about capital as it is about code. The new shares are a financial tool to fuel an already massive investment in AI, but the real challenge remains whether these resources will translate into competitive advantage.",
+        "caveat": "The non-voting aspect of the shares could limit control for existing shareholders, raising questions about governance and long-term strategy.",
+        "who_should_care": [
+          "AI investors",
+          "Tech analysts",
+          "Shareholders"
+        ],
+        "what_to_do": [
+          "Monitor Meta's AI progress and financial performance",
+          "Evaluate the impact of new share classes on company governance",
+          "Assess the competitive landscape in AI development",
+          "Review the implications for shareholder value"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20Meta%20to%20create%20a%20new%20class%20of%20shares%20to%20fund%20AI%20push%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat.html",
+      "created_at": "2026-10-21T21:58:43.032740+00:00",
+      "source": {
+        "title": "While Amazon blocks AI agents, Walmart rolls out the welcome mat",
+        "url": "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-21T19:30:00+00:00",
+        "display_date": "Oct 21, 2026",
+        "category": "AI Tools & Products",
+        "description": "As Amazon blocks AI agents from shopping on its site, Walmart is taking the opposite approach, introducing new technology that lets AI agents make purchases on customers' behalf, with controls over spending and transaction approvals.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Walmart Embraces AI Agents While Amazon Blocks Them",
+        "summary": "Walmart introduces technology allowing AI agents to make purchases on behalf of customers, contrasting with Amazon's approach of blocking such activity. The move highlights Walmart's commitment to integrating AI into its commerce platform.",
+        "facts": [
+          {
+            "statement": "Walmart is embracing agentic commerce with the launch of its own Agent Gateway",
+            "evidence": "Walmart is embracing agentic commerce with the launch of its own Agent Gateway"
+          },
+          {
+            "statement": "Amazon blocks AI agents from making purchases on behalf of online shoppers",
+            "evidence": "amazon blocks ai agents from shopping on its"
+          },
+          {
+            "statement": "Walmart's technology allows AI agents to search inventory and make purchases on behalf of users",
+            "evidence": "an ai agent search across walmart’s online inventory and make purchases on behalf of the agent’s"
+          }
+        ],
+        "why_it_matters": "The contrast between Amazon and Walmart's approaches highlights the growing importance of AI in commerce. Walmart's embrace of AI agents signals a shift towards more personalized and automated shopping experiences, while Amazon's restrictions may limit consumer adoption of AI-driven commerce.",
+        "elephant_take": "🐘 鼋 Walmart is trying to out-AI Amazon by letting AI agents shop for you, but it’s not clear if this will win over consumers. The company is trying to balance convenience with control, a tricky act in the age of AI.",
+        "caveat": "The long-term impact of these changes on consumer trust and privacy remains uncertain.",
+        "who_should_care": [
+          "Retailers",
+          "AI developers",
+          "Consumers"
+        ],
+        "what_to_do": [
+          "Evaluate AI integration strategies for your business",
+          "Assess consumer trust in AI-driven commerce",
+          "Monitor competitor moves in the AI space"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20While%20Amazon%20blocks%20AI%20agents%2C%20Walmart%20rolls%20out%20the%20welcome%20mat%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/21/deepmind-founder-hassabis-shortens-agi-timeline-from-five-to-two-to-three-years.html",
       "created_at": "2026-10-21T17:37:51.739628+00:00",
@@ -12817,6 +12948,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-21T21:58:43.032740+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-21T21:58:43.032740+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-21T21:58:43.032740+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openais-gpt-5-6-sol-and-gemini-4-argon-discovered-the-critical-php-vulnerability-affecting-millions-of-websites/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-21T21:58:43.032740+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/inceptions-mercury-3-diffusion-model-claims-to-beat-gpt-6-luna-and-claude-haiku-5-5-at-a-fraction-of-the-wait/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-21T17:37:51.739628+00:00",
@@ -13030,30 +13185,6 @@
       "url": "https://the-decoder.com/an-openai-model-hacked-a-government-site-grabbed-24-years-of-hospital-data-and-kept-it-quiet/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-18T11:40:33.489799+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/ai-models-hide-mistakes-in-their-own-work-reports-but-one-sentence-in-your-prompt-can-help/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-18T11:40:33.489799+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
-      "at": "2026-10-17T15:55:25.243831+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-17T15:55:25.243831+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/mathematicians-say-openai-doesnt-understand-its-own-navier-stokes-proof/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-17T11:09:17.179518+00:00",
       "pipeline_version": "2"
     }
   ]
