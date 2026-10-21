@@ -1,10 +1,46 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 65,
+    "successful_checks": 55,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-21",
+      "id": "b49e6f60196684b1",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://krikey.ai",
+      "tool_id": "krikey-ai",
+      "tool_name": "Krikey AI"
+    },
+    {
+      "detected_on": "2026-10-21",
+      "id": "7b1ceab444da9ee7",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://predis.ai",
+      "tool_id": "predis-ai",
+      "tool_name": "Predis.ai"
+    },
+    {
+      "detected_on": "2026-10-21",
+      "id": "2e082c41302fcbc4",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://rytr.me",
+      "tool_id": "rytr",
+      "tool_name": "Rytr"
+    },
+    {
+      "detected_on": "2026-10-21",
+      "id": "b32221bf8b2b4645",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://seaart.ai",
+      "tool_id": "seaart",
+      "tool_name": "SeaArt"
+    },
     {
       "detected_on": "2026-10-20",
       "id": "5d89797561719618",
@@ -1069,6 +1105,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-20",
+  "updated_at": "2026-10-21",
   "version": 1
 }
