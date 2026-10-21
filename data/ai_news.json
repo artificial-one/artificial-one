@@ -1,7 +1,51 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T05:16:45.141721+00:00",
+  "updated_at": "2026-10-21T12:20:45.074431+00:00",
   "items": [
+    {
+      "title": "Announcing SimReady Central: An Open Library of Simulation-Ready 3D Assets for Robotics and AI Factories",
+      "url": "https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories",
+      "source": "Hugging Face",
+      "published_at": "2026-10-21T10:59:42+00:00",
+      "display_date": "Oct 21, 2026",
+      "category": "AI Tools & Products",
+      "description": "",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Claude Science tackles deadly scorpion stings by designing protein binders from scratch",
+      "url": "https://the-decoder.com/claude-science-tackles-deadly-scorpion-stings-by-designing-protein-binders-from-scratch/",
+      "source": "The Decoder",
+      "published_at": "2026-10-21T08:37:06+00:00",
+      "display_date": "Oct 21, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic's Claude independently designed protein binders targeting deadly scorpion neurotoxins. Out of more than 318,000 designs, 211 were tested in the lab. Seventeen met the criteria, and the two strongest bind extremely tightly to Cn2, a toxin from a Mexican scorpion. Whether they actually work as antivenom remains an open question. The article Claude Science tackles deadly scorpion stings by designing protein binders from scratch appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Foxit for this workflow",
+        "url": "partner-offers/foxit-pdf-software.html",
+        "offer_id": "foxit"
+      },
+      "archive_url": "news/2026/10/21/claude-science-tackles-deadly-scorpion-stings-by-designing-protein-binders-from-sc.html"
+    },
+    {
+      "title": "OpenAI acquires Orchestra Bio to build AI agents that speed up drug development",
+      "url": "https://the-decoder.com/openai-acquires-orchestra-bio-to-build-ai-agents-that-speed-up-drug-development/",
+      "source": "The Decoder",
+      "published_at": "2026-10-21T08:32:54+00:00",
+      "display_date": "Oct 21, 2026",
+      "category": "Research",
+      "description": "OpenAI is acquiring startup Orchestra Bio and plans to merge it with its life sciences AI platform Rosalind. The goal is to build AI agents that help pharma teams coordinate drug development, from tracking trials to spotting problems. Developing a new drug in the US takes ten to 15 years on average. OpenAI already works with Novo Nordisk and Moderna on AI-driven pharma research. The article OpenAI acquires Orchestra Bio to build AI agents that speed up drug development appeared first on The Deco",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      },
+      "archive_url": "news/2026/10/21/openai-acquires-orchestra-bio-to-build-ai-agents-that-speed-up-drug-development.html"
+    },
     {
       "title": "Anthropic pitches AI safety bill that may block a model if 50+ people could be killed",
       "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
@@ -151,20 +195,6 @@
       "archive_url": "news/2026/10/20/chatgpt-now-lets-you-lock-your-chats.html"
     },
     {
-      "title": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation",
-      "url": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
-      "source": "Hugging Face",
-      "published_at": "2026-10-20T18:17:47+00:00",
-      "display_date": "Oct 20, 2026",
-      "category": "AI Tools & Products",
-      "description": "",
-      "related": {
-        "title": "Evaluate Carepatron for this workflow",
-        "url": "partner-offers/carepatron-practice-management.html",
-        "offer_id": "carepatron"
-      }
-    },
-    {
       "title": "Meta pauses Muse sharing after researchers find AI chats on the web",
       "url": "https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats",
       "source": "The Verge AI",
@@ -176,7 +206,8 @@
         "title": "Evaluate Rank Prompt for this workflow",
         "url": "partner-offers/rank-prompt-ai-visibility.html",
         "offer_id": "rank-prompt"
-      }
+      },
+      "archive_url": "news/2026/10/20/meta-pauses-muse-sharing-after-researchers-find-ai-chats-on-the-web.html"
     },
     {
       "title": "Eric Schmidt reportedly owns about half as much of Anthropic as CEO Dario Amodei",
@@ -190,7 +221,8 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei.html"
     },
     {
       "title": "Mistral AI launches Voxtral 3, a full voice agent stack that listens, thinks, and talks in real time",
@@ -291,20 +323,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Cloudflare's Clairic pulls data from documents faster and cheaper than LLMs",
-      "url": "https://the-decoder.com/cloudflares-clairic-pulls-data-from-documents-faster-and-cheaper-than-llms/",
-      "source": "The Decoder",
-      "published_at": "2026-10-20T12:04:56+00:00",
-      "display_date": "Oct 20, 2026",
-      "category": "Models & LLMs",
-      "description": "Cloudflare has released an AI model it says pulls data from documents faster and more cheaply than large language models. The article Cloudflare's Clairic pulls data from documents faster and cheaper than LLMs appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Foxit for this workflow",
-        "url": "partner-offers/foxit-pdf-software.html",
-        "offer_id": "foxit"
       }
     },
     {
@@ -501,20 +519,6 @@
       "display_date": "Oct 14, 2026",
       "category": "Models & LLMs",
       "description": "\"Small weight-based replicators\" could usher in a new generation of computer worms.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Gemini 4 Argon: Built to solve your hardest problems",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-      "source": "Google AI",
-      "published_at": "2026-10-13T16:00:00+00:00",
-      "display_date": "Oct 13, 2026",
-      "category": "Models & LLMs",
-      "description": "TBD",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",

@@ -1,7 +1,267 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T05:16:49.449235+00:00",
+  "updated_at": "2026-10-21T12:20:48.982023+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/21/claude-science-tackles-deadly-scorpion-stings-by-designing-protein-binders-from-sc.html",
+      "created_at": "2026-10-21T12:20:48.982023+00:00",
+      "source": {
+        "title": "Claude Science tackles deadly scorpion stings by designing protein binders from scratch",
+        "url": "https://the-decoder.com/claude-science-tackles-deadly-scorpion-stings-by-designing-protein-binders-from-scratch/",
+        "source": "The Decoder",
+        "published_at": "2026-10-21T08:37:06+00:00",
+        "display_date": "Oct 21, 2026",
+        "category": "Models & LLMs",
+        "description": "Anthropic's Claude independently designed protein binders targeting deadly scorpion neurotoxins. Out of more than 318,000 designs, 211 were tested in the lab. Seventeen met the criteria, and the two strongest bind extremely tightly to Cn2, a toxin from a Mexican scorpion. Whether they actually work as antivenom remains an open question. The article Claude Science tackles deadly scorpion stings by designing protein binders from scratch appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Foxit for this workflow",
+          "url": "partner-offers/foxit-pdf-software.html",
+          "offer_id": "foxit"
+        }
+      },
+      "article": {
+        "headline": "AI Designs Potential Antivenom for Scorpion Stings",
+        "summary": "Anthropic's Claude developed protein binders that could neutralize scorpion toxins. The research highlights AI's role in drug discovery but raises questions about effectiveness.",
+        "facts": [
+          {
+            "statement": "Claude generated 318,484 designs for protein binders targeting scorpion toxins",
+            "evidence": "Claude generated 318,484 designs for such protein binders targeting five toxins"
+          },
+          {
+            "statement": "17 of the 211 tested binders met criteria for effectiveness",
+            "evidence": "Of the 211 designs tested in the lab, 17 met the criteria for a binder"
+          },
+          {
+            "statement": "Two strongest binders closely match known antibodies that neutralize Cn2 toxin",
+            "evidence": "The two strongest bound extremely tightly to Cn2, a toxin from the Mexican scorpion"
+          }
+        ],
+        "why_it_matters": "This marks a significant step in AI-driven drug discovery. While promising, the effectiveness of these binders as antivenoms remains unproven. The research underscores AI's potential in medical innovation but also highlights the need for rigorous testing.",
+        "elephant_take": "🐘 鼋 AI is getting good at making tiny proteins, but can it save lives? The two strongest binders are close to known antibodies, but more tests are needed before they can be trusted as antivenoms.",
+        "caveat": "The effectiveness of the binders as antivenoms hasn't been fully tested. More research is needed to confirm their real-world utility.",
+        "who_should_care": [
+          "Medical researchers",
+          "AI developers",
+          "Public health officials"
+        ],
+        "what_to_do": [
+          "Test binders in animal models",
+          "Conduct clinical trials",
+          "Monitor for adverse effects"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/foxit-pdf-software-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/foxit-pdf-software-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/foxit-pdf-software.html",
+        "review_title": "Evaluate Foxit for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Claude%20Science%20tackles%20deadly%20scorpion%20stings%20by%20designing%20protein%20binders%20from%20scratch%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "foxit"
+      }
+    },
+    {
+      "path": "news/2026/10/21/openai-acquires-orchestra-bio-to-build-ai-agents-that-speed-up-drug-development.html",
+      "created_at": "2026-10-21T12:20:48.982023+00:00",
+      "source": {
+        "title": "OpenAI acquires Orchestra Bio to build AI agents that speed up drug development",
+        "url": "https://the-decoder.com/openai-acquires-orchestra-bio-to-build-ai-agents-that-speed-up-drug-development/",
+        "source": "The Decoder",
+        "published_at": "2026-10-21T08:32:54+00:00",
+        "display_date": "Oct 21, 2026",
+        "category": "Research",
+        "description": "OpenAI is acquiring startup Orchestra Bio and plans to merge it with its life sciences AI platform Rosalind. The goal is to build AI agents that help pharma teams coordinate drug development, from tracking trials to spotting problems. Developing a new drug in the US takes ten to 15 years on average. OpenAI already works with Novo Nordisk and Moderna on AI-driven pharma research. The article OpenAI acquires Orchestra Bio to build AI agents that speed up drug development appeared first on The Deco",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "OpenAI Acquires Orchestra Bio to Accelerate Drug Development",
+        "summary": "OpenAI is acquiring Orchestra Bio to enhance its life sciences AI platform, aiming to speed up drug development by creating AI agents that streamline coordination between teams and improve efficiency in clinical trials.",
+        "facts": [
+          {
+            "statement": "OpenAI is acquiring Orchestra Bio to enhance its life sciences AI platform.",
+            "evidence": "OpenAI acquires Orchestra Bio to build AI agents that speed up drug development"
+          },
+          {
+            "statement": "The goal is to build AI agents that help pharma teams coordinate drug development.",
+            "evidence": "The combined effort aims to build AI agents that link scientific findings with clinical trials"
+          },
+          {
+            "statement": "Developing a new drug in the US takes ten to 15 years on average.",
+            "evidence": "Developing a drug in the US takes ten to 15 years on average"
+          }
+        ],
+        "why_it_matters": "The acquisition highlights OpenAI's growing focus on pharmaceutical research, aiming to reduce the lengthy and costly process of drug development. By integrating AI agents, the company seeks to streamline coordination between teams and improve efficiency in clinical trials, potentially accelerating the path to new drugs for patients.",
+        "elephant_take": "🐘 鼋 OpenAI’s move into pharma is a bold bet, but will AI truly cut through the chaos of drug development? The promise of faster drug delivery is enticing, but the real test lies in whether these AI agents can handle the messy, human-driven complexities of research.",
+        "caveat": "The financial terms of the deal are not disclosed, and the effectiveness of AI in streamlining drug development remains unproven on a large scale.",
+        "who_should_care": [
+          "Pharmaceutical companies",
+          "AI researchers",
+          "Investors"
+        ],
+        "what_to_do": [
+          "Monitor OpenAI's progress in pharma AI",
+          "Stay updated on new drug development trends",
+          "Evaluate the impact of AI on clinical trials"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20acquires%20Orchestra%20Bio%20to%20build%20AI%20agents%20that%20speed%20up%20drug%20development%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/10/20/meta-pauses-muse-sharing-after-researchers-find-ai-chats-on-the-web.html",
+      "created_at": "2026-10-21T12:20:48.982023+00:00",
+      "source": {
+        "title": "Meta pauses Muse sharing after researchers find AI chats on the web",
+        "url": "https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats",
+        "source": "The Verge AI",
+        "published_at": "2026-10-20T18:07:34+00:00",
+        "display_date": "Oct 20, 2026",
+        "category": "Research",
+        "description": "Meta says it paused a Muse feature that lets you share conversations with the AI assistant after researchers found the URLs publicly available on the web, as reported by Ars Technica. In a report published this week, researchers at the security firm Claroc say they found more than 6,800 Muse links through public DNS records. […]",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Meta Pauses AI Chat Sharing After Researchers Find Public Access",
+        "summary": "Meta has paused a feature allowing users to share AI chat conversations after researchers discovered that URLs for these chats were publicly accessible, leading to potential privacy breaches.",
+        "facts": [
+          {
+            "statement": "Researchers found over 6,800 Muse links through public DNS records.",
+            "evidence": "found more than 6,800 muse links through public dns"
+          },
+          {
+            "statement": "Muse links were easily discoverable due to their design.",
+            "evidence": "the way Meta designed these links made them easy to find"
+          },
+          {
+            "statement": "Muse chats contained sensitive information like revenue data and calendars.",
+            "evidence": "Muse chats containing a marketing company’s revenue, a workplace’s calendar, a loan application, and more"
+          }
+        ],
+        "why_it_matters": "The incident highlights how AI chat features can inadvertently expose private information. It also raises concerns about the security of AI systems and the need for better privacy controls.",
+        "elephant_take": "🐘 鼋 Meta's Muse feature is a reminder that even with good intentions, AI systems can have unintended consequences. The fact that sensitive data was exposed shows the importance of careful design in privacy features.",
+        "caveat": "The incident underscores the challenges of securing AI systems and the need for ongoing vigilance in protecting user data.",
+        "who_should_care": [
+          "AI developers",
+          "Privacy advocates",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Review AI sharing features for security vulnerabilities",
+          "Implement stronger privacy controls",
+          "Monitor public DNS records for unusual activity"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Meta%20pauses%20Muse%20sharing%20after%20researchers%20find%20AI%20chats%20on%20the%20web%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei.html",
+      "created_at": "2026-10-21T12:20:48.982023+00:00",
+      "source": {
+        "title": "Eric Schmidt reportedly owns about half as much of Anthropic as CEO Dario Amodei",
+        "url": "https://techcrunch.com/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-20T17:55:12+00:00",
+        "display_date": "Oct 20, 2026",
+        "category": "AI Tools & Products",
+        "description": "Eric Schmidt’s fortune is about to get even bigger.",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Eric Schmidt's Stake in Anthropic Outpaces Dario Amodei",
+        "summary": "Eric Schmidt is reported to own a larger stake in Anthropic than its CEO, Dario Amodei, which could significantly boost Schmidt's net worth if the company goes public.",
+        "facts": [
+          {
+            "statement": "Eric Schmidt owns about 1% of Anthropic",
+            "evidence": "eric schmidt reportedly owns about half as much of anthropic"
+          },
+          {
+            "statement": "Dario Amodei holds 2% of Anthropic",
+            "evidence": "the 2% of the company that co-founder and CEO Dario Amodei holds"
+          },
+          {
+            "statement": "Anthropic is expected to go public before year-end",
+            "evidence": "Anthropic is widely expected to go public before the end of the year"
+          }
+        ],
+        "why_it_matters": "The disparity in ownership stakes between Schmidt and Amodei highlights the potential for significant wealth gains if Anthropic goes public. This could have implications for both investors and the company's future direction.",
+        "elephant_take": "🐘 鼋 The size of Schmidt's stake is a reminder that even a small percentage can translate to massive wealth when the market caps soar. But it also raises questions about who really controls the future of AI research.",
+        "caveat": "The accuracy of ownership stakes and market valuations are not independently verified.",
+        "who_should_care": [
+          "Investors",
+          "AI Researchers",
+          "Tech Industry Analysts"
+        ],
+        "what_to_do": [
+          "Monitor Anthropic's stock performance",
+          "Track Schmidt's other AI investments",
+          "Stay updated on AI regulatory developments"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Eric%20Schmidt%20reportedly%20owns%20about%20half%20as%20much%20of%20Anthropic%20as%20CEO%20Dario%20Amodei%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/20/google-s-more-personalized-gemini-ai-is-heading-to-your-car.html",
       "created_at": "2026-10-21T05:16:49.449235+00:00",
@@ -12431,6 +12691,12 @@
   ],
   "last_failures": [
     {
+      "url": "https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
+      "at": "2026-10-21T12:20:48.982023+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-21T05:16:49.449235+00:00",
@@ -12661,12 +12927,6 @@
     {
       "url": "https://the-decoder.com/google-wants-gemini-4-argon-to-be-the-only-ai-model-robots-need/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-16T11:53:03.642210+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-16T11:53:03.642210+00:00",
       "pipeline_version": "2"
     }
