@@ -1,7 +1,74 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T21:58:43.032740+00:00",
+  "updated_at": "2026-10-22T05:19:43.540507+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/21/blackstone-s-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown.html",
+      "created_at": "2026-10-22T05:19:43.540507+00:00",
+      "source": {
+        "title": "Blackstone’s Jas Khaira says fears over AI-buildout debt are overblown",
+        "url": "https://techcrunch.com/2026/10/21/blackstones-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-21T22:51:22+00:00",
+        "display_date": "Oct 21, 2026",
+        "category": "AI Tools & Products",
+        "description": "Blackstone’s AI head on why the PE giant isn't panicked by market jitters.",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Blackstone's AI Head Says Debt Concerns Are Overblown",
+        "summary": "Blackstone's AI head, Jas Khaira, asserts that concerns about AI development debt are exaggerated. The firm is investing heavily in AI infrastructure and financing strategies to support the growing industry.",
+        "facts": [
+          {
+            "statement": "Blackstone is investing heavily in AI infrastructure.",
+            "evidence": "Blackstone’s first such deal came in 2023 with CoreWeave"
+          },
+          {
+            "statement": "Blackstone uses a unique financing model for neoclouds.",
+            "evidence": "Blackstone pioneered a financing structure that allowed it to lend massive sums to venture-backed cloud neoclouds"
+          },
+          {
+            "statement": "Blackstone's AI initiatives are led by Jas Khaira.",
+            "evidence": "Khaira emphasized that Blackstone sets itself apart from traditional venture capitalists through its focus on compute financing"
+          }
+        ],
+        "why_it_matters": "The role of Blackstone in the AI industry highlights the growing importance of financial institutions in supporting technological advancements. The firm's unique approach to financing AI infrastructure may set a new standard for how capital is allocated in the rapidly evolving AI landscape.",
+        "elephant_take": "🐘 鼋 Blackstone is betting big on AI, but it’s not just about the tech—it’s about the money. They’re using a clever mix of debt and equity to fund the hyper-competitive AI world, where even a small neocloud can get a massive loan if it has big customers like Microsoft.",
+        "caveat": "The AI industry is still in its early stages, and the risks involved in financing large-scale AI projects cannot be ignored.",
+        "who_should_care": [
+          "AI investors",
+          "Financial institutions",
+          "Tech startups",
+          "Regulators"
+        ],
+        "what_to_do": [
+          "Monitor AI financing trends",
+          "Evaluate risk factors in AI investments",
+          "Stay informed about new AI developments",
+          "Consult with financial experts before investing in AI-related ventures"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Blackstone%E2%80%99s%20Jas%20Khaira%20says%20fears%20over%20AI-buildout%20debt%20are%20overblown%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/21/meta-to-create-a-new-class-of-shares-to-fund-ai-push.html",
       "created_at": "2026-10-21T21:58:43.032740+00:00",
@@ -12948,6 +13015,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://huggingface.co/blog/nvidia/kumo-relational",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-10-22T05:19:43.540507+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-22T05:19:43.540507+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/google-cloud-now-offers-openai-models-alongside-gemini-and-claude-becoming-the-only-major-provider-with-all-three/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-22T05:19:43.540507+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/att-legal",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-22T05:19:43.540507+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/china-protests-the-us-deepseek-ban-while-blocking-chatgpt-claude-and-gemini-at-home/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-22T05:19:43.540507+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-21T21:58:43.032740+00:00",
@@ -13155,36 +13252,6 @@
       "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
       "reason": "quality gate rejected draft: summary length is outside the publication range; a fact has no exact source evidence",
       "at": "2026-10-18T21:01:29.171155+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-      "reason": "quality gate rejected draft: hype language is present; Elephant commentary is not specific to this story",
-      "at": "2026-10-18T21:01:29.171155+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/building-with-ml-intern",
-      "reason": "quality gate rejected draft: headline length is outside the publication range; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-18T21:01:29.171155+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-18T16:07:14.882008+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/third-moment-research",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-18T16:07:14.882008+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/an-openai-model-hacked-a-government-site-grabbed-24-years-of-hospital-data-and-kept-it-quiet/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-18T11:40:33.489799+00:00",
       "pipeline_version": "2"
     }
   ]
