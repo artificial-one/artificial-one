@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T17:37:00.734357+00:00",
+  "updated_at": "2026-10-22T21:55:01.873009+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-you.html",
+      "created_at": "2026-10-22T21:55:01.873009+00:00",
+      "source": {
+        "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+        "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-22T19:07:09+00:00",
+        "display_date": "Oct 22, 2026",
+        "category": "AI Tools & Products",
+        "description": "The new feature allows agents to log into a customer's personal accounts while still protecting the private credentials that secure those accounts.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "1Password Launches AI Agent Login Tool to Protect User Passwords",
+        "summary": "1Password introduces a new feature allowing AI agents to log into user accounts without accessing passwords, using a secure digital key system. The tool aims to address growing concerns about AI access to sensitive information.",
+        "facts": [
+          {
+            "statement": "1Password allows AI agents to log in on behalf of users without seeing their passwords",
+            "evidence": "1Password launches a way for AI agents to log in on your behalf without seeing your password"
+          },
+          {
+            "statement": "The new feature uses a unique digital key system to verify agent identity",
+            "evidence": "a unique digital key is sent to 1Password to confirm the agent’s digital identity"
+          },
+          {
+            "statement": "Users can approve login requests from AI agents through alerts",
+            "evidence": "the user is then sent an alert about the login attempt and can personally confirm the"
+          }
+        ],
+        "why_it_matters": "As more users delegate tasks to AI agents, the risk of unauthorized access to sensitive information grows. 1Password’s new tool aims to provide a secure way for users to grant access without compromising their passwords, addressing concerns raised by financial institutions and security experts.",
+        "elephant_take": "🐘 鼋The 1Password for Agents feature is a clever attempt to balance convenience with security, but it's still a gamble in a world where AI trust is as fragile as the passwords it handles.",
+        "caveat": "The tool relies on users trusting the system and the agents they choose, which can be a double-edged sword in an era of increasing digital vulnerability.",
+        "who_should_care": [
+          "AI developers",
+          "Security professionals",
+          "Users concerned about password safety"
+        ],
+        "what_to_do": [
+          "Review agent permissions carefully",
+          "Stay informed about AI security trends",
+          "Use multi-factor authentication for sensitive accounts"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%201Password%20launches%20a%20way%20for%20AI%20agents%20to%20log%20in%20on%20your%20behalf%20without%20seeing%20your%20password%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/22/canva-releases-its-first-image-generation-model.html",
+      "created_at": "2026-10-22T21:55:01.873009+00:00",
+      "source": {
+        "title": "Canva releases its first image generation model",
+        "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-22T19:00:00+00:00",
+        "display_date": "Oct 22, 2026",
+        "category": "Models & LLMs",
+        "description": "Canva is making its new image model available to all users, promising better, more customizable performance at lower costs.",
+        "related": {
+          "title": "Evaluate AdCreative.ai for this workflow",
+          "url": "partner-offers/adcreative-ai-ad-design.html",
+          "offer_id": "adcreative"
+        }
+      },
+      "article": {
+        "headline": "Canva Launches Image Generation Model to Compete with Giants",
+        "summary": "Canva has introduced its first image generation model, Canva Craft, designed to compete with models from Google, OpenAI, and others. The model uses human-designed templates for training and offers customizable performance at lower costs.",
+        "facts": [
+          {
+            "statement": "Canva released its first image generation model called Canva Craft",
+            "evidence": "Canva releases its first image generation model"
+          },
+          {
+            "statement": "The model uses human-designed templates for training",
+            "evidence": "using human-designed templates from Canva’s library"
+          },
+          {
+            "statement": "The model allows for precise edits without altering other parts of the image",
+            "evidence": "users would be able to make precise edits without changing other parts of the image"
+          }
+        ],
+        "why_it_matters": "Canva's new image generation model represents a significant move in the AI landscape, as it aims to compete with established players like Google and OpenAI. By leveraging human-designed templates and offering customizable performance, Canva is positioning itself to offer a unique value proposition in the market.",
+        "elephant_take": "🐘 鼋 Canva’s move into image generation is a bold step, but it's unclear if it can outshine giants like Google and Meta. The use of human-designed templates is a clever twist, but the real test will be whether the model can deliver on its promises of speed and cost efficiency.",
+        "caveat": "Canva’s recent revenue forecast cut and valuation drop raise questions about its financial health and long-term strategy.",
+        "who_should_care": [
+          "AI developers",
+          "Design professionals",
+          "Tech investors"
+        ],
+        "what_to_do": [
+          "Evaluate Canva's new model for potential integration into existing workflows",
+          "Monitor the company's financial performance and valuation changes",
+          "Stay updated on AI advancements in design tools",
+          "Consider the implications of Canva's revenue forecast adjustments"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/adcreative-ai-ad-design-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/adcreative-ai-ad-design-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/adcreative-ai-ad-design.html",
+        "review_title": "Evaluate AdCreative.ai for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Canva%20releases%20its%20first%20image%20generation%20model%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "adcreative"
+      }
+    },
     {
       "path": "news/2026/10/22/someone-hacked-the-switch-2-by-using-an-old-game-and-ai.html",
       "created_at": "2026-10-22T17:37:00.734357+00:00",
@@ -13473,6 +13604,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-22T21:55:01.873009+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-22T21:55:01.873009+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1016690/suleyman-microsoft-diagnostic-orchestrator-science-medical-superintelligence",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-22T21:55:01.873009+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-22T21:55:01.873009+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/policy/1016585/openai-anthropic-nvidia-lobbying-records",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-22T17:37:00.734357+00:00",
@@ -13685,30 +13840,6 @@
     {
       "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-19T05:17:07.633039+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/itau-generative-ai",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-19T05:17:07.633039+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-19T05:17:07.633039+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-19T05:17:07.633039+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/amp-beyond-coding",
-      "reason": "HTTP Error 403: Forbidden",
       "at": "2026-10-19T05:17:07.633039+00:00",
       "pipeline_version": "2"
     }
