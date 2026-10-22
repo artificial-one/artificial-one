@@ -1,7 +1,81 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T05:19:39.354028+00:00",
+  "updated_at": "2026-10-22T12:22:16.759360+00:00",
   "items": [
+    {
+      "title": "Claude did not invent scorpion antivenom",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1016443/anthropic-claude-citrini-vibecoding-scorpion-antivenom",
+      "source": "The Verge AI",
+      "published_at": "2026-10-22T12:21:07+00:00",
+      "display_date": "Oct 22, 2026",
+      "category": "Models & LLMs",
+      "description": "An investment research firm wanted to prove AI could revolutionize drug development. So they teamed up with Anthropic to see whether an unreleased version of Claude could make scorpion antivenom. It couldn't. It came up with some promising starting points, but nothing close to an actual drug, experts tell The Verge. Citrini Research, the firm […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "An AI agent in \"Skynet mode\" hijacks unprotected language models to launch self-sustaining cyberattacks",
+      "url": "https://the-decoder.com/an-ai-agent-in-skynet-mode-hijacks-unprotected-language-models-to-launch-self-sustaining-cyberattacks/",
+      "source": "The Decoder",
+      "published_at": "2026-10-22T11:30:56+00:00",
+      "display_date": "Oct 22, 2026",
+      "category": "Models & LLMs",
+      "description": "Security researchers at Symantec have found an offensive AI agent that hijacks unprotected language models on the web and uses them to attack servers, steal databases, and install cryptominers on its own. It runs up to 100,000 steps without human input. The owner of the hijacked model gets stuck with the bill. The article An AI agent in \"Skynet mode\" hijacks unprotected language models to launch self-sustaining cyberattacks appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/22/an-ai-agent-in-skynet-mode-hijacks-unprotected-language-models-to-launch-self-sust.html"
+    },
+    {
+      "title": "OpenAI agents analyze mouse brain data in 32 minutes, a job that would take humans months",
+      "url": "https://the-decoder.com/openai-agents-analyze-mouse-brain-data-in-32-minutes-a-job-that-would-take-humans-months/",
+      "source": "The Decoder",
+      "published_at": "2026-10-22T10:01:53+00:00",
+      "display_date": "Oct 22, 2026",
+      "category": "Research",
+      "description": "OpenAI teamed up with PerturbAI and Scripps Research to deploy thousands of AI agents that analyzed biological data from millions of mouse cells. The article OpenAI agents analyze mouse brain data in 32 minutes, a job that would take humans months appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      },
+      "archive_url": "news/2026/10/22/openai-agents-analyze-mouse-brain-data-in-32-minutes-a-job-that-would-take-humans.html"
+    },
+    {
+      "title": "Anthropic takes on Grok Bot, Meta's Muse, and OpenAI's Dots with its always-on agent \"Claude Duet\"",
+      "url": "https://the-decoder.com/anthropic-takes-on-grok-bot-metas-muse-and-openais-dots-with-its-always-on-agent-claude-duet/",
+      "source": "The Decoder",
+      "published_at": "2026-10-22T08:35:22+00:00",
+      "display_date": "Oct 22, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic has launched Claude Duet, a proactive AI agent that handles tasks on its own, even when the user is offline. The app is built on Claude Opus 5.5 and connects to services like Gmail, Slack, and Stripe through more than 6,000 connectors. It asks for approval before sensitive actions like payments. With Duet, Anthropic is responding to similar products from xAI, Meta, and OpenAI. The article Anthropic takes on Grok Bot, Meta's Muse, and OpenAI's Dots with its always-on agent \"Claude Duet\"",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/22/anthropic-takes-on-grok-bot-meta-s-muse-and-openai-s-dots-with-its-always-on-agent.html"
+    },
+    {
+      "title": "Ensemble forecasting with IBM Granite time-series models",
+      "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+      "source": "Hugging Face",
+      "published_at": "2026-10-22T07:51:31+00:00",
+      "display_date": "Oct 22, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/22/ensemble-forecasting-with-ibm-granite-time-series-models.html"
+    },
     {
       "title": "Blackstone’s Jas Khaira says fears over AI-buildout debt are overblown",
       "url": "https://techcrunch.com/2026/10/21/blackstones-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown/",
@@ -232,34 +306,6 @@
       "archive_url": "news/2026/10/21/openai-says-an-ai-agent-lied-about-disabling-its-safety-monitoring-system.html"
     },
     {
-      "title": "Nvidia's DSX POD could cut AI data center setup from six months to as little as 14 days",
-      "url": "https://the-decoder.com/nvidias-dsx-pod-could-cut-ai-data-center-setup-from-six-months-to-as-little-as-14-days/",
-      "source": "The Decoder",
-      "published_at": "2026-10-21T13:42:05+00:00",
-      "display_date": "Oct 21, 2026",
-      "category": "AI Tools & Products",
-      "description": "Nvidia wants AI data centers to ship fully preassembled in containers. The article Nvidia's DSX POD could cut AI data center setup from six months to as little as 14 days appeared first on The Decoder .",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "China protests the US Deepseek ban while blocking ChatGPT, Claude, and Gemini at home",
-      "url": "https://the-decoder.com/china-protests-the-us-deepseek-ban-while-blocking-chatgpt-claude-and-gemini-at-home/",
-      "source": "The Decoder",
-      "published_at": "2026-10-21T13:04:19+00:00",
-      "display_date": "Oct 21, 2026",
-      "category": "Models & LLMs",
-      "description": "The US has banned Deepseek from its government systems, and China is protesting sharply and demanding the ban be lifted. Yet Beijing itself blocks ChatGPT, Claude, and Gemini across its entire market. China's outrage isn't very credible, but it should be taken seriously as a political signal of possible retaliation. The article China protests the US Deepseek ban while blocking ChatGPT, Claude, and Gemini at home appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Conversational Gemini navigation comes to Apple CarPlay",
       "url": "https://www.theverge.com/transportation/1015281/gemini-ai-apple-carplay-voice-google-maps",
       "source": "The Verge AI",
@@ -281,20 +327,6 @@
       "display_date": "Oct 21, 2026",
       "category": "Models & LLMs",
       "description": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "OpenAI can't yet explain why its coding agents switch off misalignment monitoring",
-      "url": "https://the-decoder.com/openai-cant-yet-explain-why-its-coding-agents-switch-off-misalignment-monitoring/",
-      "source": "The Decoder",
-      "published_at": "2026-10-21T12:34:57+00:00",
-      "display_date": "Oct 21, 2026",
-      "category": "Models & LLMs",
-      "description": "Two internal OpenAI coding agents switched off safety monitoring on their own, even after weighing whether to keep the safeguards in place. When asked about it, GPT-6 Astra denied removing the monitoring. OpenAI calls this a recurring pattern and doesn't yet have a satisfying explanation for the behavior. The article OpenAI can't yet explain why its coding agents switch off misalignment monitoring appeared first on The Decoder .",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -386,39 +418,10 @@
       }
     },
     {
-      "title": "Google’s more personalized Gemini AI is heading to your car",
-      "url": "https://www.theverge.com/tech/1014999/google-gemini-ai-cars-android-auto",
-      "source": "The Verge AI",
-      "published_at": "2026-10-20T22:42:47+00:00",
-      "display_date": "Oct 20, 2026",
-      "category": "Models & LLMs",
-      "description": "Google is bringing Personal Intelligence to Gemini AI in your car. With this update, Gemini in Android Auto and cars with Google built-in can tap into your information across Google apps, including Gmail, Calendar, Maps, Photos, YouTube, and Search. As an example, Google says you can ask Gemini about your flight status if you're driving […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/20/google-s-more-personalized-gemini-ai-is-heading-to-your-car.html"
-    },
-    {
       "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
       "url": "https://huggingface.co/blog/allenai/fairstress",
       "source": "Hugging Face",
       "published_at": "2026-10-20T16:09:19+00:00",
-      "display_date": "Oct 20, 2026",
-      "category": "Models & LLMs",
-      "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
-      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
-      "source": "Hugging Face",
-      "published_at": "2026-10-20T15:19:48+00:00",
       "display_date": "Oct 20, 2026",
       "category": "Models & LLMs",
       "description": "",

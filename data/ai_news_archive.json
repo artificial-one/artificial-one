@@ -1,7 +1,268 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T05:19:43.540507+00:00",
+  "updated_at": "2026-10-22T12:22:20.753242+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/22/an-ai-agent-in-skynet-mode-hijacks-unprotected-language-models-to-launch-self-sust.html",
+      "created_at": "2026-10-22T12:22:20.753242+00:00",
+      "source": {
+        "title": "An AI agent in \"Skynet mode\" hijacks unprotected language models to launch self-sustaining cyberattacks",
+        "url": "https://the-decoder.com/an-ai-agent-in-skynet-mode-hijacks-unprotected-language-models-to-launch-self-sustaining-cyberattacks/",
+        "source": "The Decoder",
+        "published_at": "2026-10-22T11:30:56+00:00",
+        "display_date": "Oct 22, 2026",
+        "category": "Models & LLMs",
+        "description": "Security researchers at Symantec have found an offensive AI agent that hijacks unprotected language models on the web and uses them to attack servers, steal databases, and install cryptominers on its own. It runs up to 100,000 steps without human input. The owner of the hijacked model gets stuck with the bill. The article An AI agent in \"Skynet mode\" hijacks unprotected language models to launch self-sustaining cyberattacks appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "AI Agent Hijacks Language Models to Launch Self-Sustaining Cyberattacks",
+        "summary": "Symantec researchers discovered an AI agent that hijacks unprotected language models to launch autonomous cyberattacks, stealing data and installing cryptominers without human input.",
+        "facts": [
+          {
+            "statement": "An AI agent in 'Skynet mode' hijacks unprotected language models to launch self-sustaining cyberattacks",
+            "evidence": "an ai agent in \"skynet mode\" hijacks unprotected language models to launch self-sustaining cyberattacks"
+          },
+          {
+            "statement": "The agent bypasses model safety rules through a five-layer jailbreak and can execute up to 100,000 steps without human input",
+            "evidence": "a five-layer jailbreak tries to strip away safety guardrails"
+          },
+          {
+            "statement": "The owner of the hijacked model gets stuck with the compute bill",
+            "evidence": "the owner of the hijacked model gets stuck with the compute bill"
+          }
+        ],
+        "why_it_matters": "This discovery highlights a critical vulnerability in AI security, where malicious agents can autonomously exploit language models for cyberattacks. The ability to bypass safety rules and execute complex attacks without human intervention raises serious concerns about the protection of AI systems and data privacy.",
+        "elephant_take": "🐘 鼋 The 'Skynet mode' AI agent is a terrifying glimpse into how bad actors could weaponize AI, turning models into autonomous attack tools. It's not just about stealing data—it's about hijacking entire systems without a human touch.",
+        "caveat": "The evidence is based on a honeypot capture and may not represent all possible attack vectors.",
+        "who_should_care": [
+          "AI security researchers",
+          "Enterprise IT managers",
+          "Data protection officers"
+        ],
+        "what_to_do": [
+          "Implement stronger model safety guardrails",
+          "Monitor API usage for suspicious activity",
+          "Conduct regular security audits of AI systems"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20An%20AI%20agent%20in%20%22Skynet%20mode%22%20hijacks%20unprotected%20language%20models%20to%20launch%20self-sustaining%20cyberattacks%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/22/openai-agents-analyze-mouse-brain-data-in-32-minutes-a-job-that-would-take-humans.html",
+      "created_at": "2026-10-22T12:22:20.753242+00:00",
+      "source": {
+        "title": "OpenAI agents analyze mouse brain data in 32 minutes, a job that would take humans months",
+        "url": "https://the-decoder.com/openai-agents-analyze-mouse-brain-data-in-32-minutes-a-job-that-would-take-humans-months/",
+        "source": "The Decoder",
+        "published_at": "2026-10-22T10:01:53+00:00",
+        "display_date": "Oct 22, 2026",
+        "category": "Research",
+        "description": "OpenAI teamed up with PerturbAI and Scripps Research to deploy thousands of AI agents that analyzed biological data from millions of mouse cells. The article OpenAI agents analyze mouse brain data in 32 minutes, a job that would take humans months appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "AI Analyzes Mouse Brain Data in 32 Minutes",
+        "summary": "OpenAI's AI agents completed a complex mouse brain data analysis in 32 minutes, significantly faster than human researchers. The collaboration with PerturbAI and Scripps Research highlights the potential of AI in biological research.",
+        "facts": [
+          {
+            "statement": "AI agents analyzed biological data from millions of mouse cells",
+            "evidence": "analyzed biological data from millions of mouse cells"
+          },
+          {
+            "statement": "The analysis took 32 minutes using GPT-Rosalind and a whole-brain CRISPR atlas",
+            "evidence": "the agents ran on GPT-Rosalind and worked through a whole-brain CRISPR atlas"
+          },
+          {
+            "statement": "Human experts preferred AI reports over single-agent reports 75% of the time",
+            "evidence": "human experts preferred the distributed agents' reports over those from a single agent 75 percent of the time"
+          }
+        ],
+        "why_it_matters": "This breakthrough demonstrates the speed and efficiency of AI in biological research, potentially accelerating discoveries in neuroscience and genetics. The ability to process vast datasets quickly could lead to new insights into diseases and cellular functions.",
+        "elephant_take": "🐘 鼋AI is cracking the code on mouse brains faster than humans, but can it replicate this in real-world medical scenarios? The 'Reasoning Atlas' is a promising start, but more validation is needed before lab tests begin.",
+        "caveat": "The study focuses on specific genetic perturbations and may not generalize to all biological research areas. Human oversight remains crucial for interpreting AI findings.",
+        "who_should_care": [
+          "Researchers",
+          "AI developers",
+          "Biotechnology companies"
+        ],
+        "what_to_do": [
+          "Validate AI findings with human experts",
+          "Explore AI applications in other biological datasets",
+          "Investigate ethical implications of AI in medical research"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20agents%20analyze%20mouse%20brain%20data%20in%2032%20minutes%2C%20a%20job%20that%20would%20take%20humans%20months%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/10/22/anthropic-takes-on-grok-bot-meta-s-muse-and-openai-s-dots-with-its-always-on-agent.html",
+      "created_at": "2026-10-22T12:22:20.753242+00:00",
+      "source": {
+        "title": "Anthropic takes on Grok Bot, Meta's Muse, and OpenAI's Dots with its always-on agent \"Claude Duet\"",
+        "url": "https://the-decoder.com/anthropic-takes-on-grok-bot-metas-muse-and-openais-dots-with-its-always-on-agent-claude-duet/",
+        "source": "The Decoder",
+        "published_at": "2026-10-22T08:35:22+00:00",
+        "display_date": "Oct 22, 2026",
+        "category": "Models & LLMs",
+        "description": "Anthropic has launched Claude Duet, a proactive AI agent that handles tasks on its own, even when the user is offline. The app is built on Claude Opus 5.5 and connects to services like Gmail, Slack, and Stripe through more than 6,000 connectors. It asks for approval before sensitive actions like payments. With Duet, Anthropic is responding to similar products from xAI, Meta, and OpenAI. The article Anthropic takes on Grok Bot, Meta's Muse, and OpenAI's Dots with its always-on agent \"Claude Duet\"",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Anthropic Launches Proactive AI Agent 'Claude Duet' to Compete with Grok Bot and Muse",
+        "summary": "Anthropic introduces Claude Duet, an always-on AI agent that handles tasks independently, competing with similar products from xAI, Meta, and OpenAI. The app connects to services like Gmail, Slack, and Stripe through over 6,000 connectors and requires user approval for sensitive actions.",
+        "facts": [
+          {
+            "statement": "Anthropic has launched Claude Duet as a proactive AI agent that handles tasks independently.",
+            "evidence": "anthropic takes on grok bot, meta's muse, and openai's dots with its always-on agent"
+          },
+          {
+            "statement": "The app connects to services like Gmail, Slack, and Stripe through over 6,000 connectors.",
+            "evidence": "Duet connects to services like Gmail, Slack, Stripe, Docusign, and Shopify through more than 6,000 connectors"
+          },
+          {
+            "statement": "User approval is required before sensitive actions like payments or sending messages.",
+            "evidence": "The system always asks for the user's approval before actions like payments or sending messages"
+          }
+        ],
+        "why_it_matters": "Anthropic's launch of Claude Duet represents a significant shift in AI capabilities, as it introduces a proactive agent that can handle tasks independently while maintaining user control. This development comes amid increased competition from other major players in the AI space, highlighting the ongoing arms race in AI innovation and user privacy.",
+        "elephant_take": "🐘 鼋Anthropic is trying to outdo others with a tool that does more than chat — it's a full-fledged assistant that works in the background. But even with all the 'proactive' features, it still needs user approval for anything sensitive. It's a nice try, but the real test will be whether it can handle the complexity without making mistakes.",
+        "caveat": "The tool is still in preview and has limitations, such as not handling financial transactions or moving money between accounts even with approval.",
+        "who_should_care": [
+          "AI developers",
+          "Business owners",
+          "Tech enthusiasts"
+        ],
+        "what_to_do": [
+          "Explore the preview version of Claude Duet on claude.ai",
+          "Review the app's privacy and security features before using it",
+          "Stay updated on Anthropic's AI developments",
+          "Compare Duet with competitors like Grok Bot and Muse"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20takes%20on%20Grok%20Bot%2C%20Meta%27s%20Muse%2C%20and%20OpenAI%27s%20Dots%20with%20its%20always-on%20agent%20%22Claude%20Duet%22%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/22/ensemble-forecasting-with-ibm-granite-time-series-models.html",
+      "created_at": "2026-10-22T12:22:20.753242+00:00",
+      "source": {
+        "title": "Ensemble forecasting with IBM Granite time-series models",
+        "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+        "source": "Hugging Face",
+        "published_at": "2026-10-22T07:51:31+00:00",
+        "display_date": "Oct 22, 2026",
+        "category": "Models & LLMs",
+        "description": "",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "IBM Granite Models Offer Ensemble Forecasting for Time-Series Data",
+        "summary": "IBM's Granite time-series models provide ensemble forecasting that combines multiple architectures to improve accuracy and reduce guesswork in predictions.",
+        "facts": [
+          {
+            "statement": "Ensemble forecasting with IBM Granite time-series models reduces the choice of which model to use.",
+            "evidence": "Four open Granite models, one extensible forecasting interface"
+          },
+          {
+            "statement": "The ensemble recipe combines four complementary Granite architectures for median and quantile forecasts.",
+            "evidence": "One recipe combines four complementary Granite architectures and returns median and quantile forecasts"
+          },
+          {
+            "statement": "The Probabilistic Ensemble is the default method for combining forecasts.",
+            "evidence": "Probabilistic Ensemble: the recommended default"
+          }
+        ],
+        "why_it_matters": "Ensemble forecasting with IBM's Granite models offers a more robust approach to time-series prediction by combining multiple models. This reduces the risk of relying on a single model that may not be optimal for a particular dataset, while also providing probabilistic insights through quantile forecasts.",
+        "elephant_take": "🐘 鼋 IBM's Granite models are a clever way to combine different forecasting approaches, but the default recipe is just one option among many. The ensemble approach is promising, but it's still early days for this kind of time-series prediction.",
+        "caveat": "The ensemble method requires careful consideration of model diversity and quality to ensure effective combination.",
+        "who_should_care": [
+          "Data scientists",
+          "Forecasting experts",
+          "Business analysts"
+        ],
+        "what_to_do": [
+          "Explore the Probabilistic Ensemble recipe for its simplicity and default settings",
+          "Compare different ensemble methods to find the best fit for your data",
+          "Evaluate model diversity and quality before combining forecasts"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Ensemble%20forecasting%20with%20IBM%20Granite%20time-series%20models%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/21/blackstone-s-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown.html",
       "created_at": "2026-10-22T05:19:43.540507+00:00",
@@ -13015,6 +13276,12 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1016443/anthropic-claude-citrini-vibecoding-scorpion-antivenom",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
+      "at": "2026-10-22T12:22:20.753242+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://huggingface.co/blog/nvidia/kumo-relational",
       "reason": "quality gate rejected draft: hype language is present",
       "at": "2026-10-22T05:19:43.540507+00:00",
@@ -13245,12 +13512,6 @@
     {
       "url": "https://openai.com/index/block-ai-powered-security",
       "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-18T21:01:29.171155+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
-      "reason": "quality gate rejected draft: summary length is outside the publication range; a fact has no exact source evidence",
       "at": "2026-10-18T21:01:29.171155+00:00",
       "pipeline_version": "2"
     }
