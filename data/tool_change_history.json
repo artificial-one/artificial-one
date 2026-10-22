@@ -1,10 +1,73 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 55,
+    "successful_checks": 68,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-22",
+      "id": "1d1d0f62001538e1",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://synthesia.io",
+      "tool_id": "synthesia",
+      "tool_name": "Synthesia"
+    },
+    {
+      "detected_on": "2026-10-22",
+      "id": "9049ae23c44cb4b8",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://tavily.com",
+      "tool_id": "tavily",
+      "tool_name": "Tavily"
+    },
+    {
+      "detected_on": "2026-10-22",
+      "id": "2d221bd4d81cb896",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://thoughtspot.com",
+      "tool_id": "thoughtspot",
+      "tool_name": "ThoughtSpot"
+    },
+    {
+      "detected_on": "2026-10-22",
+      "id": "8b6bfbc5137c72d9",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://veed.io",
+      "tool_id": "veed-io",
+      "tool_name": "Veed.io"
+    },
+    {
+      "detected_on": "2026-10-22",
+      "id": "3978265922d2acd5",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://elevenlabs.io/",
+      "tool_id": "elevenlabs",
+      "tool_name": "ElevenLabs"
+    },
+    {
+      "detected_on": "2026-10-22",
+      "id": "57ac27a58cfd68f9",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://apps.apple.com/us/app/esign-sign-pdf-docx-documents/id6755193759",
+      "tool_id": "esign-sign-pdf-docx-documents-ios-only",
+      "tool_name": "eSign: Sign PDF DOCX Documents (iOS only)"
+    },
+    {
+      "detected_on": "2026-10-22",
+      "id": "15bf6ef176909332",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://ocoya.com",
+      "tool_id": "ocoya",
+      "tool_name": "Ocoya"
+    },
     {
       "detected_on": "2026-10-21",
       "id": "b49e6f60196684b1",
@@ -1105,6 +1168,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-21",
+  "updated_at": "2026-10-22",
   "version": 1
 }
