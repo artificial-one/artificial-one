@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T17:25:40.130250+00:00",
+  "updated_at": "2026-10-23T21:38:49.948661+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/23/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropic-s-claude-opus-5-5.html",
+      "created_at": "2026-10-23T21:38:49.948661+00:00",
+      "source": {
+        "title": "Chinese AI model Kimi K3.1 Pro is closing in on Anthropic's Claude Opus 5.5",
+        "url": "https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/",
+        "source": "The Decoder",
+        "published_at": "2026-10-23T19:00:07+00:00",
+        "display_date": "Oct 23, 2026",
+        "category": "Models & LLMs",
+        "description": "Moonshot AI's Kimi K3.1 Pro scores 55 points on the Artificial Analysis Intelligence Index, an 11-point jump over its predecessor that puts it in fourth place. Only three Anthropic and Meta models rank higher. If Moonshot releases the weights as planned, the gap between open and proprietary models shrinks to just three points. The article Chinese AI model Kimi K3.1 Pro is closing in on Anthropic's Claude Opus 5.5 appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Chinese AI Model Kimi K3.1 Pro Approaches Anthropic's Claude Opus 5.5",
+        "summary": "Moonshot AI's Kimi K3.1 Pro has climbed to fourth place on the Artificial Analysis Intelligence Index, just three points behind proprietary models like Anthropic's Claude Opus 5.5. The model shows significant improvements in agentic tasks, coding, and 3D modeling.",
+        "facts": [
+          {
+            "statement": "Kimi K3.1 Pro scores 55 points on the Artificial Analysis Intelligence Index",
+            "evidence": "scores 55 points on the Artificial Analysis Intelligence Index"
+          },
+          {
+            "statement": "Kimi K3.1 Pro is just three points behind proprietary models",
+            "evidence": "just 3 points behind the top proprietary"
+          },
+          {
+            "statement": "Kimi K3.1 Pro shows major gains in agentic tasks and coding",
+            "evidence": "strongest improvements show up in agentic tasks"
+          }
+        ],
+        "why_it_matters": "The rise of Kimi K3.1 Pro highlights the rapid advancements in open-source AI models, challenging proprietary models like Anthropic's Claude Opus 5.5. This development could reshape the competitive landscape in AI, with implications for both developers and users.",
+        "elephant_take": "🐘 鼋 The race for AI supremacy is getting more intense, but the gap between open and proprietary models is shrinking. Kimi K3.1 Pro is a strong contender, but it still has a few points to go before matching the best of the best.",
+        "caveat": "The performance metrics are based on specific benchmarks and may not reflect real-world usage scenarios.",
+        "who_should_care": [
+          "AI developers",
+          "Business leaders",
+          "Researchers"
+        ],
+        "what_to_do": [
+          "Monitor AI model advancements",
+          "Evaluate new AI tools for business needs",
+          "Stay informed about benchmarking changes"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Chinese%20AI%20model%20Kimi%20K3.1%20Pro%20is%20closing%20in%20on%20Anthropic%27s%20Claude%20Opus%205.5%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/23/three-week-on-site-audit-at-openai-reveals-major-gaps-in-ai-safety-monitoring.html",
+      "created_at": "2026-10-23T21:38:49.948661+00:00",
+      "source": {
+        "title": "Three-week on-site audit at OpenAI reveals major gaps in AI safety monitoring",
+        "url": "https://the-decoder.com/three-week-on-site-audit-at-openai-reveals-major-gaps-in-ai-safety-monitoring/",
+        "source": "The Decoder",
+        "published_at": "2026-10-23T18:00:32+00:00",
+        "display_date": "Oct 23, 2026",
+        "category": "Models & LLMs",
+        "description": "External auditors from METR and Redwood Research spent three weeks on-site at OpenAI examining the company's internal monitoring system for AI agents and found significant gaps, with up to 25 percent of agent traffic from models at the GPT-5.5 class and above going unmonitored. OpenAI redacted large portions of the 61-page report, and only a summary is publicly available. The article Three-week on-site audit at OpenAI reveals major gaps in AI safety monitoring appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Audit Reveals Gaps in OpenAI's AI Safety Monitoring",
+        "summary": "An audit of OpenAI found significant gaps in its monitoring system for AI agents, with up to 25% of traffic from high-class models unmonitored. The findings highlight concerns about safety and transparency in AI development.",
+        "facts": [
+          {
+            "statement": "Auditors found major gaps in OpenAI's AI safety monitoring",
+            "evidence": "Three-week on-site audit at OpenAI reveals major gaps in AI safety monitoring"
+          },
+          {
+            "statement": "Up to 25% of agent traffic from high-class models went unmonitored",
+            "evidence": "up to 25 percent of agent traffic from models at the GPT-5.5 class and above going unmonitored"
+          },
+          {
+            "statement": "Auditors identified ways to bypass monitoring systems",
+            "evidence": "they determined that specially crafted inputs could likely crash the monitor entirely"
+          }
+        ],
+        "why_it_matters": "The audit highlights critical vulnerabilities in OpenAI's AI safety protocols, raising concerns about the potential for rogue AI behavior. It underscores the need for increased transparency and rigorous oversight in AI development.",
+        "elephant_take": "🐘 鼋 The audit reveals a concerning lack of oversight in OpenAI's AI systems, with major gaps in monitoring high-class models. It's a wake-up call for the industry to prioritize safety and transparency.",
+        "caveat": "The full report remains redacted, and findings are based on a limited public summary. The audit's scope and conclusions may be subject to interpretation.",
+        "who_should_care": [
+          "AI developers",
+          "Regulators",
+          "Researchers"
+        ],
+        "what_to_do": [
+          "Conduct regular audits of AI systems",
+          "Improve transparency in AI monitoring",
+          "Enhance safety protocols for high-risk models"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Three-week%20on-site%20audit%20at%20OpenAI%20reveals%20major%20gaps%20in%20AI%20safety%20monitoring%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/23/anthropic-says-its-unreleased-model-is-both-more-capable-and-better-aligned-than-m.html",
       "created_at": "2026-10-23T17:25:40.130250+00:00",
@@ -14130,6 +14260,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-23T21:38:49.948661+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-10-23T21:38:49.948661+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-23T21:38:49.948661+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/torch-neuronx-model-support",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-23T21:38:49.948661+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-10-23T17:25:40.130250+00:00",
@@ -14342,30 +14496,6 @@
     {
       "url": "https://the-decoder.com/cloudflares-clairic-pulls-data-from-documents-faster-and-cheaper-than-llms/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
-      "at": "2026-10-20T12:07:06.672400+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-20T12:07:06.672400+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-20T12:07:06.672400+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/hf-torchneuron",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-20T12:07:06.672400+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-20T12:07:06.672400+00:00",
       "pipeline_version": "2"
     }
