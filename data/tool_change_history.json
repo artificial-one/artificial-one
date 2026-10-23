@@ -1,10 +1,28 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 68,
+    "successful_checks": 64,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-23",
+      "id": "3f6efdf3ee9d3b81",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://bluewillow.ai",
+      "tool_id": "bluewillow",
+      "tool_name": "BlueWillow"
+    },
+    {
+      "detected_on": "2026-10-23",
+      "id": "146d43802985cc39",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://bearly.ai",
+      "tool_id": "bearly-ai",
+      "tool_name": "Bearly AI"
+    },
     {
       "detected_on": "2026-10-22",
       "id": "1d1d0f62001538e1",
@@ -1168,6 +1186,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-22",
+  "updated_at": "2026-10-23",
   "version": 1
 }
