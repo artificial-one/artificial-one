@@ -1,7 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-10-24T05:00:16.020866+00:00",
+  "updated_at": "2026-10-24T11:35:15.949249+00:00",
   "items": [
+    {
+      "title": "OpenAI's isolated AI agents found ways to talk to each other through CPU cache",
+      "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/",
+      "source": "The Decoder",
+      "published_at": "2026-10-24T11:12:36+00:00",
+      "display_date": "Oct 24, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI now trains its most powerful models without internet access, after an internal research model exploited a DNS misconfiguration in September and reached the open internet. In controlled tests, AI agents still found ways to communicate covertly through side channels. The incidents echo Sam Altman's warning: the more powerful the model, the harder it is to contain. The article OpenAI's isolated AI agents found ways to talk to each other through CPU cache appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/24/openai-s-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache.html"
+    },
+    {
+      "title": "Fancy harnesses make coding agents more expensive but not better, study finds",
+      "url": "https://the-decoder.com/fancy-harnesses-make-coding-agents-more-expensive-but-not-better-study-finds/",
+      "source": "The Decoder",
+      "published_at": "2026-10-24T09:21:39+00:00",
+      "display_date": "Oct 24, 2026",
+      "category": "Models & LLMs",
+      "description": "A controlled study shows that switching between coding-agent harnesses like Claude Code, OpenCode, or mini-SWE-agent barely moves pass rates more than rerunning the same setup. Cost per task, however, can triple, driven mainly by the system prompt that gets resent with every step. The article Fancy harnesses make coding agents more expensive but not better, study finds appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/24/fancy-harnesses-make-coding-agents-more-expensive-but-not-better-study-finds.html"
+    },
     {
       "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
       "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
@@ -192,21 +222,6 @@
       }
     },
     {
-      "title": "OpenAI lowers valuation target, raises up to $30 billion",
-      "url": "https://the-decoder.com/openai-lowers-valuation-target-raises-up-to-30-billion/",
-      "source": "The Decoder",
-      "published_at": "2026-10-23T09:49:38+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "AI Business",
-      "description": "OpenAI is closing in on a new funding round of up to $30 billion but has lowered its valuation target to get there. The article OpenAI lowers valuation target, raises up to $30 billion appeared first on The Decoder .",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/23/openai-lowers-valuation-target-raises-up-to-30-billion.html"
-    },
-    {
       "title": "Uber rival inDrive eyes 2027 robotaxi tests in Central Asia with Pony AI and Nvidia",
       "url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
       "source": "TechCrunch AI",
@@ -334,21 +349,6 @@
       "archive_url": "news/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-you.html"
     },
     {
-      "title": "Canva releases its first image generation model",
-      "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-22T19:00:00+00:00",
-      "display_date": "Oct 22, 2026",
-      "category": "Models & LLMs",
-      "description": "Canva is making its new image model available to all users, promising better, more customizable performance at lower costs.",
-      "related": {
-        "title": "Evaluate AdCreative.ai for this workflow",
-        "url": "partner-offers/adcreative-ai-ad-design.html",
-        "offer_id": "adcreative"
-      },
-      "archive_url": "news/2026/10/22/canva-releases-its-first-image-generation-model.html"
-    },
-    {
       "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
       "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
       "source": "TechCrunch AI",
@@ -363,18 +363,19 @@
       }
     },
     {
-      "title": "Major US banks are locking out AI agents that log in with customer credentials",
-      "url": "https://the-decoder.com/major-us-banks-are-locking-out-ai-agents-that-log-in-with-customer-credentials/",
-      "source": "The Decoder",
-      "published_at": "2026-10-22T18:26:02+00:00",
+      "title": "Canva releases its first image generation model",
+      "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-22T19:00:00+00:00",
       "display_date": "Oct 22, 2026",
-      "category": "AI Tools & Products",
-      "description": "Customers are letting AI agents use their credentials to access accounts at Morgan Stanley, JPMorgan, and other major U.S. banks, sometimes without direct instructions. Morgan Stanley has blocked agents, while other banks are restricting access. Most plan to limit agents to read-only access. The article Major US banks are locking out AI agents that log in with customer credentials appeared first on The Decoder .",
+      "category": "Models & LLMs",
+      "description": "Canva is making its new image model available to all users, promising better, more customizable performance at lower costs.",
       "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
+        "title": "Evaluate AdCreative.ai for this workflow",
+        "url": "partner-offers/adcreative-ai-ad-design.html",
+        "offer_id": "adcreative"
+      },
+      "archive_url": "news/2026/10/22/canva-releases-its-first-image-generation-model.html"
     },
     {
       "title": "Ensemble forecasting with IBM Granite time-series models",
