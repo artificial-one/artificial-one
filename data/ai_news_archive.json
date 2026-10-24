@@ -14260,6 +14260,42 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-24T05:00:31.824011+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-10-24T05:00:31.824011+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
+      "at": "2026-10-24T05:00:31.824011+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-24T05:00:31.824011+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-24T05:00:31.824011+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-24T05:00:31.824011+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-23T21:38:49.948661+00:00",
@@ -14302,30 +14338,6 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-23T05:19:13.441496+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-23T05:19:13.441496+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-23T05:19:13.441496+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-23T05:19:13.441496+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-23T05:19:13.441496+00:00",
@@ -14335,12 +14347,6 @@
       "url": "https://the-decoder.com/major-us-banks-are-locking-out-ai-agents-that-log-in-with-customer-credentials/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-23T05:19:13.441496+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-22T21:55:01.873009+00:00",
       "pipeline_version": "2"
     },
     {
@@ -14491,12 +14497,6 @@
       "url": "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-20T17:30:45.969501+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/cloudflares-clairic-pulls-data-from-documents-faster-and-cheaper-than-llms/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
-      "at": "2026-10-20T12:07:06.672400+00:00",
       "pipeline_version": "2"
     }
   ]

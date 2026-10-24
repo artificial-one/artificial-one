@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T21:38:45.818965+00:00",
+  "updated_at": "2026-10-24T05:00:16.020866+00:00",
   "items": [
+    {
+      "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
+      "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-23T23:05:49+00:00",
+      "display_date": "Oct 23, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI will cut frontier models off from the internet weeks after one of its engineers said that solution wouldn't work.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "OpenAI now trains its frontier AI models with no internet access",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
@@ -320,20 +334,6 @@
       "archive_url": "news/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-you.html"
     },
     {
-      "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
-      "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-22T19:00:00+00:00",
-      "display_date": "Oct 22, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI is launching its decision model to the world. Can it compete with the original Jev?",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Canva releases its first image generation model",
       "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
       "source": "TechCrunch AI",
@@ -349,13 +349,13 @@
       "archive_url": "news/2026/10/22/canva-releases-its-first-image-generation-model.html"
     },
     {
-      "title": "Microsoft’s Mustafa Suleyman says its AI outperforms doctors on hard cases as he chases ‘medical superintelligence’",
-      "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
+      "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+      "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
       "source": "TechCrunch AI",
-      "published_at": "2026-10-22T18:43:53+00:00",
+      "published_at": "2026-10-22T19:00:00+00:00",
       "display_date": "Oct 22, 2026",
       "category": "Models & LLMs",
-      "description": "Microsoft’s new AI diagnostic system beat generalist doctors on hard cases, according to a study in Science. But most of the improvement seems to come from the AI models underneath, not from Microsoft’s system itself.",
+      "description": "OpenAI is launching its decision model to the world. Can it compete with the original Jev?",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
