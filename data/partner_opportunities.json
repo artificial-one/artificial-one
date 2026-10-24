@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23",
+  "updated_at": "2026-10-24",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -9,9 +9,9 @@
     "approved_link_pending": 18,
     "existing_active": 39,
     "not_qualified": 14,
-    "policy_review_required": 29,
+    "policy_review_required": 27,
     "program_paused": 1,
-    "ready_for_owner_application": 377
+    "ready_for_owner_application": 379
   },
   "opportunities": [
     {
@@ -230,7 +230,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -468,7 +468,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -779,7 +779,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1194,7 +1194,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 24,
+      "review_days": 26,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1245,7 +1245,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 19,
+      "review_days": 18,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1509,7 +1509,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2041,7 +2041,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2199,7 +2199,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 15,
+      "review_days": 16,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2383,7 +2383,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 46,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -2502,7 +2502,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 127,
+      "review_days": 140,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -3179,7 +3179,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3347,7 +3347,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3528,7 +3528,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3824,7 +3824,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 81,
       "relevance_matches": [
@@ -4371,7 +4371,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 17,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5048,6 +5048,59 @@
       }
     },
     {
+      "id": "partnerstack:shade",
+      "network": "partnerstack",
+      "name": "Shade",
+      "slug": "shade",
+      "description": "Shade is an intelligent cloud storage platform that transforms post-production workflows. It consolidates file streaming, review and approval, automated metadata, AI search all in one platform.",
+      "offer": "Earn 10% commission on all first year revenue (ACV $25,000/customer)",
+      "tags": [
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Design",
+        "Digital Advertising",
+        "Hot",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shade?company=shade&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/18dg3qEU0Uw2pqGQQKw_W1tL0molNftUk/edit?usp=sharing&ouid=116868290743095582619&rtpof=true&sd=true",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "design",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:supportbee",
       "network": "partnerstack",
       "name": "SupportBee",
@@ -5180,7 +5233,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5469,7 +5522,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -6085,7 +6138,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 35,
+      "review_days": 30,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6433,7 +6486,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -6456,69 +6509,6 @@
       "policy": {
         "status": "not_reviewed",
         "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:confidohealth",
-      "network": "partnerstack",
-      "name": "Confido Health",
-      "slug": "confidohealth",
-      "description": "Confido Health’s 24/7 Healthcare Voice AI Agents work alongside your team, handling calls and updating your EHR/PMS in real time so staff can focus on care. Our agents streamline pre-visit coordination (queries, scheduling, insurance, logistics), drive care management (post-procedure outreach, surveys, payments), and power post-visit transitions (recalls, monitoring, follow-ups). We also build custom workflows across Voice AI, SMS, email, and chatbots—everything included.",
-      "offer": "20% commission on every customer transaction for the first year.",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "ERP",
-        "IT Infrastructure",
-        "IT Management",
-        "Marketing",
-        "Office Software",
-        "Publishers",
-        "Referral Partners",
-        "Resellers",
-        "Sales",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/confidohealth?company=confidohealth&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1SFt8gsXdGVCl84p52iIOvHQgRl-aelIE/view?usp=sharing",
-      "website": "https://www.confido.health",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 76,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "customer service",
-        "marketing",
-        "productivity",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
         "cookie_days": null
       }
     },
@@ -7004,7 +6994,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 75,
       "relevance_matches": [
@@ -7054,7 +7044,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 21,
       "source": "https://market.partnerstack.com/",
       "score": 75,
       "relevance_matches": [
@@ -7160,57 +7150,6 @@
         "ai",
         "artificial intelligence",
         "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:shade",
-      "network": "partnerstack",
-      "name": "Shade",
-      "slug": "shade",
-      "description": "Shade is an intelligent cloud storage platform that transforms post-production workflows. It consolidates file streaming, review and approval, automated metadata, AI search all in one platform.",
-      "offer": "Earn 10% commission on all first year revenue (ACV $25,000/customer)",
-      "tags": [
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Design",
-        "Digital Advertising",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shade?company=shade&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/18dg3qEU0Uw2pqGQQKw_W1tL0molNftUk/edit?usp=sharing&ouid=116868290743095582619&rtpof=true&sd=true",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 75,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "design",
-        "productivity",
-        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -7867,7 +7806,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -9381,7 +9320,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 53,
+      "review_days": 51,
       "source": "https://market.partnerstack.com/",
       "score": 68,
       "relevance_matches": [
@@ -10215,7 +10154,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -10255,7 +10194,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 11,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10270,50 +10209,6 @@
       "state": "policy_review_required",
       "policy": {
         "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:carepatron",
-      "network": "partnerstack",
-      "name": "Carepatron",
-      "slug": "carepatron",
-      "description": "Where care happens. Build your dream practice with an innovative, all-in-one EHR, designed for modern health and wellness professionals.",
-      "offer": "Earn 20% of every sale for the customer’s first year!",
-      "tags": [
-        "Affiliates",
-        "Ambassadors",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/carepatron?company=carepatron&gref=marketplace",
-      "terms_url": "",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "approved": true,
-      "authenticated_relationship": true,
-      "relationship_status": "active",
-      "terms_required": false,
-      "partnership_key": "part_evYV5PMNsOkPo0",
-      "score": 67,
-      "relevance_matches": [
-        "customer service",
-        "productivity"
-      ],
-      "already_active": true,
-      "relationship_state": "published",
-      "state": "existing_active",
-      "policy": {
-        "status": "not_reviewed",
         "signals": {},
         "cookie_days": null
       }
@@ -10420,7 +10315,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -10616,10 +10511,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -11020,7 +10923,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 97,
+      "review_days": 85,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11222,7 +11125,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 29,
+      "review_days": 28,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11485,7 +11388,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12236,9 +12139,11 @@
         "Design",
         "Digital Advertising",
         "HR Software",
+        "Hot",
         "Influencers",
         "Marketing",
         "Publishers",
+        "Trusted",
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/beefree?company=beefree&gref=marketplace",
@@ -12732,7 +12637,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13056,7 +12961,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 44,
+      "review_days": 47,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13177,7 +13082,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 54,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13237,7 +13142,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 103,
+      "review_days": 159,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13345,7 +13250,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13556,7 +13461,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13660,7 +13565,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 40,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -16134,6 +16039,7 @@
       "offer": "15% of sales for the first year",
       "tags": [
         "Affiliates",
+        "Hot",
         "Hubspot integrated",
         "Publishers",
         "Referral Partners",
@@ -16536,7 +16442,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 20,
+      "review_days": 16,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17685,7 +17591,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17943,7 +17849,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18629,7 +18535,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -19444,7 +19350,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 106,
+      "review_days": 131,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19494,7 +19400,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19593,6 +19499,50 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:shopraise",
+      "network": "partnerstack",
+      "name": "ShopRaise Workplace Giving",
+      "slug": "shopraise",
+      "description": "ShopRaise Workplace Giving is an employee engagement program that transforms everyday shopping into support for the causes employees care about most. Employees shop with thousands of retailers and gift card brands, turning everyday purchases into meaningful impact. Employers get 10x more engagement for a fraction of the cost of traditional programs, while building culture, strengthening loyalty, reducing turnover, and creating meaningful year-round engagement.",
+      "offer": "ShopRaise Workplace Giving — Employee Engagement and Impact",
+      "tags": [
+        "B2B Marketplaces",
+        "HR Software",
+        "Office Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shopraise?company=shopraise&gref=marketplace",
+      "terms_url": "https://wpg.shopraise.com/referral-terms",
+      "website": "https://wpgiving.shopraise.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 60,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -19799,10 +19749,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -20036,7 +19994,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 5,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20299,7 +20257,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 11,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20926,7 +20884,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 6,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21525,7 +21483,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 5,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21679,8 +21637,8 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
+          "email_restricted": false,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -22314,6 +22272,58 @@
       }
     },
     {
+      "id": "partnerstack:adp",
+      "network": "partnerstack",
+      "name": "RUN Powered by ADP®",
+      "slug": "adp",
+      "description": "Over 900,000 small businesses trust ADP® to deliver a better payroll experience. Our small business expertise and easy-to-use tools simplify payroll and HR, so you can stay focused on the work that matters most.",
+      "offer": "Earn an additional $500 bonus for the first active converted client that was submitted within your first 30 days as a new partner!",
+      "tags": [
+        "Accounting",
+        "Agencies",
+        "Collaboration & Productivity",
+        "HR",
+        "HR Software",
+        "Managed Service Provider",
+        "Office Software",
+        "Payroll",
+        "Referral Partners",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/adp?company=adp&gref=marketplace",
+      "terms_url": "",
+      "website": "https://www.adp.com/what-we-offer/products/run-powered-by-adp.aspx",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 54,
+      "relevance_matches": [
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:runwayhealth",
       "network": "partnerstack",
       "name": "Runway Health",
@@ -22562,7 +22572,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 52,
       "relevance_matches": [
@@ -22582,7 +22592,7 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
       }
     },
     {
@@ -22681,6 +22691,54 @@
       }
     },
     {
+      "id": "partnerstack:acceleratedgrowthstudio",
+      "network": "partnerstack",
+      "name": "Accelerated Growth Studio",
+      "slug": "acceleratedgrowthstudio",
+      "description": "We grow DTC brands. One click at a time. AGS is a performance marketing agency built to scale revenue, not just run ads. We manage paid media, test creative relentlessly, and optimize funnels so clicks turn into customers and customers turn into real growth. If it doesn’t move revenue, we don’t do it. Engineered for rapid scale",
+      "offer": "Earn $2000 per paid customer!",
+      "tags": [
+        "Digital Advertising",
+        "E-Commerce",
+        "Marketing",
+        "Shopify integrated",
+        "Social Media",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/acceleratedgrowthstudio?company=acceleratedgrowthstudio&gref=marketplace",
+      "terms_url": "",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 50,
+      "relevance_matches": [
+        "e-commerce",
+        "marketing"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:partnercentric",
       "network": "partnerstack",
       "name": "PartnerCentric",
@@ -22759,7 +22817,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 50,
       "relevance_matches": [
@@ -23146,53 +23204,6 @@
       }
     },
     {
-      "id": "partnerstack:acceleratedgrowthstudio",
-      "network": "partnerstack",
-      "name": "Accelerated Growth Studio",
-      "slug": "acceleratedgrowthstudio",
-      "description": "We grow DTC brands. One click at a time. AGS is a performance marketing agency built to scale revenue, not just run ads. We manage paid media, test creative relentlessly, and optimize funnels so clicks turn into customers and customers turn into real growth. If it doesn’t move revenue, we don’t do it. Engineered for rapid scale",
-      "offer": "Earn $2000 per paid customer!",
-      "tags": [
-        "Digital Advertising",
-        "E-Commerce",
-        "Marketing",
-        "Shopify integrated",
-        "Social Media"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/acceleratedgrowthstudio?company=acceleratedgrowthstudio&gref=marketplace",
-      "terms_url": "",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": false,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 45,
-      "relevance_matches": [
-        "e-commerce",
-        "marketing"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:clevertap",
       "network": "partnerstack",
       "name": "CleverTap",
@@ -23243,58 +23254,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:adp",
-      "network": "partnerstack",
-      "name": "RUN Powered by ADP®",
-      "slug": "adp",
-      "description": "Over 900,000 small businesses trust ADP® to deliver a better payroll experience. Our small business expertise and easy-to-use tools simplify payroll and HR, so you can stay focused on the work that matters most.",
-      "offer": "Earn an additional $500 bonus for the first active converted client that was submitted within your first 30 days as a new partner!",
-      "tags": [
-        "Accounting",
-        "Agencies",
-        "Collaboration & Productivity",
-        "HR",
-        "HR Software",
-        "Managed Service Provider",
-        "Office Software",
-        "Payroll",
-        "Referral Partners",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/adp?company=adp&gref=marketplace",
-      "terms_url": "",
-      "website": "https://www.adp.com/what-we-offer/products/run-powered-by-adp.aspx",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": false,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": false,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 44,
-      "relevance_matches": [
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -23794,7 +23753,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 28,
       "source": "https://market.partnerstack.com/",
       "score": 39,
       "relevance_matches": [],
@@ -23857,6 +23816,45 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:carepatron",
+      "network": "partnerstack",
+      "name": "Carepatron",
+      "slug": "carepatron",
+      "description": "",
+      "offer": "",
+      "tags": [
+        "Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/carepatron?company=carepatron&gref=marketplace",
+      "terms_url": "",
+      "website": "https://get.carepatron.com/5czvsttw99e5",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 0,
+      "source": "https://dash.partnerstack.com/home",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "program-waitlisted",
+      "terms_required": false,
+      "partnership_key": "part_evYV5PMNsOkPo0",
+      "score": 36,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": true,
+      "relationship_state": "published",
+      "state": "existing_active",
+      "policy": {
+        "status": "not_reviewed",
+        "signals": {},
         "cookie_days": null
       }
     },
