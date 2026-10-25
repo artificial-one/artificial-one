@@ -1,10 +1,73 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 57,
+    "successful_checks": 66,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-25",
+      "id": "80db957f0036ffd4",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://tactiq.io",
+      "tool_id": "tactiq",
+      "tool_name": "Tactiq"
+    },
+    {
+      "detected_on": "2026-10-25",
+      "id": "860e3dc948471c22",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://timelyapp.com",
+      "tool_id": "timely",
+      "tool_name": "Timely"
+    },
+    {
+      "detected_on": "2026-10-25",
+      "id": "a6ae67744d40e089",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://tabnine.com",
+      "tool_id": "tabnine",
+      "tool_name": "Tabnine"
+    },
+    {
+      "detected_on": "2026-10-25",
+      "id": "57bb10d1d4942148",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://vistasocial.com",
+      "tool_id": "vista-social",
+      "tool_name": "Vista Social"
+    },
+    {
+      "detected_on": "2026-10-25",
+      "id": "23f16131db2f30f7",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://typecast.ai",
+      "tool_id": "typecast",
+      "tool_name": "Typecast"
+    },
+    {
+      "detected_on": "2026-10-25",
+      "id": "f9993f298304d230",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.adcreative.ai/",
+      "tool_id": "adcreative-ai",
+      "tool_name": "AdCreative.ai"
+    },
+    {
+      "detected_on": "2026-10-25",
+      "id": "a1751475d9be27fb",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://brkox.com/",
+      "tool_id": "brkox",
+      "tool_name": "brkox"
+    },
     {
       "detected_on": "2026-10-23",
       "id": "3f6efdf3ee9d3b81",
@@ -1186,6 +1249,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-24",
+  "updated_at": "2026-10-25",
   "version": 1
 }
