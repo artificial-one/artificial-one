@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-10-25T05:15:35.498748+00:00",
+  "updated_at": "2026-10-25T11:58:30.894798+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/25/anthropic-co-founder-jack-clark-moves-his-prediction-for-self-improving-ai-forward.html",
+      "created_at": "2026-10-25T11:58:30.894798+00:00",
+      "source": {
+        "title": "Anthropic co-founder Jack Clark moves his prediction for self-improving AI forward to 2027",
+        "url": "https://the-decoder.com/anthropic-co-founder-jack-clark-moves-his-prediction-for-self-improving-ai-forward-to-2027/",
+        "source": "The Decoder",
+        "published_at": "2026-10-25T09:37:46+00:00",
+        "display_date": "Oct 25, 2026",
+        "category": "Models & LLMs",
+        "description": "A new benchmark by P-Zero Research measures how well AI models design and evaluate experiments on their own. The results are improving so fast that Anthropic co-founder Jack Clark now thinks self-improving AI could arrive by 2027. The article Anthropic co-founder Jack Clark moves his prediction for self-improving AI forward to 2027 appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Jack Clark Adjusts AI Self-Improvement Prediction to 2027",
+        "summary": "Anthropic co-founder Jack Clark has moved his prediction for self-improving AI to 2027, citing rapid improvements in AI's ability to design and evaluate experiments.",
+        "facts": [
+          {
+            "statement": "AI models are improving rapidly in their ability to design and evaluate experiments.",
+            "evidence": "The findings show an unusually steep improvement curve."
+          },
+          {
+            "statement": "Anthropic co-founder Jack Clark now believes self-improving AI could arrive by 2027.",
+            "evidence": "He had previously expected 2028."
+          },
+          {
+            "statement": "AI models can outperform human experts in certain research tasks at a fraction of the cost.",
+            "evidence": "The best model tested outperformed a comparison group of 24 human experts at a fraction of the cost."
+          }
+        ],
+        "why_it_matters": "The rapid progress in AI's ability to design and evaluate experiments suggests that self-improving AI may arrive sooner than expected. This could have significant implications for the future of AI research and development.",
+        "elephant_take": "🐘 鼋 The race to predict AI's next move is getting intense. Clark's revised timeline shows a shift from raw model performance to independent research capabilities, but it's still just a prediction based on a narrow slice of scientific work.",
+        "caveat": "The benchmark only measures a specific aspect of AI research and doesn't prove that self-improving AI is imminent.",
+        "who_should_care": [
+          "AI researchers",
+          "Tech investors",
+          "Policy makers"
+        ],
+        "what_to_do": [
+          "Monitor AI research trends",
+          "Stay informed about new benchmarks",
+          "Consider the implications of rapid AI progress"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20co-founder%20Jack%20Clark%20moves%20his%20prediction%20for%20self-improving%20AI%20forward%20to%202027%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/24/block-s-new-voice-model-sounds-eerily-human.html",
+      "created_at": "2026-10-25T11:58:30.894798+00:00",
+      "source": {
+        "title": "Block’s new voice model sounds eerily human",
+        "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-24T16:00:00+00:00",
+        "display_date": "Oct 24, 2026",
+        "category": "Models & LLMs",
+        "description": "Block said that the voice model can run locally on a MacBook M4 Max",
+        "related": {
+          "title": "Evaluate ElevenLabs for this workflow",
+          "url": "partner-offers/elevenlabs-ai-voice.html",
+          "offer_id": "elevenlabs"
+        }
+      },
+      "article": {
+        "headline": "Block's New Voice Model Sounds Eerily Human",
+        "summary": "Block's new voice model, Dessa, is designed to sound naturally human with emotions and nuances, running locally on consumer-grade hardware.",
+        "facts": [
+          {
+            "statement": "Dessa is a full-duplex speech model that can run locally on a MacBook M4 Max.",
+            "evidence": "can run locally on a consumer-grade computer such as a MacBook M4 Max or better"
+          },
+          {
+            "statement": "Dessa is trained entirely on human speech and uses emotion built into its model.",
+            "evidence": "trained fully on human speech and a single NVIDIA GPU rack"
+          },
+          {
+            "statement": "Dessa can mimic emotions like tiredness, laughter, and crying in conversations.",
+            "evidence": "the bot said it was tired from work, and at that point it sounded tired"
+          }
+        ],
+        "why_it_matters": "Block's new voice model could revolutionize how humans interact with AI, offering a more natural and emotionally responsive experience. If successful, it could change the landscape of voice assistants and improve user engagement with AI systems.",
+        "elephant_take": "🐘 鼋 Block’s Dessa model is a bold attempt to make AI sound human, but it's unclear if the emotion is truly built-in or just simulated. The company claims it's a GPT3 moment for speech, but we'll have to wait and see if it's as impactful.",
+        "caveat": "The model is not yet publicly available and may have safety concerns that need testing.",
+        "who_should_care": [
+          "AI developers",
+          "voice assistant users",
+          "block company executives"
+        ],
+        "what_to_do": [
+          "Test the model for potential safety issues",
+          "Evaluate its emotional responsiveness in real conversations",
+          "Assess its performance on consumer-grade hardware",
+          "Monitor its impact on user engagement with AI"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/elevenlabs-ai-voice-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/elevenlabs-ai-voice-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/elevenlabs-ai-voice.html",
+        "review_title": "Evaluate ElevenLabs for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Block%E2%80%99s%20new%20voice%20model%20sounds%20eerily%20human%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "elevenlabs"
+      }
+    },
     {
       "path": "news/2026/10/24/blue-planet-iii-is-keeping-the-rough-edges-in-the-age-of-ai.html",
       "created_at": "2026-10-25T05:15:35.498748+00:00",
@@ -14917,6 +15048,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-complexity-alone/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-25T11:58:30.894798+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/ex-google-ceo-eric-schmidt-calls-openai-and-anthropic-modern-colonial-trading-companies/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-10-25T11:58:30.894798+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-25T11:58:30.894798+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openmobile-2-proves-open-source-smartphone-agents-can-rival-proprietary-models/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-25T11:58:30.894798+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-25T05:15:35.498748+00:00",
@@ -14962,12 +15117,6 @@
       "url": "https://huggingface.co/blog/torch-neuronx-model-support",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-24T21:10:08.316602+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
-      "at": "2026-10-24T16:13:40.007459+00:00",
       "pipeline_version": "2"
     },
     {
@@ -15136,18 +15285,6 @@
       "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-21T05:16:49.449235+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-21T05:16:49.449235+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/allenai/fairstress",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-20T17:30:45.969501+00:00",
       "pipeline_version": "2"
     }
   ]

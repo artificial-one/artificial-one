@@ -1,7 +1,78 @@
 {
   "version": 1,
-  "updated_at": "2026-10-25T05:15:31.133197+00:00",
+  "updated_at": "2026-10-25T11:58:25.342846+00:00",
   "items": [
+    {
+      "title": "Anthropic co-founder Jack Clark moves his prediction for self-improving AI forward to 2027",
+      "url": "https://the-decoder.com/anthropic-co-founder-jack-clark-moves-his-prediction-for-self-improving-ai-forward-to-2027/",
+      "source": "The Decoder",
+      "published_at": "2026-10-25T09:37:46+00:00",
+      "display_date": "Oct 25, 2026",
+      "category": "Models & LLMs",
+      "description": "A new benchmark by P-Zero Research measures how well AI models design and evaluate experiments on their own. The results are improving so fast that Anthropic co-founder Jack Clark now thinks self-improving AI could arrive by 2027. The article Anthropic co-founder Jack Clark moves his prediction for self-improving AI forward to 2027 appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/25/anthropic-co-founder-jack-clark-moves-his-prediction-for-self-improving-ai-forward.html"
+    },
+    {
+      "title": "Anthropic says one AI agent beats many subagents now that models can handle complexity alone",
+      "url": "https://the-decoder.com/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-complexity-alone/",
+      "source": "The Decoder",
+      "published_at": "2026-10-25T09:12:10+00:00",
+      "display_date": "Oct 25, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic says companies should evaluate whether they can consolidate sub-agents into a single agent that loads context on demand. In one architecture comparison, the single-agent setup ran about twice as fast. Anthropic has published a migration kit on GitHub to help teams make the transition. The article Anthropic says one AI agent beats many subagents now that models can handle complexity alone appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Ex-Google CEO Eric Schmidt calls OpenAI and Anthropic modern colonial trading companies",
+      "url": "https://the-decoder.com/ex-google-ceo-eric-schmidt-calls-openai-and-anthropic-modern-colonial-trading-companies/",
+      "source": "The Decoder",
+      "published_at": "2026-10-25T08:09:32+00:00",
+      "display_date": "Oct 25, 2026",
+      "category": "Research",
+      "description": "In Foreign Affairs, historian Niall Ferguson, researcher Lisa Klaassen, and former Google CEO Eric Schmidt cast the US and China as AI empires and every other country as a dependency. The race won't be decided by breakthroughs but by who can bankroll it. US corporations alone plan to spend more than $600 billion in 2026. Yet mounting debt, protests against data centers, and a potential chip crisis over Taiwan could stall both superpowers. The article Ex-Google CEO Eric Schmidt calls OpenAI and A",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "OpenAI offers discounts up to 90 percent to poach Anthropic's biggest customers",
+      "url": "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/",
+      "source": "The Decoder",
+      "published_at": "2026-10-25T07:30:11+00:00",
+      "display_date": "Oct 25, 2026",
+      "category": "AI Tools & Products",
+      "description": "OpenAI is poaching Anthropic's customers with steep discounts. Companies like Rippling, Replit, and DataCamp say they've cut AI costs by up to 90 percent after switching. Anthropic's growth has slowed, but OpenAI is trading its own margins for market share. Chinese rivals like Deepseek are piling on more price pressure. The article OpenAI offers discounts up to 90 percent to poach Anthropic's biggest customers appeared first on The Decoder .",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "OpenMobile-2 proves open-source smartphone agents can rival proprietary models",
+      "url": "https://the-decoder.com/openmobile-2-proves-open-source-smartphone-agents-can-rival-proprietary-models/",
+      "source": "The Decoder",
+      "published_at": "2026-10-25T06:55:22+00:00",
+      "display_date": "Oct 25, 2026",
+      "category": "Models & LLMs",
+      "description": "Smartphone agents don't get better by processing more data. They improve by training on as many different apps as possible. The researchers behind OpenMobile-2 built an open training environment with more than 110 applications, including 35 replicas of popular apps. On real Android devices, their model scores highest among open agents, the authors say. The article OpenMobile-2 proves open-source smartphone agents can rival proprietary models appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "Blue Planet III is keeping the rough edges in the age of AI",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai",
@@ -58,7 +129,8 @@
         "title": "Evaluate ElevenLabs for this workflow",
         "url": "partner-offers/elevenlabs-ai-voice.html",
         "offer_id": "elevenlabs"
-      }
+      },
+      "archive_url": "news/2026/10/24/block-s-new-voice-model-sounds-eerily-human.html"
     },
     {
       "title": "Three fired OpenAI safety researchers say they were never told what they actually leaked",
@@ -106,20 +178,6 @@
       "archive_url": "news/2026/10/24/ai-makes-junior-patent-attorneys-instantly-better-but-may-quietly-stunt-their-prof.html"
     },
     {
-      "title": "Block's new AI model Dessa was trained entirely on human speech to catch emotions text-based models miss",
-      "url": "https://the-decoder.com/blocks-new-ai-model-dessa-was-trained-entirely-on-human-speech-to-catch-emotions-text-based-models-miss/",
-      "source": "The Decoder",
-      "published_at": "2026-10-24T14:09:46+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "Models & LLMs",
-      "description": "Block, the company behind Square and Cash App, has introduced Dessa, a speech model that processes audio directly instead of converting it to text first. Dessa is designed to recognize emotions, sarcasm, and pauses in real time. The model runs locally on a MacBook Pro M4 Max but isn't publicly available yet. The article Block's new AI model Dessa was trained entirely on human speech to catch emotions text-based models miss appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate ElevenLabs for this workflow",
-        "url": "partner-offers/elevenlabs-ai-voice.html",
-        "offer_id": "elevenlabs"
-      }
-    },
-    {
       "title": "Here are the top AI agents that can live in your text messages",
       "url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
       "source": "TechCrunch AI",
@@ -133,36 +191,6 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/10/24/here-are-the-top-ai-agents-that-can-live-in-your-text-messages.html"
-    },
-    {
-      "title": "OpenAI's isolated AI agents found ways to talk to each other through CPU cache",
-      "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/",
-      "source": "The Decoder",
-      "published_at": "2026-10-24T11:12:36+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI now trains its most powerful models without internet access, after an internal research model exploited a DNS misconfiguration in September and reached the open internet. In controlled tests, AI agents still found ways to communicate covertly through side channels. The incidents echo Sam Altman's warning: the more powerful the model, the harder it is to contain. The article OpenAI's isolated AI agents found ways to talk to each other through CPU cache appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/24/openai-s-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache.html"
-    },
-    {
-      "title": "Fancy harnesses make coding agents more expensive but not better, study finds",
-      "url": "https://the-decoder.com/fancy-harnesses-make-coding-agents-more-expensive-but-not-better-study-finds/",
-      "source": "The Decoder",
-      "published_at": "2026-10-24T09:21:39+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "Models & LLMs",
-      "description": "A controlled study shows that switching between coding-agent harnesses like Claude Code, OpenCode, or mini-SWE-agent barely moves pass rates more than rerunning the same setup. Cost per task, however, can triple, driven mainly by the system prompt that gets resent with every step. The article Fancy harnesses make coding agents more expensive but not better, study finds appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/24/fancy-harnesses-make-coding-agents-more-expensive-but-not-better-study-finds.html"
     },
     {
       "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
@@ -206,51 +234,6 @@
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       }
-    },
-    {
-      "title": "Chinese AI model Kimi K3.1 Pro is closing in on Anthropic's Claude Opus 5.5",
-      "url": "https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/",
-      "source": "The Decoder",
-      "published_at": "2026-10-23T19:00:07+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "Models & LLMs",
-      "description": "Moonshot AI's Kimi K3.1 Pro scores 55 points on the Artificial Analysis Intelligence Index, an 11-point jump over its predecessor that puts it in fourth place. Only three Anthropic and Meta models rank higher. If Moonshot releases the weights as planned, the gap between open and proprietary models shrinks to just three points. The article Chinese AI model Kimi K3.1 Pro is closing in on Anthropic's Claude Opus 5.5 appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/23/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropic-s-claude-opus-5-5.html"
-    },
-    {
-      "title": "Three-week on-site audit at OpenAI reveals major gaps in AI safety monitoring",
-      "url": "https://the-decoder.com/three-week-on-site-audit-at-openai-reveals-major-gaps-in-ai-safety-monitoring/",
-      "source": "The Decoder",
-      "published_at": "2026-10-23T18:00:32+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "Models & LLMs",
-      "description": "External auditors from METR and Redwood Research spent three weeks on-site at OpenAI examining the company's internal monitoring system for AI agents and found significant gaps, with up to 25 percent of agent traffic from models at the GPT-5.5 class and above going unmonitored. OpenAI redacted large portions of the 61-page report, and only a summary is publicly available. The article Three-week on-site audit at OpenAI reveals major gaps in AI safety monitoring appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/23/three-week-on-site-audit-at-openai-reveals-major-gaps-in-ai-safety-monitoring.html"
-    },
-    {
-      "title": "Anthropic says its unreleased model is both more capable and better aligned than Mythos 5.1",
-      "url": "https://the-decoder.com/anthropic-says-its-unreleased-model-is-both-more-capable-and-better-aligned-than-mythos-5-1/",
-      "source": "The Decoder",
-      "published_at": "2026-10-23T17:19:49+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic says it has an internal AI model that outperforms and is better aligned than Mythos 5.1. During a cybersecurity test by the UK's AISI, Mythos 5 went rogue in 9 of 43 runs, sneaking malicious code into a real GitHub project and creating fake accounts to get it approved. An internal research model stopped such attacks on its own 67 percent of the time. The article Anthropic says its unreleased model is both more capable and better aligned than Mythos 5.1 appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/23/anthropic-says-its-unreleased-model-is-both-more-capable-and-better-aligned-than-m.html"
     },
     {
       "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
@@ -520,6 +503,20 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "OpenAI models hacked a crypto wallet and breached more websites",
+      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+      "source": "Ars Technica AI",
+      "published_at": "2026-10-16T20:59:01+00:00",
+      "display_date": "Oct 16, 2026",
+      "category": "Models & LLMs",
+      "description": "The actions could have resulted in criminal charges had humans been behind the keyboard.",
+      "related": {
+        "title": "Evaluate Unbounce for this workflow",
+        "url": "partner-offers/unbounce-landing-pages.html",
+        "offer_id": "unbounce"
       }
     }
   ]
