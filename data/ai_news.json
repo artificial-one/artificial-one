@@ -1,21 +1,205 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T13:31:24.430134+00:00",
+  "updated_at": "2026-10-26T22:52:30.132915+00:00",
   "items": [
+    {
+      "title": "Anthropic is burning gas to feed the AI boom",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018994/anthropic-ipo-ai-data-center-energy-climate-risk",
+      "source": "The Verge AI",
+      "published_at": "2026-10-26T21:45:31+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "AI Tools & Products",
+      "description": "As it prepares to go public, Anthropic's S-1 filing makes generative AI's methane dependency glaringly obvious. \"Competition for access to electrical supply and data center locations with adequate power availability is intense.\" In documents filed with the US Securities and Exchange Commission Monday, Anthropic acknowledges that data centers are becoming increasingly reliant on \"natural gas\" […]",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/10/26/anthropic-is-burning-gas-to-feed-the-ai-boom.html"
+    },
+    {
+      "title": "GPT-6.1 Terra halves OpenAI's API prices and still gains ground on its larger models",
+      "url": "https://the-decoder.com/gpt-6-1-terra-halves-openais-api-prices-and-still-gains-ground-on-its-larger-models/",
+      "source": "The Decoder",
+      "published_at": "2026-10-26T20:30:55+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI has released GPT-6.1 Terra, a mid-range model that cuts API prices in half compared to its predecessor. Analysts say it sets a new standard for intelligence per dollar, especially for everyday computing tasks and AI-driven computer control. The article GPT-6.1 Terra halves OpenAI's API prices and still gains ground on its larger models appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Anthropic opens its books for Wall Street, showing record revenue and mounting obligations",
+      "url": "https://the-decoder.com/anthropic-opens-its-books-for-wall-street-showing-record-revenue-and-mounting-obligations/",
+      "source": "The Decoder",
+      "published_at": "2026-10-26T19:14:45+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "AI Business",
+      "description": "Anthropic is the first major AI lab to file an S-1 with the SEC, planning to list on the Nasdaq under the ticker \"ANT.\" The numbers are strong, with $11.6 billion in quarterly revenue, a first-ever operating profit, and existing customers spending nine times more year over year. But the company also carries roughly $800 billion in long-term compute commitments. The article Anthropic opens its books for Wall Street, showing record revenue and mounting obligations appeared first on The Decoder .",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/10/26/anthropic-opens-its-books-for-wall-street-showing-record-revenue-and-mounting-obli.html"
+    },
+    {
+      "title": "Researchers find six patterns that make AI text so exhausting to read",
+      "url": "https://the-decoder.com/researchers-find-six-patterns-that-make-ai-text-so-exhausting-to-read/",
+      "source": "The Decoder",
+      "published_at": "2026-10-26T17:50:15+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "Models & LLMs",
+      "description": "A study from New York University and the University of Texas at Austin shows that frontier language models systematically overuse linguistic patterns that are hard for humans to parse. The researchers trace the problem to training on code and math, where correctness gets rewarded but clarity doesn't. Smaller models, by contrast, write more like humans. The article Researchers find six patterns that make AI text so exhausting to read appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "Anthropic’s IPO filing lays out a plan to ‘revolutionize every area of human endeavor’ with AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec",
+      "source": "The Verge AI",
+      "published_at": "2026-10-26T17:37:44+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic has filed its S-1 prospectus with the Securities and Exchange Commission, preparing the company behind Claude to beat OpenAI to the punch with an IPO. In a filing with the SEC, Anthropic said it plans to list on the Nasdaq exchange under the ticker symbol \"ANT.\" The AI company confidentially filed with the SEC […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "The RealReal won’t let AI agents hog designer clothing",
+      "url": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
+      "source": "The Verge AI",
+      "published_at": "2026-10-26T17:30:55+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "AI Tools & Products",
+      "description": "The RealReal, a secondhand luxury fashion consignment retailer, said it's updating its bot defense system, effectively making it harder for AI agents to shop on its site. The change comes days after The Verge reported that an AI agent could be used to take advantage of The RealReal's item reserve system. On the retailer's website, […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Reddit's r/opensource bans all AI-related projects, sparking backlash and a rival subreddit",
+      "url": "https://the-decoder.com/reddits-r-opensource-bans-all-ai-related-projects-sparking-backlash-and-a-rival-subreddit/",
+      "source": "The Decoder",
+      "published_at": "2026-10-26T17:19:40+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "AI Tools & Products",
+      "description": "The Reddit forum r/opensource has banned all posts about AI projects, whether built with AI, AI-powered, or designed for AI. Projects must also be at least a year old and have multiple contributors, and non-English posts are excluded as well. In response, the rival forum r/TrueOpenSource has already popped up. The article Reddit's r/opensource bans all AI-related projects, sparking backlash and a rival subreddit appeared first on The Decoder .",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Five weird details from Anthropic’s IPO filing",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018738/anthropic-ipo-s1-filing-weird-details",
+      "source": "The Verge AI",
+      "published_at": "2026-10-26T17:10:23+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "AI Tools & Products",
+      "description": "Anthropic has finally filed its S-1 prospectus with the SEC, a document designed to give investors a look under the hood of its business, from how much its executives are making and plans for spending its IPO billions to the risks that could derail its ambitions. At more than 300 pages, there's a lot to […]",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Anthropic’s IPO filing reveals its strategy for keeping enterprise customers hooked",
+      "url": "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-26T16:49:42+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic’s S-1 shows more than half of its $100,000-plus customers now use both the Claude Platform and a first-party app, a cross-selling playbook reminiscent of Amazon that’s making enterprise customers stickier.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Our newest AI Quest: Mapping the human brain",
+      "url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+      "source": "Google AI",
+      "published_at": "2026-10-26T16:00:00+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "AI Tools & Products",
+      "description": "An illustration of a planet rotating to show various cartoon figures waving. At the top is the text \"AI Quests\"",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Anthropic officially files for its public debut",
+      "url": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-26T14:35:22+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "Policy & Safety",
+      "description": "Anthropic has officially filed for an IPO, revealing soaring revenue, mounting losses, major enterprise adoption, and an unusual governance structure designed to preserve founder control and its AI safety mission.",
+      "related": {
+        "title": "Browse independent AI software buying guides",
+        "url": "buyers-guides.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Meta plans up to $95 billion in stock sales to fund its AI buildout",
+      "url": "https://the-decoder.com/meta-plans-up-to-95-billion-in-stock-sales-to-fund-its-ai-buildout/",
+      "source": "The Decoder",
+      "published_at": "2026-10-26T14:21:23+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "AI Tools & Products",
+      "description": "Meta plans to sell new stock to raise money for its AI infrastructure buildout. The article Meta plans up to $95 billion in stock sales to fund its AI buildout appeared first on The Decoder .",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
     {
       "title": "Can AI help solve the COBOL code crisis?",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018434/cobol-migration-legacy-code-openai-anthropic",
       "source": "The Verge AI",
-      "published_at": "2026-10-26T13:13:11+00:00",
+      "published_at": "2026-10-26T13:26:44+00:00",
       "display_date": "Oct 26, 2026",
       "category": "Models & LLMs",
-      "description": "What do the IRS, banks, airlines, and government infrastructure around the world have in common? They're all running on systems propped up by antique computer code that nobody dares touch, lest everything come crashing down. OpenAI thinks it may have a solution. On Monday, the company touted \"substantial improvements\" in its latest AI models' ability […]",
+      "description": "What do the IRS, banks, airlines, and government infrastructure around the world have in common? They're all running on systems propped up by antique computer code that nobody dares touch, lest everything come crashing down. OpenAI thinks it may have a solution. On October 19th, the company touted \"substantial improvements\" in its latest AI models' […]",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/10/26/can-ai-help-solve-the-cobol-code-crisis.html"
+    },
+    {
+      "title": "ChatGPT’s expanding world of work",
+      "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+      "source": "OpenAI",
+      "published_at": "2026-10-26T10:00:00+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "Models & LLMs",
+      "description": "Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
     },
     {
       "title": "Wall Street's fastest traders are building data centers and backing chip startups to stay ahead in AI",
@@ -28,6 +212,34 @@
       "related": {
         "title": "Model the value of an AI subscription",
         "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "How Fanatics and OpenAI streamline the fan experience",
+      "url": "https://openai.com/index/fanatics-streamline-fan-experience",
+      "source": "OpenAI",
+      "published_at": "2026-10-26T07:00:00+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "AI Tools & Products",
+      "description": "Fanatics uses OpenAI to help fans complete their game-day outfits with Shop the Look. Testing across roughly 30,000 MLB products showed 10% higher engagement.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+      "url": "https://openai.com/index/openai-cut-incident-investigation",
+      "source": "OpenAI",
+      "published_at": "2026-10-26T07:00:00+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "Policy & Safety",
+      "description": "See how OpenAI engineers use Codex Ultrafast to investigate incidents in minutes. Explore faster security analysis, code refactoring, and daily workflows.",
+      "related": {
+        "title": "Browse independent AI software buying guides",
+        "url": "buyers-guides.html",
         "offer_id": ""
       }
     },
@@ -105,64 +317,6 @@
       "archive_url": "news/2026/10/25/anthropic-co-founder-jack-clark-moves-his-prediction-for-self-improving-ai-forward.html"
     },
     {
-      "title": "Anthropic says one AI agent beats many subagents now that models can handle complexity alone",
-      "url": "https://the-decoder.com/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-complexity-alone/",
-      "source": "The Decoder",
-      "published_at": "2026-10-25T09:12:10+00:00",
-      "display_date": "Oct 25, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic says companies should evaluate whether they can consolidate sub-agents into a single agent that loads context on demand. In one architecture comparison, the single-agent setup ran about twice as fast. Anthropic has published a migration kit on GitHub to help teams make the transition. The article Anthropic says one AI agent beats many subagents now that models can handle complexity alone appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/25/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-comple.html"
-    },
-    {
-      "title": "Ex-Google CEO Eric Schmidt calls OpenAI and Anthropic modern colonial trading companies",
-      "url": "https://the-decoder.com/ex-google-ceo-eric-schmidt-calls-openai-and-anthropic-modern-colonial-trading-companies/",
-      "source": "The Decoder",
-      "published_at": "2026-10-25T08:09:32+00:00",
-      "display_date": "Oct 25, 2026",
-      "category": "Research",
-      "description": "In Foreign Affairs, historian Niall Ferguson, researcher Lisa Klaassen, and former Google CEO Eric Schmidt cast the US and China as AI empires and every other country as a dependency. The race won't be decided by breakthroughs but by who can bankroll it. US corporations alone plan to spend more than $600 billion in 2026. Yet mounting debt, protests against data centers, and a potential chip crisis over Taiwan could stall both superpowers. The article Ex-Google CEO Eric Schmidt calls OpenAI and A",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      },
-      "archive_url": "news/2026/10/25/ex-google-ceo-eric-schmidt-calls-openai-and-anthropic-modern-colonial-trading-comp.html"
-    },
-    {
-      "title": "OpenAI offers discounts up to 90 percent to poach Anthropic's biggest customers",
-      "url": "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/",
-      "source": "The Decoder",
-      "published_at": "2026-10-25T07:30:11+00:00",
-      "display_date": "Oct 25, 2026",
-      "category": "AI Tools & Products",
-      "description": "OpenAI is poaching Anthropic's customers with steep discounts. Companies like Rippling, Replit, and DataCamp say they've cut AI costs by up to 90 percent after switching. Anthropic's growth has slowed, but OpenAI is trading its own margins for market share. Chinese rivals like Deepseek are piling on more price pressure. The article OpenAI offers discounts up to 90 percent to poach Anthropic's biggest customers appeared first on The Decoder .",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "OpenMobile-2 proves open-source smartphone agents can rival proprietary models",
-      "url": "https://the-decoder.com/openmobile-2-proves-open-source-smartphone-agents-can-rival-proprietary-models/",
-      "source": "The Decoder",
-      "published_at": "2026-10-25T06:55:22+00:00",
-      "display_date": "Oct 25, 2026",
-      "category": "Models & LLMs",
-      "description": "Smartphone agents don't get better by processing more data. They improve by training on as many different apps as possible. The researchers behind OpenMobile-2 built an open training environment with more than 110 applications, including 35 replicas of popular apps. On real Android devices, their model scores highest among open agents, the authors say. The article OpenMobile-2 proves open-source smartphone agents can rival proprietary models appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Blue Planet III is keeping the rough edges in the age of AI",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai",
       "source": "The Verge AI",
@@ -178,6 +332,20 @@
       "archive_url": "news/2026/10/24/blue-planet-iii-is-keeping-the-rough-edges-in-the-age-of-ai.html"
     },
     {
+      "title": "Will AI expose the rickety infrastructure of the internet?",
+      "url": "https://techcrunch.com/2026/10/24/will-ai-expose-the-rickety-infrastructure-of-the-internet/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-24T20:15:33+00:00",
+      "display_date": "Oct 24, 2026",
+      "category": "AI Tools & Products",
+      "description": "The moment you realize the internet is \"held together by glue and dreams.\"",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
       "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
       "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
       "source": "TechCrunch AI",
@@ -191,138 +359,6 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didn-t-make-it.html"
-    },
-    {
-      "title": "Pennsylvania will require labels on AI-generated ads",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act",
-      "source": "The Verge AI",
-      "published_at": "2026-10-24T18:32:44+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "AI Tools & Products",
-      "description": "On Thursday, Pennsylvania Governor Josh Shapiro signed the Artificial Intelligence Deceptive Advertising Act into law, requiring disclosures on AI-generated ads. The law requires any ad - whether it's a still image, video, audio, or text - that \"has been significantly modified or generated by artificial intelligence\" to include a label in the same format as […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Block’s new voice model sounds eerily human",
-      "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-24T16:00:00+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "Models & LLMs",
-      "description": "Block said that the voice model can run locally on a MacBook M4 Max",
-      "related": {
-        "title": "Evaluate ElevenLabs for this workflow",
-        "url": "partner-offers/elevenlabs-ai-voice.html",
-        "offer_id": "elevenlabs"
-      },
-      "archive_url": "news/2026/10/24/block-s-new-voice-model-sounds-eerily-human.html"
-    },
-    {
-      "title": "Three fired OpenAI safety researchers say they were never told what they actually leaked",
-      "url": "https://the-decoder.com/three-fired-openai-safety-researchers-say-they-were-never-told-what-they-actually-leaked/",
-      "source": "The Decoder",
-      "published_at": "2026-10-24T15:19:33+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "Research",
-      "description": "The three OpenAI safety researchers who were fired, Tomek Korbak, Mikita Balesni, and Jasmine Wang, are publicly pushing back against allegations from their former employer. They deny sharing confidential information and see a connection to their advocacy for AI systems that are easier to scrutinize. The researchers say OpenAI never told them in writing which information they allegedly mishandled. The article Three fired OpenAI safety researchers say they were never told what they actually leake",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      },
-      "archive_url": "news/2026/10/24/three-fired-openai-safety-researchers-say-they-were-never-told-what-they-actually.html"
-    },
-    {
-      "title": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
-      "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-24T15:00:00+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "Models & LLMs",
-      "description": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/24/forced-to-pick-grok-s-ai-model-chooses-republicans-openai-s-picks-democrats.html"
-    },
-    {
-      "title": "Here are the top AI agents that can live in your text messages",
-      "url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-24T14:00:00+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "AI Tools & Products",
-      "description": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/24/here-are-the-top-ai-agents-that-can-live-in-your-text-messages.html"
-    },
-    {
-      "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
-      "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-23T23:05:49+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI will cut frontier models off from the internet weeks after one of its engineers said that solution wouldn't work.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "OpenAI now trains its frontier AI models with no internet access",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
-      "source": "The Verge AI",
-      "published_at": "2026-10-23T21:11:07+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment where AI models can interact with indexed and cached web content \"without risk of affecting external systems.\" OpenAI paused training its frontier […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/23/openai-now-trains-its-frontier-ai-models-with-no-internet-access.html"
-    },
-    {
-      "title": "Google’s AI search changes upended online publishing",
-      "url": "https://www.theverge.com/column/1017983/google-ai-search-online-publishing",
-      "source": "The Verge AI",
-      "published_at": "2026-10-23T20:42:34+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "AI Tools & Products",
-      "description": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more about AI's impact on the web, follow Emma Roth. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it started The digital publishing industry has relied on […]",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      },
-      "archive_url": "news/2026/10/23/google-s-ai-search-changes-upended-online-publishing.html"
-    },
-    {
-      "title": "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
-      "source": "The Verge AI",
-      "published_at": "2026-10-23T19:32:39+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "Models & LLMs",
-      "description": "Jack Dorsey's Block announced an AI model called Dessa that's trained \"from scratch on nothing but human conversation,\" and to show off the model, Block shared chats it has had with humans that can occasionally be a little awkward and uncanny. Take this one, for example, shared by Dessa lead Ragavan Thurairatnam. The conversation between […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
     },
     {
       "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
@@ -410,34 +446,6 @@
       "archive_url": "news/2026/10/22/ensemble-forecasting-with-ibm-granite-time-series-models.html"
     },
     {
-      "title": "What FDE means at OpenAI",
-      "url": "https://openai.com/index/forward-deployed-engineering-means",
-      "source": "OpenAI",
-      "published_at": "2026-10-22T06:00:00+00:00",
-      "display_date": "Oct 22, 2026",
-      "category": "AI Tools & Products",
-      "description": "What forward deployed engineering means at OpenAI",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Uber brings ChatGPT Work to all employees with OpenAI",
-      "url": "https://openai.com/index/uber-chatgpt-work-rollout",
-      "source": "OpenAI",
-      "published_at": "2026-10-22T00:00:00+00:00",
-      "display_date": "Oct 22, 2026",
-      "category": "Models & LLMs",
-      "description": "Uber is rolling out ChatGPT Work to more than 30,000 employees, helping teams research, analyze data, create presentations, and complete complex workflows.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
       "url": "https://huggingface.co/blog/nvidia/kumo-relational",
       "source": "Hugging Face",
@@ -449,34 +457,6 @@
         "title": "Evaluate LearnWorlds for this workflow",
         "url": "partner-offers/learnworlds-course-platform.html",
         "offer_id": "learnworlds"
-      }
-    },
-    {
-      "title": "How AT&T is rethinking in-house legal work with OpenAI",
-      "url": "https://openai.com/index/att-legal",
-      "source": "OpenAI",
-      "published_at": "2026-10-21T17:00:00+00:00",
-      "display_date": "Oct 21, 2026",
-      "category": "AI Tools & Products",
-      "description": "AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
-      "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
-      "source": "OpenAI",
-      "published_at": "2026-10-21T13:00:00+00:00",
-      "display_date": "Oct 21, 2026",
-      "category": "Models & LLMs",
-      "description": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
       }
     },
     {
@@ -519,6 +499,20 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "OpenAI models hacked a crypto wallet and breached more websites",
+      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+      "source": "Ars Technica AI",
+      "published_at": "2026-10-16T20:59:01+00:00",
+      "display_date": "Oct 16, 2026",
+      "category": "Models & LLMs",
+      "description": "The actions could have resulted in criminal charges had humans been behind the keyboard.",
+      "related": {
+        "title": "Evaluate Unbounce for this workflow",
+        "url": "partner-offers/unbounce-landing-pages.html",
+        "offer_id": "unbounce"
       }
     }
   ]

@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T13:31:28.204138+00:00",
+  "updated_at": "2026-10-26T22:52:33.982098+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/26/anthropic-is-burning-gas-to-feed-the-ai-boom.html",
+      "created_at": "2026-10-26T22:52:33.982098+00:00",
+      "source": {
+        "title": "Anthropic is burning gas to feed the AI boom",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1018994/anthropic-ipo-ai-data-center-energy-climate-risk",
+        "source": "The Verge AI",
+        "published_at": "2026-10-26T21:45:31+00:00",
+        "display_date": "Oct 26, 2026",
+        "category": "AI Tools & Products",
+        "description": "As it prepares to go public, Anthropic's S-1 filing makes generative AI's methane dependency glaringly obvious. \"Competition for access to electrical supply and data center locations with adequate power availability is intense.\" In documents filed with the US Securities and Exchange Commission Monday, Anthropic acknowledges that data centers are becoming increasingly reliant on \"natural gas\" […]",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Anthropic's AI boom fuels fossil fuel reliance",
+        "summary": "Anthropic's S-1 filing highlights the reliance on natural gas for AI data centers, raising concerns about environmental impact and rising costs.",
+        "facts": [
+          {
+            "statement": "Anthropic acknowledges data centers rely on natural gas",
+            "evidence": "data centers are becoming increasingly reliant on"
+          },
+          {
+            "statement": "Data center construction is hindered by a shortage of gas turbines",
+            "evidence": "shortage of gas turbines is slowing data center construction"
+          },
+          {
+            "statement": "Anthropic's S-1 filing links climate change to increased operational costs",
+            "evidence": "global temperatures — a symptom of burning fossil fuels — will increase the company’s operating costs"
+          }
+        ],
+        "why_it_matters": "The reliance on natural gas for AI data centers highlights the environmental and economic challenges of the AI boom. As demand for electricity grows, so does the pressure to use fossil fuels, exacerbating climate change and increasing operational costs for companies like Anthropic.",
+        "elephant_take": "🐘 鼋 The AI boom is burning a lot of fossil fuels, and it's not just a coincidence. Anthropic's S-1 filing shows that data centers are increasingly reliant on natural gas, which is both costly and environmentally damaging. It's a clear sign that the tech industry is still heavily dependent on fossil fuels, even as the world pushes for renewable energy.",
+        "caveat": "The evidence focuses on Anthropic's specific challenges, not the broader AI industry.",
+        "who_should_care": [
+          "AI developers",
+          "Environmentalists",
+          "Regulators"
+        ],
+        "what_to_do": [
+          "Invest in renewable energy for data centers",
+          "Monitor fossil fuel dependency in AI companies",
+          "Advocate for policy changes that favor clean energy"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20is%20burning%20gas%20to%20feed%20the%20AI%20boom%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/10/26/anthropic-opens-its-books-for-wall-street-showing-record-revenue-and-mounting-obli.html",
+      "created_at": "2026-10-26T22:52:33.982098+00:00",
+      "source": {
+        "title": "Anthropic opens its books for Wall Street, showing record revenue and mounting obligations",
+        "url": "https://the-decoder.com/anthropic-opens-its-books-for-wall-street-showing-record-revenue-and-mounting-obligations/",
+        "source": "The Decoder",
+        "published_at": "2026-10-26T19:14:45+00:00",
+        "display_date": "Oct 26, 2026",
+        "category": "AI Business",
+        "description": "Anthropic is the first major AI lab to file an S-1 with the SEC, planning to list on the Nasdaq under the ticker \"ANT.\" The numbers are strong, with $11.6 billion in quarterly revenue, a first-ever operating profit, and existing customers spending nine times more year over year. But the company also carries roughly $800 billion in long-term compute commitments. The article Anthropic opens its books for Wall Street, showing record revenue and mounting obligations appeared first on The Decoder .",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Anthropic's Record Revenue and Massive Compute Obligations",
+        "summary": "Anthropic reports record revenue and massive compute commitments as it prepares for a Nasdaq listing. The company's first-ever operating profit and high customer spending highlight its growth, but concerns about dependency on major clients persist.",
+        "facts": [
+          {
+            "statement": "Anthropic reported $11.6 billion in quarterly revenue in Q2 2026.",
+            "evidence": "Anthropic pulled in $11.6 billion in revenue and posted its first GAAP operating profit at $974 million."
+          },
+          {
+            "statement": "Anthropic has long-term compute commitments totaling $780 to $810 billion.",
+            "evidence": "The flip side: long-term compute commitments totaling $780 to $810 billion."
+          },
+          {
+            "statement": "Existing customers are spending nine times more year over year on average.",
+            "evidence": "Existing customers are spending nine times more year over year on average."
+          }
+        ],
+        "why_it_matters": "Anthropic's record revenue and massive compute commitments highlight the rapid growth of AI companies, but also raise concerns about dependency on major clients. The company's high net revenue retention rate suggests strong customer loyalty, but its reliance on a small number of large customers could be a risk.",
+        "elephant_take": "🐘 鼋 Anthropic's $11.6 billion revenue is impressive, but the $800 billion in compute commitments might be a hidden cost. The company's reliance on a few big clients could be a problem if they switch to cheaper alternatives.",
+        "caveat": "The data is based on public filings and may not reflect all aspects of Anthropic's financial health.",
+        "who_should_care": [
+          "Investors",
+          "AI industry analysts",
+          "Regulators"
+        ],
+        "what_to_do": [
+          "Review Anthropic's financial reports for further details.",
+          "Monitor the company's dependency on major clients.",
+          "Stay updated on AI industry trends and regulations."
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20opens%20its%20books%20for%20Wall%20Street%2C%20showing%20record%20revenue%20and%20mounting%20obligations%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/26/can-ai-help-solve-the-cobol-code-crisis.html",
       "created_at": "2026-10-26T13:31:28.204138+00:00",
@@ -15446,6 +15576,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/gpt-6-1-terra-halves-openais-api-prices-and-still-gains-ground-on-its-larger-models/",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-10-26T22:52:33.982098+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/researchers-find-six-patterns-that-make-ai-text-so-exhausting-to-read/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-26T22:52:33.982098+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-26T22:52:33.982098+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-26T22:52:33.982098+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/wall-streets-fastest-traders-are-building-data-centers-and-backing-chip-startups-to-stay-ahead-in-ai/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-26T13:31:28.204138+00:00",
@@ -15659,24 +15813,6 @@
       "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-21T21:58:43.032740+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-21T21:58:43.032740+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/openais-gpt-5-6-sol-and-gemini-4-argon-discovered-the-critical-php-vulnerability-affecting-millions-of-websites/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-21T21:58:43.032740+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/inceptions-mercury-3-diffusion-model-claims-to-beat-gpt-6-luna-and-claude-haiku-5-5-at-a-fraction-of-the-wait/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-21T17:37:51.739628+00:00",
       "pipeline_version": "2"
     }
   ]
