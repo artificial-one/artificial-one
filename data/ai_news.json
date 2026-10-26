@@ -1,7 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T05:15:05.550653+00:00",
+  "updated_at": "2026-10-26T13:31:24.430134+00:00",
   "items": [
+    {
+      "title": "Can AI help solve the COBOL code crisis?",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018434/cobol-migration-legacy-code-openai-anthropic",
+      "source": "The Verge AI",
+      "published_at": "2026-10-26T13:13:11+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "Models & LLMs",
+      "description": "What do the IRS, banks, airlines, and government infrastructure around the world have in common? They're all running on systems propped up by antique computer code that nobody dares touch, lest everything come crashing down. OpenAI thinks it may have a solution. On Monday, the company touted \"substantial improvements\" in its latest AI models' ability […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/26/can-ai-help-solve-the-cobol-code-crisis.html"
+    },
+    {
+      "title": "Wall Street's fastest traders are building data centers and backing chip startups to stay ahead in AI",
+      "url": "https://the-decoder.com/wall-streets-fastest-traders-are-building-data-centers-and-backing-chip-startups-to-stay-ahead-in-ai/",
+      "source": "The Decoder",
+      "published_at": "2026-10-26T09:49:33+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "AI Business",
+      "description": "High-frequency traders like Jane Street and Hudson River Trading are now racing each other for AI computing power. The article Wall Street's fastest traders are building data centers and backing chip startups to stay ahead in AI appeared first on The Decoder .",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      }
+    },
     {
       "title": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
       "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
@@ -87,7 +116,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/10/25/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-comple.html"
     },
     {
       "title": "Ex-Google CEO Eric Schmidt calls OpenAI and Anthropic modern colonial trading companies",
@@ -101,7 +131,8 @@
         "title": "Evaluate Rank Prompt for this workflow",
         "url": "partner-offers/rank-prompt-ai-visibility.html",
         "offer_id": "rank-prompt"
-      }
+      },
+      "archive_url": "news/2026/10/25/ex-google-ceo-eric-schmidt-calls-openai-and-anthropic-modern-colonial-trading-comp.html"
     },
     {
       "title": "OpenAI offers discounts up to 90 percent to poach Anthropic's biggest customers",
@@ -221,21 +252,6 @@
       "archive_url": "news/2026/10/24/forced-to-pick-grok-s-ai-model-chooses-republicans-openai-s-picks-democrats.html"
     },
     {
-      "title": "AI makes junior patent attorneys instantly better but may quietly stunt their professional growth",
-      "url": "https://the-decoder.com/ai-makes-junior-patent-attorneys-instantly-better-but-may-quietly-stunt-their-professional-growth/",
-      "source": "The Decoder",
-      "published_at": "2026-10-24T14:34:05+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "AI Tools & Products",
-      "description": "A three-month field experiment with 133 patent attorneys shows that AI boosts immediate performance, with junior lawyers gaining the most. But when the AI is taken away, only senior attorneys retain the benefits, suggesting that baseline expertise is a prerequisite for turning AI-assisted practice into lasting skill. The article AI makes junior patent attorneys instantly better but may quietly stunt their professional growth appeared first on The Decoder .",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/24/ai-makes-junior-patent-attorneys-instantly-better-but-may-quietly-stunt-their-prof.html"
-    },
-    {
       "title": "Here are the top AI agents that can live in your text messages",
       "url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
       "source": "TechCrunch AI",
@@ -321,21 +337,6 @@
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       }
-    },
-    {
-      "title": "Meta delays new business terms after publisher pushback on AI scraping",
-      "url": "https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping",
-      "source": "The Verge AI",
-      "published_at": "2026-10-23T14:47:41+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "AI Tools & Products",
-      "description": "Meta is delaying the enforcement of its new business terms after publishers raised concerns that they could allow the company to scrape news sites for AI training, as reported earlier by Fast Company. In a statement to The Verge, Meta spokesperson Daniel Roberts says the terms will go into effect on November 20th \"to allow […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/23/meta-delays-new-business-terms-after-publisher-pushback-on-ai-scraping.html"
     },
     {
       "title": "Securing our frontier model training environment",
