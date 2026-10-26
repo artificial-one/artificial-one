@@ -15248,6 +15248,42 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-26T05:15:10.087659+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-26T05:15:10.087659+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-26T05:15:10.087659+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/nvidia/kumo-relational",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-10-26T05:15:10.087659+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/att-legal",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-26T05:15:10.087659+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-10-26T05:15:10.087659+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-10-25T21:13:03.229979+00:00",
@@ -15326,20 +15362,8 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-25T05:15:35.498748+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
-      "at": "2026-10-25T05:15:35.498748+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-25T05:15:35.498748+00:00",
       "pipeline_version": "2"
     },
@@ -15416,12 +15440,6 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://huggingface.co/blog/nvidia/kumo-relational",
-      "reason": "quality gate rejected draft: hype language is present",
-      "at": "2026-10-22T05:19:43.540507+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-22T05:19:43.540507+00:00",
@@ -15430,12 +15448,6 @@
     {
       "url": "https://the-decoder.com/google-cloud-now-offers-openai-models-alongside-gemini-and-claude-becoming-the-only-major-provider-with-all-three/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-22T05:19:43.540507+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/att-legal",
-      "reason": "HTTP Error 403: Forbidden",
       "at": "2026-10-22T05:19:43.540507+00:00",
       "pipeline_version": "2"
     },
@@ -15472,18 +15484,6 @@
     {
       "url": "https://the-decoder.com/inceptions-mercury-3-diffusion-model-claims-to-beat-gpt-6-luna-and-claude-haiku-5-5-at-a-fraction-of-the-wait/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-21T17:37:51.739628+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/mistral-and-nvidia-want-to-speed-up-industrial-design-with-physics-ai/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-21T17:37:51.739628+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-21T17:37:51.739628+00:00",
       "pipeline_version": "2"
     }
