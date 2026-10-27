@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T05:33:35.510412+00:00",
+  "updated_at": "2026-10-27T12:39:22.778292+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus.html",
+      "created_at": "2026-10-27T12:39:22.778292+00:00",
+      "source": {
+        "title": "Nvidia backs Indian startup helping companies run AI models with fewer GPUs",
+        "url": "https://techcrunch.com/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-27T11:00:00+00:00",
+        "display_date": "Oct 27, 2026",
+        "category": "Models & LLMs",
+        "description": "Simplismart says its annualized revenue run rate has grown 14-fold in six months, with the U.S. accounting for more than half its revenue.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Nvidia invests in Indian AI startup to optimize GPU usage",
+        "summary": "Nvidia has invested in an Indian AI startup that helps companies run AI models more efficiently, reducing reliance on GPUs. The startup claims a 14-fold revenue growth in six months and works with major AI firms.",
+        "facts": [
+          {
+            "statement": "Nvidia has invested in an Indian AI startup to help companies optimize GPU usage",
+            "evidence": "Nvidia backs Indian startup helping companies run AI models with fewer GPUs"
+          },
+          {
+            "statement": "The startup claims a significant revenue growth in six months",
+            "evidence": "Simplismart says its annualized revenue run rate has grown 14-fold in six months"
+          },
+          {
+            "statement": "The startup works with major AI companies to optimize their models",
+            "evidence": "Simplismart says it helped AI video-generation platform InVideo cut its GPU serving costs by 56% using its software"
+          }
+        ],
+        "why_it_matters": "As AI demand grows, optimizing GPU usage becomes critical. Nvidia's investment in Simplismart highlights the need for efficient AI infrastructure solutions that reduce costs and improve performance.",
+        "elephant_take": "🐘 鼋Nvidia’s bet on Simplismart shows a shift toward smarter AI infrastructure. While the startup claims impressive growth, the real test will be whether its tools scale with rising AI demands.",
+        "caveat": "Revenue figures are based on usage rather than contracts, and the startup's U.S. focus may limit its global reach.",
+        "who_should_care": [
+          "AI developers",
+          "Cloud providers",
+          "Tech investors"
+        ],
+        "what_to_do": [
+          "Evaluate AI infrastructure costs",
+          "Monitor GPU optimization tools",
+          "Invest in scalable AI solutions"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Nvidia%20backs%20Indian%20startup%20helping%20companies%20run%20AI%20models%20with%20fewer%20GPUs%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/26/our-newest-ai-quest-mapping-the-human-brain.html",
+      "created_at": "2026-10-27T12:39:22.778292+00:00",
+      "source": {
+        "title": "Our newest AI Quest: Mapping the human brain",
+        "url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "source": "Google AI",
+        "published_at": "2026-10-26T16:00:00+00:00",
+        "display_date": "Oct 26, 2026",
+        "category": "AI Tools & Products",
+        "description": "An illustration of a planet rotating to show various cartoon figures waving. At the top is the text \"AI Quests\"",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Google Launches AI Quest to Teach Brain Mapping with AI",
+        "summary": "Google introduces an AI educational quest that teaches students how to use AI responsibly in neuroscience research, focusing on brain mapping and AI's role in scientific discovery.",
+        "facts": [
+          {
+            "statement": "Google launched a new AI quest called 'Polar Peaks' to teach students about brain mapping using AI.",
+            "evidence": "Our newest AI Quest: Mapping the human brain"
+          },
+          {
+            "statement": "The quest involves students acting as researchers to map neurons and solve mysteries using AI.",
+            "evidence": "Students ages 11 to 14 act as researchers to map neurons and solve mysteries"
+          },
+          {
+            "statement": "The program emphasizes the importance of human oversight in AI technology.",
+            "evidence": "emphasizing the need for human oversight in technology"
+          }
+        ],
+        "why_it_matters": "Google's AI Quests aim to educate young students on responsible AI use, using neuroscience as a case study. By engaging students in brain mapping, the program highlights how AI can accelerate scientific research while reinforcing the importance of human judgment.",
+        "elephant_take": "🐘 鼋 The quest is a clever way to make science fun, but it's important to remember that AI isn't a magic wand—it needs careful human oversight. The brain mapping project shows how AI can help scientists, but it also reminds us that real-world research requires more than just code.",
+        "caveat": "The program focuses on educational outcomes rather than actual neuroscience breakthroughs.",
+        "who_should_care": [
+          "Educators",
+          "Parents",
+          "Students"
+        ],
+        "what_to_do": [
+          "Explore the AI Quests website for more information.",
+          "Check out the teacher training modules for classroom use.",
+          "Engage students in discussions about AI ethics and responsibility."
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Our%20newest%20AI%20Quest%3A%20Mapping%20the%20human%20brain%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/26/reddit-s-r-opensource-bans-all-ai-related-projects-sparking-backlash-and-a-rival-s.html",
       "created_at": "2026-10-27T05:33:35.510412+00:00",
@@ -15642,6 +15772,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/openai-asks-outside-experts-including-a-nobel-laureate-to-check-proofs-its-ai-produced-in-math-computer-science-and-physics/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-27T12:39:22.778292+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openais-partner-content-arrives-in-chatgpt-pre-summarized-while-the-rest-of-the-web-gets-raw-scraps/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-27T12:39:22.778292+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/anthropic-uses-its-ipo-letter-to-renew-its-pledge-that-claude-will-never-show-ads/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-27T12:39:22.778292+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openais-ted-sanders-shares-a-rule-of-thumb-for-picking-the-right-gpt-model/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-27T12:39:22.778292+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-27T05:33:35.510412+00:00",
@@ -15855,30 +16009,6 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/1016690/suleyman-microsoft-diagnostic-orchestrator-science-medical-superintelligence",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-22T21:55:01.873009+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-22T21:55:01.873009+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/policy/1016585/openai-anthropic-nvidia-lobbying-records",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-22T17:37:00.734357+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-22T17:37:00.734357+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1016443/anthropic-claude-citrini-vibecoding-scorpion-antivenom",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
-      "at": "2026-10-22T12:22:20.753242+00:00",
       "pipeline_version": "2"
     }
   ]
