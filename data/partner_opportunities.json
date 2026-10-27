@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26",
+  "updated_at": "2026-10-27",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -9,9 +9,9 @@
     "approved_link_pending": 18,
     "existing_active": 39,
     "not_qualified": 14,
-    "policy_review_required": 27,
+    "policy_review_required": 29,
     "program_paused": 1,
-    "ready_for_owner_application": 379
+    "ready_for_owner_application": 377
   },
   "opportunities": [
     {
@@ -1312,7 +1312,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1576,7 +1576,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1629,7 +1629,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1804,7 +1804,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2041,7 +2041,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2890,7 +2890,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 15,
+      "review_days": 16,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2981,10 +2981,10 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": true,
+          "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -3092,6 +3092,59 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:teikametricsinc",
+      "network": "partnerstack",
+      "name": "Teikametrics",
+      "slug": "teikametricsinc",
+      "description": "Teikametrics is an AI-powered marketplace optimization platform that helps brands and sellers grow profitably on Amazon, Walmart, and TikTok Shop. Powered by Artificial Retail Intelligence (ARI), the platform automates advertising, optimizes product listings, forecasts inventory demand, and unifies marketplace data to maximize sales, efficiency, and profitability.",
+      "offer": "Earn 25% of First Year Subscription Revenue for each successful referral",
+      "tags": [
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Commerce",
+        "Digital Advertising",
+        "E-Commerce",
+        "Marketing",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/teikametricsinc?company=teikametricsinc&gref=marketplace",
+      "terms_url": "https://www.teikametrics.com/terms-conditions/",
+      "website": "https://www.teikametrics.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 85,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "data",
+        "e-commerce",
+        "marketing",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -3237,7 +3290,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 43,
+      "review_days": 42,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3993,7 +4046,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 81,
       "relevance_matches": [
@@ -4636,7 +4689,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -4995,6 +5048,59 @@
       }
     },
     {
+      "id": "partnerstack:sentaro",
+      "network": "partnerstack",
+      "name": "Sentaro",
+      "slug": "sentaro",
+      "description": "Sentaro helps partners deliver modern email security to SMEs facing rapidly increasing AI driven phishing and fraud. Traditional spam filters miss the threats that look like normal business communication. Sentaro analyzes context, intent and risk inside the inbox, warns users before mistakes happen and protects the whole organization within minutes. Demand is growing fast as SMEs recognize the gap in existing security.",
+      "offer": "Earn up to 35% revenue share for the life of the customer",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Governance, Risk, & Compliance",
+        "Hot",
+        "Influencers",
+        "Publishers",
+        "Security"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/sentaro?company=sentaro&gref=marketplace",
+      "terms_url": "https://sentaro.com/terms-of-service",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:shade",
       "network": "partnerstack",
       "name": "Shade",
@@ -5150,58 +5256,6 @@
       }
     },
     {
-      "id": "partnerstack:teikametricsinc",
-      "network": "partnerstack",
-      "name": "Teikametrics",
-      "slug": "teikametricsinc",
-      "description": "Teikametrics is an AI-powered marketplace optimization platform that helps brands and sellers grow profitably on Amazon, Walmart, and TikTok Shop. Powered by Artificial Retail Intelligence (ARI), the platform automates advertising, optimizes product listings, forecasts inventory demand, and unifies marketplace data to maximize sales, efficiency, and profitability.",
-      "offer": "Earn 25% of First Year Subscription Revenue for each successful referral",
-      "tags": [
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Commerce",
-        "Digital Advertising",
-        "E-Commerce",
-        "Marketing"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/teikametricsinc?company=teikametricsinc&gref=marketplace",
-      "terms_url": "https://www.teikametrics.com/terms-conditions/",
-      "website": "https://www.teikametrics.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 80,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "data",
-        "e-commerce",
-        "marketing",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:thinkific6979",
       "network": "partnerstack",
       "name": "Thinkific",
@@ -5232,7 +5286,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5401,7 +5455,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -5857,7 +5911,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6137,7 +6191,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 30,
+      "review_days": 24,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -7116,58 +7170,6 @@
       }
     },
     {
-      "id": "partnerstack:sentaro",
-      "network": "partnerstack",
-      "name": "Sentaro",
-      "slug": "sentaro",
-      "description": "Sentaro helps partners deliver modern email security to SMEs facing rapidly increasing AI driven phishing and fraud. Traditional spam filters miss the threats that look like normal business communication. Sentaro analyzes context, intent and risk inside the inbox, warns users before mistakes happen and protects the whole organization within minutes. Demand is growing fast as SMEs recognize the gap in existing security.",
-      "offer": "Earn up to 35% revenue share for the life of the customer",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Governance, Risk, & Compliance",
-        "Influencers",
-        "Publishers",
-        "Security"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/sentaro?company=sentaro&gref=marketplace",
-      "terms_url": "https://sentaro.com/terms-of-service",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 75,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:stratos",
       "network": "partnerstack",
       "name": "Stratos Development Group",
@@ -7458,7 +7460,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -7804,7 +7806,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -7989,6 +7991,56 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:upwork",
+      "network": "partnerstack",
+      "name": "Upwork",
+      "slug": "upwork",
+      "description": "Upwork is the world’s human and AI-powered work marketplace. It connects businesses, from early startups to global enterprises, with skilled independent professionals who help them move faster and solve problems. For more than two decades, Upwork has helped companies find specialized expertise across AI, development, design, marketing, finance, operations, customer support, and more.",
+      "offer": "Earn 70% commission on a new client’s first contract, up to $250.",
+      "tags": [
+        "Collaboration & Productivity",
+        "Design",
+        "HR",
+        "HR Software",
+        "Hot",
+        "Marketing",
+        "New",
+        "Office Software",
+        "Other",
+        "Supply Chain & Logistics",
+        "Trusted",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/upwork?company=upwork&gref=marketplace",
+      "terms_url": "https://www.upwork.com/legal",
+      "website": "https://www.upwork.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 73,
+      "relevance_matches": [
+        "ai",
+        "design",
+        "development",
+        "marketing",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -8782,7 +8834,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -8832,7 +8884,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -8930,7 +8982,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -9152,12 +9204,14 @@
       "name": "Fast Bundle",
       "slug": "fastbundle",
       "description": "Fast Bundle is a Shopify app for creating flexible, high-converting product bundles. Offer mix & match, volume discounts, quantity breaks, BOGO, add-ons, and fixed bundles to boost AOV. Let customers build their own bundles, add free gifts, or use AI-powered Frequently Bought Together. Fast Bundle helps Shopify merchants increase revenue and enhance the shopping experience.",
-      "offer": "Earn a 25% revenue share on every subscription payment from Shopify merchants you refer.",
+      "offer": "Earn 25% recurring commission on every subscription payment from Shopify merchants you refer, plus up to $300 in extra BFCM bonuses through November 30, 2026! Check out out challenge!",
       "tags": [
+        "B2B Marketplaces",
         "Commerce",
         "E-Commerce",
         "Hot",
         "Marketing",
+        "Sales",
         "Shopify integrated",
         "Trusted"
       ],
@@ -9176,7 +9230,8 @@
       "relevance_matches": [
         "ai",
         "e-commerce",
-        "marketing"
+        "marketing",
+        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -9488,56 +9543,6 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:upwork",
-      "network": "partnerstack",
-      "name": "Upwork",
-      "slug": "upwork",
-      "description": "Upwork is the world’s human and AI-powered work marketplace. It connects businesses, from early startups to global enterprises, with skilled independent professionals who help them move faster and solve problems. For more than two decades, Upwork has helped companies find specialized expertise across AI, development, design, marketing, finance, operations, customer support, and more.",
-      "offer": "Earn 70% commission on a new client’s first contract, up to $250.",
-      "tags": [
-        "Collaboration & Productivity",
-        "Design",
-        "HR",
-        "HR Software",
-        "Hot",
-        "Marketing",
-        "New",
-        "Office Software",
-        "Other",
-        "Supply Chain & Logistics",
-        "Trusted",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/upwork?company=upwork&gref=marketplace",
-      "terms_url": "https://www.upwork.com/legal",
-      "website": "https://www.upwork.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 68,
-      "relevance_matches": [
-        "ai",
-        "design",
-        "development",
-        "marketing",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "policy_review_required",
-      "policy": {
-        "status": "unreachable",
-        "signals": {},
         "cookie_days": null
       }
     },
@@ -10192,7 +10197,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10612,7 +10617,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10665,7 +10670,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10710,7 +10715,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10972,7 +10977,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11275,7 +11280,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 6,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11727,7 +11732,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11789,18 +11794,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -12262,7 +12259,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12743,7 +12740,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13298,7 +13295,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 13,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13519,7 +13516,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 140,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -16298,7 +16295,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 11,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16393,7 +16390,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16726,7 +16723,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17436,7 +17433,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17490,7 +17487,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 15,
+      "review_days": 14,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17784,7 +17781,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18870,7 +18867,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "Earn 15% on every referral",
+      "offer": "5% on year 2 renewal",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -19130,7 +19127,7 @@
       "name": "Bar Codes Talk",
       "slug": "barcodestalk",
       "description": "UPC & EAN Barcode Number & Label Provider.",
-      "offer": "15% earned on first two sales per customer",
+      "offer": "10% earned on first two sales per customer",
       "tags": [
         "Affiliates",
         "Customer Service",
@@ -19746,18 +19743,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -20089,7 +20078,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20363,7 +20352,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20526,7 +20515,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 71,
+      "review_days": 62,
       "source": "https://market.partnerstack.com/",
       "score": 58,
       "relevance_matches": [
@@ -20935,7 +20924,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 11,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -20982,7 +20971,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 52,
+      "review_days": 51,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21378,7 +21367,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21571,7 +21560,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21634,8 +21623,8 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
+          "email_restricted": false,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -21753,7 +21742,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 12,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 56,
       "relevance_matches": [
@@ -22508,6 +22497,42 @@
       }
     },
     {
+      "id": "partnerstack:hibobaffiliate",
+      "network": "partnerstack",
+      "name": "HiBob Affiliate",
+      "slug": "hibobaffiliate",
+      "description": "HiBob is the modern HRIS built for fast-growing companies. It replaces clunky legacy systems with a clean, scalable platform for people data, performance, time, compensation, and culture. Designed for today’s teams, HiBob helps HR move faster, stay organized, and deliver a standout employee experience. The result: smarter workflows, happier people, and an HR foundation built for growth.",
+      "offer": "Earn $200 for every qualified sign-up!",
+      "tags": [
+        "HR Software",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/hibobaffiliate?company=hibobaffiliate&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/1uwXWwnHkT04T0570Iafjp-jnyN9F_FIB/view",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 187,
+      "source": "https://market.partnerstack.com/",
+      "score": 53,
+      "relevance_matches": [
+        "data",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:springbolt",
       "network": "partnerstack",
       "name": "Springbolt ID",
@@ -22841,41 +22866,6 @@
       }
     },
     {
-      "id": "partnerstack:hibobaffiliate",
-      "network": "partnerstack",
-      "name": "HiBob Affiliate",
-      "slug": "hibobaffiliate",
-      "description": "HiBob is the modern HRIS built for fast-growing companies. It replaces clunky legacy systems with a clean, scalable platform for people data, performance, time, compensation, and culture. Designed for today’s teams, HiBob helps HR move faster, stay organized, and deliver a standout employee experience. The result: smarter workflows, happier people, and an HR foundation built for growth.",
-      "offer": "Earn $200 for every qualified sign-up!",
-      "tags": [
-        "HR Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/hibobaffiliate?company=hibobaffiliate&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/1uwXWwnHkT04T0570Iafjp-jnyN9F_FIB/view",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 187,
-      "source": "https://market.partnerstack.com/",
-      "score": 48,
-      "relevance_matches": [
-        "data",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "policy_review_required",
-      "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:betterliferealestatefundinginc",
       "network": "partnerstack",
       "name": "BetterLife Real Estate Funding",
@@ -23085,7 +23075,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 47,
       "relevance_matches": [],
@@ -23363,7 +23353,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 12,
       "source": "https://market.partnerstack.com/",
       "score": 42,
       "relevance_matches": [],
