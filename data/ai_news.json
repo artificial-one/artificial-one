@@ -1,7 +1,49 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T22:52:30.132915+00:00",
+  "updated_at": "2026-10-27T05:33:31.241845+00:00",
   "items": [
+    {
+      "title": "How OpenAI turned its coding tools into dots, an always-on personal assistant",
+      "url": "https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-27T02:00:00+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "AI Tools & Products",
+      "description": "Alexander Embiricos, the OpenAI executive responsible for dots, never wants to have a meeting with someone else's AI agent.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Cohere says Alibaba’s Qwen model tried to send a file to Beijing",
+      "url": "https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-27T01:12:21+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "An AI model said it wouldn’t use any tools, then tried to send something to a server in Beijing anyway, and while researchers say it’s probably a training quirk and not espionage, the whole thing has people asking how much to trust free Chinese AI.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "OpenAI announces three big science discoveries and a new way to work with academics",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics",
+      "source": "The Verge AI",
+      "published_at": "2026-10-26T23:47:59+00:00",
+      "display_date": "Oct 26, 2026",
+      "category": "AI Tools & Products",
+      "description": "Less than a month after its mass release of hundreds of manuscripts that it said contained solutions to long-standing mathematics questions, OpenAI is back with three more \"major\" discoveries in math, computer science, and physics. What's different this time is the choice to have external experts that OpenAI describes as \"shepherds\" guiding the results in […]",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
     {
       "title": "Anthropic is burning gas to feed the AI boom",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018994/anthropic-ipo-ai-data-center-energy-climate-risk",
@@ -100,7 +142,8 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/26/reddit-s-r-opensource-bans-all-ai-related-projects-sparking-backlash-and-a-rival-s.html"
     },
     {
       "title": "Five weird details from Anthropic’s IPO filing",
@@ -315,50 +358,6 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/10/25/anthropic-co-founder-jack-clark-moves-his-prediction-for-self-improving-ai-forward.html"
-    },
-    {
-      "title": "Blue Planet III is keeping the rough edges in the age of AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai",
-      "source": "The Verge AI",
-      "published_at": "2026-10-24T21:29:12+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "AI Tools & Products",
-      "description": "BBC's Blue Planet III is looking to prove its authenticity by leaving in the less-than-perfect shots. Previous incarnations of the nature series were defined by their gorgeous, crystal-clear footage that seemed almost too good to be real. But one dead giveaway of AI is when things look too polished and seamless. To counter that, Blue […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/24/blue-planet-iii-is-keeping-the-rough-edges-in-the-age-of-ai.html"
-    },
-    {
-      "title": "Will AI expose the rickety infrastructure of the internet?",
-      "url": "https://techcrunch.com/2026/10/24/will-ai-expose-the-rickety-infrastructure-of-the-internet/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-24T20:15:33+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "AI Tools & Products",
-      "description": "The moment you realize the internet is \"held together by glue and dreams.\"",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
-      "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-24T19:00:00+00:00",
-      "display_date": "Oct 24, 2026",
-      "category": "AI Business",
-      "description": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didn-t-make-it.html"
     },
     {
       "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
