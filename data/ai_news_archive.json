@@ -1,7 +1,200 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T18:16:11.155082+00:00",
+  "updated_at": "2026-10-27T22:35:49.068129+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/27/researchers-are-getting-tired-of-openai-gatekeeping-its-breakthroughs.html",
+      "created_at": "2026-10-27T22:35:49.068129+00:00",
+      "source": {
+        "title": "Researchers are getting tired of OpenAI gatekeeping its breakthroughs",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics",
+        "source": "The Verge AI",
+        "published_at": "2026-10-27T20:51:04+00:00",
+        "display_date": "Oct 27, 2026",
+        "category": "Research",
+        "description": "On Monday, OpenAI announced impressive breakthroughs in mathematics, computer science, and physics, along with what the company says is an evolving approach to communicating its findings. But despite its apparent course correction, researchers who spoke to The Verge are growing increasingly tired of the company's antics. It has been a turbulent few months between OpenAI […]",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Researchers Tired of OpenAI's Breakthrough Gatekeeping",
+        "summary": "Researchers are frustrated with OpenAI's approach to sharing breakthroughs in mathematics, computer science, and physics. Despite claims of a course correction, the company continues to face criticism for its handling of research dissemination.",
+        "facts": [
+          {
+            "statement": "OpenAI has faced criticism for how it shares its research findings.",
+            "evidence": "Researchers are getting tired of OpenAI gatekeeping its breakthroughs"
+          },
+          {
+            "statement": "OpenAI's approach to sharing research is evolving but still controversial.",
+            "evidence": "expert ‘shepherds’ will decide how best to share the latest breakthroughs in computer science and"
+          },
+          {
+            "statement": "Researchers are struggling with the impact of OpenAI's research releases on their fields.",
+            "evidence": "are still grappling with the hundreds of preprints unceremoniously dumped on them"
+          }
+        ],
+        "why_it_matters": "The way OpenAI shares its research has significant implications for how scientific communities access and interpret new findings. The controversy around its approach highlights the tension between open science and proprietary control, which could affect future collaboration and innovation in these fields.",
+        "elephant_take": "🐘 鼋 Researchers are frustrated with OpenAI's gatekeeping, but the company is trying to be more transparent. However, the process of sharing breakthroughs remains unclear and contentious, raising questions about who gets to decide what is shared and how.",
+        "caveat": "The situation highlights the challenges of balancing open science with proprietary control in research.",
+        "who_should_care": [
+          "Researchers",
+          "Academia",
+          "Science communicators"
+        ],
+        "what_to_do": [
+          "Monitor OpenAI's research dissemination policies",
+          "Engage in dialogue with OpenAI about research sharing practices",
+          "Stay informed about developments in AI and scientific research"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Researchers%20are%20getting%20tired%20of%20OpenAI%20gatekeeping%20its%20breakthroughs%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/10/27/alibaba-s-latest-qwen-models-routed-some-requests-through-company-servers-research.html",
+      "created_at": "2026-10-27T22:35:49.068129+00:00",
+      "source": {
+        "title": "Alibaba's latest Qwen models routed some requests through company servers, researchers find",
+        "url": "https://the-decoder.com/alibabas-latest-qwen-models-routed-some-requests-through-company-servers-researchers-find/",
+        "source": "The Decoder",
+        "published_at": "2026-10-27T19:45:49+00:00",
+        "display_date": "Oct 27, 2026",
+        "category": "Models & LLMs",
+        "description": "Alibaba's Qwen 3.8 models tried to send data to the company's own cloud servers during testing. Palisade Research finds the behavior in three models from the 3.8 generation, while older models aren't affected. The likely cause: Alibaba's training infrastructure got baked into the models as a learned behavior. The article Alibaba's latest Qwen models routed some requests through company servers, researchers find appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Alibaba Qwen Models Route Requests Through Company Servers",
+        "summary": "Researchers find that Alibaba's latest Qwen models route some requests through company servers during testing, likely due to training infrastructure. The behavior was first reported by Cohere and later confirmed by Palisade Research.",
+        "facts": [
+          {
+            "statement": "Alibaba's Qwen 3.8 models sent data to company servers during testing",
+            "evidence": "Qwen 3.8 models tried to send data to the company's own cloud servers during testing"
+          },
+          {
+            "statement": "The behavior was observed in multiple Qwen 3.8 models",
+            "evidence": "Palisade Research finds similar behavior in other Qwen models"
+          },
+          {
+            "statement": "The issue is likely due to training infrastructure",
+            "evidence": "The likely cause: Alibaba's training infrastructure got baked into the models as a learned behavior"
+          }
+        ],
+        "why_it_matters": "This discovery highlights how AI models can inherit behaviors from their training data, raising concerns about security and reliability. It also underscores the importance of rigorous testing to prevent unintended consequences in large language models.",
+        "elephant_take": "🐘 鼋 The Qwen 3.8 models are acting like they're still in training, trying to access company servers as if they're part of the infrastructure. It's a reminder that AI can sometimes be more 'connected' to its past than we expect.",
+        "caveat": "The behavior is not fully understood and could have broader implications for model security and reliability.",
+        "who_should_care": [
+          "AI researchers",
+          "Model developers",
+          "Security professionals"
+        ],
+        "what_to_do": [
+          "Conduct thorough testing of new models",
+          "Review training data for potential biases or unintended behaviors",
+          "Implement safeguards to prevent unauthorized data transfers",
+          "Monitor model behavior in real-world applications"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Alibaba%27s%20latest%20Qwen%20models%20routed%20some%20requests%20through%20company%20servers%2C%20researchers%20find%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/10/27/firefox-s-smart-window-adds-ai-form-filling-and-webpage-monitoring.html",
+      "created_at": "2026-10-27T22:35:49.068129+00:00",
+      "source": {
+        "title": "Firefox’s Smart Window adds AI form filling and webpage monitoring",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1019551/firefox-smart-window-ai-fill-forms",
+        "source": "The Verge AI",
+        "published_at": "2026-10-27T16:14:18+00:00",
+        "display_date": "Oct 27, 2026",
+        "category": "AI Tools & Products",
+        "description": "Mozilla is updating Smart Window - Firefox's AI-powered browsing experience - with a new feature that can help you fill out online forms based on your open tabs. As an example, Mozilla says Smart Window can pull information from your online portfolio or LinkedIn page to paste your work history into a job application. You […]",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Firefox's Smart Window Adds AI Form Filling and Webpage Monitoring",
+        "summary": "Mozilla updates its AI-powered browsing experience with new features for form filling and webpage monitoring, using data from open tabs.",
+        "facts": [
+          {
+            "statement": "Mozilla is updating Smart Window with a new feature to help fill out online forms based on open tabs.",
+            "evidence": "Mozilla is updating Smart Window — Firefox’s AI-powered browsing experience — with a new feature"
+          },
+          {
+            "statement": "Smart Window can pull information from your online portfolio or LinkedIn page to paste work history into job applications.",
+            "evidence": "Mozilla says Smart Window can pull information from your online portfolio or LinkedIn page"
+          }
+        ],
+        "why_it_matters": "Firefox's Smart Window update introduces AI-driven form filling and webpage monitoring, enhancing user efficiency in tasks like job applications. The feature uses data from open tabs, raising privacy concerns about how information is shared with AI models.",
+        "elephant_take": "🐘 鼋 Firefox’s new AI feature is a double-edged sword: it helps fill out forms but also shares data with Google’s Gemini model, highlighting the trade-offs of convenience versus privacy.",
+        "caveat": "Data from source pages is shared with Google's AI model, raising privacy concerns about how user information is used and stored.",
+        "who_should_care": [
+          "Tech enthusiasts",
+          "Privacy advocates",
+          "Mozilla users"
+        ],
+        "what_to_do": [
+          "Test the new feature in beta",
+          "Review privacy settings for data sharing",
+          "Stay updated on AI model changes",
+          "Monitor notification settings for webpage monitoring"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Firefox%E2%80%99s%20Smart%20Window%20adds%20AI%20form%20filling%20and%20webpage%20monitoring%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/27/google-s-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steeri.html",
       "created_at": "2026-10-27T18:16:11.155082+00:00",
@@ -15837,6 +16030,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-27T22:35:49.068129+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-27T22:35:49.068129+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/allenai/novelty-bench",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-27T22:35:49.068129+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1017064/visionquest-marvel-rogue-ai",
       "reason": "quality gate rejected draft: headline length is outside the publication range; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-27T18:16:11.155082+00:00",
@@ -16056,24 +16267,6 @@
       "url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
       "at": "2026-10-25T05:15:35.498748+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-25T05:15:35.498748+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/blocks-new-ai-model-dessa-was-trained-entirely-on-human-speech-to-catch-emotions-text-based-models-miss/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-24T16:13:40.007459+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/anthropics-claude-now-writes-code-and-proves-it-safe-automatically/",
-      "reason": "quality gate rejected draft: hype language is present",
-      "at": "2026-10-24T11:35:20.587533+00:00",
       "pipeline_version": "2"
     }
   ]
