@@ -1,10 +1,55 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 63,
+    "successful_checks": 60,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-27",
+      "id": "8953f46956e40f50",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://fireflies.ai",
+      "tool_id": "fireflies-ai",
+      "tool_name": "Fireflies.ai"
+    },
+    {
+      "detected_on": "2026-10-27",
+      "id": "e54c5a32b878ae7e",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://heygen.com",
+      "tool_id": "heygen",
+      "tool_name": "HeyGen"
+    },
+    {
+      "detected_on": "2026-10-27",
+      "id": "88254a41514d6eb2",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://jenni.ai",
+      "tool_id": "jenni-ai",
+      "tool_name": "Jenni AI"
+    },
+    {
+      "detected_on": "2026-10-27",
+      "id": "c70f78d278dbc094",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://pictory.ai",
+      "tool_id": "pictory-ai",
+      "tool_name": "Pictory AI"
+    },
+    {
+      "detected_on": "2026-10-27",
+      "id": "93ffaa4c99c3c6ec",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://peppertype.ai",
+      "tool_id": "peppertype-ai",
+      "tool_name": "Peppertype.ai"
+    },
     {
       "detected_on": "2026-10-26",
       "id": "0d316a18e05d8623",
@@ -1330,6 +1375,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-26",
+  "updated_at": "2026-10-27",
   "version": 1
 }
