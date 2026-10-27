@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T12:39:22.778292+00:00",
+  "updated_at": "2026-10-27T18:16:11.155082+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/27/google-s-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steeri.html",
+      "created_at": "2026-10-27T18:16:11.155082+00:00",
+      "source": {
+        "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering",
+        "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-10-27T16:30:57+00:00",
+        "display_date": "Oct 27, 2026",
+        "category": "Models & LLMs",
+        "description": "Google DeepMind released Genie 4, a world model with real-time audio, more realistic simulations, and mid-simulation text prompts, in research preview for trusted testers.",
+        "related": {
+          "title": "Evaluate ElevenLabs for this workflow",
+          "url": "partner-offers/elevenlabs-ai-voice.html",
+          "offer_id": "elevenlabs"
+        }
+      },
+      "article": {
+        "headline": "Google's Genie 4 World Model Advances Realistic Simulations and Audio",
+        "summary": "Google's Genie 4 world model introduces real-time audio, more realistic simulations, and interactive features for applications in gaming, robotics, and film prototyping.",
+        "facts": [
+          {
+            "statement": "Genie 4 allows users to type prompts mid-simulation to change the scene.",
+            "evidence": "the latest model generates the most photorealistic and interactive worlds"
+          },
+          {
+            "statement": "Genie 4 includes real-time audio that matches the simulated world.",
+            "evidence": "the model also generates real-time audio that matches the simulated"
+          },
+          {
+            "statement": "Genie 4 can maintain a consistent scene for up to two minutes.",
+            "evidence": "It can maintain a consistent scene for up to two minutes, double its predecessor’s limit"
+          }
+        ],
+        "why_it_matters": "Google's Genie 4 represents a significant leap in world modeling technology, with real-time audio and interactive features that could revolutionize gaming, robotics, and film production. The model's ability to maintain consistent scenes for longer periods suggests potential applications in complex simulations and training environments.",
+        "elephant_take": "🐘 鼋 Google's latest world model is a step forward in creating immersive simulations, but the real test will be whether these capabilities translate into practical use cases beyond research. The integration with Gemini hints at a future where AI can generate and simulate reality at scale.",
+        "caveat": "The commercial potential of world models remains speculative, and the industry is still in its early stages of consolidation.",
+        "who_should_care": [
+          "AI researchers",
+          "Robotics developers",
+          "Film producers"
+        ],
+        "what_to_do": [
+          "Explore how Genie 4 can enhance interactive learning experiences",
+          "Assess the potential for real-time simulation in robotics training",
+          "Consider film production applications for prototyping scenes"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/elevenlabs-ai-voice-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/elevenlabs-ai-voice-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/elevenlabs-ai-voice.html",
+        "review_title": "Evaluate ElevenLabs for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Google%E2%80%99s%20Genie%204%20world%20model%20adds%20audio%2C%20more%20realistic%20worlds%2C%20and%20real-time%20steering%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "elevenlabs"
+      }
+    },
     {
       "path": "news/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus.html",
       "created_at": "2026-10-27T12:39:22.778292+00:00",
@@ -15772,6 +15837,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017064/visionquest-marvel-rogue-ai",
+      "reason": "quality gate rejected draft: headline length is outside the publication range; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-27T18:16:11.155082+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/google-deepminds-genie-4-puts-a-modern-spin-on-agent-designs-that-predate-llms/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-27T18:16:11.155082+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-27T18:16:11.155082+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
+      "at": "2026-10-27T18:16:11.155082+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1019470/anthropic-ipo-resist-investor-pressure-cut-corners-safety",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-27T18:16:11.155082+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/openai-asks-outside-experts-including-a-nobel-laureate-to-check-proofs-its-ai-produced-in-math-computer-science-and-physics/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-27T12:39:22.778292+00:00",
@@ -15979,36 +16074,6 @@
       "url": "https://the-decoder.com/anthropics-claude-now-writes-code-and-proves-it-safe-automatically/",
       "reason": "quality gate rejected draft: hype language is present",
       "at": "2026-10-24T11:35:20.587533+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-24T11:35:20.587533+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-24T05:00:31.824011+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-23T05:19:13.441496+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/major-us-banks-are-locking-out-ai-agents-that-log-in-with-customer-credentials/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-23T05:19:13.441496+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1016690/suleyman-microsoft-diagnostic-orchestrator-science-medical-superintelligence",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-22T21:55:01.873009+00:00",
       "pipeline_version": "2"
     }
   ]

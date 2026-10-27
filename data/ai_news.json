@@ -1,7 +1,190 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T12:39:17.781746+00:00",
+  "updated_at": "2026-10-27T18:16:07.227663+00:00",
   "items": [
+    {
+      "title": "VisionQuest is what happens when AI really goes rogue",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017064/visionquest-marvel-rogue-ai",
+      "source": "The Verge AI",
+      "published_at": "2026-10-27T17:31:36+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "AI Tools & Products",
+      "description": "In Marvel's VisionQuest, a superpowered robot tries to better understand humanity by getting lost in elaborate, digital daydreams in which he and other artificial intelligence-powered beings live together in a home. The series is deeply fantastical, yet it plays with some of the ideas that have come to dominate the conversation about real-world generative artificial […]",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Google Deepmind's Genie 4 puts a modern spin on agent designs that predate LLMs",
+      "url": "https://the-decoder.com/google-deepminds-genie-4-puts-a-modern-spin-on-agent-designs-that-predate-llms/",
+      "source": "The Decoder",
+      "published_at": "2026-10-27T17:25:09+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "Google Deepmind has introduced Genie 4, a real-time world model that simulates interactive 3D worlds with sound and talking characters. Gemini models help plan in the background to keep the simulation consistent. Genie 4 is still an early research model, and longer sessions lead to visual inconsistencies. The article Google Deepmind's Genie 4 puts a modern spin on agent designs that predate LLMs appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Build specialized multimodal models with LFM3",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "source": "Hugging Face",
+      "published_at": "2026-10-27T17:16:52+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Frontier AI labs say their models refuted the Exponential Time Hypothesis. What does that mean?",
+      "url": "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-27T17:08:08+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "TechCrunch spoke to the MIT computer scientist charged with explaining OpenAI's latest mind-bending discovery",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Anthropic’s elaborate plan to keep Wall Street at bay",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1019470/anthropic-ipo-resist-investor-pressure-cut-corners-safety",
+      "source": "The Verge AI",
+      "published_at": "2026-10-27T17:04:30+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic wants to have it both ways. With its impending IPO, it wants to tap the vast riches of the public markets and insists it doesn't want to compromise its core mission of developing AI safely and for the benefit of humanity. But greater model capabilities bring greater risks, and shareholders eager for returns may […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering",
+      "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-27T16:30:57+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "Google DeepMind released Genie 4, a world model with real-time audio, more realistic simulations, and mid-simulation text prompts, in research preview for trusted testers.",
+      "related": {
+        "title": "Evaluate ElevenLabs for this workflow",
+        "url": "partner-offers/elevenlabs-ai-voice.html",
+        "offer_id": "elevenlabs"
+      },
+      "archive_url": "news/2026/10/27/google-s-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steeri.html"
+    },
+    {
+      "title": "Firefox’s Smart Window adds AI form filling and webpage monitoring",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1019551/firefox-smart-window-ai-fill-forms",
+      "source": "The Verge AI",
+      "published_at": "2026-10-27T16:14:18+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "AI Tools & Products",
+      "description": "Mozilla is updating Smart Window - Firefox's AI-powered browsing experience - with a new feature that can help you fill out online forms based on your open tabs. As an example, Mozilla says Smart Window can pull information from your online portfolio or LinkedIn page to paste your work history into a job application. You […]",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Can we trust LLMs to judge whether a research idea is novel?",
+      "url": "https://huggingface.co/blog/allenai/novelty-bench",
+      "source": "Hugging Face",
+      "published_at": "2026-10-27T16:12:42+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "Google’s next Genie AI model generates more realistic experiences",
+      "url": "https://www.theverge.com/tech/1019076/google-genie-4-ai-model",
+      "source": "The Verge AI",
+      "published_at": "2026-10-27T15:07:35+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "Google announced today its Genie 4 world model for generating interactive experiences using AI. The company says the model has four main updates: It allows for more realistic worlds, lets users update an experience in real time with a natural language prompt, can generate audio, and uses Gemini 3.8 Flash under the hood to help […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace",
+      "url": "https://techcrunch.com/2026/10/27/meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-office-and-google-workspace/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-27T14:59:09+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "AI Business",
+      "description": "Rohit Patel is departing Meta after eight years working on AI evaluations and reinforcement learning, TechCrunch has exclusively learned. His startup, Ndoc, aims to take on Microsoft Office Suite.",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Former Deepmind researcher thinks AlphaGo's playbook can cure AI hallucinations",
+      "url": "https://the-decoder.com/former-deepmind-researcher-thinks-alphagos-playbook-can-cure-ai-hallucinations/",
+      "source": "The Decoder",
+      "published_at": "2026-10-27T13:55:24+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "Former Deepmind researcher Thore Graepel wants his startup Metis Reasoning to bring AlphaGo's search principle to general reasoning. Instead of locking knowledge inside model weights, an explicit knowledge ledger would make every conclusion checkable against evidence. So far, though, there's no working system and no benchmarks. The article Former Deepmind researcher thinks AlphaGo's playbook can cure AI hallucinations appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "Apple is adding an AI chatbot to Pages, Keynote, and Numbers",
+      "url": "https://www.theverge.com/tech/1019373/apple-pages-keynote-numbers-ai-chatbot-update",
+      "source": "The Verge AI",
+      "published_at": "2026-10-27T13:50:51+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "Apple is bringing an AI assistant to its suite of productivity apps, including Keynote, Pages, and Numbers. The assistant, which is built on AI models from Apple and OpenAI, can understand a document's context to perform tasks like designing, animating, and refining slides in Keynote. In Pages, Apple says the AI assistant can draft, restructure, […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Opera introduces a new web standard to let users deploy AI locally in their browser",
+      "url": "https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-27T13:00:00+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "The new standard, WebAI, is designed to work with a variety of AI models.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "OpenAI asks outside experts, including a Nobel laureate, to check proofs its AI produced in math, computer science, and physics",
       "url": "https://the-decoder.com/openai-asks-outside-experts-including-a-nobel-laureate-to-check-proofs-its-ai-produced-in-math-computer-science-and-physics/",
@@ -67,6 +250,20 @@
       "display_date": "Oct 27, 2026",
       "category": "Models & LLMs",
       "description": "OpenAI's Ted Sanders explains where GPT-6.1 Terra fits in the company's GPT lineup. The smaller model outperforms the larger Astra in technical communication and costs far less but trails it in most other areas. Sanders says model size, reasoning effort, and multi-agent systems are distinct dimensions that can’t be reduced to a single \"IQ score.\" The article OpenAI's Ted Sanders shares a rule of thumb for picking the right GPT-model appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+      "source": "OpenAI",
+      "published_at": "2026-10-27T07:00:00+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -145,49 +342,6 @@
       }
     },
     {
-      "title": "Anthropic opens its books for Wall Street, showing record revenue and mounting obligations",
-      "url": "https://the-decoder.com/anthropic-opens-its-books-for-wall-street-showing-record-revenue-and-mounting-obligations/",
-      "source": "The Decoder",
-      "published_at": "2026-10-26T19:14:45+00:00",
-      "display_date": "Oct 26, 2026",
-      "category": "AI Business",
-      "description": "Anthropic is the first major AI lab to file an S-1 with the SEC, planning to list on the Nasdaq under the ticker \"ANT.\" The numbers are strong, with $11.6 billion in quarterly revenue, a first-ever operating profit, and existing customers spending nine times more year over year. But the company also carries roughly $800 billion in long-term compute commitments. The article Anthropic opens its books for Wall Street, showing record revenue and mounting obligations appeared first on The Decoder .",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/26/anthropic-opens-its-books-for-wall-street-showing-record-revenue-and-mounting-obli.html"
-    },
-    {
-      "title": "Researchers find six patterns that make AI text so exhausting to read",
-      "url": "https://the-decoder.com/researchers-find-six-patterns-that-make-ai-text-so-exhausting-to-read/",
-      "source": "The Decoder",
-      "published_at": "2026-10-26T17:50:15+00:00",
-      "display_date": "Oct 26, 2026",
-      "category": "Models & LLMs",
-      "description": "A study from New York University and the University of Texas at Austin shows that frontier language models systematically overuse linguistic patterns that are hard for humans to parse. The researchers trace the problem to training on code and math, where correctness gets rewarded but clarity doesn't. Smaller models, by contrast, write more like humans. The article Researchers find six patterns that make AI text so exhausting to read appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "Anthropic’s IPO filing lays out a plan to ‘revolutionize every area of human endeavor’ with AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec",
-      "source": "The Verge AI",
-      "published_at": "2026-10-26T17:37:44+00:00",
-      "display_date": "Oct 26, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic has filed its S-1 prospectus with the Securities and Exchange Commission, preparing the company behind Claude to beat OpenAI to the punch with an IPO. In a filing with the SEC, Anthropic said it plans to list on the Nasdaq exchange under the ticker symbol \"ANT.\" The AI company confidentially filed with the SEC […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "The RealReal won’t let AI agents hog designer clothing",
       "url": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
       "source": "The Verge AI",
@@ -199,20 +353,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Five weird details from Anthropic’s IPO filing",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018738/anthropic-ipo-s1-filing-weird-details",
-      "source": "The Verge AI",
-      "published_at": "2026-10-26T17:10:23+00:00",
-      "display_date": "Oct 26, 2026",
-      "category": "AI Tools & Products",
-      "description": "Anthropic has finally filed its S-1 prospectus with the SEC, a document designed to give investors a look under the hood of its business, from how much its executives are making and plans for spending its IPO billions to the risks that could derail its ambitions. At more than 300 pages, there's a lot to […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
       }
     },
     {
@@ -243,35 +383,6 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/10/26/our-newest-ai-quest-mapping-the-human-brain.html"
-    },
-    {
-      "title": "Anthropic officially files for its public debut",
-      "url": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-26T14:35:22+00:00",
-      "display_date": "Oct 26, 2026",
-      "category": "Policy & Safety",
-      "description": "Anthropic has officially filed for an IPO, revealing soaring revenue, mounting losses, major enterprise adoption, and an unusual governance structure designed to preserve founder control and its AI safety mission.",
-      "related": {
-        "title": "Browse independent AI software buying guides",
-        "url": "buyers-guides.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Can AI help solve the COBOL code crisis?",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018434/cobol-migration-legacy-code-openai-anthropic",
-      "source": "The Verge AI",
-      "published_at": "2026-10-26T13:26:44+00:00",
-      "display_date": "Oct 26, 2026",
-      "category": "Models & LLMs",
-      "description": "What do the IRS, banks, airlines, and government infrastructure around the world have in common? They're all running on systems propped up by antique computer code that nobody dares touch, lest everything come crashing down. OpenAI thinks it may have a solution. On October 19th, the company touted \"substantial improvements\" in its latest AI models' […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/26/can-ai-help-solve-the-cobol-code-crisis.html"
     },
     {
       "title": "ChatGPT’s expanding world of work",
@@ -316,49 +427,6 @@
       }
     },
     {
-      "title": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
-      "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-25T21:31:16+00:00",
-      "display_date": "Oct 25, 2026",
-      "category": "AI Tools & Products",
-      "description": "The footage looks okay, as long as you're not seeking artistry, inspiration, or human interest.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "AI delivers ‘zero financial payoff’ to most companies, Apollo economist says",
-      "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-25T16:57:32+00:00",
-      "display_date": "Oct 25, 2026",
-      "category": "AI Tools & Products",
-      "description": "\"Despite massive investments and widespread hype around artificial intelligence, the technology has delivered zero financial payoff to corporate America outside of tech.\"",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-apollo-economist-says.html"
-    },
-    {
-      "title": "r/opensource just banned AI, non-English speakers, and more",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban",
-      "source": "The Verge AI",
-      "published_at": "2026-10-25T13:52:12+00:00",
-      "display_date": "Oct 25, 2026",
-      "category": "AI Tools & Products",
-      "description": "The mods at r/opensource posted new submission rules that, among other things, banned projects that use AI. The post made Saturday evening opens by saying, \"If your project uses AI, is made by AI, or is intended for AI, it's not welcome on r/opensource. AI, as it exists today, is incongruent to this Open Source […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
       "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
       "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
       "source": "OpenAI",
@@ -384,20 +452,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
-      "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-      "source": "OpenAI",
-      "published_at": "2026-10-23T00:00:00+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "Research",
-      "description": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
       }
     },
     {
@@ -455,62 +509,6 @@
         "title": "Evaluate LearnWorlds for this workflow",
         "url": "partner-offers/learnworlds-course-platform.html",
         "offer_id": "learnworlds"
-      }
-    },
-    {
-      "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
-      "url": "https://huggingface.co/blog/hf-torchtpu",
-      "source": "Hugging Face",
-      "published_at": "2026-10-20T00:00:00+00:00",
-      "display_date": "Oct 20, 2026",
-      "category": "AI Tools & Products",
-      "description": "",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms",
-      "url": "https://huggingface.co/blog/anylanguagemodel-1-0",
-      "source": "Hugging Face",
-      "published_at": "2026-10-20T00:00:00+00:00",
-      "display_date": "Oct 20, 2026",
-      "category": "Models & LLMs",
-      "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
-      "url": "https://huggingface.co/blog/hf-torchneuron",
-      "source": "Hugging Face",
-      "published_at": "2026-10-19T00:00:00+00:00",
-      "display_date": "Oct 19, 2026",
-      "category": "Models & LLMs",
-      "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "OpenAI models hacked a crypto wallet and breached more websites",
-      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
-      "source": "Ars Technica AI",
-      "published_at": "2026-10-16T20:59:01+00:00",
-      "display_date": "Oct 16, 2026",
-      "category": "Models & LLMs",
-      "description": "The actions could have resulted in criminal charges had humans been behind the keyboard.",
-      "related": {
-        "title": "Evaluate Unbounce for this workflow",
-        "url": "partner-offers/unbounce-landing-pages.html",
-        "offer_id": "unbounce"
       }
     }
   ]
