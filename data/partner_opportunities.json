@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27",
+  "updated_at": "2026-10-28",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 478,
+    "total": 480,
     "approved_link_pending": 18,
     "existing_active": 39,
     "not_qualified": 14,
-    "policy_review_required": 29,
+    "policy_review_required": 26,
     "program_paused": 1,
-    "ready_for_owner_application": 377
+    "ready_for_owner_application": 382
   },
   "opportunities": [
     {
@@ -230,7 +230,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -495,72 +495,6 @@
           "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:breadbutterioinc",
-      "network": "partnerstack",
-      "name": "Bread & Butter IO Inc.",
-      "slug": "breadbutterioinc",
-      "description": "Bread & Butter is an AI-powered lead intelligence platform that helps you track and scale what converts into revenue. It sits between your analytics and your CRM — giving demand gen and revenue teams the intelligence to prime the pipeline, act on high-intent visitors, and hand off sales-ready leads without adding headcount.",
-      "offer": "20% of the license fees a referred customer pays in their first year only, on the Pro license ($49/month) or Pro Plus ($199/month, for customers who need the MCP server). Credits aren't included.",
-      "tags": [
-        "Analytics",
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Content Management",
-        "Customer Service",
-        "Development",
-        "Digital Advertising",
-        "Marketing",
-        "Sales",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/breadbutterioinc?company=breadbutterioinc&gref=marketplace",
-      "terms_url": "https://breadbutter.io/eula/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 6,
-      "source": "https://market.partnerstack.com/",
-      "approved": false,
-      "authenticated_relationship": true,
-      "relationship_status": "application-pending",
-      "terms_required": false,
-      "partnership_key": "part_LrNUcZSNjQ2cmI",
-      "score": 85,
-      "relevance_matches": [
-        "ai",
-        "analytics",
-        "artificial intelligence",
-        "content",
-        "customer service",
-        "development",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": true,
           "disclosure_required": false
         },
         "cookie_days": null
@@ -1440,7 +1374,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -3290,7 +3224,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 42,
+      "review_days": 43,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3347,7 +3281,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 13,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -4074,50 +4008,6 @@
       }
     },
     {
-      "id": "partnerstack:inworldai",
-      "network": "partnerstack",
-      "name": "Inworld AI",
-      "slug": "inworldai",
-      "description": "Inworld is a research lab and inference provider focused on realtime AI for consumer-facing applications. We build first-party speech models, serve the LLMs developers choose, and operate the inference behind modular APIs, so developers of high-volume consumer applications can meet the quality, latency, reliability, and cost bar their users require. Perfect for building Tutors, Companions, Voice agents, Fitness coaches, NPCs, Customer Experience, and more realtime conversational use cases.",
-      "offer": "Earn 20% for every transaction for the first year",
-      "tags": [
-        "Artificial Intelligence",
-        "Hot"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/inworldai?company=inworldai&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1QoAoMNkMQQIst6pyXODRVia1rkI55VaY/view?usp=sharing",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 2,
-      "source": "https://market.partnerstack.com/",
-      "score": 81,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:ngram",
       "network": "partnerstack",
       "name": "ngram",
@@ -4398,6 +4288,71 @@
       }
     },
     {
+      "id": "partnerstack:breadbutterioinc",
+      "network": "partnerstack",
+      "name": "Bread & Butter IO Inc.",
+      "slug": "breadbutterioinc",
+      "description": "Bread & Butter is an AI-powered lead intelligence platform that helps you track and scale what converts into revenue. It sits between your analytics and your CRM — giving demand gen and revenue teams the intelligence to prime the pipeline, act on high-intent visitors, and hand off sales-ready leads without adding headcount.",
+      "offer": "20% of the license fees a referred customer pays in their first year only, on the Pro license ($49/month) or Pro Plus ($199/month, for customers who need the MCP server). Credits aren't included.",
+      "tags": [
+        "Analytics",
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Content Management",
+        "Customer Service",
+        "Development",
+        "Digital Advertising",
+        "Marketing",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/breadbutterioinc?company=breadbutterioinc&gref=marketplace",
+      "terms_url": "https://breadbutter.io/eula/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 6,
+      "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_LrNUcZSNjQ2cmI",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "analytics",
+        "artificial intelligence",
+        "content",
+        "customer service",
+        "development",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": true,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:consensus",
       "network": "partnerstack",
       "name": "Consensus",
@@ -4607,6 +4562,59 @@
       }
     },
     {
+      "id": "partnerstack:expertex803",
+      "network": "partnerstack",
+      "name": "ExpertEx",
+      "slug": "expertex803",
+      "description": "ExpertEx turns any product into studio-quality photos, video ads, and UGC in minutes — no photographer, no studio, no editing tools. Built for Shopify, Amazon, and Etsy sellers who need creative that converts, fast. If your audience includes e-commerce founders or marketers, it's an easy sell: they see results instantly, and you earn on every customer you refer.",
+      "offer": "Unlimited referrals, 25% recurring commission for 12 months on every new customer's spending.",
+      "tags": [
+        "Artificial Intelligence",
+        "Commerce",
+        "Content Management",
+        "Design",
+        "Digital Advertising",
+        "Hot",
+        "Marketing"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/expertex803?company=expertex803&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/1S7hpfBhYFWRiUMARnDiwiFGc8xwVN6HT/view?usp=sharing",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "artificial intelligence",
+        "content",
+        "design",
+        "e-commerce",
+        "marketing",
+        "video"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:filevine",
       "network": "partnerstack",
       "name": "Filevine",
@@ -4707,6 +4715,49 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:inworldai",
+      "network": "partnerstack",
+      "name": "Inworld AI",
+      "slug": "inworldai",
+      "description": "Inworld is a research lab and inference provider focused on realtime AI for consumer-facing applications. We build first-party speech models, serve the LLMs developers choose, and operate the inference behind modular APIs, so developers of high-volume consumer applications can meet the quality, latency, reliability, and cost bar their users require. Perfect for building Tutors, Companions, Voice agents, Fitness coaches, NPCs, Customer Experience, and more realtime conversational use cases.",
+      "offer": "Earn 20% for every transaction for the first year",
+      "tags": [
+        "Artificial Intelligence"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/inworldai?company=inworldai&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/1QoAoMNkMQQIst6pyXODRVia1rkI55VaY/view?usp=sharing",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 2,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -5126,7 +5177,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -7024,58 +7075,6 @@
       }
     },
     {
-      "id": "partnerstack:expertex803",
-      "network": "partnerstack",
-      "name": "ExpertEx",
-      "slug": "expertex803",
-      "description": "ExpertEx turns any product into studio-quality photos, video ads, and UGC in minutes — no photographer, no studio, no editing tools. Built for Shopify, Amazon, and Etsy sellers who need creative that converts, fast. If your audience includes e-commerce founders or marketers, it's an easy sell: they see results instantly, and you earn on every customer you refer.",
-      "offer": "Unlimited referrals, 25% recurring commission for 12 months on every new customer's spending.",
-      "tags": [
-        "Artificial Intelligence",
-        "Commerce",
-        "Content Management",
-        "Design",
-        "Digital Advertising",
-        "Marketing"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/expertex803?company=expertex803&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1S7hpfBhYFWRiUMARnDiwiFGc8xwVN6HT/view?usp=sharing",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 75,
-      "relevance_matches": [
-        "artificial intelligence",
-        "content",
-        "design",
-        "e-commerce",
-        "marketing",
-        "video"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:lucrovox",
       "network": "partnerstack",
       "name": "LucroVox",
@@ -7144,7 +7143,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 75,
       "relevance_matches": [
@@ -7573,7 +7572,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -8560,7 +8559,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 72,
       "relevance_matches": [
@@ -8784,7 +8783,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 161,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -9373,7 +9372,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 51,
+      "review_days": 50,
       "source": "https://market.partnerstack.com/",
       "score": 68,
       "relevance_matches": [
@@ -9650,7 +9649,7 @@
       "name": "ABC Trainerize",
       "slug": "trainerize",
       "description": "ABC Trainerize is an online coaching platform helping coaches and fitness businesses offer fitness, nutrition and habit programs online and stay connected to their clients and their audience.",
-      "offer": "Earn 15% on monthly memberships",
+      "offer": "Earn 10% on annual memberships",
       "tags": [
         "Affiliates",
         "B2B Marketplaces",
@@ -10034,7 +10033,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10352,7 +10351,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10466,8 +10465,8 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
+          "email_restricted": false,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -10873,7 +10872,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -10925,7 +10924,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 97,
+      "review_days": 85,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11038,10 +11037,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
         "cookie_days": null
       }
     },
@@ -11234,7 +11241,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -11561,7 +11568,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 11,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11794,10 +11801,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -12367,7 +12382,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13189,7 +13204,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 14,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -15760,8 +15775,8 @@
       "tags": [
         "Writing & Content"
       ],
-      "application_url": "https://writecream.com",
-      "terms_url": "https://writecream.com",
+      "application_url": "https://writecream.com/v2/family/",
+      "terms_url": "https://writecream.com/v2/family/",
       "website": "https://writecream.com",
       "waitlist": false,
       "archived": false,
@@ -15785,7 +15800,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -15875,10 +15890,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
         "cookie_days": null
       }
     },
@@ -15906,7 +15929,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 11,
+      "review_days": 19,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16436,7 +16459,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 16,
+      "review_days": 14,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16772,7 +16795,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 14,
+      "review_days": 12,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16880,11 +16903,19 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": 90
       }
     },
     {
@@ -17171,7 +17202,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17479,7 +17510,7 @@
         "hot"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/spocket?company=spocket&gref=marketplace",
-      "terms_url": "https://www.spocket.co/terms",
+      "terms_url": "https://www.spocket.co/partnerstack-terms",
       "website": "https://www.spocket.co/",
       "waitlist": false,
       "archived": false,
@@ -17487,7 +17518,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 14,
+      "review_days": 13,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17500,15 +17531,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": false,
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 30
       }
     },
     {
@@ -17631,7 +17662,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -18529,7 +18560,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18733,7 +18764,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18867,7 +18898,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "5% on year 2 renewal",
+      "offer": "Earn 10% on every referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -18890,7 +18921,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -19122,48 +19153,6 @@
       }
     },
     {
-      "id": "partnerstack:barcodestalk",
-      "network": "partnerstack",
-      "name": "Bar Codes Talk",
-      "slug": "barcodestalk",
-      "description": "UPC & EAN Barcode Number & Label Provider.",
-      "offer": "10% earned on first two sales per customer",
-      "tags": [
-        "Affiliates",
-        "Customer Service",
-        "Hot",
-        "Office Software",
-        "Other",
-        "Referral Partners",
-        "Trusted",
-        "hot"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/barcodestalk?company=barcodestalk&gref=marketplace",
-      "terms_url": "https://www.barcodestalk.com/affiliate-terms-and-conditions",
-      "website": "https://www.barcodestalk.com/",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 4,
-      "source": "https://market.partnerstack.com/",
-      "score": 60,
-      "relevance_matches": [
-        "customer service",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "policy_review_required",
-      "policy": {
-        "status": "unreachable",
-        "signals": {},
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:boulevard",
       "network": "partnerstack",
       "name": "Boulevard",
@@ -19188,7 +19177,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 22,
+      "review_days": 18,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19629,7 +19618,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20352,7 +20341,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20515,7 +20504,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 62,
+      "review_days": 58,
       "source": "https://market.partnerstack.com/",
       "score": 58,
       "relevance_matches": [
@@ -21623,8 +21612,8 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -21707,18 +21696,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -22081,15 +22062,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": true,
+          "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
-          "coupon_restricted": true,
-          "email_restricted": true,
+          "coupon_restricted": false,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
       }
     },
     {
@@ -22258,6 +22239,57 @@
       }
     },
     {
+      "id": "partnerstack:remotecoworker",
+      "network": "partnerstack",
+      "name": "Remote CoWorker",
+      "slug": "remotecoworker",
+      "description": "Remote CoWorker helps small and mid-sized businesses scale with dedicated virtual assistants and remote professionals who work like an extension of your team, full-time or part-time, at a fraction of in-house cost. We handle recruiting, vetting, training, and management, so you skip the hiring headache. Talent comes from the top 1% of applicants and can start in 48 hours. Roles include admin, customer support, sales, bookkeeping, ecommerce, and HIPAA-trained healthcare support.",
+      "offer": "$300 flat fee per new customer",
+      "tags": [
+        "Collaboration & Productivity",
+        "Customer Service",
+        "HR Software",
+        "IT Management",
+        "Marketing",
+        "Sales"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/remotecoworker?company=remotecoworker&gref=marketplace",
+      "terms_url": "https://remotecoworker.com/affiliate-agreement",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 54,
+      "relevance_matches": [
+        "customer service",
+        "marketing",
+        "productivity",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": true
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:adp",
       "network": "partnerstack",
       "name": "RUN Powered by ADP®",
@@ -22270,6 +22302,7 @@
         "Collaboration & Productivity",
         "HR",
         "HR Software",
+        "Hot",
         "Managed Service Provider",
         "Office Software",
         "Payroll",
@@ -22619,6 +22652,51 @@
       }
     },
     {
+      "id": "partnerstack:betterliferealestatefundinginc",
+      "network": "partnerstack",
+      "name": "BetterLife Real Estate Funding",
+      "slug": "betterliferealestatefundinginc",
+      "description": "BetterLife Real Estate Funding (BetterLife REF) specializes in DSCR loans and creative lending solutions built specifically for real estate investors. We were built to buck the bureaucracy that comes with traditional bank lending. Flexible terms, fast closings in as little as 5 days. With a repeat borrower rate of more than 70%, you can trust us with your community.",
+      "offer": "Earn $700 per successful referral",
+      "tags": [
+        "Accounting",
+        "Hot",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/betterliferealestatefundinginc?company=betterliferealestatefundinginc&gref=marketplace",
+      "terms_url": "https://betterliferef.com/affiliateterms/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 13,
+      "source": "https://market.partnerstack.com/",
+      "score": 52,
+      "relevance_matches": [
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:gcheck",
       "network": "partnerstack",
       "name": "GCheck",
@@ -22640,7 +22718,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 6,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 52,
       "relevance_matches": [
@@ -22695,6 +22773,51 @@
       "relevance_matches": [
         "customer service",
         "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:samsara",
+      "network": "partnerstack",
+      "name": "Samsara",
+      "slug": "samsara",
+      "description": "Samsara is the pioneer of the Connected Operations Cloud, helping businesses that depend on physical operations turn IoT data into actionable insights that improve their operations.",
+      "offer": "Earn a $150 flat fee for every paying customer you refer",
+      "tags": [
+        "Hot",
+        "IoT Management",
+        "Supply Chain & Logistics",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/samsara?company=samsara&gref=marketplace",
+      "terms_url": "https://www.samsara.com/pdf/affiliate-programt-terms-and-conditions.pdf",
+      "website": "https://www.samsara.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 11,
+      "source": "https://market.partnerstack.com/",
+      "score": 51,
+      "relevance_matches": [
+        "data"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -22840,56 +22963,13 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 50,
       "relevance_matches": [
         "marketing",
         "sales",
         "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:betterliferealestatefundinginc",
-      "network": "partnerstack",
-      "name": "BetterLife Real Estate Funding",
-      "slug": "betterliferealestatefundinginc",
-      "description": "BetterLife Real Estate Funding (BetterLife REF) specializes in DSCR loans and creative lending solutions built specifically for real estate investors. We were built to buck the bureaucracy that comes with traditional bank lending. Flexible terms, fast closings in as little as 5 days. With a repeat borrower rate of more than 70%, you can trust us with your community.",
-      "offer": "Earn $700 per successful referral",
-      "tags": [
-        "Accounting",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/betterliferealestatefundinginc?company=betterliferealestatefundinginc&gref=marketplace",
-      "terms_url": "https://betterliferef.com/affiliateterms/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": false,
-      "review_days": 13,
-      "source": "https://market.partnerstack.com/",
-      "score": 47,
-      "relevance_matches": [
-        "sales"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -23006,7 +23086,7 @@
       "name": "SelfCommunity",
       "slug": "quentralsrl",
       "description": "SelfCommunity is a proprietary, white-label Community platform that partners can integrate into their clients’ digital ecosystems. It enables organizations to engage teams and customers while keeping full ownership and control of their data. With REST APIs, event-driven webhooks, and composable SDKs, it integrates seamlessly with existing tech stacks. Partners earn 20% recurring commission for the full customer relationship.",
-      "offer": "Earn 20% recurring commission on every customer payment, for the full customer relationship.",
+      "offer": "20% of net subscription fees on every Professional and Enterprise payment, paid monthly in EUR.",
       "tags": [
         "Analytics",
         "Collaboration & Productivity",
@@ -23075,7 +23155,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 47,
       "relevance_matches": [],
@@ -23142,49 +23222,6 @@
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": true
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:samsara",
-      "network": "partnerstack",
-      "name": "Samsara",
-      "slug": "samsara",
-      "description": "Samsara is the pioneer of the Connected Operations Cloud, helping businesses that depend on physical operations turn IoT data into actionable insights that improve their operations.",
-      "offer": "Earn a $150 flat fee for every paying customer you refer",
-      "tags": [
-        "IoT Management",
-        "Supply Chain & Logistics"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/samsara?company=samsara&gref=marketplace",
-      "terms_url": "https://www.samsara.com/pdf/affiliate-programt-terms-and-conditions.pdf",
-      "website": "https://www.samsara.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 11,
-      "source": "https://market.partnerstack.com/",
-      "score": 46,
-      "relevance_matches": [
-        "data"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
         },
         "cookie_days": null
       }
@@ -23394,7 +23431,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 42,
       "relevance_matches": [],
@@ -23720,6 +23757,48 @@
       }
     },
     {
+      "id": "partnerstack:forwardly",
+      "network": "partnerstack",
+      "name": "Forwardly",
+      "slug": "forwardly",
+      "description": "Helps US businesses pay bills and get paid faster, for less. Connect with other businesses on the Forwardly Network for free and fast bank payments that sync automatically with your accounting or ERP platform. Want to get started? Open your free business account and get set up in only 5 minutes.",
+      "offer": "Earn up to $1,000 for every US business you refer",
+      "tags": [
+        "AR/VR",
+        "Hot",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/forwardly?company=forwardly&gref=marketplace",
+      "terms_url": "https://www.forwardly.com/terms",
+      "website": "https://www.forwardly.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 39,
+      "relevance_matches": [],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:healthie",
       "network": "partnerstack",
       "name": "Healthie",
@@ -23802,6 +23881,48 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:barcodestalk",
+      "network": "partnerstack",
+      "name": "Bar Codes Talk",
+      "slug": "barcodestalk",
+      "description": "UPC & EAN Barcode Number & Label Provider.",
+      "offer": "",
+      "tags": [
+        "Affiliates",
+        "Customer Service",
+        "Hot",
+        "Office Software",
+        "Other",
+        "Referral Partners",
+        "Trusted",
+        "hot"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/barcodestalk?company=barcodestalk&gref=marketplace",
+      "terms_url": "https://www.barcodestalk.com/affiliate-terms-and-conditions",
+      "website": "https://www.barcodestalk.com/",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": 4,
+      "source": "https://market.partnerstack.com/",
+      "score": 37,
+      "relevance_matches": [
+        "customer service",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
