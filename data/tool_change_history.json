@@ -1,10 +1,55 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 60,
+    "successful_checks": 64,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-28",
+      "id": "28346f1dc65fbb40",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://researchrabbit.ai",
+      "tool_id": "research-rabbit",
+      "tool_name": "Research Rabbit"
+    },
+    {
+      "detected_on": "2026-10-28",
+      "id": "a2f473d38406423f",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://sembly.ai",
+      "tool_id": "sembly-ai",
+      "tool_name": "Sembly AI"
+    },
+    {
+      "detected_on": "2026-10-28",
+      "id": "b662c50c6581ea3c",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://surferseo.com",
+      "tool_id": "surfer-seo",
+      "tool_name": "Surfer SEO"
+    },
+    {
+      "detected_on": "2026-10-28",
+      "id": "ceafa996a085ad70",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://writer.com",
+      "tool_id": "writer",
+      "tool_name": "Writer"
+    },
+    {
+      "detected_on": "2026-10-28",
+      "id": "8b5aeb6feda8bb9b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.amplemarket.com",
+      "tool_id": "amplemarket",
+      "tool_name": "Amplemarket"
+    },
     {
       "detected_on": "2026-10-27",
       "id": "8953f46956e40f50",
@@ -1375,6 +1420,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-27",
+  "updated_at": "2026-10-28",
   "version": 1
 }
