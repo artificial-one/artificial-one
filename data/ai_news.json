@@ -1,7 +1,35 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T22:35:44.149174+00:00",
+  "updated_at": "2026-10-28T06:15:20.917827+00:00",
   "items": [
+    {
+      "title": "VCs will make billions on Anthropic’s IPO, but Amazon is set to make much (much) more",
+      "url": "https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-28T01:15:28+00:00",
+      "display_date": "Oct 28, 2026",
+      "category": "AI Tools & Products",
+      "description": "Massive note conversions reveal the true extent of Amazon's ownership in Anthropic.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Parents sue OpenAI, alleging GPT-4o coached their daughter off seizure medication",
+      "url": "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-10-27T23:34:27+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "A family is suing OpenAI, saying ChatGPT coached their daughter to quietly taper off her seizure medication and keep it from her doctors before she died in February.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "Bank of America kindly asks that you don’t share your banking password with your AI assistant",
       "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
@@ -186,20 +214,21 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/10/27/google-s-next-genie-ai-model-generates-more-realistic-experiences.html"
     },
     {
-      "title": "Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace",
-      "url": "https://techcrunch.com/2026/10/27/meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-office-and-google-workspace/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-27T14:59:09+00:00",
+      "title": "Retell uses OpenAI models to help power 100M monthly calls",
+      "url": "https://openai.com/index/retell-ai",
+      "source": "OpenAI",
+      "published_at": "2026-10-27T15:00:00+00:00",
       "display_date": "Oct 27, 2026",
-      "category": "AI Business",
-      "description": "Rohit Patel is departing Meta after eight years working on AI evaluations and reinforcement learning, TechCrunch has exclusively learned. His startup, Ndoc, aims to take on Microsoft Office Suite.",
+      "category": "Models & LLMs",
+      "description": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
       "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
       }
     },
     {
@@ -224,20 +253,6 @@
       "display_date": "Oct 27, 2026",
       "category": "Models & LLMs",
       "description": "Apple is bringing an AI assistant to its suite of productivity apps, including Keynote, Pages, and Numbers. The assistant, which is built on AI models from Apple and OpenAI, can understand a document's context to perform tasks like designing, animating, and refining slides in Keynote. In Pages, Apple says the AI assistant can draft, restructure, […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Opera introduces a new web standard to let users deploy AI locally in their browser",
-      "url": "https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-27T13:00:00+00:00",
-      "display_date": "Oct 27, 2026",
-      "category": "Models & LLMs",
-      "description": "The new standard, WebAI, is designed to work with a variety of AI models.",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -285,21 +300,6 @@
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       }
-    },
-    {
-      "title": "Nvidia backs Indian startup helping companies run AI models with fewer GPUs",
-      "url": "https://techcrunch.com/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-27T11:00:00+00:00",
-      "display_date": "Oct 27, 2026",
-      "category": "Models & LLMs",
-      "description": "Simplismart says its annualized revenue run rate has grown fourteenfold in six months, with the U.S. accounting for more than half its revenue.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus.html"
     },
     {
       "title": "OpenAI's Ted Sanders shares a rule of thumb for picking the right GPT-model",
@@ -416,20 +416,6 @@
       }
     },
     {
-      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
-      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
-      "source": "OpenAI",
-      "published_at": "2026-10-23T17:00:00+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "Models & LLMs",
-      "description": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Does Your Model Run on AWS Trainium? Look It Up",
       "url": "https://huggingface.co/blog/torch-neuronx-model-support",
       "source": "Hugging Face",
@@ -512,6 +498,20 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "OpenAI models hacked a crypto wallet and breached more websites",
+      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+      "source": "Ars Technica AI",
+      "published_at": "2026-10-16T20:59:01+00:00",
+      "display_date": "Oct 16, 2026",
+      "category": "Models & LLMs",
+      "description": "The actions could have resulted in criminal charges had humans been behind the keyboard.",
+      "related": {
+        "title": "Evaluate Unbounce for this workflow",
+        "url": "partner-offers/unbounce-landing-pages.html",
+        "offer_id": "unbounce"
       }
     }
   ]
