@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29T06:25:42.501391+00:00",
+  "updated_at": "2026-10-29T13:41:26.026758+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/29/google-s-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors.html",
+      "created_at": "2026-10-29T13:41:26.026758+00:00",
+      "source": {
+        "title": "Google's AI search problem finally shows up in the earnings report, some investors believe",
+        "url": "https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/",
+        "source": "The Decoder",
+        "published_at": "2026-10-29T10:16:34+00:00",
+        "display_date": "Oct 29, 2026",
+        "category": "AI Business",
+        "description": "Google's stock dropped as much as ten percent after its quarterly earnings. Cloud revenue more than doubled to $30.7 billion, but search revenue grew just 12 percent, slower than expected. Google acknowledged that its fast-growing AI mode brings in less revenue than traditional search, and it is now expanding its AI mode ad program internationally. The article Google's AI search problem finally shows up in the earnings report, some investors believe appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Google's AI search revenue growth lags as stock drops",
+        "summary": "Google's stock fell 10% after earnings, with search revenue growing only 12% despite AI mode's rapid growth. The company acknowledged AI mode generates less revenue than traditional search and is expanding its ad program internationally.",
+        "facts": [
+          {
+            "statement": "Google's stock dropped 10% after earnings",
+            "evidence": "Google's stock dropped as much as ten percent after its quarterly earnings"
+          },
+          {
+            "statement": "AI mode generates less revenue than traditional search",
+            "evidence": "the fast-growing AI mode brings in less revenue than traditional search"
+          },
+          {
+            "statement": "Google is expanding AI ad program internationally",
+            "evidence": "it is now expanding its AI mode ad program internationally"
+          }
+        ],
+        "why_it_matters": "The discrepancy between AI mode's growth and revenue highlights challenges in monetizing new technologies. Google's stock drop reflects investor concerns about the sustainability of its core business in the face of rapid AI expansion.",
+        "elephant_take": "🐘 鼋 The AI search revenue gap is a red flag, but Google remains optimistic. Its cloud spending and AI investments suggest a long-term bet on tech growth, even if current results are mixed.",
+        "caveat": "The data may reflect short-term trends rather than long-term shifts in AI monetization.",
+        "who_should_care": [
+          "Investors",
+          "AI developers",
+          "Tech analysts"
+        ],
+        "what_to_do": [
+          "Monitor Google's AI revenue metrics",
+          "Track cloud spending trends",
+          "Assess AI ad program expansion plans"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Google%27s%20AI%20search%20problem%20finally%20shows%20up%20in%20the%20earnings%20report%2C%20some%20investors%20believe%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "path": "news/2026/10/28/adam-mosseri-says-negativity-around-ai-is-going-to-get-worse.html",
       "created_at": "2026-10-29T06:25:42.501391+00:00",
@@ -16684,6 +16749,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-29T13:41:26.026758+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openais-astra-becomes-the-main-target-for-chinese-ai-labs-after-anthropic-tightens-its-defenses/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-29T13:41:26.026758+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-29T13:41:26.026758+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-29T13:41:26.026758+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/anydecisionmodel",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-29T13:41:26.026758+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-29T06:25:42.501391+00:00",
@@ -16890,36 +16985,6 @@
     {
       "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-26T05:15:10.087659+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-26T05:15:10.087659+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-26T05:15:10.087659+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/nvidia/kumo-relational",
-      "reason": "quality gate rejected draft: hype language is present",
-      "at": "2026-10-26T05:15:10.087659+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/att-legal",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-10-26T05:15:10.087659+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
-      "reason": "HTTP Error 403: Forbidden",
       "at": "2026-10-26T05:15:10.087659+00:00",
       "pipeline_version": "2"
     }
