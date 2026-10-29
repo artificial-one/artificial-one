@@ -1,10 +1,37 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 64,
+    "successful_checks": 63,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-29",
+      "id": "5f32523c4f09059e",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hubstaff.com/",
+      "tool_id": "hubstaff",
+      "tool_name": "Hubstaff"
+    },
+    {
+      "detected_on": "2026-10-29",
+      "id": "8a9397393ab4f649",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://bolt.new",
+      "tool_id": "bolt-new",
+      "tool_name": "Bolt.new"
+    },
+    {
+      "detected_on": "2026-10-29",
+      "id": "3d8b012ede31a716",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://codeium.com",
+      "tool_id": "codeium",
+      "tool_name": "Codeium"
+    },
     {
       "detected_on": "2026-10-28",
       "id": "28346f1dc65fbb40",
@@ -1420,6 +1447,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-28",
+  "updated_at": "2026-10-29",
   "version": 1
 }
