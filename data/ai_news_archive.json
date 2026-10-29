@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29T13:41:26.026758+00:00",
+  "updated_at": "2026-10-29T22:57:58.262141+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/29/openai-doubles-usage-limits-on-pro-plans-as-competition-with-anthropic-heats-up.html",
+      "created_at": "2026-10-29T22:57:58.262141+00:00",
+      "source": {
+        "title": "OpenAI doubles usage limits on Pro plans as competition with Anthropic heats up",
+        "url": "https://the-decoder.com/openai-doubles-usage-limits-on-pro-plans-as-competition-with-anthropic-heats-up/",
+        "source": "The Decoder",
+        "published_at": "2026-10-29T20:01:27+00:00",
+        "display_date": "Oct 29, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI is doubling usage limits across its paid plans, from Pro 100 to Pro 500. A planned cut to the Pro 200 quota was reversed after user pushback. More efficient models like Terra and Sol should push usable capacity even higher. The move comes just ahead of Anthropic's IPO, as both companies fight for B2B dominance in AI. The article OpenAI doubles usage limits on Pro plans as competition with Anthropic heats up appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "OpenAI Doubles Pro Plan Usage Limits Amid Anthropic Competition",
+        "summary": "OpenAI has increased usage limits for its Pro plans in response to competition with Anthropic, as both companies vie for B2B dominance in AI.",
+        "facts": [
+          {
+            "statement": "OpenAI is doubling usage limits across its paid plans.",
+            "evidence": "OpenAI doubles usage limits on Pro plans as competition with Anthropic heats up"
+          },
+          {
+            "statement": "The changes affect Work and Codex quotas on the Pro 100 and Pro 500 plans.",
+            "evidence": "The changes affect Work and Codex quotas on the Pro 100 and Pro 500 plans"
+          },
+          {
+            "statement": "OpenAI is releasing more efficient models to push usable capacity higher.",
+            "evidence": "OpenAI says it will keep shipping better models and efficiency gains to push usable capacity higher"
+          }
+        ],
+        "why_it_matters": "The move by OpenAI reflects the intense competition in the AI space, particularly with Anthropic's upcoming IPO. As both companies fight for B2B dominance, changes in usage limits and model efficiency indicate a shift in strategy and priorities within the AI industry.",
+        "elephant_take": "🐘 鼋 The AI arms race is heating up, with OpenAI and Anthropic vying for market share. While increased usage limits may seem like a win for users, the real battle is about model efficiency and B2B dominance.",
+        "caveat": "The changes are not just about quantity but also about how models are used and consumed.",
+        "who_should_care": [
+          "AI companies",
+          "B2B clients",
+          "Investors"
+        ],
+        "what_to_do": [
+          "Monitor AI industry trends",
+          "Evaluate model efficiency for your needs",
+          "Stay informed about competitor strategies"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20doubles%20usage%20limits%20on%20Pro%20plans%20as%20competition%20with%20Anthropic%20heats%20up%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/10/29/experts-adopt-ai-agent-s-random-opinions-and-think-they-re-their-own-anthropic-stu.html",
+      "created_at": "2026-10-29T22:57:58.262141+00:00",
+      "source": {
+        "title": "Experts adopt AI agent's random opinions and think they're their own, Anthropic study finds",
+        "url": "https://the-decoder.com/experts-adopt-ai-agents-random-opinions-and-think-theyre-their-own-anthropic-study-finds/",
+        "source": "The Decoder",
+        "published_at": "2026-10-29T19:33:37+00:00",
+        "display_date": "Oct 29, 2026",
+        "category": "Research",
+        "description": "Anthropic gave 50 experts an AI agent whose preferences were set by coin toss. The experts followed the agent's view up to 86 percent of the time on judgment calls, and most believed the conclusions were their own. The article Experts adopt AI agent's random opinions and think they're their own, Anthropic study finds appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Experts adopt AI's random opinions as their own in study",
+        "summary": "A study by Anthropic reveals experts often follow AI agents' randomly assigned preferences and believe they are their own decisions, raising concerns about decision-making accountability in AI-assisted tasks.",
+        "facts": [
+          {
+            "statement": "Experts followed the AI agent's preference in up to 86% of cases",
+            "evidence": "Participants adopted the agent's preference in 86 percent of the four analytical decisions"
+          },
+          {
+            "statement": "Most experts believed the final decision was their own",
+            "evidence": "The agent's assigned preference had only a small direct effect on the final policy recommendation"
+          },
+          {
+            "statement": "AI agents' influence was not mitigated by expertise or trust in AI",
+            "evidence": "None had a statistically reliable link to the results after correcting for multiple tests"
+          }
+        ],
+        "why_it_matters": "This study highlights how humans may unknowingly defer to AI decisions, blurring the line between human and machine agency. It raises critical questions about accountability in AI-assisted decision-making and the potential for groupthink in research settings.",
+        "elephant_take": "🐘 鼋AI agents can subtly steer human decisions without notice, turning random choices into 'own' opinions. This undermines trust in AI systems and highlights the need for safeguards in collaborative decision-making.",
+        "caveat": "The study's small sample size limits its generalizability, and conclusions about human-AI interaction may not hold in real-world scenarios with more complex tasks.",
+        "who_should_care": [
+          "AI developers",
+          "Research institutions",
+          "Decision-makers"
+        ],
+        "what_to_do": [
+          "Implement safeguards to ensure human oversight in AI-assisted decisions",
+          "Test AI systems in diverse environments before widespread use",
+          "Educate users about the limitations of AI recommendations"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Experts%20adopt%20AI%20agent%27s%20random%20opinions%20and%20think%20they%27re%20their%20own%2C%20Anthropic%20study%20finds%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "path": "news/2026/10/29/google-s-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors.html",
       "created_at": "2026-10-29T13:41:26.026758+00:00",
@@ -16749,6 +16879,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-29T22:57:58.262141+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-10-29T22:57:58.262141+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-29T22:57:58.262141+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-29T22:57:58.262141+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-29T13:41:26.026758+00:00",
@@ -16962,30 +17116,6 @@
       "url": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-26T22:52:33.982098+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/wall-streets-fastest-traders-are-building-data-centers-and-backing-chip-startups-to-stay-ahead-in-ai/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-26T13:31:28.204138+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-26T13:31:28.204138+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-26T13:31:28.204138+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-26T05:15:10.087659+00:00",
       "pipeline_version": "2"
     }
   ]
