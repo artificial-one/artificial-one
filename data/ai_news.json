@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T22:50:00.929796+00:00",
+  "updated_at": "2026-10-29T06:25:37.875181+00:00",
   "items": [
+    {
+      "title": "Adam Mosseri says negativity around AI is ‘going to get worse’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1021644/adam-mosseri-instagram-ai-negativity",
+      "source": "The Verge AI",
+      "published_at": "2026-10-28T23:05:39+00:00",
+      "display_date": "Oct 28, 2026",
+      "category": "AI Tools & Products",
+      "description": "Asked about AI and the trend of college students booing tech CEOs at graduation ceremonies, Instagram head Adam Mosseri acknowledged in an interview that a lot of people really don't like AI, and it's not just young people and creatives. Appearing on the Colin and Samir podcast to talk about the launch of widescreen and […]",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/10/28/adam-mosseri-says-negativity-around-ai-is-going-to-get-worse.html"
+    },
     {
       "title": "Google expands AI Search ads globally as core ad growth slows",
       "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
@@ -88,7 +103,8 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/28/microsoft-is-ending-copilot-support-on-smart-tvs.html"
     },
     {
       "title": "Chrome’s AI-powered Autofill can now dig through your Gmail to fill out forms",
@@ -102,7 +118,8 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/10/28/chrome-s-ai-powered-autofill-can-now-dig-through-your-gmail-to-fill-out-forms.html"
     },
     {
       "title": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
@@ -261,20 +278,6 @@
       "archive_url": "news/2026/10/27/researchers-are-getting-tired-of-openai-gatekeeping-its-breakthroughs.html"
     },
     {
-      "title": "VisionQuest is what happens when AI really goes rogue",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1017064/visionquest-marvel-rogue-ai",
-      "source": "The Verge AI",
-      "published_at": "2026-10-27T17:31:36+00:00",
-      "display_date": "Oct 27, 2026",
-      "category": "AI Tools & Products",
-      "description": "In Marvel's VisionQuest, a superpowered robot tries to better understand humanity by getting lost in elaborate, digital daydreams in which he and other artificial intelligence-powered beings live together in a home. The series is deeply fantastical, yet it plays with some of the ideas that have come to dominate the conversation about real-world generative artificial […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
       "title": "Build specialized multimodal models with LFM3",
       "url": "https://huggingface.co/blog/LiquidAI/lfm3",
       "source": "Hugging Face",
@@ -282,20 +285,6 @@
       "display_date": "Oct 27, 2026",
       "category": "Models & LLMs",
       "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Anthropic’s elaborate plan to keep Wall Street at bay",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1019470/anthropic-ipo-resist-investor-pressure-cut-corners-safety",
-      "source": "The Verge AI",
-      "published_at": "2026-10-27T17:04:30+00:00",
-      "display_date": "Oct 27, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic wants to have it both ways. With its impending IPO, it wants to tap the vast riches of the public markets and insists it doesn't want to compromise its core mission of developing AI safely and for the benefit of humanity. But greater model capabilities bring greater risks, and shareholders eager for returns may […]",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -513,6 +502,21 @@
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       }
+    },
+    {
+      "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
+      "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
+      "source": "Ars Technica AI",
+      "published_at": "2026-10-02T23:03:16+00:00",
+      "display_date": "Oct 02, 2026",
+      "category": "AI Tools & Products",
+      "description": "Meta says FDA isn't sufficient to Muse reading messages. Apple begs to differ.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/10/02/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents.html"
     }
   ]
 }
