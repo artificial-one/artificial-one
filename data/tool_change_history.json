@@ -1,10 +1,46 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 63,
+    "successful_checks": 62,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-30",
+      "id": "dd5bc00d0984d213",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://dovetail.com",
+      "tool_id": "dovetail",
+      "tool_name": "Dovetail"
+    },
+    {
+      "detected_on": "2026-10-30",
+      "id": "ca79efddba7ab233",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://getimg.ai",
+      "tool_id": "getimg-ai",
+      "tool_name": "Getimg.ai"
+    },
+    {
+      "detected_on": "2026-10-30",
+      "id": "94f156ef5f637f8d",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://grain.com",
+      "tool_id": "grain",
+      "tool_name": "Grain"
+    },
+    {
+      "detected_on": "2026-10-30",
+      "id": "fd7a269438b60ae4",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hotpot.ai",
+      "tool_id": "hotpot-ai",
+      "tool_name": "Hotpot.ai"
+    },
     {
       "detected_on": "2026-10-29",
       "id": "5f32523c4f09059e",
@@ -1447,6 +1483,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-29",
+  "updated_at": "2026-10-30",
   "version": 1
 }
