@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updated_at": "2026-10-31T06:15:12.542502+00:00",
+  "updated_at": "2026-10-31T13:02:10.224472+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/30/google-s-ai-mode-doesn-t-drive-traffic-for-anybody-reddit-ceo-huffman-warns-the-en.html",
+      "created_at": "2026-10-31T13:02:10.224472+00:00",
+      "source": {
+        "title": "Google's AI Mode doesn't drive traffic \"for anybody,\" Reddit CEO Huffman warns the entire web",
+        "url": "https://the-decoder.com/googles-ai-mode-doesnt-drive-traffic-for-anybody-reddit-ceo-huffman-warns-the-entire-web/",
+        "source": "The Decoder",
+        "published_at": "2026-10-30T17:15:24+00:00",
+        "display_date": "Oct 30, 2026",
+        "category": "AI Tools & Products",
+        "description": "Reddit lost over one million Google search referrals per week in October, CEO Steve Huffman said. The stock dropped more than 25 percent despite strong earnings. Huffman blames Google's AI Overviews and AI Mode for driving zero traffic to external sites. Reddit now tests login barriers and wants to become a direct destination, less reliant on the open web. The shift threatens every content-driven business that depends on search traffic. The article Google's AI Mode doesn't drive traffic \"for any",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Reddit CEO Warns Web of Google's AI Mode Traffic Impact",
+        "summary": "Reddit CEO Steve Huffman warns that Google's AI Mode is driving zero traffic to external sites, threatening content-driven businesses reliant on search traffic.",
+        "facts": [
+          {
+            "statement": "Google's AI Mode does not drive traffic for anyone.",
+            "evidence": "AI Mode does not drive traffic. Not for us, and not to anybody as far as I know."
+          },
+          {
+            "statement": "Reddit lost over one million Google search referrals per week in October.",
+            "evidence": "Reddit lost over one million Google search referrals per week in October"
+          },
+          {
+            "statement": "Google's AI Mode has caused Reddit's stock to drop over 25 percent.",
+            "evidence": "AI Mode has tanked not just Google's stock but Reddit's too. Shares dropped over 25 percent"
+          }
+        ],
+        "why_it_matters": "The shift in how Google works threatens content-driven businesses that rely on search traffic. It highlights a structural risk for the entire web, as businesses dependent on Google may face similar issues.",
+        "elephant_take": "🐘 鼋 Google's AI Mode is a digital black hole, swallowing traffic and leaving sites like Reddit scrambling. The web's reliance on Google's search engine is now in jeopardy.",
+        "caveat": "The situation highlights the fragility of online ecosystems dependent on major search engines.",
+        "who_should_care": [
+          "Content creators",
+          "Digital marketers",
+          "Web developers"
+        ],
+        "what_to_do": [
+          "Diversify traffic sources",
+          "Monitor search engine algorithms",
+          "Invest in direct user engagement strategies"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Google%27s%20AI%20Mode%20doesn%27t%20drive%20traffic%20%22for%20anybody%2C%22%20Reddit%20CEO%20Huffman%20warns%20the%20entire%20web%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/31/nvidia-weighs-playing-the-cosigner-for-nscale-s-ai-data-center-in-west-virginia.html",
       "created_at": "2026-10-31T06:15:12.542502+00:00",
@@ -17336,6 +17401,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/microsoft-offers-a-quarter-of-its-workforce-voluntary-severance-while-shielding-ai-critical-teams/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-31T13:02:10.224472+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/google-deepmind-creates-a-global-map-of-forests-with-satellite-data-and-ai/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-31T13:02:10.224472+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openai-raises-just-11-billion-of-its-30-billion-target-as-big-investors-lose-their-ai-appetite/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-31T13:02:10.224472+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/policy/1022880/wikipedia-openai-new-york-times-copyright",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-10-31T13:02:10.224472+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-10-31T13:02:10.224472+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-31T06:15:12.542502+00:00",
@@ -17375,12 +17470,6 @@
       "url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
       "at": "2026-10-30T22:38:22.734472+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/policy/1022880/wikipedia-openai-new-york-times-copyright",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-30T13:30:10.582564+00:00",
       "pipeline_version": "2"
     },
     {
@@ -17549,30 +17638,6 @@
       "url": "https://openai.com/index/retell-ai",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-10-28T06:15:25.071333+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/former-deepmind-researcher-thinks-alphagos-playbook-can-cure-ai-hallucinations/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story; draft copies a long source phrase",
-      "at": "2026-10-28T06:15:25.071333+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1019373/apple-pages-keynote-numbers-ai-chatbot-update",
-      "reason": "quality gate rejected draft: hype language is present",
-      "at": "2026-10-28T06:15:25.071333+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-27T22:35:49.068129+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-27T22:35:49.068129+00:00",
       "pipeline_version": "2"
     }
   ]
