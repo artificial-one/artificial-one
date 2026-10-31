@@ -1,10 +1,55 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 62,
+    "successful_checks": 61,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-10-31",
+      "id": "438eaa070a3ebdc3",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://reclaim.ai",
+      "tool_id": "reclaim-ai",
+      "tool_name": "Reclaim AI"
+    },
+    {
+      "detected_on": "2026-10-31",
+      "id": "00b2d855974b2f4b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://simplified.com",
+      "tool_id": "simplified",
+      "tool_name": "Simplified"
+    },
+    {
+      "detected_on": "2026-10-31",
+      "id": "9eb151f0be79c180",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://speechify.com",
+      "tool_id": "speechify",
+      "tool_name": "Speechify"
+    },
+    {
+      "detected_on": "2026-10-31",
+      "id": "3b1df8a72444f40b",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://superhuman.com",
+      "tool_id": "superhuman",
+      "tool_name": "Superhuman"
+    },
+    {
+      "detected_on": "2026-10-31",
+      "id": "356c2d35a025d959",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://tactiq.io",
+      "tool_id": "tactiq",
+      "tool_name": "Tactiq"
+    },
     {
       "detected_on": "2026-10-30",
       "id": "dd5bc00d0984d213",
@@ -1483,6 +1528,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-10-30",
+  "updated_at": "2026-10-31",
   "version": 1
 }
