@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T18:05:51.257681+00:00",
+  "updated_at": "2026-11-01T22:23:46.906114+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses.html",
+      "created_at": "2026-11-01T22:23:46.906114+00:00",
+      "source": {
+        "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+        "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-01T21:55:23+00:00",
+        "display_date": "Nov 01, 2026",
+        "category": "AI Tools & Products",
+        "description": "Data centers are deeply unpopular. But what if we called them something else?",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "OpenAI Considers Rebranding Data Centers as 'AI Compute Campuses'",
+        "summary": "OpenAI may rebrand its data centers as 'AI compute campuses' to improve public perception. The move is part of a broader PR strategy following midterm elections, aiming to shape the AI debate and promote responsible AI development.",
+        "facts": [
+          {
+            "statement": "OpenAI is considering rebranding its data centers as 'AI compute campuses'.",
+            "evidence": "OpenAI might rebrand its data centers as ‘AI compute campuses’"
+          },
+          {
+            "statement": "The rebranding is part of OpenAI's PR strategy after midterm elections.",
+            "evidence": "Axios reports that OpenAI is preparing a “PR blitz” for after the midterm elections"
+          },
+          {
+            "statement": "OpenAI's chief global affairs officer discusses AI's future in 2028.",
+            "evidence": "he expects ai to be “ the issue” in the presidential"
+          }
+        ],
+        "why_it_matters": "The rebranding of data centers as 'AI compute campuses' reflects OpenAI's effort to shift public perception of AI technology. This move is part of a broader strategy to influence the AI debate and promote responsible development, potentially shaping how society views AI in the future.",
+        "elephant_take": "🐘 鼋 OpenAI’s PR move is more about image than impact. Calling data centers 'AI compute campuses' is a clever way to soften public resistance to the tech, but it doesn’t address the real issues of privacy and accountability.",
+        "caveat": "The rebranding is a superficial attempt to improve public perception, not a solution to the underlying concerns about AI's impact on society.",
+        "who_should_care": [
+          "AI developers",
+          "Tech companies",
+          "Policy makers"
+        ],
+        "what_to_do": [
+          "Monitor OpenAI’s PR strategies",
+          "Evaluate the impact of rebranding on public perception",
+          "Stay informed about AI regulations and standards",
+          "Consider the ethical implications of AI development"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20might%20rebrand%20its%20data%20centers%20as%20%E2%80%98AI%20compute%20campuses%E2%80%99%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/11/01/adobe-is-testing-how-well-ai-agents-can-use-editing-tools-like-a-photoshop-profess.html",
       "created_at": "2026-11-01T18:05:51.257681+00:00",
@@ -17796,6 +17862,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
+      "at": "2026-11-01T22:23:46.906114+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
+      "reason": "quality gate rejected draft: summary length is outside the publication range; a fact has no exact source evidence",
+      "at": "2026-11-01T22:23:46.906114+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-01T22:23:46.906114+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openai-plans-to-train-models-on-daybreak-blue-cybersecurity-session-data-that-was-previously-off-limits/",
+      "reason": "quality gate rejected draft: summary length is outside the publication range; a fact has no exact source evidence",
+      "at": "2026-11-01T22:23:46.906114+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-01T22:23:46.906114+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/empathetic-prompts-can-turn-ai-chatbots-into-seemingly-traumatized-conversational-partners/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-01T18:05:51.257681+00:00",
@@ -17844,24 +17940,6 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-31T21:51:12.916005+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-31T21:51:12.916005+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/openai-plans-to-train-models-on-daybreak-blue-cybersecurity-session-data-that-was-previously-off-limits/",
-      "reason": "quality gate rejected draft: summary length is outside the publication range; a fact has no exact source evidence",
-      "at": "2026-10-31T21:51:12.916005+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://the-decoder.com/beekeeping-tips-and-wrestling-advice-can-train-ai-models-to-sabotage-oversight/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-31T21:51:12.916005+00:00",
@@ -17888,12 +17966,6 @@
     {
       "url": "https://www.theverge.com/policy/1022880/wikipedia-openai-new-york-times-copyright",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-31T13:02:10.224472+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-31T13:02:10.224472+00:00",
       "pipeline_version": "2"
     },
@@ -18027,12 +18099,6 @@
       "url": "https://the-decoder.com/openai-teases-dots-for-europe-but-its-berlin-devday-was-really-about-building-a-platform/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-29T06:25:42.501391+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-28T22:50:05.775156+00:00",
       "pipeline_version": "2"
     }
   ]
