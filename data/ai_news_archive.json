@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "updated_at": "2026-10-31T21:51:12.916005+00:00",
+  "updated_at": "2026-11-01T06:48:18.745478+00:00",
   "articles": [
+    {
+      "path": "news/2026/10/30/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours.html",
+      "created_at": "2026-11-01T06:48:18.745478+00:00",
+      "source": {
+        "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+        "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+        "source": "Ars Technica AI",
+        "published_at": "2026-10-30T21:09:54+00:00",
+        "display_date": "Oct 30, 2026",
+        "category": "AI Tools & Products",
+        "description": "It's still unknown how attackers got access to Anthropic's verified Cursor account.",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Anthropic AI Extension Compromised for 12 Hours",
+        "summary": "An AI extension for Anthropic's Claude model was backdoored for nearly 12 hours, potentially compromising up to 5,000 developers' machines. The malicious code aimed to install a persistent SSH backdoor and collect user data.",
+        "facts": [
+          {
+            "statement": "A backdoor was installed in an AI extension for Anthropic's Claude model.",
+            "evidence": "malicious version 2.1.313 was posted to the official Anthropic account"
+          },
+          {
+            "statement": "The backdoor aimed to collect user data and install a persistent SSH connection.",
+            "evidence": "collecting host and user information: hostname, username, OS, architecture, home directory path"
+          },
+          {
+            "statement": "The malicious code was distributed through Anthropic's official account on Cursor.",
+            "evidence": "malicious version 2.1.313 was posted to the official Anthropic account"
+          }
+        ],
+        "why_it_matters": "A backdoor in an AI extension could compromise developer systems and expose sensitive data, highlighting vulnerabilities in AI tool distribution channels. This incident underscores the need for stronger security measures in software updates and supply chains.",
+        "elephant_take": "🐘 鼋 A backdoored AI extension is a serious threat, but the flaws in the code mean it's not a perfect weapon. Anthropic needs to fix their update process and inform users about the breach.",
+        "caveat": "The incident highlights vulnerabilities in AI tool distribution channels and the need for stronger security measures.",
+        "who_should_care": [
+          "AI developers",
+          "Software security professionals",
+          "Cloud service providers"
+        ],
+        "what_to_do": [
+          "Verify software updates from official sources",
+          "Review system permissions and update settings",
+          "Monitor for unusual network activity",
+          "Report suspicious behavior to security teams"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20VS%20code%20extension%20on%20Cursor%20backdoored%20for%20nearly%2012%20hours%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round.html",
       "created_at": "2026-10-31T21:51:12.916005+00:00",
@@ -17533,6 +17599,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-11-01T06:48:18.745478+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; Elephant commentary is not specific to this story",
+      "at": "2026-11-01T06:48:18.745478+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-01T06:48:18.745478+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-01T06:48:18.745478+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-01T06:48:18.745478+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-31T21:51:12.916005+00:00",
@@ -17599,39 +17695,9 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-31T06:15:12.542502+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
-      "at": "2026-10-30T22:38:22.734472+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-30T22:38:22.734472+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-30T22:38:22.734472+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
-      "at": "2026-10-30T22:38:22.734472+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-30T13:30:10.582564+00:00",
       "pipeline_version": "2"
     },
     {
