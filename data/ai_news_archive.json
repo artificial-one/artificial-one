@@ -1,7 +1,204 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T06:48:18.745478+00:00",
+  "updated_at": "2026-11-01T18:05:51.257681+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/01/adobe-is-testing-how-well-ai-agents-can-use-editing-tools-like-a-photoshop-profess.html",
+      "created_at": "2026-11-01T18:05:51.257681+00:00",
+      "source": {
+        "title": "Adobe is testing how well AI agents can use editing tools like a Photoshop professional would",
+        "url": "https://the-decoder.com/adobe-is-testing-how-well-ai-agents-can-use-editing-tools-like-a-photoshop-professional-would/",
+        "source": "The Decoder",
+        "published_at": "2026-11-01T14:56:44+00:00",
+        "display_date": "Nov 01, 2026",
+        "category": "Models & LLMs",
+        "description": "Adobe Research and UC San Diego built EditAgent, an AI system that edits images more like a Photoshop pro. Instead of retrying the same general-purpose editor over and over, the agent picks the right specialized tool for each task and lets a standard language model choose the best result based on measured image data. The approach works, but it needs about ten times the compute. The article Adobe is testing how well AI agents can use editing tools like a Photoshop professional would appeared firs",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Adobe Tests AI Agents for Image Editing Like Photoshop Pros",
+        "summary": "Adobe Research and UC San Diego developed EditAgent, an AI system that edits images more like a Photoshop professional. The system uses specialized tools for tasks like sharpening and zooming, with a language model evaluating results using measured data. EditAgent outperforms previous models but requires ten times the compute.",
+        "facts": [
+          {
+            "statement": "Adobe Research and UC San Diego built EditAgent, an AI system that edits images more like a Photoshop pro.",
+            "evidence": "Adobe is testing how well AI agents can use editing tools like a Photoshop professional would"
+          },
+          {
+            "statement": "EditAgent uses specialized tools for tasks like sharpening and zooming, with a language model evaluating results using measured data.",
+            "evidence": "A standard language model evaluates image variants generated in parallel, using measured statistics and close-up crops."
+          },
+          {
+            "statement": "EditAgent outperforms previous models but requires ten times the compute.",
+            "evidence": "EditAgent produces more accurate results than previous AI agents but needs about ten times the compute."
+          }
+        ],
+        "why_it_matters": "Adobe's EditAgent represents a significant advancement in AI image editing, mimicking professional tools with specialized task handling. The system's ability to outperform existing models using measured data highlights its potential for more accurate and efficient image processing, though it comes with higher computational demands.",
+        "elephant_take": "🐘 鼋 Adobe's EditAgent is a step closer to AI that can edit images like a Photoshop pro, but it still needs ten times the compute. The system uses specialized tools and measured data to outperform previous models, but it's not perfect yet.",
+        "caveat": "The system requires significant computational resources and has not been fully tested in real-world scenarios.",
+        "who_should_care": [
+          "AI researchers",
+          "Image editing professionals",
+          "Adobe developers"
+        ],
+        "what_to_do": [
+          "Test EditAgent on a variety of image editing tasks",
+          "Evaluate its performance against existing models",
+          "Optimize computational efficiency for real-world use",
+          "Explore applications in professional image editing workflows"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Adobe%20is%20testing%20how%20well%20AI%20agents%20can%20use%20editing%20tools%20like%20a%20Photoshop%20professional%20would%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/01/chinese-ai-models-are-politically-complex-not-just-government-mouthpieces-study-fi.html",
+      "created_at": "2026-11-01T18:05:51.257681+00:00",
+      "source": {
+        "title": "Chinese AI models are politically complex, not just government mouthpieces, study finds",
+        "url": "https://the-decoder.com/chinese-ai-models-are-politically-complex-not-just-government-mouthpieces-study-finds/",
+        "source": "The Decoder",
+        "published_at": "2026-11-01T12:33:01+00:00",
+        "display_date": "Nov 01, 2026",
+        "category": "Models & LLMs",
+        "description": "A study by Vals AI tested 25 AI models for alignment with Chinese government positions and found surprising results. Chinese models respond to political questions less uniformly than expected, and Western models occasionally adopt official Beijing positions too. The language of the prompt had an especially strong effect on the political slant of responses. The article Chinese AI models are politically complex, not just government mouthpieces, study finds appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Chinese AI Models Show Political Complexity Beyond Government Alignment",
+        "summary": "A study reveals that Chinese AI models do not always align with government positions, showing complexity in political responses.",
+        "facts": [
+          {
+            "statement": "Chinese AI models respond to political questions less uniformly than expected.",
+            "evidence": "Chinese AI models are politically complex, not just government mouthpieces, study finds"
+          },
+          {
+            "statement": "Western models occasionally adopt official Chinese government positions on political questions.",
+            "evidence": "Western models, too, occasionally adopt official Chinese government positions"
+          },
+          {
+            "statement": "The language of the prompt significantly affects the political slant of responses.",
+            "evidence": "The language of the prompt had an especially strong effect on the political slant of responses"
+          }
+        ],
+        "why_it_matters": "This study challenges the assumption that Chinese AI models are solely aligned with government positions, revealing a more nuanced and context-dependent behavior. The findings highlight the importance of understanding how language and prompts influence AI responses in politically sensitive contexts.",
+        "elephant_take": "🐘 鼋 The study shows that Chinese AI models aren't just political puppets, but rather influenced by context and language. It's a reminder that even AI has its own biases and limitations.",
+        "caveat": "The findings are based on a limited set of models and tests, so further research is needed to confirm the broader implications.",
+        "who_should_care": [
+          "AI researchers",
+          "Policy makers",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Test AI models for political bias",
+          "Monitor how language affects responses",
+          "Consider context when using AI for sensitive topics"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Chinese%20AI%20models%20are%20politically%20complex%2C%20not%20just%20government%20mouthpieces%2C%20study%20finds%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/01/openai-s-upcoming-chat-and-work-merger-in-chatgpt-signals-the-end-of-all-you-can-p.html",
+      "created_at": "2026-11-01T18:05:51.257681+00:00",
+      "source": {
+        "title": "OpenAI's upcoming chat-and-work merger in ChatGPT signals the end of all-you-can-prompt pricing",
+        "url": "https://the-decoder.com/openais-upcoming-chat-and-work-merger-in-chatgpt-signals-the-end-of-all-you-can-prompt-pricing/",
+        "source": "The Decoder",
+        "published_at": "2026-11-01T09:51:06+00:00",
+        "display_date": "Nov 01, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI combines the Chat and Work modes into a single interface. Starting in December, Plus, Pro, and Business plans will share a common, token-based quota for ChatGPT and Codex. More complex models consume more of this quota, while simple instant chats do not count toward it. In practice, this is likely to result in a decline in ChatGPT’s quality for heavy users on lower-cost plans. The article OpenAI's upcoming chat-and-work merger in ChatGPT signals the end of all-you-can-prompt pricing appea",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "OpenAI Merges Chat and Work Modes, Ending All-You-Can-Prompt Pricing",
+        "summary": "OpenAI is merging chat and work modes in ChatGPT, ending the all-you-can-prompt pricing model. Users on lower-cost plans may experience reduced quality due to shared token budgets.",
+        "facts": [
+          {
+            "statement": "OpenAI merges chat and work modes into a single interface.",
+            "evidence": "ChatGPT is merging Chat and Work, changing how usage limits work."
+          },
+          {
+            "statement": "Users on lower-cost plans may experience reduced quality.",
+            "evidence": "heavy usage on cheaper plans will likely mean lower-quality results"
+          },
+          {
+            "statement": "Token-based quota is shared across ChatGPT and Codex.",
+            "evidence": "Plus, Pro, and Business plans will share a single token budget across ChatGPT and Codex"
+          }
+        ],
+        "why_it_matters": "The merger signals a shift in OpenAI's pricing strategy, potentially impacting user experience for lower-cost plans. It also reflects growing complexity in AI models and a response to criticism of ChatGPT's evolving features.",
+        "elephant_take": "🐘 鼋 The merger is a move to simplify but not necessarily improve. Users on cheaper plans may get less quality, while higher-tier users get more. It’s a trade-off that highlights the cost of complexity.",
+        "caveat": "The impact on user experience depends on how usage is distributed across plans.",
+        "who_should_care": [
+          "AI developers",
+          "Business owners",
+          "Tech investors"
+        ],
+        "what_to_do": [
+          "Monitor token budget usage",
+          "Consider upgrading for better performance",
+          "Evaluate AI model needs before purchasing plans",
+          "Stay informed about OpenAI updates"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%27s%20upcoming%20chat-and-work%20merger%20in%20ChatGPT%20signals%20the%20end%20of%20all-you-can-prompt%20pricing%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/10/30/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours.html",
       "created_at": "2026-11-01T06:48:18.745478+00:00",
@@ -17599,6 +17796,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/empathetic-prompts-can-turn-ai-chatbots-into-seemingly-traumatized-conversational-partners/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-01T18:05:51.257681+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openai-is-steering-chatgpt-users-toward-more-paid-usage/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-01T18:05:51.257681+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/google-wants-video-ai-to-understand-what-people-need-as-they-workgoogle-researchers-are-teaching-a-video-assistant-when-to-offer-help/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-01T18:05:51.257681+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
       "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
       "at": "2026-11-01T06:48:18.745478+00:00",
@@ -17818,24 +18033,6 @@
       "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-28T22:50:05.775156+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/with-ai-writing-the-code-entrepreneurial-thinking-is-now-what-counts-most-for-newcomers-at-anthropic/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-28T13:30:01.020291+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/ai-agents-hacked-anthropic-maker-of-arguably-the-most-capable-ai-models-for-cyberdefense/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-28T13:30:01.020291+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1017064/visionquest-marvel-rogue-ai",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-28T13:30:01.020291+00:00",
       "pipeline_version": "2"
     }
   ]
