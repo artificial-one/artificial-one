@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01",
+  "updated_at": "2026-11-02",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -50,7 +50,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 12,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -193,18 +193,10 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "ready_for_owner_application",
+      "state": "policy_review_required",
       "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
+        "status": "unreachable",
+        "signals": {},
         "cookie_days": null
       }
     },
@@ -1389,7 +1381,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1807,7 +1799,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 90,
+      "review_days": 100,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1972,7 +1964,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 23,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -3170,7 +3162,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -5093,7 +5085,7 @@
       "name": "Riverside",
       "slug": "riverside",
       "description": "Riverside is an all-in-one podcast and video studio for businesses and content creators who demand professional quality without technical complexity. Podcasters, video creators, and businesses across the globe are producing studio-quality content in a fraction of the time it would take with traditional methods.",
-      "offer": "Earn up to 25% revenue share",
+      "offer": "Earn up to 20% revenue share",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -5556,7 +5548,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -7254,7 +7246,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 75,
       "relevance_matches": [
@@ -8514,7 +8506,6 @@
         "Hot",
         "IT Management",
         "IoT Management",
-        "New",
         "Payroll",
         "Publishers",
         "Referral Partners",
@@ -8756,7 +8747,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 31,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -9229,7 +9220,6 @@
         "ERP",
         "HR",
         "HR Software",
-        "Hot",
         "Office Software",
         "Resellers",
         "Trusted"
@@ -9243,7 +9233,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 76,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -9365,7 +9355,7 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -9943,7 +9933,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10101,7 +10091,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10200,7 +10190,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10506,6 +10496,7 @@
         "Collaboration & Productivity",
         "Content Management",
         "Featured",
+        "Hot",
         "Marketing",
         "Other",
         "Publishers",
@@ -10582,8 +10573,8 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -10831,7 +10822,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11041,7 +11032,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12391,7 +12382,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12639,7 +12630,6 @@
         "Hosting Providers",
         "Hot",
         "Marketing",
-        "New",
         "Office Software",
         "Priority",
         "Publishers",
@@ -12819,7 +12809,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12873,7 +12863,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13088,7 +13078,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 14,
+      "review_days": 13,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -16241,7 +16231,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16710,7 +16700,6 @@
       "tags": [
         "Affiliates",
         "Ambassadors",
-        "Hot",
         "Hubspot integrated",
         "Referral Partners",
         "Sales",
@@ -16816,7 +16805,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17158,7 +17147,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -18270,10 +18259,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -18356,7 +18353,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18513,7 +18510,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 113,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18570,7 +18567,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -19343,7 +19340,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 132,
+      "review_days": 203,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19678,7 +19675,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 71,
+      "review_days": 57,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19841,14 +19838,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -19879,7 +19876,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -21069,7 +21066,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 51,
+      "review_days": 46,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21117,7 +21114,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 6,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21366,7 +21363,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21567,7 +21564,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 4,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21721,8 +21718,8 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
+          "email_restricted": false,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -21987,7 +21984,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 7,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 55,
       "relevance_matches": [
@@ -22179,15 +22176,15 @@
       "policy": {
         "status": "reviewed",
         "signals": {
-          "trademark_bidding_restricted": false,
+          "trademark_bidding_restricted": true,
           "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
+          "coupon_restricted": true,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -23257,7 +23254,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 47,
       "relevance_matches": [
@@ -23308,7 +23305,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 58,
       "source": "https://market.partnerstack.com/",
       "score": 47,
       "relevance_matches": [],
@@ -23457,7 +23454,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 106,
+      "review_days": 95,
       "source": "https://market.partnerstack.com/",
       "score": 45,
       "relevance_matches": [
@@ -23634,7 +23631,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 42,
       "relevance_matches": [],
@@ -24364,7 +24361,7 @@
       "name": "LettrLabs",
       "slug": "lettrlabs",
       "description": "LettrLabs is an automated direct mail platform designed to target, segment, automate and measure results of campaigns. We empower organizations to connect with their clients through personalized, handwritten mailers that leave a lasting impression using automations that make direct mail as easy as digital.",
-      "offer": "Earn 4% for 18 months",
+      "offer": "Earn 3% for 12 months",
       "tags": [],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/lettrlabs?company=lettrlabs&gref=marketplace",
       "terms_url": "https://www.lettrlabs.com/company/terms-of-service",
