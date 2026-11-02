@@ -1,10 +1,82 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 65,
+    "successful_checks": 64,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-02",
+      "id": "08f4a131cc073510",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://colossyan.com",
+      "tool_id": "colossyan",
+      "tool_name": "Colossyan"
+    },
+    {
+      "detected_on": "2026-11-02",
+      "id": "8390d98cce01de21",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://copymonkey.ai",
+      "tool_id": "copymonkey",
+      "tool_name": "CopyMonkey"
+    },
+    {
+      "detected_on": "2026-11-02",
+      "id": "9f219bb2fa0a5650",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://github.com/features/copilot",
+      "tool_id": "github-copilot",
+      "tool_name": "GitHub Copilot"
+    },
+    {
+      "detected_on": "2026-11-02",
+      "id": "64a07832d5baf9e0",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hootsuite.com",
+      "tool_id": "hootsuite-insights",
+      "tool_name": "Hootsuite Insights"
+    },
+    {
+      "detected_on": "2026-11-02",
+      "id": "68bf9232daff1a3f",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://jasper.ai",
+      "tool_id": "jasper-art",
+      "tool_name": "Jasper Art"
+    },
+    {
+      "detected_on": "2026-11-02",
+      "id": "719263bd81c071e5",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://jasper.ai",
+      "tool_id": "jasper",
+      "tool_name": "Jasper"
+    },
+    {
+      "detected_on": "2026-11-02",
+      "id": "50a66f7ce93e0214",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://kapwing.com",
+      "tool_id": "kapwing",
+      "tool_name": "Kapwing"
+    },
+    {
+      "detected_on": "2026-11-02",
+      "id": "4c11032eb42bb264",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://krikey.ai",
+      "tool_id": "krikey-ai",
+      "tool_name": "Krikey AI"
+    },
     {
       "detected_on": "2026-11-01",
       "id": "e958cb3a1c86cf51",
@@ -1600,6 +1672,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-01",
+  "updated_at": "2026-11-02",
   "version": 1
 }
