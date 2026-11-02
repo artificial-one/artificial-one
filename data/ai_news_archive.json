@@ -1,7 +1,140 @@
 {
   "version": 1,
-  "updated_at": "2026-11-02T06:47:06.389686+00:00",
+  "updated_at": "2026-11-02T21:55:26.822086+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/02/goldman-sachs-pulls-ai-coding-tools-from-traders-and-bankers.html",
+      "created_at": "2026-11-02T21:55:26.822086+00:00",
+      "source": {
+        "title": "Goldman Sachs pulls AI coding tools from traders and bankers",
+        "url": "https://the-decoder.com/goldman-sachs-pulls-ai-coding-tools-from-traders-and-bankers/",
+        "source": "The Decoder",
+        "published_at": "2026-11-02T20:00:03+00:00",
+        "display_date": "Nov 02, 2026",
+        "category": "Models & LLMs",
+        "description": "Goldman Sachs is pulling AI coding tools like Claude Code and GitHub Copilot from traders and bankers, limiting access to engineers only. As recently as July, CIO Marco Argenti publicly praised \"vibe coding\" by non-technical staff. Now the bank cites \"productivity and risk management\" as the reason for the reversal. The article Goldman Sachs pulls AI coding tools from traders and bankers appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Goldman Sachs Restricts AI Coding Tools to Engineers",
+        "summary": "Goldman Sachs has restricted access to AI coding tools like Claude Code and GitHub Copilot, limiting them to engineers only. The decision follows a reversal from earlier praise for non-technical staff using these tools for productivity.",
+        "facts": [
+          {
+            "statement": "Goldman Sachs is restricting AI coding tools to engineers only",
+            "evidence": "Only engineers can still use them, according to Bloomberg"
+          },
+          {
+            "statement": "Goldman Sachs previously praised non-technical staff using AI coding tools",
+            "evidence": "cio marco argenti publicly praised \"vibe coding\" by non-technical"
+          },
+          {
+            "statement": "The decision is based on productivity and risk management concerns",
+            "evidence": "and risk management\" as the reason for the"
+          }
+        ],
+        "why_it_matters": "Goldman Sachs' shift in AI tool access highlights a growing focus on risk management over innovation. The move could signal a broader trend in finance to limit AI use to specialized roles, potentially impacting how teams collaborate and innovate.",
+        "elephant_take": "🐘 鼋 Goldman Sachs is turning back from 'vibe coding' to a more controlled approach, prioritizing risk over productivity. The bank's decision to restrict tools to engineers may reflect a cautious stance on AI integration in finance.",
+        "caveat": "The decision is based on limited public information and internal guidelines, which may not fully capture the complexity of risk management in AI use.",
+        "who_should_care": [
+          "Financial institutions",
+          "AI developers",
+          "Risk management professionals"
+        ],
+        "what_to_do": [
+          "Monitor AI adoption policies in finance",
+          "Assess risk implications of AI tools",
+          "Evaluate collaboration strategies with AI",
+          "Stay informed on regulatory changes"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Goldman%20Sachs%20pulls%20AI%20coding%20tools%20from%20traders%20and%20bankers%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/02/the-new-york-times-sues-brave-web-browser-for-ai-scraping-and-bypassing-paywalls.html",
+      "created_at": "2026-11-02T21:55:26.822086+00:00",
+      "source": {
+        "title": "The New York Times sues Brave web browser for AI scraping and bypassing paywalls",
+        "url": "https://www.theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times",
+        "source": "The Verge AI",
+        "published_at": "2026-11-02T19:04:04+00:00",
+        "display_date": "Nov 02, 2026",
+        "category": "Policy & Safety",
+        "description": "The New York Times and a group of other publications have filed lawsuits against the company that makes the Brave web browser over alleged unlawful scraping to train AI and also letting users bypass their paywalls, as reported by Reuters. According to a complaint filed by the New York Daily News, the Chicago Tribune, and […]",
+        "related": {
+          "title": "Browse independent AI software buying guides",
+          "url": "buyers-guides.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "New York Times Sues Brave Over AI Scraping and Paywall Bypass",
+        "summary": "The New York Times has filed a lawsuit against Brave browser, alleging it scraped copyrighted content to train AI models and allowed users to bypass paywalls without consent.",
+        "facts": [
+          {
+            "statement": "The New York Times and other publications have sued Brave for alleged unlawful scraping of content to train AI.",
+            "evidence": "The New York Times sues Brave web browser for AI scraping and bypassing paywalls"
+          },
+          {
+            "statement": "Brave has allegedly provided 'stolen copyrighted content' to multiple AI companies.",
+            "evidence": "Brave has allegedly provided ‘stolen copyrighted content’ to many AI companies"
+          },
+          {
+            "statement": "Brave's Paywall blocker feature allows users to bypass publishers' paywalls without consent.",
+            "evidence": "brave also promotes “hundreds of top publishers” as being accessible through its “paywall blocker” feature"
+          }
+        ],
+        "why_it_matters": "This legal action highlights the tension between AI development and copyright law, as major publications seek to hold tech companies accountable for unauthorized data use. It raises questions about the ethics of AI training on scraped content and the potential for legal precedents in digital rights.",
+        "elephant_take": "🐘 鼋 The lawsuit is a sharp reminder that even with 'ethical' AI, the line between innovation and infringement can blur. Brave's actions may be seen as a 'back door' to the AI industry, but the legal battle shows how fragile the balance of power is in the digital space.",
+        "caveat": "The case hinges on legal definitions of 'stolen content' and 'unauthorized access', which could shift based on future rulings.",
+        "who_should_care": [
+          "Publishers",
+          "AI developers",
+          "Legal professionals",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Monitor legal developments in AI copyright cases",
+          "Review terms of service for browser and AI platforms",
+          "Assess potential risks to content integrity",
+          "Consult with legal experts on data usage policies"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "buyers-guides.html",
+        "review_title": "Browse independent AI software buying guides",
+        "elephant_url": "index.html?task=Explain%20what%20The%20New%20York%20Times%20sues%20Brave%20web%20browser%20for%20AI%20scraping%20and%20bypassing%20paywalls%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/10/29/granite-switch-4-1-1-update-models-like-you-update-software.html",
       "created_at": "2026-11-02T06:47:06.389686+00:00",
@@ -17927,6 +18060,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/ai-elites-might-hoard-intelligence-like-mercantilists-hoarded-gold/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-02T21:55:26.822086+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-02T21:55:26.822086+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-02T21:55:26.822086+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-02T21:55:26.822086+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
       "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
       "at": "2026-11-02T06:47:06.389686+00:00",
@@ -18140,24 +18297,6 @@
       "url": "https://huggingface.co/blog/anydecisionmodel",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-10-29T13:41:26.026758+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-29T06:25:42.501391+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-29T06:25:42.501391+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/openai-teases-dots-for-europe-but-its-berlin-devday-was-really-about-building-a-platform/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-29T06:25:42.501391+00:00",
       "pipeline_version": "2"
     }
   ]
