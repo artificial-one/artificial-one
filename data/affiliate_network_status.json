@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-02",
+  "updated_at": "2026-11-03",
   "legal_gate": "Account creation, applications and acceptance of binding terms require owner action.",
   "networks": [
     {
@@ -11,9 +11,10 @@
       "dashboard_url": "https://ui.awin.com/",
       "capability": "program discovery and joined-program tracking links",
       "connected": true,
-      "state": "connected",
+      "state": "connected_refresh_failed",
       "missing_credentials": [],
-      "records": 7
+      "error": "HTTP Error 401: Unauthorized",
+      "records": 0
     },
     {
       "network": "sovrn",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-02",
+  "updated_at": "2026-11-03",
   "contract": {
     "states": [
       "inactive",
@@ -14,32 +14,28 @@
     "future_sources": "Any connector represented in partner_opportunities.json is reconciled automatically."
   },
   "summary": {
-    "total": 731,
+    "total": 720,
     "active_link_pending": 14,
     "inactive": 1,
-    "pending": 425,
-    "published": 291,
+    "pending": 421,
+    "published": 284,
     "blocking_failures": 0,
     "activation_blockers": 14
   },
   "networks": {
-    "awin": {
-      "total": 7,
-      "published": 7
-    },
     "direct-vendor": {
-      "total": 47,
-      "pending": 47
+      "total": 46,
+      "pending": 46
     },
     "impact-appsumo": {
       "total": 248,
       "published": 248
     },
     "partnerstack": {
-      "total": 429,
+      "total": 426,
       "active_link_pending": 14,
       "inactive": 1,
-      "pending": 378,
+      "pending": 375,
       "published": 36
     }
   },
