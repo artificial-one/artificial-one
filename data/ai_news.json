@@ -1,7 +1,123 @@
 {
   "version": 1,
-  "updated_at": "2026-11-02T21:55:21.700921+00:00",
+  "updated_at": "2026-11-03T07:13:20.944167+00:00",
   "items": [
+    {
+      "title": "Google takes Dreambeans to India in bid to bring AI-generated personal stories to the masses",
+      "url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-03T03:30:00+00:00",
+      "display_date": "Nov 03, 2026",
+      "category": "AI Tools & Products",
+      "description": "Google's Dreambeans, its latest AI experiment, now supports 13 Indian languages.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/03/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to.html"
+    },
+    {
+      "title": "Apple may try to increase revenue by doing…something with third-party AI apps",
+      "url": "https://techcrunch.com/2026/11/02/apple-may-try-to-increase-revenue-by-doing-something-with-third-party-ai-apps/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-03T01:49:52+00:00",
+      "display_date": "Nov 03, 2026",
+      "category": "AI Business",
+      "description": "Apple hinted at ways that it could spur revenue through third-party \"opportunities\" during its Monday night earnings call.",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Y Combinator’s Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+      "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-03T00:35:52+00:00",
+      "display_date": "Nov 03, 2026",
+      "category": "AI Tools & Products",
+      "description": "Y Combinator Garry Tan has jokingly admitted that he's suffered from \"cyber psychosis” and barely sleeps sometimes because he’s so excited to be working with his AI agents. On a new episode of Walter Isaacson’s podcast, The Builders, Tan put a price tag on his passion.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Transformers Model Integration Contracts",
+      "url": "https://huggingface.co/blog/transformers-mic",
+      "source": "Hugging Face",
+      "published_at": "2026-11-03T00:00:00+00:00",
+      "display_date": "Nov 03, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "The New York Times sues Brave web browser for AI scraping and bypassing paywalls",
+      "url": "https://www.theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times",
+      "source": "The Verge AI",
+      "published_at": "2026-11-02T23:20:01+00:00",
+      "display_date": "Nov 02, 2026",
+      "category": "Policy & Safety",
+      "description": "The New York Times and a group of other publications have filed lawsuits against the company that makes the Brave web browser over alleged unlawful scraping to train AI and also letting users bypass their paywalls, as reported by Reuters. According to a complaint filed by the New York Daily News, the Chicago Tribune, and […]",
+      "related": {
+        "title": "Browse independent AI software buying guides",
+        "url": "buyers-guides.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/02/the-new-york-times-sues-brave-web-browser-for-ai-scraping-and-bypassing-paywalls.html"
+    },
+    {
+      "title": "Trajectory raises $45M to make AI model training accessible to nontechnical experts",
+      "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-02T23:13:53+00:00",
+      "display_date": "Nov 02, 2026",
+      "category": "Models & LLMs",
+      "description": "The one-year-old startup is now valued at $300 million.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts.html"
+    },
+    {
+      "title": "Anthropic clamps down on Claude’s AI video game clones",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+      "source": "The Verge AI",
+      "published_at": "2026-11-02T22:57:16+00:00",
+      "display_date": "Nov 02, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic has updated Claude Code's system prompt to prevent the AI tool from being used to re-create existing video games, as reported by Tom's Hardware. Retro gaming is currently being overrun with AI-made decompilations, recompilations, and ports, but while Anthropic will still let people use Claude Code to make games, it doesn't want people to […]",
+      "related": {
+        "title": "Evaluate Descript for this workflow",
+        "url": "partner-offers/descript-ai-video-editing.html",
+        "offer_id": "descript"
+      }
+    },
+    {
+      "title": "Anthropic warns that it’s very close to RSI capability, aka self-building AI",
+      "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-02T22:14:50+00:00",
+      "display_date": "Nov 02, 2026",
+      "category": "AI Tools & Products",
+      "description": "RSI is the point at which AI grows so good at training itself that it spawns a dramatic acceleration of AI capabilities. To the AI doomers, RSI represents the cataclysm from which there is no return.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/02/anthropic-warns-that-it-s-very-close-to-rsi-capability-aka-self-building-ai.html"
+    },
     {
       "title": "Goldman Sachs pulls AI coding tools from traders and bankers",
       "url": "https://the-decoder.com/goldman-sachs-pulls-ai-coding-tools-from-traders-and-bankers/",
@@ -32,35 +148,6 @@
       }
     },
     {
-      "title": "The New York Times sues Brave web browser for AI scraping and bypassing paywalls",
-      "url": "https://www.theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times",
-      "source": "The Verge AI",
-      "published_at": "2026-11-02T19:04:04+00:00",
-      "display_date": "Nov 02, 2026",
-      "category": "Policy & Safety",
-      "description": "The New York Times and a group of other publications have filed lawsuits against the company that makes the Brave web browser over alleged unlawful scraping to train AI and also letting users bypass their paywalls, as reported by Reuters. According to a complaint filed by the New York Daily News, the Chicago Tribune, and […]",
-      "related": {
-        "title": "Browse independent AI software buying guides",
-        "url": "buyers-guides.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/11/02/the-new-york-times-sues-brave-web-browser-for-ai-scraping-and-bypassing-paywalls.html"
-    },
-    {
-      "title": "Anthropic clamps down on Claude’s AI video game clones",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
-      "source": "The Verge AI",
-      "published_at": "2026-11-02T18:56:02+00:00",
-      "display_date": "Nov 02, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic has updated Claude Code's system prompt to prevent the AI tool from being used to recreate existing video games, as reported by Tom's Hardware. Retro gaming is currently being overrun with AI-made decompilations, recompilations, and ports, but while Anthropic will still let people use Claude Code to make games, it doesn't want people to […]",
-      "related": {
-        "title": "Evaluate Descript for this workflow",
-        "url": "partner-offers/descript-ai-video-editing.html",
-        "offer_id": "descript"
-      }
-    },
-    {
       "title": "OpenAI pitches data center power plants as a way to protect nearby areas",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program",
       "source": "The Verge AI",
@@ -71,6 +158,20 @@
       "related": {
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Preparing our next security sprint to harden OpenAI",
+      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+      "source": "OpenAI",
+      "published_at": "2026-11-02T18:00:00+00:00",
+      "display_date": "Nov 02, 2026",
+      "category": "Policy & Safety",
+      "description": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
+      "related": {
+        "title": "Browse independent AI software buying guides",
+        "url": "buyers-guides.html",
         "offer_id": ""
       }
     },
@@ -131,6 +232,20 @@
       }
     },
     {
+      "title": "Scaling Git at OpenAI",
+      "url": "https://openai.com/index/scaling-git-at-openai",
+      "source": "OpenAI",
+      "published_at": "2026-11-02T15:30:00+00:00",
+      "display_date": "Nov 02, 2026",
+      "category": "AI Tools & Products",
+      "description": "How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
       "title": "Omen AI adds liquid know-how in $16 million Aquatic Labs acquisition",
       "url": "https://techcrunch.com/2026/11/02/omen-ai-adds-liquid-know-how-in-16-million-aquatic-labs-acquisition/",
       "source": "TechCrunch AI",
@@ -142,20 +257,6 @@
         "title": "Model the value of an AI subscription",
         "url": "calculators/ai-software-roi-calculator.html",
         "offer_id": ""
-      }
-    },
-    {
-      "title": "OpenAI is finally merging ChatGPT’s Chat and Work tabs",
-      "url": "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-02T13:57:53+00:00",
-      "display_date": "Nov 02, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI said that ChatGPT and Codex will draw usage from the same allocation pool after this change.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
       }
     },
     {
@@ -201,31 +302,16 @@
       }
     },
     {
-      "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
-      "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-01T21:55:23+00:00",
-      "display_date": "Nov 01, 2026",
-      "category": "AI Tools & Products",
-      "description": "Data centers are deeply unpopular. But what if we called them something else?",
+      "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
+      "url": "https://openai.com/index/dan-driscoll-joins-openai",
+      "source": "OpenAI",
+      "published_at": "2026-11-02T00:00:00+00:00",
+      "display_date": "Nov 02, 2026",
+      "category": "Policy & Safety",
+      "description": "OpenAI appoints Dan Driscoll to advise on responsible AI for national security modernization, cyber resilience, and collaboration with U.S. allies.",
       "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses.html"
-    },
-    {
-      "title": "AI can make tech CEOs’ lives easier. What about everyone else?",
-      "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-01T20:57:58+00:00",
-      "display_date": "Nov 01, 2026",
-      "category": "AI Tools & Products",
-      "description": "On Equity, we discuss why tech CEO statements can seem so tone deaf.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
+        "title": "Browse independent AI software buying guides",
+        "url": "buyers-guides.html",
         "offer_id": ""
       }
     },
@@ -243,20 +329,6 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/11/01/adobe-is-testing-how-well-ai-agents-can-use-editing-tools-like-a-photoshop-profess.html"
-    },
-    {
-      "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
-      "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-10-31T21:41:00+00:00",
-      "display_date": "Oct 31, 2026",
-      "category": "AI Tools & Products",
-      "description": "Apple's new CEO defended the company's current position in the AI landscape.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
     },
     {
       "title": "I built an AI Tamagotchi before Meta could",
@@ -346,20 +418,6 @@
       }
     },
     {
-      "title": "An updated Model Spec for more capable and beneficial AI",
-      "url": "https://openai.com/index/updated-model-spec",
-      "source": "OpenAI",
-      "published_at": "2026-10-29T17:00:00+00:00",
-      "display_date": "Oct 29, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Granite Switch 4.1.1 — Update models like you update software",
       "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
       "source": "Hugging Face",
@@ -373,20 +431,6 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/10/29/granite-switch-4-1-1-update-models-like-you-update-software.html"
-    },
-    {
-      "title": "How we detect frontier model misalignment",
-      "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
-      "source": "OpenAI",
-      "published_at": "2026-10-29T09:00:00+00:00",
-      "display_date": "Oct 29, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
     },
     {
       "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
@@ -472,48 +516,6 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/10/26/our-newest-ai-quest-mapping-the-human-brain.html"
-    },
-    {
-      "title": "Does Your Model Run on AWS Trainium? Look It Up",
-      "url": "https://huggingface.co/blog/torch-neuronx-model-support",
-      "source": "Hugging Face",
-      "published_at": "2026-10-23T00:00:00+00:00",
-      "display_date": "Oct 23, 2026",
-      "category": "Models & LLMs",
-      "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
-      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
-      "source": "Hugging Face",
-      "published_at": "2026-10-22T22:24:34+00:00",
-      "display_date": "Oct 22, 2026",
-      "category": "AI Tools & Products",
-      "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "OpenAI models hacked a crypto wallet and breached more websites",
-      "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
-      "source": "Ars Technica AI",
-      "published_at": "2026-10-16T20:59:01+00:00",
-      "display_date": "Oct 16, 2026",
-      "category": "Models & LLMs",
-      "description": "The actions could have resulted in criminal charges had humans been behind the keyboard.",
-      "related": {
-        "title": "Evaluate Unbounce for this workflow",
-        "url": "partner-offers/unbounce-landing-pages.html",
-        "offer_id": "unbounce"
-      }
     }
   ]
 }
