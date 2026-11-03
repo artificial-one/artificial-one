@@ -1,10 +1,37 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 64,
+    "successful_checks": 57,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-03",
+      "id": "e771288a76a456fe",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://pictory.ai",
+      "tool_id": "pictory-ai",
+      "tool_name": "Pictory AI"
+    },
+    {
+      "detected_on": "2026-11-03",
+      "id": "5be92eaf76ed3816",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://postly.ai",
+      "tool_id": "postly",
+      "tool_name": "Postly"
+    },
+    {
+      "detected_on": "2026-11-03",
+      "id": "0644643701f7903b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://replit.com",
+      "tool_id": "replit-ai",
+      "tool_name": "Replit AI"
+    },
     {
       "detected_on": "2026-11-02",
       "id": "08f4a131cc073510",
@@ -1672,6 +1699,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-02",
+  "updated_at": "2026-11-03",
   "version": 1
 }
