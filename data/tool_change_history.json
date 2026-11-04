@@ -1,10 +1,55 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 57,
+    "successful_checks": 67,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-04",
+      "id": "fc527334b748ffa7",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://writecream.com",
+      "tool_id": "writecream",
+      "tool_name": "Writecream"
+    },
+    {
+      "detected_on": "2026-11-04",
+      "id": "eaab905e884bcb56",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.beautiful.ai/",
+      "tool_id": "beautiful-ai",
+      "tool_name": "Beautiful.ai"
+    },
+    {
+      "detected_on": "2026-11-04",
+      "id": "293428575920529d",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.close.com/partners/partner-program-agreement",
+      "tool_id": "close",
+      "tool_name": "Close"
+    },
+    {
+      "detected_on": "2026-11-04",
+      "id": "8a8719fe14e01db5",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://everleakproof.com",
+      "tool_id": "everleakproof-us",
+      "tool_name": "EverLeakProof US"
+    },
+    {
+      "detected_on": "2026-11-04",
+      "id": "37fde4eb8116b846",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://taskade.com",
+      "tool_id": "taskade",
+      "tool_name": "Taskade"
+    },
     {
       "detected_on": "2026-11-03",
       "id": "e771288a76a456fe",
@@ -1699,6 +1744,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-03",
+  "updated_at": "2026-11-04",
   "version": 1
 }
