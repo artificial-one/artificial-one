@@ -1,10 +1,28 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 67,
+    "successful_checks": 66,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-05",
+      "id": "61597c433f2f2069",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://bearly.ai",
+      "tool_id": "bearly-ai",
+      "tool_name": "Bearly AI"
+    },
+    {
+      "detected_on": "2026-11-05",
+      "id": "43edfa9907ea2cd5",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://clearscope.io",
+      "tool_id": "clearscope",
+      "tool_name": "Clearscope"
+    },
     {
       "detected_on": "2026-11-04",
       "id": "fc527334b748ffa7",
@@ -1744,6 +1762,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-04",
+  "updated_at": "2026-11-05",
   "version": 1
 }
