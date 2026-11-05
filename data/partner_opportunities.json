@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-04",
+  "updated_at": "2026-11-05",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -231,7 +231,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 12,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -447,6 +447,72 @@
       }
     },
     {
+      "id": "partnerstack:breadbutterioinc",
+      "network": "partnerstack",
+      "name": "Bread & Butter IO Inc.",
+      "slug": "breadbutterioinc",
+      "description": "Bread & Butter is an AI-powered lead intelligence platform that helps you track and scale what converts into revenue. It sits between your analytics and your CRM — giving demand gen and revenue teams the intelligence to prime the pipeline, act on high-intent visitors, and hand off sales-ready leads without adding headcount.",
+      "offer": "20% of the license fees a referred customer pays in their first year only, on the Pro license ($49/month) or Pro Plus ($199/month, for customers who need the MCP server). Credits aren't included.",
+      "tags": [
+        "Analytics",
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Content Management",
+        "Customer Service",
+        "Development",
+        "Digital Advertising",
+        "Marketing",
+        "Sales",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/breadbutterioinc?company=breadbutterioinc&gref=marketplace",
+      "terms_url": "https://breadbutter.io/eula/",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 6,
+      "source": "https://market.partnerstack.com/",
+      "approved": false,
+      "authenticated_relationship": true,
+      "relationship_status": "application-pending",
+      "terms_required": false,
+      "partnership_key": "part_LrNUcZSNjQ2cmI",
+      "score": 85,
+      "relevance_matches": [
+        "ai",
+        "analytics",
+        "artificial intelligence",
+        "content",
+        "customer service",
+        "development",
+        "marketing",
+        "productivity",
+        "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": true,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:browseai",
       "network": "partnerstack",
       "name": "Browse AI",
@@ -475,7 +541,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1013,7 +1079,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 59,
+      "review_days": 58,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1074,7 +1140,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 24,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1509,7 +1575,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 15,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1807,7 +1873,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 100,
+      "review_days": 102,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2079,7 +2145,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 16,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2602,7 +2668,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -3170,7 +3236,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -3284,7 +3350,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 43,
+      "review_days": 52,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -3825,7 +3891,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 81,
       "relevance_matches": [
@@ -4122,6 +4188,67 @@
       }
     },
     {
+      "id": "partnerstack:buyist",
+      "network": "partnerstack",
+      "name": "Auware by Buyist",
+      "slug": "buyist",
+      "description": "Most ads die at the landing page. Auware fixes that. We identify your top audiences and auto-generate persona-specific page variants to continue the conversation your ad started. Not a page builder - a full campaign platform, complete with inline editor for creative control. You choose the product, audiences, format, and voice. AI builds the rest - automatically, instantly, and at scale.",
+      "offer": "Earn 35% rev share on new subs thru 6/30; 30% thereafter. (Avg ACV ≈ $2.4K/yr)",
+      "tags": [
+        "Analytics",
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Content Management",
+        "Design",
+        "Development",
+        "Digital Advertising",
+        "E-Commerce",
+        "Marketing",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/buyist?company=buyist&gref=marketplace",
+      "terms_url": "https://www.auware.com/partners/agreement",
+      "website": "https://www.auware.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "analytics",
+        "artificial intelligence",
+        "content",
+        "design",
+        "development",
+        "e-commerce",
+        "marketing",
+        "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:bidxgmbh",
       "network": "partnerstack",
       "name": "BidX",
@@ -4286,71 +4413,6 @@
       }
     },
     {
-      "id": "partnerstack:breadbutterioinc",
-      "network": "partnerstack",
-      "name": "Bread & Butter IO Inc.",
-      "slug": "breadbutterioinc",
-      "description": "Bread & Butter is an AI-powered lead intelligence platform that helps you track and scale what converts into revenue. It sits between your analytics and your CRM — giving demand gen and revenue teams the intelligence to prime the pipeline, act on high-intent visitors, and hand off sales-ready leads without adding headcount.",
-      "offer": "20% of the license fees a referred customer pays in their first year only, on the Pro license ($49/month) or Pro Plus ($199/month, for customers who need the MCP server). Credits aren't included.",
-      "tags": [
-        "Analytics",
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Content Management",
-        "Customer Service",
-        "Development",
-        "Digital Advertising",
-        "Marketing",
-        "Sales"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/breadbutterioinc?company=breadbutterioinc&gref=marketplace",
-      "terms_url": "https://breadbutter.io/eula/",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 6,
-      "source": "https://market.partnerstack.com/",
-      "approved": false,
-      "authenticated_relationship": true,
-      "relationship_status": "application-pending",
-      "terms_required": false,
-      "partnership_key": "part_LrNUcZSNjQ2cmI",
-      "score": 80,
-      "relevance_matches": [
-        "ai",
-        "analytics",
-        "artificial intelligence",
-        "content",
-        "customer service",
-        "development",
-        "marketing",
-        "productivity",
-        "sales"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": true,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:consensus",
       "network": "partnerstack",
       "name": "Consensus",
@@ -4427,7 +4489,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 12,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5044,7 +5106,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 41,
+      "review_days": 37,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5431,7 +5493,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5720,7 +5782,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -6056,7 +6118,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 4,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -6377,7 +6439,6 @@
         "Collaboration & Productivity",
         "Content Management",
         "Coupon Partners",
-        "Hot",
         "Influencers",
         "Marketing",
         "Office Software",
@@ -7055,6 +7116,47 @@
       }
     },
     {
+      "id": "partnerstack:testdriverai3875",
+      "network": "partnerstack",
+      "name": "TestDriver.ai",
+      "slug": "testdriverai3875",
+      "description": "TestDriver automatically runs every pull request in a real desktop sandbox, finds bugs, and builds regression tests.",
+      "offer": "30% for every transaction for the customer's first year",
+      "tags": [
+        "Artificial Intelligence",
+        "Development",
+        "Hosting Providers",
+        "IT Infrastructure",
+        "IT Management",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/testdriverai3875?company=testdriverai3875&gref=marketplace",
+      "terms_url": "https://drive.google.com/file/d/1BWzAYjS7uraX8O1siTK8SXcQLzmlj2E7/view?usp=drive_link",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 10,
+      "source": "https://market.partnerstack.com/",
+      "score": 76,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "development"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "policy_review_required",
+      "policy": {
+        "status": "unreachable",
+        "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:amplitude",
       "network": "partnerstack",
       "name": "Amplitude",
@@ -7107,66 +7209,6 @@
         "cookie_days": null
       },
       "status_note": "PartnerStack states that the program paused on 2026-08-01 and commissions stopped after that date."
-    },
-    {
-      "id": "partnerstack:buyist",
-      "network": "partnerstack",
-      "name": "Auware by Buyist",
-      "slug": "buyist",
-      "description": "Most ads die at the landing page. Auware fixes that. We identify your top audiences and auto-generate persona-specific page variants to continue the conversation your ad started. Not a page builder - a full campaign platform, complete with inline editor for creative control. You choose the product, audiences, format, and voice. AI builds the rest - automatically, instantly, and at scale.",
-      "offer": "Earn 35% rev share on new subs thru 6/30; 30% thereafter. (Avg ACV ≈ $2.4K/yr)",
-      "tags": [
-        "Analytics",
-        "Artificial Intelligence",
-        "B2B Marketplaces",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Content Management",
-        "Design",
-        "Development",
-        "Digital Advertising",
-        "E-Commerce",
-        "Marketing"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/buyist?company=buyist&gref=marketplace",
-      "terms_url": "https://www.auware.com/partners/agreement",
-      "website": "https://www.auware.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 75,
-      "relevance_matches": [
-        "ai",
-        "analytics",
-        "artificial intelligence",
-        "content",
-        "design",
-        "development",
-        "e-commerce",
-        "marketing",
-        "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": true,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
     },
     {
       "id": "partnerstack:lucrovox",
@@ -7507,7 +7549,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -7620,7 +7662,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 5,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -8883,7 +8925,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 71,
       "relevance_matches": [
@@ -9066,46 +9108,6 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:testdriverai3875",
-      "network": "partnerstack",
-      "name": "TestDriver.ai",
-      "slug": "testdriverai3875",
-      "description": "TestDriver automatically runs every pull request in a real desktop sandbox, finds bugs, and builds regression tests.",
-      "offer": "30% for every transaction for the customer's first year",
-      "tags": [
-        "Artificial Intelligence",
-        "Development",
-        "Hosting Providers",
-        "IT Infrastructure",
-        "IT Management"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/testdriverai3875?company=testdriverai3875&gref=marketplace",
-      "terms_url": "https://drive.google.com/file/d/1BWzAYjS7uraX8O1siTK8SXcQLzmlj2E7/view?usp=drive_link",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 10,
-      "source": "https://market.partnerstack.com/",
-      "score": 71,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "development"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "policy_review_required",
-      "policy": {
-        "status": "unreachable",
-        "signals": {},
         "cookie_days": null
       }
     },
@@ -9341,7 +9343,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 68,
       "relevance_matches": [
@@ -9360,7 +9362,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -9446,7 +9448,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 103,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 68,
       "relevance_matches": [
@@ -9501,7 +9503,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 151,
       "source": "https://market.partnerstack.com/",
       "score": 68,
       "relevance_matches": [
@@ -9815,7 +9817,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -9920,7 +9922,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10008,6 +10010,7 @@
       "tags": [
         "Collaboration & Productivity",
         "Development",
+        "Hot",
         "Marketing",
         "Sales",
         "Trusted",
@@ -10396,7 +10399,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10549,7 +10552,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 214,
+      "review_days": 201,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10659,7 +10662,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11386,7 +11389,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11557,7 +11560,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12000,7 +12003,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 192,
+      "review_days": 191,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12047,7 +12050,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -12635,7 +12638,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12690,7 +12693,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12959,7 +12962,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 12,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -13404,7 +13407,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 52,
+      "review_days": 74,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -16403,7 +16406,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16689,7 +16692,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16780,7 +16783,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16935,7 +16938,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 59,
+      "review_days": 60,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17032,7 +17035,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17091,7 +17094,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17302,7 +17305,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 10,
+      "review_days": -1,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17408,7 +17411,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 12,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17870,7 +17873,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18403,7 +18406,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18452,7 +18455,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18741,7 +18744,7 @@
       "name": "Wingify",
       "slug": "vwo",
       "description": "Wingify is an Agentic Experience Optimization Platform helping 4,000+ brands make every experience relevant by unifying experimentation, personalization, feature management, commerce, and behavior analytics.",
-      "offer": "5% on year 2 renewal",
+      "offer": "Earn 10% on every referral",
       "tags": [
         "Affiliates",
         "Agencies",
@@ -18879,7 +18882,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -19245,6 +19248,51 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:vestwell",
+      "network": "partnerstack",
+      "name": "Vestwell",
+      "slug": "vestwell",
+      "description": "Vestwell is the modern savings platform helping small and mid‑size businesses offer high‑quality, affordable retirement and workplace savings plans. We partner with employers, advisors, payroll providers, and states to make saving for life’s biggest milestones more accessible to everyone.",
+      "offer": "Earn $25 per qualified lead AND 10% revenue share for paid customers!",
+      "tags": [
+        "B2B Marketplaces",
+        "HR",
+        "HR Software",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vestwell?company=vestwell&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/1ZlFU0dy8SA6Z3qYP2-fOYn34wSu2XYwaCTngWSymImw/edit?usp=sharing",
+      "website": "https://www.vestwell.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 60,
+      "relevance_matches": [
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -19838,7 +19886,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20456,7 +20504,10 @@
       "description": "A global top-10 insurance broker, Acrisure empowers millions of businesses and individuals with the right solutions to grow boldly forward. Bringing cutting-edge technology and top-tier human support together, we connect clients with customized solutions across a range of insurance, reinsurance, payroll, benefits, cybersecurity, mortgage services – and more.",
       "offer": "CPL: $25 per business lead | $10 per personal lead - US only",
       "tags": [
+        "HR",
         "HR Software",
+        "New",
+        "Other",
         "Payroll",
         "Trusted"
       ],
@@ -20469,7 +20520,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -20866,7 +20917,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -20912,7 +20963,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 12,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21267,7 +21318,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 11,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21706,50 +21757,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:vestwell",
-      "network": "partnerstack",
-      "name": "Vestwell",
-      "slug": "vestwell",
-      "description": "Vestwell is the modern savings platform helping small and mid‑size businesses offer high‑quality, affordable retirement and workplace savings plans. We partner with employers, advisors, payroll providers, and states to make saving for life’s biggest milestones more accessible to everyone.",
-      "offer": "Earn $25 per qualified lead AND 10% revenue share for paid customers!",
-      "tags": [
-        "B2B Marketplaces",
-        "HR",
-        "HR Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/vestwell?company=vestwell&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/1ZlFU0dy8SA6Z3qYP2-fOYn34wSu2XYwaCTngWSymImw/edit?usp=sharing",
-      "website": "https://www.vestwell.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 55,
-      "relevance_matches": [
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -22549,7 +22556,7 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 90
+        "cookie_days": null
       }
     },
     {
@@ -22584,6 +22591,50 @@
       "relevance_matches": [
         "customer service",
         "sales"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:samsara",
+      "network": "partnerstack",
+      "name": "Samsara",
+      "slug": "samsara",
+      "description": "Samsara is the pioneer of the Connected Operations Cloud, helping businesses that depend on physical operations turn IoT data into actionable insights that improve their operations.",
+      "offer": "Earn a $150 flat fee for every paying customer you refer",
+      "tags": [
+        "IoT Management",
+        "Supply Chain & Logistics",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/samsara?company=samsara&gref=marketplace",
+      "terms_url": "https://www.samsara.com/pdf/affiliate-programt-terms-and-conditions.pdf",
+      "website": "https://www.samsara.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 8,
+      "source": "https://market.partnerstack.com/",
+      "score": 51,
+      "relevance_matches": [
+        "data"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -22678,7 +22729,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 70,
+      "review_days": 51,
       "source": "https://market.partnerstack.com/",
       "score": 50,
       "relevance_matches": [
@@ -22942,49 +22993,6 @@
       }
     },
     {
-      "id": "partnerstack:samsara",
-      "network": "partnerstack",
-      "name": "Samsara",
-      "slug": "samsara",
-      "description": "Samsara is the pioneer of the Connected Operations Cloud, helping businesses that depend on physical operations turn IoT data into actionable insights that improve their operations.",
-      "offer": "Earn a $150 flat fee for every paying customer you refer",
-      "tags": [
-        "IoT Management",
-        "Supply Chain & Logistics"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/samsara?company=samsara&gref=marketplace",
-      "terms_url": "https://www.samsara.com/pdf/affiliate-programt-terms-and-conditions.pdf",
-      "website": "https://www.samsara.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 8,
-      "source": "https://market.partnerstack.com/",
-      "score": 46,
-      "relevance_matches": [
-        "data"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:barcodestalk",
       "network": "partnerstack",
       "name": "Bar Codes Talk",
@@ -23239,7 +23247,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 42,
       "relevance_matches": [],
@@ -23625,7 +23633,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 25,
+      "review_days": 23,
       "source": "https://market.partnerstack.com/",
       "score": 39,
       "relevance_matches": [],
@@ -23903,7 +23911,7 @@
       "name": "Guesty",
       "slug": "guesty",
       "description": "With Guesty’s Affiliate Program, you can earn an additional stream of income, with up to 5K per referral Help your network of hospitality pros succeed in growing their businesses with our advanced hospitality operations platform.",
-      "offer": "$50 for per Listing",
+      "offer": "Earn $100 for a Customer's First Listing",
       "tags": [
         "Hot",
         "Trusted"
