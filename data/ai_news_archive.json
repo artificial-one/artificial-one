@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T07:21:57.905826+00:00",
+  "updated_at": "2026-11-05T20:15:25.174655+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/05/new-nvidia-cosmos-3-open-models-for-interactive-world-simulation.html",
+      "created_at": "2026-11-05T20:15:25.174655+00:00",
+      "source": {
+        "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+        "source": "Hugging Face",
+        "published_at": "2026-11-05T19:35:16+00:00",
+        "display_date": "Nov 05, 2026",
+        "category": "Models & LLMs",
+        "description": "",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "NVIDIA Launches New Open Models for Interactive World Simulation",
+        "summary": "NVIDIA has released four new open models for interactive world simulation, designed to enhance robotics and autonomous driving research. These models include tools for generating multi-sensor data and simulating driving scenarios.",
+        "facts": [
+          {
+            "statement": "NVIDIA has added four new open-weight checkpoints to its Cosmos 3 model family",
+            "evidence": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation"
+          },
+          {
+            "statement": "The models are designed for generating interactive world simulation and multi-sensor driving scenes",
+            "evidence": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation"
+          },
+          {
+            "statement": "Cosmos3-Nano-Sim-Auto generates synchronized camera and LiDAR observations for driving simulation",
+            "evidence": "Stream synchronized camera and LiDAR observations for driving simulation"
+          }
+        ],
+        "why_it_matters": "These new models offer researchers and developers tools to create more realistic simulated environments, crucial for advancing robotics and autonomous driving technologies. By providing open-source models, NVIDIA is fostering collaboration and innovation in the field.",
+        "elephant_take": "🐘 鼋 These models are a step forward in making simulated worlds more interactive and realistic, but the challenge remains in ensuring they accurately support policy learning and evaluation.",
+        "caveat": "The models are still in development and may have limitations in their ability to support policy learning and evaluation.",
+        "who_should_care": [
+          "Robotics researchers",
+          "Autonomous driving developers",
+          "AI model creators"
+        ],
+        "what_to_do": [
+          "Explore the open-source models for simulation research",
+          "Post-train the models on your own data",
+          "Contribute improvements to the model development process"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20New%20NVIDIA%20Cosmos%203%20Open%20Models%20for%20Interactive%20World%20Simulation%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-here-s-how-they-fared.html",
       "created_at": "2026-11-05T07:21:57.905826+00:00",
@@ -18975,6 +19040,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-05T20:15:25.174655+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-05T20:15:25.174655+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-05T20:15:25.174655+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent/",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-11-05T20:15:25.174655+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/05/openai-president-greg-brockman-says-company-could-be-ipo-ready-in-2027/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-05T20:15:25.174655+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-05T07:21:57.905826+00:00",
@@ -19182,36 +19277,6 @@
       "url": "https://the-decoder.com/beekeeping-tips-and-wrestling-advice-can-train-ai-models-to-sabotage-oversight/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-10-31T21:51:12.916005+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/microsoft-offers-a-quarter-of-its-workforce-voluntary-severance-while-shielding-ai-critical-teams/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-31T13:02:10.224472+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/google-deepmind-creates-a-global-map-of-forests-with-satellite-data-and-ai/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-10-31T13:02:10.224472+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/openai-raises-just-11-billion-of-its-30-billion-target-as-big-investors-lose-their-ai-appetite/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-31T13:02:10.224472+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/policy/1022880/wikipedia-openai-new-york-times-copyright",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-31T13:02:10.224472+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-10-31T06:15:12.542502+00:00",
       "pipeline_version": "2"
     }
   ]
