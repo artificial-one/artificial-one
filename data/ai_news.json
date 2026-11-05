@@ -1,7 +1,108 @@
 {
   "version": 1,
-  "updated_at": "2026-11-04T20:00:09.611707+00:00",
+  "updated_at": "2026-11-05T07:21:53.762910+00:00",
   "items": [
+    {
+      "title": "Apple is reportedly cutting budgets for its internal AI usage",
+      "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-05T01:26:22+00:00",
+      "display_date": "Nov 05, 2026",
+      "category": "AI Tools & Products",
+      "description": "The company is said to be significantly dropping the amount it's spending on AI for its engineering teams.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "AI PACs spent millions trying to shape Congress — here’s how they fared",
+      "url": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-04T22:45:09+00:00",
+      "display_date": "Nov 04, 2026",
+      "category": "AI Tools & Products",
+      "description": "AI industry PACs spent millions influencing the 2026 midterms, with mixed results. Political groups are already looking toward the next election cycle.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-here-s-how-they-fared.html"
+    },
+    {
+      "title": "Nothing CEO says company’s mysterious AI-first device is dropping next month",
+      "url": "https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-04T22:13:16+00:00",
+      "display_date": "Nov 04, 2026",
+      "category": "AI Business",
+      "description": "While it's not yet clear what kind of product the smartphone startup is cooking up, Nothing's CEO said the product is designed to leverage AI for productivity gains.",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/04/nothing-ceo-says-company-s-mysterious-ai-first-device-is-dropping-next-month.html"
+    },
+    {
+      "title": "Almost no one uses AI agents to book their Uber, company says",
+      "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-04T21:56:01+00:00",
+      "display_date": "Nov 04, 2026",
+      "category": "AI Tools & Products",
+      "description": "During its busiest week last quarter, Uber said only four people booked a ride using an AI agent.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says.html"
+    },
+    {
+      "title": "OpenAI is already trying to shape the 2028 election",
+      "url": "https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-04T21:25:44+00:00",
+      "display_date": "Nov 04, 2026",
+      "category": "AI Tools & Products",
+      "description": "OpenAI’s Chris Lehane wants AI to define the 2028 election, proposing a new social contract that could benefit Americans while also advancing the AI giant’s own business interests.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Meta acquires AI coding startup Conductor",
+      "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-04T21:10:56+00:00",
+      "display_date": "Nov 04, 2026",
+      "category": "AI Business",
+      "description": "The startup allows software engineers to deploy teams of agents to work on various aspects of a project simultaneously.",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Gemini for Home now plugs into AT&T’s smart security system",
+      "url": "https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system",
+      "source": "The Verge AI",
+      "published_at": "2026-11-04T20:23:24+00:00",
+      "display_date": "Nov 04, 2026",
+      "category": "Models & LLMs",
+      "description": "AT&T's smart home security system now integrates with Gemini for Home. The company says its Connected Life system is the \"first\" home security product to integrate with Google Home Premium, enabling a bunch of Gemini-powered features that can summarize home events, search your video history, and more. With the update, Gemini for Home can provide […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "ChatGPT can now turn text prompts and photos into animated GIFs with OpenAI's Images 2.6 model",
       "url": "https://the-decoder.com/chatgpt-can-now-turn-text-prompts-and-photos-into-animated-gifs-with-openais-images-2-6-model/",
@@ -60,19 +161,32 @@
       "archive_url": "news/2026/11/04/anthropic-s-text-watermark-is-easy-to-bypass-on-several-older-claude-models.html"
     },
     {
-      "title": "Building on open source AI? Hugging Face’s policy chief on the costs, risks, and trade-offs",
-      "url": "https://techcrunch.com/podcast/building-on-open-source-ai-hugging-faces-policy-chief-on-the-costs-risks-and-trade-offs/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-04T18:44:57+00:00",
+      "title": "ChatGPT will now make you animated GIFs",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+      "source": "The Verge AI",
+      "published_at": "2026-11-04T19:02:40+00:00",
       "display_date": "Nov 04, 2026",
       "category": "Models & LLMs",
-      "description": "Open source models are becoming more mainstream as enterprises, governments and startups alike rely on the promise of lower costs, more control, and more flexibility. But as increasingly capable models become more freely available, how do companies capture value? And with Chinese open models gaining ground, can American players keep up? On this episode of […]",
+      "description": "ChatGPT can now create GIFs using a prompt or a photo uploaded to the AI chatbot. The update, which is rolling out alongside OpenAI's new Images 2.6 model, allows you to adjust the GIF's animation speed, edit individual frames, and share it with others. Before this change, ChatGPT couldn't natively generate GIFs in a single […]",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/11/04/building-on-open-source-ai-hugging-face-s-policy-chief-on-the-costs-risks-and-trad.html"
+      }
+    },
+    {
+      "title": "Nothing teases a screen-free AI device ahead of launch next month",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei",
+      "source": "The Verge AI",
+      "published_at": "2026-11-04T18:51:06+00:00",
+      "display_date": "Nov 04, 2026",
+      "category": "AI Tools & Products",
+      "description": "Nothing CEO Carl Pei said in a post on X that the company's launching its first AI device in December. That's just a little over a year after Pei announced plans for \"AI-native\" devices and an AI operating system. He didn't give away much about what exactly the new device is, only that one feature […]",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
     },
     {
       "title": "OpenAI acquires Pierre Computer Company to make Git keep up with AI coding agents",
@@ -101,20 +215,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Google faces backlash for plan that would turn off Search for schools that restrict AI",
-      "url": "https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-04T16:17:22+00:00",
-      "display_date": "Nov 04, 2026",
-      "category": "AI Tools & Products",
-      "description": "Politicians on the left, like NYC mayor Zohran Mamdani and former FTC chair Lina Khan, accused Google of acting as an unregulated monopoly.",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
       }
     },
     {
@@ -202,34 +302,6 @@
       }
     },
     {
-      "title": "The biggest modding site in PC gaming is taking a stance on AI",
-      "url": "https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures",
-      "source": "The Verge AI",
-      "published_at": "2026-11-04T00:42:54+00:00",
-      "display_date": "Nov 04, 2026",
-      "category": "AI Tools & Products",
-      "description": "The PC gaming mods repository Nexus Mods is making disclosures about AI mandatory for uploads of new mods, meaning that mod authors will have to declare \"whether AI has been used in their work,\" the site announced today as part of a big post about AI-generated content on the platform. \"One of the most consistent […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Please stop asking me when the AI bubble will pop",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1025826/ai-bubble-pimco-apollo-bonds",
-      "source": "The Verge AI",
-      "published_at": "2026-11-03T23:37:45+00:00",
-      "display_date": "Nov 03, 2026",
-      "category": "AI Tools & Products",
-      "description": "People, including on this staff, keep asking me with varying degrees of excitement or trepidation when the AI bubble will burst. I'll tell you what I tell them: If I knew that, I would make a life-changing bet on the market, levered up as far as I could, and then, after I made my money, […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
       "title": "Google hasn’t figured out how to make AI pay like its search engine",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3",
       "source": "The Verge AI",
@@ -237,79 +309,6 @@
       "display_date": "Nov 03, 2026",
       "category": "AI Business",
       "description": "Search queries are growing at their fastest rate in five years, Google parent Alphabet said in its earnings report last week. However, Google's Search revenue growth slowed to 12 percent year over year in the third quarter, down from roughly 17 percent in the previous quarter. Meanwhile, growth in paid clicks - clicks on ads […]",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "Anthropic is working on a system to prove AI models’ identity",
-      "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-03T22:41:03+00:00",
-      "display_date": "Nov 03, 2026",
-      "category": "Models & LLMs",
-      "description": "Called FlashProve, the system would let anyone check that an AI response really came from the model it claims to be from.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity.html"
-    },
-    {
-      "title": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom",
-      "url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-03T21:43:08+00:00",
-      "display_date": "Nov 03, 2026",
-      "category": "Policy & Safety",
-      "description": "Cybersecurity-focused Ballistic Ventures is seeking to raise $360 million for a new flagship fund and another $130 million for a separate investment vehicle.",
-      "related": {
-        "title": "Browse independent AI software buying guides",
-        "url": "buyers-guides.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Apple starts giving Siri AI access to third-party apps",
-      "url": "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
-      "source": "The Verge AI",
-      "published_at": "2026-11-03T20:19:55+00:00",
-      "display_date": "Nov 03, 2026",
-      "category": "AI Tools & Products",
-      "description": "Apple will now let Siri AI perform actions across third-party apps. As part of the iOS 27.3 update rolling out on Tuesday, Apple announced developers can now integrate Siri AI's new features in \"all apps,\" allowing the voice assistant to draw on a user's personal context, process natural language prompts, and use on-screen awareness to […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/11/03/apple-starts-giving-siri-ai-access-to-third-party-apps.html"
-    },
-    {
-      "title": "AI inference startup Fal doubles its valuation to $16B as demand surges",
-      "url": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-03T19:34:43+00:00",
-      "display_date": "Nov 03, 2026",
-      "category": "AI Business",
-      "description": "The five-year-old startup raised a $1.3 billion round led by Bessemer.",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges.html"
-    },
-    {
-      "title": "OpenAI says ChatGPT is catching up to Google in search",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search",
-      "source": "The Verge AI",
-      "published_at": "2026-11-03T18:38:47+00:00",
-      "display_date": "Nov 03, 2026",
-      "category": "Models & LLMs",
-      "description": "In many circles, \"Ask Chat\" has replaced \"Google it,\" and that's reflected in a new announcement from OpenAI: the volume of search queries run through ChatGPT now equals 20 percent of the volume run through Google. Adam Fry, OpenAI's consumer product lead for ChatGPT, made the announcement at a press event on Monday. He said […]",
       "related": {
         "title": "Evaluate Rank Prompt for this workflow",
         "url": "partner-offers/rank-prompt-ai-visibility.html",
@@ -429,20 +428,6 @@
       }
     },
     {
-      "title": "Scaling Git at OpenAI",
-      "url": "https://openai.com/index/scaling-git-at-openai",
-      "source": "OpenAI",
-      "published_at": "2026-11-02T15:30:00+00:00",
-      "display_date": "Nov 02, 2026",
-      "category": "AI Tools & Products",
-      "description": "How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
       "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
       "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
       "source": "Ars Technica AI",
@@ -512,6 +497,20 @@
         "title": "Evaluate ElevenLabs for this workflow",
         "url": "partner-offers/elevenlabs-ai-voice.html",
         "offer_id": "elevenlabs"
+      }
+    },
+    {
+      "title": "Build specialized multimodal models with LFM3",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "source": "Hugging Face",
+      "published_at": "2026-10-27T17:16:52+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
       }
     }
   ]
