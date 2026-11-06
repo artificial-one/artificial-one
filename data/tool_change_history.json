@@ -1,10 +1,28 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 66,
+    "successful_checks": 55,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-06",
+      "id": "b8cc63de90d8d004",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://opus.pro",
+      "tool_id": "opus-clip",
+      "tool_name": "Opus Clip"
+    },
+    {
+      "detected_on": "2026-11-06",
+      "id": "da13e086d86a9590",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://runwayml.com",
+      "tool_id": "runway",
+      "tool_name": "Runway"
+    },
     {
       "detected_on": "2026-11-05",
       "id": "61597c433f2f2069",
@@ -1762,6 +1780,6 @@
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-05",
+  "updated_at": "2026-11-06",
   "version": 1
 }
