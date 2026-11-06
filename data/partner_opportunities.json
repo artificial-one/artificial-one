@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05",
+  "updated_at": "2026-11-06",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
   "summary": {
-    "total": 473,
+    "total": 474,
     "approved_link_pending": 18,
     "existing_active": 32,
     "not_qualified": 14,
     "policy_review_required": 24,
     "program_paused": 1,
-    "ready_for_owner_application": 384
+    "ready_for_owner_application": 385
   },
   "opportunities": [
     {
@@ -177,7 +177,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 85,
       "relevance_matches": [
@@ -1140,7 +1140,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 22,
+      "review_days": 24,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1191,7 +1191,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 17,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -1455,7 +1455,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 7,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -1640,6 +1640,67 @@
         "artificial intelligence",
         "content",
         "marketing",
+        "sales",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:glide",
+      "network": "partnerstack",
+      "name": "Glide",
+      "slug": "glide",
+      "description": "Glide is the business operations platform that turns Excel files and Google Sheets into connected apps and AI agents, so teams can stop chasing spreadsheets and run their business from one place.",
+      "offer": "Earn 20% revenue share for new subscribers",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Content Management",
+        "Customer Service",
+        "Development",
+        "ERP",
+        "HR Software",
+        "Office Software",
+        "Sales",
+        "Supply Chain & Logistics",
+        "hot"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/glide?company=glide&gref=marketplace",
+      "terms_url": "",
+      "website": "https://www.glideapps.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 201,
+      "source": "https://market.partnerstack.com/",
+      "score": 85,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "content",
+        "customer service",
+        "development",
+        "productivity",
         "sales",
         "software"
       ],
@@ -2383,7 +2444,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2668,7 +2729,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -2836,7 +2897,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 16,
+      "review_days": 17,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -3712,6 +3773,92 @@
         "artificial intelligence",
         "content",
         "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:zapier",
+      "network": "partnerstack",
+      "name": "Zapier",
+      "slug": "zapier",
+      "description": "Zapier is the AI orchestration platform millions of businesses use to connect 10,000+ apps and automate their work with Zaps, Tables, Interfaces, and AI agents. We partner with publishers, review sites, newsletters, and SMB consultants whose audiences are choosing their next automation tool. Earn $100 for every customer you refer who upgrades to a paid Zapier plan. Free to join, no exclusivity, with tracking links, ready-made creative, and a partner team to help you grow.",
+      "offer": "Earn $100 for every new customer who upgrades to a paid Zapier plan",
+      "tags": [
+        "AR/VR",
+        "Accounting",
+        "Analytics",
+        "Artificial Intelligence",
+        "B2B Marketplaces",
+        "CAD & PLM Software",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Content Management",
+        "Customer Service",
+        "Data Privacy",
+        "Design",
+        "Development",
+        "Digital Advertising",
+        "ERP",
+        "Featured",
+        "Governance, Risk, & Compliance",
+        "HR",
+        "HR Software",
+        "Hosting Providers",
+        "Hot",
+        "IT Infrastructure",
+        "IT Management",
+        "IoT Management",
+        "Marketing",
+        "Office Software",
+        "Other",
+        "Payroll",
+        "Sales",
+        "Security",
+        "Supply Chain & Logistics",
+        "Trusted",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/zapier?company=zapier&gref=marketplace",
+      "terms_url": "https://zapier.com/legal/ambassador-affiliate-terms",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 85,
+      "relevance_matches": [
+        "ai",
+        "analytics",
+        "artificial intelligence",
+        "automation",
+        "content",
+        "customer service",
+        "data",
+        "design",
+        "development",
+        "marketing",
+        "productivity",
+        "sales",
         "software"
       ],
       "already_active": false,
@@ -5230,7 +5377,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5427,6 +5574,7 @@
         "Affiliates",
         "Artificial Intelligence",
         "Commerce",
+        "Hot",
         "Referral Partners",
         "Trusted"
       ],
@@ -5662,7 +5810,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -5915,6 +6063,53 @@
           "coupon_restricted": false,
           "email_restricted": true,
           "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:forwardly",
+      "network": "partnerstack",
+      "name": "Forwardly",
+      "slug": "forwardly",
+      "description": "Helps US businesses pay bills and get paid faster, for less. Connect with other businesses on the Forwardly Network for free and fast bank payments that sync automatically with your accounting or ERP platform. Want to get started? Open your free business account and get set up in only 5 minutes.",
+      "offer": "Earn up to $1,000 for every US business you refer",
+      "tags": [
+        "AR/VR",
+        "Accounting",
+        "Artificial Intelligence",
+        "ERP",
+        "Hot",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/forwardly?company=forwardly&gref=marketplace",
+      "terms_url": "https://www.forwardly.com/terms",
+      "website": "https://www.forwardly.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 4,
+      "source": "https://market.partnerstack.com/",
+      "score": 77,
+      "relevance_matches": [
+        "artificial intelligence"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
@@ -6476,6 +6671,64 @@
       "policy": {
         "status": "not_reviewed",
         "signals": {},
+        "cookie_days": null
+      }
+    },
+    {
+      "id": "partnerstack:salesforce",
+      "network": "partnerstack",
+      "name": "Salesforce For Small Business",
+      "slug": "salesforce",
+      "description": "Put turnkey AI to work across your small business with a CRM that already knows your customers — and automate the kind of customer experiences you’re actually proud of.",
+      "offer": "$30 per qualified lead!",
+      "tags": [
+        "Affiliates",
+        "Artificial Intelligence",
+        "Collaboration & Productivity",
+        "Commerce",
+        "Customer Service",
+        "Featured",
+        "Hot",
+        "IT Management",
+        "Marketing",
+        "New",
+        "Office Software",
+        "Trusted"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/salesforce?company=salesforce&gref=marketplace",
+      "terms_url": "",
+      "website": "https://www.salesforce.com/ca/small-business/starter/",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": false,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 77,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "customer service",
+        "marketing",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -8543,62 +8796,6 @@
       }
     },
     {
-      "id": "partnerstack:salesforce",
-      "network": "partnerstack",
-      "name": "Salesforce For Small Business",
-      "slug": "salesforce",
-      "description": "Put turnkey AI to work across your small business with a CRM that already knows your customers — and automate the kind of customer experiences you’re actually proud of.",
-      "offer": "$30 per qualified lead!",
-      "tags": [
-        "Affiliates",
-        "Artificial Intelligence",
-        "Collaboration & Productivity",
-        "Commerce",
-        "Customer Service",
-        "Featured",
-        "IT Management",
-        "Marketing",
-        "New",
-        "Office Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/salesforce?company=salesforce&gref=marketplace",
-      "terms_url": "",
-      "website": "https://www.salesforce.com/ca/small-business/starter/",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 72,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "customer service",
-        "marketing",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:shipcominc",
       "network": "partnerstack",
       "name": "Ship.com",
@@ -8615,6 +8812,7 @@
         "New",
         "Publishers",
         "Referral Partners",
+        "Supply Chain & Logistics",
         "Trusted"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/shipcominc?company=shipcominc&gref=marketplace",
@@ -9817,7 +10015,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -9922,7 +10120,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10521,67 +10719,6 @@
       }
     },
     {
-      "id": "partnerstack:glide",
-      "network": "partnerstack",
-      "name": "Glide",
-      "slug": "glide",
-      "description": "Build and launch powerful custom business applications without coding or design skills. Instantly deploy apps to one or thousands of internal or external users, in any location, on any device. No download or install required.",
-      "offer": "Earn 20% of your referred customer's plan for one year",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Collaboration & Productivity",
-        "Customer Service",
-        "Development",
-        "HR Software",
-        "IT Infrastructure",
-        "IT Management",
-        "IoT Management",
-        "Marketing",
-        "Office Software",
-        "Sales",
-        "Supply Chain & Logistics",
-        "hot"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/glide?company=glide&gref=marketplace",
-      "terms_url": "",
-      "website": "https://www.glideapps.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 201,
-      "source": "https://market.partnerstack.com/",
-      "score": 67,
-      "relevance_matches": [
-        "customer service",
-        "design",
-        "development",
-        "marketing",
-        "productivity",
-        "sales",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:goflow",
       "network": "partnerstack",
       "name": "Goflow",
@@ -11127,7 +11264,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 26,
+      "review_days": 37,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -11336,7 +11473,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12097,7 +12234,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 71,
+      "review_days": 4,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12374,7 +12511,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12473,7 +12610,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 21,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12693,7 +12830,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12962,7 +13099,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 10,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -15876,7 +16013,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 13,
+      "review_days": 14,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16307,7 +16444,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 57,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -16938,7 +17075,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 60,
+      "review_days": 59,
       "source": "https://market.partnerstack.com/",
       "score": 65,
       "relevance_matches": [
@@ -17094,7 +17231,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17533,6 +17670,54 @@
       }
     },
     {
+      "id": "partnerstack:webcataloginc",
+      "network": "partnerstack",
+      "name": "WebCatalog",
+      "slug": "webcataloginc",
+      "description": "WebCatalog is an all-in-one toolkit that lets you manage multiple web apps and accounts, organize your workspace by workflow, turn websites into desktop apps, and explore a curated catalog of powerful tools.",
+      "offer": "Earn 25% for every customer transaction! (average customer contract value $250/yr)",
+      "tags": [
+        "Collaboration & Productivity",
+        "Development",
+        "Hot",
+        "Office Software",
+        "Other"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/webcataloginc?company=webcataloginc&gref=marketplace",
+      "terms_url": "https://webcatalog.io/legal/affiliate-program-agreement",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 3,
+      "source": "https://market.partnerstack.com/",
+      "score": 63,
+      "relevance_matches": [
+        "development",
+        "productivity",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": true,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:westfax",
       "network": "partnerstack",
       "name": "WestFax",
@@ -17873,7 +18058,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18192,7 +18377,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18455,7 +18640,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -18987,7 +19172,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 18,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19037,7 +19222,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 174,
+      "review_days": 116,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19382,7 +19567,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 57,
+      "review_days": 75,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -19545,14 +19730,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
+          "paid_search_restricted": true,
+          "coupon_restricted": true,
           "email_restricted": false,
-          "incentive_restricted": false,
+          "incentive_restricted": true,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 180
       }
     },
     {
@@ -20053,7 +20238,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20450,53 +20635,6 @@
       }
     },
     {
-      "id": "partnerstack:webcataloginc",
-      "network": "partnerstack",
-      "name": "WebCatalog",
-      "slug": "webcataloginc",
-      "description": "WebCatalog is an all-in-one toolkit that lets you manage multiple web apps and accounts, organize your workspace by workflow, turn websites into desktop apps, and explore a curated catalog of powerful tools.",
-      "offer": "Earn 25% for every customer transaction! (average customer contract value $250/yr)",
-      "tags": [
-        "Collaboration & Productivity",
-        "Development",
-        "Office Software",
-        "Other"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/webcataloginc?company=webcataloginc&gref=marketplace",
-      "terms_url": "https://webcatalog.io/legal/affiliate-program-agreement",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": false,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 3,
-      "source": "https://market.partnerstack.com/",
-      "score": 58,
-      "relevance_matches": [
-        "development",
-        "productivity",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": true,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:acrisure",
       "network": "partnerstack",
       "name": "Acrisure",
@@ -20506,6 +20644,7 @@
       "tags": [
         "HR",
         "HR Software",
+        "Hot",
         "New",
         "Other",
         "Payroll",
@@ -20820,7 +20959,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 43,
+      "review_days": 42,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -20868,7 +21007,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -20963,7 +21102,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 12,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21318,7 +21457,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 10,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21362,7 +21501,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21828,7 +21967,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 55,
       "relevance_matches": [
@@ -22097,53 +22236,6 @@
       "relevance_matches": [
         "productivity",
         "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:runwayhealth",
-      "network": "partnerstack",
-      "name": "Runway Health",
-      "slug": "runwayhealth",
-      "description": "The leading telehealth company specialized in travel health.",
-      "offer": "Earn $15 for each Referral!",
-      "tags": [
-        "Affiliates",
-        "Agencies",
-        "Collaboration & Productivity",
-        "Hot",
-        "Other",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/runwayhealth?company=runwayhealth&gref=marketplace",
-      "terms_url": "https://runwayhealth.com/terms-of-use/",
-      "website": "https://www.runwayhealth.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": false,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 54,
-      "relevance_matches": [
-        "productivity"
       ],
       "already_active": false,
       "relationship_state": "pending",
@@ -22556,7 +22648,7 @@
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": null
+        "cookie_days": 90
       }
     },
     {
@@ -22755,6 +22847,51 @@
       }
     },
     {
+      "id": "partnerstack:runwayhealth",
+      "network": "partnerstack",
+      "name": "Runway Health",
+      "slug": "runwayhealth",
+      "description": "The leading telehealth company specialized in travel health.",
+      "offer": "Earn $15 for each Referral!",
+      "tags": [
+        "Affiliates",
+        "Agencies",
+        "Collaboration & Productivity",
+        "Other"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/runwayhealth?company=runwayhealth&gref=marketplace",
+      "terms_url": "https://runwayhealth.com/terms-of-use/",
+      "website": "https://www.runwayhealth.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": false,
+      "review_days": -1,
+      "source": "https://market.partnerstack.com/",
+      "score": 49,
+      "relevance_matches": [
+        "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:creditrepaircloud",
       "network": "partnerstack",
       "name": "Credit Repair Cloud",
@@ -22921,7 +23058,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 58,
+      "review_days": 53,
       "source": "https://market.partnerstack.com/",
       "score": 47,
       "relevance_matches": [],
@@ -23018,7 +23155,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 45,
       "relevance_matches": [
@@ -23122,7 +23259,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 138,
       "source": "https://market.partnerstack.com/",
       "score": 43,
       "relevance_matches": [],
@@ -23168,7 +23305,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": -1,
+      "review_days": 69,
       "source": "https://market.partnerstack.com/",
       "score": 42,
       "relevance_matches": [],
@@ -23452,9 +23589,7 @@
       "slug": "sonatype",
       "description": "Accelerate Innovation with Open Source AI.",
       "offer": "Request Program",
-      "tags": [
-        "AWS marketplace"
-      ],
+      "tags": [],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/sonatype?company=sonatype&gref=marketplace",
       "terms_url": "",
       "website": "https://www.sonatype.com/",
@@ -23572,48 +23707,6 @@
       }
     },
     {
-      "id": "partnerstack:forwardly",
-      "network": "partnerstack",
-      "name": "Forwardly",
-      "slug": "forwardly",
-      "description": "Helps US businesses pay bills and get paid faster, for less. Connect with other businesses on the Forwardly Network for free and fast bank payments that sync automatically with your accounting or ERP platform. Want to get started? Open your free business account and get set up in only 5 minutes.",
-      "offer": "Earn up to $1,000 for every US business you refer",
-      "tags": [
-        "AR/VR",
-        "Hot",
-        "Trusted"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/forwardly?company=forwardly&gref=marketplace",
-      "terms_url": "https://www.forwardly.com/terms",
-      "website": "https://www.forwardly.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": false,
-      "review_days": -1,
-      "source": "https://market.partnerstack.com/",
-      "score": 39,
-      "relevance_matches": [],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
       "id": "partnerstack:healthie",
       "network": "partnerstack",
       "name": "Healthie",
@@ -23633,7 +23726,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 23,
+      "review_days": 22,
       "source": "https://market.partnerstack.com/",
       "score": 39,
       "relevance_matches": [],
