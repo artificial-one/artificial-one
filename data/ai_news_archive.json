@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-11-06T07:22:31.019271+00:00",
+  "updated_at": "2026-11-06T19:40:31.591829+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web.html",
+      "created_at": "2026-11-06T19:40:31.591829+00:00",
+      "source": {
+        "title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+        "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-06T18:44:38+00:00",
+        "display_date": "Nov 06, 2026",
+        "category": "Research",
+        "description": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+        "summary": "Security researchers discovered hundreds of Artex AI hacking tools exposed to the internet, raising concerns about potential cyberattacks. The open-source tool, used for penetration testing, has been linked to several major cyber incidents.",
+        "facts": [
+          {
+            "statement": "Hundreds of Artex AI hacking tools are publicly accessible on the web.",
+            "evidence": "Hundreds of Artex AI hacking tools found publicly exposed to the web"
+          },
+          {
+            "statement": "Artex is an open-source autonomous penetration testing tool.",
+            "evidence": "open source autonomous penetration testing tool"
+          },
+          {
+            "statement": "Artex has been used in several major cyberattacks.",
+            "evidence": "to several broad-scale cyberattacks, including against the korean finance industry"
+          }
+        ],
+        "why_it_matters": "The exposure of Artex AI hacking tools highlights the risks of misconfigured open-source software. Even with its intended use for security testing, the public availability of such tools can lead to significant cybersecurity threats and data breaches.",
+        "elephant_take": "🐘 鼋 The Artex incident is a stark reminder that even well-intentioned tools can be misused. While Artex is designed for security testing, its exposure underscores the need for better configuration practices and oversight in the cybersecurity community.",
+        "caveat": "The findings highlight the importance of proper software configuration and the potential for open-source tools to be exploited by malicious actors.",
+        "who_should_care": [
+          "Cybersecurity professionals",
+          "Software developers",
+          "IT administrators"
+        ],
+        "what_to_do": [
+          "Regularly audit software configurations for exposed vulnerabilities",
+          "Implement strict access controls for sensitive tools",
+          "Monitor and report any suspicious activity related to open-source tools"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Hundreds%20of%20Artex%20AI%20hacking%20tools%20found%20publicly%20exposed%20to%20the%20web%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/11/06/meta-s-muse-ai-can-create-custom-spaces-for-the-version-of-the-app-you-need-right.html",
+      "created_at": "2026-11-06T19:40:31.591829+00:00",
+      "source": {
+        "title": "Meta’s Muse AI can create custom ‘spaces’ for the version of the app you need right now",
+        "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
+        "source": "The Verge AI",
+        "published_at": "2026-11-06T18:15:26+00:00",
+        "display_date": "Nov 06, 2026",
+        "category": "AI Tools & Products",
+        "description": "Meta will now allow you to build customized, app-like experiences within its Muse AI assistant. The new feature, called \"spaces,\" allows Muse to build things like a shopping hub, school dashboard, music tracker, trivia game, and more, which you can interact with directly in the app. If you connect your space to a relevant app, […]",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Meta's Muse AI Introduces Custom 'Spaces' for App-Like Experiences",
+        "summary": "Meta's Muse AI now allows users to create custom, app-like experiences within its assistant through 'spaces,' enabling features like shopping hubs and school dashboards. The feature is set to roll out to all users.",
+        "facts": [
+          {
+            "statement": "Meta's Muse AI can create custom 'spaces' for the version of the app you need right now",
+            "evidence": "Meta’s Muse AI can create custom ‘spaces’ for the version of the app you need right now"
+          },
+          {
+            "statement": "Muse allows users to build customized, app-like experiences within its assistant",
+            "evidence": "Meta will now allow you to build customized, app-like experiences within its Muse AI assistant"
+          },
+          {
+            "statement": "Users can interact with their spaces by checking things off, adding notes, and making edits",
+            "evidence": "you can also interact with your spaces by checking things off, adding notes, and making"
+          }
+        ],
+        "why_it_matters": "Meta's Muse AI is expanding its capabilities to offer more personalized and interactive experiences. The 'spaces' feature allows users to tailor their interactions with the AI, potentially improving productivity and user engagement with the platform.",
+        "elephant_take": "🐘 鼋 Meta’s Muse AI is getting a bit more app-like, but it’s still a bit of a stretch. The 'spaces' feature is a step towards personalization, but it's not clear how much this will improve the user experience beyond the basics.",
+        "caveat": "The feature is still in its early stages and may have limitations in terms of functionality and user interface.",
+        "who_should_care": [
+          "AI developers",
+          "Tech enthusiasts",
+          "Users of Meta products"
+        ],
+        "what_to_do": [
+          "Explore the new 'spaces' feature in Muse AI",
+          "Test the feature with different use cases",
+          "Provide feedback to Meta on the usability of the feature"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Meta%E2%80%99s%20Muse%20AI%20can%20create%20custom%20%E2%80%98spaces%E2%80%99%20for%20the%20version%20of%20the%20app%20you%20need%20right%20now%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/11/06/openai-is-stepping-back-from-ndas-for-data-center-projects.html",
       "created_at": "2026-11-06T07:22:31.019271+00:00",
@@ -19238,6 +19368,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+      "reason": "quality gate rejected draft: summary length is outside the publication range",
+      "at": "2026-11-06T19:40:31.591829+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-06T19:40:31.591829+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-06T19:40:31.591829+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-06T19:40:31.591829+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-06T07:22:31.019271+00:00",
@@ -19451,30 +19605,6 @@
       "url": "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-01T22:23:46.906114+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/openai-plans-to-train-models-on-daybreak-blue-cybersecurity-session-data-that-was-previously-off-limits/",
-      "reason": "quality gate rejected draft: summary length is outside the publication range; a fact has no exact source evidence",
-      "at": "2026-11-01T22:23:46.906114+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-01T22:23:46.906114+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/empathetic-prompts-can-turn-ai-chatbots-into-seemingly-traumatized-conversational-partners/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-01T18:05:51.257681+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/openai-is-steering-chatgpt-users-toward-more-paid-usage/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-01T18:05:51.257681+00:00",
       "pipeline_version": "2"
     }
   ]
