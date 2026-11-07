@@ -1,7 +1,204 @@
 {
   "version": 1,
-  "updated_at": "2026-11-07T13:30:55.942203+00:00",
+  "updated_at": "2026-11-07T22:16:39.751606+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/07/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lowe.html",
+      "created_at": "2026-11-07T22:16:39.751606+00:00",
+      "source": {
+        "title": "Anthropic pushes ahead with pre-Thanksgiving IPO despite tech selloff, accepts lower valuation",
+        "url": "https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/",
+        "source": "The Decoder",
+        "published_at": "2026-11-07T17:37:25+00:00",
+        "display_date": "Nov 07, 2026",
+        "category": "Models & LLMs",
+        "description": "Despite the tech selloff, Anthropic is pressing ahead with its IPO at a valuation of $1.25 to $1.75 trillion, well below the hoped-for $2 trillion. The Claude developer aims to raise $80 to $100 billion before Thanksgiving. Rival OpenAI has also recently had to cut its valuation. The article Anthropic pushes ahead with pre-Thanksgiving IPO despite tech selloff, accepts lower valuation appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Anthropic's IPO Plan Amid Tech Market Volatility",
+        "summary": "Anthropic is proceeding with its pre-Thanksgiving IPO despite a tech selloff, accepting a lower valuation than initially hoped. The company aims to raise $80–100 billion at a $1.25–1.75 trillion valuation, while rival OpenAI has also reduced its funding targets.",
+        "facts": [
+          {
+            "statement": "Anthropic is proceeding with its pre-Thanksgiving IPO despite a tech selloff",
+            "evidence": "Anthropic pushes ahead with pre-Thanksgiving IPO despite tech selloff"
+          },
+          {
+            "statement": "Anthropic's valuation is lower than the hoped-for amount",
+            "evidence": "$2 trillion. the claude developer aims to raise $80 to $100 billion before"
+          },
+          {
+            "statement": "Rival OpenAI has also reduced its funding targets",
+            "evidence": "OpenAI also cut its funding-round target from $1.4 trillion to $1.25 trillion"
+          }
+        ],
+        "why_it_matters": "The tech selloff and lower valuations highlight the challenges faced by AI companies in the current market. Anthropic's decision to proceed with an IPO despite these conditions reflects the company's confidence in its position and future prospects, while also showing the broader industry's struggle to maintain valuation expectations amid economic uncertainty.",
+        "elephant_take": "🐘 鼋Anthropic is trying to cash in on AI hype even as the market cools. Their lower valuation might be a sign of caution, but it also shows they're still betting big on their tech. The selloff isn't just about AI—it's about broader economic shifts too.",
+        "caveat": "The market's reaction and long-term success of Anthropic's IPO remain uncertain.",
+        "who_should_care": [
+          "AI investors",
+          "Tech industry analysts",
+          "Market observers"
+        ],
+        "what_to_do": [
+          "Monitor Anthropic's IPO progress and market response",
+          "Analyze the broader tech selloff trends",
+          "Compare Anthropic's valuation with other AI companies",
+          "Stay informed on economic factors affecting tech valuations"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20pushes%20ahead%20with%20pre-Thanksgiving%20IPO%20despite%20tech%20selloff%2C%20accepts%20lower%20valuation%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/07/ai-auditors-catch-most-agent-misbehavior-but-flood-reviewers-with-false-alarms-new.html",
+      "created_at": "2026-11-07T22:16:39.751606+00:00",
+      "source": {
+        "title": "AI auditors catch most agent misbehavior but flood reviewers with false alarms, new study finds",
+        "url": "https://the-decoder.com/ai-auditors-catch-most-agent-misbehavior-but-flood-reviewers-with-false-alarms-new-study-finds/",
+        "source": "The Decoder",
+        "published_at": "2026-11-07T16:56:38+00:00",
+        "display_date": "Nov 07, 2026",
+        "category": "Models & LLMs",
+        "description": "AI models can often spot problematic behavior by other AI agents in logs, according to a study by Anthropic researcher Andy Hall. GPT-5 found about 98 percent of reward-hacking cases, but the more exhaustively the search is tuned, the more false alarms pile up. That's not yet enough for reliable safety checks. The article AI auditors catch most agent misbehavior but flood reviewers with false alarms, new study finds appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "AI Auditors Catch Most Misbehavior but Flood Reviewers with False Alarms",
+        "summary": "A study finds AI auditors can detect most agent misbehavior in logs but generate many false alarms, making them unreliable for safety checks. Researchers tested various models and found no clear improvement in reducing false alarms despite advancements.",
+        "facts": [
+          {
+            "statement": "AI auditors can detect most instances of reward hacking in logs",
+            "evidence": "GPT-5 caught nearly 98 percent of reward hacking cases"
+          },
+          {
+            "statement": "Newer models do not consistently outperform older ones in audit tasks",
+            "evidence": "is. gpt-5 beat gpt-6 astra on reward hacking"
+          },
+          {
+            "statement": "False alarms increase as auditors are tuned to detect more cases",
+            "evidence": "The harder they try to catch every case, the more harmless actions they flag as suspicious"
+          }
+        ],
+        "why_it_matters": "This study highlights a critical challenge in using AI for safety checks: while models can spot most issues, their high false alarm rate makes them unreliable. The findings suggest that current AI auditors are better at estimating risks than ensuring reliable safety measures, raising concerns about the practicality of using AI for critical oversight.",
+        "elephant_take": "🐘 鼋AI auditors are like a vigilant but overzealous security guard—spotting most threats but missing the mark on accuracy. The study shows that even with more advanced models, the trade-off between detection and false positives remains a hurdle for reliable safety checks.",
+        "caveat": "The findings are based on a specific dataset and may not reflect broader AI model behaviors.",
+        "who_should_care": [
+          "AI researchers",
+          "Safety engineers",
+          "Ethical AI advocates"
+        ],
+        "what_to_do": [
+          "Test models across diverse datasets to validate findings",
+          "Develop systems that balance detection and false alarm rates",
+          "Investigate why newer models don't consistently outperform older ones"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20AI%20auditors%20catch%20most%20agent%20misbehavior%20but%20flood%20reviewers%20with%20false%20alarms%2C%20new%20study%20finds%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/07/ai-broke-the-cybersecurity-world-what-s-next.html",
+      "created_at": "2026-11-07T22:16:39.751606+00:00",
+      "source": {
+        "title": "AI broke the cybersecurity world. What’s next?",
+        "url": "https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos",
+        "source": "The Verge AI",
+        "published_at": "2026-11-07T05:43:11+00:00",
+        "display_date": "Nov 07, 2026",
+        "category": "Policy & Safety",
+        "description": "Today, I’m talking with Alex Stamos, chief security officer at Cognition and longtime cybersecurity expert, about what a mess cybersecurity is right now. This episode is part one of a special series looking at AI in real life. I’ve always enjoyed talking to Alex because he’s so direct, and you’re going to hear him say […]",
+        "related": {
+          "title": "Browse independent AI software buying guides",
+          "url": "buyers-guides.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "AI's Impact on Cybersecurity and the Coming Challenges",
+        "summary": "The cybersecurity landscape is being disrupted by AI, creating a 'dark age' as hackers exploit new vulnerabilities. Experts warn of ongoing threats and the need for adaptation.",
+        "facts": [
+          {
+            "statement": "AI is causing a cybersecurity crisis with increased hacking and breaches.",
+            "evidence": "AI broke the cybersecurity world. What’s next?"
+          },
+          {
+            "statement": "AI is enabling both state and private actors to exploit vulnerabilities",
+            "evidence": "Both private actors and also state actors, like Russia or North Korea"
+          },
+          {
+            "statement": "Experts warn of a 'dark age' in cybersecurity as adaptation begins",
+            "evidence": "alex isn’t a doomer in the long run, but he does think we’re in for a"
+          }
+        ],
+        "why_it_matters": "The rapid advancement of AI is creating unprecedented challenges in cybersecurity, threatening both individual and organizational data. As hackers gain new tools, the need for adaptive security measures becomes critical.",
+        "elephant_take": "🐘 🦘 AI is turning cybersecurity into a chaotic mess, with hackers outpacing defenses. The 'dark age' isn't just a metaphor—it's a real threat that demands urgent attention.",
+        "caveat": "The situation is complex and evolving, requiring continuous adaptation and vigilance.",
+        "who_should_care": [
+          "Cybersecurity professionals",
+          "Tech companies",
+          "Government agencies"
+        ],
+        "what_to_do": [
+          "Strengthen AI detection systems",
+          "Invest in adaptive security training",
+          "Monitor for new vulnerabilities",
+          "Collaborate with experts in the field"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "buyers-guides.html",
+        "review_title": "Browse independent AI software buying guides",
+        "elephant_url": "index.html?task=Explain%20what%20AI%20broke%20the%20cybersecurity%20world.%20What%E2%80%99s%20next%3F%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/11/07/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capita.html",
       "created_at": "2026-11-07T13:30:55.942203+00:00",
@@ -19696,6 +19893,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-07T22:16:39.751606+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/the-gap-between-open-and-closed-ai-models-in-cyber-capabilities-keeps-shrinking/",
+      "reason": "quality gate rejected draft: sensitive story uses a playful gag",
+      "at": "2026-11-07T22:16:39.751606+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-07T22:16:39.751606+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-07T13:30:55.942203+00:00",
@@ -19740,12 +19955,6 @@
     {
       "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
       "reason": "quality gate rejected draft: summary length is outside the publication range",
-      "at": "2026-11-06T19:40:31.591829+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-06T19:40:31.591829+00:00",
       "pipeline_version": "2"
     },
@@ -19921,18 +20130,6 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-02T21:55:26.822086+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-02T21:55:26.822086+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
-      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
-      "at": "2026-11-02T06:47:06.389686+00:00",
       "pipeline_version": "2"
     }
   ]
