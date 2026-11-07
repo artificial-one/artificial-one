@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-11-07T06:34:03.676274+00:00",
+  "updated_at": "2026-11-07T13:30:55.942203+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/07/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capita.html",
+      "created_at": "2026-11-07T13:30:55.942203+00:00",
+      "source": {
+        "title": "OpenAI lands an $11 billion funding round, but has to court dentists for more capital",
+        "url": "https://the-decoder.com/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capital/",
+        "source": "The Decoder",
+        "published_at": "2026-11-07T09:45:23+00:00",
+        "display_date": "Nov 07, 2026",
+        "category": "AI Business",
+        "description": "OpenAI has secured $11 billion in fresh capital, the first tranche of a round that values the company at $1.25 trillion. The full round could swell to $20 billion. That OpenAI is already turning to wealthy private investors hints at a saturating AI capital market and growing investor caution. The article OpenAI lands an $11 billion funding round, but has to court dentists for more capital appeared first on The Decoder .",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "OpenAI Secures $11B Funding but Faces Capital Challenges",
+        "summary": "OpenAI has secured $11 billion in new funding, valuing the company at $1.25 trillion. The full round could reach $20 billion, but the company is now seeking additional capital from dentists and other investors.",
+        "facts": [
+          {
+            "statement": "OpenAI has secured $11 billion in new funding",
+            "evidence": "OpenAI has received roughly $11 billion in new funding"
+          },
+          {
+            "statement": "The full round could grow to $20 billion",
+            "evidence": "The full round could grow to $20 billion"
+          },
+          {
+            "statement": "OpenAI is seeking additional capital from dentists",
+            "evidence": "If OpenAI is already courting dentists to scrape together more capital"
+          }
+        ],
+        "why_it_matters": "The $11 billion funding round highlights the growing interest in AI investments, but also signals potential challenges in securing additional capital. The need to court dentists suggests a saturated market or concentration on a few major players like OpenAI and Anthropic.",
+        "elephant_take": "🐘 🦘 OpenAI's $11B funding is impressive, but the need to court dentists hints at a market that's either tapped out or too focused on a few big names. It's a sign of both success and potential strain in the AI capital landscape.",
+        "caveat": "The story highlights both the scale of AI investment and the challenges in securing additional funding, suggesting a market that's growing but also facing saturation.",
+        "who_should_care": [
+          "AI investors",
+          "Tech industry analysts",
+          "Funding institutions"
+        ],
+        "what_to_do": [
+          "Monitor AI funding trends",
+          "Assess market saturation",
+          "Evaluate investment risks in AI startups"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20lands%20an%20%2411%20billion%20funding%20round%2C%20but%20has%20to%20court%20dentists%20for%20more%20capital%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/06/why-a-new-report-on-anthropic-automating-ai-development-is-alarming-researchers.html",
+      "created_at": "2026-11-07T13:30:55.942203+00:00",
+      "source": {
+        "title": "Why a new report on Anthropic automating AI development is alarming researchers",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+        "source": "The Verge AI",
+        "published_at": "2026-11-06T21:48:06+00:00",
+        "display_date": "Nov 06, 2026",
+        "category": "Models & LLMs",
+        "description": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with little indication of slowing down. That's according to a new report published Thursday by the AI safety research organization METR, following an 11-week investigation […]",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Anthropic's AI Accelerating Research Raises Concerns",
+        "summary": "A report highlights how Anthropic is using AI to speed up its own research, with models improving twice as fast as a year ago. The findings raise questions about the risks of AI self-improvement and the company's public calls for slowing down development.",
+        "facts": [
+          {
+            "statement": "Anthropic's AI models are improving twice as fast as a year ago",
+            "evidence": "models improving roughly twice as quickly as a year"
+          },
+          {
+            "statement": "AI is accelerating Anthropic's research and development",
+            "evidence": "AI is dramatically speeding up Anthropic’s research, even as the company calls for slowing down AI development"
+          },
+          {
+            "statement": "Anthropic employees report significant productivity gains from AI assistance",
+            "evidence": "employees using anthropic’s most capable internal model on average self-reported being around 12 times as productive"
+          }
+        ],
+        "why_it_matters": "The rapid acceleration of AI development through self-improvement raises concerns about the pace and risks of advancing toward a future where AI systems can improve themselves with minimal human involvement. This also comes at a critical time for Anthropic, which is preparing to go public while its CEO calls for slowing down AI development.",
+        "elephant_take": "🐘 鼋Anthropic's AI is outpacing itself, creating a paradox that could lead to unintended consequences. The report highlights how AI is accelerating research but also raises questions about the company's transparency and the potential risks of unmonitored self-improvement.",
+        "caveat": "The report leaves out key details due to redactions, raising concerns about what the public truly knows about Anthropic's development pace and risks.",
+        "who_should_care": [
+          "AI researchers",
+          "Investors",
+          "Regulators"
+        ],
+        "what_to_do": [
+          "Monitor Anthropic's development progress",
+          "Evaluate the risks of self-improving AI systems",
+          "Assess the transparency of AI research practices",
+          "Consider the implications for AI safety and regulation"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Why%20a%20new%20report%20on%20Anthropic%20automating%20AI%20development%20is%20alarming%20researchers%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "path": "news/2026/11/06/openai-valued-at-1-25-trillion-as-rival-anthropic-nears-its-ipo.html",
       "created_at": "2026-11-07T06:34:03.676274+00:00",
@@ -19565,6 +19696,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-07T13:30:55.942203+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-07T13:30:55.942203+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/googles-ai-detects-high-blood-pressure-from-a-regular-smartwatch-without-a-cuff/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-07T13:30:55.942203+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-07T13:30:55.942203+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
       "at": "2026-11-07T06:34:03.676274+00:00",
@@ -19777,30 +19932,6 @@
     {
       "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
       "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
-      "at": "2026-11-02T06:47:06.389686+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-02T06:47:06.389686+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-02T06:47:06.389686+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-02T06:47:06.389686+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/updated-model-spec",
-      "reason": "HTTP Error 403: Forbidden",
       "at": "2026-11-02T06:47:06.389686+00:00",
       "pipeline_version": "2"
     }

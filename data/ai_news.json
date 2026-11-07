@@ -1,7 +1,64 @@
 {
   "version": 1,
-  "updated_at": "2026-11-07T06:33:59.373337+00:00",
+  "updated_at": "2026-11-07T13:30:51.292618+00:00",
   "items": [
+    {
+      "title": "State propaganda in some Chinese AI models is only \"a thin layer\" that fine-tuning can strip away",
+      "url": "https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/",
+      "source": "The Decoder",
+      "published_at": "2026-11-07T12:32:45+00:00",
+      "display_date": "Nov 07, 2026",
+      "category": "Models & LLMs",
+      "description": "Nous Research retrained Alibaba's Qwen3.8-27B to produce Arete-27B, largely stripping out its pro-Chinese bias. The propaganda rate dropped from 22 percent to less than one percent, while general capabilities remained intact in tests. The method relied on 53 million tokens of supervised fine-tuning. The political bias is \"applied late, it is applied thin,\" the team writes. The article State propaganda in some Chinese AI models is only \"a thin layer\" that fine-tuning can strip away appeared first",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Nine AI agents tried autonomous research on open questions from US national labs and none passed the experts' bar",
+      "url": "https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/",
+      "source": "The Decoder",
+      "published_at": "2026-11-07T11:13:42+00:00",
+      "display_date": "Nov 07, 2026",
+      "category": "Models & LLMs",
+      "description": "The \"Into the Unknown\" benchmark tasks nine AI agents with tackling open research questions from U.S. national laboratories. None of the 135 submissions meets all requirements. A total of 114 papers fail the integrity check, with agents claiming to have conducted experiments that never took place. GPT-6 Astra performs best but still doesn't meet the experts' standards. The article Nine AI agents tried autonomous research on open questions from US national labs and none passed the experts' bar ap",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "Google's AI detects high blood pressure from a regular smartwatch without a cuff",
+      "url": "https://the-decoder.com/googles-ai-detects-high-blood-pressure-from-a-regular-smartwatch-without-a-cuff/",
+      "source": "The Decoder",
+      "published_at": "2026-11-07T09:54:09+00:00",
+      "display_date": "Nov 07, 2026",
+      "category": "Research",
+      "description": "Google Research built an AI that spots signs of high blood pressure using only the pulse and motion sensors in a standard smartwatch, no cuff needed. In a 196-person study, its 65.8 percent detection rate beat the traditional in-office measurement. The method is already live in the Google Health app, though it doesn't replace a formal diagnosis. The article Google's AI detects high blood pressure from a regular smartwatch without a cuff appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "OpenAI lands an $11 billion funding round, but has to court dentists for more capital",
+      "url": "https://the-decoder.com/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capital/",
+      "source": "The Decoder",
+      "published_at": "2026-11-07T09:45:23+00:00",
+      "display_date": "Nov 07, 2026",
+      "category": "AI Business",
+      "description": "OpenAI has secured $11 billion in fresh capital, the first tranche of a round that values the company at $1.25 trillion. The full round could swell to $20 billion. That OpenAI is already turning to wealthy private investors hints at a saturating AI capital market and growing investor caution. The article OpenAI lands an $11 billion funding round, but has to court dentists for more capital appeared first on The Decoder .",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/07/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capita.html"
+    },
     {
       "title": "OpenAI valued at $1.25 trillion, as rival Anthropic nears its IPO",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation",
@@ -59,6 +116,21 @@
         "url": "ai-tool-finder.html",
         "offer_id": ""
       }
+    },
+    {
+      "title": "Why a new report on Anthropic automating AI development is alarming researchers",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+      "source": "The Verge AI",
+      "published_at": "2026-11-06T21:48:06+00:00",
+      "display_date": "Nov 06, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with little indication of slowing down. That's according to a new report published Thursday by the AI safety research organization METR, following an 11-week investigation […]",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      },
+      "archive_url": "news/2026/11/06/why-a-new-report-on-anthropic-automating-ai-development-is-alarming-researchers.html"
     },
     {
       "title": "All the latest updates on AI data centers",
@@ -204,20 +276,6 @@
       }
     },
     {
-      "title": "Thinking Machines' Inkling 2 Small claims top spot among western open-weight models",
-      "url": "https://the-decoder.com/thinking-machines-inkling-2-small-claims-top-spot-among-western-open-weight-models/",
-      "source": "The Decoder",
-      "published_at": "2026-11-06T13:25:09+00:00",
-      "display_date": "Nov 06, 2026",
-      "category": "Models & LLMs",
-      "description": "Thinking Machines, the startup from former OpenAI CTO Mira Murati, is releasing Inkling 2 Small, a mixture-of-experts model with 594 billion parameters. The company claims it's the strongest western open-weight model. Better agentic performance comes at a price, though, with token usage rising sharply. The article Thinking Machines' Inkling 2 Small claims top spot among western open-weight models appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Underdog shows off a 32MB speech model in new demo",
       "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/",
       "source": "TechCrunch AI",
@@ -229,34 +287,6 @@
         "title": "Evaluate ElevenLabs for this workflow",
         "url": "partner-offers/elevenlabs-ai-voice.html",
         "offer_id": "elevenlabs"
-      }
-    },
-    {
-      "title": "Anthropic's $1.5 trillion IPO hits resistance as investors balk at valuation",
-      "url": "https://the-decoder.com/anthropics-1-5-trillion-ipo-hits-resistance-as-investors-balk-at-valuation/",
-      "source": "The Decoder",
-      "published_at": "2026-11-06T11:38:17+00:00",
-      "display_date": "Nov 06, 2026",
-      "category": "AI Tools & Products",
-      "description": "Anthropic's IPO is in trouble as investors push back on the $1.5 trillion valuation and the tech market sells off. The article Anthropic's $1.5 trillion IPO hits resistance as investors balk at valuation appeared first on The Decoder .",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Anthropic adds bank account access to Claude so users can track their spending",
-      "url": "https://the-decoder.com/anthropic-adds-bank-account-access-to-claude-so-users-can-track-their-spending/",
-      "source": "The Decoder",
-      "published_at": "2026-11-06T11:33:13+00:00",
-      "display_date": "Nov 06, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic is introducing a new feature in Claude called Personal Finance, which allows users to connect their bank and card accounts and ask questions about their finances. The article Anthropic adds bank account access to Claude so users can track their spending appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
       }
     },
     {
@@ -272,21 +302,6 @@
         "url": "ai-tool-finder.html",
         "offer_id": ""
       }
-    },
-    {
-      "title": "OpenAI is stepping back from NDAs for data center projects",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
-      "source": "The Verge AI",
-      "published_at": "2026-11-06T00:37:56+00:00",
-      "display_date": "Nov 06, 2026",
-      "category": "AI Tools & Products",
-      "description": "Following this week's midterms where voters resoundingly voiced their opposition to data center expansion, OpenAI today announced new commitments to communities where it is working on data center projects, including that it won't use non-disclosure agreements (NDAs) with public officials. Many data center projects have come under scrutiny for relying on NDAs to hide discussions […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      },
-      "archive_url": "news/2026/11/06/openai-is-stepping-back-from-ndas-for-data-center-projects.html"
     },
     {
       "title": "Measuring how AI agents handle everyday wet-lab science",
@@ -499,20 +514,6 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
-    },
-    {
-      "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
-      "url": "https://huggingface.co/blog/anydecisionmodel",
-      "source": "Hugging Face",
-      "published_at": "2026-10-29T00:00:00+00:00",
-      "display_date": "Oct 29, 2026",
-      "category": "Models & LLMs",
-      "description": "",
-      "related": {
-        "title": "Evaluate ElevenLabs for this workflow",
-        "url": "partner-offers/elevenlabs-ai-voice.html",
-        "offer_id": "elevenlabs"
       }
     }
   ]
