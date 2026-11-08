@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08T06:40:16.820592+00:00",
+  "updated_at": "2026-11-08T13:51:52.781002+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/08/the-inventor-of-the-bitter-lesson-has-a-bitter-lesson-for-llm-scaling-enthusiasts.html",
+      "created_at": "2026-11-08T13:51:52.781002+00:00",
+      "source": {
+        "title": "The inventor of the bitter lesson has a bitter lesson for LLM scaling enthusiasts",
+        "url": "https://the-decoder.com/the-inventor-of-the-bitter-lesson-has-a-bitter-lesson-for-llm-scaling-enthusiasts/",
+        "source": "The Decoder",
+        "published_at": "2026-11-08T11:44:41+00:00",
+        "display_date": "Nov 08, 2026",
+        "category": "Models & LLMs",
+        "description": "Turing Award winner Richard Sutton reaffirms that raw compute alone isn't enough for intelligence and that fundamentally new learning methods are needed. Ex-OpenAI researcher Tworek agrees, saying blind transformer scaling \"has reward hacked brains of a whole generation of scientists.\" A growing wave of startups is already betting on exactly this gap. The article The inventor of the bitter lesson has a bitter lesson for LLM scaling enthusiasts appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Bitter Lesson Challenges LLM Scaling Focus",
+        "summary": "Richard Sutton and others warn that raw compute alone isn't enough for AI progress, calling for new learning methods. The 'bitter lesson' highlights the need for ideas that grow with compute rather than relying on human assumptions.",
+        "facts": [
+          {
+            "statement": "Sutton argues that raw compute alone isn't enough for intelligence",
+            "evidence": "raw compute alone isn't enough for intelligence"
+          },
+          {
+            "statement": "Sutton calls for agents with world models that continuously learn from experience",
+            "evidence": "world is massively more complex than what internet text can capture"
+          },
+          {
+            "statement": "Tworek criticizes blind transformer scaling as reward-hacking",
+            "evidence": "reward-hacked the brains of a whole generation of scientists"
+          }
+        ],
+        "why_it_matters": "The 'bitter lesson' challenges the current focus on raw compute for AI, emphasizing the need for new learning methods. This has sparked debate in the AI community about the future of model scaling and research priorities.",
+        "elephant_take": "🐘 鼋 The 'bitter lesson' is a cautionary tale for LLM enthusiasts who think more compute equals more intelligence. Sutton's insights highlight that true progress requires new ideas, not just bigger models.",
+        "caveat": "The debate around the 'bitter lesson' shows the complexity of AI research and the risks of over-reliance on scaling alone.",
+        "who_should_care": [
+          "AI researchers",
+          "Tech companies",
+          "Investors"
+        ],
+        "what_to_do": [
+          "Explore new learning methods beyond transformer scaling",
+          "Avoid blind reliance on compute-heavy approaches",
+          "Encourage interdisciplinary collaboration in AI research"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20The%20inventor%20of%20the%20bitter%20lesson%20has%20a%20bitter%20lesson%20for%20LLM%20scaling%20enthusiasts%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/07/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-c.html",
+      "created_at": "2026-11-08T13:51:52.781002+00:00",
+      "source": {
+        "title": "State propaganda in some Chinese AI models is only \"a thin layer\" that fine-tuning can strip away",
+        "url": "https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/",
+        "source": "The Decoder",
+        "published_at": "2026-11-07T12:32:45+00:00",
+        "display_date": "Nov 07, 2026",
+        "category": "Models & LLMs",
+        "description": "Nous Research retrained Alibaba's Qwen3.8-27B to produce Arete-27B, largely stripping out its pro-Chinese bias. The propaganda rate dropped from 22 percent to less than one percent, while general capabilities remained intact in tests. The method relied on 53 million tokens of supervised fine-tuning. The political bias is \"applied late, it is applied thin,\" the team writes. The article State propaganda in some Chinese AI models is only \"a thin layer\" that fine-tuning can strip away appeared first",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Chinese AI Models' Propaganda Can Be Stripped by Fine-Tuning",
+        "summary": "A study shows that state propaganda in some Chinese AI models can be removed through fine-tuning, with results showing a significant drop in political bias while maintaining general capabilities.",
+        "facts": [
+          {
+            "statement": "Chinese AI models may have superficial political bias that can be removed through fine-tuning",
+            "evidence": "the political bias is \"applied late, it is applied"
+          },
+          {
+            "statement": "Fine-tuning reduced propaganda rate from 22% to under 1%",
+            "evidence": "the propaganda rate dropped from 22 percent to less than one percent"
+          },
+          {
+            "statement": "Fine-tuning on 53 million tokens removed political bias without harming general capabilities",
+            "evidence": "supervised fine-tuning on 53 million tokens cut the propaganda rate"
+          }
+        ],
+        "why_it_matters": "The findings suggest that political bias in AI models can be mitigated through targeted fine-tuning, raising questions about the transparency and neutrality of AI systems. This has implications for how AI is developed and regulated globally.",
+        "elephant_take": "🐘 鼋 The idea that propaganda is just a thin layer is both reassuring and concerning. It suggests that bias can be removed, but it also hints at deeper issues in how AI is trained and controlled.",
+        "caveat": "The study focuses on specific models and may not reflect broader trends in AI development.",
+        "who_should_care": [
+          "AI developers",
+          "Policy makers",
+          "Researchers"
+        ],
+        "what_to_do": [
+          "Investigate how bias is introduced into AI models",
+          "Consider fine-tuning as a method to reduce bias",
+          "Monitor the ethical implications of AI development",
+          "Support transparency in AI training processes"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20State%20propaganda%20in%20some%20Chinese%20AI%20models%20is%20only%20%22a%20thin%20layer%22%20that%20fine-tuning%20can%20strip%20away%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/06/china-reportedly-recruited-ai-exec-to-spy-on-jensen-huang.html",
       "created_at": "2026-11-08T06:40:16.820592+00:00",
@@ -20154,6 +20285,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/the-brain-as-computer-metaphor-shaped-modern-ai-but-may-be-misleading-the-consciousness-debate/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-08T13:51:52.781002+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-08T13:51:52.781002+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-08T13:51:52.781002+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-08T13:51:52.781002+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-08T06:40:16.820592+00:00",
@@ -20178,12 +20333,6 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-07T13:30:55.942203+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-07T13:30:55.942203+00:00",
@@ -20192,12 +20341,6 @@
     {
       "url": "https://the-decoder.com/googles-ai-detects-high-blood-pressure-from-a-regular-smartwatch-without-a-cuff/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-07T13:30:55.942203+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-07T13:30:55.942203+00:00",
       "pipeline_version": "2"
     },

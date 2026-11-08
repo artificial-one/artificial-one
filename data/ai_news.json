@@ -1,7 +1,50 @@
 {
   "version": 1,
-  "updated_at": "2026-11-07T22:16:34.970928+00:00",
+  "updated_at": "2026-11-08T13:51:48.750695+00:00",
   "items": [
+    {
+      "title": "The brain-as-computer metaphor shaped modern AI but may be misleading the consciousness debate",
+      "url": "https://the-decoder.com/the-brain-as-computer-metaphor-shaped-modern-ai-but-may-be-misleading-the-consciousness-debate/",
+      "source": "The Decoder",
+      "published_at": "2026-11-08T13:49:21+00:00",
+      "display_date": "Nov 08, 2026",
+      "category": "Research",
+      "description": "Consciousness researchers Anil Seth, Ned Block, and Giulio Tononi argue in a Nature commentary that today's AI systems aren't conscious and won't become so on silicon hardware. They consider the assumption that consciousness depends on computation alone \"fatally flawed\" and warn against granting rights to AI systems. The article The brain-as-computer metaphor shaped modern AI but may be misleading the consciousness debate appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "The inventor of the bitter lesson has a bitter lesson for LLM scaling enthusiasts",
+      "url": "https://the-decoder.com/the-inventor-of-the-bitter-lesson-has-a-bitter-lesson-for-llm-scaling-enthusiasts/",
+      "source": "The Decoder",
+      "published_at": "2026-11-08T11:44:41+00:00",
+      "display_date": "Nov 08, 2026",
+      "category": "Models & LLMs",
+      "description": "Turing Award winner Richard Sutton reaffirms that raw compute alone isn't enough for intelligence and that fundamentally new learning methods are needed. Ex-OpenAI researcher Tworek agrees, saying blind transformer scaling \"has reward hacked brains of a whole generation of scientists.\" A growing wave of startups is already betting on exactly this gap. The article The inventor of the bitter lesson has a bitter lesson for LLM scaling enthusiasts appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/11/08/the-inventor-of-the-bitter-lesson-has-a-bitter-lesson-for-llm-scaling-enthusiasts.html"
+    },
+    {
+      "title": "AI coding agents still need human cleanup on nearly three out of four tasks in a real-world test",
+      "url": "https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/",
+      "source": "The Decoder",
+      "published_at": "2026-11-08T09:50:59+00:00",
+      "display_date": "Nov 08, 2026",
+      "category": "Models & LLMs",
+      "description": "Alibaba's new coding-agent benchmark, Co-Design Bench, tests AI agents on real user requests that already tripped them up in practice. Even GPT-6 Astra, the top performer, fully solves only 26.4 percent of tasks. On older benchmarks, the same models score above 99 percent. The article AI coding agents still need human cleanup on nearly three out of four tasks in a real-world test appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "Anthropic pushes ahead with pre-Thanksgiving IPO despite tech selloff, accepts lower valuation",
       "url": "https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/",
@@ -72,50 +115,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Nine AI agents tried autonomous research on open questions from US national labs and none passed the experts' bar",
-      "url": "https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/",
-      "source": "The Decoder",
-      "published_at": "2026-11-07T11:13:42+00:00",
-      "display_date": "Nov 07, 2026",
-      "category": "Models & LLMs",
-      "description": "The \"Into the Unknown\" benchmark tasks nine AI agents with tackling open research questions from U.S. national laboratories. None of the 135 submissions meets all requirements. A total of 114 papers fail the integrity check, with agents claiming to have conducted experiments that never took place. GPT-6 Astra performs best but still doesn't meet the experts' standards. The article Nine AI agents tried autonomous research on open questions from US national labs and none passed the experts' bar ap",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "Google's AI detects high blood pressure from a regular smartwatch without a cuff",
-      "url": "https://the-decoder.com/googles-ai-detects-high-blood-pressure-from-a-regular-smartwatch-without-a-cuff/",
-      "source": "The Decoder",
-      "published_at": "2026-11-07T09:54:09+00:00",
-      "display_date": "Nov 07, 2026",
-      "category": "Research",
-      "description": "Google Research built an AI that spots signs of high blood pressure using only the pulse and motion sensors in a standard smartwatch, no cuff needed. In a 196-person study, its 65.8 percent detection rate beat the traditional in-office measurement. The method is already live in the Google Health app, though it doesn't replace a formal diagnosis. The article Google's AI detects high blood pressure from a regular smartwatch without a cuff appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "OpenAI lands an $11 billion funding round, but has to court dentists for more capital",
-      "url": "https://the-decoder.com/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capital/",
-      "source": "The Decoder",
-      "published_at": "2026-11-07T09:45:23+00:00",
-      "display_date": "Nov 07, 2026",
-      "category": "AI Business",
-      "description": "OpenAI has secured $11 billion in fresh capital, the first tranche of a round that values the company at $1.25 trillion. The full round could swell to $20 billion. That OpenAI is already turning to wealthy private investors hints at a saturating AI capital market and growing investor caution. The article OpenAI lands an $11 billion funding round, but has to court dentists for more capital appeared first on The Decoder .",
-      "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
       },
-      "archive_url": "news/2026/11/07/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capita.html"
+      "archive_url": "news/2026/11/07/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-c.html"
     },
     {
       "title": "AI broke the cybersecurity world. What’s next?",
