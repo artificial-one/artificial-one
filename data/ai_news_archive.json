@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08T13:51:52.781002+00:00",
+  "updated_at": "2026-11-08T22:27:56.498569+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/08/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-ye.html",
+      "created_at": "2026-11-08T22:27:56.498569+00:00",
+      "source": {
+        "title": "Andrej Karpathy built a curated video platform in a weekend using Claude and 20 years of Hacker News",
+        "url": "https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/",
+        "source": "The Decoder",
+        "published_at": "2026-11-08T14:23:00+00:00",
+        "display_date": "Nov 08, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI co-founder Andrej Karpathy used Claude's Opus 5.5 to filter 43 million Hacker News comments into 6,454 curated videos. The result beats YouTube's own recommendations, he says. The article Andrej Karpathy built a curated video platform in a weekend using Claude and 20 years of Hacker News appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Descript for this workflow",
+          "url": "partner-offers/descript-ai-video-editing.html",
+          "offer_id": "descript"
+        }
+      },
+      "article": {
+        "headline": "Andrej Karpathy Uses AI to Curate Video Platform in Weekend",
+        "summary": "OpenAI co-founder Andrej Karpathy leveraged AI to create a video platform from Hacker News comments, outperforming YouTube's recommendations. The project highlights the efficiency of AI in content curation.",
+        "facts": [
+          {
+            "statement": "Andrej Karpathy used Claude's Opus 5.5 to filter 43 million Hacker News comments into 6,454 curated videos",
+            "evidence": "Claude filtered 43 million comments from 20 years of Hacker News and distilled them into 6,454 videos"
+          },
+          {
+            "statement": "The resulting platform provides a 'significantly better viewing experience' than YouTube's recommendations",
+            "evidence": "the result is a \"significantly better viewing experience\" than youtube's own"
+          },
+          {
+            "statement": "AI handled nearly all the work, from data analysis to server setup in the project",
+            "evidence": "Karpathy says he let Claude Code handle nearly all the work, from data analysis to server setup"
+          }
+        ],
+        "why_it_matters": "This demonstrates how AI can rapidly process and curate vast amounts of data, potentially revolutionizing content discovery. It also highlights the growing role of AI in media curation and user experience design.",
+        "elephant_take": "🐘 鼋Karpathy's weekend feat shows AI's power in content curation, but it's still humans who decide what's worth curating. The 'significantly better' claim is a bit hyperbolic, but the tech behind it is impressive.",
+        "caveat": "The claims about AI surpassing human curation are bold, and the long-term impact of such platforms remains uncertain.",
+        "who_should_care": [
+          "AI Researchers",
+          "Content Curators",
+          "Tech Entrepreneurs"
+        ],
+        "what_to_do": [
+          "Explore how AI can streamline content curation processes",
+          "Evaluate the ethical implications of AI-driven content filtering",
+          "Consider the potential for AI to enhance user experience in media platforms"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/descript-ai-video-editing-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/descript-ai-video-editing-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/descript-ai-video-editing.html",
+        "review_title": "Evaluate Descript for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Andrej%20Karpathy%20built%20a%20curated%20video%20platform%20in%20a%20weekend%20using%20Claude%20and%2020%20years%20of%20Hacker%20News%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "descript"
+      }
+    },
+    {
+      "path": "news/2026/11/07/the-gap-between-open-and-closed-ai-models-in-cyber-capabilities-keeps-shrinking.html",
+      "created_at": "2026-11-08T22:27:56.498569+00:00",
+      "source": {
+        "title": "The gap between open and closed AI models in cyber capabilities keeps shrinking",
+        "url": "https://the-decoder.com/the-gap-between-open-and-closed-ai-models-in-cyber-capabilities-keeps-shrinking/",
+        "source": "The Decoder",
+        "published_at": "2026-11-07T15:35:50+00:00",
+        "display_date": "Nov 07, 2026",
+        "category": "Models & LLMs",
+        "description": "In the Vals AI benchmark, OpenAI's GPT-6 Sol Daybreak hits 80.8 percent of attack objectives in simulated corporate networks. Worse, the open-weight model DeepSeek V4.1 Flash reaches 72.8 percent at a tenth of the cost. Because open models can no longer be restricted, analysts say the window for defenders is shrinking fast. The article The gap between open and closed AI models in cyber capabilities keeps shrinking appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Open AI Models Close Cyber Capabilities Gap with Closed Models",
+        "summary": "The gap between open and closed AI models in cyber capabilities is shrinking as open models perform well in simulated attacks and are more cost-effective. Analysts warn that defenders have less time to respond as open models can no longer be restricted.",
+        "facts": [
+          {
+            "statement": "Open AI models can break into realistic corporate networks on their own",
+            "evidence": "AI agents can break into realistic corporate networks on their own, Vals AI finds"
+          },
+          {
+            "statement": "Open models are more cost-effective than closed models for cyber testing",
+            "evidence": "A cyber-range run with Deepseek V4-Pro costs just $1.19 according to AISI"
+          },
+          {
+            "statement": "Safety measures on open models are largely ineffective",
+            "evidence": "The safety measures on the open models proved largely ineffective"
+          }
+        ],
+        "why_it_matters": "As open AI models become more capable and affordable, the threat landscape for cyber security is evolving. Defenders must adapt quickly to counter the growing capabilities of these models, which can now access and exploit vulnerabilities without restrictions.",
+        "elephant_take": "🐘 鼋 Open models are closing the gap in cyber capabilities, but defenders are running out of time. The cost advantage is a double-edged sword—more accessible tools mean more potential for exploitation.",
+        "caveat": "The findings highlight the urgent need for improved security measures and proactive vulnerability detection as open models become more prevalent in cyber testing.",
+        "who_should_care": [
+          "Cybersecurity professionals",
+          "AI researchers",
+          "Corporate IT managers"
+        ],
+        "what_to_do": [
+          "Monitor AI model capabilities and update security protocols regularly",
+          "Conduct regular vulnerability assessments using open models for testing",
+          "Invest in AI-driven threat detection systems",
+          "Collaborate with AI safety researchers to improve model safeguards"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20The%20gap%20between%20open%20and%20closed%20AI%20models%20in%20cyber%20capabilities%20keeps%20shrinking%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/08/the-inventor-of-the-bitter-lesson-has-a-bitter-lesson-for-llm-scaling-enthusiasts.html",
       "created_at": "2026-11-08T13:51:52.781002+00:00",
@@ -20285,6 +20416,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-08T22:27:56.498569+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/partnering-with-hacktron",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-08T22:27:56.498569+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-08T22:27:56.498569+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/australian-universities-ai-native-graduates",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-08T22:27:56.498569+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/the-brain-as-computer-metaphor-shaped-modern-ai-but-may-be-misleading-the-consciousness-debate/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-08T13:51:52.781002+00:00",
@@ -20312,18 +20467,6 @@
       "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-08T06:40:16.820592+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-07T22:16:39.751606+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/the-gap-between-open-and-closed-ai-models-in-cyber-capabilities-keeps-shrinking/",
-      "reason": "quality gate rejected draft: sensitive story uses a playful gag",
-      "at": "2026-11-07T22:16:39.751606+00:00",
       "pipeline_version": "2"
     },
     {
