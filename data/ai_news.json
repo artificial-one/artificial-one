@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08T22:27:51.754478+00:00",
+  "updated_at": "2026-11-09T07:08:59.469769+00:00",
   "items": [
     {
       "title": "NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake",
@@ -178,21 +178,6 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation.html"
-    },
-    {
-      "title": "Why a new report on Anthropic automating AI development is alarming researchers",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
-      "source": "The Verge AI",
-      "published_at": "2026-11-06T21:48:06+00:00",
-      "display_date": "Nov 06, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with little indication of slowing down. That's according to a new report published Thursday by the AI safety research organization METR, following an 11-week investigation […]",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      },
-      "archive_url": "news/2026/11/06/why-a-new-report-on-anthropic-automating-ai-development-is-alarming-researchers.html"
     },
     {
       "title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
@@ -520,6 +505,20 @@
         "title": "Evaluate ElevenLabs for this workflow",
         "url": "partner-offers/elevenlabs-ai-voice.html",
         "offer_id": "elevenlabs"
+      }
+    },
+    {
+      "title": "Build specialized multimodal models with LFM3",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "source": "Hugging Face",
+      "published_at": "2026-10-27T17:16:52+00:00",
+      "display_date": "Oct 27, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
       }
     }
   ]

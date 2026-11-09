@@ -20416,6 +20416,42 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+      "reason": "quality gate rejected draft: summary length is outside the publication range",
+      "at": "2026-11-09T07:09:03.822315+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-11-09T07:09:03.822315+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-cyber",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-09T07:09:03.822315+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/merge-builds-with-openai",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-09T07:09:03.822315+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-09T07:09:03.822315+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/franklin-templeton",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-09T07:09:03.822315+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-08T22:27:56.498569+00:00",
@@ -20461,12 +20497,6 @@
       "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-08T13:51:52.781002+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-08T06:40:16.820592+00:00",
       "pipeline_version": "2"
     },
     {
@@ -20623,36 +20653,6 @@
       "url": "https://techcrunch.com/2026/11/02/apple-may-try-to-increase-revenue-by-doing-something-with-third-party-ai-apps/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-03T07:13:25.222776+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-03T07:13:25.222776+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/transformers-mic",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-03T07:13:25.222776+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/ai-elites-might-hoard-intelligence-like-mercantilists-hoarded-gold/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-02T21:55:26.822086+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-02T21:55:26.822086+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-02T21:55:26.822086+00:00",
       "pipeline_version": "2"
     }
   ]
