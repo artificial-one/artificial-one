@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08",
+  "updated_at": "2026-11-09",
   "method": "uncapped-public-marketplace-and-vendor-site-discovery",
   "legal_gate": "Applications, factual certifications and acceptance of program terms require owner action.",
   "application_profile": "artificial.one is an AI and business-software discovery and decision-support site. We publish transparent affiliate disclosures, factual use-case guides, comparisons and calculators. We do not use incentivized clicks, spam, false claims or trademark bidding.",
@@ -9,9 +9,9 @@
     "approved_link_pending": 18,
     "existing_active": 32,
     "not_qualified": 13,
-    "policy_review_required": 26,
+    "policy_review_required": 24,
     "program_paused": 1,
-    "ready_for_owner_application": 384
+    "ready_for_owner_application": 386
   },
   "opportunities": [
     {
@@ -1370,6 +1370,7 @@
         "Digital Advertising",
         "HR Software",
         "Hot",
+        "Internal Pick",
         "Marketing",
         "Office Software",
         "Publishers",
@@ -1435,7 +1436,6 @@
         "Development",
         "Digital Advertising",
         "ERP",
-        "Featured",
         "HR Software",
         "Hot",
         "IT Infrastructure",
@@ -1934,7 +1934,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 106,
+      "review_days": 102,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2206,7 +2206,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 17,
+      "review_days": 14,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -2897,7 +2897,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 17,
+      "review_days": 10,
       "source": "https://market.partnerstack.com/",
       "approved": true,
       "authenticated_relationship": true,
@@ -4306,7 +4306,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 11,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5315,7 +5315,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 42,
+      "review_days": 16,
       "source": "https://market.partnerstack.com/",
       "score": 80,
       "relevance_matches": [
@@ -5513,6 +5513,71 @@
       }
     },
     {
+      "id": "partnerstack:stratos",
+      "network": "partnerstack",
+      "name": "Stratos Development Group",
+      "slug": "stratos",
+      "description": "Stratos builds custom software, AI, and integration systems for companies that have outgrown off-the-shelf tools. We operate as an embedded technology partner, not a project shop, which means our engagements are typically strategic, long-term relationships rather than one-time builds.",
+      "offer": "Earn $2,000 to $3,000+ per month for the lifetime of every client you refer (8% of gross receipts, average 36 month engagement)",
+      "tags": [
+        "Agencies",
+        "Artificial Intelligence",
+        "CAD & PLM Software",
+        "Commerce",
+        "Data Privacy",
+        "Design",
+        "Development",
+        "ERP",
+        "HR Software",
+        "Hosting Providers",
+        "IT Infrastructure",
+        "IT Management",
+        "IoT Management",
+        "Managed Service Provider",
+        "Office Software",
+        "Referral Partners",
+        "Supply Chain & Logistics",
+        "Trusted",
+        "Vertical Industry Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/stratos?company=stratos&gref=marketplace",
+      "terms_url": "https://www.stratosdevgroup.com/partners-terms-of-service",
+      "website": "https://www.stratosdevgroup.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 6,
+      "source": "https://market.partnerstack.com/",
+      "score": 80,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "data",
+        "design",
+        "development",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:supportbee",
       "network": "partnerstack",
       "name": "SupportBee",
@@ -5523,7 +5588,6 @@
         "Artificial Intelligence",
         "Collaboration & Productivity",
         "Customer Service",
-        "Hot",
         "Office Software",
         "Trusted"
       ],
@@ -5929,7 +5993,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 7,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "approved": false,
       "authenticated_relationship": true,
@@ -6592,7 +6656,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 20,
+      "review_days": 15,
       "source": "https://market.partnerstack.com/",
       "score": 77,
       "relevance_matches": [
@@ -7484,7 +7548,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 21,
+      "review_days": 13,
       "source": "https://market.partnerstack.com/",
       "score": 75,
       "relevance_matches": [
@@ -7509,115 +7573,6 @@
           "disclosure_required": false
         },
         "cookie_days": 30
-      }
-    },
-    {
-      "id": "partnerstack:plansom",
-      "network": "partnerstack",
-      "name": "Plansom",
-      "slug": "plansom",
-      "description": "Plansom is an AI work simplifier that finds the tasks, commitments and priorities hidden across your email, Slack and meetings. It brings them into one live, prioritised view, removes duplicates and keeps everything up to date as work moves forward. No manual task entry, no chasing updates and no new way of working. Connect the tools you already use and Plansom does the rest.",
-      "offer": "20% for every customer transaction for the first year of customer purchases",
-      "tags": [
-        "Artificial Intelligence",
-        "Collaboration & Productivity"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/plansom?company=plansom&gref=marketplace",
-      "terms_url": "https://docs.google.com/document/d/1RgvrAS0q9ttjRpalelTsL9Q51BoKxm-hCi8yfohTMec/edit?tab=t.0",
-      "website": "",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 75,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "productivity"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:stratos",
-      "network": "partnerstack",
-      "name": "Stratos Development Group",
-      "slug": "stratos",
-      "description": "Stratos builds custom software, AI, and integration systems for companies that have outgrown off-the-shelf tools. We operate as an embedded technology partner, not a project shop, which means our engagements are typically strategic, long-term relationships rather than one-time builds.",
-      "offer": "Earn $2,000 to $3,000+ per month for the lifetime of every client you refer (8% of gross receipts, average 36 month engagement)",
-      "tags": [
-        "Agencies",
-        "Artificial Intelligence",
-        "CAD & PLM Software",
-        "Commerce",
-        "Data Privacy",
-        "Design",
-        "Development",
-        "ERP",
-        "HR Software",
-        "Hosting Providers",
-        "IT Infrastructure",
-        "IT Management",
-        "IoT Management",
-        "Managed Service Provider",
-        "Office Software",
-        "Referral Partners",
-        "Supply Chain & Logistics",
-        "Vertical Industry Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/stratos?company=stratos&gref=marketplace",
-      "terms_url": "https://www.stratosdevgroup.com/partners-terms-of-service",
-      "website": "https://www.stratosdevgroup.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": false,
-      "revenue_share": true,
-      "review_days": 6,
-      "source": "https://market.partnerstack.com/",
-      "score": 75,
-      "relevance_matches": [
-        "ai",
-        "artificial intelligence",
-        "data",
-        "design",
-        "development",
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
       }
     },
     {
@@ -7684,7 +7639,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 25,
       "source": "https://market.partnerstack.com/",
       "score": 73,
       "relevance_matches": [
@@ -8350,7 +8305,6 @@
         "HR",
         "HR Software",
         "Hot",
-        "Internal Pick",
         "Marketing",
         "New",
         "Office Software",
@@ -9256,6 +9210,51 @@
       }
     },
     {
+      "id": "partnerstack:plansom",
+      "network": "partnerstack",
+      "name": "Plansom",
+      "slug": "plansom",
+      "description": "Plansom is an AI work simplifier that finds the tasks, commitments and priorities hidden across your email, Slack and meetings. It brings them into one live, prioritised view, removes duplicates and keeps everything up to date as work moves forward. No manual task entry, no chasing updates and no new way of working. Connect the tools you already use and Plansom does the rest.",
+      "offer": "20% for every customer transaction for the first year of customer purchases",
+      "tags": [
+        "Artificial Intelligence",
+        "Collaboration & Productivity"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/plansom?company=plansom&gref=marketplace",
+      "terms_url": "https://docs.google.com/document/d/1RgvrAS0q9ttjRpalelTsL9Q51BoKxm-hCi8yfohTMec/edit?tab=t.0",
+      "website": "",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": false,
+      "sub_id_enabled": false,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 71,
+      "relevance_matches": [
+        "ai",
+        "artificial intelligence",
+        "productivity"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": true,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:sendernet",
       "network": "partnerstack",
       "name": "Sender",
@@ -9726,6 +9725,51 @@
       }
     },
     {
+      "id": "partnerstack:shopraise",
+      "network": "partnerstack",
+      "name": "ShopRaise",
+      "slug": "shopraise",
+      "description": "ShopRaise is an AI-empowered employee engagement and retention platform that transforms everyday shopping into support for the causes employees care about most. Employees shop with thousands of participating retailers and gift card brands, generating contributions without changing how they shop. Employers build culture, strengthen loyalty, and reduce turnover through year-round engagement, delivering 10x more engagement for a fraction of the cost. https://wpgiving.shopraise.com",
+      "offer": "ShopRaise Workplace Giving — Employee Engagement and Impact",
+      "tags": [
+        "B2B Marketplaces",
+        "HR Software",
+        "Office Software"
+      ],
+      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shopraise?company=shopraise&gref=marketplace",
+      "terms_url": "https://wpg.shopraise.com/referral-terms",
+      "website": "https://wpgiving.shopraise.com",
+      "waitlist": false,
+      "archived": false,
+      "links_enabled": true,
+      "materials": true,
+      "sub_id_enabled": true,
+      "revenue_share": true,
+      "review_days": 1,
+      "source": "https://market.partnerstack.com/",
+      "score": 68,
+      "relevance_matches": [
+        "ai",
+        "software"
+      ],
+      "already_active": false,
+      "relationship_state": "pending",
+      "state": "ready_for_owner_application",
+      "policy": {
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
+        "cookie_days": null
+      }
+    },
+    {
       "id": "partnerstack:smartsuite",
       "network": "partnerstack",
       "name": "SmartSuite",
@@ -10014,7 +10058,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10222,7 +10266,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10326,7 +10370,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 2,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -10624,10 +10668,17 @@
       "description": "eBillity offers flexible time tracking, workforce management and billing software that helps businesses save time, improve accuracy and increase profitability. Teams can track time, manage schedules, streamline payroll, create invoices and gain valuable productivity insights, all in one easy-to-use platform.",
       "offer": "25% commission on paid subscriptions with reoccuring revenue for two years. Signup before December 31, 2026 and we will extend the reoccuring revenue to three years!",
       "tags": [
+        "Affiliates",
+        "Agencies",
         "Collaboration & Productivity",
         "HR Software",
+        "Internal Pick",
+        "New",
         "Office Software",
         "Payroll",
+        "Priority",
+        "Publishers",
+        "Referral Partners",
         "Trusted"
       ],
       "application_url": "https://dash.partnerstack.com/marketplace/all/details/ebillity?company=ebillity&gref=marketplace",
@@ -10798,7 +10849,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12402,7 +12453,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 6,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12510,7 +12561,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 8,
+      "review_days": 7,
       "source": "https://market.partnerstack.com/",
       "score": 67,
       "relevance_matches": [
@@ -12653,7 +12704,6 @@
         "Hot",
         "Marketing",
         "Office Software",
-        "Priority",
         "Publishers",
         "Referral Partners",
         "Resellers",
@@ -13553,10 +13603,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -15523,7 +15581,7 @@
           "trademark_bidding_restricted": false,
           "paid_search_restricted": false,
           "coupon_restricted": false,
-          "email_restricted": true,
+          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -17116,7 +17174,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 3,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17165,7 +17223,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 1,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17278,7 +17336,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": true,
-      "review_days": 6,
+      "review_days": 5,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17541,7 +17599,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 11,
+      "review_days": 1,
       "source": "https://market.partnerstack.com/",
       "score": 63,
       "relevance_matches": [
@@ -17934,7 +17992,6 @@
         "Ambassadors",
         "Collaboration & Productivity",
         "HR",
-        "Hot",
         "Referral Partners",
         "Trusted"
       ],
@@ -18276,10 +18333,18 @@
       ],
       "already_active": false,
       "relationship_state": "pending",
-      "state": "policy_review_required",
+      "state": "ready_for_owner_application",
       "policy": {
-        "status": "unreachable",
-        "signals": {},
+        "status": "reviewed",
+        "signals": {
+          "trademark_bidding_restricted": false,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
+          "email_restricted": false,
+          "incentive_restricted": false,
+          "content_approval_required": false,
+          "disclosure_required": false
+        },
         "cookie_days": null
       }
     },
@@ -18679,7 +18744,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 5,
+      "review_days": 2,
       "source": "https://market.partnerstack.com/",
       "score": 62,
       "relevance_matches": [
@@ -19207,7 +19272,7 @@
       "materials": true,
       "sub_id_enabled": false,
       "revenue_share": true,
-      "review_days": 99,
+      "review_days": 88,
       "source": "https://market.partnerstack.com/",
       "score": 60,
       "relevance_matches": [
@@ -19321,50 +19386,6 @@
           "paid_search_restricted": false,
           "coupon_restricted": false,
           "email_restricted": true,
-          "incentive_restricted": false,
-          "content_approval_required": false,
-          "disclosure_required": false
-        },
-        "cookie_days": null
-      }
-    },
-    {
-      "id": "partnerstack:shopraise",
-      "network": "partnerstack",
-      "name": "ShopRaise Workplace Giving",
-      "slug": "shopraise",
-      "description": "ShopRaise Workplace Giving is an employee engagement program that transforms everyday shopping into support for the causes employees care about most. Employees shop with thousands of retailers and gift card brands, turning everyday purchases into meaningful impact. Employers get 10x more engagement for a fraction of the cost of traditional programs, while building culture, strengthening loyalty, reducing turnover, and creating meaningful year-round engagement. https://wpgiving.shopraise.com",
-      "offer": "ShopRaise Workplace Giving — Employee Engagement and Impact",
-      "tags": [
-        "B2B Marketplaces",
-        "HR Software",
-        "Office Software"
-      ],
-      "application_url": "https://dash.partnerstack.com/marketplace/all/details/shopraise?company=shopraise&gref=marketplace",
-      "terms_url": "https://wpg.shopraise.com/referral-terms",
-      "website": "https://wpgiving.shopraise.com",
-      "waitlist": false,
-      "archived": false,
-      "links_enabled": true,
-      "materials": true,
-      "sub_id_enabled": true,
-      "revenue_share": true,
-      "review_days": 1,
-      "source": "https://market.partnerstack.com/",
-      "score": 60,
-      "relevance_matches": [
-        "software"
-      ],
-      "already_active": false,
-      "relationship_state": "pending",
-      "state": "ready_for_owner_application",
-      "policy": {
-        "status": "reviewed",
-        "signals": {
-          "trademark_bidding_restricted": false,
-          "paid_search_restricted": false,
-          "coupon_restricted": false,
-          "email_restricted": false,
           "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
@@ -19715,14 +19736,14 @@
         "status": "reviewed",
         "signals": {
           "trademark_bidding_restricted": false,
-          "paid_search_restricted": true,
-          "coupon_restricted": true,
+          "paid_search_restricted": false,
+          "coupon_restricted": false,
           "email_restricted": false,
-          "incentive_restricted": true,
+          "incentive_restricted": false,
           "content_approval_required": false,
           "disclosure_required": false
         },
-        "cookie_days": 180
+        "cookie_days": null
       }
     },
     {
@@ -19853,7 +19874,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 4,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 59,
       "relevance_matches": [
@@ -20263,7 +20284,6 @@
         "Hot",
         "Influencers",
         "Marketing",
-        "New",
         "Publishers",
         "Referral Partners",
         "Trusted"
@@ -20944,7 +20964,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 9,
+      "review_days": 8,
       "source": "https://market.partnerstack.com/",
       "score": 57,
       "relevance_matches": [
@@ -21909,7 +21929,7 @@
       "materials": false,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 8,
+      "review_days": 9,
       "source": "https://market.partnerstack.com/",
       "score": 55,
       "relevance_matches": [
@@ -22806,7 +22826,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 51,
+      "review_days": 47,
       "source": "https://market.partnerstack.com/",
       "score": 50,
       "relevance_matches": [
@@ -23711,7 +23731,7 @@
       "materials": true,
       "sub_id_enabled": true,
       "revenue_share": false,
-      "review_days": 23,
+      "review_days": 26,
       "source": "https://market.partnerstack.com/",
       "score": 39,
       "relevance_matches": [],
@@ -23999,7 +24019,7 @@
       "materials": false,
       "sub_id_enabled": false,
       "revenue_share": false,
-      "review_days": 5,
+      "review_days": 3,
       "source": "https://market.partnerstack.com/",
       "score": 35,
       "relevance_matches": [
