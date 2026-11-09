@@ -1,10 +1,37 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 64,
+    "successful_checks": 58,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-09",
+      "id": "f4a8b3cc5f350a78",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://otter.ai",
+      "tool_id": "otter-ai",
+      "tool_name": "Otter.ai"
+    },
+    {
+      "detected_on": "2026-11-09",
+      "id": "58263baeb76bcb7b",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://prowritingaid.com",
+      "tool_id": "prowritingaid",
+      "tool_name": "ProWritingAid"
+    },
+    {
+      "detected_on": "2026-11-09",
+      "id": "b6084656220ab65b",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://resemble.ai",
+      "tool_id": "resemble-ai",
+      "tool_name": "Resemble AI"
+    },
     {
       "detected_on": "2026-11-08",
       "id": "4f632f2b16df73d6",
@@ -1777,36 +1804,9 @@
       "source_url": "https://read.ai",
       "tool_id": "read-ai",
       "tool_name": "Read AI"
-    },
-    {
-      "detected_on": "2026-09-26",
-      "id": "c531b3dbc17701f3",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://speechify.com",
-      "tool_id": "speechify",
-      "tool_name": "Speechify"
-    },
-    {
-      "detected_on": "2026-09-26",
-      "id": "fe0149b4e4a1adf6",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://timelyapp.com",
-      "tool_id": "timely",
-      "tool_name": "Timely"
-    },
-    {
-      "detected_on": "2026-09-26",
-      "id": "584285f89b81d766",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://tabnine.com",
-      "tool_id": "tabnine",
-      "tool_name": "Tabnine"
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-08",
+  "updated_at": "2026-11-09",
   "version": 1
 }
