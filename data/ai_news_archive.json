@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-11-09T22:41:16.684199+00:00",
+  "updated_at": "2026-11-10T07:43:26.122810+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/10/otter-ai-can-now-follow-conversations-across-30-languages.html",
+      "created_at": "2026-11-10T07:43:26.122810+00:00",
+      "source": {
+        "title": "Otter AI can now follow conversations across 30+ languages",
+        "url": "https://techcrunch.com/2026/11/09/otter-ai-can-now-follow-conversations-across-30-languages/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-10T07:00:00+00:00",
+        "display_date": "Nov 10, 2026",
+        "category": "AI Tools & Products",
+        "description": "Otter AI just added support for 27 languages and revealed an upcoming feature that can follow along if speakers switch between languages.",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Otter AI Expands Multilingual Capabilities for Global Teams",
+        "summary": "Otter AI has expanded its multilingual capabilities, supporting 31 languages and introducing a feature to follow conversations across language switches. The update aims to improve accessibility for international teams.",
+        "facts": [
+          {
+            "statement": "Otter AI supports 31 languages after adding 27 new ones.",
+            "evidence": "Otter AI can now follow conversations across 30+ languages"
+          },
+          {
+            "statement": "The new feature automatically detects language changes during a conversation.",
+            "evidence": "otter ai can now follow conversations across 30+ languages"
+          },
+          {
+            "statement": "The update helps international teams by breaking down language barriers.",
+            "evidence": "The update aims to address a common challenge for global teams"
+          }
+        ],
+        "why_it_matters": "Otter AI's expansion into more languages and its ability to follow conversations across language switches is a significant step toward making voice communication tools more accessible and efficient for international teams. This development could enhance collaboration in a globalized world where language differences often hinder communication.",
+        "elephant_take": "🐘 鼋 Otter AI is trying to make voice communication more inclusive, but the real test will be whether their models can accurately handle the nuances of different languages. The feature is a step in the right direction, but it's just one piece of the puzzle.",
+        "caveat": "The accuracy of language detection and transcription may vary, especially with less commonly spoken languages.",
+        "who_should_care": [
+          "Global teams",
+          "Voice communication tools",
+          "International businesses"
+        ],
+        "what_to_do": [
+          "Evaluate the new language support for your team's needs",
+          "Test the multilingual transcription feature for accuracy",
+          "Consider how to integrate Otter AI into existing workflows"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Otter%20AI%20can%20now%20follow%20conversations%20across%2030%2B%20languages%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/09/anthropic-launches-new-claude-fable-and-mythos-5-2-models.html",
+      "created_at": "2026-11-10T07:43:26.122810+00:00",
+      "source": {
+        "title": "Anthropic launches new Claude Fable and Mythos 5.2 models",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
+        "source": "The Verge AI",
+        "published_at": "2026-11-09T18:58:38+00:00",
+        "display_date": "Nov 09, 2026",
+        "category": "Models & LLMs",
+        "description": "Anthropic is announcing two new models today: Claude Fable 5.2 and Claude Mythos 5.2, which it says are designed to take on \"daunting\" technical challenges. The company claims the new models show improvements in coding, reasoning, and vision, and can generate outputs faster than the 5.1 versions of the Fable and Mythos models. Claude Fable […]",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Anthropic Unveils New Models for Technical Challenges",
+        "summary": "Anthropic has launched two new AI models, Claude Fable 5.2 and Mythos 5.2, designed to tackle complex technical challenges. The models show improvements in coding, reasoning, and vision, with faster output generation than previous versions.",
+        "facts": [
+          {
+            "statement": "Anthropic claims the new models can generate outputs faster than previous versions.",
+            "evidence": "can generate outputs faster than the 5.1 versions of the Fable and Mythos models"
+          },
+          {
+            "statement": "The new models have been tested on complex scientific problems.",
+            "evidence": "including two open theoretical physics"
+          },
+          {
+            "statement": "The models have assisted in software migrations and robotics evaluations.",
+            "evidence": "helped our engineers complete otherwise-infeasible software migrations, designed three working electronic devices from scratch"
+          }
+        ],
+        "why_it_matters": "Anthropic's new models represent a significant advancement in AI capabilities, particularly in handling complex technical challenges. The improvements in coding, reasoning, and vision suggest that these models could be used for a wide range of applications, from scientific research to software development.",
+        "elephant_take": "🐘 鼋 Anthropic's new models are impressive, but it's unclear how they'll be used in real-world scenarios. The claims about solving complex problems are bold, but the evidence is limited to internal testing.",
+        "caveat": "The claims about the new models' capabilities are based on internal testing and may not reflect real-world performance.",
+        "who_should_care": [
+          "AI researchers",
+          "software developers",
+          "scientific communities"
+        ],
+        "what_to_do": [
+          "Evaluate the models' performance in real-world scenarios",
+          "Monitor how Anthropic uses these models for future projects",
+          "Stay updated on AI advancements in technical fields"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20launches%20new%20Claude%20Fable%20and%20Mythos%205.2%20models%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/09/claude-fable-5-2-and-mythos-5-2-cement-anthropic-s-ai-lead-just-before-its-ipo.html",
       "created_at": "2026-11-09T22:41:16.684199+00:00",
@@ -20613,6 +20743,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/",
+      "reason": "quality gate rejected draft: summary length is outside the publication range",
+      "at": "2026-11-10T07:43:26.122810+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/entertainment/1030510/paramount-skydance-david-ellison-ai",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-10T07:43:26.122810+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-10T07:43:26.122810+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-10T07:43:26.122810+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-09T22:41:16.684199+00:00",
@@ -20826,30 +20980,6 @@
       "url": "https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-04T06:57:29.465400+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1025826/ai-bubble-pimco-apollo-bonds",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-04T06:57:29.465400+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-04T06:57:29.465400+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/openai-says-gpt-6-astra-designed-a-hardware-device-from-scratch-in-under-a-week/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-04T06:57:29.465400+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/rapid-llm-development-is-outrunning-the-research-meant-to-explain-it-study-finds/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-03T19:47:54.942574+00:00",
       "pipeline_version": "2"
     }
   ]
