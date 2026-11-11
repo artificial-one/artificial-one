@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-11-10T19:59:30.704150+00:00",
+  "updated_at": "2026-11-11T07:04:08.612408+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/11/botpsy-on-device-personal-assistant-with-a-sub-billion-parameter-agentic-language.html",
+      "created_at": "2026-11-11T07:04:08.612408+00:00",
+      "source": {
+        "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+        "url": "https://huggingface.co/blog/qvac/botpsy",
+        "source": "Hugging Face",
+        "published_at": "2026-11-11T05:01:16+00:00",
+        "display_date": "Nov 11, 2026",
+        "category": "Models & LLMs",
+        "description": "",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Tether AI's BotPsy Outperforms Larger Models in On-Device Agentic Tasks",
+        "summary": "Tether AI's BotPsy, a 0.8B-parameter model, outperforms larger models in on-device agentic tasks, offering performance and efficiency benefits for specific use cases.",
+        "facts": [
+          {
+            "statement": "BotPsy outperforms larger models in key benchmarks",
+            "evidence": "BotPsy has the highest score of all models tested on five of the six benchmarks"
+          },
+          {
+            "statement": "BotPsy is designed for on-device deployment and privacy",
+            "evidence": "Designed for secure on-device workflows, it provides exceptional instruction-following reliability and efficiency while keeping user data private"
+          },
+          {
+            "statement": "BotPsy is suitable for low to medium difficulty tasks",
+            "evidence": "Due to its small parameter count, it is best suited to tasks of low to medium difficulty"
+          }
+        ],
+        "why_it_matters": "Tether AI's BotPsy represents a shift toward smaller, more efficient models that prioritize privacy and performance for specific use cases. Its ability to outperform larger models in on-device agentic tasks highlights the potential of compact models in specialized workflows.",
+        "elephant_take": "🐘 🦘 Tether AI's BotPsy is a clever move toward smaller, more efficient models that prioritize privacy and performance. It shows that even with fewer parameters, a model can outperform larger ones in specific tasks, making it a strong contender for on-device use cases.",
+        "caveat": "BotPsy is not intended for high-stakes use and has limitations in complex or high-risk scenarios.",
+        "who_should_care": [
+          "Developers looking for efficient on-device models",
+          "Privacy-conscious users",
+          "Businesses needing secure, customizable workflows"
+        ],
+        "what_to_do": [
+          "Evaluate BotPsy's performance on specific use cases",
+          "Consider privacy and data control implications",
+          "Test the model for compatibility with existing workflows"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20BotPsy%3A%20On-Device%20Personal%20Assistant%20with%20a%20Sub-Billion-Parameter%20Agentic%20Language%20Model%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder.html",
+      "created_at": "2026-11-11T07:04:08.612408+00:00",
+      "source": {
+        "title": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+        "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-10T21:08:52+00:00",
+        "display_date": "Nov 10, 2026",
+        "category": "AI Business",
+        "description": "OpenAI has not yet said what its plans are for the future of travel. But Sonder founder Francis Davidson is a well-known figure in the travel industry.",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "OpenAI Acquires Travel AI Startup Created by Former Sonder Founder",
+        "summary": "OpenAI has acquired Odessia, an AI travel startup founded by former Sonder founder Francis Davidson. The acquisition is seen as an acqui-hire, with Davidson joining OpenAI to help shape the future of travel. The deal's terms were not disclosed, but it highlights the growing interest in AI-driven travel solutions.",
+        "facts": [
+          {
+            "statement": "OpenAI has acquired an AI travel agent called Odessia",
+            "evidence": "OpenAI acquires Odessia, travel startup created by Sonder founder"
+          },
+          {
+            "statement": "Davidson is a well-known figure in the travel industry",
+            "evidence": "Davidson is well known in the travel industry after he founded a travel startup called Sonder"
+          },
+          {
+            "statement": "Odessia was previously shut down",
+            "evidence": "the tool has already been shut down"
+          }
+        ],
+        "why_it_matters": "The acquisition of Odessia by OpenAI highlights the growing interest in AI-driven travel solutions. With Davidson's experience in the travel industry, the move could signal a major investment in the future of travel technology. However, the lack of concrete plans from OpenAI raises questions about the true purpose of the acquisition.",
+        "elephant_take": "🐘 鼋 OpenAI's move to acquire Odessia is a bit of a mystery. While Davidson has a track record in travel tech, the company hasn't announced any new travel-specific products yet. It's possible they're just using him as a consultant, but it's also worth watching to see what they actually do with the acquisition.",
+        "caveat": "The story is somewhat speculative, and OpenAI hasn't provided detailed plans for how they'll use Odessia. The acquisition could be a strategic move, but there's no clear evidence of what that strategy entails.",
+        "who_should_care": [
+          "Travel industry professionals",
+          "AI investors",
+          "Tech journalists"
+        ],
+        "what_to_do": [
+          "Monitor OpenAI's future plans for travel-related products",
+          "Watch how Sonder's legacy affects the travel tech landscape",
+          "Stay informed about AI's role in the travel industry"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20acquires%20Odessia%2C%20travel%20startup%20created%20by%20Sonder%20founder%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo.html",
       "created_at": "2026-11-10T19:59:30.704150+00:00",
@@ -20940,6 +21070,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-11T07:04:08.612408+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-11T07:04:08.612408+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-11T07:04:08.612408+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-11T07:04:08.612408+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-10T19:59:30.704150+00:00",
@@ -21153,30 +21307,6 @@
       "url": "https://techcrunch.com/2026/11/05/openai-president-greg-brockman-says-company-could-be-ipo-ready-in-2027/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-05T20:15:25.174655+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-05T07:21:57.905826+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-05T07:21:57.905826+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-05T07:21:57.905826+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/chatgpt-can-now-turn-text-prompts-and-photos-into-animated-gifs-with-openais-images-2-6-model/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-04T20:00:28.786068+00:00",
       "pipeline_version": "2"
     }
   ]

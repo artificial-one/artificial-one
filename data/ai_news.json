@@ -1,7 +1,107 @@
 {
   "version": 1,
-  "updated_at": "2026-11-10T19:59:26.830738+00:00",
+  "updated_at": "2026-11-11T07:04:03.719570+00:00",
   "items": [
+    {
+      "title": "Gilbert + Tobin rethinks the business of law with AI",
+      "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "source": "OpenAI",
+      "published_at": "2026-11-12T00:00:00+00:00",
+      "display_date": "Nov 12, 2026",
+      "category": "AI Tools & Products",
+      "description": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "ChatGPT Plus for veterans and servicemembers",
+      "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+      "source": "OpenAI",
+      "published_at": "2026-11-11T08:00:00+00:00",
+      "display_date": "Nov 11, 2026",
+      "category": "Models & LLMs",
+      "description": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+      "url": "https://huggingface.co/blog/qvac/botpsy",
+      "source": "Hugging Face",
+      "published_at": "2026-11-11T05:01:16+00:00",
+      "display_date": "Nov 11, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/11/11/botpsy-on-device-personal-assistant-with-a-sub-billion-parameter-agentic-language.html"
+    },
+    {
+      "title": "Grok Build coding agent leaks oodles of confidential info, some belonging to SpaceXSI",
+      "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
+      "source": "Ars Technica AI",
+      "published_at": "2026-11-10T21:12:59+00:00",
+      "display_date": "Nov 10, 2026",
+      "category": "Research",
+      "description": "Researcher finds 35,000 Grok Build apps wide open to anyone who looked for them.",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+      "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-10T21:08:52+00:00",
+      "display_date": "Nov 10, 2026",
+      "category": "AI Business",
+      "description": "OpenAI has not yet said what its plans are for the future of travel. But Sonder founder Francis Davidson is a well-known figure in the travel industry.",
+      "related": {
+        "title": "Model the value of an AI subscription",
+        "url": "calculators/ai-software-roi-calculator.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder.html"
+    },
+    {
+      "title": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect",
+      "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-10T20:52:13+00:00",
+      "display_date": "Nov 10, 2026",
+      "category": "Policy & Safety",
+      "description": "New York is preparing to enforce its sweeping AI safety law, requiring major developers like OpenAI and Anthropic to register, disclose safety practices, and report critical incidents or face fines.",
+      "related": {
+        "title": "Browse independent AI software buying guides",
+        "url": "buyers-guides.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "OpenAI turns ChatGPT into a business directory with AI agents that handle customer questions",
+      "url": "https://the-decoder.com/openai-turns-chatgpt-into-a-business-directory-with-ai-agents-that-handle-customer-questions/",
+      "source": "The Decoder",
+      "published_at": "2026-11-10T20:17:00+00:00",
+      "display_date": "Nov 10, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI is opening up ChatGPT as a business platform: through a new Business Hub, companies can claim their profile, add product data, and track how users interact with them. \"Business Agents\" let eligible US e-commerce providers talk to customers directly inside ChatGPT. The article OpenAI turns ChatGPT into a business directory with AI agents that handle customer questions appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "All 7 Anthropic founders will each cash out about $250M in IPO",
       "url": "https://techcrunch.com/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo/",
@@ -216,20 +316,6 @@
       }
     },
     {
-      "title": "Google broadens its AI hardware portfolio with two new specialized chips",
-      "url": "https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-10T15:54:08+00:00",
-      "display_date": "Nov 10, 2026",
-      "category": "Models & LLMs",
-      "description": "Google's new tensor processing units (TPUs) broaden its chip portfolio to more use cases: confidential model training and more memory capacity.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Google releases Gemini 4 Carbon with agent ‘swarm’ feature",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
       "source": "The Verge AI",
@@ -237,20 +323,6 @@
       "display_date": "Nov 10, 2026",
       "category": "Models & LLMs",
       "description": "Google is rolling out its latest AI model, Gemini 4 Carbon, to the general public after releasing it to a select group of \"cybersecurity defenders\" two weeks ago. Google claims Carbon is its \"strongest model\" yet, and capable of competing with the very best systems from Anthropic and OpenAI. Google says Gemini 4 Carbon \"pushes […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Meta’s AI agent Muse lands on Apple Watch and Android Wear OS",
-      "url": "https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-10T15:29:30+00:00",
-      "display_date": "Nov 10, 2026",
-      "category": "AI Tools & Products",
-      "description": "Users can now interact with Meta’s AI assistant through voice calls, text messages, or dictation on their Apple Watch.",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -370,6 +442,20 @@
       }
     },
     {
+      "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+      "url": "https://openai.com/index/singapore-airlines-travel-work",
+      "source": "OpenAI",
+      "published_at": "2026-11-10T08:00:00+00:00",
+      "display_date": "Nov 10, 2026",
+      "category": "Models & LLMs",
+      "description": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
       "title": "Work at the Frontier: AI’s effect on freelance work",
       "url": "https://openai.com/index/ai-effect-on-freelance-work",
       "source": "OpenAI",
@@ -381,6 +467,20 @@
         "title": "Evaluate Rank Prompt for this workflow",
         "url": "partner-offers/rank-prompt-ai-visibility.html",
         "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "Cogent and OpenAI build cyber defense factories for enterprises",
+      "url": "https://openai.com/index/cogent-security",
+      "source": "OpenAI",
+      "published_at": "2026-11-10T00:00:00+00:00",
+      "display_date": "Nov 10, 2026",
+      "category": "Models & LLMs",
+      "description": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
       }
     },
     {
@@ -409,105 +509,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Claude Fable 5.2 and Mythos 5.2 cement Anthropic's AI lead just before its IPO",
-      "url": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/",
-      "source": "The Decoder",
-      "published_at": "2026-11-09T21:15:23+00:00",
-      "display_date": "Nov 09, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic is releasing Claude Fable 5.2 and Mythos 5.2, its most powerful models to date, in two versions: one freely available and one reserved for verified organizations. The models solve open physics problems, show stronger cybersecurity capabilities, design functioning operating systems, and write more than 90 percent of the changes merged into Anthropic's core code, according to the company. Anthropic says it has deliberately curbed any capabilities that would let the AI accelerate its own",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/11/09/claude-fable-5-2-and-mythos-5-2-cement-anthropic-s-ai-lead-just-before-its-ipo.html"
-    },
-    {
-      "title": "ChatGPT Enterprise now available in AWS Marketplace",
-      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
-      "source": "OpenAI",
-      "published_at": "2026-11-09T19:00:00+00:00",
-      "display_date": "Nov 09, 2026",
-      "category": "Models & LLMs",
-      "description": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
-      "url": "https://openai.com/index/control-room",
-      "source": "OpenAI",
-      "published_at": "2026-11-09T13:00:00+00:00",
-      "display_date": "Nov 09, 2026",
-      "category": "Models & LLMs",
-      "description": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-      "source": "Google AI",
-      "published_at": "2026-11-05T17:00:00+00:00",
-      "display_date": "Nov 05, 2026",
-      "category": "Models & LLMs",
-      "description": "Text \"Gemini Introducing Gemini Omni 1.2 Flash\" surroudned by images of a beehive, animals in conversation, a squid, and a woman walking down a street",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Palette: teaching a small model to build decks in your design language",
-      "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
-      "source": "Hugging Face",
-      "published_at": "2026-11-03T16:35:36+00:00",
-      "display_date": "Nov 03, 2026",
-      "category": "Models & LLMs",
-      "description": "",
-      "related": {
-        "title": "Evaluate Beautiful.ai for this workflow",
-        "url": "partner-offers/beautiful-ai-presentations.html",
-        "offer_id": "beautiful-ai"
-      }
-    },
-    {
-      "title": "Transformers Model Integration Contracts",
-      "url": "https://huggingface.co/blog/transformers-mic",
-      "source": "Hugging Face",
-      "published_at": "2026-11-03T00:00:00+00:00",
-      "display_date": "Nov 03, 2026",
-      "category": "Models & LLMs",
-      "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "The latest AI news we announced in October 2026",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
-      "source": "Google AI",
-      "published_at": "2026-11-02T17:45:00+00:00",
-      "display_date": "Nov 02, 2026",
-      "category": "AI Tools & Products",
-      "description": "Animated carousel of images from AI posts in October",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
       }
     }
   ]
