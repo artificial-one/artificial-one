@@ -1,10 +1,64 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 66,
+    "successful_checks": 64,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-11",
+      "id": "d1d1fbcb222c25c3",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://turbotic.com/",
+      "tool_id": "turbotic",
+      "tool_name": "Turbotic"
+    },
+    {
+      "detected_on": "2026-11-11",
+      "id": "284ea2b8bc99aa3b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://articleforge.com",
+      "tool_id": "article-forge",
+      "tool_name": "Article Forge"
+    },
+    {
+      "detected_on": "2026-11-11",
+      "id": "921262d78193922c",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://blaze.ai",
+      "tool_id": "blaze-ai",
+      "tool_name": "Blaze AI"
+    },
+    {
+      "detected_on": "2026-11-11",
+      "id": "4043e61d67a2c026",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://clickup.com",
+      "tool_id": "clickup-ai",
+      "tool_name": "ClickUp AI"
+    },
+    {
+      "detected_on": "2026-11-11",
+      "id": "fc88d75ccb3b7f90",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://circleback.ai",
+      "tool_id": "circleback",
+      "tool_name": "Circleback"
+    },
+    {
+      "detected_on": "2026-11-11",
+      "id": "45075fa1dc245e6b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://contentstudio.io",
+      "tool_id": "contentstudio",
+      "tool_name": "ContentStudio"
+    },
     {
       "detected_on": "2026-11-10",
       "id": "ffd8b2cb94f2b9a1",
@@ -1750,63 +1804,9 @@
       "source_url": "https://brandwatch.com",
       "tool_id": "brandwatch",
       "tool_name": "Brandwatch"
-    },
-    {
-      "detected_on": "2026-09-29",
-      "id": "8bcb4f4a9a0006e1",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://surferseo.com",
-      "tool_id": "surfer-seo",
-      "tool_name": "Surfer SEO"
-    },
-    {
-      "detected_on": "2026-09-29",
-      "id": "7d3a6d003141a795",
-      "kind": "availability",
-      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://superhuman.com",
-      "tool_id": "superhuman",
-      "tool_name": "Superhuman"
-    },
-    {
-      "detected_on": "2026-09-29",
-      "id": "a6393586673e92a4",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://writer.com",
-      "tool_id": "writer",
-      "tool_name": "Writer"
-    },
-    {
-      "detected_on": "2026-09-29",
-      "id": "dee57b5f9e11da5d",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://zapier.com",
-      "tool_id": "zapier-ai",
-      "tool_name": "Zapier AI"
-    },
-    {
-      "detected_on": "2026-09-28",
-      "id": "65248e7f8b6556e5",
-      "kind": "feature or product",
-      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://elicit.org",
-      "tool_id": "elicit",
-      "tool_name": "Elicit"
-    },
-    {
-      "detected_on": "2026-09-28",
-      "id": "ceb8bc6f602c3436",
-      "kind": "feature or product",
-      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://iris.ai",
-      "tool_id": "iris-ai",
-      "tool_name": "Iris.ai"
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-10",
+  "updated_at": "2026-11-11",
   "version": 1
 }
