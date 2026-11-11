@@ -1,7 +1,203 @@
 {
   "version": 1,
-  "updated_at": "2026-11-11T07:04:08.612408+00:00",
+  "updated_at": "2026-11-11T19:53:54.861467+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/11/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-perce.html",
+      "created_at": "2026-11-11T19:53:54.861467+00:00",
+      "source": {
+        "title": "US corporate AI spending hits a new high in October, but growth slows to 1.65 percent",
+        "url": "https://the-decoder.com/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-percent/",
+        "source": "The Decoder",
+        "published_at": "2026-11-11T19:35:11+00:00",
+        "display_date": "Nov 11, 2026",
+        "category": "AI Business",
+        "description": "According to the Ramp AI Index, US corporate AI spending rose just 1.65 percent in October 2026. One percent of companies still drive 80 percent of revenue for OpenAI and Anthropic. Customer support is emerging as a new growth driver, but it may bring lower margins than the coding business that has fueled spending so far. The article US corporate AI spending hits a new high in October, but growth slows to 1.65 percent appeared first on The Decoder .",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "US corporate AI spending hits new high as growth slows",
+        "summary": "US corporate AI spending reached a new high in October 2026, but growth slowed to 1.65 percent. The Ramp AI Index shows that the top 1% of companies drive 80% of revenue for OpenAI and Anthropic, while customer support is emerging as a new growth driver.",
+        "facts": [
+          {
+            "statement": "US corporate AI spending rose just 1.65 percent in October 2026",
+            "evidence": "provider ramp, showed a 1.65 percent increase month over"
+          },
+          {
+            "statement": "One percent of companies drive 80 percent of revenue for OpenAI and Anthropic",
+            "evidence": "One percent of companies by AI spending paid a median of $10,200 per employee per month"
+          },
+          {
+            "statement": "Customer support is emerging as a new growth driver",
+            "evidence": "Customer support and customer success departments saw the stro"
+          }
+        ],
+        "why_it_matters": "The slowing growth in US corporate AI spending highlights a shift in focus from coding to customer support, with top companies dominating revenue. This suggests that while AI adoption is expanding, it's concentrated among a small group of firms, raising questions about market representation and future trends.",
+        "elephant_take": "🐘 鼋 The Ramp AI Index shows that the top 1% of companies drive 80% of revenue for OpenAI and Anthropic, but this may be an overestimation due to the data's bias toward larger, tech-savvy firms. The growth in customer support could signal a shift in priorities, but it's unclear if this will translate into sustainable spending.",
+        "caveat": "The data is skewed towards larger, tech-oriented companies and may not represent the broader market accurately.",
+        "who_should_care": [
+          "Tech investors",
+          "AI developers",
+          "Business analysts"
+        ],
+        "what_to_do": [
+          "Monitor AI adoption trends in different sectors",
+          "Evaluate the representativeness of Ramp's data",
+          "Track changes in spending patterns across departments"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20US%20corporate%20AI%20spending%20hits%20a%20new%20high%20in%20October%2C%20but%20growth%20slows%20to%201.65%20percent%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/11/google-deepmind-s-alphaproof-code-verified-signal-s-cryptographic-core-in-four-wee.html",
+      "created_at": "2026-11-11T19:53:54.861467+00:00",
+      "source": {
+        "title": "Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years",
+        "url": "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years/",
+        "source": "The Decoder",
+        "published_at": "2026-11-11T18:18:25+00:00",
+        "display_date": "Nov 11, 2026",
+        "category": "Models & LLMs",
+        "description": "Google Deepmind's AlphaProof Code mathematically verified Signal's cryptographic core code in four weeks, a process that typically takes years. AI agents powered by Gemini Carbon wrote more than six million lines of proof code and flagged only about one percent for human review. Deepmind plans to extend the method to critical infrastructure like power grids and medical devices. The article Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years appea",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "AI Verifies Signal's Cryptographic Code in Weeks",
+        "summary": "Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years, using AI to write millions of proofs. The system flagged only 1% for human review and caught two deliberate bugs.",
+        "facts": [
+          {
+            "statement": "AlphaProof Code verified Signal's cryptographic code in four weeks",
+            "evidence": "Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years"
+          },
+          {
+            "statement": "AI agents wrote over six million lines of proof code",
+            "evidence": "AI agents powered by Gemini Carbon wrote more than six million lines of proof code"
+          },
+          {
+            "statement": "Only 1% of the codebase was flagged for human review",
+            "evidence": "flagging roughly one percent of the codebase for human review"
+          }
+        ],
+        "why_it_matters": "This breakthrough shows AI can verify complex security systems rapidly, potentially revolutionizing critical infrastructure. It also highlights the growing role of AI in ensuring data privacy as threats evolve.",
+        "elephant_take": "🐘 鼋AI is proving it can outpace humans in verifying security code, but the human review still matters. Signal's encryption gets a major upgrade, but we should question how many other systems are similarly vulnerable.",
+        "caveat": "The system relies on human oversight for final checks, and the underlying AI models may have limitations in handling complex edge cases.",
+        "who_should_care": [
+          "AI Researchers",
+          "Cybersecurity Experts",
+          "Data Privacy Advocates"
+        ],
+        "what_to_do": [
+          "Test AI verification systems on other security protocols",
+          "Monitor AI model limitations in critical applications",
+          "Stay informed about advancements in automated proof verification"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Google%20Deepmind%27s%20AlphaProof%20Code%20verified%20Signal%27s%20cryptographic%20core%20in%20four%20weeks%20instead%20of%20years%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/11/openai-s-quarterly-revenue-reportedly-crosses-10b-for-the-first-time.html",
+      "created_at": "2026-11-11T19:53:54.861467+00:00",
+      "source": {
+        "title": "OpenAI’s quarterly revenue reportedly crosses $10B for the first time",
+        "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-11T16:14:44+00:00",
+        "display_date": "Nov 11, 2026",
+        "category": "AI Business",
+        "description": "Sales of $10 billion represents an almost 50% jump from revenue of $6.7 billion the company recorded in the second quarter.",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "OpenAI's Revenue Surpasses $10B in Q3",
+        "summary": "OpenAI reports a significant revenue increase, surpassing $10 billion for the first time, marking a 50% rise from the previous quarter. The company is facing competition from Anthropic and other AI firms.",
+        "facts": [
+          {
+            "statement": "OpenAI's quarterly revenue crossed $10B for the first time",
+            "evidence": "OpenAI’s quarterly revenue reportedly crosses $10B for the first time"
+          },
+          {
+            "statement": "Revenue increased by almost 50% compared to the previous quarter",
+            "evidence": "Sales of $10 billion represents an almost 50% jump from revenue of $6.7 billion"
+          },
+          {
+            "statement": "OpenAI's revenue growth rate improved significantly",
+            "evidence": "the company’s quarterly revenue crossed $10 billion for the first time, thanks to strong demand"
+          }
+        ],
+        "why_it_matters": "The surge in OpenAI's revenue highlights its growing dominance in the AI market, despite competition from rivals like Anthropic. This milestone underscores the company's ability to scale and adapt, even as it faces challenges from emerging competitors and open-source models.",
+        "elephant_take": "🐘 鼋 OpenAI’s $10B revenue is a big deal, but it’s not clear if this translates to real profits. The company still struggles with negative margins, and Anthropic is outpacing it in enterprise sales. It’s a mixed bag for a company that’s trying to keep up with the AI race.",
+        "caveat": "The figures are based on anonymous sources and may not reflect actual performance.",
+        "who_should_care": [
+          "AI investors",
+          "Tech analysts",
+          "Enterprise clients"
+        ],
+        "what_to_do": [
+          "Monitor OpenAI's financial reports",
+          "Track Anthropic's revenue growth",
+          "Assess AI market competition trends",
+          "Evaluate enterprise AI adoption rates"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%E2%80%99s%20quarterly%20revenue%20reportedly%20crosses%20%2410B%20for%20the%20first%20time%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/11/11/botpsy-on-device-personal-assistant-with-a-sub-billion-parameter-agentic-language.html",
       "created_at": "2026-11-11T07:04:08.612408+00:00",
@@ -21070,6 +21266,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; hype language is present",
+      "at": "2026-11-11T19:53:54.861467+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-11-11T19:53:54.861467+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/helsing-built-an-ai-system-that-prepares-targets-for-weapons-systems-and-says-every-decision-will-carry-a-human-name/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-11T19:53:54.861467+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-11-11T07:04:08.612408+00:00",
@@ -21288,24 +21502,6 @@
     {
       "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-05T20:15:25.174655+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-05T20:15:25.174655+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent/",
-      "reason": "quality gate rejected draft: hype language is present",
-      "at": "2026-11-05T20:15:25.174655+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/05/openai-president-greg-brockman-says-company-could-be-ipo-ready-in-2027/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-05T20:15:25.174655+00:00",
       "pipeline_version": "2"
     }
