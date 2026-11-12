@@ -1,10 +1,19 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 64,
+    "successful_checks": 60,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-12",
+      "id": "d51760717babc08d",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://getimg.ai",
+      "tool_id": "getimg-ai",
+      "tool_name": "Getimg.ai"
+    },
     {
       "detected_on": "2026-11-11",
       "id": "d1d1fbcb222c25c3",
@@ -1795,18 +1804,9 @@
       "source_url": "https://aws.amazon.com/codewhisperer",
       "tool_id": "amazon-codewhisperer",
       "tool_name": "Amazon CodeWhisperer"
-    },
-    {
-      "detected_on": "2026-09-30",
-      "id": "af70b1ade3ab3542",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://brandwatch.com",
-      "tool_id": "brandwatch",
-      "tool_name": "Brandwatch"
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-11",
+  "updated_at": "2026-11-12",
   "version": 1
 }
