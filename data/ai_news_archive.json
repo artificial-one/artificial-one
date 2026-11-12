@@ -1,7 +1,203 @@
 {
   "version": 1,
-  "updated_at": "2026-11-11T19:53:54.861467+00:00",
+  "updated_at": "2026-11-12T07:42:08.316847+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/11/united-won-t-let-your-ai-agent-book-your-flight.html",
+      "created_at": "2026-11-12T07:42:08.316847+00:00",
+      "source": {
+        "title": "United won’t let your AI agent book your flight",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+        "source": "The Verge AI",
+        "published_at": "2026-11-11T21:54:21+00:00",
+        "display_date": "Nov 11, 2026",
+        "category": "AI Tools & Products",
+        "description": "United says it won't let personal AI assistants book tickets on the airline, citing both privacy and regulatory concerns. The company says it hasn't yet seen many people try to use AI agents to book their flights, The Wall Street Journal reports, in line with observations from other businesses like Doordash. But United is concerned […]",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "United Blocks AI Agents From Booking Flights",
+        "summary": "United Airlines is blocking personal AI assistants from booking flights, citing privacy and regulatory concerns. The decision reflects broader industry trends as businesses grapple with the risks of third-party AI agents.",
+        "facts": [
+          {
+            "statement": "United Airlines is blocking personal AI assistants from booking flights.",
+            "evidence": "United says it won’t let personal AI assistants book tickets on the airline"
+          },
+          {
+            "statement": "United cites privacy and regulatory concerns as reasons for the decision.",
+            "evidence": "citing both privacy and regulatory concerns"
+          },
+          {
+            "statement": "Other businesses, like Doordash, have similar concerns about AI agents.",
+            "evidence": "in line with observations from other businesses like Doordash"
+          }
+        ],
+        "why_it_matters": "United's decision highlights the challenges of balancing convenience with security in an age of AI. As personal assistants become more capable, companies must navigate the risks of data exposure and regulatory compliance.",
+        "elephant_take": "🐘 鼋 United is blocking AI agents from booking flights, but it’s not the first company to do so. The decision reflects a cautious approach to the potential for misuse and data breaches in an increasingly automated world.",
+        "caveat": "The decision may limit the usefulness of newer AI assistants like Muse and Dots, but it also underscores the need for safeguards in the digital age.",
+        "who_should_care": [
+          "AI developers",
+          "Travel industry",
+          "Privacy advocates"
+        ],
+        "what_to_do": [
+          "Evaluate AI tools for data security",
+          "Stay informed about regulatory changes",
+          "Advocate for clear guidelines on AI use"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20United%20won%E2%80%99t%20let%20your%20AI%20agent%20book%20your%20flight%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth.html",
+      "created_at": "2026-11-12T07:42:08.316847+00:00",
+      "source": {
+        "title": "Databricks’ new AI agent tells CEO Ali Ghodsi the unvarnished truth",
+        "url": "https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-11T15:00:00+00:00",
+        "display_date": "Nov 11, 2026",
+        "category": "AI Tools & Products",
+        "description": "With Databricks at 12,000 employees, AI Ghodsi is the first to admit that he can't know everyone and that they are unlikely to confess the things that go wrong to him. But he doesn't need them to. He uses Databricks' newly revised Genie agent for that.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Databricks AI Agent Helps CEO See Unvarnished Truth",
+        "summary": "Databricks unveils Genie, an AI agent that helps CEOs see unfiltered truths about business operations. CEO Ali Ghodsi uses it to analyze employee surveys and sales calls, highlighting its value in large organizations.",
+        "facts": [
+          {
+            "statement": "Genie can perform multistep tasks autonomously",
+            "evidence": "It does this through an ontology that Databricks built"
+          },
+          {
+            "statement": "Ghodsi uses Genie to analyze employee satisfaction surveys",
+            "evidence": "It analyzed the parts of an employee satisfaction survey where the company didn’t score well"
+          },
+          {
+            "statement": "Genie helps identify and discard ineffective fixes for low scores",
+            "evidence": "It helped him rate (and discard) fixes for those low scores that some executives suggested"
+          }
+        ],
+        "why_it_matters": "As companies grow, maintaining direct relationships with all employees becomes impractical. Genie bridges this gap by providing unfiltered insights into operational performance, helping leaders make informed decisions.",
+        "elephant_take": "🐘 鼋 Genie is a tool for CEOs to see the 'truth' they can't know personally. It's not perfect, but it helps in a world where 150 is the magic number for human relationships.",
+        "caveat": "The tool's effectiveness depends on the quality of input data and the context in which it's used.",
+        "who_should_care": [
+          "CEOs",
+          "HR managers",
+          "Sales leaders"
+        ],
+        "what_to_do": [
+          "Evaluate AI tools for operational insights",
+          "Test Genie with internal data before full deployment",
+          "Consider cost controls like Unity Gateway",
+          "Assess if the tool fits your company's size and needs"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Databricks%E2%80%99%20new%20AI%20agent%20tells%20CEO%20Ali%20Ghodsi%20the%20unvarnished%20truth%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/11/anthropic-says-ai-is-eroding-nvidia-s-cuda-lead-cutting-an-amd-chip-switch-from-mo.html",
+      "created_at": "2026-11-12T07:42:08.316847+00:00",
+      "source": {
+        "title": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days",
+        "url": "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+        "source": "The Decoder",
+        "published_at": "2026-11-11T14:25:20+00:00",
+        "display_date": "Nov 11, 2026",
+        "category": "Models & LLMs",
+        "description": "Anthropic claims it used AI itself to breach Nvidia's CUDA moat. The company's in-house model Mythos reportedly ported Claude to AMD GPUs in just three days, with almost no human intervention. Anthropic now runs Claude on four chip families and aims to cut costs and reduce vendor dependencies. The article Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Anthropic Uses AI to Challenge Nvidia's CUDA Dominance",
+        "summary": "Anthropic claims it used AI to overcome Nvidia's CUDA advantage, enabling rapid porting of its AI models to AMD GPUs with minimal human intervention.",
+        "facts": [
+          {
+            "statement": "Anthropic claims it used AI to overcome Nvidia's CUDA advantage.",
+            "evidence": "Anthropic says AI is eroding Nvidia's CUDA lead"
+          },
+          {
+            "statement": "Porting AI models to other chip architectures takes significant effort.",
+            "evidence": "Porting AI models to other chip architectures takes so much effort"
+          },
+          {
+            "statement": "Anthropic's AI model Mythos ported itself to AMD GPUs in three days.",
+            "evidence": "The company's in-house model Mythos reportedly ported Claude to AMD GPUs in just three days"
+          }
+        ],
+        "why_it_matters": "This development challenges the traditional hardware-software ecosystem dominance of Nvidia, suggesting that AI can be leveraged to reduce dependency on specific chip vendors and increase flexibility in compute choices.",
+        "elephant_take": "🐘 鼋 Anthropic's move highlights how AI can disrupt industry norms, but it's unclear if this is a sustainable advantage or just a short-term win. The implications for the AI hardware market are significant.",
+        "caveat": "The claims about AI-driven porting require verification, and the long-term impact on Nvidia's market position remains uncertain.",
+        "who_should_care": [
+          "AI companies",
+          "Hardware vendors",
+          "Investors"
+        ],
+        "what_to_do": [
+          "Monitor Anthropic's progress in multi-chip strategies",
+          "Evaluate the impact of AI on hardware-software ecosystems",
+          "Assess the competitive landscape in AI chip markets"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20says%20AI%20is%20eroding%20Nvidia%27s%20CUDA%20lead%2C%20cutting%20an%20AMD%20chip%20switch%20from%20months%20to%20three%20days%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/11/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-perce.html",
       "created_at": "2026-11-11T19:53:54.861467+00:00",
@@ -21266,6 +21462,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-12T07:42:08.316847+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; hype language is present",
+      "at": "2026-11-12T07:42:08.316847+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-12T07:42:08.316847+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; hype language is present",
       "at": "2026-11-11T19:53:54.861467+00:00",
@@ -21281,12 +21495,6 @@
       "url": "https://the-decoder.com/helsing-built-an-ai-system-that-prepares-targets-for-weapons-systems-and-says-every-decision-will-carry-a-human-name/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-11T19:53:54.861467+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-11T07:04:08.612408+00:00",
       "pipeline_version": "2"
     },
     {
@@ -21491,18 +21699,6 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-06T07:22:31.019271+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-05T20:15:25.174655+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-05T20:15:25.174655+00:00",
       "pipeline_version": "2"
     }
   ]
