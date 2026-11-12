@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updated_at": "2026-11-12T07:42:08.316847+00:00",
+  "updated_at": "2026-11-12T20:24:52.831172+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/12/google-search-gets-a-major-upgrade-with-gemini-4-hydrogen.html",
+      "created_at": "2026-11-12T20:24:52.831172+00:00",
+      "source": {
+        "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+        "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "source": "Google AI",
+        "published_at": "2026-11-12T18:00:00+00:00",
+        "display_date": "Nov 12, 2026",
+        "category": "Models & LLMs",
+        "description": "Rotating carousel of cards with text \"Gemini 4 Hydrogen\" \"Now in Google Search\" and examples from the Google Search UI",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Google Search Gets Major Upgrade with Gemini 4 Hydrogen",
+        "summary": "Google is rolling out a major upgrade to Google Search with Gemini 4 Hydrogen, offering more intuitive, visual, and precise answers. The update aims to improve intent understanding, query handling, and visual responses for users.",
+        "facts": [
+          {
+            "statement": "Google is introducing Gemini 4 Hydrogen to enhance Google Search globally.",
+            "evidence": "We are bringing Gemini 4 Hydrogen to Google Search globally"
+          },
+          {
+            "statement": "The update improves intent understanding and handles complex, multi-part questions.",
+            "evidence": "Search can now handle even more nuanced and complicated questions"
+          },
+          {
+            "statement": "Users will see more visual content like tables and images in search results.",
+            "evidence": "You’ll see more images, structured responses, comparison tables"
+          }
+        ],
+        "why_it_matters": "This major upgrade to Google Search aims to provide users with more intuitive and precise answers. By improving intent understanding and query handling, the update could help users find information faster and more accurately. The addition of visual content like tables and images may also enhance the user experience for complex queries.",
+        "elephant_take": "🐘 鼋 Google is trying to make search more like a conversation, but it's still just a tool. The upgrade promises better intent understanding and visual responses, which could help users find what they need faster, though it's unclear if it will truly revolutionize the search experience.",
+        "caveat": "The update's real impact depends on how well it handles complex queries and visual content in practice.",
+        "who_should_care": [
+          "Search users",
+          "AI developers",
+          "Tech enthusiasts"
+        ],
+        "what_to_do": [
+          "Try out Gemini 4 Hydrogen in Google Search",
+          "Explore the new visual responses and structured information",
+          "Stay updated on AI advancements from Google"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Google%20Search%20gets%20a%20major%20upgrade%20with%20Gemini%204%20Hydrogen%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
     {
       "path": "news/2026/11/11/united-won-t-let-your-ai-agent-book-your-flight.html",
       "created_at": "2026-11-12T07:42:08.316847+00:00",
@@ -21462,6 +21527,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/",
+      "reason": "quality gate rejected draft: summary length is outside the publication range",
+      "at": "2026-11-12T20:24:52.831172+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-11-12T20:24:52.831172+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-12T20:24:52.831172+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+      "reason": "quality gate rejected draft: headline length is outside the publication range; summary length is outside the publication range; why_it_matters length is outside the publication range",
+      "at": "2026-11-12T20:24:52.831172+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-12T20:24:52.831172+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-11-12T07:42:08.316847+00:00",
@@ -21669,36 +21764,6 @@
       "url": "https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-07T13:30:55.942203+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/googles-ai-detects-high-blood-pressure-from-a-regular-smartwatch-without-a-cuff/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-07T13:30:55.942203+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/ripple-65b-preview-delivers-strong-agentic-coding-results-as-a-fully-apache-2-0-open-us-model/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-07T06:34:03.676274+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-06T07:22:31.019271+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1028412/airbnb-ai-travel-agent-q3-2026-earnings",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-06T07:22:31.019271+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-06T07:22:31.019271+00:00",
       "pipeline_version": "2"
     }
   ]
