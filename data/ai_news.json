@@ -1,7 +1,49 @@
 {
   "version": 1,
-  "updated_at": "2026-11-12T20:24:48.601561+00:00",
+  "updated_at": "2026-11-13T07:14:22.196892+00:00",
   "items": [
+    {
+      "title": "Google’s new Gemini model is better at understanding complicated questions",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+      "source": "The Verge AI",
+      "published_at": "2026-11-12T21:55:32+00:00",
+      "display_date": "Nov 12, 2026",
+      "category": "Models & LLMs",
+      "description": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search, the Gemini app, all tiers of Google […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Claude Meetings lets Anthropic's AI join your video calls",
+      "url": "https://the-decoder.com/claude-meetings-lets-anthropics-ai-join-your-video-calls/",
+      "source": "The Decoder",
+      "published_at": "2026-11-12T20:26:50+00:00",
+      "display_date": "Nov 12, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic is adding Claude directly to video calls. Claude Meetings joins Google Meet sessions and creates documents, whiteboards, and meeting notes in real time. The feature launches in beta for Team and Enterprise plans, with more platforms coming later. The article Claude Meetings lets Anthropic's AI join your video calls appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Descript for this workflow",
+        "url": "partner-offers/descript-ai-video-editing.html",
+        "offer_id": "descript"
+      }
+    },
+    {
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "url": "https://openai.com/business/customer-stories/amplitude",
+      "source": "OpenAI",
+      "published_at": "2026-11-12T20:00:00+00:00",
+      "display_date": "Nov 12, 2026",
+      "category": "Models & LLMs",
+      "description": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "Google's Gemini 4 Hydrogen outscores the bigger Argon just four weeks after its launch",
       "url": "https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/",
@@ -99,7 +141,8 @@
         "title": "Model the value of an AI subscription",
         "url": "calculators/ai-software-roi-calculator.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huang-s-exi.html"
     },
     {
       "title": "More game developers are starting to use generative AI",
@@ -127,35 +170,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "SoftBank’s billion-dollar loss may have put a cap on AI’s natural gas ambitions",
-      "url": "https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-12T17:00:52+00:00",
-      "display_date": "Nov 12, 2026",
-      "category": "AI Tools & Products",
-      "description": "SoftBank lost over $3 billion preordering natural gas turbines to power AI data centers. Here's what the loss means to power markets.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Phota Labs uses AI to turn everyday photos into professional-looking shots",
-      "url": "https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-12T17:00:00+00:00",
-      "display_date": "Nov 12, 2026",
-      "category": "AI Tools & Products",
-      "description": "Rather than giving consumers yet another photo-editing tool, Phota Labs aims to use advances in AI to automate the editing process so it’s easier for anyone to turn everyday moments into better photos.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks.html"
     },
     {
       "title": "OpenAI’s data suggests that frontier models are hiding their thoughts because developers optimize for capability and compute",
@@ -169,20 +185,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Five ways Jensen Huang’s ouster from Nvidia could damage the AI industry",
-      "url": "https://techcrunch.com/2026/11/12/five-ways-jensen-huangs-ouster-from-nvidia-could-damage-the-ai-industry/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-12T16:32:33+00:00",
-      "display_date": "Nov 12, 2026",
-      "category": "AI Tools & Products",
-      "description": "Nvidia's ousted CEO Jensen Huang's downfall isn’t just your run-of-the-mill salacious billionaire sex scandal. He was using his influence to push the AI industry in some very specific ways.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
       }
     },
     {
@@ -297,21 +299,6 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/11/11/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-perce.html"
-    },
-    {
-      "title": "Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years",
-      "url": "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years/",
-      "source": "The Decoder",
-      "published_at": "2026-11-11T18:18:25+00:00",
-      "display_date": "Nov 11, 2026",
-      "category": "Models & LLMs",
-      "description": "Google Deepmind's AlphaProof Code mathematically verified Signal's cryptographic core code in four weeks, a process that typically takes years. AI agents powered by Gemini Carbon wrote more than six million lines of proof code and flagged only about one percent for human review. Deepmind plans to extend the method to critical infrastructure like power grids and medical devices. The article Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years appea",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/11/11/google-deepmind-s-alphaproof-code-verified-signal-s-cryptographic-core-in-four-wee.html"
     },
     {
       "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
@@ -455,34 +442,6 @@
       }
     },
     {
-      "title": "Closing the AI guidance gap in education",
-      "url": "https://openai.com/index/closing-ai-guidance-gap-education",
-      "source": "OpenAI",
-      "published_at": "2026-11-10T09:00:00+00:00",
-      "display_date": "Nov 10, 2026",
-      "category": "Research",
-      "description": "New ThinkYoung research and lessons from OpenAI’s EMEA education partnerships on supporting teachers, AI literacy, and independent learning.",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "Singapore Airlines elevates travel & work with OpenAI technology",
-      "url": "https://openai.com/index/singapore-airlines-travel-work",
-      "source": "OpenAI",
-      "published_at": "2026-11-10T08:00:00+00:00",
-      "display_date": "Nov 10, 2026",
-      "category": "Models & LLMs",
-      "description": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Pay for Hugging Face Hub with your Google Cloud Account",
       "url": "https://huggingface.co/blog/hub-gcp-marketplace",
       "source": "Hugging Face",
@@ -502,6 +461,48 @@
       "source": "Hugging Face",
       "published_at": "2026-11-10T00:00:00+00:00",
       "display_date": "Nov 10, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "source": "Google AI",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "display_date": "Nov 05, 2026",
+      "category": "Models & LLMs",
+      "description": "Text \"Gemini Introducing Gemini Omni 1.2 Flash\" surroudned by images of a beehive, animals in conversation, a squid, and a woman walking down a street",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Palette: teaching a small model to build decks in your design language",
+      "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
+      "source": "Hugging Face",
+      "published_at": "2026-11-03T16:35:36+00:00",
+      "display_date": "Nov 03, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Beautiful.ai for this workflow",
+        "url": "partner-offers/beautiful-ai-presentations.html",
+        "offer_id": "beautiful-ai"
+      }
+    },
+    {
+      "title": "Transformers Model Integration Contracts",
+      "url": "https://huggingface.co/blog/transformers-mic",
+      "source": "Hugging Face",
+      "published_at": "2026-11-03T00:00:00+00:00",
+      "display_date": "Nov 03, 2026",
       "category": "Models & LLMs",
       "description": "",
       "related": {

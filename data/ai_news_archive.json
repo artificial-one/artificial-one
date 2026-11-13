@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-11-12T20:24:52.831172+00:00",
+  "updated_at": "2026-11-13T07:14:25.857634+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huang-s-exi.html",
+      "created_at": "2026-11-13T07:14:25.857634+00:00",
+      "source": {
+        "title": "Hugging Face CEO vows to keep fighting for open source AI after Jensen Huang’s exit",
+        "url": "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-12T17:36:40+00:00",
+        "display_date": "Nov 12, 2026",
+        "category": "AI Business",
+        "description": "Hugging Face's CEO pledged to keep fighting for open source AI after Huang's exit, raising questions about Nvidia's $12.9 billion acquisition.",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Hugging Face CEO Promises to Fight for Open Source AI After Huang's Exit",
+        "summary": "The Hugging Face CEO vows to continue advocating for open source AI despite Nvidia's acquisition of the platform, highlighting concerns about the impact on competition and open-weight models.",
+        "facts": [
+          {
+            "statement": "Hugging Face CEO pledges to fight for open-source AI after Huang's exit",
+            "evidence": "Hugging Face CEO vows to keep fighting for open source AI after Jensen Huang’s exit"
+          },
+          {
+            "statement": "Nvidia's $12.9 billion acquisition raises concerns about competition in the AI market",
+            "evidence": "the deal would impact competition in the AI market"
+          },
+          {
+            "statement": "Huang was a strong advocate for open source and open-weight AI models",
+            "evidence": "Huang was known as a strong advocate for open source AI and open-weight models"
+          }
+        ],
+        "why_it_matters": "The Hugging Face CEO's commitment to open-source AI highlights the ongoing debate over the balance between corporate control and open innovation in the AI space. The potential impact of Nvidia's acquisition on competition and open-weight models is a critical issue for the future of AI development.",
+        "elephant_take": "🐘 鼋 The Hugging Face CEO's vow to fight for open source AI is a reminder that even in the face of major corporate moves, the open-source community remains a powerful force. But it's not just about ideology—it's about maintaining a competitive edge in an increasingly regulated market.",
+        "caveat": "The deal's impact on competition and open-weight models is still under scrutiny by regulators.",
+        "who_should_care": [
+          "AI developers",
+          "Regulators",
+          "Open-source advocates"
+        ],
+        "what_to_do": [
+          "Monitor the progress of the Hugging Face-Nvidia deal",
+          "Stay informed about regulatory actions on AI competition",
+          "Support open-source initiatives that promote accessibility and innovation"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20Hugging%20Face%20CEO%20vows%20to%20keep%20fighting%20for%20open%20source%20AI%20after%20Jensen%20Huang%E2%80%99s%20exit%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks.html",
+      "created_at": "2026-11-13T07:14:25.857634+00:00",
+      "source": {
+        "title": "United Airlines blocks AI agents from booking flights, citing cybersecurity risks",
+        "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-12T17:17:58+00:00",
+        "display_date": "Nov 12, 2026",
+        "category": "Policy & Safety",
+        "description": "The airline said it will not allow customers to use AI agents to book flights and manage reservations.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "United Airlines Blocks AI Agents from Booking Flights",
+        "summary": "United Airlines is restricting access to AI agents for flight bookings, citing cybersecurity risks and regulatory concerns.",
+        "facts": [
+          {
+            "statement": "United Airlines restricts AI agents from booking flights.",
+            "evidence": "United Airlines blocks AI agents from booking flights"
+          },
+          {
+            "statement": "United Airlines warns of security risks from sharing credentials with AI assistants.",
+            "evidence": "Sharing account credentials with personal, third-party, AI assistants can expose sensitive information"
+          },
+          {
+            "statement": "United Airlines is updating policies to restrict unauthorized AI access.",
+            "evidence": "This work includes updates to our booking, ticketing and distribution policies"
+          }
+        ],
+        "why_it_matters": "As more companies adopt AI, the risk of unauthorized access and data breaches increases. United's move highlights the growing concern over AI-driven security threats in the aviation industry.",
+        "elephant_take": "🐘 鼋 United Airlines is taking a cautious approach to AI, prioritizing security over convenience. The airline’s warning about unauthorized agents is a clear sign that the industry is grappling with the risks of AI integration.",
+        "caveat": "The decision may limit customer convenience but reflects a growing concern over AI-driven security threats.",
+        "who_should_care": [
+          "Aviation industry",
+          "Cybersecurity professionals",
+          "AI developers"
+        ],
+        "what_to_do": [
+          "Review AI integration policies for security risks",
+          "Educate users about password sharing dangers",
+          "Monitor for unauthorized access attempts"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20United%20Airlines%20blocks%20AI%20agents%20from%20booking%20flights%2C%20citing%20cybersecurity%20risks%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/12/google-search-gets-a-major-upgrade-with-gemini-4-hydrogen.html",
       "created_at": "2026-11-12T20:24:52.831172+00:00",
@@ -21527,6 +21657,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-13T07:14:25.857634+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/claude-meetings-lets-anthropics-ai-join-your-video-calls/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-13T07:14:25.857634+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/business/customer-stories/amplitude",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-13T07:14:25.857634+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/games/1032085/gdc-festival-of-gaming-annual-survey-ai-layoffs",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-11-13T07:14:25.857634+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/",
       "reason": "quality gate rejected draft: summary length is outside the publication range",
       "at": "2026-11-12T20:24:52.831172+00:00",
@@ -21740,30 +21894,6 @@
       "url": "https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-08T13:51:52.781002+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-08T13:51:52.781002+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-08T13:51:52.781002+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-07T22:16:39.751606+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-07T13:30:55.942203+00:00",
       "pipeline_version": "2"
     }
   ]
