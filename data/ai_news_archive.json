@@ -1,7 +1,268 @@
 {
   "version": 1,
-  "updated_at": "2026-11-14T06:59:13.019000+00:00",
+  "updated_at": "2026-11-14T18:28:50.369911+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didn-t-make-it.html",
+      "created_at": "2026-11-14T18:28:50.369911+00:00",
+      "source": {
+        "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+        "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-14T17:30:00+00:00",
+        "display_date": "Nov 14, 2026",
+        "category": "AI Business",
+        "description": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "AI Projects Fail as Industry Struggles with Innovation",
+        "summary": "The AI industry faces a growing number of failed projects, from Apple's delayed Siri AI to OpenAI's 'super app' launch. Many initiatives are abandoned due to technical challenges and market demands.",
+        "facts": [
+          {
+            "statement": "Many AI initiatives are abandoned by their corporate parents",
+            "evidence": "about 42% of AI initiatives are ultimately abandoned by their corporate parents"
+          },
+          {
+            "statement": "OpenAI has had several failed attempts to create a 'super app'",
+            "evidence": "OpenAI has taken several stumbles"
+          },
+          {
+            "statement": "Apple's Siri AI was delayed multiple times",
+            "evidence": "Apple repeatedly pushed back the release of the new Siri"
+          }
+        ],
+        "why_it_matters": "The AI industry is facing a growing number of failed projects, highlighting the challenges of innovation and market demands. These failures offer valuable lessons for the industry as it continues to evolve.",
+        "elephant_take": "🐘 鼋 The AI graveyard is a reminder that even the biggest players struggle with innovation. OpenAI's 'super app' attempts and Apple's delayed Siri AI show that technical challenges and market demands can lead to failure.",
+        "caveat": "The AI industry is still in its early stages, and many failures may be due to lack of experience rather than inherent flaws in the technology.",
+        "who_should_care": [
+          "AI investors",
+          "Tech companies",
+          "Researchers"
+        ],
+        "what_to_do": [
+          "Conduct thorough market research before launching AI projects",
+          "Invest in technical expertise and infrastructure",
+          "Monitor user demand and feedback closely"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20The%20AI%20graveyard%3A%20a%20running%20list%20of%20projects%20and%20startups%20that%20didn%E2%80%99t%20make%20it%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/14/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-mig.html",
+      "created_at": "2026-11-14T18:28:50.369911+00:00",
+      "source": {
+        "title": "OpenAI reassigns robotics researchers to other teams as general-purpose models might make specialized robotics AI unnecessary",
+        "url": "https://the-decoder.com/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-might-make-specialized-robotics-ai-unnecessary/",
+        "source": "The Decoder",
+        "published_at": "2026-11-14T11:40:51+00:00",
+        "display_date": "Nov 14, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI is dissolving its standalone robotics team for the second time, but not because it lacks data. General-purpose models like GPT-6 Astra can apparently control robots directly, making a dedicated unit unnecessary. The researchers are being redistributed across other teams in what the company frames as a way to accelerate its robotics efforts. The article OpenAI reassigns robotics researchers to other teams as general-purpose models might make specialized robotics AI unnecessary appeared fir",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "OpenAI Shifts Robotics Focus to General-Purpose Models",
+        "summary": "OpenAI is reassigning robotics researchers to other teams as general-purpose models may make specialized robotics AI unnecessary. The company is dissolving its standalone robotics team for the second time, but this time for different reasons than in 2020.",
+        "facts": [
+          {
+            "statement": "General-purpose models like GPT-6 Astra can apparently control robots directly",
+            "evidence": "general-purpose models like GPT-6 Astra can apparently control robots directly"
+          },
+          {
+            "statement": "Astra-powered agent achieved a 74.8 percent success rate on simulated robotics tasks",
+            "evidence": "Astra-powered agent achieved a 74.8 percent success rate on simulated robotics tasks"
+          },
+          {
+            "statement": "OpenAI is dissolving its standalone robotics team for the second time",
+            "evidence": "OpenAI is dissolving its standalone robotics team for the second time"
+          }
+        ],
+        "why_it_matters": "The shift in OpenAI's robotics strategy highlights a potential transformation in AI development, where general-purpose models may replace specialized robotics AI. This could have implications for the future of AI research and application, as well as the competitive landscape among major tech companies.",
+        "elephant_take": "🐘 🦘 OpenAI’s move to dissolve its robotics team is a sign that they’re betting on general-purpose models to handle complex tasks. But even if these models are powerful, specialized robotics might still have their place in certain scenarios.",
+        "caveat": "The long-term impact of this shift remains unclear, and the effectiveness of general-purpose models in real-world robotics applications is still under scrutiny.",
+        "who_should_care": [
+          "AI researchers",
+          "Tech companies",
+          "Robotics developers"
+        ],
+        "what_to_do": [
+          "Monitor OpenAI's progress in robotics",
+          "Evaluate the potential of general-purpose models in specialized tasks",
+          "Stay informed about advancements in AI and robotics"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20reassigns%20robotics%20researchers%20to%20other%20teams%20as%20general-purpose%20models%20might%20make%20specialized%20robotics%20AI%20unnecessary%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/11/14/anthropic-can-already-retrain-mythos-with-a-fraction-of-the-compute-originally-nee.html",
+      "created_at": "2026-11-14T18:28:50.369911+00:00",
+      "source": {
+        "title": "Anthropic can already retrain Mythos with \"a fraction of the compute originally needed,\" says former researcher Coxon",
+        "url": "https://the-decoder.com/anthropic-can-already-retrain-mythos-with-a-fraction-of-the-compute-originally-needed-says-former-researcher-coxon/",
+        "source": "The Decoder",
+        "published_at": "2026-11-14T11:21:41+00:00",
+        "display_date": "Nov 14, 2026",
+        "category": "Models & LLMs",
+        "description": "Former OpenAI and Anthropic researcher Jacob Coxon points to a slide from Anthropic's IPO roadshow as a reason he left, saying it shows the company's algorithms are improving not just quickly but at an accelerating rate. Coxon continues to call for a pause on frontier model development so competitors can catch up and human-level AI can become a commodity. The article Anthropic can already retrain Mythos with \"a fraction of the compute originally needed,\" says former researcher Coxon appeared fir",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Former Anthropic Researcher Warns of Accelerating AI Model Development",
+        "summary": "A former researcher highlights that Anthropic's models are improving at an accelerating rate, suggesting a need for pause in frontier model development to allow competitors to catch up.",
+        "facts": [
+          {
+            "statement": "Anthropic's models are improving at an accelerating rate.",
+            "evidence": "the curve still climbs steeply"
+          },
+          {
+            "statement": "Mythos model was part of this accelerating trend.",
+            "evidence": "they could already retrain Mythos with a fraction of the compute originally needed"
+          },
+          {
+            "statement": "Coxon wants frontier model development paused to commoditize human-level intelligence.",
+            "evidence": "it would only harm OpenAI and Anthropic"
+          }
+        ],
+        "why_it_matters": "The accelerating improvements in AI models raise concerns about the pace of development and its potential impact on competition and safety. Coxon's warnings highlight the need for caution as the field moves toward more advanced systems.",
+        "elephant_take": "🐘 鼋 The race to build smarter AI is getting out of control. Coxon's claims suggest that Anthropic's models are improving faster than expected, but at what cost? It's a warning that the future might be too fast for everyone.",
+        "caveat": "Coxon's views may be biased due to his past roles at OpenAI and Anthropic. His warnings should be considered with caution.",
+        "who_should_care": [
+          "AI researchers",
+          "Industry leaders",
+          "Regulators"
+        ],
+        "what_to_do": [
+          "Monitor AI development trends closely",
+          "Consider the ethical implications of rapid advancement",
+          "Evaluate the need for regulatory oversight"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20can%20already%20retrain%20Mythos%20with%20%22a%20fraction%20of%20the%20compute%20originally%20needed%2C%22%20says%20former%20researcher%20Coxon%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/11/14/runway-s-open-source-praxis-1-turns-video-ai-into-a-robot-controller.html",
+      "created_at": "2026-11-14T18:28:50.369911+00:00",
+      "source": {
+        "title": "Runway's open-source Praxis-1 turns video AI into a robot controller",
+        "url": "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/",
+        "source": "The Decoder",
+        "published_at": "2026-11-14T09:45:45+00:00",
+        "display_date": "Nov 14, 2026",
+        "category": "Models & LLMs",
+        "description": "Runway releases its robotics model Praxis-1 with open weights and source code under the Apache 2.0 license. The model uses knowledge from video training for robot control and leads the World Action Model category on Nvidia's RoboLab-120 benchmark. It can't yet plan complex action sequences on its own, though. The article Runway's open-source Praxis-1 turns video AI into a robot controller appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Descript for this workflow",
+          "url": "partner-offers/descript-ai-video-editing.html",
+          "offer_id": "descript"
+        }
+      },
+      "article": {
+        "headline": "Runway's Open-Source Robot Controller Advances AI in Robotics",
+        "summary": "Runway has released Praxis-1, an open-source robot control model that uses video AI to improve robotics. The model shows promise in controlling robots with text instructions and camera data but still requires specialized training for different systems.",
+        "facts": [
+          {
+            "statement": "Praxis-1 is an open-source robot controller using video AI.",
+            "evidence": "Runway has released Praxis-1, its AI model for controlling robots."
+          },
+          {
+            "statement": "Praxis-1 uses video training to control robots.",
+            "evidence": "Praxis-1 builds on a video model that learned how objects move and interact from ordinary footage."
+          },
+          {
+            "statement": "Praxis-1 performs well in robotics benchmarks.",
+            "evidence": "on nvidia's robolab-120 leaderboard , praxis-1 scores a 46.2 percent success rate."
+          }
+        ],
+        "why_it_matters": "Praxis-1 represents a significant step forward in making AI-driven robotics more accessible and efficient. By leveraging video training, it reduces the need for expensive robot-specific datasets, potentially lowering barriers to entry for robotics development. However, its current limitations in complex planning highlight the ongoing challenges in achieving fully autonomous robotic systems.",
+        "elephant_take": "🐘 鼋 Praxis-1 is a promising but still limited tool for robotics. While it shows potential in controlling robots with video data, it still needs specialized training for different systems. The open-source approach is a big deal, but the model's current capabilities suggest it's not ready for full autonomy.",
+        "caveat": "Praxis-1 requires additional training for new robot systems and has limitations in planning complex actions.",
+        "who_should_care": [
+          "Robotics developers",
+          "AI researchers",
+          "Industry professionals"
+        ],
+        "what_to_do": [
+          "Explore Praxis-1's open-source code and documentation",
+          "Test the model on existing robotics systems",
+          "Conduct further research on its training requirements",
+          "Stay updated on advancements in video-based robotics"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/descript-ai-video-editing-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/descript-ai-video-editing-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/descript-ai-video-editing.html",
+        "review_title": "Evaluate Descript for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Runway%27s%20open-source%20Praxis-1%20turns%20video%20AI%20into%20a%20robot%20controller%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "descript"
+      }
+    },
     {
       "path": "news/2026/11/13/jensen-huang-s-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-sa.html",
       "created_at": "2026-11-14T06:59:13.019000+00:00",
@@ -22049,6 +22310,18 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/gemini-4-carbon-takes-the-matharena-crown-but-costs-15-times-more-than-gpt-6-1-sol/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-14T18:28:50.369911+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-14T18:28:50.369911+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/former-openai-researcher-says-he-found-nvidia-blackwell-fingerprints-hidden-inside-six-chinese-ai-models/",
       "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
       "at": "2026-11-14T06:59:13.019000+00:00",
@@ -22272,18 +22545,6 @@
     },
     {
       "url": "https://openai.com/index/merge-builds-with-openai",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-09T07:09:03.822315+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-09T07:09:03.822315+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/franklin-templeton",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-11-09T07:09:03.822315+00:00",
       "pipeline_version": "2"
