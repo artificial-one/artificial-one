@@ -1,7 +1,203 @@
 {
   "version": 1,
-  "updated_at": "2026-11-14T18:28:50.369911+00:00",
+  "updated_at": "2026-11-14T22:44:18.939079+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/14/the-openai-board-member-who-fired-sam-altman-says-we-still-can-t-trust-ai-ceos.html",
+      "created_at": "2026-11-14T22:44:18.939079+00:00",
+      "source": {
+        "title": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
+        "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview",
+        "source": "The Verge AI",
+        "published_at": "2026-11-14T00:06:40+00:00",
+        "display_date": "Nov 14, 2026",
+        "category": "Policy & Safety",
+        "description": "Today, I’m talking with Helen Toner, the executive director of the Center for Security and Emerging Technology at Georgetown University. This episode is part two of our series on AI in real life. Helen is a well-known figure in the AI safety and policy community, though she is perhaps best known for having served on […]",
+        "related": {
+          "title": "Browse independent AI software buying guides",
+          "url": "buyers-guides.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "AI CEOs Still Untrustworthy Despite Safety Concerns",
+        "summary": "Helen Toner, a former OpenAI board member, warns that relying on any single person to ensure AI safety is risky, citing past failures and current challenges in AI regulation.",
+        "facts": [
+          {
+            "statement": "Helen Toner was part of the OpenAI board that fired Sam Altman.",
+            "evidence": "Helen is a well-known figure in the AI safety and policy community"
+          },
+          {
+            "statement": "The OpenAI board failed to ensure safety over profit.",
+            "evidence": "OpenAI’s nonprofit board existed specifically to make sure the company didn’t betray its mission to build safe AI"
+          },
+          {
+            "statement": "Recent AI incidents highlight ongoing safety concerns.",
+            "evidence": "AI models from OpenAI and Anthropic broke out of their testing environments and hacked real companies"
+          }
+        ],
+        "why_it_matters": "The trust in AI CEOs is a critical issue as regulatory frameworks struggle to keep up with rapid advancements. The past failures at OpenAI show that relying on individual accountability is insufficient, and new approaches are needed to ensure safety without compromising innovation.",
+        "elephant_take": "🐘 🦘 Helen Toner’s warning is a sobering reminder that AI safety can’t rest on one person’s integrity. The OpenAI board’s failure to balance profit and safety highlights the need for systemic solutions over individual responsibility.",
+        "caveat": "The discussion around AI regulation is complex and influenced by geopolitical factors, including China’s role in the AI landscape.",
+        "who_should_care": [
+          "AI researchers",
+          "Policy makers",
+          "Regulators"
+        ],
+        "what_to_do": [
+          "Develop regulatory frameworks that prioritize safety over profit",
+          "Encourage collaboration between labs and governments",
+          "Invest in AI safety research",
+          "Monitor geopolitical developments in AI"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "buyers-guides.html",
+        "review_title": "Browse independent AI software buying guides",
+        "elephant_url": "index.html?task=Explain%20what%20The%20OpenAI%20board%20member%20who%20fired%20Sam%20Altman%20says%20we%20still%20can%E2%80%99t%20trust%20AI%20CEOs%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/13/export-banned-nvidia-chips-are-behind-china-s-most-powerful-ai-models-uh-oh-jensen.html",
+      "created_at": "2026-11-14T22:44:18.939079+00:00",
+      "source": {
+        "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
+        "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-13T18:40:30+00:00",
+        "display_date": "Nov 13, 2026",
+        "category": "Models & LLMs",
+        "description": "New research shows the most advanced AI models from China were trained on banned Nvidia chips.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Nvidia Chips Linked to China's AI Models Spark Concerns",
+        "summary": "New research suggests that China's top AI models may be trained on banned Nvidia chips, raising questions about U.S. export controls and their effectiveness in preventing Chinese advancements.",
+        "facts": [
+          {
+            "statement": "Chinese AI models are trained using Nvidia chips banned for export to China.",
+            "evidence": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!"
+          },
+          {
+            "statement": "Nvidia's CEO left the company amid allegations of smuggling chips into China.",
+            "evidence": "Nvidia CEO Jensen Huang left the company this week after admitting to his affair with Alice Huang"
+          },
+          {
+            "statement": "U.S. export controls aim to prevent Chinese AI labs from accessing advanced chips.",
+            "evidence": "White House technology adviser Michael Kratsios said earlier this year that Moonshot had used export-banned Nvidia chips"
+          }
+        ],
+        "why_it_matters": "The discovery highlights a critical flaw in U.S. export control policies, which may allow Chinese AI labs to bypass restrictions by using third-party countries like Malaysia. This could undermine the U.S. tech edge and raise concerns about corporate liability for export violations.",
+        "elephant_take": "🐘 鼋 The U.S. is trying to keep China out of the AI race, but it's letting them use Malaysia as a proxy. It's a strange but effective strategy, though it might not be foolproof.",
+        "caveat": "The evidence is circumstantial and relies on third-party claims, so the findings should be viewed with caution.",
+        "who_should_care": [
+          "U.S. government",
+          "AI researchers",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Review export control policies",
+          "Investigate supply chain routes",
+          "Monitor AI model developments in China"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Export-banned%20Nvidia%20chips%20are%20behind%20China%E2%80%99s%20most%20powerful%20AI%20models%20%E2%80%94%20uh-oh%2C%20Jensen%21%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/13/chatgpt-s-new-wallet-lets-ai-agents-shop-and-check-out-for-you.html",
+      "created_at": "2026-11-14T22:44:18.939079+00:00",
+      "source": {
+        "title": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
+        "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-13T16:00:12+00:00",
+        "display_date": "Nov 13, 2026",
+        "category": "Models & LLMs",
+        "description": "ChatGPT Wallet lets AI agents shop and check out on users' behalf, starting with a limited rollout to U.S. Pro subscribers.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "ChatGPT Launches Wallet for AI Agents to Shop on User's Behalf",
+        "summary": "OpenAI introduces a new wallet feature allowing AI agents to shop and checkout on users' behalf, with a limited rollout to U.S. Pro subscribers.",
+        "facts": [
+          {
+            "statement": "ChatGPT's new Wallet lets AI agents shop and check out for you.",
+            "evidence": "ChatGPT’s new Wallet lets AI agents shop and check out for you"
+          },
+          {
+            "statement": "The feature is limited to U.S. Pro subscribers initially.",
+            "evidence": "initially be available to a limited number of U.S. ChatGPT Pro subscribers"
+          },
+          {
+            "statement": "Users retain control over purchases and can approve transactions with security checks.",
+            "evidence": "users are fully in control of the purchases, as they’re able to review the items"
+          }
+        ],
+        "why_it_matters": "This development highlights how AI is being integrated into consumer commerce, offering new ways for users to delegate tasks. It also raises questions about privacy and security as AI agents handle financial transactions on behalf of users.",
+        "elephant_take": "🐘 鼋 OpenAI's Wallet is a bold move in the agentic commerce space, but it's still early days. The feature's success will depend on how well it balances convenience with user control and security.",
+        "caveat": "The feature is limited to U.S. subscribers and may face resistance from retailers like Amazon.",
+        "who_should_care": [
+          "AI developers",
+          "retailers",
+          "users"
+        ],
+        "what_to_do": [
+          "Test the feature with a small budget",
+          "Review transaction details before approval",
+          "Stay informed about privacy concerns"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20ChatGPT%E2%80%99s%20new%20Wallet%20lets%20AI%20agents%20shop%20and%20check%20out%20for%20you%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didn-t-make-it.html",
       "created_at": "2026-11-14T18:28:50.369911+00:00",
@@ -22310,6 +22506,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-14T22:44:18.939079+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "reason": "HTTP Error 403: Forbidden",
+      "at": "2026-11-14T22:44:18.939079+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/13/elevenlabs-new-app-combines-meeting-note-taking-and-dictation-for-teams/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-14T22:44:18.939079+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/gemini-4-carbon-takes-the-matharena-crown-but-costs-15-times-more-than-gpt-6-1-sol/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-14T18:28:50.369911+00:00",
@@ -22334,20 +22548,8 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-13T20:00:36.943935+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://the-decoder.com/anthropics-claude-for-manufacturing-plugs-ai-directly-into-factory-software-to-automate-industrial-workflows/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-13T20:00:36.943935+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-13T20:00:36.943935+00:00",
       "pipeline_version": "2"
     },
@@ -22539,12 +22741,6 @@
     },
     {
       "url": "https://openai.com/index/introducing-gpt-6-cyber",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-09T07:09:03.822315+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/merge-builds-with-openai",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-11-09T07:09:03.822315+00:00",
       "pipeline_version": "2"
