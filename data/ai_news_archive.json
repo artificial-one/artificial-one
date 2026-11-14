@@ -1,7 +1,269 @@
 {
   "version": 1,
-  "updated_at": "2026-11-13T20:00:36.943935+00:00",
+  "updated_at": "2026-11-14T06:59:13.019000+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/13/jensen-huang-s-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-sa.html",
+      "created_at": "2026-11-14T06:59:13.019000+00:00",
+      "source": {
+        "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+        "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-13T22:43:00+00:00",
+        "display_date": "Nov 13, 2026",
+        "category": "AI Business",
+        "description": "Nvidia poured tens of billions into AI startups under Huang. Without him at the helm, founders and VCs are bracing for smaller checks and lower valuations.",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Jensen Huang's departure creates uncertainty in AI startup funding",
+        "summary": "The resignation of Jensen Huang, CEO of Nvidia, has raised concerns among VCs and founders about the future of AI startup funding. Huang was a major investor in AI startups, and his departure could lead to smaller checks and lower valuations. The impact on the ecosystem is significant, with many companies relying on Nvidia's support.",
+        "facts": [
+          {
+            "statement": "Nvidia has been a major investor in AI startups, pouring tens of billions into them annually.",
+            "evidence": "Nvidia poured tens of billions into AI startups under Huang"
+          },
+          {
+            "statement": "Huang's departure could lead to smaller checks and lower valuations for AI startups.",
+            "evidence": "Without him at the helm, founders and VCs are bracing for smaller checks and lower valuations"
+          },
+          {
+            "statement": "Nvidia has invested in numerous AI startups, including neoclouds and inference providers.",
+            "evidence": "Nvidia’s biggest bets were backing neoclouds, inference providers, and open weight models"
+          }
+        ],
+        "why_it_matters": "The departure of Jensen Huang from Nvidia could have a significant impact on the AI startup ecosystem. As one of the largest investors in AI startups, his absence may lead to reduced funding and lower valuations for many companies. This could create a gap in the ecosystem that is difficult to fill, especially in regions outside of America.",
+        "elephant_take": "🐘 鼋 The loss of Jensen Huang as a major investor in AI startups is a big deal. His departure could lead to a slowdown in funding and lower valuations for many companies. It's a shift that could have lasting effects on the ecosystem.",
+        "caveat": "The impact of Huang's departure on the AI startup ecosystem is still uncertain. While there is hope that his successor will resume his dealmaking, investors are not optimistic about short-term changes.",
+        "who_should_care": [
+          "AI startups",
+          "Investors",
+          "VCs",
+          "Founders"
+        ],
+        "what_to_do": [
+          "Monitor funding trends in the AI sector",
+          "Evaluate the impact of Nvidia's investment strategy on startup valuations",
+          "Assess the role of major investors in shaping the AI ecosystem",
+          "Stay informed about changes in leadership at major tech companies"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20Jensen%20Huang%E2%80%99s%20departure%20blasts%20big%20hole%20in%20AI%20startup%20funding%2C%20VCs%20and%20founders%20say%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/13/chatgpt-wallet-lets-openai-s-dots-agents-make-purchases-for-you.html",
+      "created_at": "2026-11-14T06:59:13.019000+00:00",
+      "source": {
+        "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+        "source": "The Verge AI",
+        "published_at": "2026-11-13T20:45:10+00:00",
+        "display_date": "Nov 13, 2026",
+        "category": "Models & LLMs",
+        "description": "After launching its Dots AI agents platform earlier this year, OpenAI is launching a wallet for the agents. ChatGPT Wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older using a US billing address and \"eligible US-issued American Express, Chase, Mastercard and Visa cards.\" After adding a card […]",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "OpenAI Launches ChatGPT Wallet for Dots Agents",
+        "summary": "OpenAI is rolling out a wallet for its Dots AI agents that allows them to make purchases on behalf of users, with security checks and payment tokenization.",
+        "facts": [
+          {
+            "statement": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+            "evidence": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you"
+          },
+          {
+            "statement": "OpenAI says ChatGPT Wallet won’t share your actual credit card info with its AI agents",
+            "evidence": "OpenAI says ChatGPT Wallet won’t share your actual credit card info with its AI agents"
+          },
+          {
+            "statement": "ChatGPT Wallet might not work everywhere due to retailer restrictions",
+            "evidence": "ChatGPT Wallet might not work everywhere. Some retailers have restrictions on AI agents or block them altogether."
+          }
+        ],
+        "why_it_matters": "The launch of ChatGPT Wallet highlights the growing integration of AI into everyday financial transactions, raising questions about security, privacy, and the potential for AI to make decisions on behalf of users.",
+        "elephant_take": "🐘 鼋 OpenAI’s new wallet is a step toward letting AI handle purchases, but it's still in its early stages and may not work everywhere. The security checks are a good start, but we'll have to wait and see how it plays out.",
+        "caveat": "The system relies on retailers accepting AI payments and may face technical or privacy challenges.",
+        "who_should_care": [
+          "AI developers",
+          "Financial institutions",
+          "Privacy advocates"
+        ],
+        "what_to_do": [
+          "Monitor the rollout for any issues",
+          "Stay informed about security measures",
+          "Test the system with trusted retailers"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20ChatGPT%20Wallet%20lets%20OpenAI%E2%80%99s%20Dots%20agents%20make%20purchases%20for%20you%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation.html",
+      "created_at": "2026-11-14T06:59:13.019000+00:00",
+      "source": {
+        "title": "AI agent startup LangChain hits $3B valuation",
+        "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-13T19:37:57+00:00",
+        "display_date": "Nov 13, 2026",
+        "category": "Models & LLMs",
+        "description": "LangChain now claims 7,000 customers of its model and platform agnostic agent management tool LangSmith.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "LangChain Valued at $3B with 7,000 Customers",
+        "summary": "LangChain, an AI agent startup, has achieved a $3B valuation with 7,000 customers using its platform agnostic agent management tool LangSmith. The company raised $300 million in Series C funding led by CapitalG.",
+        "facts": [
+          {
+            "statement": "LangChain has a $3B valuation after raising $300 million in Series C.",
+            "evidence": "AI agent startup LangChain hits $3B valuation | TechCrunch Topics"
+          },
+          {
+            "statement": "LangChain has 7,000 customers using its agent management tool LangSmith.",
+            "evidence": "LangChain now claims 7,000 customers of its model and platform agnostic agent management tool LangSmith."
+          },
+          {
+            "statement": "LangChain's valuation more than doubled from $1.25 billion to $3B.",
+            "evidence": "That’s more than double its $1.25 billion valuation when it raised $125 million about a year ago"
+          }
+        ],
+        "why_it_matters": "The $3B valuation highlights the growing interest in AI agent management tools, with LangChain leading the market. Its platform agnostic approach and focus on letting businesses own their intelligence could position it as a key player in the AI ecosystem.",
+        "elephant_take": "🐘 🦘 LangChain's $3B valuation is impressive, but the competition is fierce. With 7,000 customers, it's clear the company has found its niche in managing AI agents, though it faces challenges from other startups like Mintive.",
+        "caveat": "The valuation is based on a recent Series C round, and the market for AI agent tools remains highly competitive.",
+        "who_should_care": [
+          "AI investors",
+          "TechCrunch readers",
+          "Startups in AI space"
+        ],
+        "what_to_do": [
+          "Monitor LangChain's customer growth and product development",
+          "Evaluate the competition in the AI agent management space",
+          "Consider the implications of a $3B valuation for the AI industry"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20AI%20agent%20startup%20LangChain%20hits%20%243B%20valuation%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/13/meta-s-muse-now-calls-businesses-for-you-but-many-companies-might-just-hang-up-on.html",
+      "created_at": "2026-11-14T06:59:13.019000+00:00",
+      "source": {
+        "title": "Meta's Muse now calls businesses for you, but many companies might just hang up on the AI",
+        "url": "https://the-decoder.com/metas-muse-now-calls-businesses-for-you-but-many-companies-might-just-hang-up-on-the-ai/",
+        "source": "The Decoder",
+        "published_at": "2026-11-13T15:12:44+00:00",
+        "display_date": "Nov 13, 2026",
+        "category": "Models & LLMs",
+        "description": "Meta's AI agent Muse can now call businesses on behalf of paying US subscribers, handling everything from cable providers to restaurants. The agent already has over 10 million users, according to Meta's AI chief Alexandr Wang. Google Gemini, Instinct, and xAI's Grok Bot offer the same feature, but many businesses hang up as soon as they detect an AI on the line. The article Meta's Muse now calls businesses for you, but many companies might just hang up on the AI appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Meta's Muse Calls Businesses but Firms May Hang Up on AI",
+        "summary": "Meta's AI agent Muse can call businesses on behalf of users, but many companies may hang up when they detect an AI on the line. The feature is available to paying subscribers and has over 10 million users.",
+        "facts": [
+          {
+            "statement": "Meta's Muse can call businesses on behalf of users",
+            "evidence": "Meta's AI agent Muse can now place calls to US businesses on behalf of its users"
+          },
+          {
+            "statement": "Many businesses hang up when they detect an AI on the line",
+            "evidence": "Many businesses, however, hang up the moment they detect an AI on the line"
+          },
+          {
+            "statement": "Meta's Muse has over 10 million users",
+            "evidence": "The agent, with more than 10 million users, handles tedious calls to cable companies"
+          }
+        ],
+        "why_it_matters": "The ability of AI to call businesses raises concerns about detection and trust. As AI becomes more realistic, businesses may struggle to distinguish between human and AI calls, potentially impacting customer service and data privacy.",
+        "elephant_take": "🐘 鼋 Meta's Muse is a double-edged sword: while it streamlines business calls, the risk of being detected as AI could undermine its effectiveness. The challenge is balancing convenience with trust.",
+        "caveat": "The detection issue highlights the need for clear identification of AI interactions in customer service.",
+        "who_should_care": [
+          "Businesses",
+          "AI developers",
+          "Customer service professionals"
+        ],
+        "what_to_do": [
+          "Test AI call detection methods",
+          "Improve AI transparency",
+          "Enhance user education on AI capabilities"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Meta%27s%20Muse%20now%20calls%20businesses%20for%20you%2C%20but%20many%20companies%20might%20just%20hang%20up%20on%20the%20AI%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/13/openai-rebuilt-ai-shopping-from-scratch-with-chatgpt-wallet.html",
       "created_at": "2026-11-13T20:00:36.943935+00:00",
@@ -21787,6 +22049,18 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/former-openai-researcher-says-he-found-nvidia-blackwell-fingerprints-hidden-inside-six-chinese-ai-models/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-11-14T06:59:13.019000+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/anthropics-ipo-is-six-times-oversubscribed-and-on-track-to-become-the-largest-public-offering-in-history/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-14T06:59:13.019000+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-13T20:00:36.943935+00:00",
@@ -22012,18 +22286,6 @@
       "url": "https://openai.com/index/franklin-templeton",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-11-09T07:09:03.822315+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-08T22:27:56.498569+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/partnering-with-hacktron",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-08T22:27:56.498569+00:00",
       "pipeline_version": "2"
     }
   ]
