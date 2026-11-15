@@ -6,6 +6,42 @@
   },
   "events": [
     {
+      "detected_on": "2026-11-15",
+      "id": "54934e633b85e634",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://fireflies.ai",
+      "tool_id": "fireflies-ai",
+      "tool_name": "Fireflies.ai"
+    },
+    {
+      "detected_on": "2026-11-15",
+      "id": "4b023f9d8c92f221",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hotpot.ai",
+      "tool_id": "hotpot-ai",
+      "tool_name": "Hotpot.ai"
+    },
+    {
+      "detected_on": "2026-11-15",
+      "id": "8fc0838c3414ac7d",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://invideo.io",
+      "tool_id": "invideo",
+      "tool_name": "InVideo"
+    },
+    {
+      "detected_on": "2026-11-15",
+      "id": "04fe9b1be0bc3acc",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://lumen5.com",
+      "tool_id": "lumen5",
+      "tool_name": "Lumen5"
+    },
+    {
       "detected_on": "2026-11-14",
       "id": "a61399662df355f7",
       "kind": "pricing or plan",
@@ -1768,45 +1804,9 @@
       "source_url": "https://thoughtspot.com",
       "tool_id": "thoughtspot",
       "tool_name": "ThoughtSpot"
-    },
-    {
-      "detected_on": "2026-10-01",
-      "id": "684174d0c5ffadb5",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://contentstudio.io",
-      "tool_id": "contentstudio",
-      "tool_name": "ContentStudio"
-    },
-    {
-      "detected_on": "2026-10-01",
-      "id": "2282e065b53690c0",
-      "kind": "feature or product",
-      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://dovetail.com",
-      "tool_id": "dovetail",
-      "tool_name": "Dovetail"
-    },
-    {
-      "detected_on": "2026-10-01",
-      "id": "f5aa24a8048c5868",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://dataiku.com",
-      "tool_id": "dataiku",
-      "tool_name": "Dataiku"
-    },
-    {
-      "detected_on": "2026-10-01",
-      "id": "21dab512bb3bbbaf",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://fliki.ai",
-      "tool_id": "fliki",
-      "tool_name": "Fliki"
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-14",
+  "updated_at": "2026-11-15",
   "version": 1
 }
