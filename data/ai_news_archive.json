@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-11-14T22:44:18.939079+00:00",
+  "updated_at": "2026-11-15T19:05:28.204139+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/15/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia.html",
+      "created_at": "2026-11-15T19:05:28.204139+00:00",
+      "source": {
+        "title": "Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU",
+        "url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/",
+        "source": "The Decoder",
+        "published_at": "2026-11-15T10:06:06+00:00",
+        "display_date": "Nov 15, 2026",
+        "category": "Models & LLMs",
+        "description": "Meituan has released the weights for LongCat-2.5, a 1.6-trillion-parameter model built for AI agents and trained entirely on Chinese hardware. On Terminal Bench, it scores 88.4 points, landing just behind Claude Opus 5. The sample deployment runs on 194 Huawei Ascend chips, and Meituan makes no mention of Nvidia GPUs. The article Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Meituan's 1.6-trillion-parameter model avoids Nvidia GPUs",
+        "summary": "Meituan has released a 1.6-trillion-parameter AI agent model trained entirely on Chinese hardware, outperforming some Western models in specific benchmarks while avoiding Nvidia GPUs.",
+        "facts": [
+          {
+            "statement": "Meituan's LongCat-2.5 model is trained on Chinese hardware",
+            "evidence": "It was trained entirely on Chinese hardware"
+          },
+          {
+            "statement": "The model outperforms some Western models in coding benchmarks",
+            "evidence": "It comes close to top Western models on several benchmarks"
+          },
+          {
+            "statement": "Meituan's model avoids using Nvidia GPUs",
+            "evidence": "There's no guidance for Nvidia GPUs"
+          }
+        ],
+        "why_it_matters": "Meituan's achievement highlights the potential of Chinese hardware in large-scale AI development, challenging Western dominance in the field. The model's performance on coding benchmarks suggests it could be a strong contender in specific tasks, while its use of native Chinese chips may indicate a shift in the global AI landscape.",
+        "elephant_take": "🐘 鼋 Meituan's model is a bold move, but it's still behind some Western models in certain areas. The fact that it uses only Chinese hardware is impressive, but it's not clear how this will impact the broader AI market.",
+        "caveat": "The model's performance on certain benchmarks is still slightly behind some Western models, and more testing is needed to determine its full capabilities.",
+        "who_should_care": [
+          "AI researchers",
+          "Tech companies",
+          "Hardware manufacturers"
+        ],
+        "what_to_do": [
+          "Monitor the model's performance in real-world applications",
+          "Investigate the implications of using native Chinese hardware",
+          "Compare the model with other AI agents in the market"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Meituan%20releases%20a%201.6-trillion-parameter%20agent%20model%20that%20never%20touched%20an%20Nvidia%20GPU%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/14/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5.html",
+      "created_at": "2026-11-15T19:05:28.204139+00:00",
+      "source": {
+        "title": "Anthropic says outdated prompting habits are slowing down Claude Opus 5.5",
+        "url": "https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5/",
+        "source": "The Decoder",
+        "published_at": "2026-11-14T16:42:56+00:00",
+        "display_date": "Nov 14, 2026",
+        "category": "Models & LLMs",
+        "description": "Anthropic has made Claude Opus 5.5 the default model on all paid plans and published a guide that does away with old prompting habits. The main takeaway is to drop \"think hard\" and start at Medium effort. The article Anthropic says outdated prompting habits are slowing down Claude Opus 5.5 appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Anthropic Cuts Back 'Think Hard' To Speed Up Claude Opus 5.5",
+        "summary": "Anthropic advises users to drop outdated prompting habits like 'think hard' to improve performance of Claude Opus 5.5, which is now the default on paid plans. The company says these habits slow down the model and recommends starting at Medium effort level for better results.",
+        "facts": [
+          {
+            "statement": "Anthropic advises dropping phrases like 'think hard' from prompts",
+            "evidence": "Anthropic says outdated prompting habits are slowing down Claude Opus 5.5"
+          },
+          {
+            "statement": "Opus 5.5 performs better at Medium effort level than previous models at High",
+            "evidence": "In Anthropic's tests, responses without these phrases started faster with no measurable drop in quality"
+          },
+          {
+            "statement": "Users should describe desired results in a single message rather than giving instructions one at a time",
+            "evidence": "Anthropic advises describing the desired result in a single message rather than giving instructions one at a time"
+          }
+        ],
+        "why_it_matters": "Anthropic's advice on prompting habits for Claude Opus 5.5 highlights how outdated practices can hinder model performance. By adjusting effort levels and prompt structures, users can unlock better efficiency and results from the new model, which is now the default on paid plans.",
+        "elephant_take": "🐘 🦘 Anthropic's 'think hard' advice is a relic of older models. Opus 5.5 thrives on simplicity, not overthinking. The company's tests show that dropping those phrases can speed things up without sacrificing quality.",
+        "caveat": "Anthropic's recommendations are based on internal tests, which may not reflect real-world usage across all user scenarios.",
+        "who_should_care": [
+          "AI developers",
+          "Business users",
+          "Model administrators"
+        ],
+        "what_to_do": [
+          "Drop 'think hard' phrases from prompts",
+          "Start at Medium effort level for Opus 5.5",
+          "Describe desired results in a single message",
+          "Use diagrams and tables as images instead of typing them out"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Anthropic%20says%20outdated%20prompting%20habits%20are%20slowing%20down%20Claude%20Opus%205.5%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/14/the-openai-board-member-who-fired-sam-altman-says-we-still-can-t-trust-ai-ceos.html",
       "created_at": "2026-11-14T22:44:18.939079+00:00",
@@ -22506,6 +22637,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-15T19:05:28.204139+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/australias-central-bank-finds-ai-hitting-young-workers-first-especially-in-software-and-customer-service/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-15T19:05:28.204139+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-15T19:05:28.204139+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/gemini-4-carbon-takes-the-matharena-crown-but-costs-15-times-more-than-gpt-6-1-sol/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-15T19:05:28.204139+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-15T07:09:12.692089+00:00",
@@ -22542,12 +22697,6 @@
       "pipeline_version": "2"
     },
     {
-      "url": "https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-14T22:44:18.939079+00:00",
-      "pipeline_version": "2"
-    },
-    {
       "url": "https://openai.com/index/introducing-chatgpt-wallet",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-11-14T22:44:18.939079+00:00",
@@ -22557,18 +22706,6 @@
       "url": "https://techcrunch.com/2026/11/13/elevenlabs-new-app-combines-meeting-note-taking-and-dictation-for-teams/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-14T22:44:18.939079+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/gemini-4-carbon-takes-the-matharena-crown-but-costs-15-times-more-than-gpt-6-1-sol/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-14T18:28:50.369911+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-14T18:28:50.369911+00:00",
       "pipeline_version": "2"
     },
     {
@@ -22736,12 +22873,6 @@
     {
       "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-09T22:41:16.684199+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
-      "reason": "HTTP Error 403: Forbidden",
       "at": "2026-11-09T22:41:16.684199+00:00",
       "pipeline_version": "2"
     }

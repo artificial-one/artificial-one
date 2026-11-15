@@ -1,7 +1,50 @@
 {
   "version": 1,
-  "updated_at": "2026-11-14T22:44:14.445800+00:00",
+  "updated_at": "2026-11-15T19:05:23.348212+00:00",
   "items": [
+    {
+      "title": "Anthropic's Claude Fable 5.2 doesn't generate images, it paints them",
+      "url": "https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/",
+      "source": "The Decoder",
+      "published_at": "2026-11-15T15:42:03+00:00",
+      "display_date": "Nov 15, 2026",
+      "category": "Models & LLMs",
+      "description": "Anthropic's Claude Fable 5.2 doesn't generate images the way other AI models do. Instead of computing pixels, the language model writes Python code that places hundreds of thousands of simulated brushstrokes on a virtual canvas, complete with bristle texture and paint application. A single photorealistic parking garage scene took roughly 700,000 strokes, according to Anthropic employee Jake Eaton. The article Anthropic's Claude Fable 5.2 doesn't generate images, it paints them appeared first on",
+      "related": {
+        "title": "Evaluate AdCreative.ai for this workflow",
+        "url": "partner-offers/adcreative-ai-ad-design.html",
+        "offer_id": "adcreative"
+      }
+    },
+    {
+      "title": "Australia's central bank finds AI hitting young workers first, especially in software and customer service",
+      "url": "https://the-decoder.com/australias-central-bank-finds-ai-hitting-young-workers-first-especially-in-software-and-customer-service/",
+      "source": "The Decoder",
+      "published_at": "2026-11-15T10:45:58+00:00",
+      "display_date": "Nov 15, 2026",
+      "category": "Models & LLMs",
+      "description": "Australia's central bank sees early signs that AI is hitting young entry-level workers in highly exposed jobs like software development and customer service. Since ChatGPT launched, job postings and employment among 15- to 24-year-olds in those fields have dropped more sharply than among older workers. Author Mike Major cautions against jumping to conclusions, however, noting that business cycle shifts and remote work trends could also explain the numbers. The article Australia's central bank fi",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU",
+      "url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/",
+      "source": "The Decoder",
+      "published_at": "2026-11-15T10:06:06+00:00",
+      "display_date": "Nov 15, 2026",
+      "category": "Models & LLMs",
+      "description": "Meituan has released the weights for LongCat-2.5, a 1.6-trillion-parameter model built for AI agents and trained entirely on Chinese hardware. On Terminal Bench, it scores 88.4 points, landing just behind Claude Opus 5. The sample deployment runs on 194 Huawei Ascend chips, and Meituan makes no mention of Nvidia GPUs. The article Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/11/15/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia.html"
+    },
     {
       "title": "Anthropic CEO Amodei admits \"there's a huge uncertainty in what's going to happen next year\" days before a record IPO",
       "url": "https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/",
@@ -57,7 +100,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/11/14/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5.html"
     },
     {
       "title": "OpenAI reassigns robotics researchers to other teams as general-purpose models might make specialized robotics AI unnecessary",
@@ -88,21 +132,6 @@
         "offer_id": "rank-prompt"
       },
       "archive_url": "news/2026/11/14/anthropic-can-already-retrain-mythos-with-a-fraction-of-the-compute-originally-nee.html"
-    },
-    {
-      "title": "Runway's open-source Praxis-1 turns video AI into a robot controller",
-      "url": "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/",
-      "source": "The Decoder",
-      "published_at": "2026-11-14T09:45:45+00:00",
-      "display_date": "Nov 14, 2026",
-      "category": "Models & LLMs",
-      "description": "Runway releases its robotics model Praxis-1 with open weights and source code under the Apache 2.0 license. The model uses knowledge from video training for robot control and leads the World Action Model category on Nvidia's RoboLab-120 benchmark. It can't yet plan complex action sequences on its own, though. The article Runway's open-source Praxis-1 turns video AI into a robot controller appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Descript for this workflow",
-        "url": "partner-offers/descript-ai-video-editing.html",
-        "offer_id": "descript"
-      },
-      "archive_url": "news/2026/11/14/runway-s-open-source-praxis-1-turns-video-ai-into-a-robot-controller.html"
     },
     {
       "title": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
@@ -163,21 +192,6 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation.html"
-    },
-    {
-      "title": "OpenAI rebuilt AI shopping from scratch with ChatGPT Wallet",
-      "url": "https://the-decoder.com/openai-rebuilt-ai-shopping-from-scratch-with-chatgpt-wallet/",
-      "source": "The Decoder",
-      "published_at": "2026-11-13T18:55:21+00:00",
-      "display_date": "Nov 13, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI is taking a second shot at AI-powered shopping with ChatGPT Wallet after scrapping its first approach, Instant Checkout. Users register a card once and confirm each purchase through Face ID or a fingerprint, while actual card details stay hidden behind payment tokens. Rivals such as Anthropic, Meta, and xAI already have their agents making purchases. The article OpenAI rebuilt AI shopping from scratch with ChatGPT Wallet appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/11/13/openai-rebuilt-ai-shopping-from-scratch-with-chatgpt-wallet.html"
     },
     {
       "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
@@ -503,20 +517,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Pay for Hugging Face Hub with your Google Cloud Account",
-      "url": "https://huggingface.co/blog/hub-gcp-marketplace",
-      "source": "Hugging Face",
-      "published_at": "2026-11-10T00:00:00+00:00",
-      "display_date": "Nov 10, 2026",
-      "category": "AI Tools & Products",
-      "description": "",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
       }
     }
   ]
