@@ -22702,6 +22702,42 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; draft copies a long source phrase",
+      "at": "2026-11-16T22:29:26.874652+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-16T22:29:26.874652+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1034581/apple-intelligence-siri-ai-daily-usage-limits-icloud-subscription",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-16T22:29:26.874652+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/policy/1034527/openai-csam-classifier",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
+      "at": "2026-11-16T22:29:26.874652+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-16T22:29:26.874652+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-16T22:29:26.874652+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-16T07:14:25.590724+00:00",
@@ -22903,42 +22939,6 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-10T19:59:30.704150+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/games/1030994/big-walk-independent-games-festival-igf-ai",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-10T19:59:30.704150+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-10T19:59:30.704150+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/",
-      "reason": "quality gate rejected draft: summary length is outside the publication range",
-      "at": "2026-11-10T07:43:26.122810+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/entertainment/1030510/paramount-skydance-david-ellison-ai",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-10T07:43:26.122810+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-10T07:43:26.122810+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-10T07:43:26.122810+00:00",
       "pipeline_version": "2"
     }
   ]
