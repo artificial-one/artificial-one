@@ -1,7 +1,140 @@
 {
   "version": 1,
-  "updated_at": "2026-11-17T08:27:48.473526+00:00",
+  "updated_at": "2026-11-17T21:18:42.447137+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases.html",
+      "created_at": "2026-11-17T21:18:42.447137+00:00",
+      "source": {
+        "title": "Google expands access to Gemini Tasks, which can help with calls, purchases",
+        "url": "https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-17T19:02:20+00:00",
+        "display_date": "Nov 17, 2026",
+        "category": "Models & LLMs",
+        "description": "Gemini's Task mode can help users coordinate calls, log into websites, and even make purchases on the user's behalf.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Google Expands Access to Gemini Tasks for Enhanced User Assistance",
+        "summary": "Google is expanding access to Gemini Tasks, a feature that allows users to coordinate calls, log into websites, and make purchases on their behalf. The feature is now available for free to hundreds of millions of users using the Gemini 4 Hydrogen model.",
+        "facts": [
+          {
+            "statement": "Gemini Tasks can help users coordinate calls and book appointments.",
+            "evidence": "Google says that the app can call businesses and book appointments on users’ behalf"
+          },
+          {
+            "statement": "Tasks can complete purchases for users via Google Pay.",
+            "evidence": "it can also complete purchases for them via Google Pay"
+          },
+          {
+            "statement": "The feature is now available for free to hundreds of millions of users.",
+            "evidence": "Google is now making the feature available for free to hundreds of millions of people"
+          }
+        ],
+        "why_it_matters": "Gemini Tasks represent a significant advancement in AI personal assistance, enabling users to delegate basic tasks to an AI assistant. This could streamline daily activities and improve user efficiency, though it also raises questions about privacy and the potential for misuse.",
+        "elephant_take": "🐘 鼋 Google’s new Tasks feature is a step towards more proactive AI, but it's still a narrow tool that can't replace human judgment. The ability to make purchases or book appointments on your behalf is handy, but it's a reminder that AI is still far from true autonomy.",
+        "caveat": "The feature is still in its early stages and may not be fully secure or reliable for all tasks.",
+        "who_should_care": [
+          "AI developers",
+          "users",
+          "privacy advocates"
+        ],
+        "what_to_do": [
+          "Test the feature for basic tasks",
+          "Monitor privacy implications",
+          "Stay informed about updates",
+          "Use with caution for sensitive activities"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Google%20expands%20access%20to%20Gemini%20Tasks%2C%20which%20can%20help%20with%20calls%2C%20purchases%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/17/google-to-keep-gemini-chats-for-2-months-up-from-72-hours-even-with-history-off.html",
+      "created_at": "2026-11-17T21:18:42.447137+00:00",
+      "source": {
+        "title": "Google to keep Gemini chats for 2 months, up from 72 hours, even with history off",
+        "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-17T18:48:23+00:00",
+        "display_date": "Nov 17, 2026",
+        "category": "Models & LLMs",
+        "description": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Google Extends Gemini Chat Retention to Two Months",
+        "summary": "Google is increasing the retention period for Gemini chats from 72 hours to two months, aiming to enhance safety and security. The change will roll out globally in the coming weeks, with users able to separate chat history from AI training.",
+        "facts": [
+          {
+            "statement": "Google is extending the retention of temporary Gemini chats to two months.",
+            "evidence": "Google to keep Gemini chats for 2 months, up from 72 hours"
+          },
+          {
+            "statement": "The change aims to improve safety and security as AI systems become more capable.",
+            "evidence": "saying the change aims to improve safety and security as ai systems become more"
+          },
+          {
+            "statement": "Users can now separate chat history from AI training in new settings.",
+            "evidence": "Google says both new settings will be turned off by default for users who previously disabled Keep Activity"
+          }
+        ],
+        "why_it_matters": "This update highlights Google's efforts to balance user privacy with system safety. By extending chat retention, Google is preparing for potential system failures and policy violations, while giving users more control over their data. It also reflects the growing complexity of AI systems and the need for robust security measures.",
+        "elephant_take": "🐘 鼋 Google is trying to be both safe and flexible with its AI. By keeping chats longer, they’re ready for emergencies, but it’s a bit odd that they’re not using this data for training. Maybe they’re trying to reassure users about privacy while still being cautious.",
+        "caveat": "The change could raise privacy concerns if not handled carefully. Users might worry about their conversations being stored longer than intended.",
+        "who_should_care": [
+          "AI developers",
+          "Privacy advocates",
+          "Tech companies",
+          "Users concerned about data retention"
+        ],
+        "what_to_do": [
+          "Review Google's privacy settings for Gemini",
+          "Stay informed about AI updates from Google",
+          "Consider the implications of data retention on privacy",
+          "Contact Google if you have concerns about chat history"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Google%20to%20keep%20Gemini%20chats%20for%202%20months%2C%20up%20from%2072%20hours%2C%20even%20with%20history%20off%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months.html",
       "created_at": "2026-11-17T08:27:48.473526+00:00",
@@ -22963,6 +23096,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/news/1035957/meta-alexandr-wang-sam-altman-instagram-ai-deepfake",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-17T21:18:42.447137+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-11-17T21:18:42.447137+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-17T21:18:42.447137+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-17T21:18:42.447137+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-11-17T08:27:48.473526+00:00",
@@ -23176,30 +23333,6 @@
       "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
       "reason": "quality gate rejected draft: hype language is present",
       "at": "2026-11-11T19:53:54.861467+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/helsing-built-an-ai-system-that-prepares-targets-for-weapons-systems-and-says-every-decision-will-carry-a-human-name/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-11T19:53:54.861467+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/chatgpt-plus-for-veterans",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-11T07:04:08.612408+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-11T07:04:08.612408+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-11T07:04:08.612408+00:00",
       "pipeline_version": "2"
     }
   ]
