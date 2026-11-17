@@ -1,10 +1,100 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 60,
+    "successful_checks": 65,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-17",
+      "id": "30d30562536244c9",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.amplemarket.com",
+      "tool_id": "amplemarket",
+      "tool_name": "Amplemarket"
+    },
+    {
+      "detected_on": "2026-11-17",
+      "id": "e07d364b32c25567",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.close.com/partners/partner-program-agreement",
+      "tool_id": "close",
+      "tool_name": "Close"
+    },
+    {
+      "detected_on": "2026-11-17",
+      "id": "cab774f045d8d1e6",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.leadpages.com",
+      "tool_id": "leadpages",
+      "tool_name": "Leadpages"
+    },
+    {
+      "detected_on": "2026-11-17",
+      "id": "7142f59664efcd1c",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.plesk.com/",
+      "tool_id": "plesk",
+      "tool_name": "Plesk"
+    },
+    {
+      "detected_on": "2026-11-17",
+      "id": "9830beef24334304",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.foxit.com/",
+      "tool_id": "foxit",
+      "tool_name": "Foxit"
+    },
+    {
+      "detected_on": "2026-11-17",
+      "id": "4fd089bce59abefc",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.learnworlds.com/",
+      "tool_id": "learnworlds",
+      "tool_name": "LearnWorlds"
+    },
+    {
+      "detected_on": "2026-11-17",
+      "id": "062644142bf4adf7",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.quicksigner.com/",
+      "tool_id": "quicksigner",
+      "tool_name": "QuickSigner"
+    },
+    {
+      "detected_on": "2026-11-17",
+      "id": "a0e12be71c5cdd6e",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.whatconverts.com/",
+      "tool_id": "whatconverts",
+      "tool_name": "WhatConverts"
+    },
+    {
+      "detected_on": "2026-11-17",
+      "id": "c567efe7b5633c31",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://ocoya.com",
+      "tool_id": "ocoya",
+      "tool_name": "Ocoya"
+    },
+    {
+      "detected_on": "2026-11-17",
+      "id": "c66d01225e87613e",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://bluewillow.ai",
+      "tool_id": "bluewillow",
+      "tool_name": "BlueWillow"
+    },
     {
       "detected_on": "2026-11-16",
       "id": "852dc42e5643eec1",
@@ -1714,99 +1804,9 @@
       "source_url": "https://playgroundai.com",
       "tool_id": "playground-ai",
       "tool_name": "Playground AI"
-    },
-    {
-      "detected_on": "2026-10-07",
-      "id": "9412d5bd40ec7671",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://github.com/features/copilot",
-      "tool_id": "github-copilot",
-      "tool_name": "GitHub Copilot"
-    },
-    {
-      "detected_on": "2026-10-06",
-      "id": "b9bd7ef2f0561234",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://stylar.ai",
-      "tool_id": "stylar",
-      "tool_name": "Stylar"
-    },
-    {
-      "detected_on": "2026-10-06",
-      "id": "4ec3a726c97b71a1",
-      "kind": "feature or product",
-      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://tavily.com",
-      "tool_id": "tavily",
-      "tool_name": "Tavily"
-    },
-    {
-      "detected_on": "2026-10-06",
-      "id": "8a6906f3ba341434",
-      "kind": "feature or product",
-      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://todoist.com",
-      "tool_id": "todoist-ai",
-      "tool_name": "Todoist AI"
-    },
-    {
-      "detected_on": "2026-10-06",
-      "id": "1e56ab592352d256",
-      "kind": "feature or product",
-      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://veed.io",
-      "tool_id": "veed-io",
-      "tool_name": "Veed.io"
-    },
-    {
-      "detected_on": "2026-10-06",
-      "id": "5b35e6faa6f35bdb",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://typecast.ai",
-      "tool_id": "typecast",
-      "tool_name": "Typecast"
-    },
-    {
-      "detected_on": "2026-10-06",
-      "id": "5e9c98f4c6aa8526",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://www.carepatron.com/",
-      "tool_id": "carepatron",
-      "tool_name": "Carepatron"
-    },
-    {
-      "detected_on": "2026-10-06",
-      "id": "816dcdbce11d52f8",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://www.databox.com/",
-      "tool_id": "databox",
-      "tool_name": "Databox"
-    },
-    {
-      "detected_on": "2026-10-05",
-      "id": "f98ee8e52bd83988",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://replit.com",
-      "tool_id": "replit-ai",
-      "tool_name": "Replit AI"
-    },
-    {
-      "detected_on": "2026-10-05",
-      "id": "7fd4e374ec9530bb",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://speechify.com",
-      "tool_id": "speechify",
-      "tool_name": "Speechify"
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-16",
+  "updated_at": "2026-11-17",
   "version": 1
 }
