@@ -1,15 +1,44 @@
 {
   "version": 1,
-  "updated_at": "2026-11-16T22:29:23.298694+00:00",
+  "updated_at": "2026-11-17T08:27:44.125505+00:00",
   "items": [
+    {
+      "title": "Strengthening NATO and allied cyber defenses with AI",
+      "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+      "source": "OpenAI",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "display_date": "Nov 17, 2026",
+      "category": "AI Tools & Products",
+      "description": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      }
+    },
+    {
+      "title": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
+      "url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-16T23:32:32+00:00",
+      "display_date": "Nov 16, 2026",
+      "category": "Policy & Safety",
+      "description": "Three months since introducing its product, AI cybersecurity startup Corba has raised a $125 million Series A at a $1 billion valuation led by NEA.",
+      "related": {
+        "title": "Browse independent AI software buying guides",
+        "url": "buyers-guides.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months.html"
+    },
     {
       "title": "California sues OpenAI over rogue AI hacking incidents",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
       "source": "The Verge AI",
-      "published_at": "2026-11-16T20:46:01+00:00",
+      "published_at": "2026-11-16T23:04:02+00:00",
       "display_date": "Nov 16, 2026",
       "category": "Policy & Safety",
-      "description": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit on Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as reported earlier by Reuters. The lawsuit claims the […]",
+      "description": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as reported earlier by Reuters. The lawsuit claims the […]",
       "related": {
         "title": "Browse independent AI software buying guides",
         "url": "buyers-guides.html",
@@ -23,7 +52,7 @@
       "published_at": "2026-11-16T20:07:13+00:00",
       "display_date": "Nov 16, 2026",
       "category": "Policy & Safety",
-      "description": "The California lawsuit represents one of the first attempts to hold an AI lab legally accountable for a rogue agent incident",
+      "description": "The California lawsuit represents one of the first attempts to hold an AI lab legally accountable for a rogue agent incident.",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -98,7 +127,8 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three.html"
     },
     {
       "title": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the ‘Wolf of Wall Street’",
@@ -112,7 +142,8 @@
         "title": "Evaluate ElevenLabs for this workflow",
         "url": "partner-offers/elevenlabs-ai-voice.html",
         "offer_id": "elevenlabs"
-      }
+      },
+      "archive_url": "news/2026/11/16/jordan-belfort-s-new-ai-voice-startup-tone-wants-to-sell-like-the-wolf-of-wall-str.html"
     },
     {
       "title": "OpenAI will embed safety researchers to investigate AI subversion",
@@ -126,7 +157,8 @@
         "title": "Evaluate Rank Prompt for this workflow",
         "url": "partner-offers/rank-prompt-ai-visibility.html",
         "offer_id": "rank-prompt"
-      }
+      },
+      "archive_url": "news/2026/11/16/openai-will-embed-safety-researchers-to-investigate-ai-subversion.html"
     },
     {
       "title": "Broadening access to AI for scientists",
@@ -199,20 +231,6 @@
       }
     },
     {
-      "title": "US tightens AI chip export controls to deter Chinese companies from accessing compute remotely",
-      "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-16T15:02:34+00:00",
-      "display_date": "Nov 16, 2026",
-      "category": "AI Tools & Products",
-      "description": "Under the interim rule, the U.S. will require firms to get licenses to export AI chips if they may provide compute to China or other restricted countries.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
       "title": "Science at the Frontier: How scientists use ChatGPT",
       "url": "https://openai.com/index/science-at-the-frontier",
       "source": "OpenAI",
@@ -241,20 +259,6 @@
       }
     },
     {
-      "title": "Advancing computer-use agents for healthcare teams",
-      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "source": "OpenAI",
-      "published_at": "2026-11-16T06:00:00+00:00",
-      "display_date": "Nov 16, 2026",
-      "category": "AI Tools & Products",
-      "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "More ways to move care forward with ChatGPT for Healthcare",
       "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
       "source": "OpenAI",
@@ -269,17 +273,17 @@
       }
     },
     {
-      "title": "The King’s Trust and OpenAI launch £1m partnership",
-      "url": "https://openai.com/index/the-kings-trust-and-openai",
+      "title": "Advancing computer-use agents for healthcare teams",
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
       "source": "OpenAI",
-      "published_at": "2026-11-16T00:00:00+00:00",
+      "published_at": "2026-11-16T06:00:00+00:00",
       "display_date": "Nov 16, 2026",
-      "category": "AI Business",
-      "description": "The King’s Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+      "category": "AI Tools & Products",
+      "description": "",
       "related": {
-        "title": "Model the value of an AI subscription",
-        "url": "calculators/ai-software-roi-calculator.html",
-        "offer_id": ""
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
       }
     },
     {
@@ -290,20 +294,6 @@
       "display_date": "Nov 16, 2026",
       "category": "Models & LLMs",
       "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "A step toward defining the Standard Model on a lattice",
-      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
-      "source": "OpenAI",
-      "published_at": "2026-11-15T22:00:01+00:00",
-      "display_date": "Nov 15, 2026",
-      "category": "Models & LLMs",
-      "description": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -503,6 +493,20 @@
       "display_date": "Nov 10, 2026",
       "category": "Models & LLMs",
       "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "source": "Google AI",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "display_date": "Nov 05, 2026",
+      "category": "Models & LLMs",
+      "description": "Text \"Gemini Introducing Gemini Omni 1.2 Flash\" surroudned by images of a beehive, animals in conversation, a squid, and a woman walking down a street",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
