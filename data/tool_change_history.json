@@ -1,10 +1,28 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 65,
+    "successful_checks": 63,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-18",
+      "id": "d1a3502721e51099",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://copysmith.ai",
+      "tool_id": "copysmith",
+      "tool_name": "Copysmith"
+    },
+    {
+      "detected_on": "2026-11-18",
+      "id": "9bd22f3180bbead7",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://getimg.ai",
+      "tool_id": "getimg-ai",
+      "tool_name": "Getimg.ai"
+    },
     {
       "detected_on": "2026-11-17",
       "id": "30d30562536244c9",
@@ -1786,27 +1804,9 @@
       "source_url": "https://kittl.com",
       "tool_id": "kittl",
       "tool_name": "Kittl"
-    },
-    {
-      "detected_on": "2026-10-08",
-      "id": "1e26480a77cfdbaa",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://postly.ai",
-      "tool_id": "postly",
-      "tool_name": "Postly"
-    },
-    {
-      "detected_on": "2026-10-08",
-      "id": "3a3bfc67c6e8ca67",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://playgroundai.com",
-      "tool_id": "playground-ai",
-      "tool_name": "Playground AI"
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-17",
+  "updated_at": "2026-11-18",
   "version": 1
 }
