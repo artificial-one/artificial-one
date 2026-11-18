@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-11-18T07:55:04.525908+00:00",
+  "updated_at": "2026-11-18T20:52:49.651379+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/18/snapchat-now-lets-developers-build-ar-lenses-with-ai-assistants-like-claude-code-a.html",
+      "created_at": "2026-11-18T20:52:49.651379+00:00",
+      "source": {
+        "title": "Snapchat now lets developers build AR Lenses with AI assistants like Claude Code and Cursor",
+        "url": "https://techcrunch.com/2026/11/18/snapchat-now-lets-developers-build-ar-lenses-with-ai-coding-assistants-like-claude-code-and-cursor/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-18T19:56:39+00:00",
+        "display_date": "Nov 18, 2026",
+        "category": "Models & LLMs",
+        "description": "Lens creators can describe the Lens they want in plain language, and their AI assistant handles the process from start to finish, Snapchat says.",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Snapchat Enables AR Lens Creation with AI Assistants",
+        "summary": "Snapchat introduces a new tool that allows developers to create AR Lenses using AI assistants like Claude Code and Cursor, simplifying the process for creators.",
+        "facts": [
+          {
+            "statement": "Snapchat allows developers to build AR Lenses using AI assistants like Claude Code and Cursor.",
+            "evidence": "Snapchat now lets developers build AR Lenses with AI assistants like Claude Code and Cursor"
+          },
+          {
+            "statement": "AI assistants handle the technical work of creating AR Lenses.",
+            "evidence": "their AI assistant handles the process from start to finish"
+          },
+          {
+            "statement": "Snapchat provides a tool called Easy Lens CLI for developers.",
+            "evidence": "Easy Lens CLI brings that same idea into developers’ existing workflows"
+          }
+        ],
+        "why_it_matters": "Snapchat's new tool is making AR content creation more accessible, allowing creators to focus on their vision rather than technical details. This could expand the pool of people building for Snapchat and lower the barrier to entry for AR development.",
+        "elephant_take": "🐘 鼋 Snapchat is trying to make AR Lens creation easier, but it’s unclear if this will actually lead to more creativity or just more generic content. The tool promises to simplify the process, but the real test will be how diverse the resulting Lenses are.",
+        "caveat": "The tool's effectiveness depends on the quality of AI assistants and the diversity of creators using it.",
+        "who_should_care": [
+          "AR developers",
+          "Snapchat users",
+          "TechCrunch readers"
+        ],
+        "what_to_do": [
+          "Explore the new Easy Lens CLI tool",
+          "Test the AI assistant capabilities",
+          "Evaluate the impact on AR content diversity"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Snapchat%20now%20lets%20developers%20build%20AR%20Lenses%20with%20AI%20assistants%20like%20Claude%20Code%20and%20Cursor%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/18/google-deepmind-s-project-genie-update-brings-genie-4-chainable-worlds-and-a-commu.html",
+      "created_at": "2026-11-18T20:52:49.651379+00:00",
+      "source": {
+        "title": "Google Deepmind's Project Genie update brings Genie 4, chainable worlds, and a community gallery for remixing",
+        "url": "https://the-decoder.com/google-deepminds-project-genie-update-brings-genie-4-chainable-worlds-and-a-community-gallery-for-remixing/",
+        "source": "The Decoder",
+        "published_at": "2026-11-18T19:26:25+00:00",
+        "display_date": "Nov 18, 2026",
+        "category": "Models & LLMs",
+        "description": "With Genie 4, Google DeepMind is launching its most realistic world model to date for Google AI Ultra subscribers. It generates interactive 3D worlds that can be modified in real time via text input and, for the first time, includes native sound. A community gallery allows users to share and remix the worlds they've created. The article Google Deepmind's Project Genie update brings Genie 4, chainable worlds, and a community gallery for remixing appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Google Deepmind's Project Genie Update Introduces Genie 4 and New Features",
+        "summary": "Google Deepmind has updated its Project Genie with Genie 4, a more realistic world model for Google AI Ultra subscribers. The update includes chainable worlds, real-time text-based modifications, native sound generation, and a community gallery for sharing and remixing creations.",
+        "facts": [
+          {
+            "statement": "Genie 4 is Google Deepmind's most realistic world model to date",
+            "evidence": "Google Deepmind's Project Genie update brings Genie 4, chainable worlds, and a community gallery for remixing"
+          },
+          {
+            "statement": "Users can modify interactive 3D worlds in real time via text input",
+            "evidence": "Genie 4 lets users reshape worlds through text input in real time, changing weather, characters, or storylines"
+          },
+          {
+            "statement": "A community gallery allows users to share and remix created worlds",
+            "evidence": "A community gallery lets users share and remix creations"
+          }
+        ],
+        "why_it_matters": "Google Deepmind's Project Genie update introduces Genie 4, a more realistic world model for Google AI Ultra subscribers. The new version allows users to modify interactive 3D worlds in real time via text input and includes native sound generation. A community gallery enables users to share and remix creations, enhancing collaboration and creativity within the AI ecosystem.",
+        "elephant_take": "🐘 鼋 Genie 4 is a big deal for AI enthusiasts, but it's not clear how this will impact the broader market. The ability to modify worlds in real time is impressive, but the practical applications remain unclear.",
+        "caveat": "The update is limited to Google AI Ultra subscribers and may not be accessible to all users.",
+        "who_should_care": [
+          "AI researchers",
+          "Developers",
+          "Tech enthusiasts"
+        ],
+        "what_to_do": [
+          "Explore Genie 4's features for potential applications in virtual environments",
+          "Join the waitlist for Google AI Pro membership to access the update",
+          "Stay updated on future developments from Google Deepmind"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Google%20Deepmind%27s%20Project%20Genie%20update%20brings%20Genie%204%2C%20chainable%20worlds%2C%20and%20a%20community%20gallery%20for%20remixing%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huang-s-exit.html",
       "created_at": "2026-11-18T07:55:04.525908+00:00",
@@ -23362,6 +23492,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/policy/1036749/trump-ai-chip-data-center-us-philippines-pax-silica",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-18T20:52:49.651379+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-11-18T20:52:49.651379+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/microsoft-is-replacing-outside-ai-models-in-its-own-products-with-cheaper-in-house-alternatives/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-18T20:52:49.651379+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1036776/nvidia-earnings-kress-jensen-huang-petition",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-11-18T20:52:49.651379+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/17/as-decision-model-use-skyrockets-is-customization-is-the-next-frontier/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-18T07:55:04.525908+00:00",
@@ -23575,30 +23729,6 @@
       "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
       "reason": "quality gate rejected draft: headline length is outside the publication range; summary length is outside the publication range; why_it_matters length is outside the publication range",
       "at": "2026-11-12T20:24:52.831172+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-12T20:24:52.831172+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-12T07:42:08.316847+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; hype language is present",
-      "at": "2026-11-12T07:42:08.316847+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-12T07:42:08.316847+00:00",
       "pipeline_version": "2"
     }
   ]
