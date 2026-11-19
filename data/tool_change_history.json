@@ -1,10 +1,28 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 63,
+    "successful_checks": 57,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-19",
+      "id": "31bc2aa45c14cb1d",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://otter.ai",
+      "tool_id": "otter-ai",
+      "tool_name": "Otter.ai"
+    },
+    {
+      "detected_on": "2026-11-19",
+      "id": "522ce51266dd1857",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://marketmuse.com",
+      "tool_id": "marketmuse",
+      "tool_name": "MarketMuse"
+    },
     {
       "detected_on": "2026-11-18",
       "id": "d1a3502721e51099",
@@ -1786,27 +1804,9 @@
       "source_url": "https://hubstaff.com/",
       "tool_id": "hubstaff",
       "tool_name": "Hubstaff"
-    },
-    {
-      "detected_on": "2026-10-09",
-      "id": "cbb6242b7a8179c2",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://omniseo.com/",
-      "tool_id": "omniseo",
-      "tool_name": "OmniSEO"
-    },
-    {
-      "detected_on": "2026-10-08",
-      "id": "e9fffda11459ed82",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://kittl.com",
-      "tool_id": "kittl",
-      "tool_name": "Kittl"
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-18",
+  "updated_at": "2026-11-19",
   "version": 1
 }
