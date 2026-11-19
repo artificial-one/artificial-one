@@ -1,7 +1,203 @@
 {
   "version": 1,
-  "updated_at": "2026-11-19T07:54:02.387120+00:00",
+  "updated_at": "2026-11-19T20:57:40.723622+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/19/google-is-putting-ai-chats-right-on-the-homepage.html",
+      "created_at": "2026-11-19T20:57:40.723622+00:00",
+      "source": {
+        "title": "Google is putting AI chats right on the homepage",
+        "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+        "source": "The Verge AI",
+        "published_at": "2026-11-19T20:14:34+00:00",
+        "display_date": "Nov 19, 2026",
+        "category": "AI Tools & Products",
+        "description": "Google is updating its homepage to include AI searches. In a post on X, Google's vice president of product, Robby Stein, shows how you can now open a collapsible sidebar to view and continue your AI chats. Based on the GIF shared by Stein, it looks like you can open the sidebar by clicking the […]",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Google Updates Homepage with AI Chat Features",
+        "summary": "Google is updating its homepage to include AI chat features, allowing users to view and continue AI chats through a collapsible sidebar. The update aims to improve user experience by enabling more complex interactions with AI.",
+        "facts": [
+          {
+            "statement": "Google is updating its homepage to include AI chat features",
+            "evidence": "Google is updating its homepage to include AI searches."
+          },
+          {
+            "statement": "Users can view and continue AI chats through a collapsible sidebar",
+            "evidence": "you can now open a collapsible sidebar to view and continue your ai chats."
+          },
+          {
+            "statement": "The update aims to improve user experience by enabling more complex interactions with AI",
+            "evidence": "in testing, this sidebar made a big difference for making progress & continuing to explore the web."
+          }
+        ],
+        "why_it_matters": "Google's new AI chat features on its homepage represent a significant shift in how users interact with search engines. By integrating AI chats directly into the homepage, Google is aiming to provide a more seamless and interactive experience, potentially increasing user engagement and satisfaction with its services.",
+        "elephant_take": "🐘 鼋 Google’s homepage is getting a chatbot upgrade, but it's unclear if this will make searching for information any easier or just more confusing. The move suggests Google is trying to keep up with the pace of AI innovation, but it's still early days.",
+        "caveat": "The effectiveness of the new AI chat features on Google's homepage remains to be seen. User feedback and real-world usage will be crucial in determining if this update truly enhances the search experience.",
+        "who_should_care": [
+          "Tech enthusiasts",
+          "AI developers",
+          "Search engine users"
+        ],
+        "what_to_do": [
+          "Check out Google's new homepage to see the AI chat features in action",
+          "Stay updated on Google's AI developments through official channels",
+          "Provide feedback on the new features if you use Google's services",
+          "Explore how AI integration affects search experiences"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Google%20is%20putting%20AI%20chats%20right%20on%20the%20homepage%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/19/ai-industry-growth-remains-strong-but-the-pace-is-slowing.html",
+      "created_at": "2026-11-19T20:57:40.723622+00:00",
+      "source": {
+        "title": "AI industry growth remains strong, but the pace is slowing",
+        "url": "https://the-decoder.com/ai-industry-growth-remains-strong-but-the-pace-is-slowing/",
+        "source": "The Decoder",
+        "published_at": "2026-11-19T19:28:19+00:00",
+        "display_date": "Nov 19, 2026",
+        "category": "Models & LLMs",
+        "description": "Token prices for AI models fell 21 percent in six weeks while usage volume hit a record high, according to the Ramp AI Index. Anthropic dominates with nearly 59 percent of token spending. Data from Ramp, Stripe and OpenRouter independently show the same pattern: the AI industry is still growing, but revenue momentum is cooling. The article AI industry growth remains strong, but the pace is slowing appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "AI industry growth remains strong but pace is slowing",
+        "summary": "The AI industry continues to grow, but revenue momentum is cooling as token prices fall and spending peaks before declining.",
+        "facts": [
+          {
+            "statement": "Token prices for AI models fell 21 percent in six weeks.",
+            "evidence": "Token prices for AI models fell 21 percent in six weeks"
+          },
+          {
+            "statement": "Token volume hit a record high while spending declined.",
+            "evidence": "token volume rose 1.5 percent to a record high"
+          },
+          {
+            "statement": "Anthropic dominates the token market with 58.7 percent of spending.",
+            "evidence": "Anthropic accounted for 58.7 percent of all token spending"
+          }
+        ],
+        "why_it_matters": "The AI industry is still expanding, but signs of slowing revenue growth suggest potential challenges ahead. As companies use more AI models but pay less for them, the sector's long-term trajectory remains uncertain.",
+        "elephant_take": "🐘 鼋 The AI industry is a double-edged sword: it's growing, but the pace is slowing. Anthropic's dominance is a red flag for the future of AI spending.",
+        "caveat": "The data comes from limited sources and may not represent the entire market accurately.",
+        "who_should_care": [
+          "AI investors",
+          "Tech analysts",
+          "Business leaders"
+        ],
+        "what_to_do": [
+          "Monitor token pricing trends",
+          "Track spending patterns across AI providers",
+          "Assess market saturation in AI adoption"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20AI%20industry%20growth%20remains%20strong%2C%20but%20the%20pace%20is%20slowing%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/19/with-the-biggest-ipo-of-all-time-anthropic-s-good-guy-reputation-is-on-the-line.html",
+      "created_at": "2026-11-19T20:57:40.723622+00:00",
+      "source": {
+        "title": "With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure",
+        "source": "The Verge AI",
+        "published_at": "2026-11-19T19:10:57+00:00",
+        "display_date": "Nov 19, 2026",
+        "category": "Policy & Safety",
+        "description": "Today is a new beginning for Anthropic: a years-in-the-making IPO that beat out SpaceX for most valuable of all time, having raised $81.3 billion and set an important precedent for the other public AI lab debuts to come. But it's not simply a financial milestone. Anthropic was founded on the idea that it prioritized safety […]",
+        "related": {
+          "title": "Browse independent AI software buying guides",
+          "url": "buyers-guides.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Anthropic's IPO Challenges Its 'Good Guy' Reputation",
+        "summary": "Anthropic's record-breaking IPO raises questions about its commitment to AI safety as it faces potential conflicts between financial goals and ethical considerations.",
+        "facts": [
+          {
+            "statement": "Anthropic's IPO is the largest in history, raising $81.3 billion.",
+            "evidence": "With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line"
+          },
+          {
+            "statement": "Anthropic was founded with a focus on AI safety and ethical development.",
+            "evidence": "Anthropic was founded on the idea that it prioritized safety more than other labs"
+          },
+          {
+            "statement": "Anthropic's corporate structure allows its founders to maintain control despite being a public company.",
+            "evidence": "anthropic’s long-term benefit trust (ltbt), introduced in 2023 , and its founders have controlling voting"
+          }
+        ],
+        "why_it_matters": "The IPO highlights the tension between financial success and ethical responsibility in AI development. As Anthropic faces scrutiny over its mission and governance, it raises questions about how the industry balances profit with safety.",
+        "elephant_take": "🐘 🦘Anthropic’s $81.3 billion IPO is a bold move, but it risks undermining its 'good guy' image by prioritizing speed over safety. The company's unique structure may help it stay focused on its mission, but it also raises concerns about accountability.",
+        "caveat": "The story underscores the complex trade-offs in AI development and the challenges of maintaining ethical standards in a rapidly evolving industry.",
+        "who_should_care": [
+          "AI developers",
+          "Investors",
+          "Policy makers"
+        ],
+        "what_to_do": [
+          "Monitor Anthropic's governance structure",
+          "Evaluate the balance between profit and safety in AI development",
+          "Stay informed about regulatory changes in the AI industry"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "buyers-guides.html",
+        "review_title": "Browse independent AI software buying guides",
+        "elephant_url": "index.html?task=Explain%20what%20With%20the%20biggest%20IPO%20of%20all%20time%2C%20Anthropic%E2%80%99s%20%E2%80%98good%20guy%E2%80%99%20reputation%20is%20on%20the%20line%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/11/18/satya-nadella-predicts-ai-agents-will-reshuffle-the-economics-of-the-web.html",
       "created_at": "2026-11-19T07:54:02.387120+00:00",
@@ -23754,6 +23950,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-19T20:57:40.723622+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-11-19T20:57:40.723622+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-19T20:57:40.723622+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-19T07:54:02.387120+00:00",
@@ -23973,24 +24187,6 @@
       "url": "https://the-decoder.com/nearly-70-percent-of-us-agencies-use-generative-ai-and-unions-are-finally-catching-up-with-guardrails/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-13T20:00:36.943935+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/claude-meetings-lets-anthropics-ai-join-your-video-calls/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-13T07:14:25.857634+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/games/1032085/gdc-festival-of-gaming-annual-survey-ai-layoffs",
-      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
-      "at": "2026-11-13T07:14:25.857634+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/",
-      "reason": "quality gate rejected draft: summary length is outside the publication range",
-      "at": "2026-11-12T20:24:52.831172+00:00",
       "pipeline_version": "2"
     }
   ]
