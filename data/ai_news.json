@@ -1,7 +1,95 @@
 {
   "version": 1,
-  "updated_at": "2026-11-19T20:57:36.484517+00:00",
+  "updated_at": "2026-11-20T07:43:12.267399+00:00",
   "items": [
+    {
+      "title": "Apple may be developing its own AI agent that runs your Mac",
+      "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-20T00:56:01+00:00",
+      "display_date": "Nov 20, 2026",
+      "category": "Models & LLMs",
+      "description": "The iPhone maker appears to be building agents that can compete with the likes of Meta Muse, Instinct, Claude, and OpenAI Dots.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+      "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-20T00:43:50+00:00",
+      "display_date": "Nov 20, 2026",
+      "category": "AI Tools & Products",
+      "description": "At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion.",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/20/anthropic-s-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo.html"
+    },
+    {
+      "title": "Apple is hiring engineers to build its own AI agent",
+      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+      "source": "The Verge AI",
+      "published_at": "2026-11-19T23:13:01+00:00",
+      "display_date": "Nov 19, 2026",
+      "category": "AI Tools & Products",
+      "description": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a job listing spotted by Bloomberg, which says Apple is looking for an engineer to lead the creation of an agentic AI assistant. […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "These tech outages are giving Y2K, AI agent style",
+      "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+      "source": "TechCrunch AI",
+      "published_at": "2026-11-19T21:42:31+00:00",
+      "display_date": "Nov 19, 2026",
+      "category": "Policy & Safety",
+      "description": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style.html"
+    },
+    {
+      "title": "Anthropic starts trading on Wall Street",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+      "source": "The Verge AI",
+      "published_at": "2026-11-19T21:22:34+00:00",
+      "display_date": "Nov 19, 2026",
+      "category": "AI Tools & Products",
+      "description": "Anthropic has officially gone public. It began trading on the Nasdaq under the ticker symbol \"ANT\" at $111.50 per share, up from its initial $83 per share price that put company's value at around $1.5 trillion. The listing comes nearly a month after Anthropic revealed its plans to go public. In its lengthy S-1 filing, […]",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/19/anthropic-starts-trading-on-wall-street.html"
+    },
+    {
+      "title": "An OpenAI agent assigned a simple writing task decided on its own to build a secret email surveillance tool",
+      "url": "https://the-decoder.com/an-openai-agent-assigned-a-simple-writing-task-decided-on-its-own-to-build-a-secret-email-surveillance-tool/",
+      "source": "The Decoder",
+      "published_at": "2026-11-19T21:15:01+00:00",
+      "display_date": "Nov 19, 2026",
+      "category": "Models & LLMs",
+      "description": "An internal OpenAI model was supposed to create a fitness document but instead began planning scripts to secretly forward emails to an \"attacker.\" The agent recognized the conflict with its assigned task but dismissed it as an environment error. OpenAI identified security training against prompt injection as a possible trigger but cannot establish it as the sole cause. The article An OpenAI agent assigned a simple writing task decided on its own to build a secret email surveillance tool appeared",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/11/19/an-openai-agent-assigned-a-simple-writing-task-decided-on-its-own-to-build-a-secre.html"
+    },
     {
       "title": "Google is putting AI chats right on the homepage",
       "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
@@ -48,7 +136,7 @@
       "archive_url": "news/2026/11/19/with-the-biggest-ipo-of-all-time-anthropic-s-good-guy-reputation-is-on-the-line.html"
     },
     {
-      "title": "Anthropic’s IPO could deliver $156 billion to charity",
+      "title": "Anthropic’s IPO could deliver $156B to charity",
       "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
       "source": "TechCrunch AI",
       "published_at": "2026-11-19T19:10:45+00:00",
@@ -118,20 +206,6 @@
       }
     },
     {
-      "title": "Anthropic starts trading on Wall Street",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
-      "source": "The Verge AI",
-      "published_at": "2026-11-19T17:01:00+00:00",
-      "display_date": "Nov 19, 2026",
-      "category": "AI Tools & Products",
-      "description": "Anthropic has officially gone public. It began trading on the Nasdaq under the ticker symbol \"ANT\" at $111.50 per share, up from its initial $83 per share price that put company's value at around $1.5 trillion. The listing comes nearly a month after Anthropic revealed its plans to go public. In its lengthy S-1 filing, […]",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
       "title": "Walter Isaacson on curiosity and creativity in the AI age.",
       "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
       "source": "Google AI",
@@ -139,34 +213,6 @@
       "display_date": "Nov 19, 2026",
       "category": "AI Tools & Products",
       "description": "Walter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgment in the AI age. Watch the episode.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
-      "url": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-19T16:59:23+00:00",
-      "display_date": "Nov 19, 2026",
-      "category": "AI Tools & Products",
-      "description": "Anthropic's IPO price was set at $83, representing more than $80 billion in new capital raised.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development",
-      "url": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-19T16:19:41+00:00",
-      "display_date": "Nov 19, 2026",
-      "category": "AI Tools & Products",
-      "description": "In his Nasdaq opening bell speech, Dario Amodei reiterated Anthropic's commitment to pacing AI development, regardless of business or political pressure.",
       "related": {
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
@@ -185,20 +231,6 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Anthropic’s IPO puts AI’s circular financing boom to the test",
-      "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/",
-      "source": "TechCrunch AI",
-      "published_at": "2026-11-19T14:54:39+00:00",
-      "display_date": "Nov 19, 2026",
-      "category": "AI Tools & Products",
-      "description": "Anthropic faces enormous compute commitments as it goes public, but its biggest infrastructure partners, including Amazon and Google, could continue profiting from AI even if Anthropic loses its lead.",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
       }
     },
     {
@@ -300,21 +332,6 @@
       }
     },
     {
-      "title": "Google Deepmind's Project Genie update brings Genie 4, chainable worlds, and a community gallery for remixing",
-      "url": "https://the-decoder.com/google-deepminds-project-genie-update-brings-genie-4-chainable-worlds-and-a-community-gallery-for-remixing/",
-      "source": "The Decoder",
-      "published_at": "2026-11-18T19:26:25+00:00",
-      "display_date": "Nov 18, 2026",
-      "category": "Models & LLMs",
-      "description": "With Genie 4, Google DeepMind is launching its most realistic world model to date for Google AI Ultra subscribers. It generates interactive 3D worlds that can be modified in real time via text input and, for the first time, includes native sound. A community gallery allows users to share and remix the worlds they've created. The article Google Deepmind's Project Genie update brings Genie 4, chainable worlds, and a community gallery for remixing appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/11/18/google-deepmind-s-project-genie-update-brings-genie-4-chainable-worlds-and-a-commu.html"
-    },
-    {
       "title": "Why your fine-tuning job takes longer than the FLOPs say",
       "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
       "source": "Hugging Face",
@@ -385,20 +402,6 @@
       }
     },
     {
-      "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
-      "url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
-      "source": "OpenAI",
-      "published_at": "2026-11-18T00:00:00+00:00",
-      "display_date": "Nov 18, 2026",
-      "category": "Models & LLMs",
-      "description": "Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Advancing chip design with OpenAI models",
       "url": "https://openai.com/index/advancing-chip-design-with-our-models",
       "source": "OpenAI",
@@ -406,6 +409,20 @@
       "display_date": "Nov 18, 2026",
       "category": "Models & LLMs",
       "description": "OpenAI models optimized circuits used in Jalapeño silicon and improved RISC‑V core designs, showing progress in AI-assisted chip design with GPT‑6 Astra.",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+      "url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+      "source": "OpenAI",
+      "published_at": "2026-11-18T00:00:00+00:00",
+      "display_date": "Nov 18, 2026",
+      "category": "Models & LLMs",
+      "description": "Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -497,21 +514,6 @@
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
       }
-    },
-    {
-      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-      "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
-      "source": "Google AI",
-      "published_at": "2026-11-12T18:00:00+00:00",
-      "display_date": "Nov 12, 2026",
-      "category": "Models & LLMs",
-      "description": "Rotating carousel of cards with text \"Gemini 4 Hydrogen\" \"Now in Google Search\" and examples from the Google Search UI",
-      "related": {
-        "title": "Evaluate Rank Prompt for this workflow",
-        "url": "partner-offers/rank-prompt-ai-visibility.html",
-        "offer_id": "rank-prompt"
-      },
-      "archive_url": "news/2026/11/12/google-search-gets-a-major-upgrade-with-gemini-4-hydrogen.html"
     }
   ]
 }
