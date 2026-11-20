@@ -1,10 +1,28 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 57,
+    "successful_checks": 65,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-20",
+      "id": "256fb5b0099026c4",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://hubstaff.com/",
+      "tool_id": "hubstaff",
+      "tool_name": "Hubstaff"
+    },
+    {
+      "detected_on": "2026-11-20",
+      "id": "b8b6246256249585",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://anyword.com",
+      "tool_id": "anyword",
+      "tool_name": "Anyword"
+    },
     {
       "detected_on": "2026-11-19",
       "id": "31bc2aa45c14cb1d",
@@ -1786,27 +1804,9 @@
       "source_url": "https://synthesia.io",
       "tool_id": "synthesia",
       "tool_name": "Synthesia"
-    },
-    {
-      "detected_on": "2026-10-09",
-      "id": "2a83765be0efe660",
-      "kind": "feature or product",
-      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://elevenlabs.io/",
-      "tool_id": "elevenlabs",
-      "tool_name": "ElevenLabs"
-    },
-    {
-      "detected_on": "2026-10-09",
-      "id": "4aab70682d2280da",
-      "kind": "availability",
-      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://hubstaff.com/",
-      "tool_id": "hubstaff",
-      "tool_name": "Hubstaff"
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-19",
+  "updated_at": "2026-11-20",
   "version": 1
 }
