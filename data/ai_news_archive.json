@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-11-20T20:42:39.196910+00:00",
+  "updated_at": "2026-11-21T07:40:38.230795+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/20/apple-joins-the-race-for-ai-agents-that-control-your-device-while-raising-new-barr.html",
+      "created_at": "2026-11-21T07:40:38.230795+00:00",
+      "source": {
+        "title": "Apple joins the race for AI agents that control your device while raising new barriers for competitors",
+        "url": "https://the-decoder.com/apple-joins-the-race-for-ai-agents-that-control-your-device-while-raising-new-barriers-for-competitors/",
+        "source": "The Decoder",
+        "published_at": "2026-11-20T15:03:25+00:00",
+        "display_date": "Nov 20, 2026",
+        "category": "AI Tools & Products",
+        "description": "After Meta, OpenAI, Anthropic, and Google launched their own AI agents, Apple is now building one too - while making it harder for rivals to access its devices. The article Apple joins the race for AI agents that control your device while raising new barriers for competitors appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Apple's AI Agent Strategy and Privacy Focus",
+        "summary": "Apple is developing its own AI agent to compete with other tech giants, prioritizing privacy through new security measures that may hinder competitors.",
+        "facts": [
+          {
+            "statement": "Apple is building an AI agent to compete with other companies.",
+            "evidence": "Apple joins the race for AI agents that control your device while raising new barriers for competitors"
+          },
+          {
+            "statement": "Apple's AI agent prioritizes privacy through security measures.",
+            "evidence": "Privacy is expected to be central to the new agent, with permission models and sandboxing"
+          },
+          {
+            "statement": "Apple's AI agent development is part of a broader strategy.",
+            "evidence": "Apple’s new CEO, John Ternus, is pushing software chief Craig Federighi toward a bolder AI strategy"
+          }
+        ],
+        "why_it_matters": "Apple's move into AI agents highlights the growing competition in the tech industry. By focusing on privacy and security, Apple may be positioning itself as a leader in AI while also creating challenges for competitors trying to access its ecosystem.",
+        "elephant_take": "🐘 鼋Apple is playing the privacy card hard, but it's unclear if this will truly protect users or just slow down rivals. The company's AI strategy seems more about control than innovation.",
+        "caveat": "The article doesn't provide concrete details on Apple's AI agent capabilities or user impact.",
+        "who_should_care": [
+          "Tech investors",
+          "AI developers",
+          "Privacy advocates"
+        ],
+        "what_to_do": [
+          "Monitor Apple's AI updates",
+          "Evaluate privacy implications",
+          "Stay informed on AI competition"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Apple%20joins%20the%20race%20for%20AI%20agents%20that%20control%20your%20device%20while%20raising%20new%20barriers%20for%20competitors%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/20/nvidia-bets-at-least-500-million-on-inception-s-diffusion-models-to-strengthen-its.html",
+      "created_at": "2026-11-21T07:40:38.230795+00:00",
+      "source": {
+        "title": "Nvidia bets at least $500 million on Inception's diffusion models to strengthen its open-source Nemotron lineup",
+        "url": "https://the-decoder.com/nvidia-bets-at-least-500-million-on-inceptions-diffusion-models-to-strengthen-its-open-source-nemotron-lineup/",
+        "source": "The Decoder",
+        "published_at": "2026-11-20T14:53:50+00:00",
+        "display_date": "Nov 20, 2026",
+        "category": "Models & LLMs",
+        "description": "Nvidia is close to acquiring AI startup Inception for at least $500 million, according to The Information. The company is just two years old and builds language models based on diffusion processes, an alternative approach to the token-by-token generation used by models like ChatGPT. The deal would bolster Nvidia's own open-source models and its push into robotics. The article Nvidia bets at least $500 million on Inception's diffusion models to strengthen its open-source Nemotron lineup appeared",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Nvidia Acquires Inception to Boost Open-Source Models",
+        "summary": "Nvidia is set to acquire AI startup Inception for at least $500 million to strengthen its open-source Nemotron lineup and expand into robotics.",
+        "facts": [
+          {
+            "statement": "Nvidia is acquiring Inception for at least $500 million.",
+            "evidence": "Nvidia bets at least $500 million on Inception's diffusion models"
+          },
+          {
+            "statement": "Inception builds language models using diffusion processes.",
+            "evidence": "Inception builds language models using the diffusion process known from image generation"
+          },
+          {
+            "statement": "The acquisition aims to bolster Nvidia's open-source Nemotron models.",
+            "evidence": "the acquisition aims to bolster nvidia's open-source nemotron models and physical models for robots"
+          }
+        ],
+        "why_it_matters": "Nvidia's move to acquire Inception highlights its strategy to strengthen its open-source models and expand into robotics. The deal could help Nvidia compete with OpenAI and Anthropic, as both build their own inference chips.",
+        "elephant_take": "🐘 鼋Nvidia is trying to outsource its AI future, but the real question is whether Inception's diffusion models will actually make Nemotron more competitive in a crowded market.",
+        "caveat": "The deal's true value may depend on how well Inception's models integrate with Nvidia's existing infrastructure.",
+        "who_should_care": [
+          "AI investors",
+          "Robotics developers",
+          "OpenAI and Anthropic"
+        ],
+        "what_to_do": [
+          "Monitor the integration of Inception's models into Nemotron",
+          "Evaluate the long-term impact on Nvidia's robotics initiatives",
+          "Assess the competitive landscape in AI inference chips"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Nvidia%20bets%20at%20least%20%24500%20million%20on%20Inception%27s%20diffusion%20models%20to%20strengthen%20its%20open-source%20Nemotron%20lineup%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/20/daniel-ek-backs-ai-researcher-s-fusion-power-startup-here-s-what-they-re-building.html",
       "created_at": "2026-11-20T20:42:39.196910+00:00",
@@ -24405,6 +24535,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-21T07:40:38.230795+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
+      "at": "2026-11-21T07:40:38.230795+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/bloomberg-analysis-of-10-million-job-postings-shows-ai-exposed-roles-in-china-fell-10-percentage-points-faster-than-others/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-21T07:40:38.230795+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-21T07:40:38.230795+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-20T20:42:39.196910+00:00",
@@ -24425,12 +24579,6 @@
     {
       "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
       "reason": "quality gate rejected draft: headline length is outside the publication range",
-      "at": "2026-11-20T07:43:15.792740+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-20T07:43:15.792740+00:00",
       "pipeline_version": "2"
     },
@@ -24622,24 +24770,6 @@
     },
     {
       "url": "https://openai.com/business/customer-stories/shield",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-15T07:09:12.692089+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-15T07:09:12.692089+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-15T07:09:12.692089+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/business/customer-stories/amplitude",
       "reason": "HTTP Error 403: Forbidden",
       "at": "2026-11-15T07:09:12.692089+00:00",
       "pipeline_version": "2"

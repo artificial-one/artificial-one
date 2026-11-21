@@ -1,7 +1,35 @@
 {
   "version": 1,
-  "updated_at": "2026-11-20T20:42:34.335821+00:00",
+  "updated_at": "2026-11-21T07:40:33.689610+00:00",
   "items": [
+    {
+      "title": "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced.",
+      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+      "source": "Ars Technica AI",
+      "published_at": "2026-11-20T20:59:08+00:00",
+      "display_date": "Nov 20, 2026",
+      "category": "Research",
+      "description": "Test using prompts with unique, trackable secrets proves that data doesn't stay private.",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "title": "OpenAI makes it much harder for attackers to extract how its latest AI models think",
+      "url": "https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/",
+      "source": "The Decoder",
+      "published_at": "2026-11-20T20:31:50+00:00",
+      "display_date": "Nov 20, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI has significantly strengthened safeguards against extracting internal reasoning from GPT-6.2 Astra and GPT-6.2 Sol. In adaptive red-teaming tests, the success rate for extracting protected reasoning fell from 54 percent to 0.2 percent. The company is also suspending thousands to tens of thousands of accounts each week over coordinated distillation campaigns. The article OpenAI makes it much harder for attackers to extract how its latest AI models think appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "title": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
       "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
@@ -33,7 +61,7 @@
       "archive_url": "news/2026/11/20/signal-blocks-screenshots-on-ios-27-and-android-to-stop-ai-agents-from-reading-pri.html"
     },
     {
-      "title": "AI claimed a solution to the 167-year-old Riemann Hypothesis — and a human did, too",
+      "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
       "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
       "source": "TechCrunch AI",
       "published_at": "2026-11-20T19:32:08+00:00",
@@ -129,7 +157,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/11/20/apple-joins-the-race-for-ai-agents-that-control-your-device-while-raising-new-barr.html"
     },
     {
       "title": "Nvidia bets at least $500 million on Inception's diffusion models to strengthen its open-source Nemotron lineup",
@@ -143,7 +172,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/11/20/nvidia-bets-at-least-500-million-on-inception-s-diffusion-models-to-strengthen-its.html"
     },
     {
       "title": "Signal is blocking Gemini and Siri AI from reading your screen",
@@ -287,21 +317,6 @@
         "offer_id": ""
       },
       "archive_url": "news/2026/11/19/anthropic-starts-trading-on-wall-street.html"
-    },
-    {
-      "title": "An OpenAI agent assigned a simple writing task decided on its own to build a secret email surveillance tool",
-      "url": "https://the-decoder.com/an-openai-agent-assigned-a-simple-writing-task-decided-on-its-own-to-build-a-secret-email-surveillance-tool/",
-      "source": "The Decoder",
-      "published_at": "2026-11-19T21:15:01+00:00",
-      "display_date": "Nov 19, 2026",
-      "category": "Models & LLMs",
-      "description": "An internal OpenAI model was supposed to create a fitness document but instead began planning scripts to secretly forward emails to an \"attacker.\" The agent recognized the conflict with its assigned task but dismissed it as an environment error. OpenAI identified security training against prompt injection as a possible trigger but cannot establish it as the sole cause. The article An OpenAI agent assigned a simple writing task decided on its own to build a secret email surveillance tool appeared",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/11/19/an-openai-agent-assigned-a-simple-writing-task-decided-on-its-own-to-build-a-secre.html"
     },
     {
       "title": "Google is putting AI chats right on the homepage",
@@ -500,20 +515,6 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/11/17/put-gemini-to-work-for-you.html"
-    },
-    {
-      "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
-      "url": "https://huggingface.co/blog/openrouter",
-      "source": "Hugging Face",
-      "published_at": "2026-11-16T00:00:00+00:00",
-      "display_date": "Nov 16, 2026",
-      "category": "Models & LLMs",
-      "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
     }
   ]
 }
