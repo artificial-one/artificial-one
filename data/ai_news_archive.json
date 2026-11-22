@@ -1,7 +1,204 @@
 {
   "version": 1,
-  "updated_at": "2026-11-22T07:25:14.014914+00:00",
+  "updated_at": "2026-11-22T19:57:25.023784+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/22/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are.html",
+      "created_at": "2026-11-22T19:57:25.023784+00:00",
+      "source": {
+        "title": "AI is getting better faster than experts can reliably test whether new systems are safe, METR warns",
+        "url": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/",
+        "source": "The Decoder",
+        "published_at": "2026-11-22T13:00:43+00:00",
+        "display_date": "Nov 22, 2026",
+        "category": "Models & LLMs",
+        "description": "METR reports that leading AI models like Opus 5.5 and GPT-6 Astra are improving rapidly at research tasks but getting harder to measure. Current data can't rule out a dangerous acceleration in AI development, the organization warns, though it also says common tests may overestimate what the models can actually do. The article AI is getting better faster than experts can reliably test whether new systems are safe, METR warns appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "AI Progress Outpaces Safety Testing Capabilities",
+        "summary": "METR warns that AI models are improving rapidly, outpacing experts' ability to assess their safety. Current data may not be enough to predict future risks, and tests may overestimate real-world performance.",
+        "facts": [
+          {
+            "statement": "AI models are improving rapidly at research tasks",
+            "evidence": "AI is getting better faster than experts can reliably test whether new systems are safe"
+          },
+          {
+            "statement": "Current data may not be enough to predict future AI risks",
+            "evidence": "current public data isn't enough to rule out a drastic acceleration in AI research"
+          },
+          {
+            "statement": "Tests may overestimate real-world performance of AI systems",
+            "evidence": "common, easy-to-run tests may overestimate how well the models perform in real-world use"
+          }
+        ],
+        "why_it_matters": "The rapid advancement of AI systems is outpacing the ability of experts to assess their safety. This could lead to unforeseen risks if the pace of development continues unchecked. The issue highlights a critical gap between AI progress and our capacity to evaluate its potential dangers.",
+        "elephant_take": "🐘 鼋 The METR report is a sobering reminder that we're racing ahead of our ability to keep up. While AI models are getting better at tasks, they're also getting harder to measure—raising questions about how well we can assess their true capabilities and risks.",
+        "caveat": "The analysis relies on current data, which may not capture the full scope of future AI development.",
+        "who_should_care": [
+          "AI researchers",
+          "Policy makers",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Invest in long-term safety research",
+          "Improve testing methodologies for real-world use",
+          "Monitor AI development trends closely",
+          "Engage with interdisciplinary teams to assess risks"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20AI%20is%20getting%20better%20faster%20than%20experts%20can%20reliably%20test%20whether%20new%20systems%20are%20safe%2C%20METR%20warns%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/22/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on.html",
+      "created_at": "2026-11-22T19:57:25.023784+00:00",
+      "source": {
+        "title": "Security researchers show how cheap AI inference providers steal keys and snoop on users",
+        "url": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/",
+        "source": "The Decoder",
+        "published_at": "2026-11-22T12:07:56+00:00",
+        "display_date": "Nov 22, 2026",
+        "category": "Research",
+        "description": "Security researchers at Dragos used two million fake AI requests to uncover serious vulnerabilities in the AI supply chain, finding at least three compromised providers, hundreds of stolen AWS keys, and marketplace resellers who were simply reading customer requests. OpenRouter responded by removing three providers and 125 endpoints. The article Security researchers show how cheap AI inference providers steal keys and snoop on users appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "AI Providers Exposed for Stealing User Data",
+        "summary": "Security researchers found major vulnerabilities in AI services, revealing how providers and resellers stole user credentials and snoop on requests.",
+        "facts": [
+          {
+            "statement": "Security researchers exposed major security flaws in AI services using two million test requests.",
+            "evidence": "Security researchers at Dragos used two million fake AI requests to uncover serious vulnerabilities"
+          },
+          {
+            "statement": "Attackers stole credentials and keys undetected for several months.",
+            "evidence": "attackers were able to steal credentials and keys undetected for several months"
+          },
+          {
+            "statement": "Intermediaries and model marketplaces posed a major risk.",
+            "evidence": "intermediaries and model marketplaces that routed the requests emerged as a major risk"
+          }
+        ],
+        "why_it_matters": "The vulnerabilities in AI services highlight a critical flaw in the security of data handling, with providers and resellers potentially accessing sensitive user information. This raises concerns about privacy and the need for stronger safeguards in the AI supply chain.",
+        "elephant_take": "🐘 鼋 The AI supply chain is more fragile than we thought. Dragos found that even major providers can be compromised, and intermediaries are a big risk. It's a wake-up call for everyone involved in AI services.",
+        "caveat": "The findings highlight the need for stricter security measures and transparency in AI service providers.",
+        "who_should_care": [
+          "AI developers",
+          "Security researchers",
+          "Data privacy advocates"
+        ],
+        "what_to_do": [
+          "Implement stronger authentication and data encryption",
+          "Audit third-party intermediaries regularly",
+          "Enable zero data retention policies",
+          "Monitor API requests for suspicious activity"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Security%20researchers%20show%20how%20cheap%20AI%20inference%20providers%20steal%20keys%20and%20snoop%20on%20users%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/11/22/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than.html",
+      "created_at": "2026-11-22T19:57:25.023784+00:00",
+      "source": {
+        "title": "GPT-6.2 Astra and Sol get to the point faster but score lower on transparency than Claude",
+        "url": "https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/",
+        "source": "The Decoder",
+        "published_at": "2026-11-22T09:41:37+00:00",
+        "display_date": "Nov 22, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI's GPT-6.2 Astra and Sol give much shorter, more direct answers than their predecessors, but they are also less willing to admit uncertainty. Anthropic's Claude models score well ahead on transparency. The article GPT-6.2 Astra and Sol get to the point faster but score lower on transparency than Claude appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "GPT-6.2 Astra and Sol Outperform in Speed but Fall Short on Transparency",
+        "summary": "OpenAI's GPT-6.2 Astra and Sol models are faster at answering questions but score lower on transparency compared to Anthropic's Claude models. The models produce shorter, more direct responses but admit uncertainty less often. Anthropic's models lead in transparency and structure.",
+        "facts": [
+          {
+            "statement": "GPT-6.2 Astra and Sol give much shorter answers",
+            "evidence": "OpenAI's GPT-6.2 Astra and Sol give much shorter answers"
+          },
+          {
+            "statement": "Astra's score on admitting uncertainty dropped significantly",
+            "evidence": "Astra's score on that trait dropped from 96 to 24"
+          },
+          {
+            "statement": "Anthropic's models lead in transparency and structure",
+            "evidence": "Anthropic's models score 81 and 90 on the Transparency Index"
+          }
+        ],
+        "why_it_matters": "The shift in OpenAI's model behavior highlights a trade-off between speed and transparency. While Astra and Sol are more direct, their lower transparency scores may affect trust and reliability in critical applications. Anthropic's models maintain higher standards in structured and transparent responses.",
+        "elephant_take": "🐘 鼋 The race for speed is a double-edged sword. OpenAI's GPT-6.2 Astra and Sol are faster but less open, while Anthropic's Claude models remain more transparent. It's a clear choice between brevity and honesty in AI communication.",
+        "caveat": "The evaluation focuses on specific metrics and may not reflect real-world performance across all use cases.",
+        "who_should_care": [
+          "AI developers",
+          "Business leaders",
+          "Researchers"
+        ],
+        "what_to_do": [
+          "Evaluate transparency requirements for your AI use case",
+          "Compare models based on specific metrics before deployment",
+          "Monitor model behavior in high-stakes environments"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20GPT-6.2%20Astra%20and%20Sol%20get%20to%20the%20point%20faster%20but%20score%20lower%20on%20transparency%20than%20Claude%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/21/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-rel.html",
       "created_at": "2026-11-22T07:25:14.014914+00:00",
@@ -24601,6 +24798,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-22T19:57:25.023784+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-22T19:57:25.023784+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-22T19:57:25.023784+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-22T07:25:14.014914+00:00",
@@ -24628,12 +24843,6 @@
       "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-22T07:25:14.014914+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-21T19:46:03.104248+00:00",
       "pipeline_version": "2"
     },
     {
@@ -24825,18 +25034,6 @@
     {
       "url": "https://www.theverge.com/policy/1034527/openai-csam-classifier",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; Elephant commentary is not specific to this story",
-      "at": "2026-11-16T22:29:26.874652+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-16T22:29:26.874652+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-16T22:29:26.874652+00:00",
       "pipeline_version": "2"
     }

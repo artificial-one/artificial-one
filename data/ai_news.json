@@ -1,7 +1,80 @@
 {
   "version": 1,
-  "updated_at": "2026-11-22T07:25:10.160665+00:00",
+  "updated_at": "2026-11-22T19:57:19.792717+00:00",
   "items": [
+    {
+      "title": "Binding of Isaac developer removes AI music from Repentance Plus",
+      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+      "source": "The Verge AI",
+      "published_at": "2026-11-22T17:25:20+00:00",
+      "display_date": "Nov 22, 2026",
+      "category": "AI Tools & Products",
+      "description": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section. They found several audio files with Suno metadata that pointed back to […]",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "AI coding agents ace isolated tests but complete fewer than one in ten tasks in a simulated workplace",
+      "url": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/",
+      "source": "The Decoder",
+      "published_at": "2026-11-22T15:15:48+00:00",
+      "display_date": "Nov 22, 2026",
+      "category": "Models & LLMs",
+      "description": "A new real-world test puts AI coding agents in a simulated developer job with colleagues, project boards, and incomplete handoffs, where they have to keep developing software on their own and reliably close open tickets in a messy daily workflow. Even Opus 5.5 and Astra fall far short, solving fewer than one in ten tasks completely. The models finish clear, standalone assignments quickly, but they lose track as autonomous developers. The article AI coding agents ace isolated tests but complete f",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "AI is getting better faster than experts can reliably test whether new systems are safe, METR warns",
+      "url": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/",
+      "source": "The Decoder",
+      "published_at": "2026-11-22T13:00:43+00:00",
+      "display_date": "Nov 22, 2026",
+      "category": "Models & LLMs",
+      "description": "METR reports that leading AI models like Opus 5.5 and GPT-6 Astra are improving rapidly at research tasks but getting harder to measure. Current data can't rule out a dangerous acceleration in AI development, the organization warns, though it also says common tests may overestimate what the models can actually do. The article AI is getting better faster than experts can reliably test whether new systems are safe, METR warns appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/11/22/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are.html"
+    },
+    {
+      "title": "Security researchers show how cheap AI inference providers steal keys and snoop on users",
+      "url": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/",
+      "source": "The Decoder",
+      "published_at": "2026-11-22T12:07:56+00:00",
+      "display_date": "Nov 22, 2026",
+      "category": "Research",
+      "description": "Security researchers at Dragos used two million fake AI requests to uncover serious vulnerabilities in the AI supply chain, finding at least three compromised providers, hundreds of stolen AWS keys, and marketplace resellers who were simply reading customer requests. OpenRouter responded by removing three providers and 125 endpoints. The article Security researchers show how cheap AI inference providers steal keys and snoop on users appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Rank Prompt for this workflow",
+        "url": "partner-offers/rank-prompt-ai-visibility.html",
+        "offer_id": "rank-prompt"
+      },
+      "archive_url": "news/2026/11/22/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on.html"
+    },
+    {
+      "title": "GPT-6.2 Astra and Sol get to the point faster but score lower on transparency than Claude",
+      "url": "https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/",
+      "source": "The Decoder",
+      "published_at": "2026-11-22T09:41:37+00:00",
+      "display_date": "Nov 22, 2026",
+      "category": "Models & LLMs",
+      "description": "OpenAI's GPT-6.2 Astra and Sol give much shorter, more direct answers than their predecessors, but they are also less willing to admit uncertainty. Anthropic's Claude models score well ahead on transparency. The article GPT-6.2 Astra and Sol get to the point faster but score lower on transparency than Claude appeared first on The Decoder .",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/11/22/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than.html"
+    },
     {
       "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
       "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
@@ -73,20 +146,6 @@
       }
     },
     {
-      "title": "OpenAI shares new prompting tips for GPT-6.2 Astra and Sol to fix brief answers and unnecessary questions",
-      "url": "https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/",
-      "source": "The Decoder",
-      "published_at": "2026-11-21T13:32:35+00:00",
-      "display_date": "Nov 21, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI has released new prompt templates for GPT-6.2 Astra and Sol meant to fix common model behaviors such as overly brief answers, unnecessary follow-up questions, and excessive testing when coding. The API is changing as well, since editing a conversation's history can discard reasoning content and lower response quality. The article OpenAI shares new prompting tips for GPT-6.2 Astra and Sol to fix brief answers and unnecessary questions appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "Can Anthropic afford to put safety first?",
       "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
       "source": "The Verge AI",
@@ -94,63 +153,6 @@
       "display_date": "Nov 21, 2026",
       "category": "Models & LLMs",
       "description": "Today, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the Anthropic IPO for the third and final episode in our series about AI in real life. The AI lab behind Claude went public on the Nasdaq last Thursday. The numbers are gigantic, but not really that important for this conversation, except to […]",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft",
-      "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/",
-      "source": "The Decoder",
-      "published_at": "2026-11-21T11:19:49+00:00",
-      "display_date": "Nov 21, 2026",
-      "category": "Models & LLMs",
-      "description": "Anthropic mathematician Levent Alpöge says he used Claude to prove the Riemann hypothesis, math's most famous open problem for 167 years, with a proof formalized in Lean that spans over 250,000 pages. Just hours later, Stanford researchers published an independent, entirely human competing proof, and mathematicians are now checking whether either one holds up. The article Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft appeare",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      },
-      "archive_url": "news/2026/11/21/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-rel.html"
-    },
-    {
-      "title": "New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop",
-      "url": "https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/",
-      "source": "The Decoder",
-      "published_at": "2026-11-21T10:33:02+00:00",
-      "display_date": "Nov 21, 2026",
-      "category": "Models & LLMs",
-      "description": "Thinking Machines has released Inkling 2 Mini, an open looped transformer that runs 12 of its 24 layers three times per token. This lets the model reason internally for longer without generating extra text. On Artificial Analysis's Intelligence Index, it ties with Qwen3.8 27B at roughly six times lower cost. The article New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "US technology stocks suffer their worst weekly loss since the pandemic as AI doubts pile up",
-      "url": "https://the-decoder.com/us-technology-stocks-suffer-their-worst-weekly-loss-since-the-pandemic-as-ai-doubts-pile-up/",
-      "source": "The Decoder",
-      "published_at": "2026-11-21T10:27:44+00:00",
-      "display_date": "Nov 21, 2026",
-      "category": "AI Tools & Products",
-      "description": "The Nasdaq 100 has slipped into a bear market after its worst weekly loss since the Covid-19 crisis. Nvidia plunged 14 percent as the SEC reviews its accounting, and Anthropic lost nearly all of its gains a day after its record IPO. AI doubts, scandals, rising interest rates, and political headwinds are hitting overheated valuations all at once. The article US technology stocks suffer their worst weekly loss since the pandemic as AI doubts pile up appeared first on The Decoder .",
-      "related": {
-        "title": "Find the right AI tool for the job",
-        "url": "ai-tool-finder.html",
-        "offer_id": ""
-      }
-    },
-    {
-      "title": "Bytedance argues most AI training phases are unnecessary and backs it up with a competitive open model",
-      "url": "https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/",
-      "source": "The Decoder",
-      "published_at": "2026-11-21T09:17:24+00:00",
-      "display_date": "Nov 21, 2026",
-      "category": "Models & LLMs",
-      "description": "Bytedance and several US universities introduce Axion 1.0, an AI agent that rivals top commercial models from OpenAI and Anthropic on benchmarks after just three training phases. The researchers attribute the gains to carefully curated training data rather than ever more training steps. The model, data, and code are freely available. The article Bytedance argues most AI training phases are unnecessary and backs it up with a competitive open model appeared first on The Decoder .",
       "related": {
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
@@ -169,20 +171,6 @@
         "title": "Evaluate Rank Prompt for this workflow",
         "url": "partner-offers/rank-prompt-ai-visibility.html",
         "offer_id": "rank-prompt"
-      }
-    },
-    {
-      "title": "OpenAI makes it much harder for attackers to extract how its latest AI models think",
-      "url": "https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/",
-      "source": "The Decoder",
-      "published_at": "2026-11-20T20:31:50+00:00",
-      "display_date": "Nov 20, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI has significantly strengthened safeguards against extracting internal reasoning from GPT-6.2 Astra and GPT-6.2 Sol. In adaptive red-teaming tests, the success rate for extracting protected reasoning fell from 54 percent to 0.2 percent. The company is also suspending thousands to tens of thousands of accounts each week over coordinated distillation campaigns. The article OpenAI makes it much harder for attackers to extract how its latest AI models think appeared first on The Decoder .",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
       }
     },
     {
@@ -454,20 +442,6 @@
       }
     },
     {
-      "title": "Advancing chip design with OpenAI models",
-      "url": "https://openai.com/index/advancing-chip-design-with-our-models",
-      "source": "OpenAI",
-      "published_at": "2026-11-18T00:00:00+00:00",
-      "display_date": "Nov 18, 2026",
-      "category": "Models & LLMs",
-      "description": "OpenAI models optimized circuits used in Jalapeño silicon and improved RISC‑V core designs, showing progress in AI-assisted chip design with GPT‑6 Astra.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
       "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
       "url": "https://huggingface.co/blog/moe-expert-streaming",
       "source": "Hugging Face",
@@ -509,6 +483,35 @@
         "offer_id": "pinecone"
       },
       "archive_url": "news/2026/11/17/put-gemini-to-work-for-you.html"
+    },
+    {
+      "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+      "url": "https://huggingface.co/blog/openrouter",
+      "source": "Hugging Face",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "display_date": "Nov 16, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "source": "Hugging Face",
+      "published_at": "2026-11-13T14:05:22+00:00",
+      "display_date": "Nov 13, 2026",
+      "category": "Models & LLMs",
+      "description": "",
+      "related": {
+        "title": "Evaluate Pinecone for this workflow",
+        "url": "partner-offers/pinecone-vector-database.html",
+        "offer_id": "pinecone"
+      },
+      "archive_url": "news/2026/11/13/llama-cpp-v1-0-0-a-stronger-foundation-for-the-local-ai-ecosystem.html"
     }
   ]
 }
