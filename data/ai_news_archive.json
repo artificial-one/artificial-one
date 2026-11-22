@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "updated_at": "2026-11-21T07:40:38.230795+00:00",
+  "updated_at": "2026-11-22T07:25:14.014914+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/21/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-rel.html",
+      "created_at": "2026-11-22T07:25:14.014914+00:00",
+      "source": {
+        "title": "Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft",
+        "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/",
+        "source": "The Decoder",
+        "published_at": "2026-11-21T11:19:49+00:00",
+        "display_date": "Nov 21, 2026",
+        "category": "Models & LLMs",
+        "description": "Anthropic mathematician Levent Alpöge says he used Claude to prove the Riemann hypothesis, math's most famous open problem for 167 years, with a proof formalized in Lean that spans over 250,000 pages. Just hours later, Stanford researchers published an independent, entirely human competing proof, and mathematicians are now checking whether either one holds up. The article Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft appeare",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "AI and Human Compete in Proof of Riemann Hypothesis",
+        "summary": "Anthropic's AI and Stanford mathematicians race to prove the Riemann hypothesis, with both claiming breakthroughs in solving one of mathematics' most enduring mysteries.",
+        "facts": [
+          {
+            "statement": "Anthropic's AI model, Claude, helped solve the Riemann hypothesis",
+            "evidence": "Levent Alpöge and the AI model Claude presented a proof of the Generalized Riemann Hypothesis"
+          },
+          {
+            "statement": "Stanford mathematicians developed an independent human proof",
+            "evidence": "Stanford University researchers published an independent, entirely human approach to the same problem"
+          },
+          {
+            "statement": "The Riemann hypothesis is a major unsolved problem in mathematics",
+            "evidence": "Open since 1859, the hypothesis is central to understanding prime numbers"
+          }
+        ],
+        "why_it_matters": "The race to prove the Riemann hypothesis highlights the growing role of AI in mathematical research while underscoring the importance of human insight. A successful proof would validate countless mathematical theories and reshape our understanding of number theory.",
+        "elephant_take": "🐘 鼋 The Riemann hypothesis is a math problem that's been unsolved for over 160 years, and now two teams—one with AI, one with humans—are racing to solve it. It's a fascinating glimpse into how AI can assist in complex mathematical research, but the real test will be whether either proof holds up under scrutiny.",
+        "caveat": "The proofs are still under review by mathematicians, and neither has been officially verified yet.",
+        "who_should_care": [
+          "Mathematicians",
+          "AI researchers",
+          "Computer scientists"
+        ],
+        "what_to_do": [
+          "Review the proofs for accuracy and validity",
+          "Stay updated on developments in number theory",
+          "Consider the implications of AI in mathematical research",
+          "Engage with the mathematical community to discuss the significance of these breakthroughs"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Hours%20after%20Anthropic%20claims%20a%20Claude%20proof%20of%20the%20Riemann%20hypothesis%2C%20Stanford%20releases%20an%20all-human%20competing%20draft%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/20/apple-joins-the-race-for-ai-agents-that-control-your-device-while-raising-new-barr.html",
       "created_at": "2026-11-21T07:40:38.230795+00:00",
@@ -24535,6 +24601,36 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-22T07:25:14.014914+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-22T07:25:14.014914+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/us-technology-stocks-suffer-their-worst-weekly-loss-since-the-pandemic-as-ai-doubts-pile-up/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-11-22T07:25:14.014914+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-22T07:25:14.014914+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-22T07:25:14.014914+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-21T19:46:03.104248+00:00",
@@ -24568,12 +24664,6 @@
       "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-21T19:46:03.104248+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-21T07:40:38.230795+00:00",
       "pipeline_version": "2"
     },
     {
@@ -24748,30 +24838,6 @@
       "url": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-16T22:29:26.874652+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-16T07:14:25.590724+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-16T07:14:25.590724+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-16T07:14:25.590724+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/introducing-chatgpt-wallet",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-16T07:14:25.590724+00:00",
       "pipeline_version": "2"
     }
   ]
