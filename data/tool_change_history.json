@@ -1,10 +1,136 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 54,
+    "successful_checks": 68,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-23",
+      "id": "8ff0710d73493a72",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://submagic.co",
+      "tool_id": "submagic",
+      "tool_name": "Submagic"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "4e1da9f70a1c6fcd",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://timelyapp.com",
+      "tool_id": "timely",
+      "tool_name": "Timely"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "1cfc9d0be437bcef",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://tabnine.com",
+      "tool_id": "tabnine",
+      "tool_name": "Tabnine"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "fbcbd75ca887c5e3",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://thoughtspot.com",
+      "tool_id": "thoughtspot",
+      "tool_name": "ThoughtSpot"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "3fe59ccb98dfbf0d",
+      "kind": "feature or product",
+      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://veed.io",
+      "tool_id": "veed-io",
+      "tool_name": "Veed.io"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "7e9e1e86440c7c07",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://wellsaidlabs.com",
+      "tool_id": "wellsaid-labs",
+      "tool_name": "WellSaid Labs"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "4e45a89a8d0b93e8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://elevenlabs.io/",
+      "tool_id": "elevenlabs",
+      "tool_name": "ElevenLabs"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "f3d273262002d722",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.close.com/partners/partner-program-agreement",
+      "tool_id": "close",
+      "tool_name": "Close"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "b4508ee3712a8628",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://typecast.ai",
+      "tool_id": "typecast",
+      "tool_name": "Typecast"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "c7cb431db5b743d8",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.mrpeasy.com/",
+      "tool_id": "mrpeasy",
+      "tool_name": "MRPeasy"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "bd9982ba08b8bc8b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://apps.apple.com/us/app/esign-sign-pdf-docx-documents/id6755193759",
+      "tool_id": "esign-sign-pdf-docx-documents-ios-only",
+      "tool_name": "eSign: Sign PDF DOCX Documents (iOS only)"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "5b0dd3178c207024",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.quicksigner.com/",
+      "tool_id": "quicksigner",
+      "tool_name": "QuickSigner"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "1890b1a556696197",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://trainual.com/",
+      "tool_id": "trainual",
+      "tool_name": "Trainual"
+    },
+    {
+      "detected_on": "2026-11-23",
+      "id": "e4ef0a777b6b811b",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://ocoya.com",
+      "tool_id": "ocoya",
+      "tool_name": "Ocoya"
+    },
     {
       "detected_on": "2026-11-22",
       "id": "aca54985d8de8627",
@@ -1678,135 +1804,9 @@
       "source_url": "https://runwayml.com",
       "tool_id": "runway",
       "tool_name": "Runway"
-    },
-    {
-      "detected_on": "2026-10-15",
-      "id": "00da61994b234e98",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://sembly.ai",
-      "tool_id": "sembly-ai",
-      "tool_name": "Sembly AI"
-    },
-    {
-      "detected_on": "2026-10-15",
-      "id": "b2b49f1e50da688e",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://peppertype.ai",
-      "tool_id": "peppertype-ai",
-      "tool_name": "Peppertype.ai"
-    },
-    {
-      "detected_on": "2026-10-15",
-      "id": "1a1b3cb7ae3e02b4",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://surferseo.com",
-      "tool_id": "surfer-seo",
-      "tool_name": "Surfer SEO"
-    },
-    {
-      "detected_on": "2026-10-15",
-      "id": "8a4eb8ae7f18b080",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://synthesia.io",
-      "tool_id": "synthesia",
-      "tool_name": "Synthesia"
-    },
-    {
-      "detected_on": "2026-10-14",
-      "id": "e839c34756e0f081",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://heygen.com",
-      "tool_id": "heygen",
-      "tool_name": "HeyGen"
-    },
-    {
-      "detected_on": "2026-10-14",
-      "id": "9d69fe56a17b1294",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://grain.com",
-      "tool_id": "grain",
-      "tool_name": "Grain"
-    },
-    {
-      "detected_on": "2026-10-14",
-      "id": "bc9cef1e91070cbf",
-      "kind": "feature or product",
-      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://loopin.ai",
-      "tool_id": "loopin-ai",
-      "tool_name": "Loopin AI"
-    },
-    {
-      "detected_on": "2026-10-13",
-      "id": "c63f5082e146c1f4",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://www.quicksigner.com/",
-      "tool_id": "quicksigner",
-      "tool_name": "QuickSigner"
-    },
-    {
-      "detected_on": "2026-10-13",
-      "id": "04dfbff7bef02e97",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://taskade.com",
-      "tool_id": "taskade",
-      "tool_name": "Taskade"
-    },
-    {
-      "detected_on": "2026-10-13",
-      "id": "fbe6597441228c79",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://aws.amazon.com/codewhisperer",
-      "tool_id": "amazon-codewhisperer",
-      "tool_name": "Amazon CodeWhisperer"
-    },
-    {
-      "detected_on": "2026-10-13",
-      "id": "6659c44cd4b1798a",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://brandwatch.com",
-      "tool_id": "brandwatch",
-      "tool_name": "Brandwatch"
-    },
-    {
-      "detected_on": "2026-10-12",
-      "id": "30bad09cbd07d5c8",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://speechify.com",
-      "tool_id": "speechify",
-      "tool_name": "Speechify"
-    },
-    {
-      "detected_on": "2026-10-12",
-      "id": "4064f9b1b80689b8",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://sanebox.com",
-      "tool_id": "sanebox",
-      "tool_name": "SaneBox"
-    },
-    {
-      "detected_on": "2026-10-12",
-      "id": "c2aa5f83ba34b47d",
-      "kind": "feature or product",
-      "message": "A repeated vendor-source observation indicates a feature or product change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://tavily.com",
-      "tool_id": "tavily",
-      "tool_name": "Tavily"
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-22",
+  "updated_at": "2026-11-23",
   "version": 1
 }
