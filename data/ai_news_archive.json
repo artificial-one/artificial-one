@@ -1,7 +1,204 @@
 {
   "version": 1,
-  "updated_at": "2026-11-22T19:57:25.023784+00:00",
+  "updated_at": "2026-11-23T08:10:49.285779+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surve.html",
+      "created_at": "2026-11-23T08:10:49.285779+00:00",
+      "source": {
+        "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+        "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-21T21:37:10+00:00",
+        "display_date": "Nov 21, 2026",
+        "category": "AI Tools & Products",
+        "description": "Signal is limiting users' ability to take screenshots in both its Android and iOS apps.",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "Signal Limits Screenshots to Combat AI Surveillance Threat",
+        "summary": "Signal is restricting mobile screenshots in its apps to counter the 'existential threat' of AI surveillance, as described by privacy advocate Meredith Whittaker.",
+        "facts": [
+          {
+            "statement": "Signal is limiting users' ability to take screenshots in both Android and iOS apps.",
+            "evidence": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance"
+          },
+          {
+            "statement": "Meredith Whittaker describes operating systems with agentic AI as an 'existential threat' to Signal's privacy guarantees.",
+            "evidence": "windows, android, and macos/ios “are undermining signal’s ability to independently guarantee"
+          },
+          {
+            "statement": "Signal has already blocked screenshots of its Windows app by default and is now adding similar restrictions in Android and iOS.",
+            "evidence": "Signal already sought to limit these risks by blocking screenshots of its Windows app by default."
+          }
+        ],
+        "why_it_matters": "Signal's move highlights the growing tension between privacy and AI surveillance. As operating systems integrate agentic AI, they risk compromising the privacy guarantees of secure messaging apps like Signal, which rely on user data not being captured or stored by external systems.",
+        "elephant_take": "🐘 🦘 Signal is trying to protect its privacy model against a new kind of threat: AI agents that can scan user screens. But even if they block screenshots, there are still other ways AI could access data, so this is just one piece of a bigger puzzle.",
+        "caveat": "This is an incomplete solution and doesn't address all potential risks of AI accessing application data.",
+        "who_should_care": [
+          "Privacy advocates",
+          "AI developers",
+          "Secure messaging app users"
+        ],
+        "what_to_do": [
+          "Stay informed about privacy implications of AI integration in operating systems",
+          "Evaluate if your apps are vulnerable to new privacy threats",
+          "Consider alternative communication methods if privacy is a concern",
+          "Advocate for stronger privacy protections in AI development"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Signal%20restricts%20mobile%20screenshots%20as%20it%20confronts%20%E2%80%98existential%20threat%E2%80%99%20of%20AI%20surveillance%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/21/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end.html",
+      "created_at": "2026-11-23T08:10:49.285779+00:00",
+      "source": {
+        "title": "Nvidia researchers argue huge AI context windows are a dead end",
+        "url": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/",
+        "source": "The Decoder",
+        "published_at": "2026-11-21T16:23:45+00:00",
+        "display_date": "Nov 21, 2026",
+        "category": "Models & LLMs",
+        "description": "Nvidia researchers argue that language models often don't need their full context windows—which are slow, expensive, and prone to errors—and propose an alternative. In tests, periodic summaries and targeted keyword search usually matched full-context results at a fraction of the cost. The team even proposes a new class of models that works with short notes instead of long context. The article Nvidia researchers argue huge AI context windows are a dead end appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Rank Prompt for this workflow",
+          "url": "partner-offers/rank-prompt-ai-visibility.html",
+          "offer_id": "rank-prompt"
+        }
+      },
+      "article": {
+        "headline": "Nvidia Researchers Challenge Large AI Context Windows as Overkill",
+        "summary": "Nvidia researchers argue that large context windows in AI models are often unnecessary and costly, proposing alternatives like summaries and targeted searches. They suggest a new class of models that work with short notes instead of long contexts.",
+        "facts": [
+          {
+            "statement": "Nvidia researchers argue that language models often don't need their full context windows",
+            "evidence": "Nvidia researchers argue huge AI context windows are a dead end"
+          },
+          {
+            "statement": "In tests, periodic summaries and targeted keyword search usually matched full-context results at a fraction of the cost",
+            "evidence": "periodic summaries and targeted keyword search usually matched full-context results"
+          },
+          {
+            "statement": "A language model's context window is its working memory, covering everything it holds in view when generating a reply",
+            "evidence": "language model's context window is its working memory"
+          }
+        ],
+        "why_it_matters": "The debate over AI context windows highlights the trade-offs between model capability and efficiency. If large context windows are indeed overkill, it could signal a shift toward more practical, cost-effective models that prioritize performance over sheer capacity.",
+        "elephant_take": "🐘 鼋 The push to bigger is not always better. Nvidia's argument suggests that AI might be over-engineered in some cases, focusing on what's needed rather than what's possible.",
+        "caveat": "The study's findings are based on specific tests and may not apply universally across all AI applications.",
+        "who_should_care": [
+          "AI developers",
+          "researchers",
+          "business leaders"
+        ],
+        "what_to_do": [
+          "Evaluate if large context windows are necessary for your use case",
+          "Consider cost-effective alternatives like summaries",
+          "Stay updated on evolving AI research trends"
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/rank-prompt-ai-visibility-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "search-intent/rank-prompt-ai-visibility-alternatives.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/rank-prompt-ai-visibility.html",
+        "review_title": "Evaluate Rank Prompt for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Nvidia%20researchers%20argue%20huge%20AI%20context%20windows%20are%20a%20dead%20end%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "rank-prompt"
+      }
+    },
+    {
+      "path": "news/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hol.html",
+      "created_at": "2026-11-23T08:10:49.285779+00:00",
+      "source": {
+        "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+        "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-21T16:00:00+00:00",
+        "display_date": "Nov 21, 2026",
+        "category": "AI Business",
+        "description": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.",
+        "related": {
+          "title": "Model the value of an AI subscription",
+          "url": "calculators/ai-software-roi-calculator.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "AI Face Licensing in Microdrama: The Future of Hollywood?",
+        "summary": "A microdrama startup is pioneering a trend where actors license their faces for AI content, raising questions about its impact on Hollywood. The company produces AI-driven romances with a strong female audience, challenging traditional filmmaking norms.",
+        "facts": [
+          {
+            "statement": "Shortical uses AI to create low-cost, high-profit microdramas.",
+            "evidence": "The production overhead for AI content is substantially less than live-action."
+          },
+          {
+            "statement": "Aki Avni is the first actor to license his face for AI-generated microdrama content.",
+            "evidence": "The project, which is wholly AI, used Avni’s face to create a digital avatar of him."
+          },
+          {
+            "statement": "Shortical's audience is primarily U.S.-based and female-oriented.",
+            "evidence": "the industry’s viewer demographic skews heavily female . many viewers may watch them to wind down at night"
+          }
+        ],
+        "why_it_matters": "This trend could disrupt Hollywood by making AI-driven content more accessible and profitable, but it also raises concerns about the ethics of face licensing and the future of traditional acting. The shift towards AI could redefine how stories are told and consumed in the entertainment industry.",
+        "elephant_take": "🐘 鼋 The AI romance revolution is here, and it's a bit meta. Shortical's 'Inevitable' is a bold experiment, but will it survive the scrutiny of Hollywood's traditionalists? The future might be more digital than dramatic.",
+        "caveat": "The ethical implications of face licensing and the long-term viability of AI-driven content remain uncertain.",
+        "who_should_care": [
+          "Hollywood producers",
+          "AI developers",
+          "Entertainment investors"
+        ],
+        "what_to_do": [
+          "Monitor AI content trends",
+          "Evaluate ethical concerns in face licensing",
+          "Invest in AI-driven storytelling platforms",
+          "Assess audience demographics for new content formats"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "calculators/ai-software-roi-calculator.html",
+        "review_title": "Model the value of an AI subscription",
+        "elephant_url": "index.html?task=Explain%20what%20Is%20selling%20an%20AI%20version%20of%20your%20face%20to%20this%20microdrama%20startup%20the%20future%20of%20Hollywood%3F%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/11/22/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are.html",
       "created_at": "2026-11-22T19:57:25.023784+00:00",
@@ -24798,6 +24995,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-23T08:10:49.285779+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-23T08:10:49.285779+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/silicon-valleys-growing-obsession-with-ai-doomsday-is-turning-parts-of-the-tech-industry-toward-cult-like-devotion/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-23T08:10:49.285779+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-22T19:57:25.023784+00:00",
@@ -24813,12 +25028,6 @@
       "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-22T19:57:25.023784+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-22T07:25:14.014914+00:00",
       "pipeline_version": "2"
     },
     {
@@ -24843,24 +25052,6 @@
       "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-22T07:25:14.014914+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-21T19:46:03.104248+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/silicon-valleys-growing-obsession-with-ai-doomsday-is-turning-parts-of-the-tech-industry-toward-cult-like-devotion/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-21T19:46:03.104248+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-21T19:46:03.104248+00:00",
       "pipeline_version": "2"
     },
     {
