@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "updated_at": "2026-11-24T00:19:37.138072+00:00",
+  "updated_at": "2026-11-24T10:23:46.393793+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/23/openai-warns-that-upcoming-ai-systems-could-outpace-safety-checks-and-urges-rivals.html",
+      "created_at": "2026-11-24T10:23:46.393793+00:00",
+      "source": {
+        "title": "OpenAI warns that upcoming AI systems could outpace safety checks and urges rivals to agree on shared limits",
+        "url": "https://the-decoder.com/openai-warns-that-upcoming-ai-systems-could-outpace-safety-checks-and-urges-rivals-to-agree-on-shared-limits/",
+        "source": "The Decoder",
+        "published_at": "2026-11-23T18:42:38+00:00",
+        "display_date": "Nov 23, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI chief scientist Jakub Pachocki has released internal perplexity scores for the entire GPT series for the first time, up to an unreleased model beyond the current generation. The metric shows that core capabilities emerge at surprisingly precise thresholds. Pachocki is pushing to make perplexity an industry-wide progress metric and establish shared limits before control over AI behavior erodes. The article OpenAI warns that upcoming AI systems could outpace safety checks and urges rivals t",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "OpenAI's GPT Series Progress Revealed as Safety Concerns Rise",
+        "summary": "OpenAI's internal data on GPT series models shows capabilities emerging at specific perplexity thresholds, raising concerns about safety checks being outpaced by AI advancements. The company urges industry-wide agreement on shared limits to ensure control over AI behavior.",
+        "facts": [
+          {
+            "statement": "OpenAI's GPT series models show capabilities emerging at precise perplexity thresholds",
+            "evidence": "core capabilities emerge at surprisingly precise thresholds"
+          },
+          {
+            "statement": "OpenAI urges industry-wide agreement on shared safety limits before AI control erodes",
+            "evidence": "establish shared limits before control over AI behavior erodes"
+          },
+          {
+            "statement": "Perplexity scores are a standard metric for measuring AI model progress",
+            "evidence": "metric has long been standard in AI research and Transformer development"
+          }
+        ],
+        "why_it_matters": "The revelation of GPT series capabilities at specific perplexity thresholds highlights the urgent need for shared safety standards. As models advance, existing safety checks may not keep up, risking uncontrolled AI behavior. OpenAI's push for industry-wide limits aims to prevent a race where oversight lags behind development.",
+        "elephant_take": "🐘 鼋 The GPT series' capabilities map neatly to perplexity scores, but this 'surreal' progression raises questions about how long safety checks can keep up. OpenAI's call for shared limits is a pragmatic attempt to avoid a dangerous race.",
+        "caveat": "The data is internal and not fully transparent, leaving room for interpretation and potential bias in the metrics used.",
+        "who_should_care": [
+          "AI researchers",
+          "Regulators",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Monitor AI development progress metrics",
+          "Push for industry-wide safety standards",
+          "Ensure oversight keeps pace with advancements",
+          "Stay informed about model capabilities and thresholds"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20warns%20that%20upcoming%20AI%20systems%20could%20outpace%20safety%20checks%20and%20urges%20rivals%20to%20agree%20on%20shared%20limits%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/23/z-ai-follows-openai-into-loop-transformer-territory-with-its-new-750b-flagship-mod.html",
+      "created_at": "2026-11-24T10:23:46.393793+00:00",
+      "source": {
+        "title": "Z.ai follows OpenAI into loop transformer territory with its new 750B flagship model",
+        "url": "https://the-decoder.com/z-ai-follows-openai-into-loop-transformer-territory-with-its-new-750b-flagship-model/",
+        "source": "The Decoder",
+        "published_at": "2026-11-23T15:13:03+00:00",
+        "display_date": "Nov 23, 2026",
+        "category": "Models & LLMs",
+        "description": "Z.ai is moving its flagship GLM-5.4 model to a loop architecture in which 28 layers run twice, which the company says lets the 750-billion-parameter model match models with 2 to 3 trillion parameters. Benchmark scores are only available for a smaller 30B test model so far, and Z.ai is positioning GLM-5.4 as the start of \"Generalized Coding,\" where code also generates videos, games, and CAD models. The article Z.ai follows OpenAI into loop transformer territory with its new 750B flagship model ap",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Z.ai's Loop Transformer Model Challenges OpenAI with 750B Parameter Innovation",
+        "summary": "Z.ai introduces a loop transformer architecture for its 750B parameter model, claiming it matches larger models in performance while optimizing memory and compute. The model is part of 'Generalized Coding' that generates videos, games, and CAD models using code.",
+        "facts": [
+          {
+            "statement": "Z.ai's GLM-5.4 model uses a loop architecture to increase computational depth without adding parameters.",
+            "evidence": "Z.ai follows OpenAI into loop transformer territory with its new 750B flagship model"
+          },
+          {
+            "statement": "GLM-5.4 can generate videos, games, and CAD models using code.",
+            "evidence": "According to Z.ai, the 750-billion-parameter model reaches performance comparable to models with 2 to 3 trillion parameters."
+          },
+          {
+            "statement": "Z.ai's loop architecture uses dedicated gates and shared token cache to manage memory and compute costs.",
+            "evidence": "Gates and shared caching keep the second pass manageable"
+          }
+        ],
+        "why_it_matters": "Z.ai's loop transformer model challenges OpenAI's GPT-6 Astra by achieving performance parity with larger models using a novel architecture. The 'Generalized Coding' capability could redefine how AI generates complex media, but the technical details of memory and compute optimization remain unclear.",
+        "elephant_take": "🐘 鼋 Z.ai's loop transformer is a bold move, but the 'Generalized Coding' claims are still in early stages. The model's ability to generate videos and CAD models is impressive, but the underlying architecture's efficiency needs more scrutiny.",
+        "caveat": "The technical details of memory management and compute optimization are complex and require further validation.",
+        "who_should_care": [
+          "AI researchers",
+          "Tech investors",
+          "Developers"
+        ],
+        "what_to_do": [
+          "Monitor Z.ai's performance benchmarks",
+          "Evaluate the 'Generalized Coding' capabilities in real-world applications",
+          "Assess the technical feasibility of the loop architecture"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Z.ai%20follows%20OpenAI%20into%20loop%20transformer%20territory%20with%20its%20new%20750B%20flagship%20model%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-port.html",
       "created_at": "2026-11-24T00:19:37.138072+00:00",
@@ -25192,6 +25323,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/gadgets/1040357/nothing-ear-note-earbuds-ai-recording",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-24T10:23:46.393793+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/anthropics-appetite-for-compute-is-pushing-xai-toward-a-rent-over-build-strategy/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-24T10:23:46.393793+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-24T10:23:46.393793+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-11-24T10:23:46.393793+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-24T00:19:37.138072+00:00",
@@ -25405,30 +25560,6 @@
       "url": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
       "at": "2026-11-17T21:18:42.447137+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-17T21:18:42.447137+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
-      "reason": "HTTP Error 403: Forbidden",
-      "at": "2026-11-17T08:27:48.473526+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; draft copies a long source phrase",
-      "at": "2026-11-16T22:29:26.874652+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-16T22:29:26.874652+00:00",
       "pipeline_version": "2"
     }
   ]
