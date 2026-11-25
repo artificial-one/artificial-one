@@ -1,7 +1,7 @@
 {
-  "candidates": 932,
-  "excluded": 772,
-  "excluded_page_count": 772,
+  "candidates": 936,
+  "excluded": 776,
+  "excluded_page_count": 776,
   "excluded_pages": [
     {
       "path": "search-intent/pinecone-vector-database-for-build-retrieval-augmented-generation.html",
@@ -181,7 +181,7 @@
   ],
   "excluded_pages_note": "A representative sample only; the full count is grouped by exclusion reason.",
   "exclusion_reasons": {
-    "index_budget": 772
+    "index_budget": 776
   },
   "included": 160,
   "included_paths": [
@@ -338,18 +338,18 @@
     "appsumo-guides/acumbamail.html",
     "appsumo-guides/adilo.html",
     "news/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse.html",
+    "news/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security.html",
+    "news/2026/11/24/openai-o1-co-creator-noam-brown-urges-promising-students-to-drop-out-as-ai-enters.html",
+    "news/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms.html",
+    "news/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups.html",
     "news/2026/11/23/z-ai-follows-openai-into-loop-transformer-territory-with-its-new-750b-flagship-mod.html",
     "news/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-port.html",
-    "news/2026/11/23/openai-warns-that-upcoming-ai-systems-could-outpace-safety-checks-and-urges-rivals.html",
-    "news/2026/11/23/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-image.html",
-    "news/2026/11/23/ai-data-centers-throw-another-wrench-into-chaotic-un-climate-talks.html",
-    "news/2026/11/22/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on.html",
-    "news/2026/11/22/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than.html"
+    "news/2026/11/23/openai-warns-that-upcoming-ai-systems-could-outpace-safety-checks-and-urges-rivals.html"
   ],
   "incoming_link_distribution": {
     "0": 0,
-    "1-2": 97,
-    "3+": 63
+    "1-2": 95,
+    "3+": 65
   },
   "policy": {
     "excluded": "Pages outside the 160-URL crawl budget remain public but are not advertised in the priority sitemap. Quality failures are also excluded.",
