@@ -1,7 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-11-25T21:58:00.032828+00:00",
+  "updated_at": "2026-11-26T08:51:57.071376+00:00",
   "items": [
+    {
+      "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "source": "Hugging Face",
+      "published_at": "2026-11-26T05:05:36+00:00",
+      "display_date": "Nov 26, 2026",
+      "category": "AI Tools & Products",
+      "description": "",
+      "related": {
+        "title": "Find the right AI tool for the job",
+        "url": "ai-tool-finder.html",
+        "offer_id": ""
+      },
+      "archive_url": "news/2026/11/26/building-on-nemotron-3-5-parse-open-data-fine-tuning-and-faster-inference.html"
+    },
+    {
+      "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
+      "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
+      "source": "The Verge AI",
+      "published_at": "2026-11-25T21:51:26+00:00",
+      "display_date": "Nov 25, 2026",
+      "category": "AI Tools & Products",
+      "description": "Last year, Google filed a patent for a system called My Channel that's designed to create feeds filled with personalized, AI-generated videos and advertisements based on information the company knows about its users. The patent has been rejected, but unfortunately, Google might appeal or resubmit an amended version, and we could see this monstrosity come […]",
+      "related": {
+        "title": "Evaluate Descript for this workflow",
+        "url": "partner-offers/descript-ai-video-editing.html",
+        "offer_id": "descript"
+      }
+    },
     {
       "title": "US chip-access curbs and anti-distillation measures are reportedly already slowing Chinese AI labs",
       "url": "https://the-decoder.com/us-chip-access-curbs-and-anti-distillation-measures-are-reportedly-already-slowing-chinese-ai-labs/",
@@ -88,7 +117,8 @@
         "title": "Evaluate Pinecone for this workflow",
         "url": "partner-offers/pinecone-vector-database.html",
         "offer_id": "pinecone"
-      }
+      },
+      "archive_url": "news/2026/11/25/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at.html"
     },
     {
       "title": "Want to buy your kid an AI toy this Christmas? Not in New York",
@@ -116,7 +146,8 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
+      },
+      "archive_url": "news/2026/11/25/character-ai-s-plan-to-auction-off-users-private-chats-challenged-by-state-ags.html"
     },
     {
       "title": "Amazon and Meta are in talks to end the block on Meta's AI shopping agent Muse in Amazon's online store.",
@@ -481,34 +512,6 @@
         "title": "Find the right AI tool for the job",
         "url": "ai-tool-finder.html",
         "offer_id": ""
-      }
-    },
-    {
-      "title": "The Gemini app is now available on lower-memory Android devices.",
-      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
-      "source": "Google AI",
-      "published_at": "2026-11-18T17:00:00+00:00",
-      "display_date": "Nov 18, 2026",
-      "category": "Models & LLMs",
-      "description": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
-      }
-    },
-    {
-      "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
-      "url": "https://huggingface.co/blog/moe-expert-streaming",
-      "source": "Hugging Face",
-      "published_at": "2026-11-18T00:00:00+00:00",
-      "display_date": "Nov 18, 2026",
-      "category": "Models & LLMs",
-      "description": "",
-      "related": {
-        "title": "Evaluate Pinecone for this workflow",
-        "url": "partner-offers/pinecone-vector-database.html",
-        "offer_id": "pinecone"
       }
     }
   ]

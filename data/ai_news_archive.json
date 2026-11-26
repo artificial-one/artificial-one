@@ -1,7 +1,206 @@
 {
   "version": 1,
-  "updated_at": "2026-11-25T21:58:04.107752+00:00",
+  "updated_at": "2026-11-26T08:52:00.446363+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/26/building-on-nemotron-3-5-parse-open-data-fine-tuning-and-faster-inference.html",
+      "created_at": "2026-11-26T08:52:00.446363+00:00",
+      "source": {
+        "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+        "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+        "source": "Hugging Face",
+        "published_at": "2026-11-26T05:05:36+00:00",
+        "display_date": "Nov 26, 2026",
+        "category": "AI Tools & Products",
+        "description": "",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "NVIDIA Releases Parse 3.5 for Enhanced Document Processing",
+        "summary": "NVIDIA has released Parse 3.5, a compact document model that turns page images into structured data for retrieval-augmented generation and agents. The model improves chart and table processing with synthetic training datasets, fine-tuning recipes, and faster inference techniques.",
+        "facts": [
+          {
+            "statement": "Parse 3.5 can extract content from documents into structured data.",
+            "evidence": "We’re building on that release with synthetic training datasets"
+          },
+          {
+            "statement": "The model improves accuracy in processing charts and tables.",
+            "evidence": "This latest version of Parse significantly extends its ability to read charts and tables"
+          },
+          {
+            "statement": "Parse 3.5 uses synthetic data generation for training.",
+            "evidence": "These advancements have been largely powered by synthetic data generation"
+          }
+        ],
+        "why_it_matters": "NVIDIA's Parse 3.5 represents a significant leap in document processing capabilities, enabling more accurate and efficient handling of structured data from documents. This advancement could streamline workflows that rely on document analysis, such as data extraction and automation.",
+        "elephant_take": "🐘 鼋 The latest Parse 3.5 is a clever blend of synthetic data and reinforcement learning, but it's still just another tool in the AI pipeline. The real test will be how well it handles real-world documents with messy layouts and ambiguous content.",
+        "caveat": "The model's performance on ambiguous or complex documents remains unproven in real-world scenarios.",
+        "who_should_care": [
+          "Data analysts",
+          "Document automation specialists",
+          "AI researchers"
+        ],
+        "what_to_do": [
+          "Evaluate the model's performance on real-world documents",
+          "Explore synthetic data generation techniques for training",
+          "Test the fine-tuning recipe for specific document types"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Building%20on%20Nemotron%203.5%20Parse%3A%20Open%20Data%2C%20Fine-Tuning%2C%20and%20Faster%20Inference%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/25/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at.html",
+      "created_at": "2026-11-26T08:52:00.446363+00:00",
+      "source": {
+        "title": "OpenAI wants companies to trust it with sensitive work by promising not to look at their data",
+        "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/",
+        "source": "The Decoder",
+        "published_at": "2026-11-25T18:22:02+00:00",
+        "display_date": "Nov 25, 2026",
+        "category": "Models & LLMs",
+        "description": "OpenAI is testing a new feature called \"Private Inference\" that lets companies run queries on its most powerful models without OpenAI being able to access the data. The article OpenAI wants companies to trust it with sensitive work by promising not to look at their data appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "OpenAI's Private Inference Feature for Sensitive Work",
+        "summary": "OpenAI is testing a new feature called 'Private Inference' that allows companies to run queries on its models without the company accessing the data. The feature aims to improve privacy for sensitive work, with OpenAI emphasizing security and independent verification.",
+        "facts": [
+          {
+            "statement": "OpenAI is testing a new feature called 'Private Inference'.",
+            "evidence": "openai is testing a new feature called"
+          },
+          {
+            "statement": "The feature allows companies to run queries on models without OpenAI accessing the data.",
+            "evidence": "lets companies run queries on its most powerful models without OpenAI being able to access the data"
+          },
+          {
+            "statement": "Private Inference targets business customers whose data is not used for training.",
+            "evidence": "For now, Private Inference targets business customers, whose data OpenAI already doesn't use for training"
+          }
+        ],
+        "why_it_matters": "OpenAI's new 'Private Inference' feature could significantly impact how companies handle sensitive data with AI. By allowing businesses to run queries without data access, it may expand AI's utility in privacy-sensitive areas. This development highlights the ongoing balance between AI capabilities and user privacy concerns.",
+        "elephant_take": "🐘 鼋 OpenAI's 'Private Inference' is a step toward more secure AI for businesses, but the real test will be whether the isolated hardware truly ensures data safety. The feature may help companies trust AI with sensitive work, but the details are still murky.",
+        "caveat": "The security of the isolated hardware and the encryption process remain unverified by independent sources.",
+        "who_should_care": [
+          "Businesses handling sensitive data",
+          "AI privacy advocates",
+          "Regulators concerned with data protection",
+          "Tech companies competing in AI"
+        ],
+        "what_to_do": [
+          "Evaluate the security measures of 'Private Inference' before adopting it.",
+          "Monitor OpenAI's progress on verifying the isolated hardware's security.",
+          "Consider alternative solutions for sensitive data if privacy concerns persist.",
+          "Stay informed about updates from OpenAI and competitors like Google."
+        ],
+        "sensitive": true
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20OpenAI%20wants%20companies%20to%20trust%20it%20with%20sensitive%20work%20by%20promising%20not%20to%20look%20at%20their%20data%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/25/character-ai-s-plan-to-auction-off-users-private-chats-challenged-by-state-ags.html",
+      "created_at": "2026-11-26T08:52:00.446363+00:00",
+      "source": {
+        "title": "Character.AI’s plan to auction off users’ private chats challenged by state AGs",
+        "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
+        "source": "TechCrunch AI",
+        "published_at": "2026-11-25T17:35:58+00:00",
+        "display_date": "Nov 25, 2026",
+        "category": "AI Tools & Products",
+        "description": "The proposed Character.ai bankruptcy sale includes sensitive personal data from more than 21 million U.S. accounts, including 2.1 million registered to minors, the state AGs said.",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "State AGs Challenge Character.AI's Plan to Auction User Chats",
+        "summary": "State attorneys general oppose Character.AI's bankruptcy plan to sell user data, citing privacy risks and legal violations.",
+        "facts": [
+          {
+            "statement": "Character.AI plans to auction off user chats in its bankruptcy sale.",
+            "evidence": "Character.AI’s plan to auction off users’ private chats challenged by state AGs"
+          },
+          {
+            "statement": "The dataset includes sensitive data from over 21 million U.S. accounts.",
+            "evidence": "includes chat histories from more than 21 million U.S. accounts"
+          },
+          {
+            "statement": "State AGs argue the sale violates consumer protections and laws.",
+            "evidence": "illegal under federal and California law and bankruptcy should not be used to sidestep these consumer protections"
+          }
+        ],
+        "why_it_matters": "The potential sale of user data raises serious privacy concerns, with state attorneys general stepping in to protect consumers from a shady buyer. This case highlights the tension between corporate bankruptcy processes and legal protections for user data.",
+        "elephant_take": "🐘 鼋 The AGs are fighting back against a company that promised not to sell user chats — now it’s trying to auction them off. It’s a clear violation of trust and consumer protection laws.",
+        "caveat": "The buyer’s intentions remain unclear, and the legal implications of this sale are still being debated.",
+        "who_should_care": [
+          "Users",
+          "Attorneys General",
+          "Privacy advocates",
+          "Regulators"
+        ],
+        "what_to_do": [
+          "Monitor the bankruptcy proceedings",
+          "Stay informed about data privacy laws",
+          "Report any suspicious data practices",
+          "Support consumer protection initiatives"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%20Character.AI%E2%80%99s%20plan%20to%20auction%20off%20users%E2%80%99%20private%20chats%20challenged%20by%20state%20AGs%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
     {
       "path": "news/2026/11/25/us-chip-access-curbs-and-anti-distillation-measures-are-reportedly-already-slowing.html",
       "created_at": "2026-11-25T21:58:04.107752+00:00",
@@ -25914,6 +26113,24 @@
   ],
   "last_failures": [
     {
+      "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-26T08:52:00.446363+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-26T08:52:00.446363+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-26T08:52:00.446363+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/novartis-ceo-says-ai-will-shave-four-years-off-drug-development-not-cure-all-disease/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-25T09:06:16.118157+00:00",
@@ -26133,24 +26350,6 @@
       "url": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-19T07:54:02.387120+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/google-ships-gemini-4-neon-its-fourth-new-gemini-model-in-a-month/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-19T07:54:02.387120+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/policy/1036749/trump-ai-chip-data-center-us-philippines-pax-silica",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-18T20:52:49.651379+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
-      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
-      "at": "2026-11-18T20:52:49.651379+00:00",
       "pipeline_version": "2"
     }
   ]
