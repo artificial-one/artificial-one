@@ -1,7 +1,137 @@
 {
   "version": 1,
-  "updated_at": "2026-11-27T09:02:12.666880+00:00",
+  "updated_at": "2026-11-27T21:36:58.235686+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/27/three-studies-from-meta-and-ami-labs-back-yann-lecun-s-bet-on-jepa-world-models-ov.html",
+      "created_at": "2026-11-27T21:36:58.235686+00:00",
+      "source": {
+        "title": "Three studies from Meta and AMI Labs back Yann LeCun's bet on JEPA world models over large language models",
+        "url": "https://the-decoder.com/three-studies-from-meta-and-ami-labs-back-yann-lecuns-bet-on-jepa-world-models-over-large-language-models/",
+        "source": "The Decoder",
+        "published_at": "2026-11-27T16:58:56+00:00",
+        "display_date": "Nov 27, 2026",
+        "category": "Models & LLMs",
+        "description": "Yann LeCun is pushing forward with his alternative to language models through his startup AMI Labs. The JEPA architecture aims to give machines an internal world model that captures cause and effect. Three new studies show progress in robot planning, more efficient training, and error correction, though the pieces still need to grow together. The article Three studies from Meta and AMI Labs back Yann LeCun's bet on JEPA world models over large language models appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "JEPA Models Gain Support in AI Research",
+        "summary": "Three studies from Meta and AMI Labs support Yann LeCun's JEPA architecture, which aims to create machines with internal world models for cause and effect. The research highlights progress in robot planning and error correction.",
+        "facts": [
+          {
+            "statement": "Yann LeCun is pushing forward with his alternative to language models through his startup AMI Labs.",
+            "evidence": "Yann LeCun is pushing forward with his alternative to language models through his startup AMI Labs"
+          },
+          {
+            "statement": "The JEPA architecture aims to give machines an internal world model that captures cause and effect.",
+            "evidence": "The JEPA architecture aims to give machines an internal world model that captures cause and effect"
+          },
+          {
+            "statement": "Three new studies show progress in robot planning, more efficient training, and error correction.",
+            "evidence": "Three new studies show progress in robot planning, more efficient training, and error correction"
+          }
+        ],
+        "why_it_matters": "The JEPA architecture represents a potential shift in AI research towards physical-world modeling, contrasting with the current focus on large language models. This could have significant implications for robotics and real-world applications.",
+        "elephant_take": "🐘 鼋 The JEPA world model is a bold bet, but it's still early days. While the studies show promise, the path to full integration remains unclear.",
+        "caveat": "The research is still in its early stages and may face challenges in scaling and real-world application.",
+        "who_should_care": [
+          "AI researchers",
+          "Robotics developers",
+          "Tech investors"
+        ],
+        "what_to_do": [
+          "Monitor developments in JEPA research",
+          "Explore partnerships with AMI Labs",
+          "Stay informed about AI trends in robotics"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Three%20studies%20from%20Meta%20and%20AMI%20Labs%20back%20Yann%20LeCun%27s%20bet%20on%20JEPA%20world%20models%20over%20large%20language%20models%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
+    {
+      "path": "news/2026/11/27/rockstar-s-ai-dilemma-can-gta-6-s-staggered-release-model-survive-coding-agents.html",
+      "created_at": "2026-11-27T21:36:58.235686+00:00",
+      "source": {
+        "title": "Rockstar's AI dilemma: Can GTA 6's staggered release model survive coding agents?",
+        "url": "https://the-decoder.com/rockstars-ai-dilemma-can-gta-6s-staggered-release-model-survive-coding-agents/",
+        "source": "The Decoder",
+        "published_at": "2026-11-27T15:37:47+00:00",
+        "display_date": "Nov 27, 2026",
+        "category": "Models & LLMs",
+        "description": "More than 40 projects are working to bring a leaked Xbox build of GTA 6 to PC through reverse engineering just days after its $3.79 billion record console launch. AI coding agents like Claude Code are speeding up the process so much that an early unofficial multiplayer mode is already running. Rockstar's delayed PC business model is coming under pressure. The article Rockstar's AI dilemma: Can GTA 6's staggered release model survive coding agents? appeared first on The Decoder .",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "GTA 6's PC release model faces AI-driven challenges",
+        "summary": "AI tools are accelerating reverse engineering efforts to port GTA 6 to PC, threatening Rockstar's traditional business model. Unofficial builds are already showing early multiplayer features, raising concerns about the company's delayed PC launch strategy.",
+        "facts": [
+          {
+            "statement": "AI coding agents are speeding up the process of porting GTA 6 to PC",
+            "evidence": "ai coding tools like anthropic's claude code are driving that"
+          },
+          {
+            "statement": "Unofficial builds of GTA 6 on PC are already showing early multiplayer features",
+            "evidence": "Gameplay footage of an unofficial PC multiplayer mode surfaced"
+          },
+          {
+            "statement": "Rockstar's traditional PC release model is under pressure from unofficial ports",
+            "evidence": "The studio traditionally releases its flagship games on consoles first and follows with PC versions much later"
+          }
+        ],
+        "why_it_matters": "The rapid development of unofficial GTA 6 ports using AI tools challenges Rockstar's long-standing business strategy. This could disrupt the company's revenue model and raise questions about the future of game porting in the industry.",
+        "elephant_take": "🐘 鼋 The AI-driven porting race is a wild ride, but it highlights how quickly tech can outpace traditional publishing models. Rockstar's delayed PC release might be more trouble than it's worth.",
+        "caveat": "The situation is complex and involves legal and technical challenges that aren't fully understood yet.",
+        "who_should_care": [
+          "Game developers",
+          "AI researchers",
+          "Industry analysts"
+        ],
+        "what_to_do": [
+          "Monitor AI tool usage in game development",
+          "Assess impact on traditional publishing models",
+          "Evaluate legal risks of unauthorized porting"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Rockstar%27s%20AI%20dilemma%3A%20Can%20GTA%206%27s%20staggered%20release%20model%20survive%20coding%20agents%3F%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/26/42-state-ags-are-trying-to-stop-character-ai-from-selling-users-chats.html",
       "created_at": "2026-11-27T09:02:12.666880+00:00",
@@ -26247,6 +26377,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://the-decoder.com/openai-countersues-apple-over-trade-secret-theft-and-alleged-coercion-of-shared-suppliers/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-27T21:36:58.235686+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/openai-is-building-athena-data-platform-to-cut-down-on-ai-agent-guesswork/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
+      "at": "2026-11-27T21:36:58.235686+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/sap-plans-to-cut-at-least-10000-jobs-as-it-pivots-to-ai/",
+      "reason": "quality gate rejected draft: Elephant commentary is not specific to this story",
+      "at": "2026-11-27T21:36:58.235686+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://the-decoder.com/former-openai-researcher-says-the-riemann-proof-matters-less-than-the-fact-that-an-ai-system-can-produce-it/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
+      "at": "2026-11-27T21:36:58.235686+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://huggingface.co/blog/training-swarms",
       "reason": "quality gate rejected draft: hype language is present",
       "at": "2026-11-27T09:02:12.666880+00:00",
@@ -26268,12 +26422,6 @@
       "url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-27T09:02:12.666880+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/former-openai-researcher-says-the-riemann-proof-matters-less-than-the-fact-that-an-ai-system-can-produce-it/",
-      "reason": "quality gate rejected draft: hype language is present",
-      "at": "2026-11-26T21:54:02.965040+00:00",
       "pipeline_version": "2"
     },
     {
@@ -26466,24 +26614,6 @@
       "url": "https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
       "at": "2026-11-21T07:40:38.230795+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://the-decoder.com/bloomberg-analysis-of-10-million-job-postings-shows-ai-exposed-roles-in-china-fell-10-percentage-points-faster-than-others/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-21T07:40:38.230795+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-21T07:40:38.230795+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-20T20:42:39.196910+00:00",
       "pipeline_version": "2"
     }
   ]
