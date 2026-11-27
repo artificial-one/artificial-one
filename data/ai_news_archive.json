@@ -1,7 +1,141 @@
 {
   "version": 1,
-  "updated_at": "2026-11-26T08:52:00.446363+00:00",
+  "updated_at": "2026-11-27T09:02:12.666880+00:00",
   "articles": [
+    {
+      "path": "news/2026/11/26/42-state-ags-are-trying-to-stop-character-ai-from-selling-users-chats.html",
+      "created_at": "2026-11-27T09:02:12.666880+00:00",
+      "source": {
+        "title": "42 state AGs are trying to stop Character.AI from selling users’ chats",
+        "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+        "source": "The Verge AI",
+        "published_at": "2026-11-26T09:54:40+00:00",
+        "display_date": "Nov 26, 2026",
+        "category": "AI Tools & Products",
+        "description": "A coalition of 42 state attorneys general is trying to prevent Character.AI from selling off user data as it navigates Chapter 11 bankruptcy proceedings. In a deluge of nearly identical press releases, the various AGs accuse the company of planning to auction off \"the private chat histories of more than 21 million U.S. accounts - […]",
+        "related": {
+          "title": "Find the right AI tool for the job",
+          "url": "ai-tool-finder.html",
+          "offer_id": ""
+        }
+      },
+      "article": {
+        "headline": "42 State AGs Target Character.AI's Data Sale Plans",
+        "summary": "A bipartisan group of 42 state attorneys general is attempting to block Character.AI from selling user chat data as it faces bankruptcy. The AGs are concerned about the lack of safeguards for minors' data and potential misuse by buyers.",
+        "facts": [
+          {
+            "statement": "42 state AGs are trying to stop Character.AI from selling users’ chats",
+            "evidence": "42 state AGs are trying to stop Character.AI from selling users’ chats"
+          },
+          {
+            "statement": "Character.AI plans to sell private chat histories of 21 million U.S. accounts",
+            "evidence": "the private chat histories of more than 21 million U.S. accounts"
+          },
+          {
+            "statement": "AGs are concerned about the lack of safeguards for minors' data",
+            "evidence": "more than 2.1 million of them registered to minors — with no safeguards"
+          }
+        ],
+        "why_it_matters": "The potential sale of user chat data by Character.AI raises significant privacy concerns, particularly regarding minors' information. The involvement of 42 state attorneys general highlights the growing regulatory scrutiny of AI companies and their data practices.",
+        "elephant_take": "🐘 鼋 The AGs are trying to stop a company from selling user chats, but it's unclear if they'll succeed. Character.AI's plan to auction off private conversations is a big deal, especially with minors' data involved.",
+        "caveat": "The situation involves complex legal and regulatory challenges, and the outcome may depend on the details of Character.AI's bankruptcy proceedings and the specific laws in each state.",
+        "who_should_care": [
+          "Privacy advocates",
+          "Regulatory bodies",
+          "Parents of minors",
+          "Tech companies"
+        ],
+        "what_to_do": [
+          "Monitor developments in Character.AI's bankruptcy proceedings",
+          "Stay informed about new privacy laws affecting AI companies",
+          "Report any data misuse concerns to relevant authorities",
+          "Support efforts to protect user data and privacy"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "buyers-guides.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "ai-tool-finder.html",
+        "review_title": "Find the right AI tool for the job",
+        "elephant_url": "index.html?task=Explain%20what%2042%20state%20AGs%20are%20trying%20to%20stop%20Character.AI%20from%20selling%20users%E2%80%99%20chats%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": ""
+      }
+    },
+    {
+      "path": "news/2026/11/25/where-scientists-draw-the-line-on-ai-agents.html",
+      "created_at": "2026-11-27T09:02:12.666880+00:00",
+      "source": {
+        "title": "Where scientists draw the line on AI agents",
+        "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+        "source": "Hugging Face",
+        "published_at": "2026-11-25T18:52:55+00:00",
+        "display_date": "Nov 25, 2026",
+        "category": "AI Tools & Products",
+        "description": "",
+        "related": {
+          "title": "Evaluate Pinecone for this workflow",
+          "url": "partner-offers/pinecone-vector-database.html",
+          "offer_id": "pinecone"
+        }
+      },
+      "article": {
+        "headline": "Scientists stress responsibility in AI-assisted research",
+        "summary": "Scientists emphasize that using AI for research doesn't absolve them of responsibility. They need to ensure AI systems don't overlook evidence, protect privacy, and maintain accountability in scientific work.",
+        "facts": [
+          {
+            "statement": "Researchers must verify AI's methods and results",
+            "evidence": "to check whether the system overlooks conflicting evidence"
+          },
+          {
+            "statement": "AI systems should respect ethical standards in research",
+            "evidence": "assurance that a system protects participants' privacy"
+          },
+          {
+            "statement": "Trust is key in AI-assisted science",
+            "evidence": "identified five dimensions of scientific trust : validation, privacy, objectivity, accountability, and transparency"
+          }
+        ],
+        "why_it_matters": "The responsible use of AI in research requires scientists to maintain oversight. As AI takes on more tasks, ensuring ethical standards, data protection, and accountability becomes crucial for maintaining the integrity of scientific work.",
+        "elephant_take": "🐘 鼋 Scientists must stay in charge of their research, even when AI helps. Trust in AI means checking how it works, who it talks to, and what it does with sensitive data. It's not just about getting the right answer—it's about getting it right.",
+        "caveat": "AI can't replace human judgment in science. Researchers must always verify results and ensure ethical standards are met.",
+        "who_should_care": [
+          "Researchers",
+          "Institutions",
+          "Ethics committees",
+          "AI developers"
+        ],
+        "what_to_do": [
+          "Verify AI's methods and results",
+          "Protect sensitive data with AI",
+          "Establish guidelines for AI use",
+          "Train researchers in AI ethics"
+        ],
+        "sensitive": false
+      },
+      "quality": {
+        "approved": true,
+        "score": 95,
+        "issues": []
+      },
+      "links": {
+        "guide_url": "search-intent/pinecone-vector-database-pricing.html",
+        "guide_title": "Open the practical buyer guide",
+        "comparison_url": "comparison-lab.html",
+        "comparison_title": "Compare the strongest alternatives",
+        "review_url": "partner-offers/pinecone-vector-database.html",
+        "review_title": "Evaluate Pinecone for this workflow",
+        "elephant_url": "index.html?task=Explain%20what%20Where%20scientists%20draw%20the%20line%20on%20AI%20agents%20changes%20for%20my%20workflow%20and%20help%20me%20choose%20the%20right%20tools#build",
+        "offer_id": "pinecone"
+      }
+    },
     {
       "path": "news/2026/11/26/building-on-nemotron-3-5-parse-open-data-fine-tuning-and-faster-inference.html",
       "created_at": "2026-11-26T08:52:00.446363+00:00",
@@ -26113,6 +26247,30 @@
   ],
   "last_failures": [
     {
+      "url": "https://huggingface.co/blog/training-swarms",
+      "reason": "quality gate rejected draft: hype language is present",
+      "at": "2026-11-27T09:02:12.666880+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-27T09:02:12.666880+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence",
+      "at": "2026-11-27T09:02:12.666880+00:00",
+      "pipeline_version": "2"
+    },
+    {
+      "url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
+      "reason": "quality gate rejected draft: a fact has no exact source evidence",
+      "at": "2026-11-27T09:02:12.666880+00:00",
+      "pipeline_version": "2"
+    },
+    {
       "url": "https://the-decoder.com/former-openai-researcher-says-the-riemann-proof-matters-less-than-the-fact-that-an-ai-system-can-produce-it/",
       "reason": "quality gate rejected draft: hype language is present",
       "at": "2026-11-26T21:54:02.965040+00:00",
@@ -26146,24 +26304,6 @@
       "url": "https://the-decoder.com/microsoft-details-how-state-backed-hackers-use-the-artex-ai-framework-to-automate-cyberattacks/",
       "reason": "quality gate rejected draft: a fact has no exact source evidence; hype language is present",
       "at": "2026-11-26T21:54:02.965040+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence; a fact has no exact source evidence; a fact has no exact source evidence",
-      "at": "2026-11-26T08:52:00.446363+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-26T08:52:00.446363+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-26T08:52:00.446363+00:00",
       "pipeline_version": "2"
     },
     {
@@ -26342,12 +26482,6 @@
     },
     {
       "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
-      "reason": "quality gate rejected draft: a fact has no exact source evidence",
-      "at": "2026-11-20T20:42:39.196910+00:00",
-      "pipeline_version": "2"
-    },
-    {
-      "url": "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax",
       "reason": "quality gate rejected draft: a fact has no exact source evidence",
       "at": "2026-11-20T20:42:39.196910+00:00",
       "pipeline_version": "2"
