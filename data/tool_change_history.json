@@ -1,10 +1,55 @@
 {
   "coverage": {
     "scheduled_checks": 75,
-    "successful_checks": 66,
+    "successful_checks": 63,
     "tracked_sources": 240
   },
   "events": [
+    {
+      "detected_on": "2026-11-27",
+      "id": "ad9511eb4a94cd5a",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.plesk.com/",
+      "tool_id": "plesk",
+      "tool_name": "Plesk"
+    },
+    {
+      "detected_on": "2026-11-27",
+      "id": "afe57045e32dc204",
+      "kind": "availability",
+      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://reply.io/terms-of-service/",
+      "tool_id": "reply-io",
+      "tool_name": "Reply.io"
+    },
+    {
+      "detected_on": "2026-11-27",
+      "id": "2ac8ead6f9bc5428",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://www.whatconverts.com/",
+      "tool_id": "whatconverts",
+      "tool_name": "WhatConverts"
+    },
+    {
+      "detected_on": "2026-11-27",
+      "id": "91201eb20fb10e4c",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://articleforge.com",
+      "tool_id": "article-forge",
+      "tool_name": "Article Forge"
+    },
+    {
+      "detected_on": "2026-11-27",
+      "id": "99b830d7b6fbd047",
+      "kind": "pricing or plan",
+      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
+      "source_url": "https://contentstudio.io",
+      "tool_id": "contentstudio",
+      "tool_name": "ContentStudio"
+    },
     {
       "detected_on": "2026-11-26",
       "id": "21112ae8365a6c7e",
@@ -1759,54 +1804,9 @@
       "source_url": "https://grammarly.com",
       "tool_id": "grammarly",
       "tool_name": "Grammarly"
-    },
-    {
-      "detected_on": "2026-10-19",
-      "id": "ead0952a866152d5",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://todoist.com",
-      "tool_id": "todoist-ai",
-      "tool_name": "Todoist AI"
-    },
-    {
-      "detected_on": "2026-10-19",
-      "id": "88c1a2cc8971c43d",
-      "kind": "availability",
-      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://unriddle.ai",
-      "tool_id": "unriddle",
-      "tool_name": "Unriddle"
-    },
-    {
-      "detected_on": "2026-10-19",
-      "id": "2117c5bd79a16a0b",
-      "kind": "availability",
-      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://hubstaff.com/",
-      "tool_id": "hubstaff",
-      "tool_name": "Hubstaff"
-    },
-    {
-      "detected_on": "2026-10-19",
-      "id": "874bee3c94d48802",
-      "kind": "availability",
-      "message": "A repeated vendor-source observation indicates a availability change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://www.lensmor.com/",
-      "tool_id": "lensmor",
-      "tool_name": "lensmor"
-    },
-    {
-      "detected_on": "2026-10-19",
-      "id": "76d88f988cc4c0f2",
-      "kind": "pricing or plan",
-      "message": "A repeated vendor-source observation indicates a pricing or plan change. Recheck the current details before deciding or purchasing.",
-      "source_url": "https://articleforge.com",
-      "tool_id": "article-forge",
-      "tool_name": "Article Forge"
     }
   ],
   "method": "two-consecutive-observation vendor-source monitor",
-  "updated_at": "2026-11-26",
+  "updated_at": "2026-11-27",
   "version": 1
 }
